@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-04 14:34-0700\n"
+"POT-Creation-Date: 2011-10-05 15:38-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/landing/templates/landing/about.html:3 apps/landing/templates/landing/about.html:8 templates/base.html:99
+#: apps/landing/templates/landing/about.html:3 apps/landing/templates/landing/about.html:8 templates/base.html:113
 msgid "About Mozillians"
 msgstr "About Mozillians"
 
@@ -38,6 +38,11 @@ msgstr ""
 msgid "Create Profile"
 msgstr "Create Your Profile"
 
+#: apps/landing/templates/landing/about.html:38
+#, fuzzy
+msgid "Privacy First"
+msgstr "Privacy Policy"
+
 #: apps/landing/templates/landing/about.html:41
 #, fuzzy
 msgid ""
@@ -51,6 +56,10 @@ msgstr ""
 "beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way we vouch for new users before they can access data that should "
 "only be available to other Mozillians. Read our Privacy Policy for more information. </p> <h2>Get Involved</h2> <p> The community directory is also a community project and you are welcome to get "
 "involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the Mozillians forums (link) to learn how. </p>"
+
+#: apps/landing/templates/landing/about.html:55 templates/base.html:117
+msgid "Get Involved"
+msgstr "Get Involved"
 
 #: apps/landing/templates/landing/about.html:58
 msgid ""
@@ -190,8 +199,8 @@ msgid "My Info"
 msgstr "My Info"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:43 apps/phonebook/templates/phonebook/edit_profile.html:61 apps/phonebook/templates/phonebook/edit_profile.html:84
-#: apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34 apps/users/templates/registration/register.html:45
-#: apps/users/templates/registration/register.html:67
+#: apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34 apps/users/templates/registration/register.html:46
+#: apps/users/templates/registration/register.html:68
 msgid "This field is required."
 msgstr "This field is required."
 
@@ -317,11 +326,11 @@ msgstr "Bio"
 msgid "Search Results"
 msgstr "Search"
 
-#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:22 templates/base.html:75
+#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:22 templates/base.html:77
 msgid "Search"
 msgstr "Search"
 
-#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:74
+#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:76
 msgid "Name, IRC Nick, or Email"
 msgstr "Name, IRC Nick, or Email"
 
@@ -422,7 +431,11 @@ msgstr "Confirm your account"
 msgid "Please confirm your Mozillians account: %s"
 msgstr "Please confirm your Mozillian's account: %s"
 
-#: apps/users/views.py:184
+#: apps/users/views.py:78
+msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
+msgstr "Your account has been created but needs to be verified. Please check your email to verify your account."
+
+#: apps/users/views.py:191
 msgid "Someone has already registered an account with %(email)s."
 msgstr "Someone has already registered an account with %(email)s."
 
@@ -487,24 +500,24 @@ msgstr "If you did not request this email there is no need for further action. T
 msgid "Reset Password"
 msgstr "Password"
 
-#: apps/users/templates/registration/register.html:3 apps/users/templates/registration/register.html:17
+#: apps/users/templates/registration/register.html:3 apps/users/templates/registration/register.html:18
 msgid "Create Your Profile"
 msgstr "Create Your Profile"
 
-#: apps/users/templates/registration/register.html:24
+#: apps/users/templates/registration/register.html:25
 msgid "Sorry, but we couldn't create your account. Please review the form, correct any errors, and try again."
 msgstr "Sorry, but we couldn't create your account. Please review the form, correct any errors, and try again."
 
-#: apps/users/templates/registration/register.html:30
+#: apps/users/templates/registration/register.html:31
 msgid "At this time, profiles are only viewable by other Mozillians. Community members may use them to identify and contact you about events, projects and other Mozilla-related activities."
 msgstr "At this time, profiles are only viewable by other Mozillians. Community members may use them to identify and contact you about events, projects and other Mozilla-related activities."
 
-#: apps/users/templates/registration/register.html:57
+#: apps/users/templates/registration/register.html:58
 #, fuzzy
 msgid "<label for=\"id_%(name)s\"> I'm okay with you handling this info as you explain in your <a href=\"%(url)s\">privacy policy</a>. </label>"
 msgstr "I'm okay with you handling this info as you explain in your privacy policy."
 
-#: apps/users/templates/registration/register.html:84
+#: apps/users/templates/registration/register.html:85
 msgid "Create Account"
 msgstr "Create Account"
 
@@ -604,27 +617,23 @@ msgstr "Log Out"
 msgid "Log In"
 msgstr "Log In"
 
-#: templates/base.html:62
+#: templates/base.html:63
 msgid "Join Us"
 msgstr "Join Us"
 
-#: templates/base.html:103
-msgid "Get Involved"
-msgstr "Get Involved"
-
-#: templates/base.html:107
+#: templates/base.html:121
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: templates/base.html:111
+#: templates/base.html:125
 msgid "Legal Notices"
 msgstr "Legal Notices"
 
-#: templates/base.html:115
+#: templates/base.html:129
 msgid "Report Trademark Abuse"
 msgstr "Report Trademark Abuse"
 
-#: templates/base.html:121
+#: templates/base.html:135
 msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
 "Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
