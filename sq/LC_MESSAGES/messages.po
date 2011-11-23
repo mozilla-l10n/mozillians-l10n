@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-03 10:49-0700\n"
+"POT-Creation-Date: 2011-11-23 09:28-0700\n"
 "PO-Revision-Date: 2011-10-01 01:24+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,24 +12,36 @@ msgstr ""
 "Language: sq\n"
 "X-Generator: Translate Toolkit 1.8.0\n"
 
-#: apps/groups/templates/groups/index.html:8
+#: apps/groups/templates/groups/index.html:3 apps/groups/templates/groups/index.html:9
 msgid "Group Listing"
 msgstr ""
 
-#: apps/groups/templates/groups/index.html:11
+#: apps/groups/templates/groups/index.html:12
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 msgstr ""
 
-#: apps/groups/templates/groups/index.html:33
+#: apps/groups/templates/groups/index.html:34
 msgid "Back"
 msgstr ""
 
-#: apps/groups/templates/groups/index.html:43 apps/phonebook/templates/phonebook/edit_profile.html:115
+#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:107
 msgid "Next"
 msgstr "Pasuesja"
 
-#: apps/groups/templates/groups/show.html:9
+#: apps/groups/templates/groups/show.html:4
+msgid "Users in Group \"%(name)s\""
+msgstr ""
+
+#: apps/groups/templates/groups/show.html:12
 msgid "<h1>Users in Group \"%(name)s\"</h1>"
+msgstr ""
+
+#: apps/groups/templates/groups/show.html:23
+msgid "Join Group"
+msgstr ""
+
+#: apps/groups/templates/groups/show.html:25
+msgid "Leave Group"
 msgstr ""
 
 #: apps/phonebook/forms.py:39 apps/users/forms.py:69
@@ -48,11 +60,11 @@ msgstr "jetëshkrim"
 msgid "Profile Photo"
 msgstr "Foto Profili"
 
-#: apps/phonebook/forms.py:48 apps/phonebook/templates/phonebook/profile.html:82
+#: apps/phonebook/forms.py:48 apps/phonebook/templates/phonebook/profile.html:83
 msgid "IRC Nickname"
 msgstr "Nofkë IRC-je"
 
-#: apps/phonebook/forms.py:53 apps/phonebook/templates/phonebook/profile.html:119
+#: apps/phonebook/forms.py:53 apps/phonebook/templates/phonebook/profile.html:121
 msgid "Groups"
 msgstr ""
 
@@ -66,6 +78,10 @@ msgstr "Ju lutem, përdorni figura më të vogla se %dMB."
 
 #: apps/phonebook/forms.py:94
 msgid "Tags can only contain alphanumeric characters, dashes, spaces."
+msgstr ""
+
+#: apps/phonebook/forms.py:147
+msgid "You cannot invite someone who has already been vouched."
 msgstr ""
 
 #: apps/phonebook/models.py:36
@@ -88,7 +104,7 @@ msgstr "Bashkojuni Moxillianëve: %s"
 msgid "You must be vouched to do this."
 msgstr "Për të bërë këtë, duhet të keni një rekomandim."
 
-#: apps/phonebook/views.py:333
+#: apps/phonebook/views.py:344
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr ""
 
@@ -145,35 +161,36 @@ msgid ""
 "href=\"http://groups.google.com/group/mozilla.mozillians/topics\"> Mozillians forums </a> to learn how."
 msgstr ""
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:6
+#: apps/phonebook/templates/phonebook/confirm_delete.html:3 apps/phonebook/templates/phonebook/confirm_delete.html:8
 msgid "Confirm Profile Deletion"
 msgstr "Ripohoni Fshirje Profili"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:12
+#: apps/phonebook/templates/phonebook/confirm_delete.html:14
 msgid "Are You Sure You Want to Leave Mozillians?"
 msgstr "Jeni i Sigurt Se Doni Të Braktisni Moxillianët?"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:15
+#: apps/phonebook/templates/phonebook/confirm_delete.html:17
 msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
 msgstr ""
 "Fshirja e profilit tuaj është e menjëhershme dhe e pakthyeshme. Çfarëdo të dhënash të profilit tuaj do të treten përgjithmonë. Nëse do të donit t'u bashkoheshit Moxillianëve sërish, do t'ju duhet "
 "të merrni sërish rekomandim."
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:25
+#: apps/phonebook/templates/phonebook/confirm_delete.html:27
 msgid "Are you absolutely sure you want to delete your profile?"
 msgstr "Jeni absolutisht i sigurt se doni të fshini profilin tuaj?"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:31
+#: apps/phonebook/templates/phonebook/confirm_delete.html:33
 msgid "No: don't delete my profile"
 msgstr "Jo: mos e fshij profilin tim"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:35
+#: apps/phonebook/templates/phonebook/confirm_delete.html:37
 msgid "I'm sure: delete my profile"
 msgstr "Jam i sigurt: fshije profilin tim"
 
 #: apps/phonebook/templates/phonebook/confirm_register.html:3
-msgid "Register, Step 3 &mdash; Get Vouched"
-msgstr "Regjistrohuni, Hapi 3 &mdash; Siguroni një Rekomandim"
+#, fuzzy
+msgid "Get Vouched"
+msgstr "Rekomanduar nga"
 
 #: apps/phonebook/templates/phonebook/confirm_register.html:9
 msgid "Thanks<br> <small>for creating a profile.</small>"
@@ -187,49 +204,49 @@ msgstr ""
 "Për të mundur të kërkoni në mënyrë të plotë dhe të ftoni të tjerë Moxillianë, lypset që <a href=\"%(profile)s\">profilin tuaj</a> ta ketë rekomanduar dikush që ka tashmë një llogari. Ju lutem, "
 "dërgojani <a href=\"%(profile)s\">profilin tuaj</a> një moxilliani që e njeh kontributin tuaj dhe kërkojini atij të bëjë rekomandimin për ju."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:20
+#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:12
 msgid "Edit Your Profile"
 msgstr "Përpunoni Profilin Tuaj"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:24
+#: apps/phonebook/templates/phonebook/edit_profile.html:16
 msgid "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
 msgstr "Na ndjeni, por pati probleme me të dhënat që parashtruat. Ju lutem, rishikojeni formularin, ndreqni çfarëdo gabimi, dhe riprovoni."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:33
+#: apps/phonebook/templates/phonebook/edit_profile.html:25
 msgid "My Info"
 msgstr "Të dhënat e Mia"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:43 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
+#: apps/phonebook/templates/phonebook/edit_profile.html:35 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
 #: apps/users/templates/registration/register.html:46 apps/users/templates/registration/register.html:68
 msgid "This field is required."
 msgstr "Kjo fushë është e domosdoshme."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:82
+#: apps/phonebook/templates/phonebook/edit_profile.html:74
 msgid "My Mozilla Info"
 msgstr "Të dhënat e Mia Mozilla"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:96
+#: apps/phonebook/templates/phonebook/edit_profile.html:88
 msgid "My Login Info"
 msgstr "Të dhënat e Mia për Hyrje"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:99
+#: apps/phonebook/templates/phonebook/edit_profile.html:91
 msgid "Primary Email:"
 msgstr "Email Parësor"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:106 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
+#: apps/phonebook/templates/phonebook/edit_profile.html:98 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
 msgid "Change Password"
 msgstr "Ndryshoni Fjalëkalimin"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:117
+#: apps/phonebook/templates/phonebook/edit_profile.html:109
 msgid "Update"
 msgstr "Përditëso"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:122
+#: apps/phonebook/templates/phonebook/edit_profile.html:114
 msgid "Cancel"
 msgstr "Anulo"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:132
+#: apps/phonebook/templates/phonebook/edit_profile.html:124
 msgid "Delete Profile"
 msgstr "Fshije Profilin"
 
@@ -246,11 +263,13 @@ msgid "If you're looking for information on your fellow contributors, what they 
 msgstr "Nëse po shihni për të dhëna mbi kontributorë si ju, ç'bëjnë dhe si të lidheni me ta, keni ardhur në vendin e duhur. <a href=\"%(about)s\">Mësoni më tepër</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:21
-msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button orange\">Create Profile</a>"
+#, fuzzy
+msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button primary\">Create Profile</a>"
 msgstr "Bëhuni pjesë e listës, që të ndani me të tjerët të dhëna rresh vetes dhe të dini më shumë mbi moxillianë të tjerë. <br><a href=\"%(register)s\" class=\"button orange\">Krijoni Profil</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:28
-msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button orange\">Invite a Mozillian</a>"
+#, fuzzy
+msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button primary\">Invite a Mozillian</a>"
 msgstr "Tregojuni kontribuesve të tjerë për këtë listë dhe kërkojuni të krijojnë një profil. <br><a href=\"%(invite)s\" class=\"button orange\">Ftoni një Moxillian</a>"
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:8
@@ -277,19 +296,19 @@ msgstr "Ftesa u Dërgua!"
 msgid "%(email)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr "%(email)s është ftuar te Moxillianët. Do të marrë një email me udhëzime se si të bashkohet me ta. Mund të <a href=\"%(invite_url)s\"> ftoni një tjetër Moxillian</a>, në daçi."
 
-#: apps/phonebook/templates/phonebook/profile.html:11
+#: apps/phonebook/templates/phonebook/profile.html:12
 msgid "Your Profile"
 msgstr "Profili Juaj"
 
-#: apps/phonebook/templates/phonebook/profile.html:13
+#: apps/phonebook/templates/phonebook/profile.html:14
 msgid "Mozillian Profile"
 msgstr "Profil Moxilliani"
 
-#: apps/phonebook/templates/phonebook/profile.html:15
+#: apps/phonebook/templates/phonebook/profile.html:16
 msgid "Pending Profile"
 msgstr "Profil Në Pritje të Shqyrtimit"
 
-#: apps/phonebook/templates/phonebook/profile.html:22
+#: apps/phonebook/templates/phonebook/profile.html:23
 msgid ""
 "Your profile is waiting for approval. Send this link to someone who is familiar with your contributions and ask them to vouch for you: <br> <em class=\"underline\" title=\"Your profile URL\"> %"
 "(profile_url)s </em>"
@@ -297,28 +316,33 @@ msgstr ""
 "Profili juaj po pret për miratim. Dërgojani këtë lidhje dikujt që e njeh kontributin tuaj dhe kërkojini t'ju rekomandojë: <br> <em class=\"underline\" title=\"URL-ja e profilit tuaj\"> %"
 "(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/profile.html:33
+#: apps/phonebook/templates/phonebook/profile.html:34
 msgid "This profile is waiting for approval. If you can vouch for this person's contributions, please do so."
 msgstr "Ky profil po pret miratimin. Nëse mund të rekomandonit kontributin e këtij personi, ju lutem, bëjeni."
 
-#: apps/phonebook/templates/phonebook/profile.html:45
-msgid "<button type=\"submit\" class=\"button orange small\"> Vouch for %(name)s </button>"
+#: apps/phonebook/templates/phonebook/profile.html:46
+#, fuzzy
+msgid "<button type=\"submit\" class=\"button primary small\"> Vouch for %(name)s </button>"
 msgstr "<button type=\"submit\" class=\"button orange small\"> Rekomando %(name)s </button>"
 
-#: apps/phonebook/templates/phonebook/profile.html:64
+#: apps/phonebook/templates/phonebook/profile.html:65
 msgid "Edit My Profile"
 msgstr "Përpuno Profilin Tim"
 
-#: apps/phonebook/templates/phonebook/profile.html:75 apps/users/templates/registration/login.html:20
+#: apps/phonebook/templates/phonebook/profile.html:76 apps/users/templates/registration/login.html:20
 msgid "Email"
 msgstr "Email"
 
-#: apps/phonebook/templates/phonebook/profile.html:98
+#: apps/phonebook/templates/phonebook/profile.html:97 apps/phonebook/templates/phonebook/profile.html:100
 msgid "Vouched by"
 msgstr "Rekomanduar nga"
 
+#: apps/phonebook/templates/phonebook/profile.html:98
+msgid "No longer active"
+msgstr ""
+
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:112
+#: apps/phonebook/templates/phonebook/profile.html:114
 msgid "Bio:"
 msgstr "Jetëshkrim:"
 
@@ -418,20 +442,20 @@ msgstr "Fjalëkalimi juaj i vjetër është dhënë gabim. Ju lutem, rijepeni."
 msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 msgstr "Kjo adresë e-mail nuk ka të përshoqëruar ndonjë llogari përdoruesi. Jeni i sigurt se jeni regjistruar?"
 
-#: apps/users/views.py:29
+#: apps/users/views.py:31
 msgid "Confirm your account"
 msgstr "Ripohoni llogarinë tuaj."
 
-#: apps/users/views.py:30
+#: apps/users/views.py:32
 #, fuzzy
 msgid "Please confirm your Mozillians account: %s"
 msgstr "Ju lutem, ripohoni llogarinë tuaj si moxillian: %s"
 
-#: apps/users/views.py:86
+#: apps/users/views.py:101
 msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
 msgstr ""
 
-#: apps/users/views.py:195
+#: apps/users/views.py:228
 msgid "Someone has already registered an account with %(email)s."
 msgstr "Dikush ka regjistruar tashmë një llogari me %(email)s."
 
@@ -640,6 +664,9 @@ msgstr "Gjuhë të tjera:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Jepi"
+
+#~ msgid "Register, Step 3 &mdash; Get Vouched"
+#~ msgstr "Regjistrohuni, Hapi 3 &mdash; Siguroni një Rekomandim"
 
 #~ msgid "Your Profile Photo"
 #~ msgstr "Fotoja Juaj e Profilit"

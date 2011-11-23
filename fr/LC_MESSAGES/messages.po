@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-03 10:49-0700\n"
+"POT-Creation-Date: 2011-11-23 09:28-0700\n"
 "PO-Revision-Date: 2011-11-02 16:21+0200\n"
 "Last-Translator: Benoit <benoit.leseul@gmail.com>\n"
 "Language-Team: none\n"
@@ -13,27 +13,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/templates/groups/index.html:8
+#: apps/groups/templates/groups/index.html:3 apps/groups/templates/groups/index.html:9
 msgid "Group Listing"
 msgstr "Liste des groupes"
 
-#: apps/groups/templates/groups/index.html:11
+#: apps/groups/templates/groups/index.html:12
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 msgstr ""
 "Les Mozilliens travaillent sur des tas de choses différentes ! Qu'ils soient développeurs d'extensions ou localisateurs, trouvez les Mozilliens qui font des choses similaires grâce aux groupes "
 "personnalisés."
 
-#: apps/groups/templates/groups/index.html:33
+#: apps/groups/templates/groups/index.html:34
 msgid "Back"
 msgstr "Retour"
 
-#: apps/groups/templates/groups/index.html:43 apps/phonebook/templates/phonebook/edit_profile.html:115
+#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:107
 msgid "Next"
 msgstr "Suivant"
 
-#: apps/groups/templates/groups/show.html:9
+#: apps/groups/templates/groups/show.html:4
+#, fuzzy
+msgid "Users in Group \"%(name)s\""
+msgstr "<h1>Utilisateurs dans le groupe \"%(name)s\"</h1>"
+
+#: apps/groups/templates/groups/show.html:12
 msgid "<h1>Users in Group \"%(name)s\"</h1>"
 msgstr "<h1>Utilisateurs dans le groupe \"%(name)s\"</h1>"
+
+#: apps/groups/templates/groups/show.html:23
+#, fuzzy
+msgid "Join Group"
+msgstr "Groupes"
+
+#: apps/groups/templates/groups/show.html:25
+msgid "Leave Group"
+msgstr ""
 
 #: apps/phonebook/forms.py:39 apps/users/forms.py:69
 msgid "First Name"
@@ -51,11 +65,11 @@ msgstr "Bio"
 msgid "Profile Photo"
 msgstr "Photo"
 
-#: apps/phonebook/forms.py:48 apps/phonebook/templates/phonebook/profile.html:82
+#: apps/phonebook/forms.py:48 apps/phonebook/templates/phonebook/profile.html:83
 msgid "IRC Nickname"
 msgstr "Pseudo IRC"
 
-#: apps/phonebook/forms.py:53 apps/phonebook/templates/phonebook/profile.html:119
+#: apps/phonebook/forms.py:53 apps/phonebook/templates/phonebook/profile.html:121
 msgid "Groups"
 msgstr "Groupes"
 
@@ -70,6 +84,10 @@ msgstr "Utilisez des images de taille inférieure à %dMo."
 #: apps/phonebook/forms.py:94
 msgid "Tags can only contain alphanumeric characters, dashes, spaces."
 msgstr "Les étiquettes peuvent uniquement contenir des caractères alphanumériques, des tirets et des espaces."
+
+#: apps/phonebook/forms.py:147
+msgid "You cannot invite someone who has already been vouched."
+msgstr ""
 
 #: apps/phonebook/models.py:36
 msgid "Become a Mozillian"
@@ -91,7 +109,7 @@ msgstr "Rejoindre les Mozilliens : %s"
 msgid "You must be vouched to do this."
 msgstr "Vous devez être parrainé(e) pour faire ceci."
 
-#: apps/phonebook/views.py:333
+#: apps/phonebook/views.py:344
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Merci d'avoir parrainé un autre Mozillien !"
 
@@ -146,35 +164,36 @@ msgstr ""
 "L’annuaire de la communauté est également un projet communautaire et vous pouvez y participer pour nous aider à l'améliorer ou pour qu'il s'intègre à d'autres outils communautaires. Contactez-nous "
 "via le <a href=\"http://groups.google.com/group/mozilla.mozillians/topics\">groupe Mozilliens</a> pour savoir comment débuter."
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:6
+#: apps/phonebook/templates/phonebook/confirm_delete.html:3 apps/phonebook/templates/phonebook/confirm_delete.html:8
 msgid "Confirm Profile Deletion"
 msgstr "Confirmer la suppression du profil"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:12
+#: apps/phonebook/templates/phonebook/confirm_delete.html:14
 msgid "Are You Sure You Want to Leave Mozillians?"
 msgstr "Voulez-vous vraiment quitter les Mozilliens ?"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:15
+#: apps/phonebook/templates/phonebook/confirm_delete.html:17
 msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
 msgstr ""
 "La suppression de votre profil est immédiate et irréversible. Toutes les informations de votre profil seront perdues définitivement. Si vous souhaitez rejoindre les Mozilliens plus tard, vous "
 "devrez vous faire parrainer à nouveau."
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:25
+#: apps/phonebook/templates/phonebook/confirm_delete.html:27
 msgid "Are you absolutely sure you want to delete your profile?"
 msgstr "Voulez-vous vraiment supprimer votre profil ?"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:31
+#: apps/phonebook/templates/phonebook/confirm_delete.html:33
 msgid "No: don't delete my profile"
 msgstr "Non : ne pas supprimez mon profil"
 
-#: apps/phonebook/templates/phonebook/confirm_delete.html:35
+#: apps/phonebook/templates/phonebook/confirm_delete.html:37
 msgid "I'm sure: delete my profile"
 msgstr "Oui : supprimer mon profil"
 
 #: apps/phonebook/templates/phonebook/confirm_register.html:3
-msgid "Register, Step 3 &mdash; Get Vouched"
-msgstr "Enregistrement, étape 3 – Se faire parrainer"
+#, fuzzy
+msgid "Get Vouched"
+msgstr "Parrainé(e) par"
 
 #: apps/phonebook/templates/phonebook/confirm_register.html:9
 msgid "Thanks<br> <small>for creating a profile.</small>"
@@ -188,49 +207,49 @@ msgstr ""
 "Pour obtenir un accès complet à la recherche et inviter d'autres Mozilliens, vous devrez faire parrainer <a href=\"%(profile)s\">votre profil</a> par quelqu'un qui a déjà un compte. Veuillez "
 "envoyer <a href=\"%(profile)s\">votre profil</a> à un Mozillien ou une Mozillienne qui sait ce à quoi vous avez contribué et demandez-lui de vous parrainer."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:20
+#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:12
 msgid "Edit Your Profile"
 msgstr "Modifiez votre profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:24
+#: apps/phonebook/templates/phonebook/edit_profile.html:16
 msgid "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
 msgstr "Désolé, mais il y a eu un problème avec les informations que vous avez envoyées. Merci de vérifier le formulaire et de corriger les erreurs puis de réessayer."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:33
+#: apps/phonebook/templates/phonebook/edit_profile.html:25
 msgid "My Info"
 msgstr "Mes informations"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:43 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
+#: apps/phonebook/templates/phonebook/edit_profile.html:35 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
 #: apps/users/templates/registration/register.html:46 apps/users/templates/registration/register.html:68
 msgid "This field is required."
 msgstr "Ce champ est obligatoire."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:82
+#: apps/phonebook/templates/phonebook/edit_profile.html:74
 msgid "My Mozilla Info"
 msgstr "Mes infos Mozilla"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:96
+#: apps/phonebook/templates/phonebook/edit_profile.html:88
 msgid "My Login Info"
 msgstr "Mes infos de connexion"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:99
+#: apps/phonebook/templates/phonebook/edit_profile.html:91
 msgid "Primary Email:"
 msgstr "Adresse électronique principale :"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:106 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
+#: apps/phonebook/templates/phonebook/edit_profile.html:98 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
 msgid "Change Password"
 msgstr "Changer de mot de passe"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:117
+#: apps/phonebook/templates/phonebook/edit_profile.html:109
 msgid "Update"
 msgstr "Mettre à jour"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:122
+#: apps/phonebook/templates/phonebook/edit_profile.html:114
 msgid "Cancel"
 msgstr "Annuler"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:132
+#: apps/phonebook/templates/phonebook/edit_profile.html:124
 msgid "Delete Profile"
 msgstr "Supprimer le profil"
 
@@ -247,11 +266,13 @@ msgid "If you're looking for information on your fellow contributors, what they 
 msgstr "Si vous recherchez des informations sur d'autres contributeurs, ce qu'ils font et comment les contacter, vous êtes au bon endroit. <a href=\"%(about)s\">En savoir plus</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:21
-msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button orange\">Create Profile</a>"
+#, fuzzy
+msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button primary\">Create Profile</a>"
 msgstr "Inscrivez-vous à l'annuaire pour partager des informations sur vous et pour en savoir plus sur les autres Mozilliens. <br><a href=\"%(register)s\" class=\"button orange\">Créez un profil</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:28
-msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button orange\">Invite a Mozillian</a>"
+#, fuzzy
+msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button primary\">Invite a Mozillian</a>"
 msgstr "Informez les autres contributeurs de l'existence de cet annuaire et demandez-leur de créer un profil. <br><a href=\"%(invite)s\" class=\"button orange\">Invitez un Mozillien</a>."
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:8
@@ -280,19 +301,19 @@ msgstr ""
 "%(email)s ont été invités à faire partie des Mozilliens. Ces mozilliens recevront un courriel avec les instructions pour rejoindre le site. Vous pouvez <a href=\"%(invite_url)s\">inviter d'autres "
 "Mozilliens</a> si vous le souhaitez."
 
-#: apps/phonebook/templates/phonebook/profile.html:11
+#: apps/phonebook/templates/phonebook/profile.html:12
 msgid "Your Profile"
 msgstr "Votre profil"
 
-#: apps/phonebook/templates/phonebook/profile.html:13
+#: apps/phonebook/templates/phonebook/profile.html:14
 msgid "Mozillian Profile"
 msgstr "Profil de Mozillien"
 
-#: apps/phonebook/templates/phonebook/profile.html:15
+#: apps/phonebook/templates/phonebook/profile.html:16
 msgid "Pending Profile"
 msgstr "Profil en attente"
 
-#: apps/phonebook/templates/phonebook/profile.html:22
+#: apps/phonebook/templates/phonebook/profile.html:23
 msgid ""
 "Your profile is waiting for approval. Send this link to someone who is familiar with your contributions and ask them to vouch for you: <br> <em class=\"underline\" title=\"Your profile URL\"> %"
 "(profile_url)s </em>"
@@ -300,28 +321,33 @@ msgstr ""
 "Votre profil est en attente d'approbation. Envoyez ce lien à quelqu'un qui connaît vos contributions et demandez-lui de vous parrainer : <br> <em class=\"underline\" title=\"URL de votre profil\"> %"
 "(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/profile.html:33
+#: apps/phonebook/templates/phonebook/profile.html:34
 msgid "This profile is waiting for approval. If you can vouch for this person's contributions, please do so."
 msgstr "Ce profil est en attente d'approbation. Si vous pouvez parrainer les contributions de cette personne, n'hésitez pas à le faire."
 
-#: apps/phonebook/templates/phonebook/profile.html:45
-msgid "<button type=\"submit\" class=\"button orange small\"> Vouch for %(name)s </button>"
+#: apps/phonebook/templates/phonebook/profile.html:46
+#, fuzzy
+msgid "<button type=\"submit\" class=\"button primary small\"> Vouch for %(name)s </button>"
 msgstr "<button type=\"submit\" class=\"button orange small\"> Parrainer %(name)s </button>"
 
-#: apps/phonebook/templates/phonebook/profile.html:64
+#: apps/phonebook/templates/phonebook/profile.html:65
 msgid "Edit My Profile"
 msgstr "Modifier mon profil"
 
-#: apps/phonebook/templates/phonebook/profile.html:75 apps/users/templates/registration/login.html:20
+#: apps/phonebook/templates/phonebook/profile.html:76 apps/users/templates/registration/login.html:20
 msgid "Email"
 msgstr "Courriel"
 
-#: apps/phonebook/templates/phonebook/profile.html:98
+#: apps/phonebook/templates/phonebook/profile.html:97 apps/phonebook/templates/phonebook/profile.html:100
 msgid "Vouched by"
 msgstr "Parrainé(e) par"
 
+#: apps/phonebook/templates/phonebook/profile.html:98
+msgid "No longer active"
+msgstr ""
+
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:112
+#: apps/phonebook/templates/phonebook/profile.html:114
 msgid "Bio:"
 msgstr "Bio :"
 
@@ -421,19 +447,19 @@ msgstr "Votre ancien mot de passe n'a pas été renseigné correctement. Veuille
 msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 msgstr "Cet adresse électronique n'est associée à aucun compte utilisateur. Êtes-vous sûr d'être inscrit ?"
 
-#: apps/users/views.py:29
+#: apps/users/views.py:31
 msgid "Confirm your account"
 msgstr "Confirmer de votre compte"
 
-#: apps/users/views.py:30
+#: apps/users/views.py:32
 msgid "Please confirm your Mozillians account: %s"
 msgstr "Veuillez confirmer votre compte Mozillien : %s"
 
-#: apps/users/views.py:86
+#: apps/users/views.py:101
 msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
 msgstr "Votre compte a été créé mais il doit être vérifié. Veuillez consulter vos messages pour confirmer votre compte."
 
-#: apps/users/views.py:195
+#: apps/users/views.py:228
 msgid "Someone has already registered an account with %(email)s."
 msgstr "Quelqu'un à déjà enregistré un compte avec %(email)s."
 
@@ -644,6 +670,9 @@ msgstr "Autres langues :"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "OK"
+
+#~ msgid "Register, Step 3 &mdash; Get Vouched"
+#~ msgstr "Enregistrement, étape 3 – Se faire parrainer"
 
 #~ msgid ""
 #~ "<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
