@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-23 09:28-0700\n"
+"POT-Creation-Date: 2011-12-01 07:01-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr "Mozillians work on all sorts of different things! From Add-on developers
 msgid "Back"
 msgstr "Back"
 
-#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:107
+#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:133
 msgid "Next"
 msgstr "Next"
 
@@ -44,59 +44,89 @@ msgstr "Groups"
 msgid "Leave Group"
 msgstr "Leave Group"
 
-#: apps/phonebook/forms.py:39 apps/users/forms.py:69
+#: apps/phonebook/forms.py:40 apps/users/forms.py:69
 msgid "First Name"
 msgstr "First Name"
 
-#: apps/phonebook/forms.py:40 apps/users/forms.py:70
+#: apps/phonebook/forms.py:41 apps/users/forms.py:70
 msgid "Last Name"
 msgstr "Last Name"
 
-#: apps/phonebook/forms.py:41
+#: apps/phonebook/forms.py:42
 msgid "Bio"
 msgstr "Bio"
 
-#: apps/phonebook/forms.py:44
+#: apps/phonebook/forms.py:45
 msgid "Profile Photo"
 msgstr "Profile Photo"
 
-#: apps/phonebook/forms.py:48 apps/phonebook/templates/phonebook/profile.html:83
+#: apps/phonebook/forms.py:46
+#, fuzzy
+msgid "Remove Profile Photo"
+msgstr "Profile Photo"
+
+#: apps/phonebook/forms.py:51 apps/phonebook/templates/phonebook/profile.html:83
 msgid "IRC Nickname"
 msgstr "IRC Nickname"
 
-#: apps/phonebook/forms.py:53 apps/phonebook/templates/phonebook/profile.html:121
+#: apps/phonebook/forms.py:56 apps/phonebook/templates/phonebook/profile.html:135
 msgid "Groups"
 msgstr "Groups"
 
-#: apps/phonebook/forms.py:73
+#: apps/phonebook/forms.py:57 apps/phonebook/templates/phonebook/profile.html:91
+msgid "Website"
+msgstr "Website"
+
+#: apps/phonebook/forms.py:60
+msgid "Address"
+msgstr "Address"
+
+#: apps/phonebook/forms.py:61
+msgid "City"
+msgstr "City"
+
+#: apps/phonebook/forms.py:63
+msgid "Province/State"
+msgstr "Province/State"
+
+#: apps/phonebook/forms.py:65
+msgid "Country"
+msgstr "Country"
+
+#: apps/phonebook/forms.py:66
+msgid "Postal/Zip Code"
+msgstr "Postal/Zip Code"
+
+#: apps/phonebook/forms.py:87
 msgid "Images must be either PNG or JPG."
 msgstr "Images must be either PNG or JPG."
 
-#: apps/phonebook/forms.py:78
+#: apps/phonebook/forms.py:92
 msgid "Please use images smaller than %dMB."
 msgstr "Please use images smaller than %dMB."
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:108
 msgid "Tags can only contain alphanumeric characters, dashes, spaces."
 msgstr "Tags can only contain alphanumeric characters, dashes, spaces."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:164
 msgid "You cannot invite someone who has already been vouched."
 msgstr "You cannot invite someone who has already been vouched."
 
-#: apps/phonebook/models.py:36
+#: apps/phonebook/models.py:46
 msgid "Become a Mozillian"
 msgstr "Become a Mozillian"
 
-#: apps/phonebook/models.py:37
+#: apps/phonebook/models.py:51
+#, fuzzy
 msgid ""
-"Hi, I'm sending you this because I think you should join mozillians.org, the community directory for Mozilla contributors like you. You can create a profile for yourself about what you do in the "
-"community as well as search for other contributors to learn more about them or get in touch. Check it out."
+"Hi there. %s has invited you to join mozillians.org, the community directory for Mozilla contributors. You can create a community profile for yourself and search for other contributors to learn "
+"more about them or get in touch."
 msgstr ""
 "Hi, I'm sending you this because I think you should join mozillians.org, the community directory for Mozilla contributors like you. You can create a profile for yourself about what you do in the "
 "community as well as search for other contributors to learn more about them or get in touch. Check it out."
 
-#: apps/phonebook/models.py:45
+#: apps/phonebook/models.py:53
 #, fuzzy
 msgid "Join Mozillians: %s"
 msgstr "Mozillians"
@@ -105,11 +135,11 @@ msgstr "Mozillians"
 msgid "You must be vouched to do this."
 msgstr "You must be vouched to do this."
 
-#: apps/phonebook/views.py:344
+#: apps/phonebook/views.py:348
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 
-#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:8 templates/base.html:115
+#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:8 templates/base.html:120
 msgid "About Mozillians"
 msgstr "About Mozillians"
 
@@ -157,7 +187,7 @@ msgstr ""
 "only be available to other Mozillians. Read our Privacy Policy for more information. </p> <h2>Get Involved</h2> <p> The community directory is also a community project and you are welcome to get "
 "involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the Mozillians forums (link) to learn how. </p>"
 
-#: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:119
+#: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:124
 msgid "Get Involved"
 msgstr "Get Involved"
 
@@ -220,45 +250,57 @@ msgstr "Create Your Profile"
 msgid "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
 msgstr "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:25
+#. Unknown email during login
+#: apps/phonebook/templates/phonebook/edit_profile.html:23
+msgid "Already have a profile?"
+msgstr "Already have a profile?"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:24
+msgid ""
+"<strong>%(email)s</strong> does not have a profile. If you think you've already created a profile, try <a id=\"browserid-retry-login\" href=\"%(logout)s\">logging in</a> with a different email "
+"address."
+msgstr ""
+"<strong>%(email)s</strong> does not have a profile. If you think you've already created a profile, try <a id=\"browserid-retry-login\" href=\"%(logout)s\">logging in</a> with a different email "
+"address."
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:30 apps/users/templates/registration/register.html:85
+msgid "Create Account"
+msgstr "Create Account"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:38
 msgid "My Info"
 msgstr "My Info"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:35 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
+#: apps/phonebook/templates/phonebook/edit_profile.html:48 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
 #: apps/users/templates/registration/register.html:46 apps/users/templates/registration/register.html:68
 msgid "This field is required."
 msgstr "This field is required."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:74
-#, fuzzy
-msgid "My Mozilla Info"
-msgstr "Mozillians"
-
-#: apps/phonebook/templates/phonebook/edit_profile.html:88
+#: apps/phonebook/templates/phonebook/edit_profile.html:114
 #, fuzzy
 msgid "My Login Info"
 msgstr "Log In"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:91
+#: apps/phonebook/templates/phonebook/edit_profile.html:117
 #, fuzzy
 msgid "Primary Email:"
 msgstr "Primary Email"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:98 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
+#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
 #, fuzzy
 msgid "Change Password"
 msgstr "Confirm Password"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:109
+#: apps/phonebook/templates/phonebook/edit_profile.html:135
 msgid "Update"
 msgstr "Update"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:114
+#: apps/phonebook/templates/phonebook/edit_profile.html:140
 msgid "Cancel"
 msgstr "Cancel"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124
+#: apps/phonebook/templates/phonebook/edit_profile.html:150
 msgid "Delete Profile"
 msgstr "Delete Profile"
 
@@ -266,23 +308,40 @@ msgstr "Delete Profile"
 msgid "Mozilla Community Directory"
 msgstr "Mozilla Community Directory"
 
-#: apps/phonebook/templates/phonebook/home.html:7
+#: apps/phonebook/templates/phonebook/home.html:10
+msgid "This website requires JavaScript to be enabled."
+msgstr "This website requires JavaScript to be enabled."
+
+#. Used in BrowserID button
+#: apps/phonebook/templates/phonebook/home.html:11
+msgid "ID"
+msgstr "ID"
+
+#: apps/phonebook/templates/phonebook/home.html:12
+msgid "Sign In with BrowserID"
+msgstr "Sign In with BrowserID"
+
+#: apps/phonebook/templates/phonebook/home.html:13
+msgid "What is BrowserID? Why are we using it?"
+msgstr "What is BrowserID? Why are we using it?"
+
+#: apps/phonebook/templates/phonebook/home.html:17
 msgid "<h1>Welcome<br> <small>to the Mozilla community directory.</small></h1>"
 msgstr "<h1>Welcome<br> <small>to the Mozilla community directory.</small></h1>"
 
-#: apps/phonebook/templates/phonebook/home.html:12
+#: apps/phonebook/templates/phonebook/home.html:22
 #, fuzzy
 msgid "If you're looking for information on your fellow contributors, what they do and how to connect with them, you've come to right place. <a href=\"%(about)s\">Learn more</a>"
 msgstr ""
 "Welcome to the Mozilla community directory. If you're looking for information on your fellow contributors, what they do and how to connect with them, you've come to right place. <a href=\"%(about)s"
 "\">Learn more</a>"
 
-#: apps/phonebook/templates/phonebook/home.html:21
+#: apps/phonebook/templates/phonebook/home.html:31
 #, fuzzy
 msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button primary\">Create Profile</a>"
 msgstr "Join the directory to share information about yourself and to learn more about other Mozillians. <a href=\"%(register)s\">Create Profile</a>"
 
-#: apps/phonebook/templates/phonebook/home.html:28
+#: apps/phonebook/templates/phonebook/home.html:38
 #, fuzzy
 msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button primary\">Invite a Mozillian</a>"
 msgstr "Tell other contributors about this directory and ask them to create a profile. <a href=\"%(invite)s\">Invite a Mozillian</a>"
@@ -297,9 +356,13 @@ msgstr "Become a Mozillian"
 msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
 msgstr "If you'd like to invite a Mozillian to create a profile, please enter their email address here."
 
-#: apps/phonebook/templates/phonebook/invite.html:30
+#: apps/phonebook/templates/phonebook/invite.html:31
 msgid "Send invite"
 msgstr "Send invite"
+
+#: apps/phonebook/templates/phonebook/invite.html:35
+msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
+msgstr "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
 
 #: apps/phonebook/templates/phonebook/invited.html:3
 msgid "Invitation Sent"
@@ -353,16 +416,20 @@ msgstr "Profile"
 msgid "Email"
 msgstr "Email"
 
-#: apps/phonebook/templates/phonebook/profile.html:97 apps/phonebook/templates/phonebook/profile.html:100
+#: apps/phonebook/templates/phonebook/profile.html:99
+msgid "Location"
+msgstr "Location"
+
+#: apps/phonebook/templates/phonebook/profile.html:111 apps/phonebook/templates/phonebook/profile.html:114
 msgid "Vouched by"
 msgstr "Vouched by"
 
-#: apps/phonebook/templates/phonebook/profile.html:98
+#: apps/phonebook/templates/phonebook/profile.html:112
 msgid "No longer active"
 msgstr "No longer active"
 
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:114
+#: apps/phonebook/templates/phonebook/profile.html:128
 #, fuzzy
 msgid "Bio:"
 msgstr "Bio"
@@ -372,23 +439,27 @@ msgstr "Bio"
 msgid "Search Results"
 msgstr "Search"
 
-#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:23 templates/base.html:80
+#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:29 templates/base.html:85
 msgid "Search"
 msgstr "Search"
 
-#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:79
+#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:84
 msgid "Name, IRC Nick, or Email"
 msgstr "Name, IRC Nick, or Email"
 
-#: apps/phonebook/templates/phonebook/search.html:28
+#: apps/phonebook/templates/phonebook/search.html:25
+msgid "Show non-vouched members only"
+msgstr "Show non-vouched members only"
+
+#: apps/phonebook/templates/phonebook/search.html:34
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 
-#: apps/phonebook/templates/phonebook/search.html:37
+#: apps/phonebook/templates/phonebook/search.html:43
 msgid "<h2>Too Many Search Results</h2> <p> Sorry, but there were too many results to display. Please make your search more specific. </p>"
 msgstr "<h2>Too Many Search Results</h2> <p> Sorry, but there were too many results to display. Please make your search more specific. </p>"
 
-#: apps/phonebook/templates/phonebook/search.html:50
+#: apps/phonebook/templates/phonebook/search.html:56
 msgid "The Mozillian you are looking for is not in the directory. Please check your spelling or <a href=\"%(invite)s\">invite this person</a> to create a profile."
 msgstr "The Mozillian you are looking for is not in the directory. Please check your spelling or <a href=\"%(invite)s\">invite this person</a> to create a profile."
 
@@ -468,6 +539,15 @@ msgstr "Your old password was entered incorrectly. Please enter it again."
 msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 msgstr "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 
+#: apps/users/models.py:91
+#, fuzzy
+msgid "You are now vouched on Mozillians!"
+msgstr "This user is a vouched Mozillian."
+
+#: apps/users/models.py:92
+msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
+msgstr "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
+
 #: apps/users/views.py:31
 msgid "Confirm your account"
 msgstr "Confirm your account"
@@ -533,6 +613,11 @@ msgstr "Password reset unsuccessful"
 msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
 msgstr "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
 
+#: apps/users/templates/registration/password_reset_email.html:1
+#, fuzzy
+msgid "Password Reset"
+msgstr "Password Reset Sent"
+
 #: apps/users/templates/registration/password_reset_email.html:3
 msgid "A request was received to reset the password for this account. To change this password please click on the following link, or paste it into your browser's location bar:"
 msgstr "A request was received to reset the password for this account. To change this password please click on the following link, or paste it into your browser's location bar:"
@@ -562,10 +647,6 @@ msgstr "At this time, profiles are only viewable by other Mozillians. Community 
 #, fuzzy
 msgid "<label for=\"id_%(name)s\"> I'm okay with you handling this info as you explain in your <a href=\"%(url)s\" target=\"_blank\">privacy policy</a>. </label>"
 msgstr "I'm okay with you handling this info as you explain in your privacy policy."
-
-#: apps/users/templates/registration/register.html:85
-msgid "Create Account"
-msgstr "Create Account"
 
 #: apps/users/templates/users/confirmation_sent.html:3 apps/users/templates/users/confirmation_sent.html:7
 #, fuzzy
@@ -647,39 +728,43 @@ msgstr "Mozilla's contributor phonebook"
 msgid "Skip to Content"
 msgstr "Skip to Content"
 
-#: templates/base.html:46
+#: templates/base.html:45
+msgid "About"
+msgstr "About"
+
+#: templates/base.html:51
 msgid "Profile"
 msgstr "Profile"
 
-#: templates/base.html:51
+#: templates/base.html:56
 msgid "Invite"
 msgstr "Invite"
 
-#: templates/base.html:56
+#: templates/base.html:61
 msgid "Log Out"
 msgstr "Log Out"
 
-#: templates/base.html:61
+#: templates/base.html:66
 msgid "Log In"
 msgstr "Log In"
 
-#: templates/base.html:66
+#: templates/base.html:71
 msgid "Join Us"
 msgstr "Join Us"
 
-#: templates/base.html:123
+#: templates/base.html:128
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: templates/base.html:127
+#: templates/base.html:132
 msgid "Legal Notices"
 msgstr "Legal Notices"
 
-#: templates/base.html:131
+#: templates/base.html:136
 msgid "Report Trademark Abuse"
 msgstr "Report Trademark Abuse"
 
-#: templates/base.html:137
+#: templates/base.html:142
 msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
 "Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
@@ -696,12 +781,12 @@ msgid "Go"
 msgstr "Go"
 
 #, fuzzy
-#~ msgid "Register, Step 3 &mdash; Get Vouched"
-#~ msgstr "Register, Step 3 â Get Vouched"
+#~ msgid "My Mozilla Info"
+#~ msgstr "Mozillians"
 
 #, fuzzy
-#~ msgid "Your Profile Photo"
-#~ msgstr "Profile Photo"
+#~ msgid "Register, Step 3 &mdash; Get Vouched"
+#~ msgstr "Register, Step 3 â Get Vouched"
 
 #~ msgid "Pending..."
 #~ msgstr "Pending..."
