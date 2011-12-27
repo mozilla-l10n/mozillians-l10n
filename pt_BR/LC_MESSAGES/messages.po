@@ -2,16 +2,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-01 13:19-0700\n"
+"POT-Creation-Date: 2011-12-27 14:01-0700\n"
 "PO-Revision-Date: 2011-12-07 05:33+0200\n"
 "Last-Translator: Fernando <fernandopsilveira@yahoo.com.br>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.1.6\n"
+
+#: apps/browserid/backend.py:91 templates/500.html:7
+msgid "We're Sorry, but Something Went Wrong!"
+msgstr "Sentimos, mas algo saiu errado!"
+
+#: apps/browserid/views.py:46 apps/phonebook/templates/phonebook/edit_profile.html:20
+msgid "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
+msgstr "Sentimos, mas houve alguns problemas com as informações que você enviou. Por favor, revise o formulário, corrija quaisquer erros e envie novamente."
 
 #: apps/groups/templates/groups/index.html:3 apps/groups/templates/groups/index.html:9
 msgid "Group Listing"
@@ -27,7 +35,7 @@ msgstr ""
 msgid "Back"
 msgstr "Voltar"
 
-#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:133
+#: apps/groups/templates/groups/index.html:44 apps/phonebook/templates/phonebook/edit_profile.html:157
 msgid "Next"
 msgstr "Próxima"
 
@@ -47,11 +55,11 @@ msgstr "Participar do grupo"
 msgid "Leave Group"
 msgstr "Deixar o grupo"
 
-#: apps/phonebook/forms.py:40 apps/users/forms.py:69
+#: apps/phonebook/forms.py:40
 msgid "First Name"
 msgstr "Nome"
 
-#: apps/phonebook/forms.py:41 apps/users/forms.py:70
+#: apps/phonebook/forms.py:41
 msgid "Last Name"
 msgstr "Sobrenome"
 
@@ -124,10 +132,8 @@ msgid ""
 "Hi there. %s has invited you to join mozillians.org, the community directory for Mozilla contributors. You can create a community profile for yourself and search for other contributors to learn "
 "more about them or get in touch."
 msgstr ""
-"Olá! %s convidou você para participar do mozillians.org, o diretório da "
-"comunidade de colaboradores Mozilla. Você pode criar um perfil informando o "
-"que você faz na comunidade e também procurar por outros colaboradores para "
-"saber mais sobre eles ou entrar em contato."
+"Olá! %s convidou você para participar do mozillians.org, o diretório da comunidade de colaboradores Mozilla. Você pode criar um perfil informando o que você faz na comunidade e também procurar por "
+"outros colaboradores para saber mais sobre eles ou entrar em contato."
 
 #: apps/phonebook/models.py:53
 msgid "Join Mozillians: %s"
@@ -141,7 +147,7 @@ msgstr "Você deve ser atestado antes de fazer isso."
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Obrigado por atestar um parceiro Mozillian! Agora esse usuário foi atestado!"
 
-#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:8 templates/base.html:120
+#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:8 templates/base.html:122
 msgid "About Mozillians"
 msgstr "Sobre o Mozillians"
 
@@ -179,7 +185,7 @@ msgstr ""
 "construído até a forma como nós atestamos a identidade de novos usuários antes que eles tenham acesso aos dados disponíveis somente aos Mozillians. Leia nossa <a href=\"http://www.mozilla.org/%"
 "(locale)s/privacy-policy.html\"> Política de privacidade </a> para mais informações."
 
-#: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:124
+#: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:126
 msgid "Get Involved"
 msgstr "Envolva-se"
 
@@ -233,63 +239,62 @@ msgstr ""
 "Para ter acesso completo para procurar e convidar outros Mozillians você precisará que <a href=\"%(profile)s\">seu perfil</a> seja atestado por alguém que já possui uma conta. Por favor, envie <a "
 "href=\"%(profile)s\">seu perfil</a> para um Mozillian que esteja familiarizado com suas colaborações e peça a ele para atestar o seu perfil."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:12
+#: apps/phonebook/templates/phonebook/edit_profile.html:3 apps/phonebook/templates/phonebook/edit_profile.html:15
 msgid "Edit Your Profile"
 msgstr "Editar seu perfil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:16
-msgid "Sorry, but there were problems with the info you submitted. Please review the form, correct any errors, and try again."
-msgstr "Sentimos, mas houve alguns problemas com as informações que você enviou. Por favor, revise o formulário, corrija quaisquer erros e envie novamente."
+#: apps/phonebook/templates/phonebook/edit_profile.html:13
+msgid "Create Your Profile"
+msgstr "Criar seu perfil"
 
 #. Unknown email during login
-#: apps/phonebook/templates/phonebook/edit_profile.html:23
+#: apps/phonebook/templates/phonebook/edit_profile.html:27
 msgid "Already have a profile?"
 msgstr "Você já possui um perfil?"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:24
+#: apps/phonebook/templates/phonebook/edit_profile.html:29
 msgid ""
 "<strong>%(email)s</strong> does not have a profile. If you think you've already created a profile, try <a id=\"browserid-retry-login\" href=\"%(logout)s\">logging in</a> with a different email "
 "address."
 msgstr ""
-"<strong>%(email)s</strong> não possui um perfil. Se você acha que já criou "
-"um perfil, tente <a id=\"browserid-retry-login\" href=\"%(logout)s\">entrar</a> "
-"com um endereço eletrônico diferente."
+"<strong>%(email)s</strong> não possui um perfil. Se você acha que já criou um perfil, tente <a id=\"browserid-retry-login\" href=\"%(logout)s\">entrar</a> com um endereço eletrônico diferente."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:30 apps/users/templates/registration/register.html:85
-msgid "Create Account"
-msgstr "Criar conta"
-
-#: apps/phonebook/templates/phonebook/edit_profile.html:38
+#: apps/phonebook/templates/phonebook/edit_profile.html:43
 msgid "My Info"
 msgstr "Minhas informações"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:48 apps/users/templates/registration/login.html:22 apps/users/templates/registration/login.html:34
-#: apps/users/templates/registration/register.html:46 apps/users/templates/registration/register.html:68
+#: apps/phonebook/templates/phonebook/edit_profile.html:53 apps/phonebook/templates/phonebook/edit_profile.html:147
 msgid "This field is required."
 msgstr "Este campo é obrigatório."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:114
+#: apps/phonebook/templates/phonebook/edit_profile.html:123
 msgid "My Login Info"
 msgstr "Minhas informações de identificação"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:117
+#: apps/phonebook/templates/phonebook/edit_profile.html:126
 msgid "Primary Email:"
 msgstr "E-mail principal:"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/users/templates/registration/password_change_form.html:38 apps/users/templates/registration/password_reset_confirm.html:32
-msgid "Change Password"
-msgstr "Alterar senha"
-
 #: apps/phonebook/templates/phonebook/edit_profile.html:135
+msgid "At this time, profiles are only viewable by other Mozillians. Community members may use them to identify and contact you about events, projects and other Mozilla-related activities."
+msgstr ""
+"Neste momento, os perfis são visíveis somente por outros Mozillians. Membros da comunidade podem usá-los para identificá-lo e contatá-lo sobre eventos, projetos e outras atividades relacionadas à "
+"Mozilla."
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:159
+msgid "Create Account"
+msgstr "Criar conta"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:161
 msgid "Update"
 msgstr "Atualizar"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:140
+#: apps/phonebook/templates/phonebook/edit_profile.html:170
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:150
+#: apps/phonebook/templates/phonebook/edit_profile.html:180
 msgid "Delete Profile"
 msgstr "Excluir perfil"
 
@@ -297,34 +302,35 @@ msgstr "Excluir perfil"
 msgid "Mozilla Community Directory"
 msgstr "Diretório da Comunidade Mozilla"
 
-#: apps/phonebook/templates/phonebook/home.html:10
-msgid "This website requires JavaScript to be enabled."
+#: apps/phonebook/templates/phonebook/home.html:7
+#, fuzzy
+msgid "This website requires JavaScript to be turned on."
 msgstr "Este site requer que o JavaScript esteja ativado."
 
-#. Used in BrowserID button
-#: apps/phonebook/templates/phonebook/home.html:11
-msgid "ID"
-msgstr "ID"
-
-#: apps/phonebook/templates/phonebook/home.html:12
-msgid "Sign In with BrowserID"
-msgstr "Entrar usando o BrowserID"
-
-#: apps/phonebook/templates/phonebook/home.html:13
-msgid "What is BrowserID? Why are we using it?"
-msgstr "O que é BrowserID? Por que estamos usando isso?"
-
-#: apps/phonebook/templates/phonebook/home.html:17
+#: apps/phonebook/templates/phonebook/home.html:8
 msgid "<h1>Welcome<br> <small>to the Mozilla community directory.</small></h1>"
 msgstr "<h1>Bem-vindo(a)<br> <small>ao diretório da comunidade Mozilla.</small></h1>"
 
-#: apps/phonebook/templates/phonebook/home.html:22
+#: apps/phonebook/templates/phonebook/home.html:13
 msgid "If you're looking for information on your fellow contributors, what they do and how to connect with them, you've come to right place. <a href=\"%(about)s\">Learn more</a>"
 msgstr "Se você está buscando informações sobre seus amigos colaboradores, o que eles fazem e cono entrar em contat com eles, você chegou ao lugar certo. <a href=\"%(about)s\">Saiba mais</a>"
 
-#: apps/phonebook/templates/phonebook/home.html:31
-msgid "Join the directory to share information about yourself and to learn more about other Mozillians. <br><a href=\"%(register)s\" class=\"button primary\">Create Profile</a>"
+#: apps/phonebook/templates/phonebook/home.html:22
+#, fuzzy
+msgid "Join the directory to share information about yourself and to learn more about other Mozillians."
 msgstr "Participe do diretório para compartilhar informações sobre você e saber mais sobre outros Mozillians. <a href=\"%(register)s\" class=\"button primary\">Criar perfil</a>"
+
+#: apps/phonebook/templates/phonebook/home.html:30
+msgid "ID"
+msgstr "ID"
+
+#: apps/phonebook/templates/phonebook/home.html:32
+msgid "Sign In with BrowserID"
+msgstr "Entrar usando o BrowserID"
+
+#: apps/phonebook/templates/phonebook/home.html:36
+msgid "What is BrowserID? Why are we using it?"
+msgstr "O que é BrowserID? Por que estamos usando isso?"
 
 #: apps/phonebook/templates/phonebook/home.html:38
 msgid "Tell other contributors about this directory and ask them to create a profile. <br><a href=\"%(invite)s\" class=\"button primary\">Invite a Mozillian</a>"
@@ -344,9 +350,7 @@ msgstr "Enviar convite"
 
 #: apps/phonebook/templates/phonebook/invite.html:35
 msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
-msgstr ""
-"<strong>Observação:</strong> seu nome e e-mail serão enviados a quem você "
-"convidar."
+msgstr "<strong>Observação:</strong> seu nome e e-mail serão enviados a quem você convidar."
 
 #: apps/phonebook/templates/phonebook/invited.html:3
 msgid "Invitation Sent"
@@ -392,7 +396,7 @@ msgstr "<button type=\"submit\" class=\"button primary small\"> Atestar %(name)s
 msgid "Edit My Profile"
 msgstr "Editar meu perfil"
 
-#: apps/phonebook/templates/phonebook/profile.html:76 apps/users/templates/registration/login.html:20
+#: apps/phonebook/templates/phonebook/profile.html:76
 msgid "Email"
 msgstr "E-mail"
 
@@ -418,27 +422,23 @@ msgstr "Sobre:"
 msgid "Search Results"
 msgstr "Resultados da pesquisa"
 
-#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:29 templates/base.html:85
+#: apps/phonebook/templates/phonebook/search.html:14 apps/phonebook/templates/phonebook/search.html:31 templates/base.html:87
 msgid "Search"
 msgstr "Pesquisar"
 
-#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:84
+#: apps/phonebook/templates/phonebook/search.html:19 templates/base.html:86
 msgid "Name, IRC Nick, or Email"
 msgstr "Nome, e-mail ou apelido IRC"
 
-#: apps/phonebook/templates/phonebook/search.html:25
-msgid "Show non-vouched members only"
-msgstr "Exibir somente membros não atestados"
-
-#: apps/phonebook/templates/phonebook/search.html:34
+#: apps/phonebook/templates/phonebook/search.html:36
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Procurar um Mozillian</h2> <p> Você pode procurar outro Mozillian usando seu nome, e-mail ou apelido. </p>"
 
-#: apps/phonebook/templates/phonebook/search.html:43
+#: apps/phonebook/templates/phonebook/search.html:45
 msgid "<h2>Too Many Search Results</h2> <p> Sorry, but there were too many results to display. Please make your search more specific. </p>"
 msgstr "<h2>Muito resultados</h2> <p> Sentimos, mas há muitos resultados para serem exibidos. Por favor, torne sua pesquisa mais específica. </p>"
 
-#: apps/phonebook/templates/phonebook/search.html:56
+#: apps/phonebook/templates/phonebook/search.html:58
 msgid "The Mozillian you are looking for is not in the directory. Please check your spelling or <a href=\"%(invite)s\">invite this person</a> to create a profile."
 msgstr "O Mozillian que você está procurando não está neste diretório. Por favor, verifique sua digitação ou <a href=\"%(invite)s\">convide essa pessoa</a> para criar um perfil."
 
@@ -464,161 +464,45 @@ msgstr "Este usuário ainda não foi atestado."
 msgid "Non-Vouched"
 msgstr "Não-atestado"
 
-#: apps/users/forms.py:39
-msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
-msgstr "Por favor, digite seu nome de usuário e senha corretos. Observe que ambos os campos diferenciam letras maiúsculas e minúsculas."
-
-#: apps/users/forms.py:42
-msgid "This account is inactive."
-msgstr "Esta conta está inativa."
-
-#: apps/users/forms.py:52
-msgid "You need to confirm your account before you can log in. <a href=\"%s\">Resend confirmation email?</a>"
-msgstr "Você precisa confirmar sua conta antes de poder entrar. <a href=\"%s\">Reenviar mensagem de confirmação?</a>"
-
-#: apps/users/forms.py:61
-msgid "Primary Email"
-msgstr "E-mail principal"
-
-#: apps/users/forms.py:63
-msgid "Password"
-msgstr "Senha"
-
-#: apps/users/forms.py:65
-msgid "Confirm Password"
-msgstr "Confirmação da senha"
-
-#: apps/users/forms.py:75
+#: apps/users/forms.py:32
 msgid "I'm okay with you handling this info as you explain in your privacy policy."
 msgstr "Eu concordo que vocês manipulem essas informações conforme explicado na sua política de privacidade."
 
-#: apps/users/forms.py:92
-msgid "The passwords did not match."
-msgstr "As senhas não correspondem."
-
-#: apps/users/forms.py:107
+#: apps/users/forms.py:51
 msgid "Verify your old password"
 msgstr "Verifique sua senha antiga"
 
-#: apps/users/forms.py:108
+#: apps/users/forms.py:52
 msgid "Enter a new password"
 msgstr "Insira uma nova senha"
 
-#: apps/users/forms.py:109
+#: apps/users/forms.py:53
 msgid "Confirm new password"
 msgstr "Confirme sua senha"
 
-#: apps/users/forms.py:125
+#: apps/users/forms.py:69
 msgid "Your old password was entered incorrectly. Please enter it again."
 msgstr "Sua senha antiga inserida está incorreta. Por favor, insira novamente."
 
-#: apps/users/forms.py:151
+#: apps/users/forms.py:95
 msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 msgstr "Esse endereço de e-mail não possui uma conta de usuário associada. Você tem certeza de que se registrou?"
 
-#: apps/users/models.py:91
+#: apps/users/models.py:95
 msgid "You are now vouched on Mozillians!"
 msgstr "Você já é um Mozillian atestado!"
 
-#: apps/users/models.py:92
+#: apps/users/models.py:96
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
+msgstr "Agora você foi atestado no Mozillians.org. Você será capaz de pesquisar, atestar e convidar outros Mozillians para este site."
+
+#: apps/users/views.py:75
+msgid "Your account has been created."
 msgstr ""
-"Agora você foi atestado no Mozillians.org. Você será capaz de pesquisar, "
-"atestar e convidar outros Mozillians para este site."
 
-#: apps/users/views.py:31
-msgid "Confirm your account"
-msgstr "Confirme sua conta"
-
-#: apps/users/views.py:32
-msgid "Please confirm your Mozillians account: %s"
-msgstr "Por favor, confirme sua conta Mozillian: %s"
-
-#: apps/users/views.py:101
-msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
-msgstr "Sua conta foi criada mas precisa ser confirmada. Por favor, verifique suas mensagens para confirmar sua conta."
-
-#: apps/users/views.py:228
+#: apps/users/views.py:169
 msgid "Someone has already registered an account with %(email)s."
 msgstr "Alguém já registrou uma conta usando o endereço %(email)s."
-
-#: apps/users/templates/registration/login.html:3 apps/users/templates/registration/login.html:8
-msgid "Log in to Mozillians"
-msgstr "Entrar no Mozillians"
-
-#: apps/users/templates/registration/login.html:44
-msgid "Log in"
-msgstr "Entrar"
-
-#: apps/users/templates/registration/login.html:47 apps/users/templates/registration/password_change_form.html:42
-msgid "I forgot my password"
-msgstr "Esqueci minha senha"
-
-#: apps/users/templates/registration/password_change_form.html:3 apps/users/templates/registration/password_change_form.html:7
-msgid "Change Your Password"
-msgstr "Alterar sua senha"
-
-#: apps/users/templates/registration/password_reset_check_mail.html:3 apps/users/templates/registration/password_reset_check_mail.html:8
-msgid "Password Reset Sent"
-msgstr "Redefinição de senha enviada"
-
-#: apps/users/templates/registration/password_reset_check_mail.html:10
-msgid "I pity the fool that doesn't check their mail for a Password Reset link."
-msgstr "Sentimos muito por aquele que não verifica suas mensagens atrás do link de redefinição de senha."
-
-#: apps/users/templates/registration/password_reset_confirm.html:3 apps/users/templates/registration/password_reset_form.html:3 apps/users/templates/registration/password_reset_form.html:8
-msgid "Reset Your Password"
-msgstr "Redefinir sua senha"
-
-#: apps/users/templates/registration/password_reset_confirm.html:7
-msgid "Enter new password"
-msgstr "Insira a nova senha"
-
-#: apps/users/templates/registration/password_reset_confirm.html:9
-msgid "Please enter your new password twice so we can verify you typed it in correctly."
-msgstr "Por favor, insira sua nova senha duas vezes para que possamos verificar se você a inseriu corretamente."
-
-#: apps/users/templates/registration/password_reset_confirm.html:37
-msgid "Password reset unsuccessful"
-msgstr "Redefinição de senha sem êxito"
-
-#: apps/users/templates/registration/password_reset_confirm.html:39
-msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
-msgstr "O link de redefinição de senha era inválido, possivelmente porque ele já foi usado. Por favor, solicite o envio de um novo link de redefinição de senha."
-
-#: apps/users/templates/registration/password_reset_email.html:1
-msgid "Password Reset"
-msgstr "Redefinição de senha"
-
-#: apps/users/templates/registration/password_reset_email.html:3
-msgid "A request was received to reset the password for this account. To change this password please click on the following link, or paste it into your browser's location bar:"
-msgstr "Uma solicitação foi recebida para redefinir a senha desta conta. Para alterar sua senha, clique no link a seguir, ou copie e cole no campo de endereços do seu navegador:"
-
-#: apps/users/templates/registration/password_reset_email.html:11
-msgid "If you did not request this email there is no need for further action. Thanks, The Mozillians team"
-msgstr "Se você não solicitou esta mensagem, basta ignorá-la. Obrigado, Equipe Mozillians"
-
-#: apps/users/templates/registration/password_reset_form.html:22
-msgid "Reset Password"
-msgstr "Redefinir senha"
-
-#: apps/users/templates/registration/register.html:3 apps/users/templates/registration/register.html:18
-msgid "Create Your Profile"
-msgstr "Criar seu perfil"
-
-#: apps/users/templates/registration/register.html:25
-msgid "Sorry, but we couldn't create your account. Please review the form, correct any errors, and try again."
-msgstr "Sentimos, mas não pudemos criar a sua conta. Por favor, revise o formulário, corrija quaisquer erros e tente novamente."
-
-#: apps/users/templates/registration/register.html:31
-msgid "At this time, profiles are only viewable by other Mozillians. Community members may use them to identify and contact you about events, projects and other Mozilla-related activities."
-msgstr ""
-"Neste momento, os perfis são visíveis somente por outros Mozillians. Membros da comunidade podem usá-los para identificá-lo e contatá-lo sobre eventos, projetos e outras atividades relacionadas à "
-"Mozilla."
-
-#: apps/users/templates/registration/register.html:58
-msgid "<label for=\"id_%(name)s\"> I'm okay with you handling this info as you explain in your <a href=\"%(url)s\" target=\"_blank\">privacy policy</a>. </label>"
-msgstr "<label for=\"id_%(name)s\"> Eu concordo que vocês manipulem essas informações conforme explicado na sua <a href=\"%(url)s\" target=\"_blank\">política de privacidade</a>. </label>"
 
 #: apps/users/templates/users/confirmation_sent.html:3 apps/users/templates/users/confirmation_sent.html:7
 msgid "Confirmation Sent"
@@ -668,10 +552,6 @@ msgstr ""
 msgid "Application Error"
 msgstr "Erro na aplicação"
 
-#: templates/500.html:7
-msgid "We're Sorry, but Something Went Wrong!"
-msgstr "Sentimos, mas algo saiu errado!"
-
 #: templates/500.html:12
 msgid ""
 "<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"https://bugzilla.mozilla.org/enter_bug.cgi?"
@@ -714,27 +594,27 @@ msgstr "Convidar"
 msgid "Log Out"
 msgstr "Sair"
 
-#: templates/base.html:66
+#: templates/base.html:69
 msgid "Log In"
 msgstr "Entrar"
 
-#: templates/base.html:71
+#: templates/base.html:76
 msgid "Join Us"
 msgstr "Inscrever-se"
 
-#: templates/base.html:128
+#: templates/base.html:130
 msgid "Privacy Policy"
 msgstr "Política de privacidade"
 
-#: templates/base.html:132
+#: templates/base.html:134
 msgid "Legal Notices"
 msgstr "Avisos legais"
 
-#: templates/base.html:136
+#: templates/base.html:138
 msgid "Report Trademark Abuse"
 msgstr "Denunciar abuso de marcas registradas"
 
-#: templates/base.html:142
+#: templates/base.html:144
 msgid ""
 "Except where otherwise <a href=\"http://mozilla.com/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\"> "
 "Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
@@ -749,6 +629,93 @@ msgstr "Outros idiomas:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Ir"
+
+#~ msgid "Change Password"
+#~ msgstr "Alterar senha"
+
+#~ msgid "Show non-vouched members only"
+#~ msgstr "Exibir somente membros não atestados"
+
+#~ msgid "Please enter a correct username and password. Note that both fields are case-sensitive."
+#~ msgstr "Por favor, digite seu nome de usuário e senha corretos. Observe que ambos os campos diferenciam letras maiúsculas e minúsculas."
+
+#~ msgid "This account is inactive."
+#~ msgstr "Esta conta está inativa."
+
+#~ msgid "You need to confirm your account before you can log in. <a href=\"%s\">Resend confirmation email?</a>"
+#~ msgstr "Você precisa confirmar sua conta antes de poder entrar. <a href=\"%s\">Reenviar mensagem de confirmação?</a>"
+
+#~ msgid "Primary Email"
+#~ msgstr "E-mail principal"
+
+#~ msgid "Password"
+#~ msgstr "Senha"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Confirmação da senha"
+
+#~ msgid "The passwords did not match."
+#~ msgstr "As senhas não correspondem."
+
+#~ msgid "Confirm your account"
+#~ msgstr "Confirme sua conta"
+
+#~ msgid "Please confirm your Mozillians account: %s"
+#~ msgstr "Por favor, confirme sua conta Mozillian: %s"
+
+#~ msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
+#~ msgstr "Sua conta foi criada mas precisa ser confirmada. Por favor, verifique suas mensagens para confirmar sua conta."
+
+#~ msgid "Log in to Mozillians"
+#~ msgstr "Entrar no Mozillians"
+
+#~ msgid "Log in"
+#~ msgstr "Entrar"
+
+#~ msgid "I forgot my password"
+#~ msgstr "Esqueci minha senha"
+
+#~ msgid "Change Your Password"
+#~ msgstr "Alterar sua senha"
+
+#~ msgid "Password Reset Sent"
+#~ msgstr "Redefinição de senha enviada"
+
+#~ msgid "I pity the fool that doesn't check their mail for a Password Reset link."
+#~ msgstr "Sentimos muito por aquele que não verifica suas mensagens atrás do link de redefinição de senha."
+
+#~ msgid "Reset Your Password"
+#~ msgstr "Redefinir sua senha"
+
+#~ msgid "Enter new password"
+#~ msgstr "Insira a nova senha"
+
+#~ msgid "Please enter your new password twice so we can verify you typed it in correctly."
+#~ msgstr "Por favor, insira sua nova senha duas vezes para que possamos verificar se você a inseriu corretamente."
+
+#~ msgid "Password reset unsuccessful"
+#~ msgstr "Redefinição de senha sem êxito"
+
+#~ msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
+#~ msgstr "O link de redefinição de senha era inválido, possivelmente porque ele já foi usado. Por favor, solicite o envio de um novo link de redefinição de senha."
+
+#~ msgid "Password Reset"
+#~ msgstr "Redefinição de senha"
+
+#~ msgid "A request was received to reset the password for this account. To change this password please click on the following link, or paste it into your browser's location bar:"
+#~ msgstr "Uma solicitação foi recebida para redefinir a senha desta conta. Para alterar sua senha, clique no link a seguir, ou copie e cole no campo de endereços do seu navegador:"
+
+#~ msgid "If you did not request this email there is no need for further action. Thanks, The Mozillians team"
+#~ msgstr "Se você não solicitou esta mensagem, basta ignorá-la. Obrigado, Equipe Mozillians"
+
+#~ msgid "Reset Password"
+#~ msgstr "Redefinir senha"
+
+#~ msgid "Sorry, but we couldn't create your account. Please review the form, correct any errors, and try again."
+#~ msgstr "Sentimos, mas não pudemos criar a sua conta. Por favor, revise o formulário, corrija quaisquer erros e tente novamente."
+
+#~ msgid "<label for=\"id_%(name)s\"> I'm okay with you handling this info as you explain in your <a href=\"%(url)s\" target=\"_blank\">privacy policy</a>. </label>"
+#~ msgstr "<label for=\"id_%(name)s\"> Eu concordo que vocês manipulem essas informações conforme explicado na sua <a href=\"%(url)s\" target=\"_blank\">política de privacidade</a>. </label>"
 
 #, fuzzy
 #~ msgid "France"
