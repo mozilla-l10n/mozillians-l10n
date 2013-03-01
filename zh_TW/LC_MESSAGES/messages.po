@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-06 03:17-0700\n"
+"POT-Creation-Date: 2013-02-27 07:24-0700\n"
 "PO-Revision-Date: 2013-01-05 07:50+0200\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "群組名稱只能包含數字、連字號，空格。"
 
-#: apps/groups/models.py:46
+#: apps/groups/models.py:60
 msgid "Description"
 msgstr "描述"
 
-#: apps/groups/models.py:50 apps/groups/templates/groups/group.html:41
+#: apps/groups/models.py:64 apps/groups/templates/groups/group.html:41
 msgid "IRC Channel"
 msgstr "IRC 頻道"
 
-#: apps/groups/models.py:51 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:101 apps/users/models.py:44
+#: apps/groups/models.py:65 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:101 apps/users/models.py:48
 msgid "Website"
 msgstr "網站"
 
-#: apps/groups/models.py:53 apps/groups/templates/groups/group.html:58
+#: apps/groups/models.py:67 apps/groups/templates/groups/group.html:58
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -165,19 +165,19 @@ msgstr "成為摩茲人"
 msgid "A fellow Mozillian"
 msgstr "一位摩茲好夥伴"
 
-#: apps/phonebook/views.py:40 apps/phonebook/views.py:67
+#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
 msgid "You must be vouched to do this."
 msgstr "您必須經人背書後才能這麼做。"
 
-#: apps/phonebook/views.py:102
+#: apps/phonebook/views.py:106
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "您已修改了帳號名稱，請注意您的個人資料網址也有更動。"
 
-#: apps/phonebook/views.py:243
+#: apps/phonebook/views.py:237
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感謝您為這位摩茲人背書！"
 
-#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:17 templates/base.html:153
+#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:17 templates/base.html:164
 msgid "About Mozillians"
 msgstr "關於摩茲人"
 
@@ -186,21 +186,23 @@ msgid "Photo collage of Mozillians"
 msgstr "摩茲人的相片拚貼圖"
 
 #: apps/phonebook/templates/phonebook/about.html:18
+#, fuzzy
 msgid ""
 "<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
-"community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. </p> <p> Want to find Mozillians in Auckland for "
-"a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href=\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in "
-"development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get involved</a>. </p>"
+"community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. It also allows you to receive email "
+"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href="
+"\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
+"involved</a>. </p>"
 msgstr ""
 "<p>摩茲人是一群志願投入時間讓 Mozilla 使命更進一步的義工。他們致力於推廣開放、創新，以及網路上的機會，並形成了我們的社群的核心力量。</p> <p>這個聯絡人目錄就是可以讓摩茲人可以簡單了解誰有參與其中、誰"
 "做了什麼，以及如何聯絡他們的資源。</p> <p>想要找些在奧克蘭的摩茲人參加聚會嗎？需要一個專業的 XPCOM 駭客幫忙審核某個 patch 嗎？這就是這個網站的目的。</p> <p> <a href=\"%(wiki_roadmap_url)s\">這些功能"
 "</a>，以及其他的一些東西目前還在開發中。若您想要加入幫忙，請從下面參考有什麼可以 <a href=\"%(wiki_get_involved_url)s\">參與其中</a> 的方式。</p>"
 
-#: apps/phonebook/templates/phonebook/about.html:42
+#: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
 msgstr "隱私第一"
 
-#: apps/phonebook/templates/phonebook/about.html:45
+#: apps/phonebook/templates/phonebook/about.html:46
 msgid ""
 "Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
@@ -208,11 +210,11 @@ msgstr ""
 "這個網站從一開始就很注重隱私權。不論是從這個網站的打造方式，或是我們讓新使用者可以存取資料前必須先被其他的摩茲人背書，我們要確定能讓摩茲人有最好的體驗。請閱讀我們的 <a href=\"%(privacy_policy_url)s"
 "\">隱私權保護政策</a> 以取得更多資訊。"
 
-#: apps/phonebook/templates/phonebook/about.html:60 templates/base.html:157
+#: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:168
 msgid "Get Involved"
 msgstr "參與其中"
 
-#: apps/phonebook/templates/phonebook/about.html:63
+#: apps/phonebook/templates/phonebook/about.html:64
 msgid ""
 "The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
 "href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
@@ -271,11 +273,11 @@ msgstr "個人"
 msgid "Location"
 msgstr "位置"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:57 apps/users/templates/registration/register.html:71
+#: apps/phonebook/templates/phonebook/edit_profile.html:57
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you easier and vice-versa."
 msgstr "讓我們知道你您在世界的哪個角落，讓您可以與其他已被背書的摩茲人互相聯絡。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:68 apps/phonebook/templates/phonebook/profile.html:140 apps/phonebook/templates/phonebook/search.html:59
+#: apps/phonebook/templates/phonebook/edit_profile.html:68 apps/phonebook/templates/phonebook/profile.html:143 apps/phonebook/templates/phonebook/search.html:58
 msgid "Groups"
 msgstr "群組"
 
@@ -283,7 +285,7 @@ msgstr "群組"
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "群組是有一些關係的摩茲人所組成的社群。他們可能是同一個團隊、專案、產品、子社群，或是有相同興趣的成員。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:78 apps/phonebook/templates/phonebook/profile.html:159
+#: apps/phonebook/templates/phonebook/edit_profile.html:78 apps/phonebook/templates/phonebook/profile.html:162
 msgid "Skills"
 msgstr "技能"
 
@@ -291,7 +293,7 @@ msgstr "技能"
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "技能是成員所擁有的能力，他們只需要很小的時間或是力氣就能完成。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:88 apps/phonebook/templates/phonebook/profile.html:172
+#: apps/phonebook/templates/phonebook/edit_profile.html:88 apps/phonebook/templates/phonebook/profile.html:175
 msgid "Languages"
 msgstr "語言"
 
@@ -355,8 +357,8 @@ msgstr "開發者"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:194
 msgid ""
-"Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href=\"%"
-"(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
+"Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
+"\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
 msgstr ""
 "看看 <a href=\"%(api_schema_url)s\">我們所提供的 API 方法</a> 清單。您必須經過隱私權團隊允許才能使用此 API，如果您想使用，請 <a href=\"%(bugzilla_request_url)s\">發一份 bug</a>。若您有任何問題，歡迎"
 "在 <a href=\"%(dev_form_url)s\">開發討論區</a> 發問。"
@@ -415,7 +417,8 @@ msgid "View all groups in the Phonebook"
 msgstr "檢視通訊錄中的所有群組"
 
 #: apps/phonebook/templates/phonebook/home.html:89
-msgid "Learn more about the Phonebook and why its built"
+#, fuzzy
+msgid "Learn more about the Phonebook and why it was built"
 msgstr "了解打造此通訊錄的原因，以及更多關於通訊錄的資訊"
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:8
@@ -426,11 +429,11 @@ msgstr "邀請摩茲人"
 msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
 msgstr "若您想要邀請摩茲人建立個人資料，請在此輸入他們的電子郵件地址:"
 
-#: apps/phonebook/templates/phonebook/invite.html:26
+#: apps/phonebook/templates/phonebook/invite.html:24
 msgid "Send invite"
 msgstr "傳送邀請函"
 
-#: apps/phonebook/templates/phonebook/invite.html:30
+#: apps/phonebook/templates/phonebook/invite.html:28
 msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
 msgstr "<strong>請注意:</strong> 您的姓名跟電子郵件地址將會被列在您的邀請函當中。"
 
@@ -443,8 +446,13 @@ msgid "Invitation Sent!"
 msgstr "已送出邀請函！"
 
 #: apps/phonebook/templates/phonebook/invited.html:10
-msgid "%(email)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
+#, fuzzy
+msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr "%(email)s 已被邀請成為摩茲人。他們將會收到一封如何加入的電子郵件。若您想要的話，還可以 <a href=\"%(invite_url)s\">邀請其他人</a>。"
+
+#: apps/phonebook/templates/phonebook/location-list.html:35
+msgid "Sorry we cannot find any mozillians in"
+msgstr ""
 
 #: apps/phonebook/templates/phonebook/profile.html:19
 msgid "Your Profile"
@@ -479,24 +487,24 @@ msgstr "<div><button type=\"submit\" class=\"btn btn-info pull-right\"> 替 %(na
 msgid "Email"
 msgstr "電子郵件"
 
-#: apps/phonebook/templates/phonebook/profile.html:94 apps/users/models.py:55
+#: apps/phonebook/templates/phonebook/profile.html:94 apps/users/models.py:60
 msgid "IRC Nickname"
 msgstr "IRC 暱稱"
 
-#: apps/phonebook/templates/phonebook/profile.html:122
+#: apps/phonebook/templates/phonebook/profile.html:125
 msgid "Vouched by"
 msgstr "背書人"
 
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:133 apps/users/models.py:51
+#: apps/phonebook/templates/phonebook/profile.html:136 apps/users/models.py:56
 msgid "Bio"
 msgstr "小傳"
 
-#: apps/phonebook/templates/phonebook/profile.html:188
+#: apps/phonebook/templates/phonebook/profile.html:191
 msgid "Edit My Profile"
 msgstr "編輯我的個人資料"
 
-#: apps/phonebook/templates/phonebook/profile.html:195 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:5
+#: apps/phonebook/templates/phonebook/profile.html:198 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:5
 #: templates/bootstrap/profile_photo.html:10
 msgid "Profile photo"
 msgstr "個人資料相片"
@@ -505,33 +513,33 @@ msgstr "個人資料相片"
 msgid "Search Results"
 msgstr "搜尋結果"
 
-#: apps/phonebook/templates/phonebook/search.html:21 apps/phonebook/templates/phonebook/search.html:29
+#: apps/phonebook/templates/phonebook/search.html:20 apps/phonebook/templates/phonebook/search.html:28
 msgid "Search"
 msgstr "搜尋"
 
-#: apps/phonebook/templates/phonebook/search.html:24 templates/base.html:52
+#: apps/phonebook/templates/phonebook/search.html:23 templates/base.html:57
 msgid "Name, IRC Nick, Email or Location"
 msgstr "姓名、IRC 暱稱、Email、位置"
 
-#: apps/phonebook/templates/phonebook/search.html:33
+#: apps/phonebook/templates/phonebook/search.html:32
 msgid "Advanced Options"
 msgstr "進階選項"
 
-#: apps/phonebook/templates/phonebook/search.html:47
+#: apps/phonebook/templates/phonebook/search.html:46
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>搜尋摩茲人</h2><p>您可以使用姓名、電子郵件地址，或暱稱來搜尋其他摩茲人。</p>"
 
-#: apps/phonebook/templates/phonebook/search.html:73 templates/base.html:9 templates/base.html:17 templates/base.html:43
+#: apps/phonebook/templates/phonebook/search.html:72 templates/base.html:9 templates/base.html:21 templates/base.html:48
 msgid "Mozillians"
 msgstr "Mozillians"
 
-#: apps/phonebook/templates/phonebook/search.html:96
+#: apps/phonebook/templates/phonebook/search.html:95
 msgid ""
 "<p id=\"not-found\"> Sorry, we cannot find a group or person related to \"%(query)s\". </p> <p> Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile. "
 "</p>"
 msgstr "<p id=\"not-found\">抱歉，我們找不到與「%(query)s」相關的群組或成員。</p><p>也許他們還沒註冊摩茲人帳號？<a href=\"%(invite)s\">請邀請他們</a>註冊。</p>"
 
-#: apps/phonebook/templates/phonebook/search.html:107
+#: apps/phonebook/templates/phonebook/search.html:106
 msgid "Need help? Contact a steward in a functional area!"
 msgstr "需要幫忙？快聯絡各個領域的聯絡人！"
 
@@ -563,51 +571,51 @@ msgstr "電子郵件:"
 msgid "Username:"
 msgstr "使用者名稱:"
 
-#: apps/users/models.py:41
+#: apps/users/models.py:45
 msgid "Full Name"
 msgstr "全名"
 
-#: apps/users/models.py:59
+#: apps/users/models.py:64
 msgid "Country"
 msgstr "國家/地區"
 
-#: apps/users/models.py:61
+#: apps/users/models.py:66
 msgid "Province/State"
 msgstr "省/州"
 
-#: apps/users/models.py:63
+#: apps/users/models.py:68
 msgid "City"
 msgstr "城市"
 
-#: apps/users/models.py:66
+#: apps/users/models.py:71
 msgid "Sites that can determine my vouched status"
 msgstr "可判斷我的背書狀態的網站"
 
-#: apps/users/models.py:67
+#: apps/users/models.py:72
 msgid "All Community Sites"
 msgstr "所有社群網站"
 
-#: apps/users/models.py:68
+#: apps/users/models.py:73
 msgid "Only Mozilla Properties"
 msgstr "僅 Mozilla 網站（不含社群）"
 
-#: apps/users/models.py:71
+#: apps/users/models.py:76
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "允許 Mozilla 網站存取我的個人資料？"
 
-#: apps/users/models.py:72
+#: apps/users/models.py:77
 msgid "Yes"
 msgstr "是"
 
-#: apps/users/models.py:72
+#: apps/users/models.py:77
 msgid "No"
 msgstr "否"
 
-#: apps/users/models.py:166
+#: apps/users/models.py:196
 msgid "You are now vouched on Mozillians!"
 msgstr "您已經被背書成為摩茲人了！"
 
-#: apps/users/models.py:167
+#: apps/users/models.py:197
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "您已經在 Mozillians.org 被背書了。您將可以搜尋、幫其他人背書，並邀請其他摩茲人加入網站。"
 
@@ -631,7 +639,16 @@ msgstr "建立您的個人資料檔案"
 msgid "Previous"
 msgstr "上一步"
 
-#: apps/users/templates/registration/register.html:81
+#: apps/users/templates/registration/register.html:71
+#, fuzzy
+msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
+msgstr "讓我們知道你您在世界的哪個角落，讓您可以與其他已被背書的摩茲人互相聯絡。"
+
+#: apps/users/templates/registration/register.html:82
+msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
+msgstr ""
+
+#: apps/users/templates/registration/register.html:89
 msgid "Create Profile"
 msgstr "建立個人資料檔案"
 
@@ -654,9 +671,10 @@ msgid ""
 msgstr "<p>找不到您所請求的頁面。您可以直接前往 <a href=\"%(home_url)s\">摩茲人首頁</a> 以了解更多關於我們社群電話簿的資訊，或者是您可以直接用此頁面頂端的搜尋框來找您想找的人。</p>"
 
 #: templates/404.html:22
+#, fuzzy
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should <a href=\"%(log_in_url)s\">log in</a> in case you're trying to access a private "
-"profile. If you don't have an account, <a href=\"%(join_url)s\">join us</a>. </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr "<p>因為您尚未通過驗證，您可能沒有辦法存取電話簿當中的私人資料。在您嘗試存取私人資料時您應該 <a href=\"%(log_in_url)s\">登入</a>。若您還沒有帳號，請 <a href=\"%(join_url)s\">加入我們</a>。</p>"
 
 #: templates/500.html:3
@@ -684,45 +702,49 @@ msgstr "歡迎"
 msgid "Mozilla's contributor phonebook"
 msgstr "Mozilla 的貢獻者電話簿"
 
-#: templates/base.html:33
+#: templates/base.html:38
 msgid "Skip to Content"
 msgstr "跳到內容"
 
-#: templates/base.html:70
+#: templates/base.html:75
 msgid "View Profile"
 msgstr "檢視個人資料"
 
-#: templates/base.html:76
+#: templates/base.html:81
 msgid "Invite"
 msgstr "邀請"
 
-#: templates/base.html:83
+#: templates/base.html:88
 msgid "Settings"
 msgstr "設定"
 
-#: templates/base.html:89 templates/base.html:98
+#: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "登出"
 
-#: templates/base.html:105
+#: templates/base.html:110
 msgid "Sign in with Persona"
 msgstr "使用 Persona 登入"
 
-#: templates/base.html:140
+#: templates/base.html:145
+msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
+msgstr ""
+
+#: templates/base.html:151
 msgid ""
 "Except where otherwise <a href=\"%(legal_url)s\">noted</a>, content on this site is licensed under the <a href=\"%(cc_url)s\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any "
 "later version."
 msgstr "除另有 <a href=\"%(legal_url)s\">註明</a> 外，本站內容皆採用 <a href=\"%(cc_url)s\"> 創用 CC 姓名標示—相同方式分享條款 3.0 版</a> 或更新版本授權大眾使用。"
 
-#: templates/base.html:161
+#: templates/base.html:172
 msgid "Privacy Policy"
 msgstr "隱私權保護政策"
 
-#: templates/base.html:165
+#: templates/base.html:176
 msgid "Legal Notices"
 msgstr "法律聲明"
 
-#: templates/base.html:169
+#: templates/base.html:180
 msgid "Report Trademark Abuse"
 msgstr "回報商標濫用"
 
