@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-01-09 23:00+0200\n"
 "Last-Translator: Rimas <rq@akl.lt>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "Kad galėtum tai atlikti, už Tave turi būti laiduota."
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "Kad galėtum tai atlikti, už Tave turi būti laiduota."
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "Grupės pavadinimą gali sudaryti tik raidės, skaitmenys, brūkšneliai ir tarpai."
 
@@ -37,11 +47,11 @@ msgstr "Vikis"
 msgid "Group: {name}"
 msgstr "Grupė: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "Prisijungti prie grupės"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "Pasitraukti iš grupės"
 
@@ -57,7 +67,7 @@ msgstr "Nariai"
 msgid "Community Steward"
 msgstr "Bendruomenės kuratorius"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "Profilio nuotrauka"
 
@@ -65,11 +75,11 @@ msgstr "Profilio nuotrauka"
 msgid "Skills members have in common"
 msgstr "Narių bendri įgūdžiai"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "Grupės nariai"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "Rodomi visi rezultatai (%(count)s)."
 
@@ -91,71 +101,68 @@ msgstr "Grįžti"
 msgid "Next"
 msgstr "Toliau"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "Tik nelaiduoti"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "Nepatvirtintas"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "Tik nuotraukas pateikę nariai"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "Naudotojo vardas"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "Šis naudotojo vardas jau užimtas. Bandyk kitą."
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "Prašom naudoti tik raides, skaitmenis, brūkšnelius ir tarpus"
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "Šis naudotojo vardas negalimas, prašom pasirinkti kitą."
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "Pašalinti profilio nuotrauką"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Pradėkite rašyti įgūdį (pavyzdžiai: Python, javascript, Graphic Design, User Research)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "Pradėkite rašyti kalbos, kurią mokate, pavadinimą (pavyzdžiai: English, French, German)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "Įgūdžių pavadinimus gali sudaryti tik raidės, skaitmenys, brūkšneliai ir tarpai."
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "Kalbų pavadinimus gali sudaryti tik raidės, skaitmenys, brūkšneliai ir tarpai."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "Norėdami nurodyti miestą, pirma turite pasirinkti regioną."
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "Norėdami nurodyti regioną, pirma turite pasirinkti valstybę."
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "Pradėkite rašyti, kad pridėtumėte grupę (pavyzdžiai: Marketing, Support, WebDev, Thunderbird)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "Aš sutinku patikėti šią informaciją „Mozillos“ privatumo nuostatuose apibrėžtomis sąlygomis."
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "Prašom nurodyti funkcines sritis, kuriose šiuo metu talkininkaujate arba norėtumėte talkininkauti:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Asmens, už kurį jau buvo laiduota, pakviesti negalima."
 
@@ -167,15 +174,11 @@ msgstr "Tapk moziliečiu!"
 msgid "A fellow Mozillian"
 msgstr "Kolega mozilietis"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "Kad galėtum tai atlikti, už Tave turi būti laiduota."
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Tu pasikeitei naudotojo vardą. Atkreipk dėmesį, jog Tavo profilio URL adresas taip pat pasikeitė."
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Ačiū, kad laidavai už bičiulį mozilietį! Dabar už šį naudotoją laiduota."
 
@@ -248,7 +251,7 @@ msgstr "Ne, profilio šalinti nenoriu"
 msgid "I'm sure: delete my profile"
 msgstr "Taip, tikrai noriu pašalinti profilį"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "Profilio taisymas"
 
@@ -636,17 +639,13 @@ msgstr "Dabar esi patvirtintas mozilietis!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Mozillians.org svetainėje už Tave laidavo. Dabar galėsi vykdyti paiešką, kviesti į registruotis kitus moziliečius ir už juos laiduoti."
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "Vaje, nutiko kažkas negero. Pabandyk dar kartą."
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "Tavo paskyra sukurta."
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "Kažkas jau yra užregistravęs paskyrą su el. pašto adresu %(email)s."
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -736,10 +735,6 @@ msgstr "Rodyti profilį"
 msgid "Invite"
 msgstr "Pakviesti"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "Nuostatos"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "Atsijungti"
@@ -786,6 +781,18 @@ msgstr "Kitos kalbos:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Pakeisti"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "Tik nelaiduoti"
+
+#~ msgid "Only users with photos"
+#~ msgstr "Tik nuotraukas pateikę nariai"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "Kažkas jau yra užregistravęs paskyrą su el. pašto adresu %(email)s."
+
+#~ msgid "Settings"
+#~ msgstr "Nuostatos"
 
 #~ msgid "Last Name"
 #~ msgstr "Pavardė"

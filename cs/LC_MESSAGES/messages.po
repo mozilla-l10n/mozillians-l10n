@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mozillians 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-06 21:12+0200\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: cs <info@mozilla.cz>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "Pro tuto operaci musíte být potvrzen(a)."
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "Pro tuto operaci musíte být potvrzen(a)."
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "Skupiny mohou obsahovat pouze alfanumerické znaky, čárky a mezery."
 
@@ -37,11 +47,11 @@ msgstr "Wiki"
 msgid "Group: {name}"
 msgstr "Skupina: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "Připojit se do skupiny"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "Opustit skupinu"
 
@@ -57,7 +67,7 @@ msgstr "Členové"
 msgid "Community Steward"
 msgstr "Komunitní steward"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "Profilové foto"
 
@@ -65,11 +75,11 @@ msgstr "Profilové foto"
 msgid "Skills members have in common"
 msgstr "Společné znalosti členů"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "Členové skupiny"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "Zobrazit všech %(count)s výsledků."
 
@@ -91,71 +101,68 @@ msgstr "Zpět"
 msgid "Next"
 msgstr "Další"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "Pouze nezaručené"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "Nepotvrzen"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "Pouze uživatelé s fotografiemi"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "Toto uživatelské jméno je již používáno. Zkuste prosím jiné."
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "Použijte prosím pouze alfanumerické znaky."
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "Toto uživatelské jméno není dovoleno, zvolte prosím jiné."
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "Odebrat profilové foto"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Pro přidání zkušeností začněte psát (například: Python, javascript, Graphic Design, User Research)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "Začněte zadávat jazyk, kterým hovoříte (například: English, French, German)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "Zkušenosti mohou obsahovat pouze alfanumerické znaky, čárky a mezery."
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "Jazyky mohou obsahovat pouze alfanumerické znaky, čárky a mezery."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "Pro zvolení města musíte zvolit region."
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "Pro určení okresu musíte zvolit stát."
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "Pro přidání skupiny začněte psát (například: Marketing, Support, WebDev, Thunderbird)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "Souhlasím se zpracováním informací v podobě, jak jsou uvedeny v zásadách ochrany soukromí Mozilly."
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "Uveďte prosím oblasti, do kterých přispíváte či do kterých byste rádi přispívali:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Nemůžete pozvat někoho, kdo již by schválen."
 
@@ -167,15 +174,11 @@ msgstr "Stát se členem serveru Mozillian"
 msgid "A fellow Mozillian"
 msgstr "Kolegové na Mozillian"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "Pro tuto operaci musíte být potvrzen(a)."
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Změnil(a) jste své uživatelské jméno. Mějte prosím na paměti, že se také změnila URL vašeho profilu."
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Děkujeme za potvrzení člena serveru Mozillians! Uživatel je nyní potvrzen!"
 
@@ -247,7 +250,7 @@ msgstr "Ne: nemažte můj profil"
 msgid "I'm sure: delete my profile"
 msgstr "Ano, jsem si jist: smažte můj profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "Úprava profilu"
 
@@ -457,10 +460,7 @@ msgstr "Pozvání bylo odesláno"
 
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
-msgstr ""
-"%(recipient)s byl pozván(a) k připojení k serveru Mozillians. Obdrží e-mail "
-"s instrukcemi, jak se zapojit. Pokud chcete, můžete <a href=\"%"
-"(invite_url)s\">pozvat dalšího člena</a>."
+msgstr "%(recipient)s byl pozván(a) k připojení k serveru Mozillians. Obdrží e-mail s instrukcemi, jak se zapojit. Pokud chcete, můžete <a href=\"%(invite_url)s\">pozvat dalšího člena</a>."
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -634,17 +634,13 @@ msgstr "Nyní jste na serveru Mozillians potvrzen(a)!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Byl(a) jste potvrzen(a) na serveru Mozillians.org. Nyní máte možnost vyhledávat, potvrzovat a zvát další členy Mozillians."
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "Ooops. Něco je špatně. Zkuste to prosím později."
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "Váš účet byl vytvořen."
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "Někdo jiný si již zaregistroval účet s adresou %(email)s."
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -657,16 +653,11 @@ msgstr "Předchozí"
 #: apps/users/templates/registration/register.html:71
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
-"Dejte nám vědět, kde se ve světě nacházíte. Ostatní ověření členové "
-"Mozillians vás tak budou moci snázeji kontaktovat. Můžeme vám též poslat "
-"e-maily o důležitých novinkách Mozilly pro váš region."
+"Dejte nám vědět, kde se ve světě nacházíte. Ostatní ověření členové Mozillians vás tak budou moci snázeji kontaktovat. Můžeme vám též poslat e-maily o důležitých novinkách Mozilly pro váš region."
 
 #: apps/users/templates/registration/register.html:82
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
-msgstr ""
-"Jakmile budete potvrzen(a) jako člen Mozillians, začnete odebírat e-mailovou "
-"komunikaci. Její odebírání můžete kdykoliv zrušit klepnutím na odkaz v "
-"patičce e-mailů."
+msgstr "Jakmile budete potvrzen(a) jako člen Mozillians, začnete odebírat e-mailovou komunikaci. Její odebírání můžete kdykoliv zrušit klepnutím na odkaz v patičce e-mailů."
 
 #: apps/users/templates/registration/register.html:89
 msgid "Create Profile"
@@ -738,10 +729,6 @@ msgstr "Zobrazit profil"
 msgid "Invite"
 msgstr "Pozvat"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "Nastavení"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "Odhlášení"
@@ -752,9 +739,7 @@ msgstr "Přihlášení pomocí Persona"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Pomozte učinit server Mozillians lepším.  <a href=\"%(bug_url)s\">Nahlaste "
-"chybu</a> či <a href=\"%(git_url)s\">pomozte server vylepšit</a>."
+msgstr "Pomozte učinit server Mozillians lepším.  <a href=\"%(bug_url)s\">Nahlaste chybu</a> či <a href=\"%(git_url)s\">pomozte server vylepšit</a>."
 
 #: templates/base.html:151
 msgid ""
@@ -790,6 +775,18 @@ msgstr "Ostatní jazyky:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Přejít"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "Pouze nezaručené"
+
+#~ msgid "Only users with photos"
+#~ msgstr "Pouze uživatelé s fotografiemi"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "Někdo jiný si již zaregistroval účet s adresou %(email)s."
+
+#~ msgid "Settings"
+#~ msgstr "Nastavení"
 
 #~ msgid "Last Name"
 #~ msgstr "Příjmení"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-13 07:39+0200\n"
 "Last-Translator: Masahiko <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "この操作を行うには承認されている必要があります。"
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "この操作を行うには承認されている必要があります。"
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "グループ名には半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
 
@@ -37,11 +47,11 @@ msgstr "Wiki"
 msgid "Group: {name}"
 msgstr "グループ: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "グループに参加"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "グループから脱退"
 
@@ -57,7 +67,7 @@ msgstr "メンバー"
 msgid "Community Steward"
 msgstr "コミュニティ管理者"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "プロフィール写真"
 
@@ -65,11 +75,11 @@ msgstr "プロフィール写真"
 msgid "Skills members have in common"
 msgstr "メンバーの共通スキル"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "グループのメンバー"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "全 %(count)s 件の検索結果を表示しています。"
 
@@ -89,71 +99,68 @@ msgstr "前へ"
 msgid "Next"
 msgstr "次へ"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "未承認ユーザのみ"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "未承認"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "写真付きユーザのみ"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "ユーザ名"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "このユーザ名は既に使用されています。他のユーザ名をお試しください。"
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "半角英数字のみを使用してください"
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "このユーザ名は使用できません。他のユーザ名を選んでください。"
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "プロフィール写真を削除"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "スキルを入力してください (例: Python、javascript、グラフィックデザイン、ユーザ調査)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "お使いの言語を入力してください (例: English, French, German)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "スキル欄は半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "言語の欄は半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "「地域」が設定されていない場合、「都市」を設定する事はできません。"
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "「国」が設定されていない場合、「地区」を指定する事はできません。"
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "追加するグループ名を入力してください (例: Marketing, Support, WebDev, Thunderbird)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "私は Mozilla のプライバシーポリシーに記載された個人情報の取り扱いに同意します。"
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "現在あなたが貢献している、または貢献したいと考えている専門分野を記入してください:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "既に承認済みの人を招待する事は出来ません。"
 
@@ -165,15 +172,11 @@ msgstr "Mozillian になる"
 msgid "A fellow Mozillian"
 msgstr "Mozillian 仲間"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "この操作を行うには承認されている必要があります。"
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "ユーザ名を変更しました。プロフィールの URL も変更されているので注意してください。"
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Mozillian を承認していただきありがとうございます。このユーザは認証されました！"
 
@@ -242,7 +245,7 @@ msgstr "いいえ: プロフィールを削除しません"
 msgid "I'm sure: delete my profile"
 msgstr "はい: プロフィールを削除します"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "プロフィールの編集"
 
@@ -453,9 +456,7 @@ msgstr "招待状が送信されました。"
 
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
-msgstr ""
-"%(recipient)s を Mozillians に招待しました。招待された方には、参加方法についてのメールが送信されます。よろしければ、<a "
-"href=\"%(invite_url)s\">別の Mozillian も招待</a> してください。"
+msgstr "%(recipient)s を Mozillians に招待しました。招待された方には、参加方法についてのメールが送信されます。よろしければ、<a href=\"%(invite_url)s\">別の Mozillian も招待</a> してください。"
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -545,9 +546,8 @@ msgid ""
 "<p id=\"not-found\"> Sorry, we cannot find a group or person related to \"%(query)s\". </p> <p> Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile. "
 "</p>"
 msgstr ""
-"<p id=\"not-found\">「%(query)s」に関連するグループや人物は見つかりませんでした。</p><p>お探しの人物がまだ "
-"Mozillian ではないのかもしれません。</p><p><a href=\"%"
-"(invite)s\">その人を招待</a>してプロフィールを作成してもらって下さい。</p>"
+"<p id=\"not-found\">「%(query)s」に関連するグループや人物は見つかりませんでした。</p><p>お探しの人物がまだ Mozillian ではないのかもしれません。</p><p><a href=\"%(invite)s\">その人を招待</a>してプロ"
+"フィールを作成してもらって下さい。</p>"
 
 #: apps/phonebook/templates/phonebook/search.html:106
 msgid "Need help? Contact a steward in a functional area!"
@@ -629,17 +629,13 @@ msgstr "あなたは Mozillians として承認されました！"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "あなたは Mozillians.org に承認されました。他の Mozillian 達の検索、サイトへの招待と承認が可能になりました。"
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "おおっと、何かがおかしいようです。もう一度試してみてください"
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "アカウントが作成されました。"
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "%(email)s は既に登録されています。"
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -652,14 +648,12 @@ msgstr "戻る"
 #: apps/users/templates/registration/register.html:71
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
-"あなたが世界のどこにいるかを教えてください。他の承認済みの Mozillian "
-"達とあなたが簡単に連絡を取り合えるようになります。また、あなたのお住まいの地域に関連する Mozilla の重要なニュースをメールでお伝えします。"
+"あなたが世界のどこにいるかを教えてください。他の承認済みの Mozillian 達とあなたが簡単に連絡を取り合えるようになります。また、あなたのお住まいの地域に関連する Mozilla の重要なニュースをメールでお伝え"
+"します。"
 
 #: apps/users/templates/registration/register.html:82
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
-msgstr ""
-"Mozillian に承認されると、Mozilla "
-"からのメールを受け取るようになります。これらのメールはいつでも、メール下部に記載されたリンクをクリックするだけで購読解除できます。"
+msgstr "Mozillian に承認されると、Mozilla からのメールを受け取るようになります。これらのメールはいつでも、メール下部に記載されたリンクをクリックするだけで購読解除できます。"
 
 #: apps/users/templates/registration/register.html:89
 msgid "Create Profile"
@@ -688,9 +682,8 @@ msgid ""
 "<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
-"<p>ログインしていないため、電話帳の個人プロフィールにはアクセスできません。プロフィールにアクセスするには、<a href=\"%"
-"(log_in_url)s\">ログイン</a>してください。アカウントをお持ちでない場合は、<a href=\"%"
-"(join_url)s\">アカウント登録</a> をお願いします。 </p>"
+"<p>ログインしていないため、電話帳の個人プロフィールにはアクセスできません。プロフィールにアクセスするには、<a href=\"%(log_in_url)s\">ログイン</a>してください。アカウントをお持ちでない場合は、<a "
+"href=\"%(join_url)s\">アカウント登録</a> をお願いします。 </p>"
 
 #: templates/500.html:3
 msgid "Application Error"
@@ -729,10 +722,6 @@ msgstr "プロフィールを閲覧"
 msgid "Invite"
 msgstr "招待する"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "設定"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "ログアウト"
@@ -743,9 +732,7 @@ msgstr "Persona でサインイン"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Mozillians サイトを改善するため、<a href=\"%(bug_url)s\">バグ報告</a> や <a href=\"%"
-"(git_url)s\">ソースコードの提供</a> にご協力ください。"
+msgstr "Mozillians サイトを改善するため、<a href=\"%(bug_url)s\">バグ報告</a> や <a href=\"%(git_url)s\">ソースコードの提供</a> にご協力ください。"
 
 #: templates/base.html:151
 msgid ""
@@ -780,6 +767,18 @@ msgstr "その他の言語:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "移動"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "未承認ユーザのみ"
+
+#~ msgid "Only users with photos"
+#~ msgstr "写真付きユーザのみ"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "%(email)s は既に登録されています。"
+
+#~ msgid "Settings"
+#~ msgstr "設定"
 
 #~ msgid "Last Name"
 #~ msgstr "姓"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mozillians l10n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-10 11:12+0200\n"
 "Last-Translator: Shen <steekid@gmail.com>\n"
 "Language-Team: Mozest <steekid@gmail.com>\n"
@@ -14,7 +14,17 @@ msgstr ""
 "X-Generator: Pootle 2.1.6\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,91,-1\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "你必须先得到担保。"
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "你必须先得到担保。"
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "群组名只能包含字母、数字、连字符和空格。"
 
@@ -38,11 +48,11 @@ msgstr "维基"
 msgid "Group: {name}"
 msgstr "群组：{name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "加入群组"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "离开群组"
 
@@ -58,7 +68,7 @@ msgstr "成员"
 msgid "Community Steward"
 msgstr "社区管理人"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "个人资料照片"
 
@@ -66,11 +76,11 @@ msgstr "个人资料照片"
 msgid "Skills members have in common"
 msgstr "拥有共同技能的成员"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "群组成员"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "显示全部 %(count)s 个结果。"
 
@@ -90,71 +100,68 @@ msgstr "上一步"
 msgid "Next"
 msgstr "下一步"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "仅无担保的用户"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "无担保"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "仅限有照片的用户"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "用户名"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "这个用户名已经被使用，请尝试另外一个。"
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "只能使用字母和数字字符"
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "不允许这个用户名，请选择另外一个。"
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "移除个人资料照片"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "开始添加一个技能（例如：Python, javascript, 图案设计, 用户调查）"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "开始添加一种你使用的语言（例如：英语，法语，德语）"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "技能描述只能使用字母、数字、连字符、空格。"
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "语言描述只能包含字母、数字、连字符和空格。"
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "你必须选择一个区域以指定一个城市。"
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "你必须选择一个国家以指定一个区域。"
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "开始添加一个群组（例如：市场营销，支持，网络开发，Thunderbird）"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "我同意你们如 Mozilla 的隐私政策中解释的那样处理这些信息。"
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "请指明你正在志愿服务或者希望志愿服务的职能领域："
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "你不能邀请已经得到担保的人。"
 
@@ -166,15 +173,11 @@ msgstr "成为谋智人"
 msgid "A fellow Mozillian"
 msgstr "谋智人伙伴"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "你必须先得到担保。"
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "你更改了你的用户名；请注意你的个人资料网址也更改了。"
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感谢你为谋智人朋友担保！这个用户现在已经被担保了！"
 
@@ -194,11 +197,9 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p>谋智人贡献自己的时间推进 Mozilla 的使命，他们致力于在互联网上促进开放、创新和机会，他们构成了我们社区的核心。 </p> <p> "
-"这个目录资源使谋智人更容易互相了解，知道各自都在做什么，如何联系。 </p> <p> 希望找到奥克兰的谋智人聚会？需要一个专家级的 XPCOM "
-"黑客审核补丁？这正是这个网站要做的。 </p> <p> <a href=\"%(wiki_roadmap_url)s\">这些特性</a>, 以及其他功能, "
-"正在开发之中。如果你希望帮助我们完成，来看看你能怎样 <a href=\"%(wiki_get_involved_url)s\"> 参与</a>。 "
-"</p>"
+"<p>谋智人贡献自己的时间推进 Mozilla 的使命，他们致力于在互联网上促进开放、创新和机会，他们构成了我们社区的核心。 </p> <p> 这个目录资源使谋智人更容易互相了解，知道各自都在做什么，如何联系。 </p> <p> "
+"希望找到奥克兰的谋智人聚会？需要一个专家级的 XPCOM 黑客审核补丁？这正是这个网站要做的。 </p> <p> <a href=\"%(wiki_roadmap_url)s\">这些特性</a>, 以及其他功能, 正在开发之中。如果你希望帮助我们完成，来"
+"看看你能怎样 <a href=\"%(wiki_get_involved_url)s\"> 参与</a>。 </p>"
 
 #: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
@@ -209,8 +210,8 @@ msgid ""
 "Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
 msgstr ""
-"从最开始，隐私问题就是这个目录的重要部分。从网站构建的方法，到新用户需要担保方可访问到其他谋智人才能访问到的那些数据，我们要确保尽可能为谋智人提供最好的"
-"体验，阅读我们的 <a href=\"%(privacy_policy_url)s\"> 隐私政策 </a> 以了解更多信息。"
+"从最开始，隐私问题就是这个目录的重要部分。从网站构建的方法，到新用户需要担保方可访问到其他谋智人才能访问到的那些数据，我们要确保尽可能为谋智人提供最好的体验，阅读我们的 <a href="
+"\"%(privacy_policy_url)s\"> 隐私政策 </a> 以了解更多信息。"
 
 #: apps/phonebook/templates/phonebook/about.html:61 templates/base.html:168
 msgid "Get Involved"
@@ -220,9 +221,7 @@ msgstr "参与"
 msgid ""
 "The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
 "href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
-msgstr ""
-"社区目录也是一个社区项目，欢迎你加入，帮助我们把它变得更好，或者整合到其他的社区工具中。通过 <a href=\"%"
-"(google_groups_url)s\"> 谋智人论坛</a> 联系我们了解该怎样做。"
+msgstr "社区目录也是一个社区项目，欢迎你加入，帮助我们把它变得更好，或者整合到其他的社区工具中。通过 <a href=\"%(google_groups_url)s\"> 谋智人论坛</a> 联系我们了解该怎样做。"
 
 #: apps/phonebook/templates/phonebook/confirm_delete.html:3 apps/phonebook/templates/phonebook/confirm_delete.html:8
 msgid "Confirm Profile Deletion"
@@ -244,7 +243,7 @@ msgstr "不：不要删除我的个人资料"
 msgid "I'm sure: delete my profile"
 msgstr "我确定：删除我的个人资料"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "编辑你的个人资料"
 
@@ -315,9 +314,7 @@ msgstr "你已经被自动担保！"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:111
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
-msgstr ""
-"你尚未获得担保！将这个链接发送给一个可以为你的贡献提供担保的谋智人：<em class=\"underline\" title=\"Your profile "
-"URL\"> %(profile_url)s </em>"
+msgstr "你尚未获得担保！将这个链接发送给一个可以为你的贡献提供担保的谋智人：<em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:124
 msgid "Vouchees"
@@ -452,9 +449,7 @@ msgstr "邀请已发送！"
 
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
-msgstr ""
-"%(email)s 已经被邀请成为谋智人，他们会收到一封邮件说明如何加入。如果需要，你可以 <a href=\"%"
-"(invite_url)s\">邀请其他谋智人</a> 。"
+msgstr "%(email)s 已经被邀请成为谋智人，他们会收到一封邮件说明如何加入。如果需要，你可以 <a href=\"%(invite_url)s\">邀请其他谋智人</a> 。"
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -543,9 +538,7 @@ msgstr "谋智人"
 msgid ""
 "<p id=\"not-found\"> Sorry, we cannot find a group or person related to \"%(query)s\". </p> <p> Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile. "
 "</p>"
-msgstr ""
-"<p id=\"not-found\"> 抱歉，我们找不到与 \"%(query)s\" 相关的群组或个人。 </p> <p> 也许他们还不是谋智人？ <a "
-"href=\"%(invite)s\">邀请这个人</a> 创建个人资料。 </p>"
+msgstr "<p id=\"not-found\"> 抱歉，我们找不到与 \"%(query)s\" 相关的群组或个人。 </p> <p> 也许他们还不是谋智人？ <a href=\"%(invite)s\">邀请这个人</a> 创建个人资料。 </p>"
 
 #: apps/phonebook/templates/phonebook/search.html:106
 msgid "Need help? Contact a steward in a functional area!"
@@ -627,17 +620,13 @@ msgstr "现在你是经过担保的谋智人！"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "现在你已经在 Mozillians.org 上获得了担保，可以搜索、担保和邀请其他谋智人了。"
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "抱歉，发生问题了，请重试。"
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "你的帐号已创建。"
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "已经有人用 %(email)s 注册了一个帐号。"
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -649,9 +638,7 @@ msgstr "前一项"
 
 #: apps/users/templates/registration/register.html:71
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
-msgstr ""
-"让我们知道你在世界的什么地方。其他经过担保的谋智人将能够更容易地找到你，反之亦然。我们还可以通过电子邮件将与你当地有关的重要的 Mozilla "
-"新闻发送给你。"
+msgstr "让我们知道你在世界的什么地方。其他经过担保的谋智人将能够更容易地找到你，反之亦然。我们还可以通过电子邮件将与你当地有关的重要的 Mozilla 新闻发送给你。"
 
 #: apps/users/templates/registration/register.html:82
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
@@ -677,17 +664,13 @@ msgstr "来自 Oatmeal (http://theoatmeal.com) 的 Tumblebeast"
 msgid ""
 "<p> The page you requested couldn't be found. You can head to the <a href=\"%(home_url)s\">Mozillians home page</a> to learn more about our community phonebook, or you can try searching for the "
 "person you were looking for using the search box at the top of this page. </p>"
-msgstr ""
-"<p> 没有找到你请求的页面。你可以去 <a href=\"%(home_url)s\">谋智人主页</a> "
-"了解有关我们的社区电话簿的更多信息，或者你可以尝试使用页面顶端的搜索框搜索你要找的人。</p>"
+msgstr "<p> 没有找到你请求的页面。你可以去 <a href=\"%(home_url)s\">谋智人主页</a> 了解有关我们的社区电话簿的更多信息，或者你可以尝试使用页面顶端的搜索框搜索你要找的人。</p>"
 
 #: templates/404.html:22
 msgid ""
 "<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
-msgstr ""
-"<p> 因为你没有获得授权，因此无权访问电话簿中的私人信息。如果要访问私人的个人资料，你应该登录。如果你没有帐号，<a href=\"%"
-"(join_url)s\">加入我们</a>。 </p>"
+msgstr "<p> 因为你没有获得授权，因此无权访问电话簿中的私人信息。如果要访问私人的个人资料，你应该登录。如果你没有帐号，<a href=\"%(join_url)s\">加入我们</a>。 </p>"
 
 #: templates/500.html:3
 msgid "Application Error"
@@ -703,9 +686,8 @@ msgid ""
 "know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
 "about Mozillians. Sorry about this! </p>"
 msgstr ""
-"<p> 抱歉，遇到了意想不到的错误，无法处理你的请求。你可以再次尝试刷新你的浏览器或者你可以 <a href=\"%(bugzilla_url)s\"> "
-"提交一个缺陷</a> 告诉我们发生了什么事情，我们会尽快修复。</p> <p> 如果刷新页面也不行，你可以 <a href=\"%"
-"(home_url)s\">访问谋智人主页</a> 进一步了解谋智人。很抱歉！</p>"
+"<p> 抱歉，遇到了意想不到的错误，无法处理你的请求。你可以再次尝试刷新你的浏览器或者你可以 <a href=\"%(bugzilla_url)s\"> 提交一个缺陷</a> 告诉我们发生了什么事情，我们会尽快修复。</p> <p> 如果刷新页面"
+"也不行，你可以 <a href=\"%(home_url)s\">访问谋智人主页</a> 进一步了解谋智人。很抱歉！</p>"
 
 #: templates/base.html:10
 msgid "Welcome"
@@ -727,10 +709,6 @@ msgstr "查看个人资料"
 msgid "Invite"
 msgstr "邀请"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "设置"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "退出"
@@ -741,8 +719,7 @@ msgstr "用 Persona 登录"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"帮助谋智人网站变得更好。<a href=\"%(bug_url)s\">提交缺陷</a>或者<a href=\"%(git_url)s\">做出改变</a>。"
+msgstr "帮助谋智人网站变得更好。<a href=\"%(bug_url)s\">提交缺陷</a>或者<a href=\"%(git_url)s\">做出改变</a>。"
 
 #: templates/base.html:151
 msgid ""
@@ -774,3 +751,15 @@ msgstr "其他语言："
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "转到"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "仅无担保的用户"
+
+#~ msgid "Only users with photos"
+#~ msgstr "仅限有照片的用户"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "已经有人用 %(email)s 注册了一个帐号。"
+
+#~ msgid "Settings"
+#~ msgstr "设置"

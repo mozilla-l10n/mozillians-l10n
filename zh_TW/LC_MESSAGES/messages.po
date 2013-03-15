@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-06 05:57+0200\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "您必須經人背書後才能這麼做。"
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "您必須經人背書後才能這麼做。"
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "群組名稱只能包含數字、連字號，空格。"
 
@@ -37,11 +47,11 @@ msgstr "Wiki"
 msgid "Group: {name}"
 msgstr "群組: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "加入群組"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "離開群組"
 
@@ -57,7 +67,7 @@ msgstr "成員"
 msgid "Community Steward"
 msgstr "社群代表"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "個人資料相片"
 
@@ -65,11 +75,11 @@ msgstr "個人資料相片"
 msgid "Skills members have in common"
 msgstr "成員共同有的技能"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "群組成員"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "顯示所有 %(count)s 筆結果。"
 
@@ -89,71 +99,68 @@ msgstr "上一步"
 msgid "Next"
 msgstr "下一步"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "僅未被背書"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "未被背書"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "僅含有相片的使用者"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "使用者名稱"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "使用者名稱已經被使用了。請改用別的名稱。"
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "請只使用數字與英文字母。"
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "不允許這個使用者名稱，請改用別的名稱。"
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "移除個人資料相片"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "輸入技能名稱（例如: Python, javascript, Graphic Design, User Research）"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "輸入您會的語言（例如: English、French、German）"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "技能名稱只能包含字母、數字、連字號，空格。"
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "語言名稱只能包含拉丁字母、數字、連字號，空格。"
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "您必須先指定區域才能指定城市。"
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "您必須先指定國家才能指定區域。"
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "輸入群組名稱（例如: Marketing, Support, WebDev, Thunderbird）"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "我同意你依照 Mozilla 隱私權保護政策當中所列的方式處理這些資訊。"
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "請列出您目前正在，或是有興趣貢獻的領域:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "您不能邀請已經被背書的人。"
 
@@ -165,15 +172,11 @@ msgstr "成為摩茲人"
 msgid "A fellow Mozillian"
 msgstr "一位摩茲好夥伴"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "您必須經人背書後才能這麼做。"
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "您已修改了帳號名稱，請注意您的個人資料網址也有更動。"
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感謝您為這位摩茲人背書！"
 
@@ -193,12 +196,9 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p>摩茲人是一群志願投入時間讓 Mozilla 使命更進一步的義工。他們致力於推廣開放、創新，以及網路上的機會，並形成了我們的社群的核心力量。</p> "
-"<p>這個聯絡人目錄就是可以讓摩茲人可以簡單了解誰有參與其中、誰做了什麼，以及如何聯絡他們的資源，也讓您可以收來自 Mozilla "
-"的郵件訊息。</p> <p>想要找些在奧克蘭的摩茲人參加聚會嗎？需要一個專業的 XPCOM 駭客幫忙審核某個 patch "
-"嗎？這就是這個網站的目的。</p> <p> <a href=\"%"
-"(wiki_roadmap_url)s\">這些功能</a>，以及其他的一些東西目前還在開發中。若您想要加入幫忙，請從下面參考有什麼可以 <a "
-"href=\"%(wiki_get_involved_url)s\">參與其中</a> 的方式。</p>"
+"<p>摩茲人是一群志願投入時間讓 Mozilla 使命更進一步的義工。他們致力於推廣開放、創新，以及網路上的機會，並形成了我們的社群的核心力量。</p> <p>這個聯絡人目錄就是可以讓摩茲人可以簡單了解誰有參與其中、誰"
+"做了什麼，以及如何聯絡他們的資源，也讓您可以收來自 Mozilla 的郵件訊息。</p> <p>想要找些在奧克蘭的摩茲人參加聚會嗎？需要一個專業的 XPCOM 駭客幫忙審核某個 patch 嗎？這就是這個網站的目的。</p> <p> <a "
+"href=\"%(wiki_roadmap_url)s\">這些功能</a>，以及其他的一些東西目前還在開發中。若您想要加入幫忙，請從下面參考有什麼可以 <a href=\"%(wiki_get_involved_url)s\">參與其中</a> 的方式。</p>"
 
 #: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
@@ -242,7 +242,7 @@ msgstr "不: 還是算了"
 msgid "I'm sure: delete my profile"
 msgstr "我確定: 把我的資料刪了吧"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "編輯您的個人資料"
 
@@ -448,9 +448,7 @@ msgstr "已送出邀請函！"
 
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
-msgstr ""
-"%(recipient)s 已被邀請成為摩茲人。他們將會收到一封如何加入的電子郵件。若您想要的話，還可以 <a href=\"%"
-"(invite_url)s\">邀請其他人</a>。"
+msgstr "%(recipient)s 已被邀請成為摩茲人。他們將會收到一封如何加入的電子郵件。若您想要的話，還可以 <a href=\"%(invite_url)s\">邀請其他人</a>。"
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -621,17 +619,13 @@ msgstr "您已經被背書成為摩茲人了！"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "您已經在 Mozillians.org 被背書了。您將可以搜尋、幫其他人背書，並邀請其他摩茲人加入網站。"
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "喔喔，有些東西不對勁。請再試一次。"
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "已建立您的帳號。"
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "有人已經使用 %(email)s 這個地址註冊過帳號了。"
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -675,9 +669,7 @@ msgstr "<p>找不到您所請求的頁面。您可以直接前往 <a href=\"%(ho
 msgid ""
 "<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
-msgstr ""
-"<p>因為您尚未通過驗證，您可能沒有辦法存取電話簿當中的私人資料。在您嘗試存取私人資料時您應該登入</a>。若您還沒有帳號，請 <a href=\"%"
-"(join_url)s\">加入我們</a>。</p>"
+msgstr "<p>因為您尚未通過驗證，您可能沒有辦法存取電話簿當中的私人資料。在您嘗試存取私人資料時您應該登入</a>。若您還沒有帳號，請 <a href=\"%(join_url)s\">加入我們</a>。</p>"
 
 #: templates/500.html:3
 msgid "Application Error"
@@ -716,10 +708,6 @@ msgstr "檢視個人資料"
 msgid "Invite"
 msgstr "邀請"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "設定"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "登出"
@@ -730,9 +718,7 @@ msgstr "使用 Persona 登入"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"幫助我們讓摩茲人網站變得更好。<a href=\"%(bug_url)s\">開個 bug</a> 或 <a href=\"%"
-"(git_url)s\">改點東西</a>。"
+msgstr "幫助我們讓摩茲人網站變得更好。<a href=\"%(bug_url)s\">開個 bug</a> 或 <a href=\"%(git_url)s\">改點東西</a>。"
 
 #: templates/base.html:151
 msgid ""
@@ -764,6 +750,18 @@ msgstr "其他語言:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "衝！"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "僅未被背書"
+
+#~ msgid "Only users with photos"
+#~ msgstr "僅含有相片的使用者"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "有人已經使用 %(email)s 這個地址註冊過帳號了。"
+
+#~ msgid "Settings"
+#~ msgstr "設定"
 
 #~ msgid "Last Name"
 #~ msgstr "姓氏"

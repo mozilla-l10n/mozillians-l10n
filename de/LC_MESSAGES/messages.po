@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-02 12:12+0200\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: none\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "Jemand muss für dich gebürgt haben, um dies tun zu können."
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "Jemand muss für dich gebürgt haben, um dies tun zu können."
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "Gruppen dürfen nur alphanumerische Zeichen, Bindestriche und Leerzeichen enthalten."
 
@@ -37,11 +47,11 @@ msgstr "Wiki"
 msgid "Group: {name}"
 msgstr "Gruppe: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "Gruppe beitreten"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "Gruppe verlassen"
 
@@ -57,7 +67,7 @@ msgstr "Mitglieder"
 msgid "Community Steward"
 msgstr "Verwalter der Gemeinschaft"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "Profilfoto"
 
@@ -65,11 +75,11 @@ msgstr "Profilfoto"
 msgid "Skills members have in common"
 msgstr "Fähigkeiten, die Mitglieder gemein haben"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "Gruppenmitglieder"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "Alle %(count)s werden angezeigt."
 
@@ -89,71 +99,68 @@ msgstr "Zurück"
 msgid "Next"
 msgstr "Weiter"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "Nur Nicht-Verbürgte"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "Nicht verbürgt"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "Nur Benutzer mit Fotos"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "Benutzername"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "Dieser Benutzername wird bereits verwendet. Bitte versuche es mit einem anderen."
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "Bitte verwende nur alphanumerische Zeichen."
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "Dieser Benutzername ist nicht erlaubt, bitte wähle einen anderen."
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "Profilfoto löschen"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Fang’ an zu tippen, um eine Fähigkeit hinzuzufügen (Beispiel: Python, JavaScript, Grafik-Design, Benutzerforschung)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "Fang’ an zu Tippen, um eine Sprache, die du sprichst, hinzuzufügen (Beispiel: Englisch, Französisch, Deutsch)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "Fähigkeiten dürfen nur alphanumerische Zeichen, Bindestriche und Leerzeichen enthalten."
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "Sprachen dürfen nur alphanumerische Zeichen, Bindestriche und Leerzeichen enthalten."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "Du musst eine Region angeben, um eine Stadt angeben zu können."
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "Du musst ein Land angeben, um einen Bezirk angeben zu können."
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "Fang’ an zu Tippen, um eine Gruppe hinzuzufügen (Beispiel: Marketing, Hilfe, Web-Entwicklung, Thunderbird)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "Ich bin einverstanden, dass ihr diese Daten wie in Mozillas Datenschutzerklärung angegeben behandelt."
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "Bitte gib die funktionalen Bereiche an, in denen du derzeit mitarbeitest oder gerne mitarbeiten würdest:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Du kannst niemanden einladen, für den bereits gebürgt wurde."
 
@@ -165,15 +172,11 @@ msgstr "Mozillianer werden"
 msgid "A fellow Mozillian"
 msgstr "Ein anderer Mozillianer"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "Jemand muss für dich gebürgt haben, um dies tun zu können."
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Du hast deinen Benutzernamen geändert; beachte bitte, dass sich auch die URL deines Profils geändert hat."
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Danke, dass du für einen anderen Mozillianer gebürgt hast! Für diesen Benutzer ist nun gebürgt!"
 
@@ -193,18 +196,11 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p> Mozillianer sind Menschen, die freiwillig Ihre Zeit dafür verwenden, die "
-"Mozilla-Mission voranzubringen. Sie widmen sich dem Bewerben von Offenheit, "
-"Innovation und Chancen im Internet und sie bilden den Kern unserer "
-"Gemeinschaft. </p> <p> Dieses Verzeichnis ist eine Ressource, die es "
-"Mozillianern vereinfachen soll, herauszufinden, wer dabei ist, was sie tun "
-"und wie man mit ihnen in Verbindung tritt. Es ermöglicht dir auch, E-Mails "
-"von Mozilla zu erhalten. </p> <p> Suchst du Mozillianer in Auckland für ein "
-"Treffen? Brauchst du einen XPCOM-Hacker, der einen Patch überprüft? Genau "
-"dafür ist diese Website da. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Diese "
-"Funktionen</a> und andere werden derzeit entwickelt. Wenn du uns damit "
-"helfen möchtest, erfahre im folgenden wie du <a href=\"%"
-"(wiki_get_involved_url)s\">mitmachen</a> kannst. </p>"
+"<p> Mozillianer sind Menschen, die freiwillig Ihre Zeit dafür verwenden, die Mozilla-Mission voranzubringen. Sie widmen sich dem Bewerben von Offenheit, Innovation und Chancen im Internet und sie "
+"bilden den Kern unserer Gemeinschaft. </p> <p> Dieses Verzeichnis ist eine Ressource, die es Mozillianern vereinfachen soll, herauszufinden, wer dabei ist, was sie tun und wie man mit ihnen in "
+"Verbindung tritt. Es ermöglicht dir auch, E-Mails von Mozilla zu erhalten. </p> <p> Suchst du Mozillianer in Auckland für ein Treffen? Brauchst du einen XPCOM-Hacker, der einen Patch überprüft? "
+"Genau dafür ist diese Website da. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Diese Funktionen</a> und andere werden derzeit entwickelt. Wenn du uns damit helfen möchtest, erfahre im folgenden wie du "
+"<a href=\"%(wiki_get_involved_url)s\">mitmachen</a> kannst. </p>"
 
 #: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
@@ -253,7 +249,7 @@ msgstr "Nein: Mein Profil nicht löschen"
 msgid "I'm sure: delete my profile"
 msgstr "Ich bin sicher: Mein Profil löschen"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "Dein Profil bearbeiten"
 
@@ -434,8 +430,7 @@ msgstr "Sieh dir alle Gruppen im Telefonbuch an"
 
 #: apps/phonebook/templates/phonebook/home.html:89
 msgid "Learn more about the Phonebook and why it was built"
-msgstr ""
-"Erfahre mehr über das Telefonbuch und darüber, warum es entwickelt wurde"
+msgstr "Erfahre mehr über das Telefonbuch und darüber, warum es entwickelt wurde"
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:8
 msgid "Invite a Mozillian"
@@ -464,9 +459,7 @@ msgstr "Einladung gesendet!"
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr ""
-"%(recipient)s wurde zu den Mozillianern eingeladen. Er erhält eine E-Mail "
-"mit weiteren Instruktionen. Du kannst, wenn du möchtest, <a href=\"%"
-"(invite_url)s\">einen weiteren Mozillianer einladen</a>."
+"%(recipient)s wurde zu den Mozillianern eingeladen. Er erhält eine E-Mail mit weiteren Instruktionen. Du kannst, wenn du möchtest, <a href=\"%(invite_url)s\">einen weiteren Mozillianer einladen</a>."
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -640,17 +633,13 @@ msgstr "Für dich hat jetzt jemand auf Mozillianer gebürgt!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Für dich hat jetzt jemand auf mozillians.org gebürgt. Du kannst jetzt andere Mozillianer suchen, für sie bürgen und zu dieser Website einladen."
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "Hoppla, etwas ist schiefgegangen. Bitte versuche es erneut."
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "Ihr Benutzerkonto wurde erstellt."
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "Jemand hat bereits ein Benutzerkonto mit %(email)s registriert."
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -663,17 +652,12 @@ msgstr "Zurück"
 #: apps/users/templates/registration/register.html:71
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
-"Sag’ uns, wo auf der Welt du bist. Andere Mozillianer, für die sich jemand "
-"verbürgt hat, können dich dann leichter kontaktieren, und umgekehrt. Wir "
-"senden dir möglicherweise auch E-Mails über wichtige Neuigkeiten zu Mozilla "
-"in deiner Region."
+"Sag’ uns, wo auf der Welt du bist. Andere Mozillianer, für die sich jemand verbürgt hat, können dich dann leichter kontaktieren, und umgekehrt. Wir senden dir möglicherweise auch E-Mails über "
+"wichtige Neuigkeiten zu Mozilla in deiner Region."
 
 #: apps/users/templates/registration/register.html:82
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
-msgstr ""
-"Du erhältst Mozilla-Nachrichten per E-Mail, sobald du ein verbürgter "
-"Mozillianer bist. Du kannst die E-Mails jederzeit abbestellen, indem du auf "
-"den Link am Ende dieser E-Mails klickst."
+msgstr "Du erhältst Mozilla-Nachrichten per E-Mail, sobald du ein verbürgter Mozillianer bist. Du kannst die E-Mails jederzeit abbestellen, indem du auf den Link am Ende dieser E-Mails klickst."
 
 #: apps/users/templates/registration/register.html:89
 msgid "Create Profile"
@@ -745,10 +729,6 @@ msgstr "Profil anzeigen"
 msgid "Invite"
 msgstr "Einladen"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "Einstellungen"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "Abmelden"
@@ -759,9 +739,7 @@ msgstr "Mit Persona anmelden"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Hilf uns, Mozillianer zu verbessern. <a href=\"%(bug_url)s\">Erstelle einen "
-"Fehlerbericht</a> oder <a href=\"%(git_url)s\">nimm selbst Änderungen vor</a>."
+msgstr "Hilf uns, Mozillianer zu verbessern. <a href=\"%(bug_url)s\">Erstelle einen Fehlerbericht</a> oder <a href=\"%(git_url)s\">nimm selbst Änderungen vor</a>."
 
 #: templates/base.html:151
 msgid ""
@@ -797,6 +775,18 @@ msgstr "Andere Sprachen:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Los"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "Nur Nicht-Verbürgte"
+
+#~ msgid "Only users with photos"
+#~ msgstr "Nur Benutzer mit Fotos"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "Jemand hat bereits ein Benutzerkonto mit %(email)s registriert."
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
 
 #~ msgid "Last Name"
 #~ msgstr "Nachname"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-02-21 17:16+0200\n"
 "Last-Translator: Milos <mdinic@mozilla.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "추천을 받으셔야 사용하실 수 있습니다."
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "추천을 받으셔야 사용하실 수 있습니다."
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "그룹명은 오직 알파벳숫자, 대시, 그리고 공백문자만 사용할 수 있습니다."
 
@@ -37,11 +47,11 @@ msgstr "위키"
 msgid "Group: {name}"
 msgstr "그룹: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "그룹 가입"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "그룹 탈퇴"
 
@@ -57,7 +67,7 @@ msgstr "그룹 회원"
 msgid "Community Steward"
 msgstr "커뮤니티 관리자"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "프로필 사진"
 
@@ -65,11 +75,11 @@ msgstr "프로필 사진"
 msgid "Skills members have in common"
 msgstr "해당 기술"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "그룹 회원"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "전체  %(count)s개 결과 보기"
 
@@ -89,71 +99,68 @@ msgstr "이전"
 msgid "Next"
 msgstr "다음"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "미보증 회원 보기"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "미보증"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "사진이 있는 회원들만 보기"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "사용자 이름"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "이 별명은 이미 사용되고 있습니다. 다른 별명을 사용해 주세요."
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "알파벳이나 숫자만 사용해 주십시오."
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "이 별명은 사용하실 수 없습니다. 다른 별명을 사용해 주십시오."
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "프로필 사진 삭제"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "기술 추가 하기 (예, Python, Javascript)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "언어별로 추가하기 (예:  English, French, German)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "기술명은 오직 알파벳숫자, 대쉬, 그리고 공백문자만 사용할 수 있습니다."
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "언어명은  오직 알파벳숫자, 대쉬, 그리고 공백문자만 사용할 수 있습니다."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "정확한 지역, 도시명을 입력하십시오."
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "정확한 국가, 지역을 입력하십시오."
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "그룹을 추가하기 (예: Marketing, support, WebDev)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "개인 정보 정책에 나와 있는 대로 사용할 수 있습니다."
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "현재 기여하고 있거나 앞으로 기여하고자 하는 분야를 명시해 주십시오."
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "이미 추천된 사람은 초대할 수 없습니다."
 
@@ -165,15 +172,11 @@ msgstr "Mozillian이 되기"
 msgid "A fellow Mozillian"
 msgstr "동료 Mozillian"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "추천을 받으셔야 사용하실 수 있습니다."
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "사용자명을 변경하셨습니다; 프로필의 URL 주소도 함께 변경되었으니 주의 해주시기 바랍니다."
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "동료 Mozillian을 추천해 주셔서 감사합니다. 이제 해당 유저는 추천된 상태가 되었습니다!"
 
@@ -243,7 +246,7 @@ msgstr "아니오: 프로필을 삭제하지 않을 것입니다"
 msgid "I'm sure: delete my profile"
 msgstr "네: 내 프로필을 삭제할 것입니다"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "내 프로필 편집"
 
@@ -627,17 +630,13 @@ msgstr "이제 당신은 Mozillian으로 보증 되셨습니다!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "이제 Mozillians.org 에 보증되셨습니다. 지금부터 이 사이트의 다른 Mozillian들을 검색, 보증하거나 초대하실 수 있습니다."
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "알 수 없는 오류가 발생했습니다. 다시 시도해주십시오."
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "계정이 생성되었습니다."
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "누군가 이미 %(email)s로 계정을 등록 하였습니다."
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -727,10 +726,6 @@ msgstr "프로필 보기"
 msgid "Invite"
 msgstr "초대하기"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "설정"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "로그아웃"
@@ -773,6 +768,18 @@ msgstr "다른 언어:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "이동하기"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "미보증 회원 보기"
+
+#~ msgid "Only users with photos"
+#~ msgstr "사진이 있는 회원들만 보기"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "누군가 이미 %(email)s로 계정을 등록 하였습니다."
+
+#~ msgid "Settings"
+#~ msgstr "설정"
 
 #~ msgid "Last Name"
 #~ msgstr "성"

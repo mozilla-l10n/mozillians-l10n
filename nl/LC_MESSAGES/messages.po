@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 07:24-0700\n"
+"POT-Creation-Date: 2013-03-15 08:04-0700\n"
 "PO-Revision-Date: 2013-03-07 23:26+0200\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:174
+#: apps/common/middleware.py:36
+#, fuzzy
+msgid "You must be logged in to continue."
+msgstr "Er moet voor u garant worden gestaan om dit te doen."
+
+#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#, fuzzy
+msgid "You must be vouched to continue."
+msgstr "Er moet voor u garant worden gestaan om dit te doen."
+
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "Groepen kunnen alleen alfanumerieke tekens, streepjes en spaties bevatten."
 
@@ -37,11 +47,11 @@ msgstr "Wiki"
 msgid "Group: {name}"
 msgstr "Groep: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:101
+#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:103
 msgid "Join Group"
 msgstr "Aansluiten bij groep"
 
-#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:103
+#: apps/groups/templates/groups/group.html:30 apps/groups/templates/groups/group.html:105
 msgid "Leave Group"
 msgstr "Groep verlaten"
 
@@ -57,7 +67,7 @@ msgstr "Leden"
 msgid "Community Steward"
 msgstr "Gemeenschapsbeheerder"
 
-#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:89 apps/phonebook/templates/phonebook/includes/search_result.html:4
+#: apps/groups/templates/groups/group.html:69 apps/phonebook/forms.py:87 apps/phonebook/templates/phonebook/includes/search_result.html:4
 msgid "Profile Photo"
 msgstr "Profielfoto"
 
@@ -65,11 +75,11 @@ msgstr "Profielfoto"
 msgid "Skills members have in common"
 msgstr "Vaardigheden die leden gemeen hebben"
 
-#: apps/groups/templates/groups/group.html:110
+#: apps/groups/templates/groups/group.html:119
 msgid "Group Members"
 msgstr "Groepsleden"
 
-#: apps/groups/templates/groups/group.html:127
+#: apps/groups/templates/groups/group.html:136
 msgid "Showing all %(count)s results."
 msgstr "Alle %(count)s resultaten worden getoond."
 
@@ -90,71 +100,68 @@ msgstr "Terug"
 msgid "Next"
 msgstr "Volgende"
 
-#: apps/phonebook/forms.py:23
-msgid "Non Vouched Only"
-msgstr "Alleen zonder garantstelling"
+#: apps/phonebook/forms.py:24
+#, fuzzy
+msgid "Include non-vouched"
+msgstr "Geen garantstelling"
 
-#: apps/phonebook/forms.py:25
-msgid "Only users with photos"
-msgstr "Alleen gebruikers met foto’s"
-
-#: apps/phonebook/forms.py:56
+#: apps/phonebook/forms.py:54
 msgid "Username"
 msgstr "Gebruikersnaam"
 
-#: apps/phonebook/forms.py:74
+#: apps/phonebook/forms.py:72
 msgid "This username is in use. Please try another."
 msgstr "Deze gebruikersnaam is in gebruik. Probeer een andere."
 
-#: apps/phonebook/forms.py:79
+#: apps/phonebook/forms.py:77
 msgid "Please use only alphanumeric characters"
 msgstr "Gebruik alleen alfanumerieke tekens"
 
-#: apps/phonebook/forms.py:83
+#: apps/phonebook/forms.py:81
 msgid "This username is not allowed, please choose another."
 msgstr "Deze gebruikersnaam is niet toegestaan. Kies een andere."
 
-#: apps/phonebook/forms.py:90 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "Profielfoto verwijderen"
 
-#: apps/phonebook/forms.py:94
+#: apps/phonebook/forms.py:92
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Begin met typen om een vaardigheid toe te voegen (voorbeeld: Python, JavaScript, Grafisch ontwerp, Gebruikersonderzoek)"
 
-#: apps/phonebook/forms.py:98
+#: apps/phonebook/forms.py:96
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "Begin met typen om een taal die u spreekt toe te voegen (voorbeeld: Engels, Frans, Duits)"
 
-#: apps/phonebook/forms.py:121
+#: apps/phonebook/forms.py:119
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "Vaardigheden kunnen alleen alfanumerieke tekens, streepjes en spaties bevatten."
 
-#: apps/phonebook/forms.py:132
+#: apps/phonebook/forms.py:130
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "Talen kunnen alleen alfanumerieke tekens, streepjes en spaties bevatten."
 
-#: apps/phonebook/forms.py:147
+#: apps/phonebook/forms.py:145
 msgid "You must specify a region to specify a city."
 msgstr "U moet een regio opgeven om een stad op te geven."
 
-#: apps/phonebook/forms.py:150
+#: apps/phonebook/forms.py:148
 msgid "You must specify a country to specify a district."
 msgstr "U moet een regio opgeven om een district op te geven."
 
-#: apps/phonebook/forms.py:165
+#: apps/phonebook/forms.py:163
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "Begin met typen om een groep toe te voegen (voorbeeld: Marketing, Ondersteuning, Webontwikkeling, Thunderbird)"
 
-#: apps/phonebook/forms.py:189
+#: apps/phonebook/forms.py:187
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "Ik ben het eens met hoe u met deze informatie omgaat, zoals wordt uitgelegd in Mozilla’s privacybeleid."
 
-#: apps/phonebook/forms.py:196
+#: apps/phonebook/forms.py:194
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "Geef de functionele gebieden aan waaraan u momenteel bijdraagt of zou willen bijdragen:"
 
-#: apps/phonebook/forms.py:220
+#: apps/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "U kunt niet iemand uitnodigen waarvoor al garant wordt gestaan."
 
@@ -166,15 +173,11 @@ msgstr "Een Mozillian worden"
 msgid "A fellow Mozillian"
 msgstr "Een mede-Mozillian"
 
-#: apps/phonebook/views.py:41 apps/phonebook/views.py:71
-msgid "You must be vouched to do this."
-msgstr "Er moet voor u garant worden gestaan om dit te doen."
-
-#: apps/phonebook/views.py:106
+#: apps/phonebook/views.py:96
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "U hebt uw gebruikersnaam gewijzigd; houd er rekening mee dat uw profiel-URL ook is gewijzigd."
 
-#: apps/phonebook/views.py:237
+#: apps/phonebook/views.py:219
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Bedankt voor het garant staan voor een mede-Mozillian! Voor deze gebruiker wordt nu garant gestaan!"
 
@@ -194,18 +197,11 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p> Mozillians zijn mensen die vrijwillig hun tijd besteden aan het "
-"verbeteren van de Mozilla-missie. Ze zijn toegewijd aan het promoten van "
-"openheid, innovatie en mogelijkheden van het web en vormen de basis van onze "
-"gemeenschap. </p> <p> Dit adresboek is een hulpmiddel dat het voor "
-"Mozillians makkelijker maakt te ontdekken wie er meedoet, wat ze doen en hoe "
-"u met ze in contact kunt komen. Ook kunt u hierdoor e-mailcommunicatie van "
-"Mozilla ontvangen. </p> <p> Zoekt u Mozillians in Nederland voor een "
-"samenkomst? Hebt u een ervaren XPCOM-hacker nodig om een patch te "
-"beoordelen? Juist daarvoor is deze website bestemd. </p> <p> <a href=\"%"
-"(wiki_roadmap_url)s\">Deze functies</a>, en andere, zijn momenteel in "
-"ontwikkeling. Als u ons hierbij wilt helpen, lees dan hoe u <a href=\"%"
-"(wiki_get_involved_url)s\">kunt meedoen</a>. </p>"
+"<p> Mozillians zijn mensen die vrijwillig hun tijd besteden aan het verbeteren van de Mozilla-missie. Ze zijn toegewijd aan het promoten van openheid, innovatie en mogelijkheden van het web en "
+"vormen de basis van onze gemeenschap. </p> <p> Dit adresboek is een hulpmiddel dat het voor Mozillians makkelijker maakt te ontdekken wie er meedoet, wat ze doen en hoe u met ze in contact kunt "
+"komen. Ook kunt u hierdoor e-mailcommunicatie van Mozilla ontvangen. </p> <p> Zoekt u Mozillians in Nederland voor een samenkomst? Hebt u een ervaren XPCOM-hacker nodig om een patch te beoordelen? "
+"Juist daarvoor is deze website bestemd. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Deze functies</a>, en andere, zijn momenteel in ontwikkeling. Als u ons hierbij wilt helpen, lees dan hoe u <a href="
+"\"%(wiki_get_involved_url)s\">kunt meedoen</a>. </p>"
 
 #: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
@@ -254,7 +250,7 @@ msgstr "Nee: mijn profiel niet verwijderen"
 msgid "I'm sure: delete my profile"
 msgstr "Ik weet het zeker: mijn profiel verwijderen"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "Uw profiel bewerken"
 
@@ -464,9 +460,8 @@ msgstr "Uitnodiging verzonden!"
 #: apps/phonebook/templates/phonebook/invited.html:10
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr ""
-"%(recipient)s is uitgenodigd voor Mozillians. Hij of zij ontvangt een "
-"e-mailbericht met instructies over hoe men zich kan aansluiten. Als u wilt, "
-"kunt u <a href=\"%(invite_url)s\"> nog een Mozillian uitnodigen</a>."
+"%(recipient)s is uitgenodigd voor Mozillians. Hij of zij ontvangt een e-mailbericht met instructies over hoe men zich kan aansluiten. Als u wilt, kunt u <a href=\"%(invite_url)s\"> nog een "
+"Mozillian uitnodigen</a>."
 
 #: apps/phonebook/templates/phonebook/location-list.html:35
 msgid "Sorry we cannot find any mozillians in"
@@ -640,17 +635,13 @@ msgstr "Er wordt nu voor u garant gestaan bij Mozillians!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Er wordt nu garant voor u gestaan bij Mozillians.org. U kunt nu andere Mozillians zoeken, garantstelling geven en uitnodigen voor de website."
 
-#: apps/users/views.py:48
+#: apps/users/views.py:50
 msgid "Ooops, something went wrong. Please try again."
 msgstr "Oeps, er is iets misgegaan. Probeer het nog eens."
 
-#: apps/users/views.py:84
+#: apps/users/views.py:87
 msgid "Your account has been created."
 msgstr "Uw account is aangemaakt."
-
-#: apps/users/views.py:121
-msgid "Someone has already registered an account with %(email)s."
-msgstr "Iemand heeft al een account geregistreerd met %(email)s."
 
 #: apps/users/templates/registration/register.html:13 apps/users/templates/registration/register.html:36
 msgid "Create Your Profile"
@@ -663,17 +654,14 @@ msgstr "Vorige"
 #: apps/users/templates/registration/register.html:71
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
-"Laat weten waar in de wereld u zich bevindt. Andere Mozillians waarvoor "
-"garant wordt gestaan kunnen dan contact met u opnemen, en vice versa. "
-"Mogelijk sturen we u ook e-mailberichten over belangrijk Mozilla-nieuws dat "
-"voor uw locatie relevant is."
+"Laat weten waar in de wereld u zich bevindt. Andere Mozillians waarvoor garant wordt gestaan kunnen dan contact met u opnemen, en vice versa. Mogelijk sturen we u ook e-mailberichten over "
+"belangrijk Mozilla-nieuws dat voor uw locatie relevant is."
 
 #: apps/users/templates/registration/register.html:82
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr ""
-"E-mailcommunicatie van Mozilla zal beginnen zodra u een Mozillian bent "
-"waarvoor garant wordt gestaan. U kunt zich te allen tijde uitschrijven door "
-"op de koppeling onderaan deze e-mailberichten te klikken."
+"E-mailcommunicatie van Mozilla zal beginnen zodra u een Mozillian bent waarvoor garant wordt gestaan. U kunt zich te allen tijde uitschrijven door op de koppeling onderaan deze e-mailberichten te "
+"klikken."
 
 #: apps/users/templates/registration/register.html:89
 msgid "Create Profile"
@@ -704,10 +692,8 @@ msgid ""
 "<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
-"<p> Omdat u niet bent geauthenticeerd, hebt u mogelijk geen toegang tot "
-"privéprofielen in het adresboek. U dient zich aan te melden als u een "
-"privéprofiel probeert te bekijken. Als u geen account hebt, <a href=\"%"
-"(join_url)s\">sluit u dan bij ons aan</a>. </p>"
+"<p> Omdat u niet bent geauthenticeerd, hebt u mogelijk geen toegang tot privéprofielen in het adresboek. U dient zich aan te melden als u een privéprofiel probeert te bekijken. Als u geen account "
+"hebt, <a href=\"%(join_url)s\">sluit u dan bij ons aan</a>. </p>"
 
 #: templates/500.html:3
 msgid "Application Error"
@@ -747,10 +733,6 @@ msgstr "Profiel bekijken"
 msgid "Invite"
 msgstr "Uitnodigen"
 
-#: templates/base.html:88
-msgid "Settings"
-msgstr "Instellingen"
-
 #: templates/base.html:94 templates/base.html:103
 msgid "Log Out"
 msgstr "Afmelden"
@@ -761,9 +743,7 @@ msgstr "Aanmelden met Persona"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Help mee Mozillians te verbeteren. <a href=\"%(bug_url)s\">Maak een bug "
-"aan</a> of <a href=\"%(git_url)s\">breng wat wijzigingen aan</a>."
+msgstr "Help mee Mozillians te verbeteren. <a href=\"%(bug_url)s\">Maak een bug aan</a> of <a href=\"%(git_url)s\">breng wat wijzigingen aan</a>."
 
 #: templates/base.html:151
 msgid ""
@@ -799,6 +779,18 @@ msgstr "Andere talen:"
 #: templates/includes/lang_switcher.html:10
 msgid "Go"
 msgstr "Gaan"
+
+#~ msgid "Non Vouched Only"
+#~ msgstr "Alleen zonder garantstelling"
+
+#~ msgid "Only users with photos"
+#~ msgstr "Alleen gebruikers met foto’s"
+
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "Iemand heeft al een account geregistreerd met %(email)s."
+
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
 
 #~ msgid "Last Name"
 #~ msgstr "Achternaam"
@@ -988,10 +980,8 @@ msgstr "Gaan"
 #~ msgid "That e-mail address doesn't have an associated user account. Are you sure you've registered?"
 #~ msgstr "Dat e-mailadres bevat geen verbonden gebruikersaccount. Weet u zeker dat u zich hebt geregistreerd?"
 
-msgid "Join the directory to share information about yourself and to learn more about other Mozillians."
-msgstr ""
-"Sluit u aan bij het adresboek om informatie over uzelf te delen en meer over "
-"andere Mozillians te weten te komen."
+#~ msgid "Join the directory to share information about yourself and to learn more about other Mozillians."
+#~ msgstr "Sluit u aan bij het adresboek om informatie over uzelf te delen en meer over andere Mozillians te weten te komen."
 
 #~ msgid "Change Password"
 #~ msgstr "Wachtwoord wijzigen"
