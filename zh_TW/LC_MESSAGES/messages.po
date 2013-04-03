@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-15 08:04-0700\n"
+"POT-Creation-Date: 2013-04-03 05:01-0700\n"
 "PO-Revision-Date: 2013-03-18 10:45+0200\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "You must be logged in to continue."
 msgstr "您必須先登入。"
 
-#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#: apps/common/middleware.py:47
 msgid "You must be vouched to continue."
 msgstr "您必須經背書後才能繼續。"
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:175
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "群組名稱只能包含數字、連字號，空格。"
 
@@ -33,7 +33,7 @@ msgstr "描述"
 msgid "IRC Channel"
 msgstr "IRC 頻道"
 
-#: apps/groups/models.py:65 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:101 apps/users/models.py:48
+#: apps/groups/models.py:65 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:132 apps/users/models.py:200
 msgid "Website"
 msgstr "網站"
 
@@ -93,7 +93,7 @@ msgstr "摩茲人有很多不同的工作！從附加元件開發者到在地化
 msgid "Back"
 msgstr "上一步"
 
-#: apps/groups/templates/groups/index.html:44 apps/users/templates/registration/register.html:51 apps/users/templates/registration/register.html:65
+#: apps/groups/templates/groups/index.html:44 apps/users/templates/registration/register.html:56 apps/users/templates/registration/register.html:70
 msgid "Next"
 msgstr "下一步"
 
@@ -117,7 +117,7 @@ msgstr "請只使用數字與英文字母。"
 msgid "This username is not allowed, please choose another."
 msgstr "不允許這個使用者名稱，請改用別的名稱。"
 
-#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:21 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "移除個人資料相片"
 
@@ -129,35 +129,35 @@ msgstr "輸入技能名稱（例如: Python, javascript, Graphic Design, User Re
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "輸入您會的語言（例如: English、French、German）"
 
-#: apps/phonebook/forms.py:119
+#: apps/phonebook/forms.py:122
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "技能名稱只能包含字母、數字、連字號，空格。"
 
-#: apps/phonebook/forms.py:130
+#: apps/phonebook/forms.py:133
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "語言名稱只能包含拉丁字母、數字、連字號，空格。"
 
-#: apps/phonebook/forms.py:145
+#: apps/phonebook/forms.py:148
 msgid "You must specify a region to specify a city."
 msgstr "您必須先指定區域才能指定城市。"
 
-#: apps/phonebook/forms.py:148
+#: apps/phonebook/forms.py:151
 msgid "You must specify a country to specify a district."
 msgstr "您必須先指定國家才能指定區域。"
 
-#: apps/phonebook/forms.py:163
+#: apps/phonebook/forms.py:166
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "輸入群組名稱（例如: Marketing, Support, WebDev, Thunderbird）"
 
-#: apps/phonebook/forms.py:187
+#: apps/phonebook/forms.py:190
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "我同意你依照 Mozilla 隱私權保護政策當中所列的方式處理這些資訊。"
 
-#: apps/phonebook/forms.py:194
+#: apps/phonebook/forms.py:197
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "請列出您目前正在，或是有興趣貢獻的領域:"
 
-#: apps/phonebook/forms.py:218
+#: apps/phonebook/forms.py:221
 msgid "You cannot invite someone who has already been vouched."
 msgstr "您不能邀請已經被背書的人。"
 
@@ -169,11 +169,11 @@ msgstr "成為摩茲人"
 msgid "A fellow Mozillian"
 msgstr "一位摩茲好夥伴"
 
-#: apps/phonebook/views.py:96
+#: apps/phonebook/views.py:121
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "您已修改了帳號名稱，請注意您的個人資料網址也有更動。"
 
-#: apps/phonebook/views.py:219
+#: apps/phonebook/views.py:244
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感謝您為這位摩茲人背書！"
 
@@ -239,122 +239,150 @@ msgstr "不: 還是算了"
 msgid "I'm sure: delete my profile"
 msgstr "我確定: 把我的資料刪了吧"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:33 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "編輯您的個人資料"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:40 apps/users/templates/registration/register.html:39 apps/users/templates/registration/register.html:45
+#: apps/phonebook/templates/phonebook/edit_profile.html:17
+msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:26
+msgid "Visible to:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:55 apps/users/templates/registration/register.html:44 apps/users/templates/registration/register.html:50
 msgid "Profile"
 msgstr "個人資料"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:41 apps/users/templates/registration/register.html:40 apps/users/templates/registration/register.html:54
+#: apps/phonebook/templates/phonebook/edit_profile.html:56 apps/users/templates/registration/register.html:45 apps/users/templates/registration/register.html:59
 msgid "Skills & Groups"
 msgstr "技能與群組"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:42
+#: apps/phonebook/templates/phonebook/edit_profile.html:57 apps/phonebook/templates/phonebook/edit_profile.html:149
 msgid "Vouches & Invites"
 msgstr "邀請與背書"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:43
+#: apps/phonebook/templates/phonebook/edit_profile.html:58 apps/phonebook/templates/phonebook/edit_profile.html:194
 msgid "Account"
 msgstr "帳號"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:44
+#: apps/phonebook/templates/phonebook/edit_profile.html:59 apps/phonebook/templates/phonebook/edit_profile.html:249
 msgid "Services"
 msgstr "服務"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:48
+#: apps/phonebook/templates/phonebook/edit_profile.html:66
 msgid "Personal"
 msgstr "個人"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:55 apps/phonebook/templates/phonebook/profile.html:108 apps/users/templates/registration/register.html:41
-#: apps/users/templates/registration/register.html:69
+#: apps/phonebook/templates/phonebook/edit_profile.html:82 apps/phonebook/templates/phonebook/profile.html:139 apps/users/templates/registration/register.html:46
+#: apps/users/templates/registration/register.html:74
 msgid "Location"
 msgstr "位置"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:57
+#: apps/phonebook/templates/phonebook/edit_profile.html:84
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you easier and vice-versa."
 msgstr "讓我們知道你您在世界的哪個角落，讓您可以與其他已被背書的摩茲人互相聯絡。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:68 apps/phonebook/templates/phonebook/profile.html:143 apps/phonebook/templates/phonebook/search.html:58
+#: apps/phonebook/templates/phonebook/edit_profile.html:105 apps/phonebook/templates/phonebook/profile.html:188 apps/phonebook/templates/phonebook/search.html:58
 msgid "Groups"
 msgstr "群組"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:70
+#: apps/phonebook/templates/phonebook/edit_profile.html:107
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "群組是有一些關係的摩茲人所組成的社群。他們可能是同一個團隊、專案、產品、子社群，或是有相同興趣的成員。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:78 apps/phonebook/templates/phonebook/profile.html:162
+#: apps/phonebook/templates/phonebook/edit_profile.html:119 apps/phonebook/templates/phonebook/profile.html:208
 msgid "Skills"
 msgstr "技能"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:80
+#: apps/phonebook/templates/phonebook/edit_profile.html:121
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "技能是成員所擁有的能力，他們只需要很小的時間或是力氣就能完成。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:88 apps/phonebook/templates/phonebook/profile.html:175
+#: apps/phonebook/templates/phonebook/edit_profile.html:133 apps/phonebook/templates/phonebook/profile.html:221
 msgid "Languages"
 msgstr "語言"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:90
+#: apps/phonebook/templates/phonebook/edit_profile.html:135
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Mozilla 計畫跨越了許多國家與語言。請列出您會說的語言，讓其他摩茲人能夠快速地找到您。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:101
+#: apps/phonebook/templates/phonebook/edit_profile.html:151
 msgid "Vouched By"
 msgstr "背書人"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:109
+#: apps/phonebook/templates/phonebook/edit_profile.html:159
 msgid "You are automatically vouched!"
 msgstr "您已被自動背書！"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:111
+#: apps/phonebook/templates/phonebook/edit_profile.html:161
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr "您還沒被背書！把這個連結傳送給某個了解您作出了什麼貢獻的人，並請他們為您背書: <em class=\"underline\" title=\"您的個人檔案網址\"> %(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124
+#: apps/phonebook/templates/phonebook/edit_profile.html:175
 msgid "Vouchees"
 msgstr "為下列成員背書"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:142
+#: apps/phonebook/templates/phonebook/edit_profile.html:198
 msgid "Persona Email"
 msgstr "Persona Email"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:148
+#: apps/phonebook/templates/phonebook/edit_profile.html:206
 msgid "Password"
 msgstr "密碼"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:151
+#: apps/phonebook/templates/phonebook/edit_profile.html:209
 msgid "Change your password at <a href=\"%(persona)s\">Persona</a>"
 msgstr "到 <a href=\"%(persona)s\">Persona</a> 修改您的密碼"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:158
+#: apps/phonebook/templates/phonebook/edit_profile.html:217
+msgid "Privacy Settings"
+msgstr "隱私選項"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:220
+msgid "Make all of my profile fields visible to:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:224
+msgid "-- No Change --"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:225 apps/phonebook/templates/phonebook/search.html:72 templates/base.html:9 templates/base.html:21 templates/base.html:48
+msgid "Mozillians"
+msgstr "Mozillians"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:226 apps/phonebook/templates/phonebook/profile.html:97
+msgid "Public"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:233
 msgid "Delete Account"
 msgstr "刪除帳號"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:161
+#: apps/phonebook/templates/phonebook/edit_profile.html:236
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "我了解刪除我的帳號會讓我比較難炫耀我所做過的貢獻，並且更難能讓 Mozilla 社群當中的其他成員找到我。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:168
+#: apps/phonebook/templates/phonebook/edit_profile.html:243
 msgid "Delete Profile"
 msgstr "刪除個人資料"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:176
+#: apps/phonebook/templates/phonebook/edit_profile.html:252
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
 msgstr "這個通訊錄提供了一組 API，讓貢獻者可以透過諸如 <a href=\"%(bugzilla_url)s\">Bugzilla</a> 或 <a href=\"%(reps_url)s\">Mozilla Reps Portal</a> 等其他不同工具或網站分享個人資料。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:184
-msgid "Privacy Settings"
-msgstr "隱私選項"
+#: apps/phonebook/templates/phonebook/edit_profile.html:260
+msgid "Other Sites"
+msgstr ""
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:192
+#: apps/phonebook/templates/phonebook/edit_profile.html:268
 msgid "Developers"
 msgstr "開發者"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:194
+#: apps/phonebook/templates/phonebook/edit_profile.html:270
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -362,16 +390,25 @@ msgstr ""
 "看看 <a href=\"%(api_schema_url)s\">我們所提供的 API 方法</a> 清單。您必須經過隱私權團隊允許才能使用此 API，如果您想使用，請 <a href=\"%(bugzilla_request_url)s\">發一份 bug</a>。若您有任何問題，歡迎"
 "在 <a href=\"%(dev_form_url)s\">開發討論區</a> 發問。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:217
+#: apps/phonebook/templates/phonebook/edit_profile.html:285
+msgid "Your approved apps:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:290
+#, fuzzy
+msgid "Key"
+msgstr "肯亞"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:293
 msgid "You have no registered, active apps."
 msgstr "您尚未註冊或已啟用的應用程式。"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:226
+#: apps/phonebook/templates/phonebook/edit_profile.html:302
 msgid "Update"
 msgstr "更新"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:228
+#: apps/phonebook/templates/phonebook/edit_profile.html:304
 msgid "Cancel"
 msgstr "取消"
 
@@ -408,7 +445,8 @@ msgid "Invite other contributors to create a profile"
 msgstr "邀請其他貢獻者建立個人資料"
 
 #: apps/phonebook/templates/phonebook/home.html:81
-msgid "Edit your profile, account settings or view developer info"
+#, fuzzy
+msgid "Edit your profile, privacy settings and account settings"
 msgstr "編輯您的個人資料、帳戶設定、或檢視開發者資訊"
 
 #: apps/phonebook/templates/phonebook/home.html:85
@@ -472,36 +510,53 @@ msgstr ""
 "<p>您的個人資料正在等候背書。請把這個連結傳送給某個了解您作出了什麼貢獻的人，並請他們為您背書。</p><p>若您剛加入 Mozilla 社群，請看看 <a href=\"%(contribute_url)s\">參與其中</a> 這一頁裡面有什麼您有"
 "興趣的工作。您在社群中完成一些任務後更容易被人背書。</p><em class=\"underline\" title=\"您的個人資料 URL\"> %(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/profile.html:49
-msgid "<p class=\"pull-left\">This profile is waiting for approval.</p>"
-msgstr "<p class=\"pull-left\">此個人檔案正在等候審核。</p>"
-
-#: apps/phonebook/templates/phonebook/profile.html:60
+#: apps/phonebook/templates/phonebook/profile.html:56
+#, fuzzy
 msgid "<div> <button type=\"submit\" class=\"btn btn-info pull-right\"> Vouch for %(name)s </button> </div>"
 msgstr "<div><button type=\"submit\" class=\"btn btn-info pull-right\"> 替 %(name)s 背書 </button></div>"
 
-#: apps/phonebook/templates/phonebook/profile.html:87
+#: apps/phonebook/templates/phonebook/profile.html:65
+msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:85
+msgid "View as:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:89
+msgid "Myself"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:93 apps/phonebook/templates/phonebook/includes/search_result.html:15
+msgid "Mozillian"
+msgstr "Mozillian"
+
+#: apps/phonebook/templates/phonebook/profile.html:105
+msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:118
 msgid "Email"
 msgstr "電子郵件"
 
-#: apps/phonebook/templates/phonebook/profile.html:94 apps/users/models.py:60
+#: apps/phonebook/templates/phonebook/profile.html:125 apps/users/models.py:213
 msgid "IRC Nickname"
 msgstr "IRC 暱稱"
 
-#: apps/phonebook/templates/phonebook/profile.html:125
+#: apps/phonebook/templates/phonebook/profile.html:170
 msgid "Vouched by"
 msgstr "背書人"
 
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:136 apps/users/models.py:56
+#: apps/phonebook/templates/phonebook/profile.html:181 apps/users/models.py:209
 msgid "Bio"
 msgstr "小傳"
 
-#: apps/phonebook/templates/phonebook/profile.html:191
+#: apps/phonebook/templates/phonebook/profile.html:237
 msgid "Edit My Profile"
 msgstr "編輯我的個人資料"
 
-#: apps/phonebook/templates/phonebook/profile.html:198 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:5
+#: apps/phonebook/templates/phonebook/profile.html:244 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:6
 #: templates/bootstrap/profile_photo.html:10
 msgid "Profile photo"
 msgstr "個人資料相片"
@@ -526,10 +581,6 @@ msgstr "進階選項"
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>搜尋摩茲人</h2><p>您可以使用姓名、電子郵件地址，或暱稱來搜尋其他摩茲人。</p>"
 
-#: apps/phonebook/templates/phonebook/search.html:72 templates/base.html:9 templates/base.html:21 templates/base.html:48
-msgid "Mozillians"
-msgstr "Mozillians"
-
 #: apps/phonebook/templates/phonebook/search.html:95
 msgid ""
 "<p id=\"not-found\"> Sorry, we cannot find a group or person related to \"%(query)s\". </p> <p> Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile. "
@@ -548,10 +599,6 @@ msgstr "這是您的 Gravatar，請直接到 gravatar.com 修改"
 msgid "This user is a vouched Mozillian."
 msgstr "這個使用者是已經被背書的摩茲人。"
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:15
-msgid "Mozillian"
-msgstr "Mozillian"
-
 #: apps/phonebook/templates/phonebook/includes/search_result.html:18
 msgid "This user has not yet been vouched."
 msgstr "這個使用者還沒有被背書。"
@@ -568,51 +615,51 @@ msgstr "電子郵件:"
 msgid "Username:"
 msgstr "使用者名稱:"
 
-#: apps/users/models.py:45
+#: apps/users/models.py:197
 msgid "Full Name"
 msgstr "全名"
 
-#: apps/users/models.py:64
+#: apps/users/models.py:217
 msgid "Country"
 msgstr "國家/地區"
 
-#: apps/users/models.py:66
+#: apps/users/models.py:219
 msgid "Province/State"
 msgstr "省/州"
 
-#: apps/users/models.py:68
+#: apps/users/models.py:221
 msgid "City"
 msgstr "城市"
 
-#: apps/users/models.py:71
+#: apps/users/models.py:224
 msgid "Sites that can determine my vouched status"
 msgstr "可判斷我的背書狀態的網站"
 
-#: apps/users/models.py:72
+#: apps/users/models.py:225
 msgid "All Community Sites"
 msgstr "所有社群網站"
 
-#: apps/users/models.py:73
+#: apps/users/models.py:226
 msgid "Only Mozilla Properties"
 msgstr "僅 Mozilla 網站（不含社群）"
 
-#: apps/users/models.py:76
+#: apps/users/models.py:229
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "允許 Mozilla 網站存取我的個人資料？"
 
-#: apps/users/models.py:77
+#: apps/users/models.py:230
 msgid "Yes"
 msgstr "是"
 
-#: apps/users/models.py:77
+#: apps/users/models.py:230
 msgid "No"
 msgstr "否"
 
-#: apps/users/models.py:196
+#: apps/users/models.py:495
 msgid "You are now vouched on Mozillians!"
 msgstr "您已經被背書成為摩茲人了！"
 
-#: apps/users/models.py:197
+#: apps/users/models.py:496
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "您已經在 Mozillians.org 被背書了。您將可以搜尋、幫其他人背書，並邀請其他摩茲人加入網站。"
 
@@ -628,19 +675,19 @@ msgstr "已建立您的帳號。"
 msgid "Create Your Profile"
 msgstr "建立您的個人資料檔案"
 
-#: apps/users/templates/registration/register.html:66
+#: apps/users/templates/registration/register.html:71
 msgid "Previous"
 msgstr "上一步"
 
-#: apps/users/templates/registration/register.html:71
+#: apps/users/templates/registration/register.html:76
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr "讓我們知道你您在世界的哪個角落，讓您可以與其他已被背書的摩茲人互相聯絡。我們可能也會傳送一些關於您所在之處的 Mozilla 相關消息給您。"
 
-#: apps/users/templates/registration/register.html:82
+#: apps/users/templates/registration/register.html:87
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "您被背書之後，將會開始收到 Mozilla 相關的電子郵件。您可以隨時點擊郵件底端鏈結退訂。"
 
-#: apps/users/templates/registration/register.html:89
+#: apps/users/templates/registration/register.html:94
 msgid "Create Profile"
 msgstr "建立個人資料檔案"
 
@@ -663,8 +710,9 @@ msgid ""
 msgstr "<p>找不到您所請求的頁面。您可以直接前往 <a href=\"%(home_url)s\">摩茲人首頁</a> 以了解更多關於我們社群電話簿的資訊，或者是您可以直接用此頁面頂端的搜尋框來找您想找的人。</p>"
 
 #: templates/404.html:22
+#, fuzzy
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr "<p>因為您尚未通過驗證，您可能沒有辦法存取電話簿當中的私人資料。在您嘗試存取私人資料時您應該登入</a>。若您還沒有帳號，請 <a href=\"%(join_url)s\">加入我們</a>。</p>"
 
@@ -748,14 +796,17 @@ msgstr "其他語言:"
 msgid "Go"
 msgstr "衝！"
 
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "有人已經使用 %(email)s 這個地址註冊過帳號了。"
+
+#~ msgid "<p class=\"pull-left\">This profile is waiting for approval.</p>"
+#~ msgstr "<p class=\"pull-left\">此個人檔案正在等候審核。</p>"
+
 #~ msgid "Non Vouched Only"
 #~ msgstr "僅未被背書"
 
 #~ msgid "Only users with photos"
 #~ msgstr "僅含有相片的使用者"
-
-#~ msgid "Someone has already registered an account with %(email)s."
-#~ msgstr "有人已經使用 %(email)s 這個地址註冊過帳號了。"
 
 #~ msgid "Settings"
 #~ msgstr "設定"
@@ -1365,9 +1416,6 @@ msgstr "衝！"
 
 #~ msgid "Japan"
 #~ msgstr "日本"
-
-#~ msgid "Kenya"
-#~ msgstr "肯亞"
 
 #~ msgid "Kyrgyzstan"
 #~ msgstr "吉爾吉斯"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-15 08:04-0700\n"
+"POT-Creation-Date: 2013-04-03 05:01-0700\n"
 "PO-Revision-Date: 2013-03-18 15:05+0200\n"
 "Last-Translator: Benoit <benoit.leseul@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "You must be logged in to continue."
 msgstr "Vous devez vous connecter pour continuer."
 
-#: apps/common/middleware.py:47 apps/phonebook/views.py:52
+#: apps/common/middleware.py:47
 msgid "You must be vouched to continue."
 msgstr "Vous devez obtenir un parrainage pour continuer."
 
-#: apps/groups/forms.py:31 apps/phonebook/forms.py:172
+#: apps/groups/forms.py:31 apps/phonebook/forms.py:175
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
 msgstr "Les noms de groupes peuvent uniquement contenir des caractères alphanumériques, des tirets et des espaces."
 
@@ -33,7 +33,7 @@ msgstr "Description"
 msgid "IRC Channel"
 msgstr "Canal IRC"
 
-#: apps/groups/models.py:65 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:101 apps/users/models.py:48
+#: apps/groups/models.py:65 apps/groups/templates/groups/group.html:53 apps/phonebook/templates/phonebook/profile.html:132 apps/users/models.py:200
 msgid "Website"
 msgstr "Site web"
 
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Back"
 msgstr "Retour"
 
-#: apps/groups/templates/groups/index.html:44 apps/users/templates/registration/register.html:51 apps/users/templates/registration/register.html:65
+#: apps/groups/templates/groups/index.html:44 apps/users/templates/registration/register.html:56 apps/users/templates/registration/register.html:70
 msgid "Next"
 msgstr "Suivant"
 
@@ -119,7 +119,7 @@ msgstr "Veuillez utiliser uniquement des caractères alphanumériques."
 msgid "This username is not allowed, please choose another."
 msgstr "Ce nom d'utilisateur n'est pas autorisé, veuillez en choisir un autre."
 
-#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:20 templates/bootstrap/profile_photo.html:16
+#: apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/photo_form.html:21 templates/bootstrap/profile_photo.html:16
 msgid "Remove Profile Photo"
 msgstr "Supprimer la photo de profil"
 
@@ -131,35 +131,35 @@ msgstr "Saisissez quelques lettres pour ajouter une compétence (par exemple Pyt
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "Saisissez quelques lettres pour ajouter une langue que vous pratiquez (par exemple anglais, français, allemand)"
 
-#: apps/phonebook/forms.py:119
+#: apps/phonebook/forms.py:122
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "Les compétences peuvent uniquement contenir des caractères alphanumériques, des tirets et des espaces."
 
-#: apps/phonebook/forms.py:130
+#: apps/phonebook/forms.py:133
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "Les noms de langues peuvent uniquement contenir des caractères alphanumériques, des tirets et des espaces."
 
-#: apps/phonebook/forms.py:145
+#: apps/phonebook/forms.py:148
 msgid "You must specify a region to specify a city."
 msgstr "Veuillez indiquer une région pour identifier une ville."
 
-#: apps/phonebook/forms.py:148
+#: apps/phonebook/forms.py:151
 msgid "You must specify a country to specify a district."
 msgstr "Veuillez indiquer un pays pour identifier un district."
 
-#: apps/phonebook/forms.py:163
+#: apps/phonebook/forms.py:166
 msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 msgstr "Saisissez quelques lettres pour ajouter un groupe (par exemple marketing, assistance, développement web, Thunderbird)"
 
-#: apps/phonebook/forms.py:187
+#: apps/phonebook/forms.py:190
 msgid "I'm okay with you handling this info as you explain in Mozilla's privacy policy."
 msgstr "J'accepte que vous conserviez ces informations comme détaillé dans la politique de confidentialité de Mozilla."
 
-#: apps/phonebook/forms.py:194
+#: apps/phonebook/forms.py:197
 msgid "Please indicate the functional areas you are currently contributing to or would like to contribute to:"
 msgstr "Veuillez indiquer les domaines fonctionnels dans lesquels vous contribuez actuellement ou aimeriez contribuer :"
 
-#: apps/phonebook/forms.py:218
+#: apps/phonebook/forms.py:221
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Vous ne pouvez pas inviter quelqu'un qui a déjà été recommandé."
 
@@ -171,11 +171,11 @@ msgstr "Devenir Mozillien"
 msgid "A fellow Mozillian"
 msgstr "Un Mozillien comme vous"
 
-#: apps/phonebook/views.py:96
+#: apps/phonebook/views.py:121
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Vous avez changé de nom d'utilisateur ; veuillez noter que l'adresse de votre profil a changé également."
 
-#: apps/phonebook/views.py:219
+#: apps/phonebook/views.py:244
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Merci d'avoir parrainé un autre Mozillien !"
 
@@ -195,18 +195,11 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p> Les Mozilliens sont des personnes qui donnent de leur temps pour faire "
-"avancer la mission de Mozilla. Ils s'engagent dans la promotion de "
-"l'ouverture, de l'innovation et des possibilités sur le Web et forment le "
-"cœur de notre communauté. </p> <p> Cet annuaire est une ressource destinée à "
-"faciliter aux Mozilliens la découverte des autres participants, savoir ce "
-"qu'ils font et comment les contacter. </p> <p> Vous êtes à la recherche de "
-"Mozilliens à Auckland pour une rencontre informelle ? Vous avez besoin d'un "
-"expert XPCOM pour la relecture d'un patch ? C'est exactement le but de ce "
-"site. </p> <p><a href=\"%(wiki_roadmap_url)s\">Ces fonctionnalités</a> et "
-"d'autres, sont en cours de développement. Si vous voulez nous aider à les "
-"mettre en place, découvrez comment <a href=\"%(wiki_get_involved_url)s\">vous "
-"impliquer</a>. </p>"
+"<p> Les Mozilliens sont des personnes qui donnent de leur temps pour faire avancer la mission de Mozilla. Ils s'engagent dans la promotion de l'ouverture, de l'innovation et des possibilités sur le "
+"Web et forment le cœur de notre communauté. </p> <p> Cet annuaire est une ressource destinée à faciliter aux Mozilliens la découverte des autres participants, savoir ce qu'ils font et comment les "
+"contacter. </p> <p> Vous êtes à la recherche de Mozilliens à Auckland pour une rencontre informelle ? Vous avez besoin d'un expert XPCOM pour la relecture d'un patch ? C'est exactement le but de ce "
+"site. </p> <p><a href=\"%(wiki_roadmap_url)s\">Ces fonctionnalités</a> et d'autres, sont en cours de développement. Si vous voulez nous aider à les mettre en place, découvrez comment <a href="
+"\"%(wiki_get_involved_url)s\">vous impliquer</a>. </p>"
 
 #: apps/phonebook/templates/phonebook/about.html:43
 msgid "Privacy First"
@@ -255,110 +248,138 @@ msgstr "Non : ne pas supprimez mon profil"
 msgid "I'm sure: delete my profile"
 msgstr "Oui : supprimer mon profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:18 templates/base.html:88
+#: apps/phonebook/templates/phonebook/edit_profile.html:13 apps/phonebook/templates/phonebook/edit_profile.html:33 templates/base.html:88
 msgid "Edit Your Profile"
 msgstr "Modifiez votre profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:40 apps/users/templates/registration/register.html:39 apps/users/templates/registration/register.html:45
+#: apps/phonebook/templates/phonebook/edit_profile.html:17
+msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:26
+msgid "Visible to:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:55 apps/users/templates/registration/register.html:44 apps/users/templates/registration/register.html:50
 msgid "Profile"
 msgstr "Profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:41 apps/users/templates/registration/register.html:40 apps/users/templates/registration/register.html:54
+#: apps/phonebook/templates/phonebook/edit_profile.html:56 apps/users/templates/registration/register.html:45 apps/users/templates/registration/register.html:59
 msgid "Skills & Groups"
 msgstr "Compétences et groupes"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:42
+#: apps/phonebook/templates/phonebook/edit_profile.html:57 apps/phonebook/templates/phonebook/edit_profile.html:149
 msgid "Vouches & Invites"
 msgstr "Recommandations et invitations"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:43
+#: apps/phonebook/templates/phonebook/edit_profile.html:58 apps/phonebook/templates/phonebook/edit_profile.html:194
 msgid "Account"
 msgstr "Compte"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:44
+#: apps/phonebook/templates/phonebook/edit_profile.html:59 apps/phonebook/templates/phonebook/edit_profile.html:249
 msgid "Services"
 msgstr "Services"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:48
+#: apps/phonebook/templates/phonebook/edit_profile.html:66
 msgid "Personal"
 msgstr "Personnel"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:55 apps/phonebook/templates/phonebook/profile.html:108 apps/users/templates/registration/register.html:41
-#: apps/users/templates/registration/register.html:69
+#: apps/phonebook/templates/phonebook/edit_profile.html:82 apps/phonebook/templates/phonebook/profile.html:139 apps/users/templates/registration/register.html:46
+#: apps/users/templates/registration/register.html:74
 msgid "Location"
 msgstr "Emplacement"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:57
+#: apps/phonebook/templates/phonebook/edit_profile.html:84
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you easier and vice-versa."
 msgstr "Dites-nous où vous vous situez dans le monde. D'autres Mozilliens parrainés pourront vous contacter plus facilement, et vice versa."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:68 apps/phonebook/templates/phonebook/profile.html:143 apps/phonebook/templates/phonebook/search.html:58
+#: apps/phonebook/templates/phonebook/edit_profile.html:105 apps/phonebook/templates/phonebook/profile.html:188 apps/phonebook/templates/phonebook/search.html:58
 msgid "Groups"
 msgstr "Groupes"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:70
+#: apps/phonebook/templates/phonebook/edit_profile.html:107
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "Les groupes sont des communautés de Mozilliens qui sont en relation. Il peut s'agir d'un intérêt, d'une équipe, d'un projet ou d'une sous-communauté."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:78 apps/phonebook/templates/phonebook/profile.html:162
+#: apps/phonebook/templates/phonebook/edit_profile.html:119 apps/phonebook/templates/phonebook/profile.html:208
 msgid "Skills"
 msgstr "Compétences"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:80
+#: apps/phonebook/templates/phonebook/edit_profile.html:121
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Une compétence est une capacité acquise à obtenir des résultats prédéfinis, souvent en utilisant le minimum requis de temps et d'énergie."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:88 apps/phonebook/templates/phonebook/profile.html:175
+#: apps/phonebook/templates/phonebook/edit_profile.html:133 apps/phonebook/templates/phonebook/profile.html:221
 msgid "Languages"
 msgstr "Langues"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:90
+#: apps/phonebook/templates/phonebook/edit_profile.html:135
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Le projet Mozilla couvre de nombreux pays et de nombreuses langues. Renseignez les langues que vous pratiquez pour que d'autres Mozilliens vous trouvent facilement."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:101
+#: apps/phonebook/templates/phonebook/edit_profile.html:151
 msgid "Vouched By"
 msgstr "Parrainé(e) par"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:109
+#: apps/phonebook/templates/phonebook/edit_profile.html:159
 msgid "You are automatically vouched!"
 msgstr "Vous êtes parrainé(e) automatiquement !"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:111
+#: apps/phonebook/templates/phonebook/edit_profile.html:161
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr ""
 "Votre profil est en attente d'approbation. Envoyez ce lien à quelqu'un qui connaît vos contributions et demandez-lui de vous parrainer : <em class=\"underline\" title=\"URL de votre profil\"> "
 "%(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124
+#: apps/phonebook/templates/phonebook/edit_profile.html:175
 msgid "Vouchees"
 msgstr "Parrainages"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:142
+#: apps/phonebook/templates/phonebook/edit_profile.html:198
 msgid "Persona Email"
 msgstr "Adresse électronique Persona"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:148
+#: apps/phonebook/templates/phonebook/edit_profile.html:206
 msgid "Password"
 msgstr "Mot de passe"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:151
+#: apps/phonebook/templates/phonebook/edit_profile.html:209
 msgid "Change your password at <a href=\"%(persona)s\">Persona</a>"
 msgstr "Modifiez votre mot de passe sur <a href=\"%(persona)s\">Persona</a>"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:158
+#: apps/phonebook/templates/phonebook/edit_profile.html:217
+msgid "Privacy Settings"
+msgstr "Paramètres de confidentialité"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:220
+msgid "Make all of my profile fields visible to:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:224
+msgid "-- No Change --"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:225 apps/phonebook/templates/phonebook/search.html:72 templates/base.html:9 templates/base.html:21 templates/base.html:48
+msgid "Mozillians"
+msgstr "Mozilliens"
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:226 apps/phonebook/templates/phonebook/profile.html:97
+msgid "Public"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:233
 msgid "Delete Account"
 msgstr "Supprimer le compte"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:161
+#: apps/phonebook/templates/phonebook/edit_profile.html:236
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "J'ai conscience que la suppression de mon compte rendra la visibilité de mes contributions moins évidente et que les autres membres de la communauté Mozilla auront plus de mal à me trouver."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:168
+#: apps/phonebook/templates/phonebook/edit_profile.html:243
 msgid "Delete Profile"
 msgstr "Supprimer le profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:176
+#: apps/phonebook/templates/phonebook/edit_profile.html:252
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
@@ -366,15 +387,15 @@ msgstr ""
 "Cet annuaire fournit une API pour faciliter l'autorisation de contributeurs et partager des informations de profil avec d'autres outils tels que <a href=\"%(bugzilla_url)s\">Bugzilla</a> et le <a "
 "href=\"%(reps_url)s\">portail Mozilla Reps</a>."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:184
-msgid "Privacy Settings"
-msgstr "Paramètres de confidentialité"
+#: apps/phonebook/templates/phonebook/edit_profile.html:260
+msgid "Other Sites"
+msgstr ""
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:192
+#: apps/phonebook/templates/phonebook/edit_profile.html:268
 msgid "Developers"
 msgstr "Développeurs"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:194
+#: apps/phonebook/templates/phonebook/edit_profile.html:270
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -382,16 +403,24 @@ msgstr ""
 "Jetez un œil à la liste des <a href=\"%(api_schema_url)s\">méthodes d'API qui sont disponibles</a>. Pour utiliser cette API, vous devrez obtenir l'accord de l'équipe Privacy. Pour ce faire, <a href="
 "\"%(bugzilla_request_url)s\">ouvrez un bogue</a>. Si vous avez des questions, contactez-nous dans le <a href=\"%(dev_form_url)s\">forum de développement</a>."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:217
+#: apps/phonebook/templates/phonebook/edit_profile.html:285
+msgid "Your approved apps:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:290
+msgid "Key"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/edit_profile.html:293
 msgid "You have no registered, active apps."
 msgstr "Vous n'avez aucune application active enregistrée."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:226
+#: apps/phonebook/templates/phonebook/edit_profile.html:302
 msgid "Update"
 msgstr "Mettre à jour"
 
 #. Cancel editing
-#: apps/phonebook/templates/phonebook/edit_profile.html:228
+#: apps/phonebook/templates/phonebook/edit_profile.html:304
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -428,7 +457,8 @@ msgid "Invite other contributors to create a profile"
 msgstr "Inviter d'autres contributeurs à créer un profil"
 
 #: apps/phonebook/templates/phonebook/home.html:81
-msgid "Edit your profile, account settings or view developer info"
+#, fuzzy
+msgid "Edit your profile, privacy settings and account settings"
 msgstr "Modifier votre profil, vos paramètres de compte et afficher les infos pour développeurs"
 
 #: apps/phonebook/templates/phonebook/home.html:85
@@ -437,8 +467,7 @@ msgstr "Afficher tous les groupes de l'annuaire"
 
 #: apps/phonebook/templates/phonebook/home.html:89
 msgid "Learn more about the Phonebook and why it was built"
-msgstr ""
-"En apprendre davantage sur l'annuaire et les raisons de sa mise en place"
+msgstr "En apprendre davantage sur l'annuaire et les raisons de sa mise en place"
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:8
 msgid "Invite a Mozillian"
@@ -496,36 +525,53 @@ msgstr ""
 "Mozilla, <a href=\"%(contribute_url)s\">impliquez-vous</a>. Les chances d'être parrainé augmentent avec le nombre de tâches effectuées dans la communauté.</p> <em class=\"underline\" title=\"URL de "
 "votre profil\"> %(profile_url)s </em>"
 
-#: apps/phonebook/templates/phonebook/profile.html:49
-msgid "<p class=\"pull-left\">This profile is waiting for approval.</p>"
-msgstr "<p class=\"pull-left\">Ce profil est en attente d'approbation.</p>"
-
-#: apps/phonebook/templates/phonebook/profile.html:60
+#: apps/phonebook/templates/phonebook/profile.html:56
+#, fuzzy
 msgid "<div> <button type=\"submit\" class=\"btn btn-info pull-right\"> Vouch for %(name)s </button> </div>"
 msgstr "<div> <button type=\"submit\" class=\"btn btn-info pull-right\"> Parrainer %(name)s </button></div>"
 
-#: apps/phonebook/templates/phonebook/profile.html:87
+#: apps/phonebook/templates/phonebook/profile.html:65
+msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:85
+msgid "View as:"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:89
+msgid "Myself"
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:93 apps/phonebook/templates/phonebook/includes/search_result.html:15
+msgid "Mozillian"
+msgstr "Mozillien"
+
+#: apps/phonebook/templates/phonebook/profile.html:105
+msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/profile.html:118
 msgid "Email"
 msgstr "Courriel"
 
-#: apps/phonebook/templates/phonebook/profile.html:94 apps/users/models.py:60
+#: apps/phonebook/templates/phonebook/profile.html:125 apps/users/models.py:213
 msgid "IRC Nickname"
 msgstr "Pseudo IRC"
 
-#: apps/phonebook/templates/phonebook/profile.html:125
+#: apps/phonebook/templates/phonebook/profile.html:170
 msgid "Vouched by"
 msgstr "Parrainé(e) par"
 
 #. Biography
-#: apps/phonebook/templates/phonebook/profile.html:136 apps/users/models.py:56
+#: apps/phonebook/templates/phonebook/profile.html:181 apps/users/models.py:209
 msgid "Bio"
 msgstr "Bio"
 
-#: apps/phonebook/templates/phonebook/profile.html:191
+#: apps/phonebook/templates/phonebook/profile.html:237
 msgid "Edit My Profile"
 msgstr "Modifier mon profil"
 
-#: apps/phonebook/templates/phonebook/profile.html:198 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:5
+#: apps/phonebook/templates/phonebook/profile.html:244 apps/phonebook/templates/phonebook/includes/photo.html:6 apps/phonebook/templates/phonebook/includes/photo_form.html:6
 #: templates/bootstrap/profile_photo.html:10
 msgid "Profile photo"
 msgstr "Photo"
@@ -550,10 +596,6 @@ msgstr "Options avancées"
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Rechercher un Mozillien</h2><p>Vous pouvez rechercher un Mozillien à l'aide du nom, de l'adresse électronique ou du pseudonyme.</p>"
 
-#: apps/phonebook/templates/phonebook/search.html:72 templates/base.html:9 templates/base.html:21 templates/base.html:48
-msgid "Mozillians"
-msgstr "Mozilliens"
-
 #: apps/phonebook/templates/phonebook/search.html:95
 msgid ""
 "<p id=\"not-found\"> Sorry, we cannot find a group or person related to \"%(query)s\". </p> <p> Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile. "
@@ -574,10 +616,6 @@ msgstr "Ceci est votre Gravatar, modifiez-le sur gravatar.com"
 msgid "This user is a vouched Mozillian."
 msgstr "Cet utilisateur est un Mozillien parrainé."
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:15
-msgid "Mozillian"
-msgstr "Mozillien"
-
 #: apps/phonebook/templates/phonebook/includes/search_result.html:18
 msgid "This user has not yet been vouched."
 msgstr "Cet utilisateur n'a pas encore été parrainé."
@@ -594,51 +632,51 @@ msgstr "Courriel :"
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
-#: apps/users/models.py:45
+#: apps/users/models.py:197
 msgid "Full Name"
 msgstr "Nom complet"
 
-#: apps/users/models.py:64
+#: apps/users/models.py:217
 msgid "Country"
 msgstr "Pays"
 
-#: apps/users/models.py:66
+#: apps/users/models.py:219
 msgid "Province/State"
 msgstr "Province/Région/Département"
 
-#: apps/users/models.py:68
+#: apps/users/models.py:221
 msgid "City"
 msgstr "Ville"
 
-#: apps/users/models.py:71
+#: apps/users/models.py:224
 msgid "Sites that can determine my vouched status"
 msgstr "Sites pouvant déterminer mon état de parrainage"
 
-#: apps/users/models.py:72
+#: apps/users/models.py:225
 msgid "All Community Sites"
 msgstr "Tous les sites de la communauté"
 
-#: apps/users/models.py:73
+#: apps/users/models.py:226
 msgid "Only Mozilla Properties"
 msgstr "Uniquement les sites gérés par Mozilla"
 
-#: apps/users/models.py:76
+#: apps/users/models.py:229
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Autoriser les sites de Mozilla à accéder à mes données de profil ?"
 
-#: apps/users/models.py:77
+#: apps/users/models.py:230
 msgid "Yes"
 msgstr "Oui"
 
-#: apps/users/models.py:77
+#: apps/users/models.py:230
 msgid "No"
 msgstr "Non"
 
-#: apps/users/models.py:196
+#: apps/users/models.py:495
 msgid "You are now vouched on Mozillians!"
 msgstr "Vous êtes à présent parrainé(e) sur Mozillians !"
 
-#: apps/users/models.py:197
+#: apps/users/models.py:496
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Vous avez été parrainé(e) sur Mozillians.org. Vous pourrez maintenant effectuer des recherches, parrainer et inviter d'autres Mozilliens sur le site."
 
@@ -654,26 +692,23 @@ msgstr "Votre compte a été créé."
 msgid "Create Your Profile"
 msgstr "Créez votre profil"
 
-#: apps/users/templates/registration/register.html:66
+#: apps/users/templates/registration/register.html:71
 msgid "Previous"
 msgstr "Retour"
 
-#: apps/users/templates/registration/register.html:71
+#: apps/users/templates/registration/register.html:76
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
-"Dites-nous où vous vous situez dans le monde. D'autres Mozilliens parrainés "
-"pourront vous contacter plus facilement, et vice versa. Nous pourrions "
-"également vous envoyer des messages importants concernant Mozilla liés à "
-"votre localisation."
+"Dites-nous où vous vous situez dans le monde. D'autres Mozilliens parrainés pourront vous contacter plus facilement, et vice versa. Nous pourrions également vous envoyer des messages importants "
+"concernant Mozilla liés à votre localisation."
 
-#: apps/users/templates/registration/register.html:82
+#: apps/users/templates/registration/register.html:87
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr ""
-"Vous commencerez à recevoir des communications de Mozilla par courrier "
-"électronique lorsque vous aurez obtenu un parrainage. Vous pouvez vous "
-"désinscrire à tout moment en cliquant sur le lien en bas de ces courriels."
+"Vous commencerez à recevoir des communications de Mozilla par courrier électronique lorsque vous aurez obtenu un parrainage. Vous pouvez vous désinscrire à tout moment en cliquant sur le lien en "
+"bas de ces courriels."
 
-#: apps/users/templates/registration/register.html:89
+#: apps/users/templates/registration/register.html:94
 msgid "Create Profile"
 msgstr "Créez votre profil"
 
@@ -698,14 +733,13 @@ msgstr ""
 "rechercher une personne à l'aide du champs de recherche en haut de cette page.</p>"
 
 #: templates/404.html:22
+#, fuzzy
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in</a> in case you're trying to access a private profile. If you don't have an "
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
 "account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
-"<p>Vous n'êtes pas authentifié. Vous n'avez donc pas accès aux profils "
-"privés du répertoire. Vous devez vous connecter si vous désirez consulter un "
-"profil privé. Si vous ne possédez pas de compte, <a href=\"%(join_url)s"
-"\">rejoignez-vous</a>.</p>"
+"<p>Vous n'êtes pas authentifié. Vous n'avez donc pas accès aux profils privés du répertoire. Vous devez vous connecter si vous désirez consulter un profil privé. Si vous ne possédez pas de compte, "
+"<a href=\"%(join_url)s\">rejoignez-vous</a>.</p>"
 
 #: templates/500.html:3
 msgid "Application Error"
@@ -755,9 +789,7 @@ msgstr "Se connecter avec Persona"
 
 #: templates/base.html:145
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Aidez-nous à améliorer Mozillians. <a href=\"%(bug_url)s\">Rapportez un "
-"bug</a> ou <a href=\"%(git_url)s\">proposez des modifications</a>."
+msgstr "Aidez-nous à améliorer Mozillians. <a href=\"%(bug_url)s\">Rapportez un bug</a> ou <a href=\"%(git_url)s\">proposez des modifications</a>."
 
 #: templates/base.html:151
 msgid ""
@@ -793,14 +825,17 @@ msgstr "Autres langues :"
 msgid "Go"
 msgstr "OK"
 
+#~ msgid "Someone has already registered an account with %(email)s."
+#~ msgstr "Quelqu'un à déjà enregistré un compte avec %(email)s."
+
+#~ msgid "<p class=\"pull-left\">This profile is waiting for approval.</p>"
+#~ msgstr "<p class=\"pull-left\">Ce profil est en attente d'approbation.</p>"
+
 #~ msgid "Non Vouched Only"
 #~ msgstr "Non parrainés uniquement"
 
 #~ msgid "Only users with photos"
 #~ msgstr "Utilisateurs avec photo uniquement"
-
-#~ msgid "Someone has already registered an account with %(email)s."
-#~ msgstr "Quelqu'un à déjà enregistré un compte avec %(email)s."
 
 #~ msgid "Settings"
 #~ msgstr "Paramètres"
