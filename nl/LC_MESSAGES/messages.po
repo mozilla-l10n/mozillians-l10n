@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-19 13:34-0700\n"
+"POT-Creation-Date: 2013-06-27 13:04-0700\n"
 "PO-Revision-Date: 2013-06-21 22:29+0200\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,17 +13,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/common/middleware.py:15
+#: apps/common/middleware.py:16
 msgid "You must be logged in to continue."
 msgstr "U moet aangemeld zijn om door te gaan."
 
-#: apps/common/middleware.py:16
+#: apps/common/middleware.py:17
 msgid "You must be vouched to continue."
 msgstr "Er moet voor u garant worden gestaan om door te gaan."
 
-#: apps/common/middleware.py:32
+#: apps/common/middleware.py:34
 msgid "Please complete registration before proceeding."
 msgstr "Voltooi de registratie voordat u verdergaat."
+
+#: apps/groups/forms.py:14
+#, fuzzy
+msgid "Group Name A-Z"
+msgstr "Groep: {name}"
+
+#: apps/groups/forms.py:15
+#, fuzzy
+msgid "Most Members"
+msgstr "Leden"
+
+#: apps/groups/forms.py:16
+#, fuzzy
+msgid "Fewest Members"
+msgstr "Leden"
 
 #: apps/groups/forms.py:44 apps/phonebook/forms.py:162
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
@@ -33,15 +48,15 @@ msgstr "Groepen kunnen alleen alfanumerieke tekens, streepjes en spaties bevatte
 msgid "Description"
 msgstr "Beschrijving"
 
-#: apps/groups/models.py:60 apps/groups/templates/groups/group.html:42
+#: apps/groups/models.py:60 apps/groups/templates/groups/group.html:37
 msgid "IRC Channel"
 msgstr "IRC-kanaal"
 
-#: apps/groups/models.py:61 apps/groups/templates/groups/group.html:54 apps/phonebook/templates/phonebook/profile.html:129 apps/users/models.py:239
+#: apps/groups/models.py:61 apps/groups/templates/groups/group.html:49 apps/phonebook/templates/phonebook/profile.html:129 apps/users/models.py:239
 msgid "Website"
 msgstr "Website"
 
-#: apps/groups/models.py:63 apps/groups/templates/groups/group.html:59
+#: apps/groups/models.py:63 apps/groups/templates/groups/group.html:53
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -51,53 +66,65 @@ msgstr "Functionele gebieden"
 
 #: apps/groups/templates/groups/areas.html:7
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
-msgstr ""
-"Bekijk Mozillians, beheerders en informatie over de functionele gebieden. "
-"Lees wie waaraan werkt en hoe u kunt helpen."
+msgstr "Bekijk Mozillians, beheerders en informatie over de functionele gebieden. Lees wie waaraan werkt en hoe u kunt helpen."
 
-#: apps/groups/templates/groups/group.html:3 apps/groups/templates/groups/group.html:13
+#: apps/groups/templates/groups/group.html:3 apps/groups/templates/groups/group.html:17
 msgid "Group: {name}"
 msgstr "Groep: {name}"
 
-#: apps/groups/templates/groups/group.html:26 apps/groups/templates/groups/group.html:111
-msgid "Join Group"
-msgstr "Aansluiten bij groep"
+#: apps/groups/templates/groups/group.html:15
+#, fuzzy
+msgid "Curated Group: {name}"
+msgstr "Groep: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:113
-msgid "Leave Group"
-msgstr "Groep verlaten"
-
-#: apps/groups/templates/groups/group.html:40
+#: apps/groups/templates/groups/group.html:35
 msgid "IRC Channels"
 msgstr "IRC-kanalen"
 
-#: apps/groups/templates/groups/group.html:63
+#: apps/groups/templates/groups/group.html:56
 msgid "Members"
 msgstr "Leden"
 
-#: apps/groups/templates/groups/group.html:69
-msgid "Community Steward"
-msgstr "Gemeenschapsbeheerder"
-
-#: apps/groups/templates/groups/group.html:73 apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/search_result.html:6
-msgid "Profile Photo"
-msgstr "Profielfoto"
-
-#: apps/groups/templates/groups/group.html:92
+#: apps/groups/templates/groups/group.html:60
 msgid "Skills members have in common"
 msgstr "Vaardigheden die leden gemeen hebben"
 
-#: apps/groups/templates/groups/group.html:135
+#: apps/groups/templates/groups/group.html:71
+msgid "Community Steward"
+msgstr "Gemeenschapsbeheerder"
+
+#: apps/groups/templates/groups/group.html:75 apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/search_result.html:6
+msgid "Profile Photo"
+msgstr "Profielfoto"
+
+#: apps/groups/templates/groups/group.html:106
+msgid "Join Group"
+msgstr "Aansluiten bij groep"
+
+#: apps/groups/templates/groups/group.html:108
+msgid "Leave Group"
+msgstr "Groep verlaten"
+
+#: apps/groups/templates/groups/group.html:117
+#, fuzzy
+msgid "Sorry, we cannot find any mozillians in %(group_name)s"
+msgstr "Sorry, we kunnen geen mozillians vinden in"
+
+#: apps/groups/templates/groups/group.html:123
 msgid "Group Members"
 msgstr "Groepsleden"
 
-#: apps/groups/templates/groups/group.html:152
+#: apps/groups/templates/groups/group.html:140
 msgid "Showing all %(count)s results."
 msgstr "Alle %(count)s resultaten worden getoond."
 
 #: apps/groups/templates/groups/index.html:3 apps/groups/templates/groups/index.html:8
 msgid "Group Listing"
 msgstr "Groepenlijst"
+
+#: apps/groups/templates/groups/index.html:12
+msgid "Sort"
+msgstr ""
 
 #: apps/groups/templates/groups/index.html:17
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
@@ -108,7 +135,7 @@ msgstr ""
 msgid "Back"
 msgstr "Terug"
 
-#: apps/groups/templates/groups/index.html:56 apps/users/templates/registration/register.html:51 apps/users/templates/registration/register.html:65
+#: apps/groups/templates/groups/index.html:56 apps/users/templates/registration/register.html:54 apps/users/templates/registration/register.html:68
 msgid "Next"
 msgstr "Volgende"
 
@@ -186,16 +213,13 @@ msgstr "U hebt uw gebruikersnaam gewijzigd; houd er rekening mee dat uw profiel-
 
 #: apps/phonebook/views.py:235
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
-msgstr ""
-"%s is uitgenodigd voor Mozillians. Hij of zij ontvangt een e-mailbericht met "
-"instructies over hoe men zich kan aansluiten. Als u wilt, kunt u nog een "
-"Mozillian uitnodigen."
+msgstr "%s is uitgenodigd voor Mozillians. Hij of zij ontvangt een e-mailbericht met instructies over hoe men zich kan aansluiten. Als u wilt, kunt u nog een Mozillian uitnodigen."
 
 #: apps/phonebook/views.py:255
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Bedankt voor het garant staan voor een mede-Mozillian! Voor deze gebruiker wordt nu garant gestaan!"
 
-#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:9 templates/base.html:194
+#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:9 templates/base.html:197
 msgid "About Mozillians"
 msgstr "Over Mozillians"
 
@@ -211,18 +235,11 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p> Mozillians zijn mensen die vrijwillig hun tijd besteden aan het "
-"verbeteren van de Mozilla-missie. Ze zijn toegewijd aan het promoten van "
-"openheid, innovatie en mogelijkheden van het web en vormen de basis van onze "
-"gemeenschap. </p> <p> Dit adresboek is een hulpmiddel dat het voor "
-"Mozillians makkelijker maakt te ontdekken wie er meedoen, wat ze doen en hoe "
-"u met ze in contact kunt komen. Ook kunt u hierdoor e-mailcommunicatie van "
-"Mozilla ontvangen. </p> <p> Zoekt u Mozillians in Nederland voor een "
-"samenkomst? Hebt u een ervaren XPCOM-hacker nodig om een patch te "
-"beoordelen? Juist daarvoor is deze website bestemd. </p> <p> <a href=\"%"
-"(wiki_roadmap_url)s\">Deze functies</a>, en andere, zijn momenteel in "
-"ontwikkeling. Als u ons hierbij wilt helpen, lees dan hoe u <a href=\"%"
-"(wiki_get_involved_url)s\">kunt meedoen</a>. </p>"
+"<p> Mozillians zijn mensen die vrijwillig hun tijd besteden aan het verbeteren van de Mozilla-missie. Ze zijn toegewijd aan het promoten van openheid, innovatie en mogelijkheden van het web en "
+"vormen de basis van onze gemeenschap. </p> <p> Dit adresboek is een hulpmiddel dat het voor Mozillians makkelijker maakt te ontdekken wie er meedoen, wat ze doen en hoe u met ze in contact kunt "
+"komen. Ook kunt u hierdoor e-mailcommunicatie van Mozilla ontvangen. </p> <p> Zoekt u Mozillians in Nederland voor een samenkomst? Hebt u een ervaren XPCOM-hacker nodig om een patch te beoordelen? "
+"Juist daarvoor is deze website bestemd. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Deze functies</a>, en andere, zijn momenteel in ontwikkeling. Als u ons hierbij wilt helpen, lees dan hoe u <a href="
+"\"%(wiki_get_involved_url)s\">kunt meedoen</a>. </p>"
 
 #: apps/phonebook/templates/phonebook/about.html:34
 msgid "Privacy First"
@@ -233,13 +250,9 @@ msgid ""
 "Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
 msgstr ""
-"Privacy is vanaf het allereerste begin een belangrijk onderdeel van dit "
-"adresboek geweest. We willen er zeker van zijn dat we Mozillians van de best "
-"mogelijke ervaring voorzien, van de wijze waarop de website is gebouwd tot "
-"de wijze waarop we voor nieuwe gebruikers garant staan voordat ze toegang "
-"hebben tot gegevens die alleen voor andere Mozillians toegankelijk zijn. "
-"Lees ons <a href=\"%(privacy_policy_url)s\">privacybeleid</a> voor meer "
-"informatie."
+"Privacy is vanaf het allereerste begin een belangrijk onderdeel van dit adresboek geweest. We willen er zeker van zijn dat we Mozillians van de best mogelijke ervaring voorzien, van de wijze waarop "
+"de website is gebouwd tot de wijze waarop we voor nieuwe gebruikers garant staan voordat ze toegang hebben tot gegevens die alleen voor andere Mozillians toegankelijk zijn. Lees ons <a href="
+"\"%(privacy_policy_url)s\">privacybeleid</a> voor meer informatie."
 
 #: apps/phonebook/templates/phonebook/about.html:50
 msgid "Get Involved"
@@ -287,11 +300,11 @@ msgstr "Pas hier uw profiel aan en kies wie uw profielvelden kunnen zien. U kunt
 msgid "Visible to:"
 msgstr "Zichtbaar voor:"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:46 apps/users/templates/registration/register.html:39 apps/users/templates/registration/register.html:45
+#: apps/phonebook/templates/phonebook/edit_profile.html:46 apps/users/templates/registration/register.html:42 apps/users/templates/registration/register.html:48
 msgid "Profile"
 msgstr "Profiel"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:47 apps/users/templates/registration/register.html:40 apps/users/templates/registration/register.html:54
+#: apps/phonebook/templates/phonebook/edit_profile.html:47 apps/users/templates/registration/register.html:43 apps/users/templates/registration/register.html:57
 msgid "Skills & Groups"
 msgstr "Vaardigheden & Groepen"
 
@@ -311,8 +324,8 @@ msgstr "Services"
 msgid "Personal"
 msgstr "Persoonlijk"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:72 apps/phonebook/templates/phonebook/profile.html:135 apps/users/templates/registration/register.html:41
-#: apps/users/templates/registration/register.html:69
+#: apps/phonebook/templates/phonebook/edit_profile.html:72 apps/phonebook/templates/phonebook/profile.html:135 apps/users/templates/registration/register.html:44
+#: apps/users/templates/registration/register.html:72
 msgid "Location"
 msgstr "Locatie"
 
@@ -337,7 +350,7 @@ msgstr "Vaardigheden"
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Een vaardigheid is het aangeleerde vermogen om vooraf bepaalde resultaten te behalen, veelal met een minimale hoeveelheid aan tijd, energie, of beide."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/phonebook/templates/phonebook/home.html:121 apps/phonebook/templates/phonebook/profile.html:210
+#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/phonebook/templates/phonebook/home.html:122 apps/phonebook/templates/phonebook/profile.html:210
 msgid "Languages"
 msgstr "Talen"
 
@@ -367,9 +380,7 @@ msgstr "Persona-e-mailadres"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:198
 msgid "To change your Personal Email, please <a href=\"%(bug_url)s\">file a bug</a>."
-msgstr ""
-"<a href=\"%(bug_url)s\">Dien een bug in/a> om uw persoonlijke e-mailadres te "
-"wijzigen."
+msgstr "<a href=\"%(bug_url)s\">Dien een bug in/a> om uw persoonlijke e-mailadres te wijzigen."
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:224
 msgid "Password"
@@ -460,57 +471,53 @@ msgstr "Annuleren"
 msgid "Mozilla Community Directory"
 msgstr "Mozilla-gemeenschapsadresboek"
 
-#: apps/phonebook/templates/phonebook/home.html:22 apps/phonebook/templates/phonebook/home.html:153 templates/base.html:71
+#: apps/phonebook/templates/phonebook/home.html:21 apps/phonebook/templates/phonebook/home.html:153 templates/base.html:71
 msgid "Search for people, groups and more"
 msgstr "Zoeken naar mensen, groepen en meer"
 
-#: apps/phonebook/templates/phonebook/home.html:34
+#: apps/phonebook/templates/phonebook/home.html:33
 msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
-msgstr ""
-"Het is een opwindende tijd voor Mozilla en het internet. De komende jaren "
-"zullen zich nog eens twee miljard mensen aansluiten bij de "
-"internetgemeenschap."
+msgstr "Het is een opwindende tijd voor Mozilla en het internet. De komende jaren zullen zich nog eens twee miljard mensen aansluiten bij de internetgemeenschap."
 
-#: apps/phonebook/templates/phonebook/home.html:45
+#: apps/phonebook/templates/phonebook/home.html:44
 msgid "Welcome to the Mozilla community directory"
 msgstr "Welkom bij het adresboek van de Mozilla-gemeenschap"
 
-#: apps/phonebook/templates/phonebook/home.html:47
+#: apps/phonebook/templates/phonebook/home.html:46
 msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
-msgstr ""
-"Deze website vermeldt alle belangrijkste individuen en groepen die aan het "
-"Mozilla-project deelnemen. We noemen onszelf Mozillians, en hier delen en "
-"houden we contact met elkaar."
+msgstr "Deze website vermeldt alle belangrijkste individuen en groepen die aan het Mozilla-project deelnemen. We noemen onszelf Mozillians, en hier delen en houden we contact met elkaar."
 
-#: apps/phonebook/templates/phonebook/home.html:77
+#: apps/phonebook/templates/phonebook/home.html:65
+msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/home.html:78
 msgid "How do I get involved?"
 msgstr "Hoe doe ik mee?"
 
-#: apps/phonebook/templates/phonebook/home.html:79
+#: apps/phonebook/templates/phonebook/home.html:80
 msgid ""
 "Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
 "make a difference in the lives of people everywhere."
 msgstr ""
-"Mozilla is er om openheid, innovatie en mogelijkheden op het internet te "
-"bevorderen. Het succes van onze missie is afhankelijk van deelname door "
-"mensen zoals u. Lees hoe u kunt meehelpen om een verschil in de levens van "
-"mensen overal ter wereld te helpen maken."
+"Mozilla is er om openheid, innovatie en mogelijkheden op het internet te bevorderen. Het succes van onze missie is afhankelijk van deelname door mensen zoals u. Lees hoe u kunt meehelpen om een "
+"verschil in de levens van mensen overal ter wereld te helpen maken."
 
-#: apps/phonebook/templates/phonebook/home.html:87
+#: apps/phonebook/templates/phonebook/home.html:88
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">Meedoen</a>"
 
-#: apps/phonebook/templates/phonebook/home.html:113
+#: apps/phonebook/templates/phonebook/home.html:114
 msgid "Member of:"
 msgstr "Lid van:"
 
-#: apps/phonebook/templates/phonebook/home.html:130
+#: apps/phonebook/templates/phonebook/home.html:131
 msgid "<h4>Has %(skill_count)s skill</h4>"
 msgid_plural "<h4>Has %(skill_count)s skills</h4>"
 msgstr[0] "<h4>Heeft %(skill_count)s vaardigheid</h4>"
 msgstr[1] "<h4>Heeft %(skill_count)s vaardigheden</h4>"
 
-#: apps/phonebook/templates/phonebook/home.html:149
+#: apps/phonebook/templates/phonebook/home.html:150
 msgid "Hello!"
 msgstr "Hallo!"
 
@@ -520,10 +527,7 @@ msgstr "Voorbeelden:"
 
 #: apps/phonebook/templates/phonebook/home.html:155
 msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
-msgstr ""
-"<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%"
-"(search_url)s?q=berlin\">Berlin</a>, <a href=\"%"
-"(search_url)s?q=mbrandt\">mbrandt</a>"
+msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:182
 msgid "Functional areas"
@@ -534,17 +538,12 @@ msgid ""
 "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 "arrow-right\"></i></a>"
 msgstr ""
-"<p> Bekijk Mozillians, beheerders en informatie over de functionele "
-"gebieden. Lees wie waaraan werkt en hoe u kunt helpen. </p> <a href=\"%"
-"(areas_url)s\">Functionele gebieden bekijken <i class=\"icon-arrow-"
-"right\"></i></a>"
+"<p> Bekijk Mozillians, beheerders en informatie over de functionele gebieden. Lees wie waaraan werkt en hoe u kunt helpen. </p> <a href=\"%(areas_url)s\">Functionele gebieden bekijken <i class="
+"\"icon-arrow-right\"></i></a>"
 
 #: apps/phonebook/templates/phonebook/home.html:197
 msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p> <a href=\"%(group_url)s\">Browse groups <i class=\"icon-arrow-right\"></i></a>"
-msgstr ""
-"<p> Vind en sluit u aan bij groepen, gecentreerd rond interesses, "
-"technologieën, geografie en meer. </p> <a href=\"%(group_url)s\">Groepen "
-"bekijken <i class=\"icon-arrow-right\"></i></a>"
+msgstr "<p> Vind en sluit u aan bij groepen, gecentreerd rond interesses, technologieën, geografie en meer. </p> <a href=\"%(group_url)s\">Groepen bekijken <i class=\"icon-arrow-right\"></i></a>"
 
 #: apps/phonebook/templates/phonebook/invite.html:3 apps/phonebook/templates/phonebook/invite.html:7
 msgid "Invite a Mozillian"
@@ -618,7 +617,7 @@ msgstr "Weergeven als:"
 msgid "Myself"
 msgstr "Mezelf"
 
-#: apps/phonebook/templates/phonebook/profile.html:89 apps/phonebook/templates/phonebook/includes/search_result.html:17
+#: apps/phonebook/templates/phonebook/profile.html:89
 msgid "Mozillian"
 msgstr "Mozillian"
 
@@ -688,23 +687,11 @@ msgstr "Hulp nodig? Neem contact op met een beheerder op een functioneel gebied!
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "Dit is uw Gravatar; wijzig deze op gravatar.com"
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:16
-msgid "This user is a vouched Mozillian."
-msgstr "Deze gebruiker is een Mozillian waarvoor garant wordt gestaan."
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:20
-msgid "This user has not yet been vouched."
-msgstr "Voor deze gebruiker wordt nog niet garant gestaan."
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:21
-msgid "Non-Vouched"
-msgstr "Geen garantstelling"
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:26
+#: apps/phonebook/templates/phonebook/includes/search_result.html:17
 msgid "Email:"
 msgstr "E-mailadres:"
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:31
+#: apps/phonebook/templates/phonebook/includes/search_result.html:22
 msgid "Username:"
 msgstr "Gebruikersnaam:"
 
@@ -756,31 +743,39 @@ msgstr "Er wordt nu voor u garant gestaan bij Mozillians!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Er wordt nu garant voor u gestaan bij Mozillians.org. U kunt nu andere Mozillians zoeken, garantstelling geven en uitnodigen voor de website."
 
-#: apps/users/views.py:57
+#: apps/users/views.py:55
 msgid "Your account has been created."
 msgstr "Uw account is aangemaakt."
 
-#: apps/users/templates/registration/register.html:8 apps/users/templates/registration/register.html:31
+#: apps/users/templates/registration/register.html:8 apps/users/templates/registration/register.html:32
 msgid "Create Your Profile"
 msgstr "Maak uw profiel aan"
 
-#: apps/users/templates/registration/register.html:66
+#: apps/users/templates/registration/register.html:17
+msgid "The following fields are required (optin is the checkbox in the last panel)"
+msgstr ""
+
+#: apps/users/templates/registration/register.html:34
+msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
+msgstr ""
+
+#: apps/users/templates/registration/register.html:69
 msgid "Previous"
 msgstr "Vorige"
 
-#: apps/users/templates/registration/register.html:71
+#: apps/users/templates/registration/register.html:74
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
 "Laat weten waar in de wereld u zich bevindt. Andere Mozillians waarvoor garant wordt gestaan kunnen dan contact met u opnemen, en vice versa. Mogelijk sturen we u ook e-mailberichten over "
 "belangrijk Mozilla-nieuws dat voor uw locatie relevant is."
 
-#: apps/users/templates/registration/register.html:82
+#: apps/users/templates/registration/register.html:85
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr ""
 "E-mailcommunicatie van Mozilla zal beginnen zodra u een Mozillian bent waarvoor garant wordt gestaan. U kunt zich te allen tijde uitschrijven door op de koppeling onderaan deze e-mailberichten te "
 "klikken."
 
-#: apps/users/templates/registration/register.html:89
+#: apps/users/templates/registration/register.html:92
 msgid "Create Profile"
 msgstr "Profiel aanmaken"
 
@@ -862,33 +857,31 @@ msgstr "Uitnodigen"
 msgid "Log Out"
 msgstr "Afmelden"
 
-#: templates/base.html:122 templates/base.html:124
+#: templates/base.html:123 templates/base.html:126
 msgid "Sign in with Persona"
 msgstr "Aanmelden met Persona"
 
-#: templates/base.html:165
+#: templates/base.html:167
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Help mee Mozillians te verbeteren. <a href=\"%(bug_url)s\">Maak een bug aan</a> of <a href=\"%(git_url)s\">breng wat wijzigingen aan</a>."
 
-#: templates/base.html:184
+#: templates/base.html:187
 msgid ""
 "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr ""
-"Delen van deze inhoud zijn &copy;1998–%(current_year)s door individuele "
-"mozilla.org-medewerkers. Inhoud is beschikbaar onder een <a "
-"href=\"http://www.mozilla.org/foundation/licensing/website-"
+"Delen van deze inhoud zijn &copy;1998–%(current_year)s door individuele mozilla.org-medewerkers. Inhoud is beschikbaar onder een <a href=\"http://www.mozilla.org/foundation/licensing/website-"
 "content.html\">Creative Commons-licentie</a>."
 
-#: templates/base.html:195
+#: templates/base.html:198
 msgid "Privacy Policy"
 msgstr "Privacybeleid"
 
-#: templates/base.html:196
+#: templates/base.html:199
 msgid "Legal Notices"
 msgstr "Juridische kennisgevingen"
 
-#: templates/base.html:197
+#: templates/base.html:200
 msgid "Report Trademark Abuse"
 msgstr "Misbruik van handelsmerk melden"
 
@@ -898,6 +891,15 @@ msgid ""
 msgstr ""
 "<label for=\"id_optin\">Ik ga akkoord met uw manier van omgaan met deze gegevens, zoals uitgelegd in uw <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank"
 "\">privacybeleid</a>.</label>"
+
+#~ msgid "This user is a vouched Mozillian."
+#~ msgstr "Deze gebruiker is een Mozillian waarvoor garant wordt gestaan."
+
+#~ msgid "This user has not yet been vouched."
+#~ msgstr "Voor deze gebruiker wordt nog niet garant gestaan."
+
+#~ msgid "Non-Vouched"
+#~ msgstr "Geen garantstelling"
 
 #~ msgid "You must specify a region to specify a city."
 #~ msgstr "U moet een regio opgeven om een stad op te geven."

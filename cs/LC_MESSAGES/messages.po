@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mozillians 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-19 13:34-0700\n"
+"POT-Creation-Date: 2013-06-27 13:04-0700\n"
 "PO-Revision-Date: 2013-06-23 01:26+0200\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: cs <info@mozilla.cz>\n"
@@ -13,17 +13,32 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.1.6\n"
 
-#: apps/common/middleware.py:15
+#: apps/common/middleware.py:16
 msgid "You must be logged in to continue."
 msgstr "Pro pokračování musíte být přihlášen(a)."
 
-#: apps/common/middleware.py:16
+#: apps/common/middleware.py:17
 msgid "You must be vouched to continue."
 msgstr "Pro pokračování musíte být schválen(a)."
 
-#: apps/common/middleware.py:32
+#: apps/common/middleware.py:34
 msgid "Please complete registration before proceeding."
 msgstr "Před pokračováním prosím dokončete registraci."
+
+#: apps/groups/forms.py:14
+#, fuzzy
+msgid "Group Name A-Z"
+msgstr "Skupina: {name}"
+
+#: apps/groups/forms.py:15
+#, fuzzy
+msgid "Most Members"
+msgstr "Členové"
+
+#: apps/groups/forms.py:16
+#, fuzzy
+msgid "Fewest Members"
+msgstr "Členové"
 
 #: apps/groups/forms.py:44 apps/phonebook/forms.py:162
 msgid "Groups can only contain alphanumeric characters, dashes, spaces."
@@ -33,15 +48,15 @@ msgstr "Skupiny mohou obsahovat pouze alfanumerické znaky, čárky a mezery."
 msgid "Description"
 msgstr "Popis"
 
-#: apps/groups/models.py:60 apps/groups/templates/groups/group.html:42
+#: apps/groups/models.py:60 apps/groups/templates/groups/group.html:37
 msgid "IRC Channel"
 msgstr "IRC kanál"
 
-#: apps/groups/models.py:61 apps/groups/templates/groups/group.html:54 apps/phonebook/templates/phonebook/profile.html:129 apps/users/models.py:239
+#: apps/groups/models.py:61 apps/groups/templates/groups/group.html:49 apps/phonebook/templates/phonebook/profile.html:129 apps/users/models.py:239
 msgid "Website"
 msgstr "Webová stránka"
 
-#: apps/groups/models.py:63 apps/groups/templates/groups/group.html:59
+#: apps/groups/models.py:63 apps/groups/templates/groups/group.html:53
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -53,49 +68,63 @@ msgstr "Oblasti zájmu"
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
 msgstr ""
 
-#: apps/groups/templates/groups/group.html:3 apps/groups/templates/groups/group.html:13
+#: apps/groups/templates/groups/group.html:3 apps/groups/templates/groups/group.html:17
 msgid "Group: {name}"
 msgstr "Skupina: {name}"
 
-#: apps/groups/templates/groups/group.html:26 apps/groups/templates/groups/group.html:111
-msgid "Join Group"
-msgstr "Připojit se do skupiny"
+#: apps/groups/templates/groups/group.html:15
+#, fuzzy
+msgid "Curated Group: {name}"
+msgstr "Skupina: {name}"
 
-#: apps/groups/templates/groups/group.html:28 apps/groups/templates/groups/group.html:113
-msgid "Leave Group"
-msgstr "Opustit skupinu"
-
-#: apps/groups/templates/groups/group.html:40
+#: apps/groups/templates/groups/group.html:35
 msgid "IRC Channels"
 msgstr "IRC kanály"
 
-#: apps/groups/templates/groups/group.html:63
+#: apps/groups/templates/groups/group.html:56
 msgid "Members"
 msgstr "Členové"
 
-#: apps/groups/templates/groups/group.html:69
-msgid "Community Steward"
-msgstr "Komunitní steward"
-
-#: apps/groups/templates/groups/group.html:73 apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/search_result.html:6
-msgid "Profile Photo"
-msgstr "Profilové foto"
-
-#: apps/groups/templates/groups/group.html:92
+#: apps/groups/templates/groups/group.html:60
 msgid "Skills members have in common"
 msgstr "Společné znalosti členů"
 
-#: apps/groups/templates/groups/group.html:135
+#: apps/groups/templates/groups/group.html:71
+msgid "Community Steward"
+msgstr "Komunitní steward"
+
+#: apps/groups/templates/groups/group.html:75 apps/phonebook/forms.py:88 apps/phonebook/templates/phonebook/includes/search_result.html:6
+msgid "Profile Photo"
+msgstr "Profilové foto"
+
+#: apps/groups/templates/groups/group.html:106
+msgid "Join Group"
+msgstr "Připojit se do skupiny"
+
+#: apps/groups/templates/groups/group.html:108
+msgid "Leave Group"
+msgstr "Opustit skupinu"
+
+#: apps/groups/templates/groups/group.html:117
+#, fuzzy
+msgid "Sorry, we cannot find any mozillians in %(group_name)s"
+msgstr "Omlouváme se, ale nemůžeme nalézt žádné členy Mozillians v"
+
+#: apps/groups/templates/groups/group.html:123
 msgid "Group Members"
 msgstr "Členové skupiny"
 
-#: apps/groups/templates/groups/group.html:152
+#: apps/groups/templates/groups/group.html:140
 msgid "Showing all %(count)s results."
 msgstr "Zobrazit všech %(count)s výsledků."
 
 #: apps/groups/templates/groups/index.html:3 apps/groups/templates/groups/index.html:8
 msgid "Group Listing"
 msgstr "Seznam skupin"
+
+#: apps/groups/templates/groups/index.html:12
+msgid "Sort"
+msgstr ""
 
 #: apps/groups/templates/groups/index.html:17
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
@@ -107,7 +136,7 @@ msgstr ""
 msgid "Back"
 msgstr "Zpět"
 
-#: apps/groups/templates/groups/index.html:56 apps/users/templates/registration/register.html:51 apps/users/templates/registration/register.html:65
+#: apps/groups/templates/groups/index.html:56 apps/users/templates/registration/register.html:54 apps/users/templates/registration/register.html:68
 msgid "Next"
 msgstr "Další"
 
@@ -192,7 +221,7 @@ msgstr "%(recipient)s byl pozván(a) k připojení k serveru Mozillians. Obdrž�
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Děkujeme za potvrzení člena serveru Mozillians! Uživatel je nyní potvrzen!"
 
-#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:9 templates/base.html:194
+#: apps/phonebook/templates/phonebook/about.html:3 apps/phonebook/templates/phonebook/about.html:9 templates/base.html:197
 msgid "About Mozillians"
 msgstr "O serveru Mozillians"
 
@@ -274,11 +303,11 @@ msgstr ""
 msgid "Visible to:"
 msgstr "Viditelné pro:"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:46 apps/users/templates/registration/register.html:39 apps/users/templates/registration/register.html:45
+#: apps/phonebook/templates/phonebook/edit_profile.html:46 apps/users/templates/registration/register.html:42 apps/users/templates/registration/register.html:48
 msgid "Profile"
 msgstr "Profil"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:47 apps/users/templates/registration/register.html:40 apps/users/templates/registration/register.html:54
+#: apps/phonebook/templates/phonebook/edit_profile.html:47 apps/users/templates/registration/register.html:43 apps/users/templates/registration/register.html:57
 msgid "Skills & Groups"
 msgstr "Znalosti & skupiny"
 
@@ -298,8 +327,8 @@ msgstr "Služby"
 msgid "Personal"
 msgstr "Osobní"
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:72 apps/phonebook/templates/phonebook/profile.html:135 apps/users/templates/registration/register.html:41
-#: apps/users/templates/registration/register.html:69
+#: apps/phonebook/templates/phonebook/edit_profile.html:72 apps/phonebook/templates/phonebook/profile.html:135 apps/users/templates/registration/register.html:44
+#: apps/users/templates/registration/register.html:72
 msgid "Location"
 msgstr "Umístění"
 
@@ -324,7 +353,7 @@ msgstr "Dovednosti"
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Dovednost je naučená schopnost dosahovat předem stanovených výsledků s minimálním vynaložením času, energie či obojí."
 
-#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/phonebook/templates/phonebook/home.html:121 apps/phonebook/templates/phonebook/profile.html:210
+#: apps/phonebook/templates/phonebook/edit_profile.html:124 apps/phonebook/templates/phonebook/home.html:122 apps/phonebook/templates/phonebook/profile.html:210
 msgid "Languages"
 msgstr "Jazyky"
 
@@ -356,9 +385,7 @@ msgstr "E-mail Persona"
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:198
 msgid "To change your Personal Email, please <a href=\"%(bug_url)s\">file a bug</a>."
-msgstr ""
-"Pro změnu svého osobního e-mailu <a href=\"%(bug_url)s\">zadejte prosím "
-"požadavek</a>."
+msgstr "Pro změnu svého osobního e-mailu <a href=\"%(bug_url)s\">zadejte prosím požadavek</a>."
 
 #: apps/phonebook/templates/phonebook/edit_profile.html:224
 msgid "Password"
@@ -449,48 +476,52 @@ msgstr "Zrušit"
 msgid "Mozilla Community Directory"
 msgstr "Přehled členů komunity Mozilla"
 
-#: apps/phonebook/templates/phonebook/home.html:22 apps/phonebook/templates/phonebook/home.html:153 templates/base.html:71
+#: apps/phonebook/templates/phonebook/home.html:21 apps/phonebook/templates/phonebook/home.html:153 templates/base.html:71
 msgid "Search for people, groups and more"
 msgstr "Vyhledávání lidí, skupin a dalších"
 
-#: apps/phonebook/templates/phonebook/home.html:34
+#: apps/phonebook/templates/phonebook/home.html:33
 msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
 msgstr ""
 
-#: apps/phonebook/templates/phonebook/home.html:45
+#: apps/phonebook/templates/phonebook/home.html:44
 msgid "Welcome to the Mozilla community directory"
 msgstr "Vítá vás adresář komunity Mozilla"
 
-#: apps/phonebook/templates/phonebook/home.html:47
+#: apps/phonebook/templates/phonebook/home.html:46
 msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
 msgstr ""
 
-#: apps/phonebook/templates/phonebook/home.html:77
+#: apps/phonebook/templates/phonebook/home.html:65
+msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
+msgstr ""
+
+#: apps/phonebook/templates/phonebook/home.html:78
 msgid "How do I get involved?"
 msgstr "Jak se zapojit?"
 
-#: apps/phonebook/templates/phonebook/home.html:79
+#: apps/phonebook/templates/phonebook/home.html:80
 msgid ""
 "Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
 "make a difference in the lives of people everywhere."
 msgstr ""
 
-#: apps/phonebook/templates/phonebook/home.html:87
+#: apps/phonebook/templates/phonebook/home.html:88
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">Zapojit se</a>"
 
-#: apps/phonebook/templates/phonebook/home.html:113
+#: apps/phonebook/templates/phonebook/home.html:114
 msgid "Member of:"
 msgstr "Členové:"
 
-#: apps/phonebook/templates/phonebook/home.html:130
+#: apps/phonebook/templates/phonebook/home.html:131
 msgid "<h4>Has %(skill_count)s skill</h4>"
 msgid_plural "<h4>Has %(skill_count)s skills</h4>"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: apps/phonebook/templates/phonebook/home.html:149
+#: apps/phonebook/templates/phonebook/home.html:150
 msgid "Hello!"
 msgstr "Ahoj!"
 
@@ -501,10 +532,7 @@ msgstr "Příklady:"
 #: apps/phonebook/templates/phonebook/home.html:155
 #, fuzzy
 msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
-msgstr ""
-"<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%"
-"(search_url)s?q=berlin\">Berlin</a>, <a href=\"%"
-"(search_url)s?q=mbrandt\">mbrandt</a>"
+msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 
 #: apps/phonebook/templates/phonebook/home.html:182
 msgid "Functional areas"
@@ -590,7 +618,7 @@ msgstr "Zobrazit jako:"
 msgid "Myself"
 msgstr "Pouze já"
 
-#: apps/phonebook/templates/phonebook/profile.html:89 apps/phonebook/templates/phonebook/includes/search_result.html:17
+#: apps/phonebook/templates/phonebook/profile.html:89
 msgid "Mozillian"
 msgstr "Mozillian"
 
@@ -660,23 +688,11 @@ msgstr "Potřebujete pomoci? Kontaktujte zástupce v konkrétní tématické obl
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "Toto je váš Gravatar. Změnit si jej můžete na gravatar.com."
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:16
-msgid "This user is a vouched Mozillian."
-msgstr "Uživatel je potvrzen jako člen serveru Mozillians."
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:20
-msgid "This user has not yet been vouched."
-msgstr "Uživatel dosud nebyl potvrzen."
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:21
-msgid "Non-Vouched"
-msgstr "Nepotvrzen"
-
-#: apps/phonebook/templates/phonebook/includes/search_result.html:26
+#: apps/phonebook/templates/phonebook/includes/search_result.html:17
 msgid "Email:"
 msgstr "E-mail:"
 
-#: apps/phonebook/templates/phonebook/includes/search_result.html:31
+#: apps/phonebook/templates/phonebook/includes/search_result.html:22
 msgid "Username:"
 msgstr "Uživatelské jméno:"
 
@@ -728,28 +744,36 @@ msgstr "Nyní jste na serveru Mozillians potvrzen(a)!"
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Byl(a) jste potvrzen(a) na serveru Mozillians.org. Nyní máte možnost vyhledávat, potvrzovat a zvát další členy Mozillians."
 
-#: apps/users/views.py:57
+#: apps/users/views.py:55
 msgid "Your account has been created."
 msgstr "Váš účet byl vytvořen."
 
-#: apps/users/templates/registration/register.html:8 apps/users/templates/registration/register.html:31
+#: apps/users/templates/registration/register.html:8 apps/users/templates/registration/register.html:32
 msgid "Create Your Profile"
 msgstr "Vytvoření profilu"
 
-#: apps/users/templates/registration/register.html:66
+#: apps/users/templates/registration/register.html:17
+msgid "The following fields are required (optin is the checkbox in the last panel)"
+msgstr ""
+
+#: apps/users/templates/registration/register.html:34
+msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
+msgstr ""
+
+#: apps/users/templates/registration/register.html:69
 msgid "Previous"
 msgstr "Předchozí"
 
-#: apps/users/templates/registration/register.html:71
+#: apps/users/templates/registration/register.html:74
 msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 msgstr ""
 "Dejte nám vědět, kde se ve světě nacházíte. Ostatní ověření členové Mozillians vás tak budou moci snázeji kontaktovat. Můžeme vám též poslat e-maily o důležitých novinkách Mozilly pro váš region."
 
-#: apps/users/templates/registration/register.html:82
+#: apps/users/templates/registration/register.html:85
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Jakmile budete potvrzen(a) jako člen Mozillians, začnete odebírat e-mailovou komunikaci. Její odebírání můžete kdykoliv zrušit klepnutím na odkaz v patičce e-mailů."
 
-#: apps/users/templates/registration/register.html:89
+#: apps/users/templates/registration/register.html:92
 msgid "Create Profile"
 msgstr "Vytvořit profil"
 
@@ -831,29 +855,29 @@ msgstr "Pozvat"
 msgid "Log Out"
 msgstr "Odhlášení"
 
-#: templates/base.html:122 templates/base.html:124
+#: templates/base.html:123 templates/base.html:126
 msgid "Sign in with Persona"
 msgstr "Přihlášení pomocí Persona"
 
-#: templates/base.html:165
+#: templates/base.html:167
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Pomozte učinit server Mozillians lepším.  <a href=\"%(bug_url)s\">Nahlaste chybu</a> či <a href=\"%(git_url)s\">pomozte server vylepšit</a>."
 
-#: templates/base.html:184
+#: templates/base.html:187
 msgid ""
 "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr ""
 
-#: templates/base.html:195
+#: templates/base.html:198
 msgid "Privacy Policy"
 msgstr "Zásady ochrany soukromí"
 
-#: templates/base.html:196
+#: templates/base.html:199
 msgid "Legal Notices"
 msgstr "Právní omezení"
 
-#: templates/base.html:197
+#: templates/base.html:200
 msgid "Report Trademark Abuse"
 msgstr "Nahlásit zneužití ochranné známky"
 
@@ -863,6 +887,15 @@ msgid ""
 msgstr ""
 "<label for=\"id_optin\">Souhlasím se zpracováním informací tak, jak je to popsáno v <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">zásadách ochrany soukromí</a>."
 "</label>"
+
+#~ msgid "This user is a vouched Mozillian."
+#~ msgstr "Uživatel je potvrzen jako člen serveru Mozillians."
+
+#~ msgid "This user has not yet been vouched."
+#~ msgstr "Uživatel dosud nebyl potvrzen."
+
+#~ msgid "Non-Vouched"
+#~ msgstr "Nepotvrzen"
 
 #~ msgid "You must specify a region to specify a city."
 #~ msgstr "Pro zvolení města musíte zvolit region."
