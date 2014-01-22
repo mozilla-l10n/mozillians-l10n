@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 08:51-0700\n"
+"POT-Creation-Date: 2014-01-15 04:22-0700\n"
 "PO-Revision-Date: 2013-12-17 03:15+0000\n"
 "Last-Translator: Masahiko <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,10 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1387250153.0\n"
 
+#: mozillians/common/helpers.py:68
+msgid "Visible to:"
+msgstr "表示対象:"
+
 #: mozillians/common/middleware.py:15
 msgid "You must be logged in to continue."
 msgstr "続けるにはログインする必要があります。"
@@ -23,39 +27,144 @@ msgid "You must be vouched to continue."
 msgstr "続けるには承認されている必要があります。"
 
 # ソートメニュー項目
-#: mozillians/groups/forms.py:16
+#: mozillians/groups/forms.py:12
 msgid "Name A-Z"
 msgstr "名前順 A-Z"
 
 # ソートメニュー項目
-#: mozillians/groups/forms.py:17
+#: mozillians/groups/forms.py:13
 msgid "Most Members"
 msgstr "メンバーの多い順"
 
 # ソートメニュー項目
-#: mozillians/groups/forms.py:18
+#: mozillians/groups/forms.py:14
 msgid "Fewest Members"
 msgstr "メンバーの少ない順"
 
-#: mozillians/groups/forms.py:46 mozillians/phonebook/forms.py:165
-msgid "Groups can only contain alphanumeric characters, dashes, spaces."
-msgstr "グループ名には半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
+#: mozillians/groups/models.py:118
+#, fuzzy
+msgid "Member"
+msgstr "メンバー"
 
-#: mozillians/groups/models.py:74
+#: mozillians/groups/models.py:119
+#, fuzzy
+msgid "Pending"
+msgstr "未承認のプロフィール"
+
+#: mozillians/groups/models.py:139
 msgid "Description"
 msgstr "説明"
 
-#: mozillians/groups/models.py:78 mozillians/templates/groups/group.html:39
+#: mozillians/groups/models.py:147 mozillians/templates/groups/group.html:45
 msgid "IRC Channel"
 msgstr "IRC チャンネル"
 
-#: mozillians/groups/models.py:79 mozillians/templates/groups/group.html:49
+#: mozillians/groups/models.py:148
+msgid "An IRC channel where this group is discussed (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:151 mozillians/templates/groups/group.html:55
 msgid "Website"
 msgstr "Web サイト"
 
-#: mozillians/groups/models.py:81 mozillians/templates/groups/group.html:53
+#: mozillians/groups/models.py:152
+msgid "A URL of a web site with more information about this group (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:155 mozillians/templates/groups/group.html:59
 msgid "Wiki"
 msgstr "Wiki"
+
+#: mozillians/groups/models.py:156
+msgid "A URL of a wiki with more information about this group (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:161 mozillians/users/models.py:183
+msgid "Yes"
+msgstr "はい"
+
+#: mozillians/groups/models.py:162
+msgid "By request"
+msgstr ""
+
+#: mozillians/groups/models.py:163 mozillians/users/models.py:183
+msgid "No"
+msgstr "いいえ"
+
+#: mozillians/groups/models.py:171
+msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
+msgstr ""
+
+#: mozillians/groups/models.py:177
+msgid "The max PK of pending membership requests the last time we sent the curator a reminder"
+msgstr ""
+
+#: mozillians/groups/tasks.py:53
+msgid "%d outstanding requests to join Mozillians group \"%s\""
+msgstr ""
+
+#: mozillians/groups/tasks.py:90
+#, fuzzy
+msgid "Accepted to Mozillians group \"%s\""
+msgstr "%s が Mozillian のプロフィールを作成しました"
+
+#: mozillians/groups/tasks.py:93
+#, fuzzy
+msgid "Not accepted to Mozillians group \"%s\""
+msgstr "%s が Mozillian のプロフィールを作成しました"
+
+#: mozillians/groups/views.py:166
+msgid "This group does not allow members to remove themselves."
+msgstr ""
+
+#: mozillians/groups/views.py:173
+msgid "A curator cannot be removed from a group."
+msgstr ""
+
+#: mozillians/groups/views.py:180
+msgid "You have been removed from this group."
+msgstr ""
+
+#: mozillians/groups/views.py:182
+msgid "The group member has been removed."
+msgstr ""
+
+#: mozillians/groups/views.py:206
+#, fuzzy
+msgid "This user has not requested membership in this group."
+msgstr "このユーザはまだ承認されていません。"
+
+#: mozillians/groups/views.py:209
+msgid "This user is already a member of this group."
+msgstr ""
+
+#: mozillians/groups/views.py:212
+msgid "This user has been added as a member of this group."
+msgstr ""
+
+#: mozillians/groups/views.py:231
+msgid "You are already in this group."
+msgstr ""
+
+#: mozillians/groups/views.py:233
+msgid "Your request to join this group is still pending."
+msgstr ""
+
+#: mozillians/groups/views.py:235
+msgid "This group is not accepting requests to join."
+msgstr ""
+
+#: mozillians/groups/views.py:239
+msgid "You have been added to this group."
+msgstr ""
+
+#: mozillians/groups/views.py:243
+msgid "Your membership request is pending approval by the group curator."
+msgstr ""
+
+#: mozillians/groups/views.py:274
+msgid "You must be a curator or an admin to edit a group"
+msgstr ""
 
 #: mozillians/phonebook/forms.py:52
 msgid "Include non-vouched"
@@ -77,43 +186,43 @@ msgstr "半角英数字のみを使用してください"
 msgid "This username is not allowed, please choose another."
 msgstr "このユーザ名は使用できません。他のユーザ名を選んでください。"
 
-#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:76 mozillians/templates/phonebook/edit_profile.html:72 mozillians/templates/phonebook/includes/search_result.html:8
+#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:83 mozillians/templates/phonebook/edit_profile.html:67 mozillians/templates/phonebook/includes/search_result.html:21
 msgid "Profile Photo"
 msgstr "プロフィール写真"
 
-#: mozillians/phonebook/forms.py:98 mozillians/templates/bootstrap/profile_photo.html:16 mozillians/templates/phonebook/edit_profile.html:80 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:98 mozillians/templates/phonebook/edit_profile.html:75 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "プロフィール写真を削除"
 
-#: mozillians/phonebook/forms.py:105
-msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
-msgstr "追加するグループ名を入力してください (例: Marketing, Support, WebDev, Thunderbird)"
+#: mozillians/phonebook/forms.py:102
+msgid "When did you get involved with Mozilla?"
+msgstr "Mozilla の活動に参加したのはいつですか？"
 
-#: mozillians/phonebook/forms.py:108
+#: mozillians/phonebook/forms.py:106
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "お使いの言語を入力してください (例: English, French, German)"
 
-#: mozillians/phonebook/forms.py:111
+#: mozillians/phonebook/forms.py:109
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "スキルを入力してください (例: Python、javascript、グラフィックデザイン、ユーザ調査)"
 
-#: mozillians/phonebook/forms.py:180
+#: mozillians/phonebook/forms.py:160
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "言語の欄は半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
 
-#: mozillians/phonebook/forms.py:191
+#: mozillians/phonebook/forms.py:171
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "スキル欄は半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
 
-#: mozillians/phonebook/forms.py:208
+#: mozillians/phonebook/forms.py:187
 msgid "Email"
 msgstr "メールアドレス"
 
-#: mozillians/phonebook/forms.py:214
+#: mozillians/phonebook/forms.py:193
 msgid "Email is currently associated with another user."
 msgstr "メールアドレスは現在別のユーザに関連付けられています。"
 
-#: mozillians/phonebook/forms.py:239
+#: mozillians/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "既に承認済みの人を招待する事は出来ません。"
 
@@ -149,7 +258,16 @@ msgstr "Mozillian 仲間"
 msgid "%s created a Mozillians profile"
 msgstr "%s が Mozillian のプロフィールを作成しました"
 
-#: mozillians/phonebook/validators.py:41
+#: mozillians/phonebook/validators.py:19
+msgid "Twitter usernames cannot be longer than 15 characters."
+msgstr ""
+
+#: mozillians/phonebook/validators.py:22
+#, fuzzy
+msgid "Twitter usernames must contain only alphanumeric characters and the underscore."
+msgstr "グループ名には半角英数字、ハイフン(-)、半角スペースのみが使用可能です。"
+
+#: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
 msgstr "URL を正しく入力してください。"
 
@@ -161,31 +279,31 @@ msgstr "認証に失敗しました。"
 msgid "Email already exists in the database."
 msgstr "メールアドレスはすでにデータベースに存在します。"
 
-#: mozillians/phonebook/views.py:167
+#: mozillians/phonebook/views.py:175
 msgid "Your account has been created."
 msgstr "アカウントが作成されました。"
 
-#: mozillians/phonebook/views.py:170
+#: mozillians/phonebook/views.py:178
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "ユーザ名を変更しました。プロフィールの URL も変更されているので注意してください。"
 
-#: mozillians/phonebook/views.py:207
+#: mozillians/phonebook/views.py:215
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "アカウントが削除されました。Mozillian でいてくださりありがとうございました！"
 
-#: mozillians/phonebook/views.py:281
+#: mozillians/phonebook/views.py:288
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s さんを Mozillians に招待しました。招待された方には、参加方法についてのメールが送信されます。よろしければ、別の Mozillian も招待してください。"
 
-#: mozillians/phonebook/views.py:301
+#: mozillians/phonebook/views.py:308
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Mozillian を承認していただきありがとうございます。このユーザは認証されました！"
 
-#: mozillians/phonebook/views.py:369
+#: mozillians/phonebook/views.py:376
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Mozillians.org に招待されました！ サインインしてプロフィールを作成してください。"
 
-#: mozillians/settings/base.py:275 mozillians/templates/base.html:7 mozillians/templates/base.html:20 mozillians/templates/phonebook/edit_profile.html:66 mozillians/templates/phonebook/search.html:65
+#: mozillians/settings/base.py:280 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:61 mozillians/templates/phonebook/search.html:78
 #: mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Mozillians"
@@ -245,47 +363,47 @@ msgstr "ようこそ"
 msgid "Mozilla's contributor phonebook"
 msgstr "Mozilla の貢献者の連絡先"
 
-#: mozillians/templates/base.html:61
+#: mozillians/templates/base.html:62
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: mozillians/templates/base.html:64 mozillians/templates/includes/lang_switcher.html:3
+#: mozillians/templates/base.html:65 mozillians/templates/includes/lang_switcher.html:3
 msgid "Select language"
 msgstr "言語選択"
 
-#: mozillians/templates/base.html:65
+#: mozillians/templates/base.html:66
 msgid "Skip to main content"
 msgstr "メインコンテンツへスキップする"
 
-#: mozillians/templates/base.html:76 mozillians/templates/phonebook/home.html:17 mozillians/templates/phonebook/home.html:29 mozillians/templates/phonebook/home.html:165
+#: mozillians/templates/base.html:77 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:163 mozillians/templates/phonebook/search.html:32
 msgid "Search for people, groups and more"
 msgstr "人々、グループなどを検索"
 
-#: mozillians/templates/base.html:97
+#: mozillians/templates/base.html:98
 msgid "View Profile"
 msgstr "プロフィールを閲覧"
 
-#: mozillians/templates/base.html:103 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:34
+#: mozillians/templates/base.html:104 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:29
 msgid "Edit Your Profile"
 msgstr "プロフィールを編集"
 
-#: mozillians/templates/base.html:110
+#: mozillians/templates/base.html:111
 msgid "Invite"
 msgstr "招待する"
 
-#: mozillians/templates/base.html:117 mozillians/templates/base.html:125
+#: mozillians/templates/base.html:118 mozillians/templates/base.html:126
 msgid "Log Out"
 msgstr "ログアウト"
 
-#: mozillians/templates/base.html:130 mozillians/templates/base.html:133
+#: mozillians/templates/base.html:131 mozillians/templates/base.html:134
 msgid "Sign in"
 msgstr "サインイン"
 
-#: mozillians/templates/base.html:173
+#: mozillians/templates/base.html:174
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Mozillians サイトを改善するため、<a href=\"%(bug_url)s\">バグ報告</a> や <a href=\"%(git_url)s\">ソースコードの提供</a> にご協力ください。"
 
-#: mozillians/templates/base.html:193
+#: mozillians/templates/base.html:194
 msgid ""
 "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
@@ -293,74 +411,169 @@ msgstr ""
 "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 
-#: mozillians/templates/base.html:203 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
+#: mozillians/templates/base.html:204 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr "Mozillians について"
 
-#: mozillians/templates/base.html:204
+#: mozillians/templates/base.html:205
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
 
-#: mozillians/templates/base.html:205
+#: mozillians/templates/base.html:206
 msgid "Legal Notices"
 msgstr "法的事項"
 
-#: mozillians/templates/base.html:206
+#: mozillians/templates/base.html:207
 msgid "Report Trademark Abuse"
 msgstr "商標の不正使用を報告"
 
-#: mozillians/templates/bootstrap/field_optin.html:2
-msgid ""
-"<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
-msgstr ""
-"<label for=\"id_optin\"><a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">プライバシーポリシー</a>の内容を確認しました。個人情報の取り扱いに同意します。</label>"
+#: mozillians/templates/groups/add_edit.html:4 mozillians/templates/groups/add_edit.html:24
+#, fuzzy
+msgid "Add a curated group"
+msgstr "管理しているグループ"
 
-#: mozillians/templates/bootstrap/profile_photo.html:10 mozillians/templates/phonebook/edit_profile.html:74 mozillians/templates/phonebook/includes/photo.html:6
-#: mozillians/templates/phonebook/includes/photo_form.html:8
-msgid "Profile photo"
-msgstr "プロフィール写真"
+#: mozillians/templates/groups/add_edit.html:6 mozillians/templates/groups/add_edit.html:39
+#, fuzzy
+msgid "Edit functional area"
+msgstr "活動分野"
+
+#: mozillians/templates/groups/add_edit.html:8 mozillians/templates/groups/add_edit.html:41
+#, fuzzy
+msgid "Edit curated group"
+msgstr "管理しているグループ"
+
+#: mozillians/templates/groups/add_edit.html:10 mozillians/templates/groups/add_edit.html:43
+#, fuzzy
+msgid "Edit group"
+msgstr "グループに参加"
+
+#: mozillians/templates/groups/add_edit.html:18 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:19
+msgid "Please correct the errors below."
+msgstr "以下のエラーを訂正してください。"
+
+#: mozillians/templates/groups/add_edit.html:26
+msgid "Use this form to create a group on Mozillians.org. Before creating a group, try searching for it. Someone else might already have created it."
+msgstr ""
+
+#: mozillians/templates/groups/add_edit.html:32
+msgid ""
+"Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
+"requests to join."
+msgstr ""
+
+#: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
+#, fuzzy
+msgid "Create Group"
+msgstr "管理しているグループ"
+
+#: mozillians/templates/groups/add_edit.html:95
+msgid "Submit changes"
+msgstr ""
+
+#: mozillians/templates/groups/common_groups.html:2 mozillians/templates/groups/index_groups.html:3
+msgid "Group Listing"
+msgstr "グループ一覧"
+
+#: mozillians/templates/groups/common_groups.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:225 mozillians/templates/phonebook/home.html:117
+#: mozillians/templates/phonebook/home.html:206 mozillians/templates/phonebook/profile.html:151 mozillians/templates/phonebook/search.html:64
+msgid "Groups"
+msgstr "グループ"
+
+# ソートボタン
+#: mozillians/templates/groups/common_groups.html:16
+msgid "Sort"
+msgstr "並べ替え"
+
+#: mozillians/templates/groups/common_groups.html:22 mozillians/templates/groups/index_groups.html:10
+msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
+msgstr "アドオン開発から翻訳まで、Mozillian の活動は多岐に渡ります。ユーザが作成したグループを使って、あなたと同じような事に取り組む Mozillian を見つけましょう！"
+
+#: mozillians/templates/groups/common_groups.html:41
+msgid "members"
+msgstr "名"
+
+#: mozillians/templates/groups/confirm_remove_member.html:3 mozillians/templates/groups/confirm_remove_member.html:14
+msgid "Confirm removing member"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:18
+msgid "Really leave group %(group)s?"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:20
+msgid "Really remove user %(profile)s from group %(group)s?"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/phonebook/includes/search_result.html:5
+#, fuzzy
+msgid "Remove"
+msgstr "スキルを削除"
+
+#: mozillians/templates/groups/confirm_remove_member.html:29
+msgid "Return to group"
+msgstr ""
 
 #: mozillians/templates/groups/group.html:3
 msgid "Group: {name}"
 msgstr "グループ: {name}"
 
 #: mozillians/templates/groups/group.html:16
+#, fuzzy
+msgid "Functional Area"
+msgstr "活動分野"
+
+#: mozillians/templates/groups/group.html:18
 msgid "Curated Group"
 msgstr "管理しているグループ"
 
-#: mozillians/templates/groups/group.html:18
+#: mozillians/templates/groups/group.html:20
 msgid "Group"
 msgstr "グループ"
 
-#: mozillians/templates/groups/group.html:37
+#: mozillians/templates/groups/group.html:28
+#, fuzzy
+msgid "Edit Group"
+msgstr "グループに参加"
+
+#: mozillians/templates/groups/group.html:43
 msgid "IRC Channels"
 msgstr "IRC チャンネル"
 
-#: mozillians/templates/groups/group.html:56
+#: mozillians/templates/groups/group.html:62
 msgid "Members"
 msgstr "メンバー"
 
-#: mozillians/templates/groups/group.html:60
+#: mozillians/templates/groups/group.html:66
 msgid "Skills members have in common"
 msgstr "メンバーの共通スキル"
 
-#: mozillians/templates/groups/group.html:71
+#: mozillians/templates/groups/group.html:78
 msgid "Community Steward"
 msgstr "コミュニティ管理者"
 
-#: mozillians/templates/groups/group.html:109
+#: mozillians/templates/groups/group.html:78
+#, fuzzy
+msgid "Curator"
+msgstr "管理しているグループ"
+
+#: mozillians/templates/groups/group.html:115
 msgid "Join Group"
 msgstr "グループに参加"
 
-#: mozillians/templates/groups/group.html:111
+#: mozillians/templates/groups/group.html:125
 msgid "Leave Group"
 msgstr "グループから脱退"
 
-#: mozillians/templates/groups/group.html:120
+#: mozillians/templates/groups/group.html:133
 msgid "Sorry, we cannot find any mozillians in %(group_name)s"
 msgstr "申し訳ありませんが、お探しの Mozillian は %(group_name)s に見つかりませんでした"
 
-#: mozillians/templates/groups/group.html:129
+#: mozillians/templates/groups/group.html:144
+#, fuzzy
+msgid "Functional Area Members"
+msgstr "活動分野"
+
+#: mozillians/templates/groups/group.html:146
 msgid "Group Members"
 msgstr "グループのメンバー"
 
@@ -372,30 +585,8 @@ msgstr "活動分野"
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
 msgstr "いろいろな Mozillian、各活動分野の担当者と情報を見ることができます。誰が何を作業をしているか調べ、あなたが協力できることを見つけてください。"
 
-#: mozillians/templates/groups/index_groups.html:2
-msgid "Group Listing"
-msgstr "グループ一覧"
-
-#: mozillians/templates/groups/index_groups.html:12 mozillians/templates/phonebook/edit_profile.html:233 mozillians/templates/phonebook/home.html:123 mozillians/templates/phonebook/home.html:208
-#: mozillians/templates/phonebook/profile.html:151 mozillians/templates/phonebook/search.html:51
-msgid "Groups"
-msgstr "グループ"
-
-# ソートボタン
-#: mozillians/templates/groups/index_groups.html:16
-msgid "Sort"
-msgstr "並べ替え"
-
-#: mozillians/templates/groups/index_groups.html:21
-msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
-msgstr "アドオン開発から翻訳まで、Mozillian の活動は多岐に渡ります。ユーザが作成したグループを使って、あなたと同じような事に取り組む Mozillian を見つけましょう！"
-
-#: mozillians/templates/groups/index_groups.html:40
-msgid "members"
-msgstr "名"
-
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:249 mozillians/templates/phonebook/home.html:142
-#: mozillians/templates/phonebook/profile.html:165
+#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:262 mozillians/templates/phonebook/home.html:140
+#: mozillians/templates/phonebook/profile.html:167
 msgid "Skills"
 msgstr "スキル"
 
@@ -488,107 +679,111 @@ msgstr "いいえ: プロフィールを削除しません"
 msgid "I'm sure: delete my profile"
 msgstr "はい: プロフィールを削除します"
 
-#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:36
+#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:31
 msgid "Create Your Profile"
 msgstr "プロフィールの作成"
 
-#: mozillians/templates/phonebook/edit_profile.html:16
-msgid "Visible to:"
-msgstr "表示対象:"
-
-#: mozillians/templates/phonebook/edit_profile.html:27
-msgid "Please correct the errors below."
-msgstr "以下のエラーを訂正してください。"
-
-#: mozillians/templates/phonebook/edit_profile.html:41
+#: mozillians/templates/phonebook/edit_profile.html:36
 msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
 msgstr ""
 "ここであなたのプロフィールを変更し、プロフィール領域を参照できるユーザーを選択します。これにより、あなたのプロフィールの一部を公開することができますが、あなたの連絡先情報が共有される点に注意してくだ"
 "さい。"
 
-#: mozillians/templates/phonebook/edit_profile.html:49
+#: mozillians/templates/phonebook/edit_profile.html:44
 msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
 msgstr ""
 "私たちのコミュニティディレクトリは、13 歳以上の Mozillian のためのものです。私たちは、個人、特に年少者についての個人情報の公開を安全に取り扱うことを真剣に考えています。あなたが 13 歳未満である場合"
 "は、アカウントを作成してはいけません。"
 
-#: mozillians/templates/phonebook/edit_profile.html:63
+#: mozillians/templates/phonebook/edit_profile.html:58
 msgid "Make all of my profile fields visible to:"
 msgstr "プロファイルのすべての項目を表示する:"
 
-#: mozillians/templates/phonebook/edit_profile.html:65
+#: mozillians/templates/phonebook/edit_profile.html:60
 msgid "-- No Change --"
 msgstr "-- 変更無し --"
 
-#: mozillians/templates/phonebook/edit_profile.html:67 mozillians/templates/phonebook/profile.html:127 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:127 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "公開"
 
-#: mozillians/templates/phonebook/edit_profile.html:123
+#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
+msgid "Profile photo"
+msgstr "プロフィール写真"
+
+#: mozillians/templates/phonebook/edit_profile.html:118
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "<a href=\"%(url)s\">Markdown</a> を使用すると、太字、斜体、箇条書き、リンクを記述できます。"
 
-#: mozillians/templates/phonebook/edit_profile.html:131
+#: mozillians/templates/phonebook/edit_profile.html:126
 msgid "Accounts"
 msgstr "アカウント"
 
-#: mozillians/templates/phonebook/edit_profile.html:144
+#: mozillians/templates/phonebook/edit_profile.html:139
 msgid "Delete"
 msgstr "アカウント削除"
 
-#: mozillians/templates/phonebook/edit_profile.html:153
+#: mozillians/templates/phonebook/edit_profile.html:148
 msgid "Add account"
 msgstr "アカウント追加"
 
-#: mozillians/templates/phonebook/edit_profile.html:166
-msgid "When did you get involved with Mozilla?"
-msgstr "Mozilla の活動に参加したのはいつですか？"
-
-#: mozillians/templates/phonebook/edit_profile.html:176
+#: mozillians/templates/phonebook/edit_profile.html:168
 msgid "T-Shirt Size"
 msgstr "T シャツのサイズ"
 
-#: mozillians/templates/phonebook/edit_profile.html:178
+#: mozillians/templates/phonebook/edit_profile.html:170
 msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
 msgstr "T シャツは好きですか？ サイズを指定しておくと、イベントなどの際に適切なサイズを提供することができます。"
 
-#: mozillians/templates/phonebook/edit_profile.html:186
+#: mozillians/templates/phonebook/edit_profile.html:178
 msgid "Fitted"
 msgstr "フィット型 (女性向け)"
 
-#: mozillians/templates/phonebook/edit_profile.html:190
+#: mozillians/templates/phonebook/edit_profile.html:182
 msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr "フィットカットの T シャツは、シャツの縁がカーブしており、ウエストの辺りが細く、その上下が太くなっています。\"女性向け\" の型です。"
 
-#: mozillians/templates/phonebook/edit_profile.html:208
+#: mozillians/templates/phonebook/edit_profile.html:200
 msgid "Straight-cut"
 msgstr "ストレートカット型 (男女共用)"
 
-#: mozillians/templates/phonebook/edit_profile.html:212
+#: mozillians/templates/phonebook/edit_profile.html:204
 msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as \"men's\" or \"unisex\"."
 msgstr "ストレートカットの T シャツは、肩部分の幅が広く、胴部分がほぼ四角形です。\"男性向け\" または \"男女共用\" の型です。"
 
-#: mozillians/templates/phonebook/edit_profile.html:235
+#: mozillians/templates/phonebook/edit_profile.html:227
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "グループは、互いに何らかの関係を持っている Mozillians のコミュニティです。ここには、興味、チーム、プロジェクト、製品、またはサブコミュニティを記載できます。"
 
-#: mozillians/templates/phonebook/edit_profile.html:251
+#: mozillians/templates/phonebook/edit_profile.html:235
+msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:239
+msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:246
+msgid "After you are vouched, you will be able to join groups."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:264
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "スキルは、わずかな時間やエネルギーを費やして、ある成果を挙げるために学習して身につけた能力です。"
 
-#: mozillians/templates/phonebook/edit_profile.html:291 mozillians/templates/phonebook/home.html:132 mozillians/templates/phonebook/profile.html:179
+#: mozillians/templates/phonebook/edit_profile.html:304 mozillians/templates/phonebook/home.html:130 mozillians/templates/phonebook/profile.html:181
 msgid "Languages"
 msgstr "言語"
 
-#: mozillians/templates/phonebook/edit_profile.html:293
+#: mozillians/templates/phonebook/edit_profile.html:306
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Mozilla のプロジェクトは、多くの国や言語にまたがっています。他の Mozillian に容易に見つけてもらえるように、あなたが話すことのできる言語を登録してください。"
 
-#: mozillians/templates/phonebook/edit_profile.html:307
+#: mozillians/templates/phonebook/edit_profile.html:320
 msgid "Services"
 msgstr "サービス"
 
-#: mozillians/templates/phonebook/edit_profile.html:309
+#: mozillians/templates/phonebook/edit_profile.html:322
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
@@ -596,15 +791,15 @@ msgstr ""
 "Phonebook は、貢献者を公認する助けとなる API を提供し、プロファイルデータを他のツールや <a href=\"%(bugzilla_url)s\">Bugzilla</a> と <a href=\"%(reps_url)s\">Mozilla Reps Portal</a> のようなサイトと"
 "共有します。"
 
-#: mozillians/templates/phonebook/edit_profile.html:316
+#: mozillians/templates/phonebook/edit_profile.html:329
 msgid "Other Sites"
 msgstr "その他のサイト"
 
-#: mozillians/templates/phonebook/edit_profile.html:327
+#: mozillians/templates/phonebook/edit_profile.html:340
 msgid "Developers"
 msgstr "開発者"
 
-#: mozillians/templates/phonebook/edit_profile.html:329
+#: mozillians/templates/phonebook/edit_profile.html:342
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -612,70 +807,70 @@ msgstr ""
 "利用可能な <a href=\"%(api_schema_url)s\">API メソッド</a> の一覧を見てください。この API を利用するには、プライバシーチームから認可を得る必要があります。まず、<a href=\"%(bugzilla_request_url)s\">"
 "バグ登録</a> をしてください。何か疑問があれば、<a href=\"%(dev_form_url)s\">開発者フォーラム</a> で質問してください。"
 
-#: mozillians/templates/phonebook/edit_profile.html:345
+#: mozillians/templates/phonebook/edit_profile.html:358
 msgid "Your approved apps:"
 msgstr "承認済みのあなたのアプリ:"
 
-#: mozillians/templates/phonebook/edit_profile.html:348
+#: mozillians/templates/phonebook/edit_profile.html:361
 msgid "Key"
 msgstr "キー"
 
-#: mozillians/templates/phonebook/edit_profile.html:351
+#: mozillians/templates/phonebook/edit_profile.html:364
 msgid "You have no registered, active apps."
 msgstr "登録済みのアクティブなアプリはありません。"
 
-#: mozillians/templates/phonebook/edit_profile.html:359
+#: mozillians/templates/phonebook/edit_profile.html:372
 msgid "Vouches & Invites"
 msgstr "招待と承認"
 
-#: mozillians/templates/phonebook/edit_profile.html:360 mozillians/templates/phonebook/profile.html:205
+#: mozillians/templates/phonebook/edit_profile.html:373 mozillians/templates/phonebook/profile.html:207
 msgid "Vouched By"
 msgstr "承認者"
 
-#: mozillians/templates/phonebook/edit_profile.html:366
+#: mozillians/templates/phonebook/edit_profile.html:379
 msgid "You are automatically vouched!"
 msgstr "あなたは自動的に承認されました！"
 
-#: mozillians/templates/phonebook/edit_profile.html:368
+#: mozillians/templates/phonebook/edit_profile.html:381
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr ""
 "あなたのプロフィールは承認待ちの状態にあります。このリンクをあなたの貢献をよく知る方に送信して、承認してもらいましょう: <em class=\"underline\" title=\"あなたのプロフィールの URL\"> %(profile_url)s "
 "</em>"
 
-#: mozillians/templates/phonebook/edit_profile.html:377
+#: mozillians/templates/phonebook/edit_profile.html:390
 msgid "Vouchees"
 msgstr "あなたが承認した人"
 
-#: mozillians/templates/phonebook/edit_profile.html:396
+#: mozillians/templates/phonebook/edit_profile.html:409
 msgid "This field is required."
 msgstr "入力必須の項目です。"
 
-#: mozillians/templates/phonebook/edit_profile.html:406
+#: mozillians/templates/phonebook/edit_profile.html:418
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "私は <a href=\"%(privacy_url)s\">Mozilla のプライバシーポリシー</a> に記載された個人情報の取り扱いに同意します。"
 
-#: mozillians/templates/phonebook/edit_profile.html:415
+#: mozillians/templates/phonebook/edit_profile.html:427
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Mozillian に承認されると、Mozilla からのメールを受け取るようになります。これらのメールはいつでも、メール下部に記載されたリンクをクリックするだけで購読解除できます。"
 
-#: mozillians/templates/phonebook/edit_profile.html:425
+#: mozillians/templates/phonebook/edit_profile.html:437
 msgid "Update Profile"
 msgstr "プロフィールを更新する"
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:427
+#: mozillians/templates/phonebook/edit_profile.html:439
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: mozillians/templates/phonebook/edit_profile.html:430
+#: mozillians/templates/phonebook/edit_profile.html:442
 msgid "Create Profile"
 msgstr "プロフィールを作成する"
 
-#: mozillians/templates/phonebook/edit_profile.html:436 mozillians/templates/phonebook/edit_profile.html:446
+#: mozillians/templates/phonebook/edit_profile.html:448 mozillians/templates/phonebook/edit_profile.html:458
 msgid "Delete Profile"
 msgstr "プロフィールの削除"
 
-#: mozillians/templates/phonebook/edit_profile.html:439
+#: mozillians/templates/phonebook/edit_profile.html:451
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "私が自分のアカウントを削除する事により、自分の貢献を周知することや、Mozilla コミュニティの他のメンバーが簡単に私を見つけることが困難になるのを理解し、これを受け入れます。"
 
@@ -683,27 +878,27 @@ msgstr "私が自分のアカウントを削除する事により、自分の貢
 msgid "Mozilla Community Directory"
 msgstr "Mozilla コミュニティディレクトリ"
 
-#: mozillians/templates/phonebook/home.html:42
+#: mozillians/templates/phonebook/home.html:36
 msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
 msgstr "Mozilla と Web が活気に満ちている時です。将来、さらに 20 億人の人々がインターネットコミュニティに参加するといわれています。"
 
-#: mozillians/templates/phonebook/home.html:53
+#: mozillians/templates/phonebook/home.html:47
 msgid "Welcome to the Mozilla community directory"
 msgstr "ようこそ Mozilla コミュニティディレクトリへ"
 
-#: mozillians/templates/phonebook/home.html:55
+#: mozillians/templates/phonebook/home.html:49
 msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
 msgstr "このサイトは、Mozilla プロジェクトに参加するすべての中心的な個人とグループのリストです。私たちは、自分たちを Mozillians と呼び、一人ひとりがこのサイトでつながりを共有しています。"
 
-#: mozillians/templates/phonebook/home.html:74
+#: mozillians/templates/phonebook/home.html:68
 msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
 msgstr "仕事や遊び、コーヒーを共にできる情熱的な Mozillian に出会えます。"
 
-#: mozillians/templates/phonebook/home.html:87
+#: mozillians/templates/phonebook/home.html:81
 msgid "How do I get involved?"
 msgstr "参加するには？"
 
-#: mozillians/templates/phonebook/home.html:89
+#: mozillians/templates/phonebook/home.html:83
 msgid ""
 "Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
 "make a difference in the lives of people everywhere."
@@ -711,27 +906,31 @@ msgstr ""
 "Mozilla は、インターネット上のオープン性と革新、機会を促進するために存在しています。私たちのミッションの成功は、あなたのような人々の参加にかかっています。参加する方法を調べて、あなたの個性を発揮して"
 "ください。"
 
-#: mozillians/templates/phonebook/home.html:97
+#: mozillians/templates/phonebook/home.html:91
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">参加しよう</a>"
 
-#: mozillians/templates/phonebook/home.html:162
+#: mozillians/templates/phonebook/home.html:121 mozillians/templates/phonebook/profile.html:156
+msgid "(membership requested)"
+msgstr ""
+
+#: mozillians/templates/phonebook/home.html:160
 msgid "Hello!"
 msgstr "こんにちは！"
 
-#: mozillians/templates/phonebook/home.html:166
+#: mozillians/templates/phonebook/home.html:164
 msgid "Examples:"
 msgstr "例:"
 
-#: mozillians/templates/phonebook/home.html:167
+#: mozillians/templates/phonebook/home.html:165
 msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 
-#: mozillians/templates/phonebook/home.html:194
+#: mozillians/templates/phonebook/home.html:192
 msgid "Functional areas"
 msgstr "活動分野"
 
-#: mozillians/templates/phonebook/home.html:195
+#: mozillians/templates/phonebook/home.html:193
 msgid ""
 "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 "arrow-right\"></i></a>"
@@ -739,7 +938,7 @@ msgstr ""
 "<p>Mozillian メンバー、各活動分野の担当者と情報を見ることができます。誰が何を作業しているか調べ、あなたが協力できることを見つけてください。</p> <a href=\"%(areas_url)s\">活動分野を見る <i class="
 "\"icon-arrow-right\"></i></a>"
 
-#: mozillians/templates/phonebook/home.html:209
+#: mozillians/templates/phonebook/home.html:207
 msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p> <a href=\"%(group_url)s\">Browse groups <i class=\"icon-arrow-right\"></i></a>"
 msgstr "<p>興味のあることや技術、地域などの情報を中心にグループを見つけて参加しましょう。</p> <a href=\"%(group_url)s\">グループを見る <i class=\"icon-arrow-right\"></i></a>"
 
@@ -751,11 +950,11 @@ msgstr "Mozillian を招待する"
 msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
 msgstr "Mozillian にプロフィールを作ってほしい場合はこちらにメールアドレスを入力してください:"
 
-#: mozillians/templates/phonebook/invite.html:22
+#: mozillians/templates/phonebook/invite.html:28
 msgid "Send invite"
 msgstr "招待状を送る"
 
-#: mozillians/templates/phonebook/invite.html:25
+#: mozillians/templates/phonebook/invite.html:31
 msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
 msgstr "<strong>注意:</strong> 招待した方に、あなたの名前とメールアドレスが通知されます。"
 
@@ -825,15 +1024,15 @@ msgstr "自分自身"
 msgid "Mozillian"
 msgstr "Mozillian"
 
-#: mozillians/templates/phonebook/profile.html:143 mozillians/users/models.py:158
+#: mozillians/templates/phonebook/profile.html:143 mozillians/users/models.py:162
 msgid "Bio"
 msgstr "自己紹介"
 
-#: mozillians/templates/phonebook/profile.html:188
+#: mozillians/templates/phonebook/profile.html:190
 msgid "External Accounts"
 msgstr "外部アカウント"
 
-#: mozillians/templates/phonebook/profile.html:239
+#: mozillians/templates/phonebook/profile.html:241
 msgid "T-Shirt Size:"
 msgstr "T シャツのサイズ:"
 
@@ -841,31 +1040,44 @@ msgstr "T シャツのサイズ:"
 msgid "Search Results"
 msgstr "検索結果"
 
-#: mozillians/templates/phonebook/search.html:15 mozillians/templates/phonebook/search.html:24
+#: mozillians/templates/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:19
+msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:19
+#, fuzzy
+msgid "Sign In"
+msgstr "サインイン"
+
+#: mozillians/templates/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:29 mozillians/templates/phonebook/search.html:37
 msgid "Search"
 msgstr "検索"
 
-#: mozillians/templates/phonebook/search.html:18
-msgid "Name, IRC Nick, Email or Location"
-msgstr "名前または IRC ニックネーム、メールアドレス、住所から検索します"
-
-#: mozillians/templates/phonebook/search.html:28
+#: mozillians/templates/phonebook/search.html:41
 msgid "Advanced Options"
 msgstr "追加オプション"
 
-#: mozillians/templates/phonebook/search.html:39
+#: mozillians/templates/phonebook/search.html:52
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Mozillian を探す</h2> <p>名前、メールアドレスまたはニックネームで他の Mozillian を検索することができます。 </p>"
 
-#: mozillians/templates/phonebook/search.html:82
+#: mozillians/templates/phonebook/search.html:95
 msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
 msgstr "\"%(query)s\" に関連するグループや人物は見つかりませんでした。"
 
-#: mozillians/templates/phonebook/search.html:88
+#: mozillians/templates/phonebook/search.html:101
 msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
 msgstr "お探しの人物がまだ Mozillian ではないのかもしれません。<a href=\"%(invite)s\">その人を招待</a> してプロフィールを作成してもらってください。"
 
-#: mozillians/templates/phonebook/search.html:94
+#: mozillians/templates/phonebook/search.html:107
 msgid "Need help? Contact a steward in a functional area!"
 msgstr "何か助けが必要な場合は、各活動分野の担当者にお問い合わせください。"
 
@@ -889,129 +1101,136 @@ msgstr "メールアドレスの検証"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "これは、あなたの Gravatar です。gravatar.com で変更できます。"
 
-#: mozillians/users/models.py:93
+#: mozillians/templates/phonebook/includes/search_result.html:10 mozillians/templates/phonebook/includes/search_result.html:14
+msgid "Requested"
+msgstr ""
+
+#: mozillians/users/models.py:96
 msgid "Privileged"
 msgstr "特権"
 
-#: mozillians/users/models.py:147
+#: mozillians/users/models.py:150
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: mozillians/users/models.py:162
+#: mozillians/users/models.py:166
 msgid "IRC Nickname"
 msgstr "IRC ニックネーム"
 
-#: mozillians/users/models.py:166
+#: mozillians/users/models.py:170
 msgid "Country"
 msgstr "国名"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:172
 msgid "Province/State"
 msgstr "都道府県"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:174
 msgid "City"
 msgstr "市区町村"
 
-#: mozillians/users/models.py:173
+#: mozillians/users/models.py:177
 msgid "Sites that can determine my vouched status"
 msgstr "承認状態を定められるサイト"
 
-#: mozillians/users/models.py:174
+#: mozillians/users/models.py:178
 msgid "All Community Sites"
 msgstr "すべてのコミュニティサイト"
 
-#: mozillians/users/models.py:175
+#: mozillians/users/models.py:179
 msgid "Only Mozilla Properties"
 msgstr "Mozilla プロパティのみ"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:182
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Mozilla のサイトがあなたのプロフィールデータにアクセスすることを許可しますか？"
 
-#: mozillians/users/models.py:179
-msgid "Yes"
-msgstr "はい"
-
-#: mozillians/users/models.py:179
-msgid "No"
-msgstr "いいえ"
-
-#: mozillians/users/models.py:186
+#: mozillians/users/models.py:190
 msgid "T-Shirt"
 msgstr "T シャツ"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:192
 msgid "Fitted Small"
 msgstr "フィット型 S サイズ"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:192
 msgid "Fitted Medium"
 msgstr "フィット型 M サイズ"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:193
 msgid "Fitted Large"
 msgstr "フィット型 L サイズ"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:193
 msgid "Fitted X-Large"
 msgstr "フィット型 XL サイズ"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:194
 msgid "Fitted XX-Large"
 msgstr "フィット型 XXL サイズ"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:194
 msgid "Fitted XXX-Large"
 msgstr "フィット型 XXXL サイズ"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:195
 msgid "Straight-cut Small"
 msgstr "ストレートカット型 S サイズ"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:195
 msgid "Straight-cut Medium"
 msgstr "ストレートカット型 M サイズ"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:196
 msgid "Straight-cut Large"
 msgstr "ストレートカット型 L サイズ"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:196
 msgid "Straight-cut X-Large"
 msgstr "ストレートカット型 XL サイズ"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:197
 msgid "Straight-cut XX-Large"
 msgstr "ストレートカット型 XXL サイズ"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:197
 msgid "Straight-cut XXX-Large"
 msgstr "ストレートカット型 XXXL サイズ"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:199
 msgid "What do you do for Mozilla?"
 msgstr "Mozilla のために何をしていますか？"
 
-#: mozillians/users/models.py:508
+#: mozillians/users/models.py:525
 msgid "You are now vouched on Mozillians!"
 msgstr "あなたは Mozillians として承認されました！"
 
-#: mozillians/users/models.py:509
+#: mozillians/users/models.py:526
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "あなたは Mozillians.org に承認されました。他の Mozillian 達の検索、サイトへの招待と承認が可能になりました。"
 
-#: mozillians/users/models.py:646
+#: mozillians/users/models.py:698
 msgid "Account Username"
 msgstr "アカウントのユーザ名"
 
-#: mozillians/users/models.py:651
+#: mozillians/users/models.py:703
 msgid "Account Type"
 msgstr "アカウントの種類"
 
-#: mozillians/users/models.py:665
+#: mozillians/users/models.py:717
 msgid "You already have an account with this name and type."
 msgstr "この名前と種類のアカウントをすでにお持ちです。"
+
+#~ msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
+#~ msgstr "追加するグループ名を入力してください (例: Marketing, Support, WebDev, Thunderbird)"
+
+#~ msgid ""
+#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
+#~ msgstr ""
+#~ "<label for=\"id_optin\"><a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">プライバシーポリシー</a>の内容を確認しました。個人情報の取り扱いに同意します。</label>"
+
+#~ msgid "Name, IRC Nick, Email or Location"
+#~ msgstr "名前または IRC ニックネーム、メールアドレス、住所から検索します"
 
 #~ msgid "Member of:"
 #~ msgstr "参加グループ:"
@@ -1083,9 +1302,6 @@ msgstr "この名前と種類のアカウントをすでにお持ちです。"
 
 #~ msgid "This user is a vouched Mozillian."
 #~ msgstr "このユーザは承認済み Mozillian です。"
-
-#~ msgid "This user has not yet been vouched."
-#~ msgstr "このユーザはまだ承認されていません。"
 
 #~ msgid "Non-Vouched"
 #~ msgstr "未承認"

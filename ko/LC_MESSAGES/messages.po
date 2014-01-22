@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 08:51-0700\n"
+"POT-Creation-Date: 2014-01-15 04:22-0700\n"
 "PO-Revision-Date: 2013-12-07 13:32+0000\n"
 "Last-Translator: Channy <channy@mozilla.or.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,10 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1386423162.0\n"
 
+#: mozillians/common/helpers.py:68
+msgid "Visible to:"
+msgstr "볼 수 있는 사람:"
+
 #: mozillians/common/middleware.py:15
 msgid "You must be logged in to continue."
 msgstr "로그인을 하셔야 사용하실 수 있습니다."
@@ -22,37 +26,142 @@ msgstr "로그인을 하셔야 사용하실 수 있습니다."
 msgid "You must be vouched to continue."
 msgstr "보증을 받으셔야 사용하실 수 있습니다."
 
-#: mozillians/groups/forms.py:16
+#: mozillians/groups/forms.py:12
 msgid "Name A-Z"
 msgstr "이름 A-Z"
 
-#: mozillians/groups/forms.py:17
+#: mozillians/groups/forms.py:13
 msgid "Most Members"
 msgstr "최고 회원"
 
-#: mozillians/groups/forms.py:18
+#: mozillians/groups/forms.py:14
 msgid "Fewest Members"
 msgstr "최소 회원"
 
-#: mozillians/groups/forms.py:46 mozillians/phonebook/forms.py:165
-msgid "Groups can only contain alphanumeric characters, dashes, spaces."
-msgstr "그룹명은 오직 알파벳숫자, 대시, 그리고 공백문자만 사용할 수 있습니다."
+#: mozillians/groups/models.py:118
+#, fuzzy
+msgid "Member"
+msgstr "그룹 회원"
 
-#: mozillians/groups/models.py:74
+#: mozillians/groups/models.py:119
+#, fuzzy
+msgid "Pending"
+msgstr "프로필 승인 대기"
+
+#: mozillians/groups/models.py:139
 msgid "Description"
 msgstr "설명"
 
-#: mozillians/groups/models.py:78 mozillians/templates/groups/group.html:39
+#: mozillians/groups/models.py:147 mozillians/templates/groups/group.html:45
 msgid "IRC Channel"
 msgstr "IRC 채널"
 
-#: mozillians/groups/models.py:79 mozillians/templates/groups/group.html:49
+#: mozillians/groups/models.py:148
+msgid "An IRC channel where this group is discussed (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:151 mozillians/templates/groups/group.html:55
 msgid "Website"
 msgstr "홈페이지"
 
-#: mozillians/groups/models.py:81 mozillians/templates/groups/group.html:53
+#: mozillians/groups/models.py:152
+msgid "A URL of a web site with more information about this group (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:155 mozillians/templates/groups/group.html:59
 msgid "Wiki"
 msgstr "위키"
+
+#: mozillians/groups/models.py:156
+msgid "A URL of a wiki with more information about this group (optional)."
+msgstr ""
+
+#: mozillians/groups/models.py:161 mozillians/users/models.py:183
+msgid "Yes"
+msgstr "예"
+
+#: mozillians/groups/models.py:162
+msgid "By request"
+msgstr ""
+
+#: mozillians/groups/models.py:163 mozillians/users/models.py:183
+msgid "No"
+msgstr "아니오"
+
+#: mozillians/groups/models.py:171
+msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
+msgstr ""
+
+#: mozillians/groups/models.py:177
+msgid "The max PK of pending membership requests the last time we sent the curator a reminder"
+msgstr ""
+
+#: mozillians/groups/tasks.py:53
+msgid "%d outstanding requests to join Mozillians group \"%s\""
+msgstr ""
+
+#: mozillians/groups/tasks.py:90
+#, fuzzy
+msgid "Accepted to Mozillians group \"%s\""
+msgstr "%s  : Mozillian 프로필"
+
+#: mozillians/groups/tasks.py:93
+#, fuzzy
+msgid "Not accepted to Mozillians group \"%s\""
+msgstr "%s  : Mozillian 프로필"
+
+#: mozillians/groups/views.py:166
+msgid "This group does not allow members to remove themselves."
+msgstr ""
+
+#: mozillians/groups/views.py:173
+msgid "A curator cannot be removed from a group."
+msgstr ""
+
+#: mozillians/groups/views.py:180
+msgid "You have been removed from this group."
+msgstr ""
+
+#: mozillians/groups/views.py:182
+msgid "The group member has been removed."
+msgstr ""
+
+#: mozillians/groups/views.py:206
+#, fuzzy
+msgid "This user has not requested membership in this group."
+msgstr "아직 보증되지 않은 사용자입니다."
+
+#: mozillians/groups/views.py:209
+msgid "This user is already a member of this group."
+msgstr ""
+
+#: mozillians/groups/views.py:212
+msgid "This user has been added as a member of this group."
+msgstr ""
+
+#: mozillians/groups/views.py:231
+msgid "You are already in this group."
+msgstr ""
+
+#: mozillians/groups/views.py:233
+msgid "Your request to join this group is still pending."
+msgstr ""
+
+#: mozillians/groups/views.py:235
+msgid "This group is not accepting requests to join."
+msgstr ""
+
+#: mozillians/groups/views.py:239
+msgid "You have been added to this group."
+msgstr ""
+
+#: mozillians/groups/views.py:243
+msgid "Your membership request is pending approval by the group curator."
+msgstr ""
+
+#: mozillians/groups/views.py:274
+msgid "You must be a curator or an admin to edit a group"
+msgstr ""
 
 #: mozillians/phonebook/forms.py:52
 msgid "Include non-vouched"
@@ -74,43 +183,43 @@ msgstr "알파벳이나 숫자만 사용해 주십시오."
 msgid "This username is not allowed, please choose another."
 msgstr "이 별명은 사용하실 수 없습니다. 다른 별명을 사용해 주십시오."
 
-#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:76 mozillians/templates/phonebook/edit_profile.html:72 mozillians/templates/phonebook/includes/search_result.html:8
+#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:83 mozillians/templates/phonebook/edit_profile.html:67 mozillians/templates/phonebook/includes/search_result.html:21
 msgid "Profile Photo"
 msgstr "프로필 사진"
 
-#: mozillians/phonebook/forms.py:98 mozillians/templates/bootstrap/profile_photo.html:16 mozillians/templates/phonebook/edit_profile.html:80 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:98 mozillians/templates/phonebook/edit_profile.html:75 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "프로필 사진 삭제"
 
-#: mozillians/phonebook/forms.py:105
-msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
-msgstr "그룹을 추가하기 (예: Marketing, support, WebDev)"
+#: mozillians/phonebook/forms.py:102
+msgid "When did you get involved with Mozilla?"
+msgstr "언제부터 Mozilla 활동을 하셨나요?"
 
-#: mozillians/phonebook/forms.py:108
+#: mozillians/phonebook/forms.py:106
 msgid "Start typing to add a language you speak (example: English, French, German)"
 msgstr "언어별로 추가하기 (예:  English, French, German)"
 
-#: mozillians/phonebook/forms.py:111
+#: mozillians/phonebook/forms.py:109
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "기술 추가 하기 (예, Python, Javascript)"
 
-#: mozillians/phonebook/forms.py:180
+#: mozillians/phonebook/forms.py:160
 msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 msgstr "언어명은  오직 알파벳숫자, 대쉬, 그리고 공백문자만 사용할 수 있습니다."
 
-#: mozillians/phonebook/forms.py:191
+#: mozillians/phonebook/forms.py:171
 msgid "Skills can only contain alphanumeric characters, dashes, spaces."
 msgstr "기술명은 오직 알파벳숫자, 대쉬, 그리고 공백문자만 사용할 수 있습니다."
 
-#: mozillians/phonebook/forms.py:208
+#: mozillians/phonebook/forms.py:187
 msgid "Email"
 msgstr "이메일"
 
-#: mozillians/phonebook/forms.py:214
+#: mozillians/phonebook/forms.py:193
 msgid "Email is currently associated with another user."
 msgstr "다른 사용자가 이메일을 사용하고 있습니다."
 
-#: mozillians/phonebook/forms.py:239
+#: mozillians/phonebook/forms.py:218
 msgid "You cannot invite someone who has already been vouched."
 msgstr "이미 보증된 사람은 초대할 수 없습니다."
 
@@ -146,7 +255,16 @@ msgstr "동료 Mozillian"
 msgid "%s created a Mozillians profile"
 msgstr "%s  : Mozillian 프로필"
 
-#: mozillians/phonebook/validators.py:41
+#: mozillians/phonebook/validators.py:19
+msgid "Twitter usernames cannot be longer than 15 characters."
+msgstr ""
+
+#: mozillians/phonebook/validators.py:22
+#, fuzzy
+msgid "Twitter usernames must contain only alphanumeric characters and the underscore."
+msgstr "그룹명은 오직 알파벳숫자, 대시, 그리고 공백문자만 사용할 수 있습니다."
+
+#: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
 msgstr "유효 URL 입력"
 
@@ -158,31 +276,31 @@ msgstr "인증에 실패하였습니다."
 msgid "Email already exists in the database."
 msgstr "이미 사용중인 이메일 주소입니다."
 
-#: mozillians/phonebook/views.py:167
+#: mozillians/phonebook/views.py:175
 msgid "Your account has been created."
 msgstr "계정이 생성되었습니다."
 
-#: mozillians/phonebook/views.py:170
+#: mozillians/phonebook/views.py:178
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "사용자명을 변경하셨습니다; 프로필의 URL 주소도 함께 변경되었으니 주의 해주시기 바랍니다."
 
-#: mozillians/phonebook/views.py:207
+#: mozillians/phonebook/views.py:215
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "계정이 삭제되었습니다. Mozillian으로 활동해 주셔서 감사합니다!"
 
-#: mozillians/phonebook/views.py:281
+#: mozillians/phonebook/views.py:288
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s 로 Mozillians 초대 메일이 발송 되었습니다. 초대 받은 사람들은 가입 방법에 대한 설명이 담긴 이메일을 받을 것입니다. 원하신다면다른 Mozillian을 초대하실 수 있습니다."
 
-#: mozillians/phonebook/views.py:301
+#: mozillians/phonebook/views.py:308
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "동료 Mozillian을 보증해 주셔서 감사합니다. 이제 해당 유저는 보증된 상태가 되었습니다!"
 
-#: mozillians/phonebook/views.py:369
+#: mozillians/phonebook/views.py:376
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Mozillians.org에 초대되셨습니다. 로그인 하시고, 프로필을 만드십시오."
 
-#: mozillians/settings/base.py:275 mozillians/templates/base.html:7 mozillians/templates/base.html:20 mozillians/templates/phonebook/edit_profile.html:66 mozillians/templates/phonebook/search.html:65
+#: mozillians/settings/base.py:280 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:61 mozillians/templates/phonebook/search.html:78
 #: mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Mozillians"
@@ -244,119 +362,214 @@ msgstr "환영합니다"
 msgid "Mozilla's contributor phonebook"
 msgstr "Mozilla 공헌자 주소록"
 
-#: mozillians/templates/base.html:61
+#: mozillians/templates/base.html:62
 msgid "Mozilla"
 msgstr "Mozillia"
 
-#: mozillians/templates/base.html:64 mozillians/templates/includes/lang_switcher.html:3
+#: mozillians/templates/base.html:65 mozillians/templates/includes/lang_switcher.html:3
 msgid "Select language"
 msgstr "언어 선택"
 
-#: mozillians/templates/base.html:65
+#: mozillians/templates/base.html:66
 msgid "Skip to main content"
 msgstr "본문으로 건너뛰기"
 
-#: mozillians/templates/base.html:76 mozillians/templates/phonebook/home.html:17 mozillians/templates/phonebook/home.html:29 mozillians/templates/phonebook/home.html:165
+#: mozillians/templates/base.html:77 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:163 mozillians/templates/phonebook/search.html:32
 msgid "Search for people, groups and more"
 msgstr "사람과 그룹 등 검색"
 
-#: mozillians/templates/base.html:97
+#: mozillians/templates/base.html:98
 msgid "View Profile"
 msgstr "프로필 보기"
 
-#: mozillians/templates/base.html:103 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:34
+#: mozillians/templates/base.html:104 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:29
 msgid "Edit Your Profile"
 msgstr "내 프로필 편집"
 
-#: mozillians/templates/base.html:110
+#: mozillians/templates/base.html:111
 msgid "Invite"
 msgstr "초대하기"
 
-#: mozillians/templates/base.html:117 mozillians/templates/base.html:125
+#: mozillians/templates/base.html:118 mozillians/templates/base.html:126
 msgid "Log Out"
 msgstr "로그아웃"
 
-#: mozillians/templates/base.html:130 mozillians/templates/base.html:133
+#: mozillians/templates/base.html:131 mozillians/templates/base.html:134
 msgid "Sign in"
 msgstr "로그인"
 
-#: mozillians/templates/base.html:173
+#: mozillians/templates/base.html:174
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Mozillians이 더 나아질 수 있게 도와주세요. <a href=\"%(bug_url)s\">버그</a>를 찾거나 <a href=\"%(git_url)s\">건의</a>해주세요."
 
-#: mozillians/templates/base.html:193
+#: mozillians/templates/base.html:194
 msgid ""
 "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
 "\">Creative Commons license</a>."
 msgstr "저작권 표시 &copy;1998–%(current_year)s Mozilla 공헌자들에게 있으며, <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html\">Creative Commons license</a>를 따릅니다."
 
-#: mozillians/templates/base.html:203 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
+#: mozillians/templates/base.html:204 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr "Mozillians 소개"
 
-#: mozillians/templates/base.html:204
+#: mozillians/templates/base.html:205
 msgid "Privacy Policy"
 msgstr "개인정보 정책"
 
-#: mozillians/templates/base.html:205
+#: mozillians/templates/base.html:206
 msgid "Legal Notices"
 msgstr "법적 고지"
 
-#: mozillians/templates/base.html:206
+#: mozillians/templates/base.html:207
 msgid "Report Trademark Abuse"
 msgstr "상표권 남용에 대한 공지"
 
-#: mozillians/templates/bootstrap/field_optin.html:2
-msgid ""
-"<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
-msgstr "<label for=\"id_optin\">내 정보를 Mozilla.org의 <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">개인정보 정책</a>에 따라 사용하는 것을 허락합니다.</label>"
+#: mozillians/templates/groups/add_edit.html:4 mozillians/templates/groups/add_edit.html:24
+#, fuzzy
+msgid "Add a curated group"
+msgstr "큐레이션 그룹"
 
-#: mozillians/templates/bootstrap/profile_photo.html:10 mozillians/templates/phonebook/edit_profile.html:74 mozillians/templates/phonebook/includes/photo.html:6
-#: mozillians/templates/phonebook/includes/photo_form.html:8
-msgid "Profile photo"
-msgstr "프로필 사진"
+#: mozillians/templates/groups/add_edit.html:6 mozillians/templates/groups/add_edit.html:39
+#, fuzzy
+msgid "Edit functional area"
+msgstr "기능 영역"
+
+#: mozillians/templates/groups/add_edit.html:8 mozillians/templates/groups/add_edit.html:41
+#, fuzzy
+msgid "Edit curated group"
+msgstr "큐레이션 그룹"
+
+#: mozillians/templates/groups/add_edit.html:10 mozillians/templates/groups/add_edit.html:43
+#, fuzzy
+msgid "Edit group"
+msgstr "그룹 가입"
+
+#: mozillians/templates/groups/add_edit.html:18 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:19
+msgid "Please correct the errors below."
+msgstr "아래의 오류를 수정해 주십시오."
+
+#: mozillians/templates/groups/add_edit.html:26
+msgid "Use this form to create a group on Mozillians.org. Before creating a group, try searching for it. Someone else might already have created it."
+msgstr ""
+
+#: mozillians/templates/groups/add_edit.html:32
+msgid ""
+"Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
+"requests to join."
+msgstr ""
+
+#: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
+#, fuzzy
+msgid "Create Group"
+msgstr "큐레이션 그룹"
+
+#: mozillians/templates/groups/add_edit.html:95
+msgid "Submit changes"
+msgstr ""
+
+#: mozillians/templates/groups/common_groups.html:2 mozillians/templates/groups/index_groups.html:3
+msgid "Group Listing"
+msgstr "그룹 리스트"
+
+#: mozillians/templates/groups/common_groups.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:225 mozillians/templates/phonebook/home.html:117
+#: mozillians/templates/phonebook/home.html:206 mozillians/templates/phonebook/profile.html:151 mozillians/templates/phonebook/search.html:64
+msgid "Groups"
+msgstr "그룹"
+
+#: mozillians/templates/groups/common_groups.html:16
+msgid "Sort"
+msgstr "정렬"
+
+#: mozillians/templates/groups/common_groups.html:22 mozillians/templates/groups/index_groups.html:10
+msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
+msgstr "Mozillian들은 여러가지 많은 분야에서 작업을 하고 있습니다! Add-on 개발자들부터 지역화에 이르기 까지, 유저 그룹들을 이용해서 비슷한 작업을 하는 Mozillian들을 찾아보세요."
+
+#: mozillians/templates/groups/common_groups.html:41
+msgid "members"
+msgstr "회원"
+
+#: mozillians/templates/groups/confirm_remove_member.html:3 mozillians/templates/groups/confirm_remove_member.html:14
+msgid "Confirm removing member"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:18
+msgid "Really leave group %(group)s?"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:20
+msgid "Really remove user %(profile)s from group %(group)s?"
+msgstr ""
+
+#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/phonebook/includes/search_result.html:5
+#, fuzzy
+msgid "Remove"
+msgstr "특기 삭제"
+
+#: mozillians/templates/groups/confirm_remove_member.html:29
+msgid "Return to group"
+msgstr ""
 
 #: mozillians/templates/groups/group.html:3
 msgid "Group: {name}"
 msgstr "그룹: {name}"
 
 #: mozillians/templates/groups/group.html:16
+#, fuzzy
+msgid "Functional Area"
+msgstr "기능 영역"
+
+#: mozillians/templates/groups/group.html:18
 msgid "Curated Group"
 msgstr "큐레이션 그룹"
 
-#: mozillians/templates/groups/group.html:18
+#: mozillians/templates/groups/group.html:20
 msgid "Group"
 msgstr "그룹"
 
-#: mozillians/templates/groups/group.html:37
+#: mozillians/templates/groups/group.html:28
+#, fuzzy
+msgid "Edit Group"
+msgstr "그룹 가입"
+
+#: mozillians/templates/groups/group.html:43
 msgid "IRC Channels"
 msgstr "IRC 채널"
 
-#: mozillians/templates/groups/group.html:56
+#: mozillians/templates/groups/group.html:62
 msgid "Members"
 msgstr "그룹 회원"
 
-#: mozillians/templates/groups/group.html:60
+#: mozillians/templates/groups/group.html:66
 msgid "Skills members have in common"
 msgstr "해당 기술"
 
-#: mozillians/templates/groups/group.html:71
+#: mozillians/templates/groups/group.html:78
 msgid "Community Steward"
 msgstr "커뮤니티 관리자"
 
-#: mozillians/templates/groups/group.html:109
+#: mozillians/templates/groups/group.html:78
+#, fuzzy
+msgid "Curator"
+msgstr "큐레이션 그룹"
+
+#: mozillians/templates/groups/group.html:115
 msgid "Join Group"
 msgstr "그룹 가입"
 
-#: mozillians/templates/groups/group.html:111
+#: mozillians/templates/groups/group.html:125
 msgid "Leave Group"
 msgstr "그룹 탈퇴"
 
-#: mozillians/templates/groups/group.html:120
+#: mozillians/templates/groups/group.html:133
 msgid "Sorry, we cannot find any mozillians in %(group_name)s"
 msgstr "죄송하지만 어떤 %(group_name)s 정보도 찾을 수 없습니다."
 
-#: mozillians/templates/groups/group.html:129
+#: mozillians/templates/groups/group.html:144
+#, fuzzy
+msgid "Functional Area Members"
+msgstr "기능 영역"
+
+#: mozillians/templates/groups/group.html:146
 msgid "Group Members"
 msgstr "그룹 회원"
 
@@ -368,29 +581,8 @@ msgstr "기능 영역"
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
 msgstr "Mozillians 및 스튜어드 기능 영역 정보 보기. 서로 도움을 주고 받으세요."
 
-#: mozillians/templates/groups/index_groups.html:2
-msgid "Group Listing"
-msgstr "그룹 리스트"
-
-#: mozillians/templates/groups/index_groups.html:12 mozillians/templates/phonebook/edit_profile.html:233 mozillians/templates/phonebook/home.html:123 mozillians/templates/phonebook/home.html:208
-#: mozillians/templates/phonebook/profile.html:151 mozillians/templates/phonebook/search.html:51
-msgid "Groups"
-msgstr "그룹"
-
-#: mozillians/templates/groups/index_groups.html:16
-msgid "Sort"
-msgstr "정렬"
-
-#: mozillians/templates/groups/index_groups.html:21
-msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
-msgstr "Mozillian들은 여러가지 많은 분야에서 작업을 하고 있습니다! Add-on 개발자들부터 지역화에 이르기 까지, 유저 그룹들을 이용해서 비슷한 작업을 하는 Mozillian들을 찾아보세요."
-
-#: mozillians/templates/groups/index_groups.html:40
-msgid "members"
-msgstr "회원"
-
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:249 mozillians/templates/phonebook/home.html:142
-#: mozillians/templates/phonebook/profile.html:165
+#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:262 mozillians/templates/phonebook/home.html:140
+#: mozillians/templates/phonebook/profile.html:167
 msgid "Skills"
 msgstr "특기"
 
@@ -483,103 +675,107 @@ msgstr "아니오: 프로필을 삭제하지 않을 것입니다"
 msgid "I'm sure: delete my profile"
 msgstr "네: 내 프로필을 삭제할 것입니다"
 
-#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:36
+#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:31
 msgid "Create Your Profile"
 msgstr "프로필 만들기"
 
-#: mozillians/templates/phonebook/edit_profile.html:16
-msgid "Visible to:"
-msgstr "볼 수 있는 사람:"
-
-#: mozillians/templates/phonebook/edit_profile.html:27
-msgid "Please correct the errors below."
-msgstr "아래의 오류를 수정해 주십시오."
-
-#: mozillians/templates/phonebook/edit_profile.html:41
+#: mozillians/templates/phonebook/edit_profile.html:36
 msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
 msgstr "프로필을 수정하고 프로필의 공개 범위를 선택합니다. 프로필 일부가 다른 사람들에게 보일 수 있습니다. 연락처 및 정보 공개를 신중하게 선택하시길 바랍니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:49
+#: mozillians/templates/phonebook/edit_profile.html:44
 msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
 msgstr "커뮤니티 디렉토리는 13세 이상이어야 합니다. 개인 정보 보호를 위한 일이며 13세 이하인 경우 참여가 어렵습니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:63
+#: mozillians/templates/phonebook/edit_profile.html:58
 msgid "Make all of my profile fields visible to:"
 msgstr "다음의 대상에게 모든 프로필 항목을 보여주기:"
 
-#: mozillians/templates/phonebook/edit_profile.html:65
+#: mozillians/templates/phonebook/edit_profile.html:60
 msgid "-- No Change --"
 msgstr "-- 변경 사항 없음 --"
 
-#: mozillians/templates/phonebook/edit_profile.html:67 mozillians/templates/phonebook/profile.html:127 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:127 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "공개"
 
-#: mozillians/templates/phonebook/edit_profile.html:123
+#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
+msgid "Profile photo"
+msgstr "프로필 사진"
+
+#: mozillians/templates/phonebook/edit_profile.html:118
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "두꺼운 글씨나 기울임, 목록, 링크를 입력하기 위해서 <a href=\"%(url)s\">마크다운</a>을 사용하세요."
 
-#: mozillians/templates/phonebook/edit_profile.html:131
+#: mozillians/templates/phonebook/edit_profile.html:126
 msgid "Accounts"
 msgstr "계정"
 
-#: mozillians/templates/phonebook/edit_profile.html:144
+#: mozillians/templates/phonebook/edit_profile.html:139
 msgid "Delete"
 msgstr "삭제"
 
-#: mozillians/templates/phonebook/edit_profile.html:153
+#: mozillians/templates/phonebook/edit_profile.html:148
 msgid "Add account"
 msgstr "계정 추가"
 
-#: mozillians/templates/phonebook/edit_profile.html:166
-msgid "When did you get involved with Mozilla?"
-msgstr "언제부터 Mozilla 활동을 하셨나요?"
-
-#: mozillians/templates/phonebook/edit_profile.html:176
+#: mozillians/templates/phonebook/edit_profile.html:168
 msgid "T-Shirt Size"
 msgstr "티셔츠 크기"
 
-#: mozillians/templates/phonebook/edit_profile.html:178
+#: mozillians/templates/phonebook/edit_profile.html:170
 msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
 msgstr "티셔츠 크기를 입력해 주시면 이벤트나 특별한 행사때 티셔츠를 제공해드릴 수 있습니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:186
+#: mozillians/templates/phonebook/edit_profile.html:178
 msgid "Fitted"
 msgstr "피트"
 
-#: mozillians/templates/phonebook/edit_profile.html:190
+#: mozillians/templates/phonebook/edit_profile.html:182
 msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr "피트 티셔츠는 허리부분이 잘록하고 위와 아래가 넓습니다. \"여성용\"이라고도 말합니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:208
+#: mozillians/templates/phonebook/edit_profile.html:200
 msgid "Straight-cut"
 msgstr "일자"
 
-#: mozillians/templates/phonebook/edit_profile.html:212
+#: mozillians/templates/phonebook/edit_profile.html:204
 msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as \"men's\" or \"unisex\"."
 msgstr "일자 티셔츠는 거의 사각형 형태로 어깨와 몸통이 넓습니다. \"남성용\"이나 \"남녀 공통\"이라고도 말합니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:235
+#: mozillians/templates/phonebook/edit_profile.html:227
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "그룹은 Mozilla 회원들이 서로 소통하면서 커뮤니티를 이루는 장소입니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:251
+#: mozillians/templates/phonebook/edit_profile.html:235
+msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:239
+msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:246
+msgid "After you are vouched, you will be able to join groups."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:264
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "자신이 가지고 있고 실행할 수 있는 능력을 표시하실 수 있습니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:291 mozillians/templates/phonebook/home.html:132 mozillians/templates/phonebook/profile.html:179
+#: mozillians/templates/phonebook/edit_profile.html:304 mozillians/templates/phonebook/home.html:130 mozillians/templates/phonebook/profile.html:181
 msgid "Languages"
 msgstr "언어별"
 
-#: mozillians/templates/phonebook/edit_profile.html:293
+#: mozillians/templates/phonebook/edit_profile.html:306
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Mozilla 프로젝트는 많은 나라와 언어에 걸쳐있습니다. 여러분의 언어가 다른 Mozillian에게 쉽게 찾을 수 있도록 공유해주세요."
 
-#: mozillians/templates/phonebook/edit_profile.html:307
+#: mozillians/templates/phonebook/edit_profile.html:320
 msgid "Services"
 msgstr "서비스"
 
-#: mozillians/templates/phonebook/edit_profile.html:309
+#: mozillians/templates/phonebook/edit_profile.html:322
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
@@ -587,15 +783,15 @@ msgstr ""
 "Phonebook은 <a href=\"%(bugzilla_url)s\">Bugzilla</a> 와  <a href=\"%(reps_url)s\">Mozilla Reps 포털</a>처럼 다른 도구와 사이트에 기여자들을 인증하도록 도와주고, 프로필 데이터를 공유할 수 있는 API"
 "를 제공합니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:316
+#: mozillians/templates/phonebook/edit_profile.html:329
 msgid "Other Sites"
 msgstr "그 외 사이트"
 
-#: mozillians/templates/phonebook/edit_profile.html:327
+#: mozillians/templates/phonebook/edit_profile.html:340
 msgid "Developers"
 msgstr "개발자"
 
-#: mozillians/templates/phonebook/edit_profile.html:329
+#: mozillians/templates/phonebook/edit_profile.html:342
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -603,69 +799,69 @@ msgstr ""
 "<a href=\"%(api_schema_url)s\">저희가 만들어 제공하는 API 메소드</a>를 확인해 보세요. 이 API를 사용하려면, 프라이버시 팀으로부터 승인을 받아야 합니다. 시작하려면, <a href=\"%(bugzilla_request_url)s"
 "\">버그를 기록하세요</a>. 문의사항은, <a href=\"%(dev_form_url)s\">개발 포럼</a>에서 저희에게 말씀해주세요."
 
-#: mozillians/templates/phonebook/edit_profile.html:345
+#: mozillians/templates/phonebook/edit_profile.html:358
 msgid "Your approved apps:"
 msgstr "승인된 앱:"
 
-#: mozillians/templates/phonebook/edit_profile.html:348
+#: mozillians/templates/phonebook/edit_profile.html:361
 msgid "Key"
 msgstr "키"
 
-#: mozillians/templates/phonebook/edit_profile.html:351
+#: mozillians/templates/phonebook/edit_profile.html:364
 msgid "You have no registered, active apps."
 msgstr "여러분은 등록한, 활성화된 앱이 없습니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:359
+#: mozillians/templates/phonebook/edit_profile.html:372
 msgid "Vouches & Invites"
 msgstr "보증 및 초대"
 
-#: mozillians/templates/phonebook/edit_profile.html:360 mozillians/templates/phonebook/profile.html:205
+#: mozillians/templates/phonebook/edit_profile.html:373 mozillians/templates/phonebook/profile.html:207
 msgid "Vouched By"
 msgstr "보증인"
 
-#: mozillians/templates/phonebook/edit_profile.html:366
+#: mozillians/templates/phonebook/edit_profile.html:379
 msgid "You are automatically vouched!"
 msgstr "자동으로 보증되었습니다!"
 
-#: mozillians/templates/phonebook/edit_profile.html:368
+#: mozillians/templates/phonebook/edit_profile.html:381
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr ""
 "프로필이 승인 대기 중입니다. 당신이 공헌한 분야에 대해 잘 아는 사람들에게 다음 링크를 보내고, 보증을 요청하세요 : <br> <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 
-#: mozillians/templates/phonebook/edit_profile.html:377
+#: mozillians/templates/phonebook/edit_profile.html:390
 msgid "Vouchees"
 msgstr "피보증인"
 
-#: mozillians/templates/phonebook/edit_profile.html:396
+#: mozillians/templates/phonebook/edit_profile.html:409
 msgid "This field is required."
 msgstr "이 내용을 작성해 주세요."
 
-#: mozillians/templates/phonebook/edit_profile.html:406
+#: mozillians/templates/phonebook/edit_profile.html:418
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "<a href=\"%(privacy_url)s\">개인 정보 정책</a>에 나와 있는 대로 정보를 활용하는데 동의 합니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:415
+#: mozillians/templates/phonebook/edit_profile.html:427
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Mozillian으로 승인된 다음부터 Mozilla로부터 이메일 소식을 받게 됩니다. 만약 이메일을 받고 싶지 않다면, 이메일 하단에 있는 링크를 클릭해 구독을 해지할 수 있습니다."
 
-#: mozillians/templates/phonebook/edit_profile.html:425
+#: mozillians/templates/phonebook/edit_profile.html:437
 msgid "Update Profile"
 msgstr "프로필 수정"
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:427
+#: mozillians/templates/phonebook/edit_profile.html:439
 msgid "Cancel"
 msgstr "취소"
 
-#: mozillians/templates/phonebook/edit_profile.html:430
+#: mozillians/templates/phonebook/edit_profile.html:442
 msgid "Create Profile"
 msgstr "프로필 생성하기"
 
-#: mozillians/templates/phonebook/edit_profile.html:436 mozillians/templates/phonebook/edit_profile.html:446
+#: mozillians/templates/phonebook/edit_profile.html:448 mozillians/templates/phonebook/edit_profile.html:458
 msgid "Delete Profile"
 msgstr "프로필 삭제"
 
-#: mozillians/templates/phonebook/edit_profile.html:439
+#: mozillians/templates/phonebook/edit_profile.html:451
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "계정 삭제를 인식하고 앞으로 다른 동료 및 공헌자에게 더 이상 정보가 표시되지 않습니다."
 
@@ -673,60 +869,64 @@ msgstr "계정 삭제를 인식하고 앞으로 다른 동료 및 공헌자에�
 msgid "Mozilla Community Directory"
 msgstr "Mozilla 커뮤니티 디렉토리"
 
-#: mozillians/templates/phonebook/home.html:42
+#: mozillians/templates/phonebook/home.html:36
 msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
 msgstr "Mozill 와 웹에 대해 열정적인 시간입니다. 20억명의 인터넷 사용자가 함께 할 수 있습니다."
 
-#: mozillians/templates/phonebook/home.html:53
+#: mozillians/templates/phonebook/home.html:47
 msgid "Welcome to the Mozilla community directory"
 msgstr "Mozilla 커뮤니티 디렉토리에 오신 걸 환영합니다!"
 
-#: mozillians/templates/phonebook/home.html:55
+#: mozillians/templates/phonebook/home.html:49
 msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
 msgstr "본 사이트는 Mozilla 프로젝트에 참여하는 사람들의 정보를 제공합니다. 우리는 스스로 Mozillian이라고 부르며 나눔을 실천합니다."
 
-#: mozillians/templates/phonebook/home.html:74
+#: mozillians/templates/phonebook/home.html:68
 msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
 msgstr "열정적인 회원들과 만나실 수 있습니다."
 
-#: mozillians/templates/phonebook/home.html:87
+#: mozillians/templates/phonebook/home.html:81
 msgid "How do I get involved?"
 msgstr "어떻게 참여할 수 있나요?"
 
-#: mozillians/templates/phonebook/home.html:89
+#: mozillians/templates/phonebook/home.html:83
 msgid ""
 "Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
 "make a difference in the lives of people everywhere."
 msgstr ""
 "Mozilla는 인터넷의 개방, 혁신 및 기회를 위해 존재합니다. 우리 사명의 성공은 결국 여러분같은 참여자에 의해 만들어집니다. 어떻게 참여할 수 있을지 다른 사람들과 협력할 수 있는지 알아보시기 바랍니다."
 
-#: mozillians/templates/phonebook/home.html:97
+#: mozillians/templates/phonebook/home.html:91
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">참여하기</a>"
 
-#: mozillians/templates/phonebook/home.html:162
+#: mozillians/templates/phonebook/home.html:121 mozillians/templates/phonebook/profile.html:156
+msgid "(membership requested)"
+msgstr ""
+
+#: mozillians/templates/phonebook/home.html:160
 msgid "Hello!"
 msgstr "안녕하세요!"
 
-#: mozillians/templates/phonebook/home.html:166
+#: mozillians/templates/phonebook/home.html:164
 msgid "Examples:"
 msgstr "예제:"
 
-#: mozillians/templates/phonebook/home.html:167
+#: mozillians/templates/phonebook/home.html:165
 msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 
-#: mozillians/templates/phonebook/home.html:194
+#: mozillians/templates/phonebook/home.html:192
 msgid "Functional areas"
 msgstr "기능 영역"
 
-#: mozillians/templates/phonebook/home.html:195
+#: mozillians/templates/phonebook/home.html:193
 msgid ""
 "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 "arrow-right\"></i></a>"
 msgstr "<p> Mozillians, Stewards 및 기능 영역별 정보를 찾아 함께 협력할 수 있습니다. </p> <a href=\"%(areas_url)s\">기능 영역 보기<i class=\"icon-arrow-right\"></i></a>"
 
-#: mozillians/templates/phonebook/home.html:209
+#: mozillians/templates/phonebook/home.html:207
 msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p> <a href=\"%(group_url)s\">Browse groups <i class=\"icon-arrow-right\"></i></a>"
 msgstr "<p>지역 및 기술 영역에 따른 그룹에 참여할 수 있습니다.</p> <a href=\"%(group_url)s\">그룹 검색하기 <i class=\"icon-arrow-right\"></i></a>"
 
@@ -738,11 +938,11 @@ msgstr "Mozillian 초대하기"
 msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
 msgstr "다른 Mozillian을 초대하고 싶으시다면, 그들의 이메일 주소를 여기에 입력하세요:"
 
-#: mozillians/templates/phonebook/invite.html:22
+#: mozillians/templates/phonebook/invite.html:28
 msgid "Send invite"
 msgstr "초대 하기"
 
-#: mozillians/templates/phonebook/invite.html:25
+#: mozillians/templates/phonebook/invite.html:31
 msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
 msgstr "<strong>주의:</strong> 초대하시려는 사람들에게 당신의 성함과 이메일 주소가 전달될 것입니다."
 
@@ -814,15 +1014,15 @@ msgstr "자기 자신"
 msgid "Mozillian"
 msgstr "Mozillian"
 
-#: mozillians/templates/phonebook/profile.html:143 mozillians/users/models.py:158
+#: mozillians/templates/phonebook/profile.html:143 mozillians/users/models.py:162
 msgid "Bio"
 msgstr "자기 소개"
 
-#: mozillians/templates/phonebook/profile.html:188
+#: mozillians/templates/phonebook/profile.html:190
 msgid "External Accounts"
 msgstr "외부 계정"
 
-#: mozillians/templates/phonebook/profile.html:239
+#: mozillians/templates/phonebook/profile.html:241
 msgid "T-Shirt Size:"
 msgstr "티셔츠 크기:"
 
@@ -830,31 +1030,44 @@ msgstr "티셔츠 크기:"
 msgid "Search Results"
 msgstr "검색 결과"
 
-#: mozillians/templates/phonebook/search.html:15 mozillians/templates/phonebook/search.html:24
+#: mozillians/templates/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:19
+msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:19
+#, fuzzy
+msgid "Sign In"
+msgstr "로그인"
+
+#: mozillians/templates/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr ""
+
+#: mozillians/templates/phonebook/search.html:29 mozillians/templates/phonebook/search.html:37
 msgid "Search"
 msgstr "검색"
 
-#: mozillians/templates/phonebook/search.html:18
-msgid "Name, IRC Nick, Email or Location"
-msgstr "이름, IRC 닉네임, 이메일 혹은 주소"
-
-#: mozillians/templates/phonebook/search.html:28
+#: mozillians/templates/phonebook/search.html:41
 msgid "Advanced Options"
 msgstr "고급 옵션"
 
-#: mozillians/templates/phonebook/search.html:39
+#: mozillians/templates/phonebook/search.html:52
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Mozillian 찾기</h2> <p> 이름, 이메일 또는 닉네임을 사용하여 다른 Mozillian을 찾을 수 있습니다. </p>"
 
-#: mozillians/templates/phonebook/search.html:82
+#: mozillians/templates/phonebook/search.html:95
 msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
 msgstr "\"%(query)s\" 내용과 관련된 그룹이나 사람을 찾을 수 없습니다."
 
-#: mozillians/templates/phonebook/search.html:88
+#: mozillians/templates/phonebook/search.html:101
 msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
 msgstr "아직 Mozillian이 아닌 사람이 있나요? 프로필을 만들 수 있게 <a href=\"%(invite)s\">초대</a>해 주세요."
 
-#: mozillians/templates/phonebook/search.html:94
+#: mozillians/templates/phonebook/search.html:107
 msgid "Need help? Contact a steward in a functional area!"
 msgstr "도움이 필요하세요? 기능 영역에 있는 도우미에게 연락하세요!"
 
@@ -878,129 +1091,136 @@ msgstr "이메일 확인"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "이것은 당신의 Gravatar입니다. gravatar.com에서 변경할 수 있습니다."
 
-#: mozillians/users/models.py:93
+#: mozillians/templates/phonebook/includes/search_result.html:10 mozillians/templates/phonebook/includes/search_result.html:14
+msgid "Requested"
+msgstr ""
+
+#: mozillians/users/models.py:96
 msgid "Privileged"
 msgstr "권한 인증"
 
-#: mozillians/users/models.py:147
+#: mozillians/users/models.py:150
 msgid "Full Name"
 msgstr "이름:"
 
-#: mozillians/users/models.py:162
+#: mozillians/users/models.py:166
 msgid "IRC Nickname"
 msgstr "IRC 닉네임"
 
-#: mozillians/users/models.py:166
+#: mozillians/users/models.py:170
 msgid "Country"
 msgstr "국가"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:172
 msgid "Province/State"
 msgstr "도"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:174
 msgid "City"
 msgstr "도시"
 
-#: mozillians/users/models.py:173
+#: mozillians/users/models.py:177
 msgid "Sites that can determine my vouched status"
 msgstr "내 추천 상태를 결정할 수 있는 사이트"
 
-#: mozillians/users/models.py:174
+#: mozillians/users/models.py:178
 msgid "All Community Sites"
 msgstr "전체 커뮤니티 사이트"
 
-#: mozillians/users/models.py:175
+#: mozillians/users/models.py:179
 msgid "Only Mozilla Properties"
 msgstr "Mozillian 프로퍼티만 보기"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:182
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Mozilla 사이트가 내 프로필 데이터에 접근하게 허락하시겠습니까?"
 
-#: mozillians/users/models.py:179
-msgid "Yes"
-msgstr "예"
-
-#: mozillians/users/models.py:179
-msgid "No"
-msgstr "아니오"
-
-#: mozillians/users/models.py:186
+#: mozillians/users/models.py:190
 msgid "T-Shirt"
 msgstr "티셔츠"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:192
 msgid "Fitted Small"
 msgstr "스몰 "
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:192
 msgid "Fitted Medium"
 msgstr "미디엄"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:193
 msgid "Fitted Large"
 msgstr "라지"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:193
 msgid "Fitted X-Large"
 msgstr "X-라지"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:194
 msgid "Fitted XX-Large"
 msgstr "XX-라지"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:194
 msgid "Fitted XXX-Large"
 msgstr "XXX-라지"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:195
 msgid "Straight-cut Small"
 msgstr "일자 스몰"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:195
 msgid "Straight-cut Medium"
 msgstr "일자 미디엄"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:196
 msgid "Straight-cut Large"
 msgstr "일자 라지"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:196
 msgid "Straight-cut X-Large"
 msgstr "일자 X-라지"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:197
 msgid "Straight-cut XX-Large"
 msgstr "일자 XX-라지"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:197
 msgid "Straight-cut XXX-Large"
 msgstr "일자 XXX-라지"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:199
 msgid "What do you do for Mozilla?"
 msgstr "Mozilla에서 무슨 활동을 하셨나요?"
 
-#: mozillians/users/models.py:508
+#: mozillians/users/models.py:525
 msgid "You are now vouched on Mozillians!"
 msgstr "이제 당신은 Mozillian으로 보증 되셨습니다!"
 
-#: mozillians/users/models.py:509
+#: mozillians/users/models.py:526
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "이제 Mozillians.org 에 보증되셨습니다. 지금부터 이 사이트의 다른 Mozillian들을 검색, 보증하거나 초대하실 수 있습니다."
 
-#: mozillians/users/models.py:646
+#: mozillians/users/models.py:698
 msgid "Account Username"
 msgstr "사용자 이름"
 
-#: mozillians/users/models.py:651
+#: mozillians/users/models.py:703
 msgid "Account Type"
 msgstr "계정 종류"
 
-#: mozillians/users/models.py:665
+#: mozillians/users/models.py:717
 msgid "You already have an account with this name and type."
 msgstr "현재 이름과 형식을 가진 계정이 있습니다."
+
+#~ msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
+#~ msgstr "그룹을 추가하기 (예: Marketing, support, WebDev)"
+
+#~ msgid ""
+#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
+#~ msgstr ""
+#~ "<label for=\"id_optin\">내 정보를 Mozilla.org의 <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">개인정보 정책</a>에 따라 사용하는 것을 허락합니다.</label>"
+
+#~ msgid "Name, IRC Nick, Email or Location"
+#~ msgstr "이름, IRC 닉네임, 이메일 혹은 주소"
 
 #~ msgid "Member of:"
 #~ msgstr "그룹 회원: "
@@ -1074,9 +1294,6 @@ msgstr "현재 이름과 형식을 가진 계정이 있습니다."
 
 #~ msgid "This user is a vouched Mozillian."
 #~ msgstr "보증된 사용자입니다."
-
-#~ msgid "This user has not yet been vouched."
-#~ msgstr "아직 보증되지 않은 사용자입니다."
 
 #~ msgid "Non-Vouched"
 #~ msgstr "미보증"
