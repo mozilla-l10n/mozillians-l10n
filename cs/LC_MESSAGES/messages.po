@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Mozillians 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-15 04:22-0700\n"
-"PO-Revision-Date: 2014-01-24 12:25+0000\n"
-"Last-Translator: Jiří <jiri.kadlcik@seznam.cz>\n"
+"PO-Revision-Date: 2014-01-31 09:45+0000\n"
+"Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: cs <info@mozilla.cz>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1390566304.0\n"
+"X-POOTLE-MTIME: 1391161532.0\n"
 
 #: mozillians/common/helpers.py:68
 msgid "Visible to:"
@@ -39,14 +39,12 @@ msgid "Fewest Members"
 msgstr "Nejméně členů"
 
 #: mozillians/groups/models.py:118
-#, fuzzy
 msgid "Member"
-msgstr "Členové"
+msgstr "Člen"
 
 #: mozillians/groups/models.py:119
-#, fuzzy
 msgid "Pending"
-msgstr "Čekající profil"
+msgstr "Čekající"
 
 #: mozillians/groups/models.py:139
 msgid "Description"
@@ -58,7 +56,7 @@ msgstr "IRC kanál"
 
 #: mozillians/groups/models.py:148
 msgid "An IRC channel where this group is discussed (optional)."
-msgstr ""
+msgstr "IRC kanál, kde je téma této skupiny diskutováno (volitelné)."
 
 #: mozillians/groups/models.py:151 mozillians/templates/groups/group.html:55
 msgid "Website"
@@ -67,6 +65,8 @@ msgstr "Webová stránka"
 #: mozillians/groups/models.py:152
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr ""
+"URL webové stránky, kde je k dispozici více informací týkající se této "
+"skupiny (volitelné)."
 
 #: mozillians/groups/models.py:155 mozillians/templates/groups/group.html:59
 msgid "Wiki"
@@ -74,15 +74,15 @@ msgstr "Wiki"
 
 #: mozillians/groups/models.py:156
 msgid "A URL of a wiki with more information about this group (optional)."
-msgstr ""
+msgstr "URL wiki, kde je k dispozici více informací o této skupině (volitelné)."
 
 #: mozillians/groups/models.py:161 mozillians/users/models.py:183
 msgid "Yes"
-msgstr "ANo"
+msgstr "Na přání"
 
 #: mozillians/groups/models.py:162
 msgid "By request"
-msgstr ""
+msgstr "Na přání"
 
 #: mozillians/groups/models.py:163 mozillians/users/models.py:183
 msgid "No"
@@ -133,35 +133,37 @@ msgstr "Uživatel dosud nebyl potvrzen."
 
 #: mozillians/groups/views.py:209
 msgid "This user is already a member of this group."
-msgstr ""
+msgstr "Tento uživatel je již členem této skupiny."
 
 #: mozillians/groups/views.py:212
 msgid "This user has been added as a member of this group."
-msgstr ""
+msgstr "Teto uživatel byl přidán jako člen této skupiny."
 
 #: mozillians/groups/views.py:231
 msgid "You are already in this group."
-msgstr ""
+msgstr "Již jste členem této skupiny."
 
 #: mozillians/groups/views.py:233
 msgid "Your request to join this group is still pending."
-msgstr ""
+msgstr "Vaše žádost o připojení do skupiny stále čeká na schválení."
 
 #: mozillians/groups/views.py:235
 msgid "This group is not accepting requests to join."
-msgstr ""
+msgstr "Tato skupina neakceptuje žádosti o připojení."
 
 #: mozillians/groups/views.py:239
 msgid "You have been added to this group."
-msgstr ""
+msgstr "Byl(a) jste přidán(a) do této skupiny."
 
 #: mozillians/groups/views.py:243
 msgid "Your membership request is pending approval by the group curator."
 msgstr ""
+"Vaše žádost o členství, která čekala na vyřízení, byla schválena správcem "
+"skupiny."
 
 #: mozillians/groups/views.py:274
 msgid "You must be a curator or an admin to edit a group"
-msgstr ""
+msgstr "Pro úpravu skupiny musíte být jejím správcem či administrátorem"
 
 #: mozillians/phonebook/forms.py:52
 msgid "Include non-vouched"
@@ -257,16 +259,17 @@ msgstr "%s vytvořil(a) profil na serveru Mozillians"
 
 #: mozillians/phonebook/validators.py:19
 msgid "Twitter usernames cannot be longer than 15 characters."
-msgstr ""
+msgstr "Uživatelské jméno na Twitteru nemůže být delší než 15 znaků."
 
 #: mozillians/phonebook/validators.py:22
-#, fuzzy
 msgid "Twitter usernames must contain only alphanumeric characters and the underscore."
-msgstr "Skupiny mohou obsahovat pouze alfanumerické znaky, čárky a mezery."
+msgstr ""
+"Uživatelská jména na Twitteru mhou obsahovat pouze alfanumerické znaky a "
+"podtržítko."
 
 #: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Vložte platnou URL."
 
 #: mozillians/phonebook/views.py:48
 msgid "Authentication failed."
@@ -297,7 +300,6 @@ msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Děkujeme za potvrzení člena serveru Mozillians! Uživatel je nyní potvrzen!"
 
 #: mozillians/phonebook/views.py:376
-#, fuzzy
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Byl(a) jste pozván(a), abyste se připojil(a) k serveru Mozillians.org! Přihlaste se, a poté si vytvořte profil."
 
@@ -343,9 +345,8 @@ msgid "We're Sorry, but Something Went Wrong!"
 msgstr "Omlouváme se, ale něco se porouchalo!"
 
 #: mozillians/templates/500.html:11 mozillians/templates/500.html:12
-#, fuzzy
 msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
-msgstr "Tumbeasts od Matthew Inman of The Oatmeal"
+msgstr "Jitterbeasts od Matthew Inman of The Oatmeal"
 
 #: mozillians/templates/500.html:15
 msgid ""
@@ -430,24 +431,20 @@ msgid "Report Trademark Abuse"
 msgstr "Nahlásit zneužití ochranné známky"
 
 #: mozillians/templates/groups/add_edit.html:4 mozillians/templates/groups/add_edit.html:24
-#, fuzzy
 msgid "Add a curated group"
-msgstr "Vedoucí skupiny: {name}"
+msgstr "Přidat správce skupiny"
 
 #: mozillians/templates/groups/add_edit.html:6 mozillians/templates/groups/add_edit.html:39
-#, fuzzy
 msgid "Edit functional area"
-msgstr "Oblasti zájmu"
+msgstr "Upravit oblasti zájmu"
 
 #: mozillians/templates/groups/add_edit.html:8 mozillians/templates/groups/add_edit.html:41
-#, fuzzy
 msgid "Edit curated group"
-msgstr "Vedoucí skupiny: {name}"
+msgstr "Úprava správců skupiny"
 
 #: mozillians/templates/groups/add_edit.html:10 mozillians/templates/groups/add_edit.html:43
-#, fuzzy
 msgid "Edit group"
-msgstr "Připojit se do skupiny"
+msgstr "Upravit skupinu"
 
 #: mozillians/templates/groups/add_edit.html:18 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:19
 msgid "Please correct the errors below."
@@ -456,12 +453,19 @@ msgstr "Opravte prosím chyby uvedené níže."
 #: mozillians/templates/groups/add_edit.html:26
 msgid "Use this form to create a group on Mozillians.org. Before creating a group, try searching for it. Someone else might already have created it."
 msgstr ""
+"Pomocí tohoto formuláře můžete vytvořit novou skupinu na Mozillians.org. "
+"Před vytvořením skupiny vyzkoušejte hledání pro kontrolu, zda již někdo "
+"takovou nevytvořil."
 
 #: mozillians/templates/groups/add_edit.html:32
 msgid ""
 "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
 "requests to join."
 msgstr ""
+"Vytvořením skupiny se stanete jejím správce, což vám dává možnost spravovat "
+"nastavení skupiny a rozhodovat o tom, kdo se k ní může připojit. Pokud bude "
+"připojení ke skupině vyžadovat schválení, bude vám každý den zasílán e-mail "
+"s požadavky na připojení."
 
 #: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
 #, fuzzy
@@ -556,9 +560,8 @@ msgid "Community Steward"
 msgstr "Komunitní steward"
 
 #: mozillians/templates/groups/group.html:78
-#, fuzzy
 msgid "Curator"
-msgstr "Vedoucí skupiny: {name}"
+msgstr "Správce"
 
 #: mozillians/templates/groups/group.html:115
 msgid "Join Group"
@@ -573,9 +576,8 @@ msgid "Sorry, we cannot find any mozillians in %(group_name)s"
 msgstr "Omlouváme se, ale nemůžeme nalézt žádné členy Mozillians ve skupině %(group_name)s"
 
 #: mozillians/templates/groups/group.html:144
-#, fuzzy
 msgid "Functional Area Members"
-msgstr "Oblasti zájmu"
+msgstr "Členové oblasti zájmu"
 
 #: mozillians/templates/groups/group.html:146
 msgid "Group Members"
