@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mozillians l10n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-15 04:22-0700\n"
+"POT-Creation-Date: 2014-02-13 09:20-0700\n"
 "PO-Revision-Date: 2014-02-01 15:30+0000\n"
 "Last-Translator: Shen <steekid@icloud.com>\n"
 "Language-Team: Mozest <steekid@gmail.com>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,91,-1\n"
 "X-POOTLE-MTIME: 1391268625.0\n"
 
-#: mozillians/common/helpers.py:68
+#: mozillians/common/helpers.py:70
 msgid "Visible to:"
 msgstr "显示给："
 
@@ -51,7 +51,7 @@ msgstr "待担保"
 msgid "Description"
 msgstr "描述"
 
-#: mozillians/groups/models.py:147 mozillians/templates/groups/group.html:45
+#: mozillians/groups/models.py:147 mozillians/templates/groups/group.html:52
 msgid "IRC Channel"
 msgstr "IRC 频道"
 
@@ -59,7 +59,7 @@ msgstr "IRC 频道"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "此群组进行讨论的 IRC 频道（可选）。"
 
-#: mozillians/groups/models.py:151 mozillians/templates/groups/group.html:55
+#: mozillians/groups/models.py:151 mozillians/templates/groups/group.html:62
 msgid "Website"
 msgstr "网站"
 
@@ -67,7 +67,7 @@ msgstr "网站"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "此群组相关的资讯网站（可选）。"
 
-#: mozillians/groups/models.py:155 mozillians/templates/groups/group.html:59
+#: mozillians/groups/models.py:155 mozillians/templates/groups/group.html:66
 msgid "Wiki"
 msgstr "维基"
 
@@ -75,7 +75,7 @@ msgstr "维基"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "此群组相关的 wiki 网址（可选）."
 
-#: mozillians/groups/models.py:161 mozillians/users/models.py:183
+#: mozillians/groups/models.py:161 mozillians/users/models.py:184
 msgid "Yes"
 msgstr "是"
 
@@ -83,7 +83,7 @@ msgstr "是"
 msgid "By request"
 msgstr "按请求"
 
-#: mozillians/groups/models.py:163 mozillians/users/models.py:183
+#: mozillians/groups/models.py:163 mozillians/users/models.py:184
 msgid "No"
 msgstr "否"
 
@@ -91,71 +91,83 @@ msgstr "否"
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "此群组是否显示在界面中（群组列表、搜索等处）。主要用于避免“staff”等群组塞满界面。"
 
-#: mozillians/groups/models.py:177
-msgid "The max PK of pending membership requests the last time we sent the curator a reminder"
-msgstr "最后一次向管理者发送邮件提醒有待决加入申请的最大 PK"
+#: mozillians/groups/tasks.py:52
+#, fuzzy
+msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
+msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
+msgstr[0] "有 %d 个要加入“%s”谋智人群组的的请求"
 
-#: mozillians/groups/tasks.py:53
-msgid "%d outstanding requests to join Mozillians group \"%s\""
-msgstr "有 %d 个要加入“%s”谋智人群组的的请求"
-
-#: mozillians/groups/tasks.py:90
+#: mozillians/groups/tasks.py:95
 msgid "Accepted to Mozillians group \"%s\""
 msgstr "谋智人群组“%s” 已接受加入"
 
-#: mozillians/groups/tasks.py:93
+#: mozillians/groups/tasks.py:98
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "谋智人群组“%s”没有接受加入"
 
-#: mozillians/groups/views.py:166
+#: mozillians/groups/views.py:189
 msgid "This group does not allow members to remove themselves."
 msgstr "这个群组不允许成员移除自己。"
 
-#: mozillians/groups/views.py:173
+#: mozillians/groups/views.py:196
 msgid "A curator cannot be removed from a group."
 msgstr "不能从群组中移除管理人。"
 
-#: mozillians/groups/views.py:180
+#: mozillians/groups/views.py:203
 msgid "You have been removed from this group."
 msgstr "您已经被从这个群组移除。"
 
-#: mozillians/groups/views.py:182
+#: mozillians/groups/views.py:205
 msgid "The group member has been removed."
 msgstr "已移除这个群组成员。"
 
-#: mozillians/groups/views.py:206
+#: mozillians/groups/views.py:229
 msgid "This user has not requested membership in this group."
 msgstr "该用户尚未要求加入此群组。"
 
-#: mozillians/groups/views.py:209
+#: mozillians/groups/views.py:232
 msgid "This user is already a member of this group."
 msgstr "该用户已经是这个群组的成员。"
 
-#: mozillians/groups/views.py:212
+#: mozillians/groups/views.py:235
 msgid "This user has been added as a member of this group."
 msgstr "该用户已经作为成员添加到这个群组。"
 
-#: mozillians/groups/views.py:231
+#: mozillians/groups/views.py:254
 msgid "You are already in this group."
 msgstr "您已经在这个群组中。"
 
-#: mozillians/groups/views.py:233
+#: mozillians/groups/views.py:256
 msgid "Your request to join this group is still pending."
 msgstr "您加入这个群组的请求仍然在等待处理。"
 
-#: mozillians/groups/views.py:235
+#: mozillians/groups/views.py:258
 msgid "This group is not accepting requests to join."
 msgstr "这个群组不接受加入请求。"
 
-#: mozillians/groups/views.py:239
+#: mozillians/groups/views.py:262
 msgid "You have been added to this group."
 msgstr "已经将您添加到这个群组。"
 
-#: mozillians/groups/views.py:243
+#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:169
 msgid "Your membership request is pending approval by the group curator."
 msgstr "您的加入请求正等待群组管理人批准。"
 
-#: mozillians/groups/views.py:274
+#: mozillians/groups/views.py:293
+#, fuzzy
+msgid "You must be a curator to delete a group"
+msgstr "您必须是群组管理人或者管理员才能编辑群组"
+
+#: mozillians/groups/views.py:297
+msgid "You cannot delete a group if anyone else is in it."
+msgstr ""
+
+#: mozillians/groups/views.py:301
+#, fuzzy
+msgid "Group %s has been deleted"
+msgstr "你的帐号已创建。"
+
+#: mozillians/groups/views.py:317
 msgid "You must be a curator or an admin to edit a group"
 msgstr "您必须是群组管理人或者管理员才能编辑群组"
 
@@ -179,11 +191,11 @@ msgstr "只能使用字母和数字字符"
 msgid "This username is not allowed, please choose another."
 msgstr "不允许这个用户名，请选择另外一个。"
 
-#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:83 mozillians/templates/phonebook/edit_profile.html:67 mozillians/templates/phonebook/includes/search_result.html:21
+#: mozillians/phonebook/forms.py:97 mozillians/templates/groups/group.html:90 mozillians/templates/phonebook/edit_profile.html:76 mozillians/templates/phonebook/includes/search_result.html:21
 msgid "Profile Photo"
 msgstr "个人资料照片"
 
-#: mozillians/phonebook/forms.py:98 mozillians/templates/phonebook/edit_profile.html:75 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:98 mozillians/templates/phonebook/edit_profile.html:84 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "移除个人资料照片"
 
@@ -365,7 +377,7 @@ msgstr "选择语言"
 msgid "Skip to main content"
 msgstr "跳到主要内容"
 
-#: mozillians/templates/base.html:77 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:163 mozillians/templates/phonebook/search.html:32
+#: mozillians/templates/base.html:77 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:167 mozillians/templates/phonebook/search.html:32
 msgid "Search for people, groups and more"
 msgstr "搜索用户，群组和更多信息"
 
@@ -445,11 +457,11 @@ msgid ""
 "requests to join."
 msgstr "创建群组后您就成为群组的管理人，可以管理群组设置并决定谁可以加入。如果设置了加入群组时要审核，会收到关于加入请求的日报邮件。"
 
-#: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
+#: mozillians/templates/groups/add_edit.html:94 mozillians/templates/groups/index_groups.html:18
 msgid "Create Group"
 msgstr "创建群组"
 
-#: mozillians/templates/groups/add_edit.html:95
+#: mozillians/templates/groups/add_edit.html:96
 msgid "Submit changes"
 msgstr "提交更改"
 
@@ -457,8 +469,8 @@ msgstr "提交更改"
 msgid "Group Listing"
 msgstr "群组列表"
 
-#: mozillians/templates/groups/common_groups.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:225 mozillians/templates/phonebook/home.html:117
-#: mozillians/templates/phonebook/home.html:206 mozillians/templates/phonebook/profile.html:151 mozillians/templates/phonebook/search.html:64
+#: mozillians/templates/groups/common_groups.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:234 mozillians/templates/phonebook/home.html:117
+#: mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:153 mozillians/templates/phonebook/search.html:64
 msgid "Groups"
 msgstr "群组"
 
@@ -470,7 +482,7 @@ msgstr "分类"
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 msgstr "谋智人从事各种各样不同的工作！从附加组件开发者到本地化人员，通过用户创建的群组查看哪些谋智人在从事相似的工作。"
 
-#: mozillians/templates/groups/common_groups.html:41
+#: mozillians/templates/groups/common_groups.html:44
 msgid "members"
 msgstr "成员"
 
@@ -510,47 +522,52 @@ msgstr "策划组"
 msgid "Group"
 msgstr "群组"
 
-#: mozillians/templates/groups/group.html:28
+#: mozillians/templates/groups/group.html:32
+#, fuzzy
+msgid "Delete Group"
+msgstr "创建群组"
+
+#: mozillians/templates/groups/group.html:38
 msgid "Edit Group"
 msgstr "编辑群组"
 
-#: mozillians/templates/groups/group.html:43
+#: mozillians/templates/groups/group.html:50
 msgid "IRC Channels"
 msgstr "IRC 频道"
 
-#: mozillians/templates/groups/group.html:62
+#: mozillians/templates/groups/group.html:69
 msgid "Members"
 msgstr "成员"
 
-#: mozillians/templates/groups/group.html:66
+#: mozillians/templates/groups/group.html:73
 msgid "Skills members have in common"
 msgstr "拥有共同技能的成员"
 
-#: mozillians/templates/groups/group.html:78
+#: mozillians/templates/groups/group.html:85
 msgid "Community Steward"
 msgstr "社区管理人"
 
-#: mozillians/templates/groups/group.html:78
+#: mozillians/templates/groups/group.html:85
 msgid "Curator"
 msgstr "管理人"
 
-#: mozillians/templates/groups/group.html:115
+#: mozillians/templates/groups/group.html:120
 msgid "Join Group"
 msgstr "加入群组"
 
-#: mozillians/templates/groups/group.html:125
+#: mozillians/templates/groups/group.html:130
 msgid "Leave Group"
 msgstr "离开群组"
 
-#: mozillians/templates/groups/group.html:133
+#: mozillians/templates/groups/group.html:150
 msgid "Sorry, we cannot find any mozillians in %(group_name)s"
 msgstr "很遗憾，%(group_name)s 中没有谋智人"
 
-#: mozillians/templates/groups/group.html:144
+#: mozillians/templates/groups/group.html:162
 msgid "Functional Area Members"
 msgstr "职能领域成员"
 
-#: mozillians/templates/groups/group.html:146
+#: mozillians/templates/groups/group.html:164
 msgid "Group Members"
 msgstr "群组成员"
 
@@ -562,8 +579,8 @@ msgstr "职能范围"
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
 msgstr "查看谋智人，管理者和各种职能范围的信息，了解每个人负责的工作以及你能怎样帮助他们。"
 
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:262 mozillians/templates/phonebook/home.html:140
-#: mozillians/templates/phonebook/profile.html:167
+#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:271 mozillians/templates/phonebook/home.html:144
+#: mozillians/templates/phonebook/profile.html:174
 msgid "Skills"
 msgstr "技能"
 
@@ -673,101 +690,110 @@ msgstr "将我的全部个人资料显示给："
 msgid "-- No Change --"
 msgstr "-- 不更改 --"
 
-#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:127 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:129 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "公众"
 
-#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
+#: mozillians/templates/phonebook/edit_profile.html:68 mozillians/templates/phonebook/edit_profile.html:446
+msgid "Update Profile"
+msgstr "更新个人资料"
+
+#. Cancel editing
+#: mozillians/templates/phonebook/edit_profile.html:70 mozillians/templates/phonebook/edit_profile.html:448
+msgid "Cancel"
+msgstr "放弃"
+
+#: mozillians/templates/phonebook/edit_profile.html:78 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
 msgid "Profile photo"
 msgstr "个人资料照片"
 
-#: mozillians/templates/phonebook/edit_profile.html:118
+#: mozillians/templates/phonebook/edit_profile.html:127
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "可使用 <a href=\"%(url)s\">Markdown</a> 标记粗体、斜体、列表和链接。"
 
-#: mozillians/templates/phonebook/edit_profile.html:126
+#: mozillians/templates/phonebook/edit_profile.html:135
 msgid "Accounts"
 msgstr "帐号"
 
-#: mozillians/templates/phonebook/edit_profile.html:139
+#: mozillians/templates/phonebook/edit_profile.html:148
 msgid "Delete"
 msgstr "删除"
 
-#: mozillians/templates/phonebook/edit_profile.html:148
+#: mozillians/templates/phonebook/edit_profile.html:157
 msgid "Add account"
 msgstr "添加帐号"
 
-#: mozillians/templates/phonebook/edit_profile.html:168
+#: mozillians/templates/phonebook/edit_profile.html:177
 msgid "T-Shirt Size"
 msgstr "T恤衫尺码"
 
-#: mozillians/templates/phonebook/edit_profile.html:170
+#: mozillians/templates/phonebook/edit_profile.html:179
 msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
 msgstr "喜欢T恤衫？添加您的尺码，这样我们就可以在活动或者其他特别的机会中中赠送给您。"
 
-#: mozillians/templates/phonebook/edit_profile.html:178
+#: mozillians/templates/phonebook/edit_profile.html:187
 msgid "Fitted"
 msgstr "紧身"
 
-#: mozillians/templates/phonebook/edit_profile.html:182
+#: mozillians/templates/phonebook/edit_profile.html:191
 msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr "紧身款式的T恤在腰部有一个弯曲的侧下摆，上下端宽，也称为“女款”。"
 
-#: mozillians/templates/phonebook/edit_profile.html:200
+#: mozillians/templates/phonebook/edit_profile.html:209
 msgid "Straight-cut"
 msgstr "直切"
 
-#: mozillians/templates/phonebook/edit_profile.html:204
+#: mozillians/templates/phonebook/edit_profile.html:213
 msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as \"men's\" or \"unisex\"."
 msgstr "直切款式的T恤肩宽而整个躯干部分几乎是方形，常称为“男款”或者“中性款”。"
 
-#: mozillians/templates/phonebook/edit_profile.html:227
+#: mozillians/templates/phonebook/edit_profile.html:236
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "群组是彼此有某种联系的一个谋智人社群，这种联系可以是兴趣、团队、项目、产品或者子社群。"
 
-#: mozillians/templates/phonebook/edit_profile.html:235
+#: mozillians/templates/phonebook/edit_profile.html:244
 msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
 msgstr "要加入一个群组，<a href=\"%(browse)s\">找到群组页面</a>点击“加入群组”按钮。"
 
-#: mozillians/templates/phonebook/edit_profile.html:239
+#: mozillians/templates/phonebook/edit_profile.html:248
 msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
 msgstr "要离开一个群组，点击群组名称进入其页面，然后点击“离开群组”按钮。"
 
-#: mozillians/templates/phonebook/edit_profile.html:246
+#: mozillians/templates/phonebook/edit_profile.html:255
 msgid "After you are vouched, you will be able to join groups."
 msgstr "获得担保之后，就可以加入群组。"
 
-#: mozillians/templates/phonebook/edit_profile.html:264
+#: mozillians/templates/phonebook/edit_profile.html:273
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "技能是一种已经掌握的能力，可以消耗最少的时间、精力或两者兼有，获得预定的结果。"
 
-#: mozillians/templates/phonebook/edit_profile.html:304 mozillians/templates/phonebook/home.html:130 mozillians/templates/phonebook/profile.html:181
+#: mozillians/templates/phonebook/edit_profile.html:313 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:188
 msgid "Languages"
 msgstr "语言"
 
-#: mozillians/templates/phonebook/edit_profile.html:306
+#: mozillians/templates/phonebook/edit_profile.html:315
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Mozilla 项目覆盖了许多国家和语言，说明你使用的语言可以让其他谋智人更容易找到你。"
 
-#: mozillians/templates/phonebook/edit_profile.html:320
+#: mozillians/templates/phonebook/edit_profile.html:329
 msgid "Services"
 msgstr "服务"
 
-#: mozillians/templates/phonebook/edit_profile.html:322
+#: mozillians/templates/phonebook/edit_profile.html:331
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
 msgstr "“电话簿”提供了一个 API 帮助授权用户并与其他工具和网站共享个人资料数据，例如 <a href=\"%(bugzilla_url)s\">Bugzilla</a> 和 <a href=\"%(reps_url)s\">Mozilla Reps Portal</a> 。"
 
-#: mozillians/templates/phonebook/edit_profile.html:329
+#: mozillians/templates/phonebook/edit_profile.html:338
 msgid "Other Sites"
 msgstr "其他站点"
 
-#: mozillians/templates/phonebook/edit_profile.html:340
+#: mozillians/templates/phonebook/edit_profile.html:349
 msgid "Developers"
 msgstr "开发者"
 
-#: mozillians/templates/phonebook/edit_profile.html:342
+#: mozillians/templates/phonebook/edit_profile.html:351
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -775,68 +801,59 @@ msgstr ""
 "看一看<a href=\"%(api_schema_url)s\">我们已经开发出的 API 方法</a>。要使用这个 API，你需要从隐私团队获得许可。要着手这样做，可以<a href=\"%(bugzilla_request_url)s\">提交一个bug</a>。如果你有任何问"
 "题，在<a href=\"%(dev_form_url)s\">开发论坛</a>里和我们沟通。"
 
-#: mozillians/templates/phonebook/edit_profile.html:358
+#: mozillians/templates/phonebook/edit_profile.html:367
 msgid "Your approved apps:"
 msgstr "你的已核准应用："
 
-#: mozillians/templates/phonebook/edit_profile.html:361
+#: mozillians/templates/phonebook/edit_profile.html:370
 msgid "Key"
 msgstr "密钥"
 
-#: mozillians/templates/phonebook/edit_profile.html:364
+#: mozillians/templates/phonebook/edit_profile.html:373
 msgid "You have no registered, active apps."
 msgstr "你没有已注册的可用的应用。"
 
-#: mozillians/templates/phonebook/edit_profile.html:372
+#: mozillians/templates/phonebook/edit_profile.html:381
 msgid "Vouches & Invites"
 msgstr "担保和邀请"
 
-#: mozillians/templates/phonebook/edit_profile.html:373 mozillians/templates/phonebook/profile.html:207
+#: mozillians/templates/phonebook/edit_profile.html:382 mozillians/templates/phonebook/profile.html:214
 msgid "Vouched By"
 msgstr "担保人"
 
-#: mozillians/templates/phonebook/edit_profile.html:379
+#: mozillians/templates/phonebook/edit_profile.html:388
 msgid "You are automatically vouched!"
 msgstr "你已经被自动担保！"
 
-#: mozillians/templates/phonebook/edit_profile.html:381
+#: mozillians/templates/phonebook/edit_profile.html:390
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr "你尚未获得担保！将这个链接发送给一个可以为你的贡献提供担保的谋智人：<em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 
-#: mozillians/templates/phonebook/edit_profile.html:390
+#: mozillians/templates/phonebook/edit_profile.html:399
 msgid "Vouchees"
 msgstr "被担保人"
 
-#: mozillians/templates/phonebook/edit_profile.html:409
+#: mozillians/templates/phonebook/edit_profile.html:418
 msgid "This field is required."
 msgstr "这个字段必填。"
 
-#: mozillians/templates/phonebook/edit_profile.html:418
+#: mozillians/templates/phonebook/edit_profile.html:427
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "我同意你们如 <a href=\"%(privacy_url)s\">Mozilla 的隐私政策</a> 中解释的那样处理这些信息。"
 
-#: mozillians/templates/phonebook/edit_profile.html:427
+#: mozillians/templates/phonebook/edit_profile.html:436
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "一旦成为有担保的谋智人，你就开始收到 Mozilla 的邮件通讯。你随时可以点击这些邮件末尾的链接来退订。"
 
-#: mozillians/templates/phonebook/edit_profile.html:437
-msgid "Update Profile"
-msgstr "更新个人资料"
-
-#. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:439
-msgid "Cancel"
-msgstr "放弃"
-
-#: mozillians/templates/phonebook/edit_profile.html:442
+#: mozillians/templates/phonebook/edit_profile.html:451
 msgid "Create Profile"
 msgstr "创建个人资料"
 
-#: mozillians/templates/phonebook/edit_profile.html:448 mozillians/templates/phonebook/edit_profile.html:458
+#: mozillians/templates/phonebook/edit_profile.html:457 mozillians/templates/phonebook/edit_profile.html:467
 msgid "Delete Profile"
 msgstr "删除个人资料"
 
-#: mozillians/templates/phonebook/edit_profile.html:451
+#: mozillians/templates/phonebook/edit_profile.html:460
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "我知道删除我的帐号后将难以展示我的贡献，Mozilla 社区的其他成员将不易找到我。"
 
@@ -874,33 +891,33 @@ msgstr "Mozilla 矢志不渝地促进网络的开放、创新和机遇。我们�
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">参与</a>"
 
-#: mozillians/templates/phonebook/home.html:121 mozillians/templates/phonebook/profile.html:156
+#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:161
 msgid "(membership requested)"
 msgstr "（已请求加入）"
 
-#: mozillians/templates/phonebook/home.html:160
+#: mozillians/templates/phonebook/home.html:164
 msgid "Hello!"
 msgstr "你好！"
 
-#: mozillians/templates/phonebook/home.html:164
+#: mozillians/templates/phonebook/home.html:168
 msgid "Examples:"
 msgstr "举例："
 
-#: mozillians/templates/phonebook/home.html:165
+#: mozillians/templates/phonebook/home.html:169
 msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
 
-#: mozillians/templates/phonebook/home.html:192
+#: mozillians/templates/phonebook/home.html:196
 msgid "Functional areas"
 msgstr "职能范围"
 
-#: mozillians/templates/phonebook/home.html:193
+#: mozillians/templates/phonebook/home.html:197
 msgid ""
 "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 "arrow-right\"></i></a>"
 msgstr "<p>查看谋智人，管理者和任意职能范围的信息，了解各人负责的工作以及你能如何帮助他们。</p><a href=\"%(areas_url)s\">浏览职能范围<i class=\"icon-arrow-right\"></i></a>"
 
-#: mozillians/templates/phonebook/home.html:207
+#: mozillians/templates/phonebook/home.html:211
 msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p> <a href=\"%(group_url)s\">Browse groups <i class=\"icon-arrow-right\"></i></a>"
 msgstr "<p>查找和加入以兴趣、技术、地理位置等形成的群组。</p><a href=\"%(group_url)s\">浏览群组<i class=\"icon-arrow-right\"></i></a>"
 
@@ -974,29 +991,41 @@ msgid "Mozillian for %(mozillian_years)s year"
 msgid_plural "Mozillian for %(mozillian_years)s years"
 msgstr[0] "成为谋智人已 %(mozillian_years)s 年"
 
-#: mozillians/templates/phonebook/profile.html:115
+#: mozillians/templates/phonebook/profile.html:117
 msgid "View as:"
 msgstr "查看方式："
 
-#: mozillians/templates/phonebook/profile.html:119
+#: mozillians/templates/phonebook/profile.html:121
 msgid "Myself"
 msgstr "我自己"
 
-#: mozillians/templates/phonebook/profile.html:123
+#: mozillians/templates/phonebook/profile.html:125
 msgid "Mozillian"
 msgstr "谋智人"
 
-#: mozillians/templates/phonebook/profile.html:143 mozillians/users/models.py:162
+#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:163
 msgid "Bio"
 msgstr "小传"
 
-#: mozillians/templates/phonebook/profile.html:190
+#: mozillians/templates/phonebook/profile.html:197
 msgid "External Accounts"
 msgstr "外部帐号"
 
-#: mozillians/templates/phonebook/profile.html:241
+#: mozillians/templates/phonebook/profile.html:248
 msgid "T-Shirt Size:"
 msgstr "T恤衫尺码："
+
+#: mozillians/templates/phonebook/profile.html:258
+msgid "%(hours)s hours ahead of your timezone."
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:261
+msgid "%(hours)s hours behind your timezone."
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:264
+msgid "Same time zone as yours."
+msgstr ""
 
 #: mozillians/templates/phonebook/search.html:3
 msgid "Search Results"
@@ -1008,9 +1037,7 @@ msgstr "您目前正在搜索公开资料。"
 
 #: mozillians/templates/phonebook/search.html:19
 msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
-msgstr ""
-"<a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%"
-"(next)s\">登录</a>查看更多结果。"
+msgstr "<a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\">登录</a>查看更多结果。"
 
 #: mozillians/templates/phonebook/search.html:19
 msgid "Sign In"
@@ -1064,125 +1091,132 @@ msgstr "验证邮件地址"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "这是你的头像，在 gravatar.com 更改"
 
-#: mozillians/templates/phonebook/includes/search_result.html:10 mozillians/templates/phonebook/includes/search_result.html:14
+#: mozillians/templates/phonebook/includes/search_result.html:10
+msgid "Confirm Request"
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/search_result.html:14
 msgid "Requested"
 msgstr "已请求"
 
-#: mozillians/users/models.py:96
+#: mozillians/users/models.py:97
 msgid "Privileged"
 msgstr "授权者"
 
-#: mozillians/users/models.py:150
+#: mozillians/users/models.py:151
 msgid "Full Name"
 msgstr "全名"
 
-#: mozillians/users/models.py:166
+#: mozillians/users/models.py:167
 msgid "IRC Nickname"
 msgstr "IRC 昵称"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:171
 msgid "Country"
 msgstr "国家地区"
 
-#: mozillians/users/models.py:172
+#: mozillians/users/models.py:173
 msgid "Province/State"
 msgstr "省/州"
 
-#: mozillians/users/models.py:174
+#: mozillians/users/models.py:175
 msgid "City"
 msgstr "城市"
 
-#: mozillians/users/models.py:177
+#: mozillians/users/models.py:178
 msgid "Sites that can determine my vouched status"
 msgstr "能确定我的担保状态的网站"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:179
 msgid "All Community Sites"
 msgstr "全部社区网站"
 
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:180
 msgid "Only Mozilla Properties"
 msgstr "仅 Mozilla 属性"
 
-#: mozillians/users/models.py:182
+#: mozillians/users/models.py:183
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "允许 Mozilla 网站访问我的个人资料数据？"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:191
 msgid "T-Shirt"
 msgstr "T恤衫"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Small"
 msgstr "贴身 - S"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Medium"
 msgstr "贴身 - M"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted Large"
 msgstr "贴身 - L"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted X-Large"
 msgstr "贴身 - XL"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XX-Large"
 msgstr "贴身 - XXL"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XXX-Large"
 msgstr "贴身 - XXXL"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Small"
 msgstr "纵切 - S"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Medium"
 msgstr "纵切 - M"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut Large"
 msgstr "纵切 - L"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut X-Large"
 msgstr "纵切 - XL"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XX-Large"
 msgstr "纵切 - XXL"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XXX-Large"
 msgstr "纵切 - XXXL"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:200
 msgid "What do you do for Mozilla?"
 msgstr "您为 Mozilla 做过哪些工作？"
 
-#: mozillians/users/models.py:525
+#: mozillians/users/models.py:526
 msgid "You are now vouched on Mozillians!"
 msgstr "现在你是经过担保的谋智人！"
 
-#: mozillians/users/models.py:526
+#: mozillians/users/models.py:527
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "现在你已经在 Mozillians.org 上获得了担保，可以搜索、担保和邀请其他谋智人了。"
 
-#: mozillians/users/models.py:698
+#: mozillians/users/models.py:712
 msgid "Account Username"
 msgstr "帐户用户名"
 
-#: mozillians/users/models.py:703
+#: mozillians/users/models.py:717
 msgid "Account Type"
 msgstr "帐号类型"
 
-#: mozillians/users/models.py:717
+#: mozillians/users/models.py:731
 msgid "You already have an account with this name and type."
 msgstr "您已有此名称与类型的账户。"
+
+#~ msgid "The max PK of pending membership requests the last time we sent the curator a reminder"
+#~ msgstr "最后一次向管理者发送邮件提醒有待决加入申请的最大 PK"
 
 #~ msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 #~ msgstr "开始添加一个群组（例如：市场营销，支持，网络开发，Thunderbird）"
