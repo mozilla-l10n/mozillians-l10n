@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 07:57-0700\n"
+"POT-Creation-Date: 2014-03-13 07:24-0700\n"
 "PO-Revision-Date: 2013-01-09 23:00+0200\n"
 "Last-Translator: Rimas <rq@akl.lt>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,10 @@ msgstr "Nariai"
 msgid "Group with this Name already exists."
 msgstr ""
 
+#: mozillians/groups/forms.py:60
+msgid "You must either specify the criteria or change the acceptance selection."
+msgstr ""
+
 #: mozillians/groups/models.py:39
 msgid "This name already exists."
 msgstr ""
@@ -64,7 +68,7 @@ msgstr "Nepatvirtintas profilis"
 msgid "Description"
 msgstr "Aprašas"
 
-#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:50
+#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:54
 msgid "IRC Channel"
 msgstr "IRC kambarys"
 
@@ -72,7 +76,7 @@ msgstr "IRC kambarys"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:60
+#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:64
 msgid "Website"
 msgstr "Svetainė"
 
@@ -80,7 +84,7 @@ msgstr "Svetainė"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:68
 msgid "Wiki"
 msgstr "Vikis"
 
@@ -88,7 +92,7 @@ msgstr "Vikis"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:183
+#: mozillians/groups/models.py:180 mozillians/users/models.py:184
 msgid "Yes"
 msgstr "Taip"
 
@@ -96,11 +100,19 @@ msgstr "Taip"
 msgid "By request"
 msgstr ""
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:183
+#: mozillians/groups/models.py:182 mozillians/users/models.py:184
 msgid "No"
 msgstr "Ne"
 
-#: mozillians/groups/models.py:190
+#: mozillians/groups/models.py:190 mozillians/templates/groups/group.html:44
+msgid "New Member Criteria"
+msgstr ""
+
+#: mozillians/groups/models.py:191
+msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
+msgstr ""
+
+#: mozillians/groups/models.py:197
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr ""
 
@@ -167,7 +179,7 @@ msgstr ""
 msgid "You have been added to this group."
 msgstr ""
 
-#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:167
+#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:177
 msgid "Your membership request is pending approval by the group curator."
 msgstr ""
 
@@ -188,56 +200,57 @@ msgstr "Tavo paskyra sukurta."
 msgid "You must be a curator or an admin to edit a group"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:53
+#: mozillians/phonebook/forms.py:65
 #, fuzzy
 msgid "Include non-vouched"
 msgstr "Nepatvirtintas"
 
-#: mozillians/phonebook/forms.py:67
+#: mozillians/phonebook/forms.py:79
 msgid "Username"
 msgstr "Naudotojo vardas"
 
-#: mozillians/phonebook/forms.py:83
+#: mozillians/phonebook/forms.py:95
 msgid "This username is in use. Please try another."
 msgstr "Šis naudotojo vardas jau užimtas. Bandyk kitą."
 
-#: mozillians/phonebook/forms.py:88
+#: mozillians/phonebook/forms.py:100
 msgid "Please use only alphanumeric characters"
 msgstr "Prašom naudoti tik raides, skaitmenis, brūkšnelius ir tarpus"
 
-#: mozillians/phonebook/forms.py:92
+#: mozillians/phonebook/forms.py:104
 msgid "This username is not allowed, please choose another."
 msgstr "Šis naudotojo vardas negalimas, prašom pasirinkti kitą."
 
-#: mozillians/phonebook/forms.py:98 mozillians/templates/groups/group.html:88 mozillians/templates/phonebook/edit_profile.html:77 mozillians/templates/phonebook/includes/search_result.html:21
+#: mozillians/phonebook/forms.py:110 mozillians/templates/groups/group.html:92 mozillians/templates/phonebook/edit_profile.html:77 mozillians/templates/phonebook/includes/search_result.html:21
 msgid "Profile Photo"
 msgstr "Profilio nuotrauka"
 
-#: mozillians/phonebook/forms.py:99 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:111 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "Pašalinti profilio nuotrauką"
 
-#: mozillians/phonebook/forms.py:103
+#: mozillians/phonebook/forms.py:115
 msgid "When did you get involved with Mozilla?"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:107
+#: mozillians/phonebook/forms.py:119
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Pradėkite rašyti įgūdį (pavyzdžiai: Python, javascript, Graphic Design, User Research)"
 
-#: mozillians/phonebook/forms.py:157
-msgid "Skills can only contain alphanumeric characters, dashes, spaces."
+#: mozillians/phonebook/forms.py:171
+#, fuzzy
+msgid "Skills can only contain alphanumeric characters and +.:-."
 msgstr "Įgūdžių pavadinimus gali sudaryti tik raidės, skaitmenys, brūkšneliai ir tarpai."
 
-#: mozillians/phonebook/forms.py:193
+#: mozillians/phonebook/forms.py:207
 msgid "Email"
 msgstr "El. pašto adresas"
 
-#: mozillians/phonebook/forms.py:199
+#: mozillians/phonebook/forms.py:213
 msgid "Email is currently associated with another user."
 msgstr ""
 
-#: mozillians/phonebook/forms.py:224
+#: mozillians/phonebook/forms.py:238
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Asmens, už kurį jau buvo laiduota, pakviesti negalima."
 
@@ -286,6 +299,10 @@ msgstr "Grupės pavadinimą gali sudaryti tik raidės, skaitmenys, brūkšneliai
 
 #: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
+msgstr ""
+
+#: mozillians/phonebook/validators.py:67
+msgid "This field requires an identifier, not a URL."
 msgstr ""
 
 #: mozillians/phonebook/views.py:48
@@ -481,12 +498,12 @@ msgid ""
 "requests to join."
 msgstr ""
 
-#: mozillians/templates/groups/add_edit.html:90 mozillians/templates/groups/index_groups.html:18
+#: mozillians/templates/groups/add_edit.html:94 mozillians/templates/groups/index_groups.html:18
 #, fuzzy
 msgid "Create Group"
 msgstr "Grupė: {name}"
 
-#: mozillians/templates/groups/add_edit.html:92
+#: mozillians/templates/groups/add_edit.html:96
 msgid "Submit changes"
 msgstr ""
 
@@ -557,44 +574,48 @@ msgstr "Grupė: {name}"
 msgid "Edit Group"
 msgstr "Prisijungti prie grupės"
 
-#: mozillians/templates/groups/group.html:48
+#: mozillians/templates/groups/group.html:52
 msgid "IRC Channels"
 msgstr "IRC kambariai"
 
-#: mozillians/templates/groups/group.html:67
+#: mozillians/templates/groups/group.html:71
 msgid "Members"
 msgstr "Nariai"
 
-#: mozillians/templates/groups/group.html:71
+#: mozillians/templates/groups/group.html:75
 msgid "Skills members have in common"
 msgstr "Narių bendri įgūdžiai"
 
-#: mozillians/templates/groups/group.html:83
+#: mozillians/templates/groups/group.html:87
 msgid "Community Steward"
 msgstr "Bendruomenės kuratorius"
 
-#: mozillians/templates/groups/group.html:83
+#: mozillians/templates/groups/group.html:87
 #, fuzzy
 msgid "Curator"
 msgstr "Grupė: {name}"
 
-#: mozillians/templates/groups/group.html:118
+#: mozillians/templates/groups/group.html:122
 msgid "Join Group"
 msgstr "Prisijungti prie grupės"
 
-#: mozillians/templates/groups/group.html:128
+#: mozillians/templates/groups/group.html:132
 msgid "Leave Group"
 msgstr "Pasitraukti iš grupės"
 
-#: mozillians/templates/groups/group.html:148
-msgid "Sorry, we cannot find any mozillians in %(group_name)s"
+#: mozillians/templates/groups/group.html:153
+msgid "There are no open membership requests for %(group_name)s."
 msgstr ""
 
-#: mozillians/templates/groups/group.html:160
+#: mozillians/templates/groups/group.html:157
+msgid "Sorry, we can not find any mozillians in %(group_name)s."
+msgstr ""
+
+#: mozillians/templates/groups/group.html:170
 msgid "Functional Area Members"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:162
+#: mozillians/templates/groups/group.html:172
 msgid "Group Members"
 msgstr "Grupės nariai"
 
@@ -1063,7 +1084,7 @@ msgstr ""
 msgid "Mozillian"
 msgstr "Mozilietis"
 
-#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:162
+#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:163
 msgid "Bio"
 msgstr "Biografija"
 
@@ -1167,125 +1188,125 @@ msgstr "Patvirtinimo laiškas išsiųstas"
 msgid "Requested"
 msgstr ""
 
-#: mozillians/users/models.py:98
+#: mozillians/users/models.py:99
 msgid "Privileged"
 msgstr ""
 
-#: mozillians/users/models.py:152
+#: mozillians/users/models.py:153
 msgid "Full Name"
 msgstr "Pilnas vardas"
 
-#: mozillians/users/models.py:166
+#: mozillians/users/models.py:167
 msgid "IRC Nickname"
 msgstr "IRC pseudonimas"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:171
 msgid "Country"
 msgstr "Valstybė"
 
-#: mozillians/users/models.py:172
+#: mozillians/users/models.py:173
 msgid "Province/State"
 msgstr "Regionas / valstija"
 
-#: mozillians/users/models.py:174
+#: mozillians/users/models.py:175
 msgid "City"
 msgstr "Miestas"
 
-#: mozillians/users/models.py:177
+#: mozillians/users/models.py:178
 msgid "Sites that can determine my vouched status"
 msgstr "Svetainės, galinčios sužinoti, ar už Tave laiduota"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:179
 msgid "All Community Sites"
 msgstr "Visos bendruomenės svetainės"
 
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:180
 msgid "Only Mozilla Properties"
 msgstr "Tik „Mozillai“ priklausančios svetainės"
 
-#: mozillians/users/models.py:182
+#: mozillians/users/models.py:183
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Ar leisti „Mozillos“ svetainėms pasiekti tavo profilio duomenis?"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:191
 msgid "T-Shirt"
 msgstr ""
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Small"
 msgstr ""
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Medium"
 msgstr ""
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted Large"
 msgstr ""
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Small"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Medium"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut Large"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:200
 msgid "What do you do for Mozilla?"
 msgstr ""
 
-#: mozillians/users/models.py:537
+#: mozillians/users/models.py:538
 msgid "You are now vouched on Mozillians!"
 msgstr "Dabar esi patvirtintas mozilietis!"
 
-#: mozillians/users/models.py:538
+#: mozillians/users/models.py:539
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Mozillians.org svetainėje už Tave laidavo. Dabar galėsi vykdyti paiešką, kviesti į registruotis kitus moziliečius ir už juos laiduoti."
 
-#: mozillians/users/models.py:725
+#: mozillians/users/models.py:745
 #, fuzzy
 msgid "Account Username"
 msgstr "Naudotojo vardas"
 
-#: mozillians/users/models.py:730
+#: mozillians/users/models.py:750
 #, fuzzy
 msgid "Account Type"
 msgstr "Paskyra"
 
-#: mozillians/users/models.py:744
+#: mozillians/users/models.py:764
 msgid "You already have an account with this name and type."
 msgstr ""
 
-#: mozillians/users/models.py:762
+#: mozillians/users/models.py:782
 msgid "This language has already been selected."
 msgstr ""
 

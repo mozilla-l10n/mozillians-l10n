@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 07:57-0700\n"
+"POT-Creation-Date: 2014-03-13 07:24-0700\n"
 "PO-Revision-Date: 2013-12-09 12:54+0200\n"
 "Last-Translator: Mikael Hiort af Ornäs <mikael.hafo@hotmail.com>\n"
 "Language-Team: Swedish\n"
@@ -42,6 +42,10 @@ msgstr "Minst antal medlemmar"
 msgid "Group with this Name already exists."
 msgstr ""
 
+#: mozillians/groups/forms.py:60
+msgid "You must either specify the criteria or change the acceptance selection."
+msgstr ""
+
 #: mozillians/groups/models.py:39
 msgid "This name already exists."
 msgstr ""
@@ -60,7 +64,7 @@ msgstr "Overifierad profil"
 msgid "Description"
 msgstr "Beskrivning"
 
-#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:50
+#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:54
 msgid "IRC Channel"
 msgstr "IRC-kanal"
 
@@ -68,7 +72,7 @@ msgstr "IRC-kanal"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:60
+#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:64
 msgid "Website"
 msgstr "Webbplats"
 
@@ -76,7 +80,7 @@ msgstr "Webbplats"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:68
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -84,7 +88,7 @@ msgstr "Wiki"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:183
+#: mozillians/groups/models.py:180 mozillians/users/models.py:184
 msgid "Yes"
 msgstr "Ja"
 
@@ -92,11 +96,19 @@ msgstr "Ja"
 msgid "By request"
 msgstr ""
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:183
+#: mozillians/groups/models.py:182 mozillians/users/models.py:184
 msgid "No"
 msgstr "Nej"
 
-#: mozillians/groups/models.py:190
+#: mozillians/groups/models.py:190 mozillians/templates/groups/group.html:44
+msgid "New Member Criteria"
+msgstr ""
+
+#: mozillians/groups/models.py:191
+msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
+msgstr ""
+
+#: mozillians/groups/models.py:197
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr ""
 
@@ -161,7 +173,7 @@ msgstr ""
 msgid "You have been added to this group."
 msgstr ""
 
-#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:167
+#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:177
 msgid "Your membership request is pending approval by the group curator."
 msgstr ""
 
@@ -182,55 +194,56 @@ msgstr "Ditt konto har skapats."
 msgid "You must be a curator or an admin to edit a group"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:53
+#: mozillians/phonebook/forms.py:65
 msgid "Include non-vouched"
 msgstr "Inkludera overifierade"
 
-#: mozillians/phonebook/forms.py:67
+#: mozillians/phonebook/forms.py:79
 msgid "Username"
 msgstr "Användarnamn"
 
-#: mozillians/phonebook/forms.py:83
+#: mozillians/phonebook/forms.py:95
 msgid "This username is in use. Please try another."
 msgstr "Detta användarnamn används redan. Välj ett annat namn."
 
-#: mozillians/phonebook/forms.py:88
+#: mozillians/phonebook/forms.py:100
 msgid "Please use only alphanumeric characters"
 msgstr "Du kan endast använda alfanumeriska tecken"
 
-#: mozillians/phonebook/forms.py:92
+#: mozillians/phonebook/forms.py:104
 msgid "This username is not allowed, please choose another."
 msgstr "Detta användarnamn tillåts inte. Välj ett annat namn."
 
-#: mozillians/phonebook/forms.py:98 mozillians/templates/groups/group.html:88 mozillians/templates/phonebook/edit_profile.html:77 mozillians/templates/phonebook/includes/search_result.html:21
+#: mozillians/phonebook/forms.py:110 mozillians/templates/groups/group.html:92 mozillians/templates/phonebook/edit_profile.html:77 mozillians/templates/phonebook/includes/search_result.html:21
 msgid "Profile Photo"
 msgstr "Profilfoto"
 
-#: mozillians/phonebook/forms.py:99 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:111 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "Ta bort profilfoto"
 
-#: mozillians/phonebook/forms.py:103
+#: mozillians/phonebook/forms.py:115
 msgid "When did you get involved with Mozilla?"
 msgstr "När började ditt engagemang i Mozilla?"
 
-#: mozillians/phonebook/forms.py:107
+#: mozillians/phonebook/forms.py:119
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Börja skriva för att lägga till en färdighet (t.ex. Python, javascript, Graphic Design, User Research)"
 
-#: mozillians/phonebook/forms.py:157
-msgid "Skills can only contain alphanumeric characters, dashes, spaces."
+#: mozillians/phonebook/forms.py:171
+#, fuzzy
+msgid "Skills can only contain alphanumeric characters and +.:-."
 msgstr "Färdigheter kan endast innehålla alfanumeriska tecken, bindestreck och blanksteg."
 
-#: mozillians/phonebook/forms.py:193
+#: mozillians/phonebook/forms.py:207
 msgid "Email"
 msgstr "E-post"
 
-#: mozillians/phonebook/forms.py:199
+#: mozillians/phonebook/forms.py:213
 msgid "Email is currently associated with another user."
 msgstr "E-postadressen är för närvarande associerad med en annan användare."
 
-#: mozillians/phonebook/forms.py:224
+#: mozillians/phonebook/forms.py:238
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Du kan inte bjuda in någon som redan har verifierats."
 
@@ -278,6 +291,10 @@ msgstr "Grupper kan endast innehålla alfanumeriska tecken, bindestreck och blan
 #: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
 msgstr "Ange en giltig URL."
+
+#: mozillians/phonebook/validators.py:67
+msgid "This field requires an identifier, not a URL."
+msgstr ""
 
 #: mozillians/phonebook/views.py:48
 msgid "Authentication failed."
@@ -467,12 +484,12 @@ msgid ""
 "requests to join."
 msgstr ""
 
-#: mozillians/templates/groups/add_edit.html:90 mozillians/templates/groups/index_groups.html:18
+#: mozillians/templates/groups/add_edit.html:94 mozillians/templates/groups/index_groups.html:18
 #, fuzzy
 msgid "Create Group"
 msgstr "Granskad grupp"
 
-#: mozillians/templates/groups/add_edit.html:92
+#: mozillians/templates/groups/add_edit.html:96
 msgid "Submit changes"
 msgstr ""
 
@@ -541,45 +558,50 @@ msgstr "Granskad grupp"
 msgid "Edit Group"
 msgstr "Bli medlem i grupp"
 
-#: mozillians/templates/groups/group.html:48
+#: mozillians/templates/groups/group.html:52
 msgid "IRC Channels"
 msgstr "IRC-kanaler"
 
-#: mozillians/templates/groups/group.html:67
+#: mozillians/templates/groups/group.html:71
 msgid "Members"
 msgstr "Medlemmar"
 
-#: mozillians/templates/groups/group.html:71
+#: mozillians/templates/groups/group.html:75
 msgid "Skills members have in common"
 msgstr "Färdigheter som medlemmarna delar"
 
-#: mozillians/templates/groups/group.html:83
+#: mozillians/templates/groups/group.html:87
 msgid "Community Steward"
 msgstr "Gemenskapsfunktionär"
 
-#: mozillians/templates/groups/group.html:83
+#: mozillians/templates/groups/group.html:87
 #, fuzzy
 msgid "Curator"
 msgstr "Granskad grupp"
 
-#: mozillians/templates/groups/group.html:118
+#: mozillians/templates/groups/group.html:122
 msgid "Join Group"
 msgstr "Bli medlem i grupp"
 
-#: mozillians/templates/groups/group.html:128
+#: mozillians/templates/groups/group.html:132
 msgid "Leave Group"
 msgstr "Lämna grupp"
 
-#: mozillians/templates/groups/group.html:148
-msgid "Sorry, we cannot find any mozillians in %(group_name)s"
+#: mozillians/templates/groups/group.html:153
+msgid "There are no open membership requests for %(group_name)s."
+msgstr ""
+
+#: mozillians/templates/groups/group.html:157
+#, fuzzy
+msgid "Sorry, we can not find any mozillians in %(group_name)s."
 msgstr "Ledsen, vi hittade inga mozillianer i %(group_name)s"
 
-#: mozillians/templates/groups/group.html:160
+#: mozillians/templates/groups/group.html:170
 #, fuzzy
 msgid "Functional Area Members"
 msgstr "Funktions&shy;områden"
 
-#: mozillians/templates/groups/group.html:162
+#: mozillians/templates/groups/group.html:172
 msgid "Group Members"
 msgstr "Gruppmedlemmar"
 
@@ -1041,7 +1063,7 @@ msgstr "Mig själv"
 msgid "Mozillian"
 msgstr "Mozillian"
 
-#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:162
+#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:163
 msgid "Bio"
 msgstr "Biografi"
 
@@ -1138,123 +1160,123 @@ msgstr ""
 msgid "Requested"
 msgstr ""
 
-#: mozillians/users/models.py:98
+#: mozillians/users/models.py:99
 msgid "Privileged"
 msgstr "Privilegierad"
 
-#: mozillians/users/models.py:152
+#: mozillians/users/models.py:153
 msgid "Full Name"
 msgstr "Fullständigt namn"
 
-#: mozillians/users/models.py:166
+#: mozillians/users/models.py:167
 msgid "IRC Nickname"
 msgstr "Smeknamn på IRC"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:171
 msgid "Country"
 msgstr "Land"
 
-#: mozillians/users/models.py:172
+#: mozillians/users/models.py:173
 msgid "Province/State"
 msgstr "Region/delstat"
 
-#: mozillians/users/models.py:174
+#: mozillians/users/models.py:175
 msgid "City"
 msgstr "Ort"
 
-#: mozillians/users/models.py:177
+#: mozillians/users/models.py:178
 msgid "Sites that can determine my vouched status"
 msgstr "Webbplatser som kan identifiera min verifikationsstatus"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:179
 msgid "All Community Sites"
 msgstr "Alla gemenskapswebbplatser"
 
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:180
 msgid "Only Mozilla Properties"
 msgstr "Endast webbplatser ägda av Mozilla"
 
-#: mozillians/users/models.py:182
+#: mozillians/users/models.py:183
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Tillåter du att Mozilla-webbplatser får åtkomst till dina profildata?"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:191
 msgid "T-Shirt"
 msgstr "T-tröja"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Small"
 msgstr "Figurskuren, S"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:193
 msgid "Fitted Medium"
 msgstr "Figurskuren, M"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted Large"
 msgstr "Figurskuren, L"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted X-Large"
 msgstr "Figurskuren, XL"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XX-Large"
 msgstr "Figurskuren, XXL"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted XXX-Large"
 msgstr "Figurskuren, XXXL"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Small"
 msgstr "Rakt skuren, S"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Straight-cut Medium"
 msgstr "Rakt skuren, M"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut Large"
 msgstr "Rakt skuren, L"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut X-Large"
 msgstr "Rakt skuren, XL"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XX-Large"
 msgstr "Rakt skuren, XXL"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut XXX-Large"
 msgstr "Rakt skuren, XXXL"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:200
 msgid "What do you do for Mozilla?"
 msgstr "Vad gör du för Mozilla?"
 
-#: mozillians/users/models.py:537
+#: mozillians/users/models.py:538
 msgid "You are now vouched on Mozillians!"
 msgstr "Du är nu verifierad på Mozillians!"
 
-#: mozillians/users/models.py:538
+#: mozillians/users/models.py:539
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Du har verifierats på Mozillians.org. Nu kan du söka efter, gå i god för och bjuda in andra mozillianer till webbplatsen."
 
-#: mozillians/users/models.py:725
+#: mozillians/users/models.py:745
 msgid "Account Username"
 msgstr "Kontots användarnamn"
 
-#: mozillians/users/models.py:730
+#: mozillians/users/models.py:750
 msgid "Account Type"
 msgstr "Kontotyp"
 
-#: mozillians/users/models.py:744
+#: mozillians/users/models.py:764
 msgid "You already have an account with this name and type."
 msgstr "Du har redan ett konto med samma namn och typ."
 
-#: mozillians/users/models.py:762
+#: mozillians/users/models.py:782
 msgid "This language has already been selected."
 msgstr ""
 
