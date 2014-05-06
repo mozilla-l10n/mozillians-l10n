@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-13 07:24-0700\n"
-"PO-Revision-Date: 2014-05-05 17:35+0000\n"
+"PO-Revision-Date: 2014-05-06 21:59+0000\n"
 "Last-Translator: Aleksej <deletesoftware@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399311314.0\n"
+"X-POOTLE-MTIME: 1399413562.0\n"
 
 #: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:298
 msgid "Visible to:"
@@ -118,9 +118,10 @@ msgstr ""
 #, fuzzy
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
 msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
-msgstr[0] "%s создал профиль Мозилльца"
-msgstr[1] "%s создал профиль Мозилльца"
-msgstr[2] "%s создал профиль Мозилльца"
+msgstr[0] ""
+"%(count)d открытый запрос на присоединение к группе Мозилльцев «%(name)s»"
+msgstr[1] "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
+msgstr[2] "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
 
 #: mozillians/groups/tasks.py:95
 msgid "Accepted to Mozillians group \"%s\""
@@ -312,9 +313,8 @@ msgid "You changed your username; please note your profile URL has also changed.
 msgstr "Вы изменили свое имя пользователя; обратите внимание, что URL вашего профиля также был изменён."
 
 #: mozillians/phonebook/views.py:221
-#, fuzzy
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
-msgstr "Ваша учётная запись была успешно создана."
+msgstr "Ваша учётная запись успешно удалена. Спасибо, что были Мозилльцем!"
 
 #: mozillians/phonebook/views.py:294
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
@@ -651,10 +651,17 @@ msgid ""
 "\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p> Мозилльцами являются люди, добровольно посвящающие свое время делу продвижения миссии Mozilla. Они распространяют в Интернете идеи открытости, инновационности и предоставления равных "
-"возможностей, формируя ядро нашего сообщества. </p> <p> Этот каталог представляет собой ресурс, позволяющий Мозилльцам легко узнать, кто вовлечён, кто чем занимается и как с ними связаться. </p> "
-"<p> Хотите организовать встречу Мозилльцев в Питере? Нужен хакер-эксперт по XPCOM для рассмотрения патча? Это именно то, для чего предназначен этот сайт. </p> <p> <a href=\"%(wiki_roadmap_url)s"
-"\">Как эти,</a> так и другие функции находятся сейчас в процессе разработки. Если вы хотите нам в этом помочь, узнайте, как вы можете <a href=\"%(wiki_get_involved_url)s\"> принять участие</a>. </p>"
+"<p> Мозилльцы — люди, добровольно посвящающие свое время делу продвижения "
+"миссии Mozilla. Они распространяют в Интернете идеи открытости, "
+"инновационности и предоставления равных возможностей, формируя ядро нашего "
+"сообщества. </p> <p> Этот каталог представляет собой ресурс, позволяющий "
+"Мозилльцам легко узнать, кто вовлечён, кто чем занимается и как с ними "
+"связаться. </p> <p> Хотите организовать встречу Мозилльцев в Питере? Нужен "
+"хакер-эксперт по XPCOM для рассмотрения патча? Это именно то, для чего "
+"предназначен этот сайт. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Как эти,</a> "
+"так и другие функции находятся сейчас в процессе разработки. Если вы хотите "
+"нам в этом помочь, узнайте, как вы можете <a href=\"%"
+"(wiki_get_involved_url)s\"> принять участие</a>. </p>"
 
 #: mozillians/templates/phonebook/about.html:35
 msgid "Privacy First"
@@ -882,7 +889,9 @@ msgstr "Это поле обязательно."
 
 #: mozillians/templates/phonebook/edit_profile.html:424
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
-msgstr "Я согласен, что вы будете обрабатывать эту информацию, как написано в политике приватности Mozilla."
+msgstr ""
+"Я согласен, что вы будете обрабатывать эту информацию, как написано в <a "
+"href=\"%(privacy_url)s\">политике приватности Mozilla</a>."
 
 #: mozillians/templates/phonebook/edit_profile.html:433
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
@@ -1021,13 +1030,17 @@ msgid ""
 "%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p> The chances of being vouched increase as you finish "
 "tasks in our community. </p>"
 msgstr ""
-"<p> Ваш профиль ожидает, чтобы за него проголосовали. Отправьте эту ссылку кому-то, кто знаком с вашим вкладом, и попросите его за вас поручиться. </p> <p> Если вы новичок в сообществе Mozilla, <a "
-"href=\"%(contribute_url)s\">начните принимать в нём участие</a>. Шансы на то, что за вас проголосуют, повышаются по мере того, как вы завершаете выполнение задач в нашем сообществе. </p> <em class="
-"\"underline\" title=\"URL вашего профиля\"> %(profile_url)s </em>"
+"<p> Ваш профиль ожидает, чтобы за него поручились. Отправьте вот эту ссылку "
+"кому-нибудь, кто знаком с Вашим вкладом, и попросите его за Вас поручиться: "
+"<em class=\"underline\" title=\"URL вашего профиля\"> %(profile_url)s </em>. "
+"</p> <p> Если вы новичок в сообществе Mozilla, <a class=\"button\" href=\"%"
+"(contribute_url)s\">начните принимать в нём участие</a>. </p> <p> Шансы на "
+"то, что за вас поручатся, повышаются с выполнением вами задач в нашем "
+"сообществе. </p>"
 
 #: mozillians/templates/phonebook/profile.html:47
 msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
-msgstr "<div> <button type=\"submit\" class=\"btn btn-info pull-right\"> Поручиться за %(name)s </button> </div>"
+msgstr "<button type=\"submit\"> Поручиться за %(name)s </button>"
 
 #: mozillians/templates/phonebook/profile.html:54
 msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
@@ -1119,8 +1132,8 @@ msgstr ""
 #: mozillians/templates/phonebook/search.html:101
 msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
 msgstr ""
-"<p id=\"not-found\"> Извините, но мы не можем найти группу или человека, подходящего под \"%(query)s\". </p> <p> Может быть он ещё не Мозиллец? <a href=\"%(invite)s\">Пригласите этого человека</a>, "
-"чтобы он создал профиль. </p>"
+"Может быть, он ещё не Мозиллец? <a href=\"%(invite)s\">Пригласите этого "
+"человека</a>, чтобы он создал профиль."
 
 #: mozillians/templates/phonebook/search.html:107
 msgid "Need help? Contact a steward in a functional area!"
