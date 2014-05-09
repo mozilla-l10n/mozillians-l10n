@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-13 07:24-0700\n"
-"PO-Revision-Date: 2014-05-07 16:03+0000\n"
+"PO-Revision-Date: 2014-05-09 20:32+0000\n"
 "Last-Translator: Aleksej <deletesoftware@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399478588.0\n"
+"X-POOTLE-MTIME: 1399667527.0\n"
 
 #: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:298
 msgid "Visible to:"
@@ -113,6 +113,8 @@ msgstr ""
 #: mozillians/groups/models.py:197
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr ""
+"Показывать ли группу в интерфейсе (в списках групп, при поиске и т. п.). "
+"Предназначено, в основном, чтобы группы типа «staff» не загружали интерфейс."
 
 #: mozillians/groups/tasks.py:52
 #, fuzzy
@@ -137,7 +139,7 @@ msgstr "Эта группа не позволяет участникам уда�
 
 #: mozillians/groups/views.py:196
 msgid "A curator cannot be removed from a group."
-msgstr "Куратор не может быть удален из группы"
+msgstr "Куратор не может быть удален из группы."
 
 #: mozillians/groups/views.py:203
 msgid "You have been removed from this group."
@@ -165,7 +167,7 @@ msgstr "Вы уже в этой группе."
 
 #: mozillians/groups/views.py:256
 msgid "Your request to join this group is still pending."
-msgstr ""
+msgstr "Ваш запрос на присоединение к этой группе ещё не обработан."
 
 #: mozillians/groups/views.py:258
 msgid "This group is not accepting requests to join."
@@ -232,9 +234,8 @@ msgid "Start typing to add a skill (example: Python, javascript, Graphic Design,
 msgstr "Начните набор чтобы добавить умение (например: Python, javascript, Graphic Design, User Research)"
 
 #: mozillians/phonebook/forms.py:171
-#, fuzzy
 msgid "Skills can only contain alphanumeric characters and +.:-."
-msgstr "Умения могут содержать только буквы, цифры, дефисы, пробелы."
+msgstr "Умения могут содержать только буквы, цифры, «+», «-», «.», «:»."
 
 #: mozillians/phonebook/forms.py:207
 msgid "Email"
@@ -286,7 +287,7 @@ msgstr "Имя пользователя на Твиттере не может б
 
 #: mozillians/phonebook/validators.py:22
 msgid "Twitter usernames must contain only alphanumeric characters and the underscore."
-msgstr "Имена в Твиттере могут содержать только буквы, цифры и подчеркивание.."
+msgstr "Имена в Твиттере могут содержать только буквы, цифры и подчеркивание."
 
 #: mozillians/phonebook/validators.py:58
 msgid "Enter a valid URL."
@@ -327,6 +328,8 @@ msgstr "Спасибо, что поручились за коллегу Мози
 #: mozillians/phonebook/views.py:382
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr ""
+"Вас пригласили зарегистрироваться на Mozillians.org! Войдите, и сможете "
+"создать профиль."
 
 #: mozillians/settings/base.py:280 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/search.html:78
 #: mozillians/users/managers.py:11
@@ -372,7 +375,7 @@ msgstr "Извините, но Что-то Пошло Не Так!"
 #: mozillians/templates/500.html:11 mozillians/templates/500.html:12
 #, fuzzy
 msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
-msgstr "Tumbeasts от Matthew Inman из The Oatmeal"
+msgstr "Jitterbeasts от Matthew Inman из The Oatmeal"
 
 #: mozillians/templates/500.html:15
 msgid ""
@@ -488,7 +491,7 @@ msgstr "Создать группу"
 
 #: mozillians/templates/groups/add_edit.html:96
 msgid "Submit changes"
-msgstr ""
+msgstr "Применить изменения"
 
 #: mozillians/templates/groups/common_groups.html:2 mozillians/templates/groups/index_groups.html:3
 msgid "Group Listing"
@@ -555,7 +558,7 @@ msgstr "Изменить группу"
 
 #: mozillians/templates/groups/group.html:52
 msgid "IRC Channels"
-msgstr "IRC-каналы "
+msgstr "IRC-каналы"
 
 #: mozillians/templates/groups/group.html:71
 msgid "Members"
@@ -731,7 +734,7 @@ msgstr "Сделать все поля моего профиля видимым�
 
 #: mozillians/templates/phonebook/edit_profile.html:61
 msgid "-- No Change --"
-msgstr " -- Без изменений --"
+msgstr "-- Без изменений --"
 
 #: mozillians/templates/phonebook/edit_profile.html:63 mozillians/templates/phonebook/profile.html:129 mozillians/users/managers.py:12
 msgid "Public"
@@ -797,10 +800,14 @@ msgstr "Группы представляют собой сообщества М
 #: mozillians/templates/phonebook/edit_profile.html:245
 msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
 msgstr ""
+"Чтобы войти в группу, <a href=\"%(browse)s\">найдите её страницу</a>, и там "
+"кликните «Войти в группу»."
 
 #: mozillians/templates/phonebook/edit_profile.html:249
 msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
 msgstr ""
+"Чтобы покинуть группу, кликните её название ниже, чтобы попасть на её "
+"страницу, и там кликните кнопку «Выйти из группы»."
 
 #: mozillians/templates/phonebook/edit_profile.html:256
 msgid "After you are vouched, you will be able to join groups."
