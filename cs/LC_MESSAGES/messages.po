@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mozillians 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-13 07:24-0700\n"
+"POT-Creation-Date: 2014-05-13 02:54-0700\n"
 "PO-Revision-Date: 2014-05-10 17:29+0000\n"
 "Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: cs <info@mozilla.cz>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1399742989.0\n"
 
-#: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:298
+#: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:300
 msgid "Visible to:"
 msgstr "Viditelné pro:"
 
@@ -38,15 +38,28 @@ msgstr "Nejvíce členů"
 msgid "Fewest Members"
 msgstr "Nejméně členů"
 
-#: mozillians/groups/forms.py:40
-msgid "Group with this Name already exists."
-msgstr "Skupina s tímto názvem již existuje."
-
-#: mozillians/groups/forms.py:60
+#: mozillians/groups/forms.py:35
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "Musíte také specifikovat kritéria nebo změnit způsob schvalování."
 
-#: mozillians/groups/models.py:39
+#: mozillians/groups/forms.py:54
+msgid "Group with this Name already exists."
+msgstr "Skupina s tímto názvem již existuje."
+
+#: mozillians/groups/forms.py:85
+msgid "All"
+msgstr ""
+
+#: mozillians/groups/forms.py:86 mozillians/templates/groups/group.html:73
+msgid "Members"
+msgstr "Členové"
+
+#: mozillians/groups/forms.py:87
+#, fuzzy
+msgid "Pending Members"
+msgstr "Čekající"
+
+#: mozillians/groups/models.py:41
 msgid "This name already exists."
 msgstr "Tento název již existuje."
 
@@ -62,7 +75,7 @@ msgstr "Čekající"
 msgid "Description"
 msgstr "Popis"
 
-#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:54
+#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:56
 msgid "IRC Channel"
 msgstr "IRC kanál"
 
@@ -70,7 +83,7 @@ msgstr "IRC kanál"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "IRC kanál, kde je téma této skupiny diskutováno (volitelné)."
 
-#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:66
 msgid "Website"
 msgstr "Webová stránka"
 
@@ -78,7 +91,7 @@ msgstr "Webová stránka"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "URL webové stránky, kde je k dispozici více informací týkající se této skupiny (volitelné)."
 
-#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:68
+#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:70
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -86,7 +99,7 @@ msgstr "Wiki"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "URL wiki, kde je k dispozici více informací o této skupině (volitelné)."
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:184
+#: mozillians/groups/models.py:180 mozillians/users/models.py:185
 msgid "Yes"
 msgstr "Na přání"
 
@@ -94,25 +107,21 @@ msgstr "Na přání"
 msgid "By request"
 msgstr "Na přání"
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:184
+#: mozillians/groups/models.py:182 mozillians/users/models.py:185
 msgid "No"
 msgstr "Ne"
 
-#: mozillians/groups/models.py:190 mozillians/templates/groups/group.html:44
+#: mozillians/groups/models.py:191 mozillians/templates/groups/group.html:46
 msgid "New Member Criteria"
 msgstr "Kritéria pro nového člena"
 
-#: mozillians/groups/models.py:191
+#: mozillians/groups/models.py:192
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
-msgstr ""
-"Zvolte kritéria, podle kterých se budete rozhodovat, zda akceptujete žádost "
-"o členství."
+msgstr "Zvolte kritéria, podle kterých se budete rozhodovat, zda akceptujete žádost o členství."
 
 #: mozillians/groups/models.py:197
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
-msgstr ""
-"Zda je skupina zobrazena v UI (v seznamu skupin, vyhledávání apod.). Účelem "
-"je ponechat systémové skupiny jako \"vedení\" v rámci UI skryté."
+msgstr "Zda je skupina zobrazena v UI (v seznamu skupin, vyhledávání apod.). Účelem je ponechat systémové skupiny jako \"vedení\" v rámci UI skryté."
 
 #: mozillians/groups/tasks.py:52
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
@@ -129,52 +138,53 @@ msgstr "Pro skupinu Mozillians \"%s\" schváleno"
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "Pro skupinu Mozillians \"%s\" neschváleno"
 
-#: mozillians/groups/views.py:189
+#: mozillians/groups/views.py:188
 msgid "This group does not allow members to remove themselves."
 msgstr "Tato skupina neumožňuje členům, aby se mohli sami sebe odebrat."
 
-#: mozillians/groups/views.py:196
+#: mozillians/groups/views.py:195
 msgid "A curator cannot be removed from a group."
 msgstr "Správce nemůže být ze skupiny odebrán."
 
-#: mozillians/groups/views.py:203
+#: mozillians/groups/views.py:202
 msgid "You have been removed from this group."
 msgstr "Byl(a) jste odstraněn(a) ze skupiny."
 
-#: mozillians/groups/views.py:205
+#: mozillians/groups/views.py:204
 msgid "The group member has been removed."
 msgstr "Člen skupiny byl odebrán."
 
-#: mozillians/groups/views.py:229
+#: mozillians/groups/views.py:230
 msgid "This user has not requested membership in this group."
 msgstr "Tento uživatel o členství v této skupině nežádal."
 
-#: mozillians/groups/views.py:232
+#: mozillians/groups/views.py:233
 msgid "This user is already a member of this group."
 msgstr "Tento uživatel je již členem této skupiny."
 
-#: mozillians/groups/views.py:235
+#: mozillians/groups/views.py:236
 msgid "This user has been added as a member of this group."
 msgstr "Teto uživatel byl přidán jako člen této skupiny."
 
-#: mozillians/groups/views.py:254
+#: mozillians/groups/views.py:255
 msgid "You are already in this group."
 msgstr "Již jste členem této skupiny."
 
-#: mozillians/groups/views.py:256
+#: mozillians/groups/views.py:257
 msgid "Your request to join this group is still pending."
 msgstr "Vaše žádost o připojení do skupiny stále čeká na schválení."
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:259
 msgid "This group is not accepting requests to join."
 msgstr "Tato skupina neakceptuje žádosti o připojení."
 
-#: mozillians/groups/views.py:262
+#: mozillians/groups/views.py:263
 msgid "You have been added to this group."
 msgstr "Byl(a) jste přidán(a) do této skupiny."
 
-#: mozillians/groups/views.py:266 mozillians/templates/groups/group.html:177
-msgid "Your membership request is pending approval by the group curator."
+#: mozillians/groups/views.py:266
+#, fuzzy
+msgid "Your membership request has been sent to the group curator."
 msgstr "Vaše žádost o členství, která čekala na vyřízení, byla schválena správcem skupiny."
 
 #: mozillians/groups/views.py:293
@@ -189,59 +199,63 @@ msgstr "Nemůžete smazat skupinu, pokud v ní někdo je."
 msgid "Group %s has been deleted"
 msgstr "Skupina %s byla smazána"
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:320
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Pro úpravu skupiny musíte být jejím správcem či administrátorem"
 
-#: mozillians/phonebook/forms.py:65
+#: mozillians/phonebook/forms.py:67
 msgid "Include non-vouched"
 msgstr "Včetně nepotvrzených"
 
-#: mozillians/phonebook/forms.py:79
+#: mozillians/phonebook/forms.py:81
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-#: mozillians/phonebook/forms.py:95
+#: mozillians/phonebook/forms.py:97
 msgid "This username is in use. Please try another."
 msgstr "Toto uživatelské jméno je již používáno. Zkuste prosím jiné."
 
-#: mozillians/phonebook/forms.py:100
+#: mozillians/phonebook/forms.py:102
 msgid "Please use only alphanumeric characters"
 msgstr "Použijte prosím pouze alfanumerické znaky."
 
-#: mozillians/phonebook/forms.py:104
+#: mozillians/phonebook/forms.py:106
 msgid "This username is not allowed, please choose another."
 msgstr "Toto uživatelské jméno není dovoleno, zvolte prosím jiné."
 
-#: mozillians/phonebook/forms.py:110 mozillians/templates/groups/group.html:92 mozillians/templates/phonebook/edit_profile.html:77 mozillians/templates/phonebook/includes/search_result.html:21
+#: mozillians/phonebook/forms.py:112 mozillians/templates/groups/group.html:100 mozillians/templates/includes/search_result.html:27 mozillians/templates/phonebook/edit_profile.html:77
 msgid "Profile Photo"
 msgstr "Profilové foto"
 
-#: mozillians/phonebook/forms.py:111 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:113 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "Odebrat profilové foto"
 
-#: mozillians/phonebook/forms.py:115
+#: mozillians/phonebook/forms.py:117
 msgid "When did you get involved with Mozilla?"
 msgstr "Kdy jste se zapojil(a) do projektu Mozilla?"
 
-#: mozillians/phonebook/forms.py:119
+#: mozillians/phonebook/forms.py:122
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Pro přidání zkušeností začněte psát (například: Python, javascript, Graphic Design, User Research)"
 
-#: mozillians/phonebook/forms.py:171
+#: mozillians/phonebook/forms.py:174
 msgid "Skills can only contain alphanumeric characters and +.:-."
 msgstr "Zkušenosti mohou obsahovat pouze alfanumerické znaky a znaky +.:-."
 
-#: mozillians/phonebook/forms.py:207
+#: mozillians/phonebook/forms.py:210
 msgid "Email"
 msgstr "E-mail"
 
-#: mozillians/phonebook/forms.py:213
+#: mozillians/phonebook/forms.py:216
 msgid "Email is currently associated with another user."
 msgstr "E-mail je aktuálně asociován s jiným uživatelem."
 
-#: mozillians/phonebook/forms.py:238
+#: mozillians/phonebook/forms.py:235
+msgid "Message"
+msgstr "Zpráva"
+
+#: mozillians/phonebook/forms.py:242
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Nemůžete pozvat někoho, kdo již by schválen."
 
@@ -257,23 +271,20 @@ msgstr "Hostitel"
 msgid "Recipient"
 msgstr "Příjemce"
 
-#: mozillians/phonebook/models.py:20
-msgid "Message"
-msgstr "Zpráva"
-
-#: mozillians/phonebook/models.py:22
+#: mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr ""
 
-#: mozillians/phonebook/models.py:45
-msgid "Become a Mozillian"
-msgstr "Stát se členem serveru Mozillian"
-
-#: mozillians/phonebook/models.py:51
+#: mozillians/phonebook/models.py:41
 msgid "A fellow Mozillian"
 msgstr "Kolegové na Mozillian"
 
-#: mozillians/phonebook/models.py:64
+#: mozillians/phonebook/models.py:47
+#, fuzzy
+msgid "Please join me on mozillians.org"
+msgstr "Potvrďte prosím váš účet na serveru Mozillians: %s"
+
+#: mozillians/phonebook/models.py:65
 msgid "%s created a Mozillians profile"
 msgstr "%s vytvořil(a) profil na serveru Mozillians"
 
@@ -292,6 +303,11 @@ msgstr "Vložte platnou URL."
 #: mozillians/phonebook/validators.py:67
 msgid "This field requires an identifier, not a URL."
 msgstr "Toto pole vyžaduje identifikátor, nikoliv URL."
+
+#: mozillians/phonebook/validators.py:75
+#, fuzzy
+msgid "Enter a valid address."
+msgstr "Vložte platnou URL."
 
 #: mozillians/phonebook/views.py:48
 msgid "Authentication failed."
@@ -313,19 +329,23 @@ msgstr "Změnil(a) jste své uživatelské jméno. Mějte prosím na paměti, ž
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Váš účet byl smazán. Děkujeme, že jste byl(a) Mozillian!"
 
-#: mozillians/phonebook/views.py:294
+#: mozillians/phonebook/views.py:290
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s byl(a) pozván(a) k připojení k serveru Mozillians. Obdrží e-mail s instrukcemi, jak se zapojit. Pokud chcete, můžete pozvat dalšího člena."
 
-#: mozillians/phonebook/views.py:314
+#: mozillians/phonebook/views.py:306
+msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
+msgstr ""
+
+#: mozillians/phonebook/views.py:323
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Děkujeme za potvrzení člena serveru Mozillians! Uživatel je nyní potvrzen!"
 
-#: mozillians/phonebook/views.py:382
+#: mozillians/phonebook/views.py:391
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Byl(a) jste pozván(a), abyste se připojil(a) k serveru Mozillians.org! Přihlaste se, a poté si vytvořte profil."
 
-#: mozillians/settings/base.py:280 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/search.html:78
+#: mozillians/settings/base.py:284 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/search.html:88
 #: mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Mozillians"
@@ -404,51 +424,60 @@ msgstr "Přeskočit na hlavní obsah"
 msgid "Search for people, groups and more"
 msgstr "Vyhledávání lidí, skupin a dalších"
 
-#: mozillians/templates/base.html:98
+#: mozillians/templates/base.html:101
 msgid "View Profile"
 msgstr "Zobrazit profil"
 
-#: mozillians/templates/base.html:104 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:30
+#: mozillians/templates/base.html:107 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:30
 msgid "Edit Your Profile"
 msgstr "Úprava profilu"
 
-#: mozillians/templates/base.html:111
+#: mozillians/templates/base.html:114 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:240
+#: mozillians/templates/phonebook/home.html:117 mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:163 mozillians/templates/phonebook/search.html:64
+msgid "Groups"
+msgstr "Skupiny"
+
+#: mozillians/templates/base.html:120
 msgid "Invite"
 msgstr "Pozvat"
 
-#: mozillians/templates/base.html:118 mozillians/templates/base.html:126
+#: mozillians/templates/base.html:127 mozillians/templates/base.html:135
 msgid "Log Out"
 msgstr "Odhlášení"
 
-#: mozillians/templates/base.html:131 mozillians/templates/base.html:134
+#: mozillians/templates/base.html:140 mozillians/templates/base.html:143
 msgid "Sign in"
 msgstr "Přihlášení"
 
-#: mozillians/templates/base.html:174
+#: mozillians/templates/base.html:183
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Pomozte učinit server Mozillians lepším.  <a href=\"%(bug_url)s\">Nahlaste chybu</a> či <a href=\"%(git_url)s\">pomozte server vylepšit</a>."
 
-#: mozillians/templates/base.html:194
-msgid ""
-"Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html"
-"\">Creative Commons license</a>."
+#: mozillians/templates/base.html:203
+#, fuzzy
+msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
 msgstr ""
 "Část obsahu je &copy;1998–%(current_year)s od jednotlivých přispěvatelů mozilla.org. Obsah je dostupný pod <a href=\"http://www.mozilla.org/foundation/licensing/website-content.html\">licencí "
 "Creative Commons</a>."
 
-#: mozillians/templates/base.html:204 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
+#: mozillians/templates/base.html:212 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr "O serveru Mozillians"
 
-#: mozillians/templates/base.html:205
+#: mozillians/templates/base.html:213
+#, fuzzy
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: mozillians/templates/base.html:214
 msgid "Privacy Policy"
 msgstr "Zásady ochrany soukromí"
 
-#: mozillians/templates/base.html:206
+#: mozillians/templates/base.html:215
 msgid "Legal Notices"
 msgstr "Právní omezení"
 
-#: mozillians/templates/base.html:207
+#: mozillians/templates/base.html:216
 msgid "Report Trademark Abuse"
 msgstr "Nahlásit zneužití ochranné známky"
 
@@ -480,36 +509,13 @@ msgstr ""
 "Vytvořením skupiny se stanete jejím správce, což vám dává možnost spravovat nastavení skupiny a rozhodovat o tom, kdo se k ní může připojit. Pokud bude připojení ke skupině vyžadovat schválení, "
 "bude vám každý den zasílán e-mail s požadavky na připojení."
 
-#: mozillians/templates/groups/add_edit.html:94 mozillians/templates/groups/index_groups.html:18
+#: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
 msgid "Create Group"
 msgstr "Vytvořit skupinu"
 
-#: mozillians/templates/groups/add_edit.html:96
+#: mozillians/templates/groups/add_edit.html:95
 msgid "Submit changes"
 msgstr "Odeslat změny"
-
-#: mozillians/templates/groups/common_groups.html:2 mozillians/templates/groups/index_groups.html:3
-msgid "Group Listing"
-msgstr "Seznam skupin"
-
-#: mozillians/templates/groups/common_groups.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:235 mozillians/templates/phonebook/home.html:117
-#: mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:153 mozillians/templates/phonebook/search.html:64
-msgid "Groups"
-msgstr "Skupiny"
-
-#: mozillians/templates/groups/common_groups.html:16
-msgid "Sort"
-msgstr "Seřadit"
-
-#: mozillians/templates/groups/common_groups.html:22 mozillians/templates/groups/index_groups.html:10
-msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
-msgstr ""
-"Členové serveru Mozillians pracují na celé řadě věcí! Jedni vyvíjí doplňky, druhý mohou překládat. Najděte pomocí uživatelsky zakládaných skupin členy serveru Mozillians, kteří pracují na podobných "
-"věcech."
-
-#: mozillians/templates/groups/common_groups.html:44
-msgid "members"
-msgstr "členové"
 
 #: mozillians/templates/groups/confirm_remove_member.html:3 mozillians/templates/groups/confirm_remove_member.html:14
 msgid "Confirm removing member"
@@ -523,7 +529,7 @@ msgstr "Skutečně chcete opustit skupinu %(group)s?"
 msgid "Really remove user %(profile)s from group %(group)s?"
 msgstr "Skutečně chcete odebrat uživatele %(profile)s ze skupiny %(group)s?"
 
-#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/phonebook/includes/search_result.html:5
+#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/includes/search_result.html:8 mozillians/templates/phonebook/invite.html:65
 msgid "Remove"
 msgstr "Odebrat"
 
@@ -547,57 +553,62 @@ msgstr "Skupina"
 msgid "Delete Group"
 msgstr "Smazat skupinu"
 
-#: mozillians/templates/groups/group.html:36
+#: mozillians/templates/groups/group.html:37
 msgid "Edit Group"
 msgstr "Upravit skupinu"
 
-#: mozillians/templates/groups/group.html:52
+#: mozillians/templates/groups/group.html:54
 msgid "IRC Channels"
 msgstr "IRC kanály"
 
-#: mozillians/templates/groups/group.html:71
-msgid "Members"
-msgstr "Členové"
-
-#: mozillians/templates/groups/group.html:75
+#: mozillians/templates/groups/group.html:77
 msgid "Skills members have in common"
 msgstr "Společné znalosti členů"
 
-#: mozillians/templates/groups/group.html:87
+#: mozillians/templates/groups/group.html:91
 msgid "Community Steward"
 msgstr "Komunitní steward"
 
-#: mozillians/templates/groups/group.html:87
+#: mozillians/templates/groups/group.html:93
 msgid "Curator"
 msgstr "Správce"
 
-#: mozillians/templates/groups/group.html:122
+#: mozillians/templates/groups/group.html:131
+#, fuzzy
+msgid "Request to Join Group"
+msgstr "Připojit se do skupiny"
+
+#: mozillians/templates/groups/group.html:133
 msgid "Join Group"
 msgstr "Připojit se do skupiny"
 
-#: mozillians/templates/groups/group.html:132
+#: mozillians/templates/groups/group.html:144
 msgid "Leave Group"
 msgstr "Opustit skupinu"
 
 #: mozillians/templates/groups/group.html:153
+msgid "Filter"
+msgstr ""
+
+#: mozillians/templates/groups/group.html:161
 msgid "There are no open membership requests for %(group_name)s."
-msgstr ""
-"Pro skupinu %(group_name)s nejsou v současné době otevřené žádosti o "
-"členství."
+msgstr "Pro skupinu %(group_name)s nejsou v současné době otevřené žádosti o členství."
 
-#: mozillians/templates/groups/group.html:157
+#: mozillians/templates/groups/group.html:165
 msgid "Sorry, we can not find any mozillians in %(group_name)s."
-msgstr ""
-"Omlouváme se, ale nemůžeme nalézt žádného člena Mozillians ve skupině %"
-"(group_name)s."
+msgstr "Omlouváme se, ale nemůžeme nalézt žádného člena Mozillians ve skupině %(group_name)s."
 
-#: mozillians/templates/groups/group.html:170
+#: mozillians/templates/groups/group.html:177
 msgid "Functional Area Members"
 msgstr "Členové oblasti zájmu"
 
-#: mozillians/templates/groups/group.html:172
+#: mozillians/templates/groups/group.html:179
 msgid "Group Members"
 msgstr "Členové skupiny"
+
+#: mozillians/templates/groups/group.html:185
+msgid "Your membership request is pending approval by the group curator."
+msgstr "Vaše žádost o členství, která čekala na vyřízení, byla schválena správcem skupiny."
 
 #: mozillians/templates/groups/index_areas.html:3 mozillians/templates/groups/index_areas.html:8
 msgid "Functional Areas"
@@ -607,8 +618,29 @@ msgstr "Oblasti zájmu"
 msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
 msgstr "Poznejte členy Mozillians a stewardy v konkrétní oblasti vašeho zájmu. Poznejte, kdo na čem pracuje a jak můžete pomoci."
 
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:272 mozillians/templates/phonebook/home.html:144
-#: mozillians/templates/phonebook/profile.html:174
+#: mozillians/templates/groups/index_common.html:2 mozillians/templates/groups/index_groups.html:3
+msgid "Group Listing"
+msgstr "Seznam skupin"
+
+#: mozillians/templates/groups/index_common.html:16
+msgid "Sort"
+msgstr "Seřadit"
+
+#: mozillians/templates/groups/index_common.html:22 mozillians/templates/groups/index_groups.html:10
+msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
+msgstr ""
+"Členové serveru Mozillians pracují na celé řadě věcí! Jedni vyvíjí doplňky, druhý mohou překládat. Najděte pomocí uživatelsky zakládaných skupin členy serveru Mozillians, kteří pracují na podobných "
+"věcech."
+
+#: mozillians/templates/groups/index_common.html:44
+msgid "%(num)s member"
+msgid_plural "%(num)s members"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:277 mozillians/templates/phonebook/home.html:144
+#: mozillians/templates/phonebook/profile.html:184
 msgid "Skills"
 msgstr "Dovednosti"
 
@@ -636,9 +668,21 @@ msgstr "Omlouváme se, ale nemůžeme nalézt žádné členy Mozillians s doved
 msgid "Previous"
 msgstr "Předchozí"
 
+#: mozillians/templates/includes/pagination.html:26
+msgid "Page"
+msgstr ""
+
 #: mozillians/templates/includes/pagination.html:70
 msgid "Next"
 msgstr "Další"
+
+#: mozillians/templates/includes/search_result.html:15
+msgid "Confirm Request"
+msgstr "Potvrdit žádost"
+
+#: mozillians/templates/includes/search_result.html:19
+msgid "Requested"
+msgstr "Požádáno"
 
 #: mozillians/templates/phonebook/about.html:9
 msgid "Photo collage of Mozillians"
@@ -727,16 +771,16 @@ msgstr "Učinit všechny položky mého profilu viditelné pro:"
 msgid "-- No Change --"
 msgstr "-- Žádná změna --"
 
-#: mozillians/templates/phonebook/edit_profile.html:63 mozillians/templates/phonebook/profile.html:129 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:63 mozillians/templates/phonebook/profile.html:132 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "Veřejné"
 
-#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/edit_profile.html:443
+#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/edit_profile.html:445
 msgid "Update Profile"
 msgstr "Aktualizovat profil"
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:71 mozillians/templates/phonebook/edit_profile.html:445
+#: mozillians/templates/phonebook/edit_profile.html:71 mozillians/templates/phonebook/edit_profile.html:447
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -752,7 +796,7 @@ msgstr "Pro tučný text, kurzívu, seznamy či odkazy použijte <a href=\"%(url
 msgid "Accounts"
 msgstr "Účty"
 
-#: mozillians/templates/phonebook/edit_profile.html:149 mozillians/templates/phonebook/edit_profile.html:312
+#: mozillians/templates/phonebook/edit_profile.html:149 mozillians/templates/phonebook/edit_profile.html:314
 msgid "Delete"
 msgstr "Smazat"
 
@@ -760,73 +804,68 @@ msgstr "Smazat"
 msgid "Add account"
 msgstr "Přidat účet"
 
-#: mozillians/templates/phonebook/edit_profile.html:178
+#: mozillians/templates/phonebook/edit_profile.html:183
 msgid "T-Shirt Size"
 msgstr "Velikost trička"
 
-#: mozillians/templates/phonebook/edit_profile.html:180
+#: mozillians/templates/phonebook/edit_profile.html:185
 msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
 msgstr "Máte rádi trička? Vyplňte svou velikost, abychom vám mohli dát tričko na události nebo při jiných speciálních příležitostech."
 
-#: mozillians/templates/phonebook/edit_profile.html:188
+#: mozillians/templates/phonebook/edit_profile.html:193
 msgid "Fitted"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:192
+#: mozillians/templates/phonebook/edit_profile.html:197
 msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:210
+#: mozillians/templates/phonebook/edit_profile.html:215
 msgid "Straight-cut"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:214
+#: mozillians/templates/phonebook/edit_profile.html:219
 msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as \"men's\" or \"unisex\"."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:237
+#: mozillians/templates/phonebook/edit_profile.html:242
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "Skupiny obsahují členy serveru Mozillians, kteří mají něco společného. Může se jednat o zájem, tým, projekt či produkt."
 
-#: mozillians/templates/phonebook/edit_profile.html:245
+#: mozillians/templates/phonebook/edit_profile.html:250
 msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
-msgstr ""
-"Pokud se chcete připojit ke skupině, <a href=\"%(browse)s\">nalezněte stránku "
-"skupiny</a>, a poté klepněte na tlačítko Připojit ke skupině."
+msgstr "Pokud se chcete připojit ke skupině, <a href=\"%(browse)s\">nalezněte stránku skupiny</a>, a poté klepněte na tlačítko Připojit ke skupině."
 
-#: mozillians/templates/phonebook/edit_profile.html:249
+#: mozillians/templates/phonebook/edit_profile.html:254
 msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
-msgstr ""
-"Pro opuštění skupiny klepněte na její jméno níže na stránce a klepněte na "
-"tlačítko Opustit skupinu."
+msgstr "Pro opuštění skupiny klepněte na její jméno níže na stránce a klepněte na tlačítko Opustit skupinu."
 
-#: mozillians/templates/phonebook/edit_profile.html:256
+#: mozillians/templates/phonebook/edit_profile.html:261
 msgid "After you are vouched, you will be able to join groups."
-msgstr ""
-"Ke skupinám se budete moci připojovat jakmile bude vaše členství schváleno."
+msgstr "Ke skupinám se budete moci připojovat jakmile bude vaše členství schváleno."
 
-#: mozillians/templates/phonebook/edit_profile.html:274
+#: mozillians/templates/phonebook/edit_profile.html:279
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Dovednost je naučená schopnost dosahovat předem stanovených výsledků s minimálním vynaložením času, energie či obojí."
 
-#: mozillians/templates/phonebook/edit_profile.html:288 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:188
+#: mozillians/templates/phonebook/edit_profile.html:290 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:198
 msgid "Languages"
 msgstr "Jazyky"
 
-#: mozillians/templates/phonebook/edit_profile.html:290
+#: mozillians/templates/phonebook/edit_profile.html:292
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "Projekt Mozilla pokrývá řadu zemí a jazyků. Sdělte nám, jakými jazyky mluvíte, abyste byli snázeji nalezitelní dalšími členy Mozillians."
 
-#: mozillians/templates/phonebook/edit_profile.html:322
+#: mozillians/templates/phonebook/edit_profile.html:324
 #, fuzzy
 msgid "Add language"
 msgstr "Volba jazyka"
 
-#: mozillians/templates/phonebook/edit_profile.html:326
+#: mozillians/templates/phonebook/edit_profile.html:328
 msgid "Services"
 msgstr "Služby"
 
-#: mozillians/templates/phonebook/edit_profile.html:328
+#: mozillians/templates/phonebook/edit_profile.html:330
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
@@ -834,15 +873,15 @@ msgstr ""
 " Phonebook nabízí API, které pomáhá autorizovaným přispěvatelům sdílet profilová data v jiných nástrojích a webech jako jsou například <a href=\"%(bugzilla_url)s\">Bugzilla</a> či <a href="
 "\"%(reps_url)s\">portál Mozilla Reps</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:335
+#: mozillians/templates/phonebook/edit_profile.html:337
 msgid "Other Sites"
 msgstr "Ostatní stránky"
 
-#: mozillians/templates/phonebook/edit_profile.html:346
+#: mozillians/templates/phonebook/edit_profile.html:348
 msgid "Developers"
 msgstr "Vývojáři"
 
-#: mozillians/templates/phonebook/edit_profile.html:348
+#: mozillians/templates/phonebook/edit_profile.html:350
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -850,61 +889,61 @@ msgstr ""
 "Podívejte se na seznam <a href=\"%(api_schema_url)s\">metod API, které jsme zpřístupnili</a>. Pro používání tohoto API potřebujete získat souhlas od našeho týmu Privacy. Pro začátek <a href="
 "\"%(bugzilla_request_url)s\">vyplňte požadavek</a>. Pokud máte jakýkoliv dotaz, napište nám jej do našeho <a href=\"%(dev_form_url)s\">fóra vývoje</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:364
+#: mozillians/templates/phonebook/edit_profile.html:366
 msgid "Your approved apps:"
 msgstr "Vámi schválené aplikace:"
 
-#: mozillians/templates/phonebook/edit_profile.html:367
+#: mozillians/templates/phonebook/edit_profile.html:369
 msgid "Key"
 msgstr "Klíč"
 
-#: mozillians/templates/phonebook/edit_profile.html:370
+#: mozillians/templates/phonebook/edit_profile.html:372
 msgid "You have no registered, active apps."
 msgstr "Nemáte žádnou registrovanou aktivní aplikaci."
 
-#: mozillians/templates/phonebook/edit_profile.html:378
+#: mozillians/templates/phonebook/edit_profile.html:380
 msgid "Vouches & Invites"
 msgstr "Potvrzené a pozvané"
 
-#: mozillians/templates/phonebook/edit_profile.html:379 mozillians/templates/phonebook/profile.html:214
+#: mozillians/templates/phonebook/edit_profile.html:381 mozillians/templates/phonebook/profile.html:238
 msgid "Vouched By"
 msgstr "Potvrdil(a)"
 
-#: mozillians/templates/phonebook/edit_profile.html:385
+#: mozillians/templates/phonebook/edit_profile.html:387
 msgid "You are automatically vouched!"
 msgstr "Byl(a) jste automaticky potvrzen(a)!"
 
-#: mozillians/templates/phonebook/edit_profile.html:387
+#: mozillians/templates/phonebook/edit_profile.html:389
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr ""
 "Váš profil čeká na schválení. Pošlete odkaz někomu, kdo zná váš příspěvek projektu Mozilla a požádejte jej, aby vás potvrdil: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </"
 "em>"
 
-#: mozillians/templates/phonebook/edit_profile.html:396
+#: mozillians/templates/phonebook/edit_profile.html:398
 msgid "Vouchees"
 msgstr "Potvrzení"
 
-#: mozillians/templates/phonebook/edit_profile.html:415
+#: mozillians/templates/phonebook/edit_profile.html:417
 msgid "This field is required."
 msgstr "Toto pole je vyžadováno."
 
-#: mozillians/templates/phonebook/edit_profile.html:424
+#: mozillians/templates/phonebook/edit_profile.html:426
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "Souhlasím se zpracováním informací v podobě, jak jsou uvedeny v <a href=\"%(privacy_url)s\">zásadách ochrany soukromí Mozilly</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:433
+#: mozillians/templates/phonebook/edit_profile.html:435
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Jakmile budete potvrzen(a) jako člen Mozillians, začnete odebírat e-mailovou komunikaci. Její odebírání můžete kdykoliv zrušit klepnutím na odkaz v patičce e-mailů."
 
-#: mozillians/templates/phonebook/edit_profile.html:448
+#: mozillians/templates/phonebook/edit_profile.html:450
 msgid "Create Profile"
 msgstr "Vytvořit profil"
 
-#: mozillians/templates/phonebook/edit_profile.html:454 mozillians/templates/phonebook/edit_profile.html:464
+#: mozillians/templates/phonebook/edit_profile.html:456 mozillians/templates/phonebook/edit_profile.html:466
 msgid "Delete Profile"
 msgstr "Smazat profil"
 
-#: mozillians/templates/phonebook/edit_profile.html:457
+#: mozillians/templates/phonebook/edit_profile.html:459
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "Rozumím, že smazáním mého účtu bude obtížněji dohledatelný můj příspěvek projektu a nebudu snadno nalezitelný ostatními členy komunity Mozilla."
 
@@ -945,7 +984,7 @@ msgstr ""
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">Zapojit se</a>"
 
-#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:161
+#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:171
 msgid "(membership requested)"
 msgstr ""
 
@@ -993,6 +1032,23 @@ msgstr "Poslat pozvání"
 msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
 msgstr "<strong>Poznámka:</strong> Vaše jméno a e-mail bude odeslán tomu, kterého jste pozval(a)."
 
+#: mozillians/templates/phonebook/invite.html:39
+#, fuzzy
+msgid "Your Invites"
+msgstr "Potvrzené a pozvané"
+
+#: mozillians/templates/phonebook/invite.html:50
+msgid "Sent:"
+msgstr ""
+
+#: mozillians/templates/phonebook/invite.html:54
+msgid "Redeemed:"
+msgstr ""
+
+#: mozillians/templates/phonebook/invite.html:57
+msgid "Redeemer:"
+msgstr ""
+
 #: mozillians/templates/phonebook/invited.html:3
 msgid "Invitation Sent"
 msgstr "Poslání pozvání"
@@ -1005,7 +1061,12 @@ msgstr "Pozvání bylo odesláno"
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr "%(recipient)s byl pozván(a) k připojení k serveru Mozillians. Obdrží e-mail s instrukcemi, jak se zapojit. Pokud chcete, můžete <a href=\"%(invite_url)s\">pozvat dalšího člena</a>."
 
-#: mozillians/templates/phonebook/location-list.html:39
+#: mozillians/templates/phonebook/location_list.html:16
+#, fuzzy
+msgid "Mozillians in"
+msgstr "Mozillians"
+
+#: mozillians/templates/phonebook/location_list.html:39
 msgid "Sorry we cannot find any mozillians in"
 msgstr "Omlouváme se, ale nemůžeme nalézt žádné členy Mozillians v"
 
@@ -1043,46 +1104,55 @@ msgstr "<p>Tento profil čeká na schválení.</p> <p>Protože adresář naší 
 msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
 msgstr "Váš profil není veřejný. Pokud si <a href=\"%(edit_url)s\">upravíte svůj profil</a>, aby alespoň jeden údaj byl veřejný, bude váš veřejný profil dostupný."
 
-#: mozillians/templates/phonebook/profile.html:85
+#: mozillians/templates/phonebook/profile.html:88
 msgid "Mozillian for %(mozillian_years)s year"
 msgid_plural "Mozillian for %(mozillian_years)s years"
 msgstr[0] "Člen Mozillian %(mozillian_years)s let"
 msgstr[1] "Člen Mozillian %(mozillian_years)s let"
 msgstr[2] "Člen Mozillian %(mozillian_years)s let"
 
-#: mozillians/templates/phonebook/profile.html:117
+#: mozillians/templates/phonebook/profile.html:120
 msgid "View as:"
 msgstr "Zobrazit jako:"
 
-#: mozillians/templates/phonebook/profile.html:121
+#: mozillians/templates/phonebook/profile.html:124
 msgid "Myself"
 msgstr "Pouze já"
 
-#: mozillians/templates/phonebook/profile.html:125
+#: mozillians/templates/phonebook/profile.html:128
 msgid "Mozillian"
 msgstr "Mozillian"
 
-#: mozillians/templates/phonebook/profile.html:145 mozillians/users/models.py:163
+#: mozillians/templates/phonebook/profile.html:148 mozillians/users/models.py:164
 msgid "Bio"
 msgstr "O členu"
 
-#: mozillians/templates/phonebook/profile.html:197
+#: mozillians/templates/phonebook/profile.html:157
+msgid "My contribution story"
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:207
+#, fuzzy
+msgid "Websites"
+msgstr "Webová stránka"
+
+#: mozillians/templates/phonebook/profile.html:221
 msgid "External Accounts"
 msgstr "Externí účty"
 
-#: mozillians/templates/phonebook/profile.html:248
+#: mozillians/templates/phonebook/profile.html:264
 msgid "T-Shirt Size:"
 msgstr "Velikost trička:"
 
-#: mozillians/templates/phonebook/profile.html:258
+#: mozillians/templates/phonebook/profile.html:274
 msgid "%(hours)s hours ahead of your timezone."
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:261
+#: mozillians/templates/phonebook/profile.html:277
 msgid "%(hours)s hours behind your timezone."
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:264
+#: mozillians/templates/phonebook/profile.html:280
 msgid "Same time zone as yours."
 msgstr ""
 
@@ -1119,15 +1189,29 @@ msgstr "Pokročilé možnosti"
 msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
 msgstr "<h2>Hledání člena</h2><p>Můžete hledat dalšího člena pomocí jména, e-mailu či nicku.</p>"
 
-#: mozillians/templates/phonebook/search.html:95
+#: mozillians/templates/phonebook/search.html:66
+msgid "%(count)s group matching"
+msgid_plural "%(count)s groups matching"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/templates/phonebook/search.html:90
+msgid "%(count)s Mozillian matching"
+msgid_plural "%(count)s Mozillians matching"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/templates/phonebook/search.html:115
 msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
 msgstr "Omlouváme se, ale nemůžeme nalézt skupinu či osobu s \"%(query)s\"."
 
-#: mozillians/templates/phonebook/search.html:101
+#: mozillians/templates/phonebook/search.html:121
 msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
 msgstr "Možná dosud nejsou členy Mozillian? <a href=\"%(invite)s\">Pozvěte tuto osobu</a>, aby si vytvořila profil."
 
-#: mozillians/templates/phonebook/search.html:107
+#: mozillians/templates/phonebook/search.html:127
 msgid "Need help? Contact a steward in a functional area!"
 msgstr "Potřebujete pomoci? Kontaktujte zástupce v konkrétní tématické oblasti!"
 
@@ -1151,133 +1235,139 @@ msgstr "Ověření e-mailu"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "Toto je váš Gravatar. Změnit si jej můžete na gravatar.com."
 
-#: mozillians/templates/phonebook/includes/search_result.html:10
-msgid "Confirm Request"
-msgstr "Potvrdit žádost"
-
-#: mozillians/templates/phonebook/includes/search_result.html:14
-msgid "Requested"
-msgstr "Požádáno"
-
 #: mozillians/users/models.py:99
 msgid "Privileged"
 msgstr "Privilegovaná"
 
-#: mozillians/users/models.py:153
+#: mozillians/users/models.py:154
 msgid "Full Name"
 msgstr "Celé jméno"
 
-#: mozillians/users/models.py:167
+#: mozillians/users/models.py:168
 msgid "IRC Nickname"
 msgstr "Nick na IRC"
 
-#: mozillians/users/models.py:171
+#: mozillians/users/models.py:172
 msgid "Country"
 msgstr "Země"
 
-#: mozillians/users/models.py:173
+#: mozillians/users/models.py:174
 msgid "Province/State"
 msgstr "Provincie"
 
-#: mozillians/users/models.py:175
+#: mozillians/users/models.py:176
 msgid "City"
 msgstr "Město"
 
-#: mozillians/users/models.py:178
+#: mozillians/users/models.py:179
 msgid "Sites that can determine my vouched status"
 msgstr "Weby, které mohou získat informaci o stavu mého schválení"
 
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:180
 msgid "All Community Sites"
 msgstr "Všechny komunitní weby"
 
-#: mozillians/users/models.py:180
+#: mozillians/users/models.py:181
 msgid "Only Mozilla Properties"
 msgstr "Pouze weby provozované Mozillou"
 
-#: mozillians/users/models.py:183
+#: mozillians/users/models.py:184
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Povolit webům Mozilly přístup k datům mého profilu?"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:192
 msgid "T-Shirt"
 msgstr "Tričko"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted Small"
 msgstr ""
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:194
 msgid "Fitted Medium"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted Large"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:195
 msgid "Fitted X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Fitted XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Fitted XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut Small"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "Straight-cut Medium"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut Large"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Straight-cut X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:199
 msgid "Straight-cut XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:199
 msgid "Straight-cut XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:201
 msgid "What do you do for Mozilla?"
 msgstr "Co děláte pro Mozillu?"
 
-#: mozillians/users/models.py:538
+#: mozillians/users/models.py:205
+msgid "Link to your contribution story"
+msgstr ""
+
+#: mozillians/users/models.py:206
+msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
+msgstr ""
+
+#: mozillians/users/models.py:535
 msgid "You are now vouched on Mozillians!"
 msgstr "Nyní jste na serveru Mozillians potvrzen(a)!"
 
-#: mozillians/users/models.py:539
+#: mozillians/users/models.py:536
 msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 msgstr "Byl(a) jste potvrzen(a) na serveru Mozillians.org. Nyní máte možnost vyhledávat, potvrzovat a zvát další členy Mozillians."
 
-#: mozillians/users/models.py:745
+#: mozillians/users/models.py:779
 msgid "Account Username"
 msgstr "Uživatelské jméno"
 
-#: mozillians/users/models.py:750
+#: mozillians/users/models.py:784
 msgid "Account Type"
 msgstr "Typ účtu"
 
-#: mozillians/users/models.py:764
+#: mozillians/users/models.py:798
 msgid "You already have an account with this name and type."
 msgstr ""
 
-#: mozillians/users/models.py:782
+#: mozillians/users/models.py:816
 msgid "This language has already been selected."
 msgstr "Tento jazyk byl již vybrán."
+
+#~ msgid "Become a Mozillian"
+#~ msgstr "Stát se členem serveru Mozillian"
+
+#~ msgid "members"
+#~ msgstr "členové"
 
 #~ msgid "Start typing to add a language you speak (example: English, French, German)"
 #~ msgstr "Začněte zadávat jazyk, kterým hovoříte (například: English, French, German)"
@@ -1485,9 +1575,6 @@ msgstr "Tento jazyk byl již vybrán."
 #~ msgid "Bio:"
 #~ msgstr "O mně:"
 
-#~ msgid "Contact"
-#~ msgstr "Kontakt"
-
 #~ msgid "Summary"
 #~ msgstr "Souhrn"
 
@@ -1653,9 +1740,6 @@ msgstr "Tento jazyk byl již vybrán."
 
 #~ msgid "Confirm your account"
 #~ msgstr "Potvrzení účtu"
-
-#~ msgid "Please confirm your Mozillians account: %s"
-#~ msgstr "Potvrďte prosím váš účet na serveru Mozillians: %s"
 
 #~ msgid "Your account has been created but needs to be verified. Please check your email to verify your account."
 #~ msgstr "Váš účet byl vytvořen, ale potřebuje být ověřen. Zkontrolujte si svou e-mailovou schránku, kde naleznete e-mail pro ověření."
