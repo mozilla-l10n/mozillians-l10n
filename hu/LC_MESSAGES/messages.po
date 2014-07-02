@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-13 02:54-0700\n"
+"POT-Creation-Date: 2014-07-02 02:47-0700\n"
 "PO-Revision-Date: 2014-05-14 12:02+0000\n"
 "Last-Translator: Gábor <kelemeng@ubuntu.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -15,7 +15,11 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1400068962.0\n"
 
-#: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:300
+#: mozillians/common/authbackend.py:82
+msgid "Authentication failed."
+msgstr "Hitelesítés sikertelen."
+
+#: mozillians/common/helpers.py:70 mozillians/templates/phonebook/edit_profile.html:379
 msgid "Visible to:"
 msgstr "Látható:"
 
@@ -26,6 +30,18 @@ msgstr "A folytatáshoz be kell jelentkeznie."
 #: mozillians/common/middleware.py:16
 msgid "You must be vouched to continue."
 msgstr "A folytatáshoz ajánlásra van szükség."
+
+#: mozillians/geo/models.py:91 mozillians/templates/phonebook/edit_profile.html:155 mozillians/users/models.py:179
+msgid "Country"
+msgstr "Ország"
+
+#: mozillians/geo/models.py:93 mozillians/users/models.py:181
+msgid "Province/State"
+msgstr "Megye/állam"
+
+#: mozillians/geo/models.py:95 mozillians/templates/phonebook/edit_profile.html:185 mozillians/users/models.py:183
+msgid "City"
+msgstr "Város"
 
 #: mozillians/groups/forms.py:14
 msgid "Name A-Z"
@@ -51,7 +67,7 @@ msgstr "Már van ilyen nevű csoport."
 msgid "All"
 msgstr "Mind"
 
-#: mozillians/groups/forms.py:86 mozillians/templates/groups/group.html:73
+#: mozillians/groups/forms.py:86 mozillians/templates/groups/group.html:67
 msgid "Members"
 msgstr "Tagok"
 
@@ -75,7 +91,7 @@ msgstr "Függő"
 msgid "Description"
 msgstr "Leírás"
 
-#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:56
+#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:53
 msgid "IRC Channel"
 msgstr "IRC-csatorna"
 
@@ -83,7 +99,7 @@ msgstr "IRC-csatorna"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "A csoporthoz tartozó IRC csatorna (opcionális)."
 
-#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:66
+#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:60
 msgid "Website"
 msgstr "Weboldal"
 
@@ -91,7 +107,7 @@ msgstr "Weboldal"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "A weboldal URL-je, ahol több információt találhat róla (opcionális)."
 
-#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:70
+#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:64
 msgid "Wiki"
 msgstr "Wiki"
 
@@ -99,7 +115,7 @@ msgstr "Wiki"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "A wiki oldal URL-je ahol több információt találhat erről a csoportról (opcionális)."
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:185
+#: mozillians/groups/models.py:180 mozillians/users/models.py:201
 msgid "Yes"
 msgstr "Igen"
 
@@ -107,7 +123,7 @@ msgstr "Igen"
 msgid "By request"
 msgstr "Kérésre"
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:185
+#: mozillians/groups/models.py:182 mozillians/users/models.py:201
 msgid "No"
 msgstr "Nem"
 
@@ -201,63 +217,88 @@ msgstr "%s csoport törölve"
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Ahhoz, hogy egy csoportot szerkeszthessen, gondozónak vagy adminnak kell lennie."
 
-#: mozillians/phonebook/forms.py:67
+#: mozillians/phonebook/forms.py:66
 msgid "Include non-vouched"
 msgstr "Nem ajánlottak is"
 
-#: mozillians/phonebook/forms.py:81
+#: mozillians/phonebook/forms.py:80
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: mozillians/phonebook/forms.py:97
+#: mozillians/phonebook/forms.py:96
 msgid "This username is in use. Please try another."
 msgstr "Ezt a nevet már használja valaki. Válasszon másikat."
 
-#: mozillians/phonebook/forms.py:102
+#: mozillians/phonebook/forms.py:101
 msgid "Please use only alphanumeric characters"
 msgstr "Csak alfanumerikus karaktereket használjon."
 
-#: mozillians/phonebook/forms.py:106
+#: mozillians/phonebook/forms.py:105
 msgid "This username is not allowed, please choose another."
 msgstr "Ez a név nem engedélyezett, válasszon másikat."
 
-#: mozillians/phonebook/forms.py:112 mozillians/templates/groups/group.html:100 mozillians/templates/includes/search_result.html:27 mozillians/templates/phonebook/edit_profile.html:77
+#: mozillians/phonebook/forms.py:111 mozillians/templates/groups/group.html:94 mozillians/templates/includes/search_result.html:27 mozillians/templates/phonebook/edit_profile.html:97
 msgid "Profile Photo"
 msgstr "Profilkép"
 
-#: mozillians/phonebook/forms.py:113 mozillians/templates/phonebook/edit_profile.html:85 mozillians/templates/phonebook/includes/photo_form.html:23
+#: mozillians/phonebook/forms.py:112 mozillians/templates/phonebook/edit_profile.html:105 mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr "Profilkép eltávolítása"
 
-#: mozillians/phonebook/forms.py:117
+#: mozillians/phonebook/forms.py:116
 msgid "When did you get involved with Mozilla?"
 msgstr "Mikor került kapcsolatba a Mozillával?"
 
-#: mozillians/phonebook/forms.py:122
+#: mozillians/phonebook/forms.py:121
 msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 msgstr "Kezdje el gépelni az ismeret nevét (például: Python, javascript, Graphic Design, User Research)"
 
-#: mozillians/phonebook/forms.py:174
+#: mozillians/phonebook/forms.py:127
+#, fuzzy
+msgid "Required"
+msgstr "Kérés alatt"
+
+#: mozillians/phonebook/forms.py:131 mozillians/phonebook/forms.py:132
+msgid "Save"
+msgstr ""
+
+#: mozillians/phonebook/forms.py:173
 msgid "Skills can only contain alphanumeric characters and +.:-."
 msgstr "Az ismeret csak alfanumerikus karaktereket és a +.:- jeleket tartalmazhatja."
 
-#: mozillians/phonebook/forms.py:210
+#: mozillians/phonebook/forms.py:191
+msgid "Location must be inside a country."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:199
+msgid "Region must also be saved if city is saved."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:205
+msgid "Search for your country on the map."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:206
+msgid "Country cannot be empty."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:239
 msgid "Email"
 msgstr "E-mail"
 
-#: mozillians/phonebook/forms.py:216
+#: mozillians/phonebook/forms.py:245
 msgid "Email is currently associated with another user."
 msgstr "Az e-mail cím egy másik felhasználóhoz tartozik."
 
-#: mozillians/phonebook/forms.py:235
+#: mozillians/phonebook/forms.py:264
 msgid "Message"
 msgstr "Üzenet"
 
-#: mozillians/phonebook/forms.py:242
+#: mozillians/phonebook/forms.py:271
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Nem lehet olyan embert meghívni, akinek már van ajánlása."
 
-#: mozillians/phonebook/middleware.py:30
+#: mozillians/phonebook/middleware.py:34
 msgid "Please complete registration before proceeding."
 msgstr "Elküldés előtt fejezze be a regisztrációt."
 
@@ -305,46 +346,40 @@ msgstr "Ez a mező azonosítót igényel, nem URL-t."
 msgid "Enter a valid address."
 msgstr "Adjon meg egy érvényes címet."
 
-#: mozillians/phonebook/views.py:48
-msgid "Authentication failed."
-msgstr "Hitelesítés sikertelen."
+#: mozillians/phonebook/validators.py:87
+msgid "Please enter a valid phone number, in international format (e.g. +1 555 555 5555)"
+msgstr ""
 
-#: mozillians/phonebook/views.py:54
-msgid "Email already exists in the database."
-msgstr "Az e-mail cím már létezik az adatbázisban."
-
-#: mozillians/phonebook/views.py:180
+#: mozillians/phonebook/views.py:152
 msgid "Your account has been created."
 msgstr "A felhasználói fiókja elkészült."
 
-#: mozillians/phonebook/views.py:183
+#: mozillians/phonebook/views.py:155
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Megváltoztatta a felhasználónevét. Ne feledje, hogy ezzel együtt a profil URL címe is megváltozott."
 
-#: mozillians/phonebook/views.py:221
+#: mozillians/phonebook/views.py:194
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "A felhasználói fiókja törölve. Köszönjük, hogy mozillás volt!"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:313
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s meghívást kapott a mozillások közé. A csatlakozás módjáról e-mailt kapnak. Ha szeretné, meghívhat további mozillást is."
 
-#: mozillians/phonebook/views.py:306
+#: mozillians/phonebook/views.py:329
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
-msgstr ""
-"%s meghívása a Mozillások közé visszavonva. %s újra meghívható, ha ezt "
-"szeretné."
+msgstr "%s meghívása a Mozillások közé visszavonva. %s újra meghívható, ha ezt szeretné."
 
-#: mozillians/phonebook/views.py:323
+#: mozillians/phonebook/views.py:346
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Köszönjük, hogy ajánlotta mozillás barátját! Mostantól ez a felhasználó ajánlással rendelkezik!"
 
-#: mozillians/phonebook/views.py:391
+#: mozillians/phonebook/views.py:407
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Meghívták, hogy csatlakozzon a Mozillians.org oldalhoz! Jelentkezzen be, és hozza létre profilját."
 
-#: mozillians/settings/base.py:284 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/search.html:88
-#: mozillians/users/managers.py:11
+#: mozillians/settings/base.py:309 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:88
+#: mozillians/templates/phonebook/edit_profile.html:61 mozillians/templates/phonebook/search.html:88 mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Mozillások"
 
@@ -406,75 +441,74 @@ msgstr "Üdvözöljük"
 msgid "Mozilla's contributor phonebook"
 msgstr "Mozillás közreműködők címjegyzéke"
 
-#: mozillians/templates/base.html:62
+#: mozillians/templates/base.html:63
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: mozillians/templates/base.html:65 mozillians/templates/includes/lang_switcher.html:3
+#: mozillians/templates/base.html:66 mozillians/templates/includes/lang_switcher.html:3
 msgid "Select language"
 msgstr "Válasszon nyelvet"
 
-#: mozillians/templates/base.html:66
+#: mozillians/templates/base.html:67
 msgid "Skip to main content"
 msgstr "Ugrás a főtartalomra"
 
-#: mozillians/templates/base.html:77 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:167 mozillians/templates/phonebook/search.html:32
+#: mozillians/templates/base.html:78 mozillians/templates/phonebook/betasearch.html:32 mozillians/templates/phonebook/home.html:23 mozillians/templates/phonebook/home.html:167
+#: mozillians/templates/phonebook/search.html:32
 msgid "Search for people, groups and more"
 msgstr "Emberek, csoportok és egyebek keresése"
 
-#: mozillians/templates/base.html:101
+#: mozillians/templates/base.html:102
 msgid "View Profile"
 msgstr "Profil megtekintése"
 
-#: mozillians/templates/base.html:107 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:30
+#: mozillians/templates/base.html:108 mozillians/templates/phonebook/edit_profile.html:5 mozillians/templates/phonebook/edit_profile.html:29
 msgid "Edit Your Profile"
 msgstr "Profil szerkesztése"
 
-#: mozillians/templates/base.html:114 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/edit_profile.html:240
-#: mozillians/templates/phonebook/home.html:117 mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:163 mozillians/templates/phonebook/search.html:64
+#: mozillians/templates/base.html:115 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/betasearch.html:64
+#: mozillians/templates/phonebook/edit_profile.html:319 mozillians/templates/phonebook/home.html:117 mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:165
+#: mozillians/templates/phonebook/search.html:64
 msgid "Groups"
 msgstr "Csoportok"
 
-#: mozillians/templates/base.html:120
+#: mozillians/templates/base.html:121
 msgid "Invite"
 msgstr "Meghívás"
 
-#: mozillians/templates/base.html:127 mozillians/templates/base.html:135
+#: mozillians/templates/base.html:128 mozillians/templates/base.html:136
 msgid "Log Out"
 msgstr "Kijelentkezés"
 
-#: mozillians/templates/base.html:140 mozillians/templates/base.html:143
+#: mozillians/templates/base.html:141 mozillians/templates/base.html:144
 msgid "Sign in"
 msgstr "Bejelentkezés"
 
-#: mozillians/templates/base.html:183
+#: mozillians/templates/base.html:184
 msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
 msgstr "Segítsen jobbá tenni a Mozillások oldalt. <a href=\"%(bug_url)s\">Jelentse be a hibákat</a> vagy <a href=\"%(git_url)s\">javítsa ki őket</a>."
 
-#: mozillians/templates/base.html:203
+#: mozillians/templates/base.html:204
 msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
-msgstr ""
-"A tartalom egyes részei &copy;1998– %(current_year)s egyéni mozilla.org "
-"közreműködők munkái. A tartalom <a href=\"%(license_link)s\">Creative "
-"Commons</a> licenc alatt érhető el."
+msgstr "A tartalom egyes részei &copy;1998– %(current_year)s egyéni mozilla.org közreműködők munkái. A tartalom <a href=\"%(license_link)s\">Creative Commons</a> licenc alatt érhető el."
 
-#: mozillians/templates/base.html:212 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
+#: mozillians/templates/base.html:213 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr "Névjegy"
 
-#: mozillians/templates/base.html:213
+#: mozillians/templates/base.html:214
 msgid "Contact Us"
 msgstr "Kapcsolat"
 
-#: mozillians/templates/base.html:214
+#: mozillians/templates/base.html:215
 msgid "Privacy Policy"
 msgstr "Adatvédelmi irányelvek"
 
-#: mozillians/templates/base.html:215
+#: mozillians/templates/base.html:216
 msgid "Legal Notices"
 msgstr "Jogi megjegyzések"
 
-#: mozillians/templates/base.html:216
+#: mozillians/templates/base.html:217
 msgid "Report Trademark Abuse"
 msgstr "Védjeggyel való visszaélés jelentése"
 
@@ -490,7 +524,7 @@ msgstr "Működési terület szerkesztése"
 msgid "Edit group"
 msgstr "Csoport szerkesztése"
 
-#: mozillians/templates/groups/add_edit.html:16 mozillians/templates/phonebook/edit_profile.html:23 mozillians/templates/phonebook/invite.html:19
+#: mozillians/templates/groups/add_edit.html:16 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:19
 msgid "Please correct the errors below."
 msgstr "Javítsa az alábbi hibákat."
 
@@ -554,55 +588,51 @@ msgstr "Csoport törlése"
 msgid "Edit Group"
 msgstr "Csoport szerkesztése"
 
-#: mozillians/templates/groups/group.html:54
-msgid "IRC Channels"
-msgstr "IRC-csatornák"
-
-#: mozillians/templates/groups/group.html:77
+#: mozillians/templates/groups/group.html:71
 msgid "Skills members have in common"
 msgstr "A tagok hasonló ismeretekkel rendelkeznek"
 
-#: mozillians/templates/groups/group.html:91
+#: mozillians/templates/groups/group.html:85
 msgid "Community Steward"
 msgstr "Közösségi vezető"
 
-#: mozillians/templates/groups/group.html:93
+#: mozillians/templates/groups/group.html:87
 msgid "Curator"
 msgstr "Gondozó"
 
-#: mozillians/templates/groups/group.html:131
+#: mozillians/templates/groups/group.html:125
 msgid "Request to Join Group"
 msgstr "Csoporthoz csatlakozás kérése"
 
-#: mozillians/templates/groups/group.html:133
+#: mozillians/templates/groups/group.html:127
 msgid "Join Group"
 msgstr "Csatlakozás csoporthoz"
 
-#: mozillians/templates/groups/group.html:144
+#: mozillians/templates/groups/group.html:138
 msgid "Leave Group"
 msgstr "Csoport elhagyása"
 
-#: mozillians/templates/groups/group.html:153
+#: mozillians/templates/groups/group.html:147
 msgid "Filter"
 msgstr "Szűrő"
 
-#: mozillians/templates/groups/group.html:161
+#: mozillians/templates/groups/group.html:155
 msgid "There are no open membership requests for %(group_name)s."
 msgstr "Nincsenek nyitott tagsági kérések ehhez: %(group_name)s."
 
-#: mozillians/templates/groups/group.html:165
+#: mozillians/templates/groups/group.html:159
 msgid "Sorry, we can not find any mozillians in %(group_name)s."
 msgstr "Elnézést, nem találhat egyetlen mozillás sem itt: %(group_name)s."
 
-#: mozillians/templates/groups/group.html:177
+#: mozillians/templates/groups/group.html:171
 msgid "Functional Area Members"
 msgstr "Működési terület tagjai"
 
-#: mozillians/templates/groups/group.html:179
+#: mozillians/templates/groups/group.html:173
 msgid "Group Members"
 msgstr "Csoporttagok"
 
-#: mozillians/templates/groups/group.html:185
+#: mozillians/templates/groups/group.html:179
 msgid "Your membership request is pending approval by the group curator."
 msgstr "Csatlakozási kérelme a gondozó jóváhagyására vár."
 
@@ -632,8 +662,8 @@ msgid_plural "%(num)s members"
 msgstr[0] "%(num)s tag"
 msgstr[1] "%(num)s tag"
 
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:277 mozillians/templates/phonebook/home.html:144
-#: mozillians/templates/phonebook/profile.html:184
+#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:356 mozillians/templates/phonebook/home.html:144
+#: mozillians/templates/phonebook/profile.html:187
 msgid "Skills"
 msgstr "Ismeretek"
 
@@ -719,6 +749,67 @@ msgstr ""
 "A közösségi címjegyzék ugyancsak egy közösségi projekt és örömmel veszünk minden segítséget, hogy legyen vagy integrálódjon más közösségi eszközökhöz. További információért lépjen velünk "
 "kapcsolatba a <a href=\"%(google_groups_url)s\"> mozillások fórumán </a>."
 
+#: mozillians/templates/phonebook/betasearch.html:3 mozillians/templates/phonebook/search.html:3
+msgid "Search Results"
+msgstr "Keresési eredmények"
+
+#: mozillians/templates/phonebook/betasearch.html:17 mozillians/templates/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr "Jelenleg nyilvános profilokat keres."
+
+#: mozillians/templates/phonebook/betasearch.html:19 mozillians/templates/phonebook/search.html:19
+msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+msgstr "Több találat megtekintéséhez <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\">jelentkezzen be</a>."
+
+#: mozillians/templates/phonebook/betasearch.html:19 mozillians/templates/phonebook/search.html:19
+msgid "Sign In"
+msgstr "Bejelentkezés"
+
+#: mozillians/templates/phonebook/betasearch.html:25 mozillians/templates/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr "Több találatot jeleníthet meg, ha ajánlották."
+
+#: mozillians/templates/phonebook/betasearch.html:29
+#, fuzzy
+msgid "Beta Search"
+msgstr "Keresés"
+
+#: mozillians/templates/phonebook/betasearch.html:37 mozillians/templates/phonebook/search.html:29 mozillians/templates/phonebook/search.html:37
+msgid "Search"
+msgstr "Keresés"
+
+#: mozillians/templates/phonebook/betasearch.html:41 mozillians/templates/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr "Speciális beállítások"
+
+#: mozillians/templates/phonebook/betasearch.html:52 mozillians/templates/phonebook/search.html:52
+msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
+msgstr "<h2>Mozillás keresése</h2> <p> Megkereshet más mozillást, név, e-mail cím vagy IRC-név szerint. </p>"
+
+#: mozillians/templates/phonebook/betasearch.html:66 mozillians/templates/phonebook/search.html:66
+msgid "%(count)s group matching"
+msgid_plural "%(count)s groups matching"
+msgstr[0] "%(count)s megfelelő csoport"
+msgstr[1] "%(count)s megfelelő csoport"
+
+#: mozillians/templates/phonebook/betasearch.html:90 mozillians/templates/phonebook/search.html:90
+msgid "%(count)s Mozillian matching"
+msgid_plural "%(count)s Mozillians matching"
+msgstr[0] "%(count)s megfelelő mozillás"
+msgstr[1] "%(count)s megfelelő mozillás"
+
+#: mozillians/templates/phonebook/betasearch.html:115 mozillians/templates/phonebook/search.html:115
+msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+msgstr "Elnézést, nem található a következőhöz kapcsolódó csoport vagy személy: „%(query)s”."
+
+#: mozillians/templates/phonebook/betasearch.html:121 mozillians/templates/phonebook/search.html:121
+msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
+msgstr "Lehet, hogy még nem mozillás? <a href=\"%(invite)s\">Hívja meg az illetőt</a>, hogy profilt készíthessen."
+
+#: mozillians/templates/phonebook/betasearch.html:127 mozillians/templates/phonebook/search.html:127
+msgid "Need help? Contact a steward in a functional area!"
+msgstr "Segítségre van szüksége? Lépj kapcsolatba a területhez tartozó segítővel"
+
 #: mozillians/templates/phonebook/confirm_delete.html:3 mozillians/templates/phonebook/confirm_delete.html:7
 msgid "Confirm Profile Deletion"
 msgstr "Profiltörlés jóváhagyása"
@@ -739,120 +830,133 @@ msgstr "Nem, nem törlöm a profilomat"
 msgid "I'm sure: delete my profile"
 msgstr "Igen, törölni szeretném a profilomat"
 
-#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:32
+#: mozillians/templates/phonebook/edit_profile.html:7 mozillians/templates/phonebook/edit_profile.html:31
 msgid "Create Your Profile"
 msgstr "Profil létrehozása"
 
-#: mozillians/templates/phonebook/edit_profile.html:37
+#: mozillians/templates/phonebook/edit_profile.html:36
 msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
 msgstr "Módosítsa itt a profilját és válassza ki, hogy ki láthatja a profil mezőit. Egyes részeit nyilvánossá teheti, de legyen óvatos a kapcsolati információk megosztásakor."
 
-#: mozillians/templates/phonebook/edit_profile.html:45
+#: mozillians/templates/phonebook/edit_profile.html:44
 msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
 msgstr "Közösségi címtárunk a 13 évesnél idősebb mozillásoknak készült. A biztonsági kérdéseket nagyon komolyan vesszük, különösen gyerekek esetén. Ha még nem vagy 13 éves, ne készíts fiókot!"
 
-#: mozillians/templates/phonebook/edit_profile.html:59
+#: mozillians/templates/phonebook/edit_profile.html:58
 msgid "Make all of my profile fields visible to:"
 msgstr "A profil minden részét láthatóvá teszem neki:"
 
-#: mozillians/templates/phonebook/edit_profile.html:61
+#: mozillians/templates/phonebook/edit_profile.html:60
 msgid "-- No Change --"
 msgstr "-- Nincs változás --"
 
-#: mozillians/templates/phonebook/edit_profile.html:63 mozillians/templates/phonebook/profile.html:132 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:132 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "Nyilvános"
 
-#: mozillians/templates/phonebook/edit_profile.html:69 mozillians/templates/phonebook/edit_profile.html:445
+#: mozillians/templates/phonebook/edit_profile.html:68 mozillians/templates/phonebook/edit_profile.html:524
 msgid "Update Profile"
 msgstr "Profil frissítése"
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:71 mozillians/templates/phonebook/edit_profile.html:447
+#: mozillians/templates/phonebook/edit_profile.html:70 mozillians/templates/phonebook/edit_profile.html:526
 msgid "Cancel"
 msgstr "Mégse"
 
-#: mozillians/templates/phonebook/edit_profile.html:79 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
+#: mozillians/templates/phonebook/edit_profile.html:95
+msgid "Basic Information"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:99 mozillians/templates/phonebook/includes/photo.html:6 mozillians/templates/phonebook/includes/photo_form.html:8
 msgid "Profile photo"
 msgstr "Profilkép"
 
-#: mozillians/templates/phonebook/edit_profile.html:128
+#: mozillians/templates/phonebook/edit_profile.html:129
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "A <a href=\"%(url)s\">Markdown</a> használatával félkövér és dőlt stílus, listák és hivatkozások használhatók."
 
-#: mozillians/templates/phonebook/edit_profile.html:136
-msgid "Accounts"
-msgstr "Felhasználói fiókok"
+#: mozillians/templates/phonebook/edit_profile.html:139
+#, fuzzy
+msgid "Your location"
+msgstr "Hely"
 
-#: mozillians/templates/phonebook/edit_profile.html:149 mozillians/templates/phonebook/edit_profile.html:314
+#: mozillians/templates/phonebook/edit_profile.html:170
+msgid "Region"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:229 mozillians/templates/phonebook/profile.html:227
+msgid "External Accounts"
+msgstr "Külső fiókok"
+
+#: mozillians/templates/phonebook/edit_profile.html:242 mozillians/templates/phonebook/edit_profile.html:393
 msgid "Delete"
 msgstr "Törlés"
 
-#: mozillians/templates/phonebook/edit_profile.html:158
+#: mozillians/templates/phonebook/edit_profile.html:251
 msgid "Add account"
 msgstr "Felhasználói fiók hozzáadása"
 
-#: mozillians/templates/phonebook/edit_profile.html:183
+#: mozillians/templates/phonebook/edit_profile.html:262
 msgid "T-Shirt Size"
 msgstr "Pólóméret"
 
-#: mozillians/templates/phonebook/edit_profile.html:185
+#: mozillians/templates/phonebook/edit_profile.html:264
 msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
 msgstr "Szereti a pólókat? Adja meg a méretét, így rendezvényeken vagy más különleges eseményekkor meglephetjük eggyel."
 
-#: mozillians/templates/phonebook/edit_profile.html:193
+#: mozillians/templates/phonebook/edit_profile.html:272
 msgid "Fitted"
 msgstr "Szűkített"
 
-#: mozillians/templates/phonebook/edit_profile.html:197
+#: mozillians/templates/phonebook/edit_profile.html:276
 msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr "A szűkített pólón van egy íves oldalsó szegés, amely a deréknál szűkül és a felső és alsó végeknél tűnik el. Más néven „női”."
 
-#: mozillians/templates/phonebook/edit_profile.html:215
+#: mozillians/templates/phonebook/edit_profile.html:294
 msgid "Straight-cut"
 msgstr "Egyenes szabású"
 
-#: mozillians/templates/phonebook/edit_profile.html:219
+#: mozillians/templates/phonebook/edit_profile.html:298
 msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as \"men's\" or \"unisex\"."
 msgstr "Az egyenes szabású póló széles vállakkal és majdnem szögletes törzzsel rendelkezik. Gyakran „férfi” vagy „unisex” néven ismert."
 
-#: mozillians/templates/phonebook/edit_profile.html:242
+#: mozillians/templates/phonebook/edit_profile.html:321
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
 msgstr "A csoportok a mozillások közösségen belül, valamilyen kapcsolatban álló emberek társasága. Ez lehet érdeklődési kör, csapat, projekt, termék, vagy kisebb közösség."
 
-#: mozillians/templates/phonebook/edit_profile.html:250
+#: mozillians/templates/phonebook/edit_profile.html:329
 msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
 msgstr "Csoporthoz csatlakozáshoz <a href=\"%(browse)s\"> nézze meg a csoport oldalát</a>, majd kattintson a Csatlakozás csoporthoz gombra."
 
-#: mozillians/templates/phonebook/edit_profile.html:254
+#: mozillians/templates/phonebook/edit_profile.html:333
 msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
 msgstr "Csoport elhagyásához kattintson annak nevére az oldalának megnyitásához, majd ott kattintson a Csoport elhagyása gombra."
 
-#: mozillians/templates/phonebook/edit_profile.html:261
+#: mozillians/templates/phonebook/edit_profile.html:340
 msgid "After you are vouched, you will be able to join groups."
 msgstr "Ha már ajánlották, akkor csatlakozhat csoportokhoz."
 
-#: mozillians/templates/phonebook/edit_profile.html:279
+#: mozillians/templates/phonebook/edit_profile.html:358
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Az ismeret olyan tudás, amely az előre meghatározott eredmény eléréséhez minimális idő és/vagy energiaráfordítást követel."
 
-#: mozillians/templates/phonebook/edit_profile.html:290 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:198
+#: mozillians/templates/phonebook/edit_profile.html:369 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:202
 msgid "Languages"
 msgstr "Nyelvek"
 
-#: mozillians/templates/phonebook/edit_profile.html:292
+#: mozillians/templates/phonebook/edit_profile.html:371
 msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
 msgstr "A Mozilla Projekt számtalan országra és nyelvre kiterjed. Érdemes megadni, hogy milyen nyelven tudnak Önnel kommunikálni a többiek."
 
-#: mozillians/templates/phonebook/edit_profile.html:324
+#: mozillians/templates/phonebook/edit_profile.html:403
 msgid "Add language"
 msgstr "Nyelv hozzáadása"
 
-#: mozillians/templates/phonebook/edit_profile.html:328
+#: mozillians/templates/phonebook/edit_profile.html:407
 msgid "Services"
 msgstr "Szolgáltatások"
 
-#: mozillians/templates/phonebook/edit_profile.html:330
+#: mozillians/templates/phonebook/edit_profile.html:409
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
@@ -860,15 +964,15 @@ msgstr ""
 "A Telefonkönyv egy API-n keresztül segít hitelesíteni a közreműködőket és megosztja a profiladatokat olyan eszközök számára, mint amilyen a <a href=\"%(bugzilla_url)s\">Bugzilla</a> és a <a href="
 "\"%(reps_url)s\">Mozilla Reps Portal</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:337
+#: mozillians/templates/phonebook/edit_profile.html:416
 msgid "Other Sites"
 msgstr "Egyéb oldalak"
 
-#: mozillians/templates/phonebook/edit_profile.html:348
+#: mozillians/templates/phonebook/edit_profile.html:427
 msgid "Developers"
 msgstr "Fejlesztők"
 
-#: mozillians/templates/phonebook/edit_profile.html:350
+#: mozillians/templates/phonebook/edit_profile.html:429
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To get started, <a href="
 "\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a href=\"%(dev_form_url)s\"> development forum</a>."
@@ -876,59 +980,59 @@ msgstr ""
 "Érdemes megnézni az <a href=\"%(api_schema_url)s\">elérhető API hívások listáját</a>. Az API használatát a Privacy csapatnak engedélyeznie kell. Ehhez fel kell venni egy <a href="
 "\"%(bugzilla_request_url)s\">hibajegyet</a>. Ha bármilyen kérdése van, lépjen velünk kapcsolatba a <a href=\"%(dev_form_url)s\">fejlesztői fórumon</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:366
+#: mozillians/templates/phonebook/edit_profile.html:445
 msgid "Your approved apps:"
 msgstr "Jóváhagyott alkalmazásai:"
 
-#: mozillians/templates/phonebook/edit_profile.html:369
+#: mozillians/templates/phonebook/edit_profile.html:448
 msgid "Key"
 msgstr "Kulcs"
 
-#: mozillians/templates/phonebook/edit_profile.html:372
+#: mozillians/templates/phonebook/edit_profile.html:451
 msgid "You have no registered, active apps."
 msgstr "Nincs regisztrált, aktív alkalmazásod."
 
-#: mozillians/templates/phonebook/edit_profile.html:380
+#: mozillians/templates/phonebook/edit_profile.html:459
 msgid "Vouches & Invites"
 msgstr "Ajánlások és meghívások"
 
-#: mozillians/templates/phonebook/edit_profile.html:381 mozillians/templates/phonebook/profile.html:238
+#: mozillians/templates/phonebook/edit_profile.html:460 mozillians/templates/phonebook/profile.html:245
 msgid "Vouched By"
 msgstr "Ajánlotta:"
 
-#: mozillians/templates/phonebook/edit_profile.html:387
+#: mozillians/templates/phonebook/edit_profile.html:466
 msgid "You are automatically vouched!"
 msgstr "Automatikusan megkapta az ajánlást!"
 
-#: mozillians/templates/phonebook/edit_profile.html:389
+#: mozillians/templates/phonebook/edit_profile.html:468
 msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
 msgstr "A profil jóváhagyásra vár. Küldje el valakinek, aki ismeri a munkáját, és kérje meg, hogy adjon ajánlást: <em class=\"underline\" title=\"A profiljának URL-je\"> %(profile_url)s </em>"
 
-#: mozillians/templates/phonebook/edit_profile.html:398
+#: mozillians/templates/phonebook/edit_profile.html:477 mozillians/templates/phonebook/profile.html:254
 msgid "Vouchees"
 msgstr "Ajánlottak"
 
-#: mozillians/templates/phonebook/edit_profile.html:417
+#: mozillians/templates/phonebook/edit_profile.html:496
 msgid "This field is required."
 msgstr "A mező megadása kötelező."
 
-#: mozillians/templates/phonebook/edit_profile.html:426
+#: mozillians/templates/phonebook/edit_profile.html:505
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "Megfelel számomra, ha a <a href=\"%(privacy_url)s\">Mozilla adatvédelmi irányelveinek</a> megfelelően kezelik ezeket az adatokat."
 
-#: mozillians/templates/phonebook/edit_profile.html:435
+#: mozillians/templates/phonebook/edit_profile.html:514
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Miután ajánlott mozillássá vált, e-maileket fog kapni a Mozillától. Bármikor leiratkozhat az e-mailek alján látható hivatkozásra kattintva."
 
-#: mozillians/templates/phonebook/edit_profile.html:450
+#: mozillians/templates/phonebook/edit_profile.html:529
 msgid "Create Profile"
 msgstr "Profil létrehozása"
 
-#: mozillians/templates/phonebook/edit_profile.html:456 mozillians/templates/phonebook/edit_profile.html:466
+#: mozillians/templates/phonebook/edit_profile.html:535 mozillians/templates/phonebook/edit_profile.html:545
 msgid "Delete Profile"
 msgstr "Profil törlése"
 
-#: mozillians/templates/phonebook/edit_profile.html:459
+#: mozillians/templates/phonebook/edit_profile.html:538
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "Tudomásul veszem, hogy a felhasználói fiókom törlése nehezebbé teszi, hogy mások megismerjék közreműködésemet és hogy könnyen megtalálhasson a Mozilla közösség többi tagja."
 
@@ -968,7 +1072,7 @@ msgstr ""
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">Csatlakozás</a>"
 
-#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:171
+#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:173
 msgid "(membership requested)"
 msgstr "(tagság szükséges)"
 
@@ -1054,19 +1158,19 @@ msgstr "Mozillások itt:"
 msgid "Sorry we cannot find any mozillians in"
 msgstr "Elnézést, nem található egyetlen mozillás sem itt:"
 
-#: mozillians/templates/phonebook/profile.html:15
+#: mozillians/templates/phonebook/profile.html:14
 msgid "Your Profile"
 msgstr "Saját profil"
 
-#: mozillians/templates/phonebook/profile.html:17
+#: mozillians/templates/phonebook/profile.html:16
 msgid "Mozillian Profile"
 msgstr "Mozillás profil"
 
-#: mozillians/templates/phonebook/profile.html:19
+#: mozillians/templates/phonebook/profile.html:18
 msgid "Pending Profile"
 msgstr "Függő profil"
 
-#: mozillians/templates/phonebook/profile.html:25
+#: mozillians/templates/phonebook/profile.html:24
 msgid ""
 "<p> Your profile is waiting to be vouched. Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <em class=\"underline\" title=\"Your profile URL\">"
 "%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p> The chances of being vouched increase as you finish "
@@ -1076,19 +1180,19 @@ msgstr ""
 "még új a Mozilla közösségben, akkor <a class=\"button\" href=\"%(contribute_url)s\">vegyen részt munkánkban</a> </p> <p> Az ajánlás valószínűsége megnő, ahogyan befejez egyes feladatokat a "
 "közösségben.</p>"
 
-#: mozillians/templates/phonebook/profile.html:47
+#: mozillians/templates/phonebook/profile.html:46
 msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
 msgstr "<button type=\"submit\">%(name)s ajánlása</button>"
 
-#: mozillians/templates/phonebook/profile.html:54
+#: mozillians/templates/phonebook/profile.html:53
 msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
 msgstr "<p>A profil jóváhagyásra vár.</p> <p>Mivel a közösségi címtár 13 év felettieknek szól, ezért ne ajánljon 13 évesnél fiatalabbat.</p>"
 
-#: mozillians/templates/phonebook/profile.html:66
+#: mozillians/templates/phonebook/profile.html:65
 msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
 msgstr "Profilja nem nyilvános. Ha <a href=\"%(edit_url)s\">szerkeszti profilját</a> hogy legalább egy nyilvános mezője legyen, akkor nyilvános profilja megjeleníthető lesz."
 
-#: mozillians/templates/phonebook/profile.html:88
+#: mozillians/templates/phonebook/profile.html:87
 msgid "Mozillian for %(mozillian_years)s year"
 msgid_plural "Mozillian for %(mozillian_years)s years"
 msgstr[0] "Mozillás %(mozillian_years)s éve"
@@ -1106,93 +1210,33 @@ msgstr "Saját magam"
 msgid "Mozillian"
 msgstr "Mozillás"
 
-#: mozillians/templates/phonebook/profile.html:148 mozillians/users/models.py:164
+#: mozillians/templates/phonebook/profile.html:150 mozillians/users/models.py:169
 msgid "Bio"
 msgstr "Bemutatkozás"
 
-#: mozillians/templates/phonebook/profile.html:157
+#: mozillians/templates/phonebook/profile.html:158
 msgid "My contribution story"
 msgstr "Közreműködésem története"
 
-#: mozillians/templates/phonebook/profile.html:207
+#: mozillians/templates/phonebook/profile.html:212
 msgid "Websites"
 msgstr "Weboldalak"
 
-#: mozillians/templates/phonebook/profile.html:221
-msgid "External Accounts"
-msgstr "Külső fiókok"
-
-#: mozillians/templates/phonebook/profile.html:264
+#: mozillians/templates/phonebook/profile.html:287
 msgid "T-Shirt Size:"
 msgstr "Pólóméret:"
 
-#: mozillians/templates/phonebook/profile.html:274
+#: mozillians/templates/phonebook/profile.html:300
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s órával az Ön időzónája előtt."
 
-#: mozillians/templates/phonebook/profile.html:277
+#: mozillians/templates/phonebook/profile.html:303
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s órával az Ön időzónája mögött."
 
-#: mozillians/templates/phonebook/profile.html:280
+#: mozillians/templates/phonebook/profile.html:306
 msgid "Same time zone as yours."
 msgstr "Az Önével azonos időzóna."
-
-#: mozillians/templates/phonebook/search.html:3
-msgid "Search Results"
-msgstr "Keresési eredmények"
-
-#: mozillians/templates/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr "Jelenleg nyilvános profilokat keres."
-
-#: mozillians/templates/phonebook/search.html:19
-msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
-msgstr "Több találat megtekintéséhez <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\">jelentkezzen be</a>."
-
-#: mozillians/templates/phonebook/search.html:19
-msgid "Sign In"
-msgstr "Bejelentkezés"
-
-#: mozillians/templates/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr "Több találatot jeleníthet meg, ha ajánlották."
-
-#: mozillians/templates/phonebook/search.html:29 mozillians/templates/phonebook/search.html:37
-msgid "Search"
-msgstr "Keresés"
-
-#: mozillians/templates/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr "Speciális beállítások"
-
-#: mozillians/templates/phonebook/search.html:52
-msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
-msgstr "<h2>Mozillás keresése</h2> <p> Megkereshet más mozillást, név, e-mail cím vagy IRC-név szerint. </p>"
-
-#: mozillians/templates/phonebook/search.html:66
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] "%(count)s megfelelő csoport"
-msgstr[1] "%(count)s megfelelő csoport"
-
-#: mozillians/templates/phonebook/search.html:90
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] "%(count)s megfelelő mozillás"
-msgstr[1] "%(count)s megfelelő mozillás"
-
-#: mozillians/templates/phonebook/search.html:115
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr "Elnézést, nem található a következőhöz kapcsolódó csoport vagy személy: „%(query)s”."
-
-#: mozillians/templates/phonebook/search.html:121
-msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
-msgstr "Lehet, hogy még nem mozillás? <a href=\"%(invite)s\">Hívja meg az illetőt</a>, hogy profilt készíthessen."
-
-#: mozillians/templates/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
-msgstr "Segítségre van szüksége? Lépj kapcsolatba a területhez tartozó segítővel"
 
 #: mozillians/templates/phonebook/verify_email.html:4
 msgid "Change Your Email"
@@ -1214,135 +1258,138 @@ msgstr "E-mail ellenőrzése"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "Ez a Gravatarja, amit megváltoztathat a gravatar.com weboldalon."
 
-#: mozillians/users/models.py:99
+#: mozillians/users/models.py:104
 msgid "Privileged"
 msgstr "Kiemelt"
 
-#: mozillians/users/models.py:154
+#: mozillians/users/models.py:159
 msgid "Full Name"
 msgstr "Teljes név"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:173
 msgid "IRC Nickname"
 msgstr "IRC-név"
 
-#: mozillians/users/models.py:172
-msgid "Country"
-msgstr "Ország"
+#: mozillians/users/models.py:190
+msgid "Latitude"
+msgstr ""
 
-#: mozillians/users/models.py:174
-msgid "Province/State"
-msgstr "Megye/állam"
+#: mozillians/users/models.py:191
+msgid "Longitude"
+msgstr ""
 
-#: mozillians/users/models.py:176
-msgid "City"
-msgstr "Város"
-
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:195
 msgid "Sites that can determine my vouched status"
 msgstr "Oldalak, amelyek ismerhetik ajánlott állapotomat"
 
-#: mozillians/users/models.py:180
+#: mozillians/users/models.py:196
 msgid "All Community Sites"
 msgstr "Összes közösségi oldal"
 
-#: mozillians/users/models.py:181
+#: mozillians/users/models.py:197
 msgid "Only Mozilla Properties"
 msgstr "Csak Mozilla tulajdonságok"
 
-#: mozillians/users/models.py:184
+#: mozillians/users/models.py:200
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Engedélyezi, hogy a Mozilla oldalai hozzáférjenek a profiladatokhoz?"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:208
 msgid "T-Shirt"
 msgstr "Póló"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:210
 msgid "Fitted Small"
 msgstr "Szűkített S"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:210
 msgid "Fitted Medium"
 msgstr "Szűkített M"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:211
 msgid "Fitted Large"
 msgstr "Szűkített L"
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:211
 msgid "Fitted X-Large"
 msgstr "Szűkített XL"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:212
 msgid "Fitted XX-Large"
 msgstr "Szűkített XXL"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:212
 msgid "Fitted XXX-Large"
 msgstr "Szűkített XXXL"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:213
 msgid "Straight-cut Small"
 msgstr "Egyenes szabású S"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:213
 msgid "Straight-cut Medium"
 msgstr "Egyenes szabású M"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:214
 msgid "Straight-cut Large"
 msgstr "Egyenes szabású L"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:214
 msgid "Straight-cut X-Large"
 msgstr "Egyenes szabású XL"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:215
 msgid "Straight-cut XX-Large"
 msgstr "Egyenes szabású XXL"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:215
 msgid "Straight-cut XXX-Large"
 msgstr "Egyenes szabású XXXL"
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:217
 msgid "What do you do for Mozilla?"
 msgstr "Mit tesz a Mozilláért?"
 
-#: mozillians/users/models.py:205
+#: mozillians/users/models.py:221
 msgid "Link to your contribution story"
 msgstr "Hivatkozás közreműködési történetére"
 
-#: mozillians/users/models.py:206
+#: mozillians/users/models.py:222
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
-msgstr ""
-"Ha nyilvánosan leírta, hogyan lett mozillás, adja meg itt az arra mutató "
-"hivatkozást."
+msgstr "Ha nyilvánosan leírta, hogyan lett mozillás, adja meg itt az arra mutató hivatkozást."
 
-#: mozillians/users/models.py:535
-msgid "You are now vouched on Mozillians!"
+#: mozillians/users/models.py:574
+#, fuzzy
+msgid "You are now vouched on Mozillians.org"
 msgstr "Valaki ajánlotta a mozillások weboldalon!"
 
-#: mozillians/users/models.py:536
-msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
-msgstr "Valaki ajánlotta a Mozillians.org weboldalon. Mostantól kereshet, ajánlhat és meghívhat másokat a Mozillások weboldalra."
-
-#: mozillians/users/models.py:779
+#: mozillians/users/models.py:859
 msgid "Account Username"
 msgstr "Fiók felhasználóneve"
 
-#: mozillians/users/models.py:784
+#: mozillians/users/models.py:864
 msgid "Account Type"
 msgstr "Fiók típusa"
 
-#: mozillians/users/models.py:798
+#: mozillians/users/models.py:878
 msgid "You already have an account with this name and type."
 msgstr "Már van fiókja ezzel a névvel és típussal."
 
-#: mozillians/users/models.py:816
+#: mozillians/users/models.py:896
 msgid "This language has already been selected."
 msgstr "Ez a nyelv már ki lett választva."
+
+#~ msgid "Email already exists in the database."
+#~ msgstr "Az e-mail cím már létezik az adatbázisban."
+
+#~ msgid "IRC Channels"
+#~ msgstr "IRC-csatornák"
+
+#~ msgid "Accounts"
+#~ msgstr "Felhasználói fiókok"
+
+#~ msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
+#~ msgstr "Valaki ajánlotta a Mozillians.org weboldalon. Mostantól kereshet, ajánlhat és meghívhat másokat a Mozillások weboldalra."
 
 #~ msgid "Become a Mozillian"
 #~ msgstr "Legyen mozillás"
@@ -1394,9 +1441,6 @@ msgstr "Ez a nyelv már ki lett választva."
 
 #~ msgid "Personal"
 #~ msgstr "Személyes"
-
-#~ msgid "Location"
-#~ msgstr "Hely"
 
 #~ msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you easier and vice-versa."
 #~ msgstr "Mondja el, hol van. A többi mozillás könnyedén kapcsolatba léphet így Önnel."

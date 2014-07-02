@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-13 02:54-0700\n"
+"POT-Creation-Date: 2014-07-02 02:47-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,8 +12,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 1.8.0\n"
 
+#: mozillians/common/authbackend.py:82
+msgid "Authentication failed."
+msgstr ""
+
 #: mozillians/common/helpers.py:70
-#: mozillians/templates/phonebook/edit_profile.html:300
+#: mozillians/templates/phonebook/edit_profile.html:379
 msgid "Visible to:"
 msgstr ""
 
@@ -23,6 +27,23 @@ msgstr ""
 
 #: mozillians/common/middleware.py:16
 msgid "You must be vouched to continue."
+msgstr ""
+
+#: mozillians/geo/models.py:91
+#: mozillians/templates/phonebook/edit_profile.html:155
+#: mozillians/users/models.py:179
+msgid "Country"
+msgstr ""
+
+#: mozillians/geo/models.py:93
+#: mozillians/users/models.py:181
+msgid "Province/State"
+msgstr ""
+
+#: mozillians/geo/models.py:95
+#: mozillians/templates/phonebook/edit_profile.html:185
+#: mozillians/users/models.py:183
+msgid "City"
 msgstr ""
 
 #: mozillians/groups/forms.py:14
@@ -51,7 +72,7 @@ msgid "All"
 msgstr ""
 
 #: mozillians/groups/forms.py:86
-#: mozillians/templates/groups/group.html:73
+#: mozillians/templates/groups/group.html:67
 msgid "Members"
 msgstr ""
 
@@ -76,7 +97,7 @@ msgid "Description"
 msgstr ""
 
 #: mozillians/groups/models.py:166
-#: mozillians/templates/groups/group.html:56
+#: mozillians/templates/groups/group.html:53
 msgid "IRC Channel"
 msgstr ""
 
@@ -85,7 +106,7 @@ msgid "An IRC channel where this group is discussed (optional)."
 msgstr ""
 
 #: mozillians/groups/models.py:170
-#: mozillians/templates/groups/group.html:66
+#: mozillians/templates/groups/group.html:60
 msgid "Website"
 msgstr ""
 
@@ -94,7 +115,7 @@ msgid "A URL of a web site with more information about this group (optional)."
 msgstr ""
 
 #: mozillians/groups/models.py:174
-#: mozillians/templates/groups/group.html:70
+#: mozillians/templates/groups/group.html:64
 msgid "Wiki"
 msgstr ""
 
@@ -103,7 +124,7 @@ msgid "A URL of a wiki with more information about this group (optional)."
 msgstr ""
 
 #: mozillians/groups/models.py:180
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:201
 msgid "Yes"
 msgstr ""
 
@@ -112,7 +133,7 @@ msgid "By request"
 msgstr ""
 
 #: mozillians/groups/models.py:182
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:201
 msgid "No"
 msgstr ""
 
@@ -212,70 +233,95 @@ msgstr ""
 msgid "You must be a curator or an admin to edit a group"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:67
+#: mozillians/phonebook/forms.py:66
 msgid "Include non-vouched"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:81
+#: mozillians/phonebook/forms.py:80
 msgid "Username"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:97
+#: mozillians/phonebook/forms.py:96
 msgid "This username is in use. Please try another."
 msgstr ""
 
-#: mozillians/phonebook/forms.py:102
+#: mozillians/phonebook/forms.py:101
 msgid "Please use only alphanumeric characters"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:106
+#: mozillians/phonebook/forms.py:105
 msgid "This username is not allowed, please choose another."
 msgstr ""
 
-#: mozillians/phonebook/forms.py:112
-#: mozillians/templates/groups/group.html:100
+#: mozillians/phonebook/forms.py:111
+#: mozillians/templates/groups/group.html:94
 #: mozillians/templates/includes/search_result.html:27
-#: mozillians/templates/phonebook/edit_profile.html:77
+#: mozillians/templates/phonebook/edit_profile.html:97
 msgid "Profile Photo"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:113
-#: mozillians/templates/phonebook/edit_profile.html:85
+#: mozillians/phonebook/forms.py:112
+#: mozillians/templates/phonebook/edit_profile.html:105
 #: mozillians/templates/phonebook/includes/photo_form.html:23
 msgid "Remove Profile Photo"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:117
+#: mozillians/phonebook/forms.py:116
 msgid "When did you get involved with Mozilla?"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:122
+#: mozillians/phonebook/forms.py:121
 msgid ""
 "Start typing to add a skill (example: Python, javascript, Graphic Design, "
 "User Research)"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:174
+#: mozillians/phonebook/forms.py:127
+msgid "Required"
+msgstr ""
+
+#: mozillians/phonebook/forms.py:131
+#: mozillians/phonebook/forms.py:132
+msgid "Save"
+msgstr ""
+
+#: mozillians/phonebook/forms.py:173
 msgid "Skills can only contain alphanumeric characters and +.:-."
 msgstr ""
 
-#: mozillians/phonebook/forms.py:210
+#: mozillians/phonebook/forms.py:191
+msgid "Location must be inside a country."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:199
+msgid "Region must also be saved if city is saved."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:205
+msgid "Search for your country on the map."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:206
+msgid "Country cannot be empty."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:239
 msgid "Email"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:216
+#: mozillians/phonebook/forms.py:245
 msgid "Email is currently associated with another user."
 msgstr ""
 
-#: mozillians/phonebook/forms.py:235
+#: mozillians/phonebook/forms.py:264
 msgid "Message"
 msgstr ""
 
-#: mozillians/phonebook/forms.py:242
+#: mozillians/phonebook/forms.py:271
 msgid "You cannot invite someone who has already been vouched."
 msgstr ""
 
-#: mozillians/phonebook/middleware.py:30
+#: mozillians/phonebook/middleware.py:34
 msgid "Please complete registration before proceeding."
 msgstr ""
 
@@ -325,53 +371,52 @@ msgstr ""
 msgid "Enter a valid address."
 msgstr ""
 
-#: mozillians/phonebook/views.py:48
-msgid "Authentication failed."
+#: mozillians/phonebook/validators.py:87
+msgid ""
+"Please enter a valid phone number, in international format (e.g. +1 555 555 "
+"5555)"
 msgstr ""
 
-#: mozillians/phonebook/views.py:54
-msgid "Email already exists in the database."
-msgstr ""
-
-#: mozillians/phonebook/views.py:180
+#: mozillians/phonebook/views.py:152
 msgid "Your account has been created."
 msgstr ""
 
-#: mozillians/phonebook/views.py:183
+#: mozillians/phonebook/views.py:155
 msgid ""
 "You changed your username; please note your profile URL has also changed."
 msgstr ""
 
-#: mozillians/phonebook/views.py:221
+#: mozillians/phonebook/views.py:194
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr ""
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:313
 msgid ""
 "%s has been invited to Mozillians. They'll receive an email with "
 "instructions on how to join. You can invite another Mozillian if you like."
 msgstr ""
 
-#: mozillians/phonebook/views.py:306
+#: mozillians/phonebook/views.py:329
 msgid ""
 "%s's invitation to Mozillians has been revoked. You can invite %s again if "
 "you like."
 msgstr ""
 
-#: mozillians/phonebook/views.py:323
+#: mozillians/phonebook/views.py:346
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr ""
 
-#: mozillians/phonebook/views.py:391
+#: mozillians/phonebook/views.py:407
 msgid ""
 "You've been invited to join Mozillians.org! Sign in and then you can create "
 "a profile."
 msgstr ""
 
-#: mozillians/settings/base.py:284
+#: mozillians/settings/base.py:309
 #: mozillians/templates/base.html:7
 #: mozillians/templates/base.html:21
-#: mozillians/templates/phonebook/edit_profile.html:62
+#: mozillians/templates/phonebook/betasearch.html:88
+#: mozillians/templates/phonebook/edit_profile.html:61
 #: mozillians/templates/phonebook/search.html:88
 #: mozillians/users/managers.py:11
 msgid "Mozillians"
@@ -437,93 +482,95 @@ msgstr ""
 msgid "Mozilla's contributor phonebook"
 msgstr ""
 
-#: mozillians/templates/base.html:62
+#: mozillians/templates/base.html:63
 msgid "Mozilla"
 msgstr ""
 
-#: mozillians/templates/base.html:65
+#: mozillians/templates/base.html:66
 #: mozillians/templates/includes/lang_switcher.html:3
 msgid "Select language"
 msgstr ""
 
-#: mozillians/templates/base.html:66
+#: mozillians/templates/base.html:67
 msgid "Skip to main content"
 msgstr ""
 
-#: mozillians/templates/base.html:77
+#: mozillians/templates/base.html:78
+#: mozillians/templates/phonebook/betasearch.html:32
 #: mozillians/templates/phonebook/home.html:23
 #: mozillians/templates/phonebook/home.html:167
 #: mozillians/templates/phonebook/search.html:32
 msgid "Search for people, groups and more"
 msgstr ""
 
-#: mozillians/templates/base.html:101
+#: mozillians/templates/base.html:102
 msgid "View Profile"
 msgstr ""
 
-#: mozillians/templates/base.html:107
+#: mozillians/templates/base.html:108
 #: mozillians/templates/phonebook/edit_profile.html:5
-#: mozillians/templates/phonebook/edit_profile.html:30
+#: mozillians/templates/phonebook/edit_profile.html:29
 msgid "Edit Your Profile"
 msgstr ""
 
-#: mozillians/templates/base.html:114
+#: mozillians/templates/base.html:115
 #: mozillians/templates/groups/index_common.html:12
 #: mozillians/templates/groups/index_groups.html:7
-#: mozillians/templates/phonebook/edit_profile.html:240
+#: mozillians/templates/phonebook/betasearch.html:64
+#: mozillians/templates/phonebook/edit_profile.html:319
 #: mozillians/templates/phonebook/home.html:117
 #: mozillians/templates/phonebook/home.html:210
-#: mozillians/templates/phonebook/profile.html:163
+#: mozillians/templates/phonebook/profile.html:165
 #: mozillians/templates/phonebook/search.html:64
 msgid "Groups"
 msgstr ""
 
-#: mozillians/templates/base.html:120
+#: mozillians/templates/base.html:121
 msgid "Invite"
 msgstr ""
 
-#: mozillians/templates/base.html:127
-#: mozillians/templates/base.html:135
+#: mozillians/templates/base.html:128
+#: mozillians/templates/base.html:136
 msgid "Log Out"
 msgstr ""
 
-#: mozillians/templates/base.html:140
-#: mozillians/templates/base.html:143
+#: mozillians/templates/base.html:141
+#: mozillians/templates/base.html:144
 msgid "Sign in"
 msgstr ""
 
-#: mozillians/templates/base.html:183
+#: mozillians/templates/base.html:184
 msgid ""
 "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a "
 "href=\"%(git_url)s\">make some changes</a>."
 msgstr ""
 
-#: mozillians/templates/base.html:203
+#: mozillians/templates/base.html:204
 msgid ""
 "Portions of this content are &copy;1998–%(current_year)s by individual "
 "mozilla.org contributors. Content available under a <a href=\"%"
 "(license_link)s\">Creative Commons license</a>."
 msgstr ""
 
-#: mozillians/templates/base.html:212
+#: mozillians/templates/base.html:213
 #: mozillians/templates/phonebook/about.html:3
 #: mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr ""
 
-#: mozillians/templates/base.html:213
+#: mozillians/templates/base.html:214
 msgid "Contact Us"
 msgstr ""
 
-#: mozillians/templates/base.html:214
+#: mozillians/templates/base.html:215
 msgid "Privacy Policy"
 msgstr ""
 
-#: mozillians/templates/base.html:215
+#: mozillians/templates/base.html:216
 msgid "Legal Notices"
 msgstr ""
 
-#: mozillians/templates/base.html:216
+#: mozillians/templates/base.html:217
 msgid "Report Trademark Abuse"
 msgstr ""
 
@@ -543,7 +590,7 @@ msgid "Edit group"
 msgstr ""
 
 #: mozillians/templates/groups/add_edit.html:16
-#: mozillians/templates/phonebook/edit_profile.html:23
+#: mozillians/templates/phonebook/edit_profile.html:22
 #: mozillians/templates/phonebook/invite.html:19
 msgid "Please correct the errors below."
 msgstr ""
@@ -613,55 +660,51 @@ msgstr ""
 msgid "Edit Group"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:54
-msgid "IRC Channels"
-msgstr ""
-
-#: mozillians/templates/groups/group.html:77
+#: mozillians/templates/groups/group.html:71
 msgid "Skills members have in common"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:91
+#: mozillians/templates/groups/group.html:85
 msgid "Community Steward"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:93
+#: mozillians/templates/groups/group.html:87
 msgid "Curator"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:131
+#: mozillians/templates/groups/group.html:125
 msgid "Request to Join Group"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:133
+#: mozillians/templates/groups/group.html:127
 msgid "Join Group"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:144
+#: mozillians/templates/groups/group.html:138
 msgid "Leave Group"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:153
+#: mozillians/templates/groups/group.html:147
 msgid "Filter"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:161
+#: mozillians/templates/groups/group.html:155
 msgid "There are no open membership requests for %(group_name)s."
 msgstr ""
 
-#: mozillians/templates/groups/group.html:165
+#: mozillians/templates/groups/group.html:159
 msgid "Sorry, we can not find any mozillians in %(group_name)s."
 msgstr ""
 
-#: mozillians/templates/groups/group.html:177
+#: mozillians/templates/groups/group.html:171
 msgid "Functional Area Members"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:179
+#: mozillians/templates/groups/group.html:173
 msgid "Group Members"
 msgstr ""
 
-#: mozillians/templates/groups/group.html:185
+#: mozillians/templates/groups/group.html:179
 msgid "Your membership request is pending approval by the group curator."
 msgstr ""
 
@@ -702,9 +745,9 @@ msgstr[1] ""
 
 #: mozillians/templates/groups/index_skills.html:3
 #: mozillians/templates/groups/index_skills.html:8
-#: mozillians/templates/phonebook/edit_profile.html:277
+#: mozillians/templates/phonebook/edit_profile.html:356
 #: mozillians/templates/phonebook/home.html:144
-#: mozillians/templates/phonebook/profile.html:184
+#: mozillians/templates/phonebook/profile.html:187
 msgid "Skills"
 msgstr ""
 
@@ -793,6 +836,86 @@ msgid ""
 "(google_groups_url)s\"> Mozillians forums </a> to learn how."
 msgstr ""
 
+#: mozillians/templates/phonebook/betasearch.html:3
+#: mozillians/templates/phonebook/search.html:3
+msgid "Search Results"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:17
+#: mozillians/templates/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:19
+#: mozillians/templates/phonebook/search.html:19
+msgid ""
+"View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" "
+"data-next=\"%(next)s\"> logging in</a>."
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:19
+#: mozillians/templates/phonebook/search.html:19
+msgid "Sign In"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:25
+#: mozillians/templates/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:29
+msgid "Beta Search"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:37
+#: mozillians/templates/phonebook/search.html:29
+#: mozillians/templates/phonebook/search.html:37
+msgid "Search"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:41
+#: mozillians/templates/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:52
+#: mozillians/templates/phonebook/search.html:52
+msgid ""
+"<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian "
+"using their name, email, or nickname. </p>"
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:66
+#: mozillians/templates/phonebook/search.html:66
+msgid "%(count)s group matching"
+msgid_plural "%(count)s groups matching"
+msgstr[0] ""
+msgstr[1] ""
+
+#: mozillians/templates/phonebook/betasearch.html:90
+#: mozillians/templates/phonebook/search.html:90
+msgid "%(count)s Mozillian matching"
+msgid_plural "%(count)s Mozillians matching"
+msgstr[0] ""
+msgstr[1] ""
+
+#: mozillians/templates/phonebook/betasearch.html:115
+#: mozillians/templates/phonebook/search.html:115
+msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:121
+#: mozillians/templates/phonebook/search.html:121
+msgid ""
+"Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this "
+"person</a> to create a profile."
+msgstr ""
+
+#: mozillians/templates/phonebook/betasearch.html:127
+#: mozillians/templates/phonebook/search.html:127
+msgid "Need help? Contact a steward in a functional area!"
+msgstr ""
+
 #: mozillians/templates/phonebook/confirm_delete.html:3
 #: mozillians/templates/phonebook/confirm_delete.html:7
 msgid "Confirm Profile Deletion"
@@ -818,166 +941,179 @@ msgid "I'm sure: delete my profile"
 msgstr ""
 
 #: mozillians/templates/phonebook/edit_profile.html:7
-#: mozillians/templates/phonebook/edit_profile.html:32
+#: mozillians/templates/phonebook/edit_profile.html:31
 msgid "Create Your Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:37
+#: mozillians/templates/phonebook/edit_profile.html:36
 msgid ""
 "Modify your profile here and choose who can see your profile fields. You can "
 "make parts of your profile publicly visible, but please be careful about "
 "sharing your contact information."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:45
+#: mozillians/templates/phonebook/edit_profile.html:44
 msgid ""
 "Our community directory is for Mozillians who are 13 and older. We take "
 "safety issues very seriously, especially with minors. If you are under 13, "
 "please don't create an account."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:59
+#: mozillians/templates/phonebook/edit_profile.html:58
 msgid "Make all of my profile fields visible to:"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:61
+#: mozillians/templates/phonebook/edit_profile.html:60
 msgid "-- No Change --"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:63
+#: mozillians/templates/phonebook/edit_profile.html:62
 #: mozillians/templates/phonebook/profile.html:132
 #: mozillians/users/managers.py:12
 msgid "Public"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:69
-#: mozillians/templates/phonebook/edit_profile.html:445
+#: mozillians/templates/phonebook/edit_profile.html:68
+#: mozillians/templates/phonebook/edit_profile.html:524
 msgid "Update Profile"
 msgstr ""
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:71
-#: mozillians/templates/phonebook/edit_profile.html:447
+#: mozillians/templates/phonebook/edit_profile.html:70
+#: mozillians/templates/phonebook/edit_profile.html:526
 msgid "Cancel"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:79
+#: mozillians/templates/phonebook/edit_profile.html:95
+msgid "Basic Information"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:99
 #: mozillians/templates/phonebook/includes/photo.html:6
 #: mozillians/templates/phonebook/includes/photo_form.html:8
 msgid "Profile photo"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:128
+#: mozillians/templates/phonebook/edit_profile.html:129
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:136
-msgid "Accounts"
+#: mozillians/templates/phonebook/edit_profile.html:139
+msgid "Your location"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:149
-#: mozillians/templates/phonebook/edit_profile.html:314
+#: mozillians/templates/phonebook/edit_profile.html:170
+msgid "Region"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:229
+#: mozillians/templates/phonebook/profile.html:227
+msgid "External Accounts"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:242
+#: mozillians/templates/phonebook/edit_profile.html:393
 msgid "Delete"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:158
+#: mozillians/templates/phonebook/edit_profile.html:251
 msgid "Add account"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:183
+#: mozillians/templates/phonebook/edit_profile.html:262
 msgid "T-Shirt Size"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:185
+#: mozillians/templates/phonebook/edit_profile.html:264
 msgid ""
 "Like t-shirts? Add your size so we can give you a shirt at events or for "
 "other special occasions."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:193
+#: mozillians/templates/phonebook/edit_profile.html:272
 msgid "Fitted"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:197
+#: mozillians/templates/phonebook/edit_profile.html:276
 msgid ""
 "A fitted-cut tshirt has a curved side hem which comes in at the waist and "
 "goes out at the upper and lower ends. Also known as \"women's\"."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:215
+#: mozillians/templates/phonebook/edit_profile.html:294
 msgid "Straight-cut"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:219
+#: mozillians/templates/phonebook/edit_profile.html:298
 msgid ""
 "A straight-cut shirt has wide shoulders and a body which is almost square. "
 "Often known as \"men's\" or \"unisex\"."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:242
+#: mozillians/templates/phonebook/edit_profile.html:321
 msgid ""
 "Groups are a community of Mozillians with some relation to each other. This "
 "can be an interest, team, project, product or sub-community."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:250
+#: mozillians/templates/phonebook/edit_profile.html:329
 msgid ""
 "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click "
 "the Join Group button."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:254
+#: mozillians/templates/phonebook/edit_profile.html:333
 msgid ""
 "To leave a group, click its name below to go to its page, then click the "
 "Leave Group button there."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:261
+#: mozillians/templates/phonebook/edit_profile.html:340
 msgid "After you are vouched, you will be able to join groups."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:279
+#: mozillians/templates/phonebook/edit_profile.html:358
 msgid ""
 "A skill is the learned capacity to carry out pre-determined results often "
 "with the minimum outlay of time, energy, or both."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:290
+#: mozillians/templates/phonebook/edit_profile.html:369
 #: mozillians/templates/phonebook/home.html:134
-#: mozillians/templates/phonebook/profile.html:198
+#: mozillians/templates/phonebook/profile.html:202
 msgid "Languages"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:292
+#: mozillians/templates/phonebook/edit_profile.html:371
 msgid ""
 "The Mozilla Project spans over many countries and languages. Share the "
 "languages you speak to be found easily by other Mozillians."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:324
+#: mozillians/templates/phonebook/edit_profile.html:403
 msgid "Add language"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:328
+#: mozillians/templates/phonebook/edit_profile.html:407
 msgid "Services"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:330
+#: mozillians/templates/phonebook/edit_profile.html:409
 msgid ""
 "The Phonebook offers an API to help authorize contributors and share profile "
 "data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> "
 "and the <a href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:337
+#: mozillians/templates/phonebook/edit_profile.html:416
 msgid "Other Sites"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:348
+#: mozillians/templates/phonebook/edit_profile.html:427
 msgid "Developers"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:350
+#: mozillians/templates/phonebook/edit_profile.html:429
 msgid ""
 "Take a look at the list of the <a href=\"%(api_schema_url)s\">API methods "
 "we've made available</a>. To use this API, you'll need to get approval from "
@@ -986,69 +1122,70 @@ msgid ""
 "(dev_form_url)s\"> development forum</a>."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:366
+#: mozillians/templates/phonebook/edit_profile.html:445
 msgid "Your approved apps:"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:369
+#: mozillians/templates/phonebook/edit_profile.html:448
 msgid "Key"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:372
+#: mozillians/templates/phonebook/edit_profile.html:451
 msgid "You have no registered, active apps."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:380
+#: mozillians/templates/phonebook/edit_profile.html:459
 msgid "Vouches & Invites"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:381
-#: mozillians/templates/phonebook/profile.html:238
+#: mozillians/templates/phonebook/edit_profile.html:460
+#: mozillians/templates/phonebook/profile.html:245
 msgid "Vouched By"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:387
+#: mozillians/templates/phonebook/edit_profile.html:466
 msgid "You are automatically vouched!"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:389
+#: mozillians/templates/phonebook/edit_profile.html:468
 msgid ""
 "You aren't vouched! Send this link to a mozillian who can vouch for your "
 "contributions: <em class=\"underline\" title=\"Your profile URL\"> %"
 "(profile_url)s </em>"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:398
+#: mozillians/templates/phonebook/edit_profile.html:477
+#: mozillians/templates/phonebook/profile.html:254
 msgid "Vouchees"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:417
+#: mozillians/templates/phonebook/edit_profile.html:496
 msgid "This field is required."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:426
+#: mozillians/templates/phonebook/edit_profile.html:505
 msgid ""
 "I'm okay with you handling this info as you explain in <a href=\"%"
 "(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:435
+#: mozillians/templates/phonebook/edit_profile.html:514
 msgid ""
 "You will begin to receive email communications from Mozilla once you are a "
 "vouched Mozillian. You may unsubscribe at anytime by clicking the link at "
 "the bottom of these emails."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:450
+#: mozillians/templates/phonebook/edit_profile.html:529
 msgid "Create Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:456
-#: mozillians/templates/phonebook/edit_profile.html:466
+#: mozillians/templates/phonebook/edit_profile.html:535
+#: mozillians/templates/phonebook/edit_profile.html:545
 msgid "Delete Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:459
+#: mozillians/templates/phonebook/edit_profile.html:538
 msgid ""
 "I acknowledge that deleting my account will make it tougher for me to show "
 "off my contributions and easily be found by other members of the Mozilla "
@@ -1097,7 +1234,7 @@ msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr ""
 
 #: mozillians/templates/phonebook/home.html:125
-#: mozillians/templates/phonebook/profile.html:171
+#: mozillians/templates/phonebook/profile.html:173
 msgid "(membership requested)"
 msgstr ""
 
@@ -1194,19 +1331,19 @@ msgstr ""
 msgid "Sorry we cannot find any mozillians in"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:15
+#: mozillians/templates/phonebook/profile.html:14
 msgid "Your Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:17
+#: mozillians/templates/phonebook/profile.html:16
 msgid "Mozillian Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:19
+#: mozillians/templates/phonebook/profile.html:18
 msgid "Pending Profile"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:25
+#: mozillians/templates/phonebook/profile.html:24
 msgid ""
 "<p> Your profile is waiting to be vouched. Send the link below to someone "
 "who is familiar with your contributions and ask them to vouch for you: <em "
@@ -1216,25 +1353,25 @@ msgid ""
 "increase as you finish tasks in our community. </p>"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:47
+#: mozillians/templates/phonebook/profile.html:46
 msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:54
+#: mozillians/templates/phonebook/profile.html:53
 msgid ""
 "<p>This profile is waiting for approval.</p> <p>Because our community "
 "directory is for Mozillians who are 13 and older, please don't vouch for "
 "anyone under 13.</p>"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:66
+#: mozillians/templates/phonebook/profile.html:65
 msgid ""
 "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your "
 "profile</a> to have at least one public field, your public profile will be "
 "viewable."
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:88
+#: mozillians/templates/phonebook/profile.html:87
 msgid "Mozillian for %(mozillian_years)s year"
 msgid_plural "Mozillian for %(mozillian_years)s years"
 msgstr[0] ""
@@ -1252,100 +1389,33 @@ msgstr ""
 msgid "Mozillian"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:148
-#: mozillians/users/models.py:164
+#: mozillians/templates/phonebook/profile.html:150
+#: mozillians/users/models.py:169
 msgid "Bio"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:157
+#: mozillians/templates/phonebook/profile.html:158
 msgid "My contribution story"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:207
+#: mozillians/templates/phonebook/profile.html:212
 msgid "Websites"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:221
-msgid "External Accounts"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:264
+#: mozillians/templates/phonebook/profile.html:287
 msgid "T-Shirt Size:"
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:274
+#: mozillians/templates/phonebook/profile.html:300
 msgid "%(hours)s hours ahead of your timezone."
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:277
+#: mozillians/templates/phonebook/profile.html:303
 msgid "%(hours)s hours behind your timezone."
 msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:280
+#: mozillians/templates/phonebook/profile.html:306
 msgid "Same time zone as yours."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:3
-msgid "Search Results"
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:19
-msgid ""
-"View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" "
-"data-next=\"%(next)s\"> logging in</a>."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:19
-msgid "Sign In"
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:29
-#: mozillians/templates/phonebook/search.html:37
-msgid "Search"
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:52
-msgid ""
-"<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian "
-"using their name, email, or nickname. </p>"
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:66
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] ""
-msgstr[1] ""
-
-#: mozillians/templates/phonebook/search.html:90
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] ""
-msgstr[1] ""
-
-#: mozillians/templates/phonebook/search.html:115
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:121
-msgid ""
-"Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this "
-"person</a> to create a profile."
-msgstr ""
-
-#: mozillians/templates/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
 msgstr ""
 
 #: mozillians/templates/phonebook/verify_email.html:4
@@ -1371,134 +1441,124 @@ msgstr ""
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr ""
 
-#: mozillians/users/models.py:99
+#: mozillians/users/models.py:104
 msgid "Privileged"
 msgstr ""
 
-#: mozillians/users/models.py:154
+#: mozillians/users/models.py:159
 msgid "Full Name"
 msgstr ""
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:173
 msgid "IRC Nickname"
 msgstr ""
 
-#: mozillians/users/models.py:172
-msgid "Country"
+#: mozillians/users/models.py:190
+msgid "Latitude"
 msgstr ""
 
-#: mozillians/users/models.py:174
-msgid "Province/State"
+#: mozillians/users/models.py:191
+msgid "Longitude"
 msgstr ""
 
-#: mozillians/users/models.py:176
-msgid "City"
-msgstr ""
-
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:195
 msgid "Sites that can determine my vouched status"
 msgstr ""
 
-#: mozillians/users/models.py:180
+#: mozillians/users/models.py:196
 msgid "All Community Sites"
 msgstr ""
 
-#: mozillians/users/models.py:181
+#: mozillians/users/models.py:197
 msgid "Only Mozilla Properties"
 msgstr ""
 
-#: mozillians/users/models.py:184
+#: mozillians/users/models.py:200
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr ""
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:208
 msgid "T-Shirt"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:210
 msgid "Fitted Small"
 msgstr ""
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:210
 msgid "Fitted Medium"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:211
 msgid "Fitted Large"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:211
 msgid "Fitted X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:212
 msgid "Fitted XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:212
 msgid "Fitted XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:213
 msgid "Straight-cut Small"
 msgstr ""
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:213
 msgid "Straight-cut Medium"
 msgstr ""
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:214
 msgid "Straight-cut Large"
 msgstr ""
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:214
 msgid "Straight-cut X-Large"
 msgstr ""
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:215
 msgid "Straight-cut XX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:215
 msgid "Straight-cut XXX-Large"
 msgstr ""
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:217
 msgid "What do you do for Mozilla?"
 msgstr ""
 
-#: mozillians/users/models.py:205
+#: mozillians/users/models.py:221
 msgid "Link to your contribution story"
 msgstr ""
 
-#: mozillians/users/models.py:206
+#: mozillians/users/models.py:222
 msgid ""
 "If you have created something public that tells the story of how you came to "
 "be a Mozillian, specify that link here."
 msgstr ""
 
-#: mozillians/users/models.py:535
-msgid "You are now vouched on Mozillians!"
+#: mozillians/users/models.py:574
+msgid "You are now vouched on Mozillians.org"
 msgstr ""
 
-#: mozillians/users/models.py:536
-msgid ""
-"You've now been vouched on Mozillians.org. You'll now be able to search, "
-"vouch and invite other Mozillians onto the site."
-msgstr ""
-
-#: mozillians/users/models.py:779
+#: mozillians/users/models.py:859
 msgid "Account Username"
 msgstr ""
 
-#: mozillians/users/models.py:784
+#: mozillians/users/models.py:864
 msgid "Account Type"
 msgstr ""
 
-#: mozillians/users/models.py:798
+#: mozillians/users/models.py:878
 msgid "You already have an account with this name and type."
 msgstr ""
 
-#: mozillians/users/models.py:816
+#: mozillians/users/models.py:896
 msgid "This language has already been selected."
 msgstr ""
