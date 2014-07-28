@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-02 02:47-0700\n"
+"POT-Creation-Date: 2014-07-28 04:38-0700\n"
 "PO-Revision-Date: 2014-05-15 03:02+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,15 +30,15 @@ msgstr "Duhet të jeni i futur, që të vazhdohet."
 msgid "You must be vouched to continue."
 msgstr "Duhet të jeni i rekomanduar, që të vazhdohet."
 
-#: mozillians/geo/models.py:91 mozillians/templates/phonebook/edit_profile.html:155 mozillians/users/models.py:179
+#: mozillians/geo/models.py:91 mozillians/templates/phonebook/edit_profile.html:155 mozillians/users/models.py:180
 msgid "Country"
 msgstr "Vend"
 
-#: mozillians/geo/models.py:93 mozillians/users/models.py:181
+#: mozillians/geo/models.py:93 mozillians/users/models.py:182
 msgid "Province/State"
 msgstr "Provincë/Shtet"
 
-#: mozillians/geo/models.py:95 mozillians/templates/phonebook/edit_profile.html:185 mozillians/users/models.py:183
+#: mozillians/geo/models.py:95 mozillians/templates/phonebook/edit_profile.html:185 mozillians/users/models.py:184
 msgid "City"
 msgstr "Qytet"
 
@@ -114,7 +114,7 @@ msgstr "Wiki"
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "URL-ja e një wiki me më tepër të dhëna rreth këtij grupi (opsionale)."
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:201
+#: mozillians/groups/models.py:180 mozillians/users/models.py:202
 msgid "Yes"
 msgstr "Po"
 
@@ -122,7 +122,7 @@ msgstr "Po"
 msgid "By request"
 msgstr "Me kërkesë"
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:201
+#: mozillians/groups/models.py:182 mozillians/users/models.py:202
 msgid "No"
 msgstr "Jo"
 
@@ -288,11 +288,24 @@ msgstr "Email"
 msgid "Email is currently associated with another user."
 msgstr "Email hëpërhë i përshoqëruar me një tjetër përdorues."
 
-#: mozillians/phonebook/forms.py:264
-msgid "Message"
-msgstr "Mesazh"
+#: mozillians/phonebook/forms.py:261
+msgid "Provide a reason for vouching with relevant links"
+msgstr ""
 
-#: mozillians/phonebook/forms.py:271
+#: mozillians/phonebook/forms.py:264
+msgid "You must enter a reason for vouching for this person."
+msgstr ""
+
+#: mozillians/phonebook/forms.py:270
+msgid "Personal message to be included in the invite email"
+msgstr ""
+
+#: mozillians/phonebook/forms.py:273
+#, fuzzy
+msgid "Recipient's email"
+msgstr "Marrës"
+
+#: mozillians/phonebook/forms.py:280
 msgid "You cannot invite someone who has already been vouched."
 msgstr "Nuk mund të ftoni dikë që tashmë është rekomanduar."
 
@@ -312,15 +325,15 @@ msgstr "Marrës"
 msgid "Redeemer"
 msgstr ""
 
-#: mozillians/phonebook/models.py:41
+#: mozillians/phonebook/models.py:42
 msgid "A fellow Mozillian"
 msgstr "Një moxillian i ngjashëm"
 
-#: mozillians/phonebook/models.py:47
+#: mozillians/phonebook/models.py:48
 msgid "Please join me on mozillians.org"
 msgstr "Ju lutem, bashkohuni me mua te mozillians.org"
 
-#: mozillians/phonebook/models.py:65
+#: mozillians/phonebook/models.py:66
 msgid "%s created a Mozillians profile"
 msgstr "%s krijoi një profil moxilliani"
 
@@ -345,38 +358,50 @@ msgid "Enter a valid address."
 msgstr "Jepni një adresë të vlefshme."
 
 #: mozillians/phonebook/validators.py:87
-msgid "Please enter a valid phone number, in international format (e.g. +1 555 555 5555)"
+msgid "Please enter a valid phone number in international format (e.g. +1 555 555 5555)"
 msgstr ""
 
-#: mozillians/phonebook/views.py:152
-msgid "Your account has been created."
-msgstr "Llogaria juaj u krijua."
+#: mozillians/phonebook/views.py:57
+msgid "Successfully vouched user."
+msgstr ""
 
-#: mozillians/phonebook/views.py:155
-msgid "You changed your username; please note your profile URL has also changed."
-msgstr "Ndryshuat emrin tuaj të përdoruesit; ju lutemi, mbani shënim që ka ndryshuar edhe URL-ja e profilit tuaj."
+#: mozillians/phonebook/views.py:59
+msgid "User not vouched. Maybe there are {0} vouches already?"
+msgstr ""
 
-#: mozillians/phonebook/views.py:194
-msgid "Your account has been deleted. Thanks for being a Mozillian!"
-msgstr "Llogaria juaj u fshi. Faleminderit që qetë një moxillian!"
+#: mozillians/phonebook/views.py:78
+msgid "Successfully unvouched user."
+msgstr ""
 
-#: mozillians/phonebook/views.py:313
-msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
-msgstr "%s është ftuar te Moxillianët. Do të marrë një email me udhëzime se si të përfshihet. Mund të ftoni një tjetër moxillian, në daçi."
-
-#: mozillians/phonebook/views.py:329
-msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
-msgstr "Ftesa për %s për te Mozillians është shfuqizuar. Mund ta ftoni sërish %s, nëse doni."
-
-#: mozillians/phonebook/views.py:346
+#: mozillians/phonebook/views.py:135
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Faleminderit që rekomanduat një pasues të moxillianëve. Ky përdorues tani është me rekomandim!"
 
-#: mozillians/phonebook/views.py:407
+#: mozillians/phonebook/views.py:201
+msgid "Your account has been created."
+msgstr "Llogaria juaj u krijua."
+
+#: mozillians/phonebook/views.py:205
+msgid "You changed your username; please note your profile URL has also changed."
+msgstr "Ndryshuat emrin tuaj të përdoruesit; ju lutemi, mbani shënim që ka ndryshuar edhe URL-ja e profilit tuaj."
+
+#: mozillians/phonebook/views.py:244
+msgid "Your account has been deleted. Thanks for being a Mozillian!"
+msgstr "Llogaria juaj u fshi. Faleminderit që qetë një moxillian!"
+
+#: mozillians/phonebook/views.py:369
+msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
+msgstr "%s është ftuar te Moxillianët. Do të marrë një email me udhëzime se si të përfshihet. Mund të ftoni një tjetër moxillian, në daçi."
+
+#: mozillians/phonebook/views.py:390
+msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
+msgstr "Ftesa për %s për te Mozillians është shfuqizuar. Mund ta ftoni sërish %s, nëse doni."
+
+#: mozillians/phonebook/views.py:449
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Jeni ftuar të bëheni pjesë e Mozillians.org! Bëni hyrjen dhe mandej mund të krijoni një profil."
 
-#: mozillians/settings/base.py:309 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:88
+#: mozillians/settings/base.py:311 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:88
 #: mozillians/templates/phonebook/edit_profile.html:61 mozillians/templates/phonebook/search.html:88 mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Moxillianë"
@@ -465,7 +490,7 @@ msgid "Edit Your Profile"
 msgstr "Përpunoni Profilin Tuaj"
 
 #: mozillians/templates/base.html:115 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/betasearch.html:64
-#: mozillians/templates/phonebook/edit_profile.html:319 mozillians/templates/phonebook/home.html:117 mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:165
+#: mozillians/templates/phonebook/edit_profile.html:319 mozillians/templates/phonebook/home.html:117 mozillians/templates/phonebook/home.html:210 mozillians/templates/phonebook/profile.html:186
 #: mozillians/templates/phonebook/search.html:64
 msgid "Groups"
 msgstr "Grupe"
@@ -491,7 +516,7 @@ msgid "Portions of this content are &copy;1998–%(current_year)s by individual 
 msgstr ""
 "Pjesë të kësaj lënde janë &copy;1998–%(current_year)s kontribuesish individualë te mozilla.org. Lënda mund të kihet dhe përdoret sipas një <a href=\"%(license_link)s\">licence Creative Commons</a>."
 
-#: mozillians/templates/base.html:213 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
+#: mozillians/templates/base.html:213 mozillians/templates/phonebook/about-dinomcvouch.html:3 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
 msgid "About Mozillians"
 msgstr "Rreth Moxillianëve"
 
@@ -523,7 +548,7 @@ msgstr "Përpunoni zonë funksionale"
 msgid "Edit group"
 msgstr "Përpunoni grupin"
 
-#: mozillians/templates/groups/add_edit.html:16 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:19
+#: mozillians/templates/groups/add_edit.html:16 mozillians/templates/phonebook/edit_profile.html:22 mozillians/templates/phonebook/invite.html:34
 msgid "Please correct the errors below."
 msgstr "Ju lutemi, ndreqni gabimet më poshtë."
 
@@ -559,7 +584,7 @@ msgstr "Të braktiset vërtet %(group)s?"
 msgid "Really remove user %(profile)s from group %(group)s?"
 msgstr "Të hiqet vërtet përdoruesi %(profile)s nga grupi %(group)s?"
 
-#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/includes/search_result.html:8 mozillians/templates/phonebook/invite.html:65
+#: mozillians/templates/groups/confirm_remove_member.html:26 mozillians/templates/includes/search_result.html:8 mozillians/templates/phonebook/invite.html:77
 msgid "Remove"
 msgstr "Hiqe"
 
@@ -662,7 +687,7 @@ msgstr[0] "%(num)s anëtar"
 msgstr[1] "%(num)s anëtarë"
 
 #: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/edit_profile.html:356 mozillians/templates/phonebook/home.html:144
-#: mozillians/templates/phonebook/profile.html:187
+#: mozillians/templates/phonebook/profile.html:208
 msgid "Skills"
 msgstr "Aftësi"
 
@@ -704,6 +729,18 @@ msgstr "Ripohoni Kërkesën"
 
 #: mozillians/templates/includes/search_result.html:19
 msgid "Requested"
+msgstr ""
+
+#: mozillians/templates/phonebook/about-dinomcvouch.html:9
+msgid "Dino McVouch"
+msgstr ""
+
+#: mozillians/templates/phonebook/about-dinomcvouch.html:10
+msgid "About Dino McVouch"
+msgstr ""
+
+#: mozillians/templates/phonebook/about-dinomcvouch.html:13
+msgid "Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and takes care of Mozillians.org."
 msgstr ""
 
 #: mozillians/templates/phonebook/about.html:9
@@ -855,16 +892,16 @@ msgstr "Bëji të dukshme krejt fushat e profilit tim:"
 msgid "-- No Change --"
 msgstr "-- Pa Ndryshim --"
 
-#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:132 mozillians/users/managers.py:12
+#: mozillians/templates/phonebook/edit_profile.html:62 mozillians/templates/phonebook/profile.html:153 mozillians/users/managers.py:12
 msgid "Public"
 msgstr "Publik"
 
-#: mozillians/templates/phonebook/edit_profile.html:68 mozillians/templates/phonebook/edit_profile.html:524
+#: mozillians/templates/phonebook/edit_profile.html:68 mozillians/templates/phonebook/edit_profile.html:517
 msgid "Update Profile"
 msgstr "Përditësoje Profilin"
 
 #. Cancel editing
-#: mozillians/templates/phonebook/edit_profile.html:70 mozillians/templates/phonebook/edit_profile.html:526
+#: mozillians/templates/phonebook/edit_profile.html:70 mozillians/templates/phonebook/edit_profile.html:519
 msgid "Cancel"
 msgstr "Anulo"
 
@@ -876,7 +913,7 @@ msgstr ""
 msgid "Profile photo"
 msgstr "Foto profili"
 
-#: mozillians/templates/phonebook/edit_profile.html:129
+#: mozillians/templates/phonebook/edit_profile.html:129 mozillians/templates/phonebook/includes/profile_vouch.html:23
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "Për shkronja të trasha, të pjerrëta, lista dhe lidhje përdorni <a href=\"%(url)s\">Markdown</a>."
 
@@ -888,7 +925,7 @@ msgstr ""
 msgid "Region"
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:229 mozillians/templates/phonebook/profile.html:227
+#: mozillians/templates/phonebook/edit_profile.html:229 mozillians/templates/phonebook/profile.html:248
 msgid "External Accounts"
 msgstr "Llogari të Jashtme"
 
@@ -944,7 +981,7 @@ msgstr "Pasi t'ju kenë rekomanduar, do të jeni në gjendje të anëtarësoheni
 msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
 msgstr "Aftësia është një kapacitet i fituar përmes të nxënit për të kryer një punë të parapërcaktuar, shpesh me minimumin e shpenzuar të kohës, energjive, ose që të dyjave."
 
-#: mozillians/templates/phonebook/edit_profile.html:369 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:202
+#: mozillians/templates/phonebook/edit_profile.html:369 mozillians/templates/phonebook/home.html:134 mozillians/templates/phonebook/profile.html:223
 msgid "Languages"
 msgstr "Gjuhë"
 
@@ -997,47 +1034,51 @@ msgid "You have no registered, active apps."
 msgstr "Nuk keni zbatime aktive, të regjistruara."
 
 #: mozillians/templates/phonebook/edit_profile.html:459
-msgid "Vouches & Invites"
-msgstr "Rekomandime & Ftesa"
+#, fuzzy
+msgid "Account status"
+msgstr "Llogari"
 
-#: mozillians/templates/phonebook/edit_profile.html:460 mozillians/templates/phonebook/profile.html:245
-msgid "Vouched By"
-msgstr "Rekomanduar Prej"
-
-#: mozillians/templates/phonebook/edit_profile.html:466
-msgid "You are automatically vouched!"
-msgstr "Jeni rekomanduar vetvetiu!"
-
-#: mozillians/templates/phonebook/edit_profile.html:468
-msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
-msgstr ""
-"Nuk ju ka rekomanduar kush! Dërgojani këtë lidhje një moxilliani që mund t'ju rekomandojë me bazë kontributin tuaj: <em class=\"underline\" title=\"URL-ja e profilit tuaj\"> %(profile_url)s </em>"
-
-#: mozillians/templates/phonebook/edit_profile.html:477 mozillians/templates/phonebook/profile.html:254
-msgid "Vouchees"
+#: mozillians/templates/phonebook/edit_profile.html:463
+msgid "Yes, you can view all profiles and access other Mozilla sites as a vouched Mozillian."
 msgstr ""
 
-#: mozillians/templates/phonebook/edit_profile.html:496
+#: mozillians/templates/phonebook/edit_profile.html:465
+msgid "No, you can only access public Mozillian profiles."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:471
+msgid "Yes, you can vouch for others."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:474
+msgid "No, you need at least %(vouch_threshold)s vouches to vouch for others."
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:479 mozillians/templates/phonebook/includes/profile_vouch.html:52
+msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
+
+#: mozillians/templates/phonebook/edit_profile.html:489
 msgid "This field is required."
 msgstr "Kjo fushë është e domosdoshme."
 
-#: mozillians/templates/phonebook/edit_profile.html:505
+#: mozillians/templates/phonebook/edit_profile.html:498
 msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
 msgstr "Pajtohem me trajtimin e këtyre të dhënave ashtu si e shpjegoni te <a href=\"%(privacy_url)s\">rregullat e privatësisë për Mozilla-n</a>."
 
-#: mozillians/templates/phonebook/edit_profile.html:514
+#: mozillians/templates/phonebook/edit_profile.html:507
 msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
 msgstr "Do të filloni të merrni komunikime me email nga Mozilla sapo të  jeni Moxillian i rekomanduar. Mund të çpajtoheni në çfarëdo kohe, duke klikuar te lidhja në fund të këtyre email-eve."
 
-#: mozillians/templates/phonebook/edit_profile.html:529
+#: mozillians/templates/phonebook/edit_profile.html:522
 msgid "Create Profile"
 msgstr "Krijoni Profil"
 
-#: mozillians/templates/phonebook/edit_profile.html:535 mozillians/templates/phonebook/edit_profile.html:545
+#: mozillians/templates/phonebook/edit_profile.html:528 mozillians/templates/phonebook/edit_profile.html:538
 msgid "Delete Profile"
 msgstr "Fshije Profilin"
 
-#: mozillians/templates/phonebook/edit_profile.html:538
+#: mozillians/templates/phonebook/edit_profile.html:531
 msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
 msgstr "E kuptoj që fshirja e llogarisë sime do të ma bëjë më të vështirë paraqitjen e kontributit dhe gjetjen e lehtë të tij nga të tjerë anëtarë të bashkësisë Mozilla."
 
@@ -1077,7 +1118,7 @@ msgstr ""
 msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
 msgstr "<a href=\"%(contribute_url)s\">Përfshihuni</a>"
 
-#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:173
+#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/profile.html:194
 msgid "(membership requested)"
 msgstr "(ka kërkuar anëtarësim)"
 
@@ -1113,31 +1154,31 @@ msgstr "<p> Gjeni dhe bëhuni pjesë e grupeve bazuar në interesa, teknologji, 
 msgid "Invite a Mozillian"
 msgstr "Ftoni një Moxillian"
 
-#: mozillians/templates/phonebook/invite.html:11
-msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
-msgstr "Nëse do të dëshironit të ftoni një moxillian që të krijojë një profil, ju lutem, jepni këtu adresën e tij email:"
+#: mozillians/templates/phonebook/invite.html:12
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
 
-#: mozillians/templates/phonebook/invite.html:28
-msgid "Send invite"
-msgstr "Dërgo ftesë"
+#: mozillians/templates/phonebook/invite.html:18
+msgid ""
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
+msgstr ""
 
-#: mozillians/templates/phonebook/invite.html:31
-msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
-msgstr "<strong>Shënim:</strong> Emri dhe email-i juaj do t'i dërgohen kujtdo që ftoni."
-
-#: mozillians/templates/phonebook/invite.html:39
+#: mozillians/templates/phonebook/invite.html:51
 msgid "Your Invites"
 msgstr "Ftesat Tuaja"
 
-#: mozillians/templates/phonebook/invite.html:50
+#: mozillians/templates/phonebook/invite.html:62
 msgid "Sent:"
 msgstr ""
 
-#: mozillians/templates/phonebook/invite.html:54
+#: mozillians/templates/phonebook/invite.html:66
 msgid "Redeemed:"
 msgstr ""
 
-#: mozillians/templates/phonebook/invite.html:57
+#: mozillians/templates/phonebook/invite.html:69
 msgid "Redeemer:"
 msgstr ""
 
@@ -1174,70 +1215,84 @@ msgid "Pending Profile"
 msgstr "Profil Në Pritje të Shqyrtimit"
 
 #: mozillians/templates/phonebook/profile.html:24
+#, fuzzy
 msgid ""
-"<p> Your profile is waiting to be vouched. Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <em class=\"underline\" title=\"Your profile URL\">"
-"%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p> The chances of being vouched increase as you finish "
-"tasks in our community. </p>"
+"<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
+"href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
+"title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
+"vouched increase as you finish tasks in our community.</p>"
 msgstr ""
 "<p> Profili juaj po pret për rekomandues. Dërgojani lidhjen e mëposhtme dikujt që e njeh kontributin tuaj dhe kërkojini t'ju rekomandojë: <em class=\"underline\" title=\"URL-ja e profilit tuaj\">"
 "%(profile_url)s</em> </p> <p> Nëse jeni i ri te bashkësia Mozilla, <a class=\"button\" href=\"%(contribute_url)s\">bëhuni fillimisht pjesë e saj</a> </p> <p> Shanset që dikush t'ju rekomandojë, "
 "shtohen sa më shumë punë përfundoni në gjirin e bashkësisë sonë. </p>"
 
-#: mozillians/templates/phonebook/profile.html:46
-msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
-msgstr "<button type=\"submit\"> Rekomandojeni %(name)s </button>"
+#: mozillians/templates/phonebook/profile.html:50
+msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
+msgstr ""
 
-#: mozillians/templates/phonebook/profile.html:53
-msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
-msgstr "<p>Ky profil po pret për miratim.</p> <p>Ngaqë lista e bashkësisë sonë është për moxillianë që janë 13 vjeç e sipër, ju lutemi, mos jepni rekomandime për cilindo nën 13 vjeç.</p>"
-
-#: mozillians/templates/phonebook/profile.html:65
+#: mozillians/templates/phonebook/profile.html:61
 msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
 msgstr "Profili juaj nuk është publik. Nëse <a href=\"%(edit_url)s\">përpunoni profilin tuaj</a> që të ketë të paktën një fushë publike, profili juaj publik do të jetë i dukshëm."
 
-#: mozillians/templates/phonebook/profile.html:87
+#: mozillians/templates/phonebook/profile.html:83
 msgid "Mozillian for %(mozillian_years)s year"
 msgid_plural "Mozillian for %(mozillian_years)s years"
 msgstr[0] "Moxillian që prej %(mozillian_years)s viti"
 msgstr[1] "Moxillian që prej %(mozillian_years)s vitesh"
 
-#: mozillians/templates/phonebook/profile.html:120
-msgid "View as:"
-msgstr "Shiheni si:"
-
-#: mozillians/templates/phonebook/profile.html:124
-msgid "Myself"
-msgstr "Unë vetë"
-
-#: mozillians/templates/phonebook/profile.html:128
-msgid "Mozillian"
-msgstr "Moxillian"
-
-#: mozillians/templates/phonebook/profile.html:150 mozillians/users/models.py:169
-msgid "Bio"
-msgstr "Jetëshkrim"
-
-#: mozillians/templates/phonebook/profile.html:158
-msgid "My contribution story"
-msgstr "Historia e kontributit tim"
-
-#: mozillians/templates/phonebook/profile.html:212
-msgid "Websites"
-msgstr "Sajte Web"
-
-#: mozillians/templates/phonebook/profile.html:287
+#: mozillians/templates/phonebook/profile.html:127
 msgid "T-Shirt Size:"
 msgstr "Madhësi Bluze:"
 
-#: mozillians/templates/phonebook/profile.html:300
+#: mozillians/templates/phonebook/profile.html:141
+msgid "View as:"
+msgstr "Shiheni si:"
+
+#: mozillians/templates/phonebook/profile.html:145
+msgid "Myself"
+msgstr "Unë vetë"
+
+#: mozillians/templates/phonebook/profile.html:149
+msgid "Mozillian"
+msgstr "Moxillian"
+
+#: mozillians/templates/phonebook/profile.html:171 mozillians/users/models.py:170
+msgid "Bio"
+msgstr "Jetëshkrim"
+
+#: mozillians/templates/phonebook/profile.html:179
+msgid "My contribution story"
+msgstr "Historia e kontributit tim"
+
+#: mozillians/templates/phonebook/profile.html:233
+msgid "Websites"
+msgstr "Sajte Web"
+
+#: mozillians/templates/phonebook/profile.html:266
+msgid "Vouched By"
+msgstr "Rekomanduar Prej"
+
+#: mozillians/templates/phonebook/profile.html:279
+msgid "Unknown Voucher"
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:282
+msgid "Legacy vouch."
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:293
+msgid "Vouchees"
+msgstr ""
+
+#: mozillians/templates/phonebook/profile.html:319
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s orë përpara zonës tuaj kohore."
 
-#: mozillians/templates/phonebook/profile.html:303
+#: mozillians/templates/phonebook/profile.html:322
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s orë prapa zonës tuaj kohore."
 
-#: mozillians/templates/phonebook/profile.html:306
+#: mozillians/templates/phonebook/profile.html:325
 msgid "Same time zone as yours."
 msgstr "E njëjta zonë kohore me ju."
 
@@ -1261,6 +1316,55 @@ msgstr "Verifikoni Email-in"
 msgid "This is your Gravatar, change it at gravatar.com"
 msgstr "Ky është Gravatari juaj, ndryshojeni te gravatar.com"
 
+#: mozillians/templates/phonebook/includes/profile_vouch.html:7
+msgid "Does this profile belong to a Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:14
+msgid "Do you know this Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:26
+msgid "Characters remaining:"
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:31
+msgid "Send invite"
+msgstr "Dërgo ftesë"
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:33
+msgid "Vouch for %(name)s"
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:40
+msgid "Only vouch for users who have made significant contributions and are at least 13 years old."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:42
+#, fuzzy
+msgid "Once vouched, they will be able to:"
+msgstr "Pasi t'ju kenë rekomanduar, do të jeni në gjendje të anëtarësoheni te grupi."
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:44
+msgid "View all profiles and join groups."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:45
+msgid "Access special video content on Air Mozilla."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:46
+msgid "Join the Mozilla Exchange Yammer network."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:47
+msgid "Use other Mozilla apps as a vouched user."
+msgstr ""
+
+#: mozillians/templates/phonebook/includes/profile_vouch.html:50
+msgid "Vouches cannot be edited or retracted."
+msgstr ""
+
 #: mozillians/users/models.py:104
 msgid "Privileged"
 msgstr "Të privilegjuar"
@@ -1269,127 +1373,153 @@ msgstr "Të privilegjuar"
 msgid "Full Name"
 msgstr "Emri i Plotë"
 
-#: mozillians/users/models.py:173
+#: mozillians/users/models.py:174
 msgid "IRC Nickname"
 msgstr "Nofkë IRC-je"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:191
 msgid "Latitude"
 msgstr ""
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:192
 msgid "Longitude"
 msgstr ""
 
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:196
 msgid "Sites that can determine my vouched status"
 msgstr "Sajte të cilët mund të përcaktojnë gjendjen time të rekomandimit"
 
-#: mozillians/users/models.py:196
+#: mozillians/users/models.py:197
 msgid "All Community Sites"
 msgstr "Krejt Sajtet e Bashkësisë"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:198
 msgid "Only Mozilla Properties"
 msgstr "Vetëm Veti Mozilla"
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:201
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Të lejohen sajtet e Mozilla-s të hyjnë në të dhënat e profilit tim?"
 
-#: mozillians/users/models.py:208
+#: mozillians/users/models.py:209
 msgid "T-Shirt"
 msgstr "Bluzë"
 
-#: mozillians/users/models.py:210
+#: mozillians/users/models.py:211
 msgid "Fitted Small"
 msgstr "Pas Trupit, E vogël"
 
-#: mozillians/users/models.py:210
+#: mozillians/users/models.py:211
 msgid "Fitted Medium"
 msgstr "Pas Trupit, Mesatare"
 
-#: mozillians/users/models.py:211
+#: mozillians/users/models.py:212
 msgid "Fitted Large"
 msgstr "Pas Trupit, E gjerë"
 
-#: mozillians/users/models.py:211
+#: mozillians/users/models.py:212
 msgid "Fitted X-Large"
 msgstr "Pas Trupit, X-E gjerë"
 
-#: mozillians/users/models.py:212
+#: mozillians/users/models.py:213
 msgid "Fitted XX-Large"
 msgstr "Pas Trupit, XX-E gjerë"
 
-#: mozillians/users/models.py:212
+#: mozillians/users/models.py:213
 msgid "Fitted XXX-Large"
 msgstr "Pas Trupit, XXX-E gjerë"
 
-#: mozillians/users/models.py:213
+#: mozillians/users/models.py:214
 msgid "Straight-cut Small"
 msgstr "Prerje Drejt, E vogël"
 
-#: mozillians/users/models.py:213
+#: mozillians/users/models.py:214
 msgid "Straight-cut Medium"
 msgstr "Prerje Drejt, Mesatare"
 
-#: mozillians/users/models.py:214
+#: mozillians/users/models.py:215
 msgid "Straight-cut Large"
 msgstr "Prerje Drejt, E gjerë"
 
-#: mozillians/users/models.py:214
+#: mozillians/users/models.py:215
 msgid "Straight-cut X-Large"
 msgstr "Prerje Drejt, X-E gjerë"
 
-#: mozillians/users/models.py:215
+#: mozillians/users/models.py:216
 msgid "Straight-cut XX-Large"
 msgstr "Prerje Drejt, XX-E gjerë"
 
-#: mozillians/users/models.py:215
+#: mozillians/users/models.py:216
 msgid "Straight-cut XXX-Large"
 msgstr "Prerje Drejt, XXX-E gjerë"
 
-#: mozillians/users/models.py:217
+#: mozillians/users/models.py:218
 msgid "What do you do for Mozilla?"
 msgstr "Çfarë bëni për Mozilla-n?"
 
-#: mozillians/users/models.py:221
+#: mozillians/users/models.py:222
 msgid "Link to your contribution story"
 msgstr "Lidhje për te historia e kontributit tuaj"
 
-#: mozillians/users/models.py:222
+#: mozillians/users/models.py:223
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "Nëse keni krijuar diçka publike që rrëfen historinë se si u bëtë një moxillian, jepeni këtu atë lidhje."
 
-#: mozillians/users/models.py:574
+#: mozillians/users/models.py:639
 #, fuzzy
 msgid "You are now vouched on Mozillians.org"
 msgstr "Tani keni një rekomandim për te moxillianët!"
 
-#: mozillians/users/models.py:859
+#: mozillians/users/models.py:815
+msgid "Reason for Vouching"
+msgstr ""
+
+#: mozillians/users/models.py:961
 msgid "Account Username"
 msgstr "Emër përdoruesi për Llogarinë"
 
-#: mozillians/users/models.py:864
+#: mozillians/users/models.py:966
 msgid "Account Type"
 msgstr "Lloj Llogarie"
 
-#: mozillians/users/models.py:878
+#: mozillians/users/models.py:980
 msgid "You already have an account with this name and type."
 msgstr "Keni tashmë një llogari të këtij lloji dhe me këtë emër."
 
-#: mozillians/users/models.py:896
+#: mozillians/users/models.py:998
 msgid "This language has already been selected."
 msgstr "Kjo gjuhë është përzgjedhur tashmë."
+
+#~ msgid "Message"
+#~ msgstr "Mesazh"
+
+#~ msgid "Vouches & Invites"
+#~ msgstr "Rekomandime & Ftesa"
+
+#~ msgid "You are automatically vouched!"
+#~ msgstr "Jeni rekomanduar vetvetiu!"
+
+#~ msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
+#~ msgstr ""
+#~ "Nuk ju ka rekomanduar kush! Dërgojani këtë lidhje një moxilliani që mund t'ju rekomandojë me bazë kontributin tuaj: <em class=\"underline\" title=\"URL-ja e profilit tuaj\"> %(profile_url)s </em>"
+
+#~ msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
+#~ msgstr "Nëse do të dëshironit të ftoni një moxillian që të krijojë një profil, ju lutem, jepni këtu adresën e tij email:"
+
+#~ msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
+#~ msgstr "<strong>Shënim:</strong> Emri dhe email-i juaj do t'i dërgohen kujtdo që ftoni."
+
+#~ msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
+#~ msgstr "<button type=\"submit\"> Rekomandojeni %(name)s </button>"
+
+#~ msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
+#~ msgstr "<p>Ky profil po pret për miratim.</p> <p>Ngaqë lista e bashkësisë sonë është për moxillianë që janë 13 vjeç e sipër, ju lutemi, mos jepni rekomandime për cilindo nën 13 vjeç.</p>"
 
 #~ msgid "Email already exists in the database."
 #~ msgstr "Email-i gjendet tashmë në bazën e të dhënave."
 
 #~ msgid "IRC Channels"
 #~ msgstr "Kanale IRC"
-
-#~ msgid "Accounts"
-#~ msgstr "Llogari"
 
 #~ msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
 #~ msgstr "Tani keni një rekomandim për te Mozillians.org. Tani do të jeni në gjendje të kërkoni për, të rekomandoni dhe të ftoni moxillianë të tjerë te sajti."
