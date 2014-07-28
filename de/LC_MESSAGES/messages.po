@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-28 04:38-0700\n"
-"PO-Revision-Date: 2014-07-02 10:54+0000\n"
+"PO-Revision-Date: 2014-07-28 13:08+0000\n"
 "Last-Translator: Michael <michael.koehler1@gmx.de>\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1404298481.0\n"
+"X-POOTLE-MTIME: 1406552908.0\n"
 
 #: mozillians/common/authbackend.py:82
 msgid "Authentication failed."
@@ -291,20 +291,19 @@ msgstr "E-Mail-Adresse ist derzeit mit einem anderem Benutzer verknüpft."
 
 #: mozillians/phonebook/forms.py:261
 msgid "Provide a reason for vouching with relevant links"
-msgstr ""
+msgstr "Du musst einen Grund angeben, warum du für diese Person bürgst."
 
 #: mozillians/phonebook/forms.py:264
 msgid "You must enter a reason for vouching for this person."
-msgstr ""
+msgstr "Du musst einen Grund angeben, warum du für diese Person bürgst."
 
 #: mozillians/phonebook/forms.py:270
 msgid "Personal message to be included in the invite email"
-msgstr ""
+msgstr "Persönliche Nachricht, die in der Einladungs-E-Mail stehen soll"
 
 #: mozillians/phonebook/forms.py:273
-#, fuzzy
 msgid "Recipient's email"
-msgstr "Empfänger"
+msgstr "E-Mail-Adresse des Empfängers"
 
 #: mozillians/phonebook/forms.py:280
 msgid "You cannot invite someone who has already been vouched."
@@ -359,21 +358,22 @@ msgid "Enter a valid address."
 msgstr "Gib eine gültige Adresse ein."
 
 #: mozillians/phonebook/validators.py:87
-#, fuzzy
 msgid "Please enter a valid phone number in international format (e.g. +1 555 555 5555)"
 msgstr "Gib bitte eine gültige Telefonnummer im internationalen Format ein (z.B. +1 555 555 5555)"
 
 #: mozillians/phonebook/views.py:57
 msgid "Successfully vouched user."
-msgstr ""
+msgstr "Benutzer erfolgreich verbürgt."
 
 #: mozillians/phonebook/views.py:59
 msgid "User not vouched. Maybe there are {0} vouches already?"
 msgstr ""
+"Benutzer nicht verbürgt. Vielleicht gibt es bereits {0} weitere "
+"Verbürgungen?"
 
 #: mozillians/phonebook/views.py:78
 msgid "Successfully unvouched user."
-msgstr ""
+msgstr "Verbürgung des Benutzers erfolgreich aufgehoben."
 
 #: mozillians/phonebook/views.py:135
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
@@ -735,15 +735,17 @@ msgstr "Angefordert"
 
 #: mozillians/templates/phonebook/about-dinomcvouch.html:9
 msgid "Dino McVouch"
-msgstr ""
+msgstr "Dino McVouch"
 
 #: mozillians/templates/phonebook/about-dinomcvouch.html:10
 msgid "About Dino McVouch"
-msgstr ""
+msgstr "Über Dino McVouch"
 
 #: mozillians/templates/phonebook/about-dinomcvouch.html:13
 msgid "Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and takes care of Mozillians.org."
 msgstr ""
+"Dino McVouch ist ein Mozillians.org-Bot. Er verbürgt automatisch bekannte "
+"Mozillianer und kümmert sich um Mozillians.org."
 
 #: mozillians/templates/phonebook/about.html:9
 msgid "Photo collage of Mozillians"
@@ -1036,29 +1038,32 @@ msgid "You have no registered, active apps."
 msgstr "Du hast keine registrierten, aktiven Apps."
 
 #: mozillians/templates/phonebook/edit_profile.html:459
-#, fuzzy
 msgid "Account status"
-msgstr "Benutzerkonten"
+msgstr "Kontostatus"
 
 #: mozillians/templates/phonebook/edit_profile.html:463
 msgid "Yes, you can view all profiles and access other Mozilla sites as a vouched Mozillian."
 msgstr ""
+"Ja, du kannst dir als verbürgter Mozillianer alle Profile ansehen und auf "
+"andere Mozilla-Websites zugreifen."
 
 #: mozillians/templates/phonebook/edit_profile.html:465
 msgid "No, you can only access public Mozillian profiles."
-msgstr ""
+msgstr "Nein, du kannst nur auf öffentliche Mozillianer-Profile zugreifen."
 
 #: mozillians/templates/phonebook/edit_profile.html:471
 msgid "Yes, you can vouch for others."
-msgstr ""
+msgstr "Ja, du kannst für andere bürgen."
 
 #: mozillians/templates/phonebook/edit_profile.html:474
 msgid "No, you need at least %(vouch_threshold)s vouches to vouch for others."
 msgstr ""
+"Nein, du brauchst mindestens %(vouch_threshold)s Verbürgungen, um selbst für "
+"andere zu bürgen."
 
 #: mozillians/templates/phonebook/edit_profile.html:479 mozillians/templates/phonebook/includes/profile_vouch.html:52
 msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
-msgstr ""
+msgstr "<a href=\"%(vouching_url)s\">Erfahre mehr über das Bürgen.</a>"
 
 #: mozillians/templates/phonebook/edit_profile.html:489
 msgid "This field is required."
@@ -1163,6 +1168,10 @@ msgstr "Einen Mozillianer einladen"
 msgid ""
 "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr ""
+"Wenn du einen neuen Mozillianer einladen möchtest, fülle bitte das folgende "
+"Formular aus. <a href=\"%(vouching_url)s\">Hinweis</strong>: Einen Benutzer "
+"einzuladen, ist wie für ihn zu bürgen. <a href=\"%(vouching_url)s\">Erfahre "
+"mehr über das Bürgen.</a>"
 
 #: mozillians/templates/phonebook/invite.html:18
 msgid ""
@@ -1170,6 +1179,13 @@ msgid ""
 "profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
 "vouching.</a>"
 msgstr ""
+"Wir haben vor kurzem die Kriterien geändert, nach denen man andere "
+"Mozillianer einladen und für sie bürgen kann. Wenn du diese Seite verwenden "
+"möchtest, musst du %(vouch_threshold)s Verbürgungen erhalten. Bitte "
+"jemanden, dein Profil zu besuchen und für dich zu bürgen. Komme wieder, "
+"sobald du %(vouch_threshold)s Verbürgungen hast und du kannst neue Menschen "
+"für das Verzeichnis einladen. <a href=\"%(vouching_url)s\">Erfahre mehr über "
+"das Bürgen.</a>"
 
 #: mozillians/templates/phonebook/invite.html:51
 msgid "Your Invites"
@@ -1221,21 +1237,28 @@ msgid "Pending Profile"
 msgstr "Ausstehendes Profil"
 
 #: mozillians/templates/phonebook/profile.html:24
-#, fuzzy
 msgid ""
 "<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
 "href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
 "title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
-"<p> Dein Profil wartet auf einen Bürgen. Sende den folgenden Link an jemanden, der deine Beiträge zum Mozilla-Projekt kennt und bitte ihn, dich zu verbürgen: <em class=\"underline\" title=\"URL "
-"deines Profils\">%(profile_url)s</em> </p> <p> Wenn du noch neu in der Mozilla-Gemeinschaft bist, <a class=\"button\" href=\"%(contribute_url)s\">mach mit</a>. Die Wahrscheinlichkeit, dass du einen "
-"Bürgen findest, erhöht sich, wenn du Aufgaben in unserer Gemeinschaft erfüllst. </p>"
+"<p> Dein Profil wartet auf einen Bürgen. Sobald du verbürgt wurdest, kannst "
+"du die Profile aller Mozillianer ansehen, Gruppen beitreten und ans "
+"Mozillianer auf weitere Inhalte auf anderen Websites zugreifen. <a href=\"%"
+"(vouching_url)s\">Erfahre mehr über das Bürgen</a>. </p> <p> Sende den "
+"folgenden Link an jemanden, der deine Beiträge zum Mozilla-Projekt kennt und "
+"bitte ihn, dich zu verbürgen:<br/> <<em class=\"underline\" title=\"URL deines "
+"Profils\">%(profile_url)s</em> </p> <p> Wenn du noch neu in der Mozilla-"
+"Gemeinschaft bist,<a class=\"button\" href=\"%(contribute_url)s\">mach mit</a>. "
+"</p> <p>Die Wahrscheinlichkeit, dass du einen Bürgen findest, erhöht sich, "
+"wenn du Aufgaben in unserer Gemeinschaft erfüllst. </p>"
 
 #: mozillians/templates/phonebook/profile.html:50
-#, fuzzy
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
-msgstr "Dieses Profil wartet auf die Freigabe. Wenn du für die Beiträge dieser Person zum Mozilla-Projekt bürgen kannst, tue es bitte."
+msgstr ""
+"Dieses Profil wartet auf die Freigabe. Wenn du für diese Person bürgen "
+"möchtest, verwende bitte das Formular am Ende der Seite."
 
 #: mozillians/templates/phonebook/profile.html:61
 msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
@@ -1280,13 +1303,12 @@ msgid "Vouched By"
 msgstr "Bürge:"
 
 #: mozillians/templates/phonebook/profile.html:279
-#, fuzzy
 msgid "Unknown Voucher"
-msgstr "Nicht verbürgt"
+msgstr "Unbekannter Bürge"
 
 #: mozillians/templates/phonebook/profile.html:282
 msgid "Legacy vouch."
-msgstr ""
+msgstr "Ältere Verbürgung."
 
 #: mozillians/templates/phonebook/profile.html:293
 msgid "Vouchees"
@@ -1327,14 +1349,18 @@ msgstr "Das ist dein Gravatar, ändere es auf gravatar.com."
 #: mozillians/templates/phonebook/includes/profile_vouch.html:7
 msgid "Does this profile belong to a Mozillian? Let us know how %(full_name)s has contributed to the project."
 msgstr ""
+"Gehört dieses Profil einem Mozillianer? Sag’ uns, wie %(full_name)s zum "
+"Projekt beigetragen hat."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:14
 msgid "Do you know this Mozillian? Let us know how %(full_name)s has contributed to the project."
 msgstr ""
+"Kennst du diesen Mozillianer? Sag’ uns, wie %(full_name)s zum Projekt "
+"beigetragen hat."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:26
 msgid "Characters remaining:"
-msgstr ""
+msgstr "Verbleibende Zeichen:"
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:31
 msgid "Send invite"
@@ -1342,36 +1368,37 @@ msgstr "Einladung senden"
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:33
 msgid "Vouch for %(name)s"
-msgstr ""
+msgstr "Für %(name)s bürgen"
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:40
 msgid "Only vouch for users who have made significant contributions and are at least 13 years old."
 msgstr ""
+"Bürge nur für Nutzer, die bedeutende Beiträge geleistet haben, und die "
+"mindestens 13 Jahre alt sind."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:42
-#, fuzzy
 msgid "Once vouched, they will be able to:"
-msgstr "Nachdem du verbürgt wurdest, kannst du Gruppen beitreten."
+msgstr "Sobald sie verbürgt wurden, können sie:"
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:44
 msgid "View all profiles and join groups."
-msgstr ""
+msgstr "alle Profile ansehen und Gruppen beitreten."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:45
 msgid "Access special video content on Air Mozilla."
-msgstr ""
+msgstr "besondere Videoinhalte auf Air Mozilla ansehen."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:46
 msgid "Join the Mozilla Exchange Yammer network."
-msgstr ""
+msgstr "Tritt dem Netzwerk „ Mozilla Exchange Yammer“ bei."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:47
 msgid "Use other Mozilla apps as a vouched user."
-msgstr ""
+msgstr "Verwende als verbürgter Nutzer weitere Mozilla-Apps."
 
 #: mozillians/templates/phonebook/includes/profile_vouch.html:50
 msgid "Vouches cannot be edited or retracted."
-msgstr ""
+msgstr "Verbürgungen können nicht bearbeitet oder zurückgezogen werden."
 
 #: mozillians/users/models.py:104
 msgid "Privileged"
@@ -1479,7 +1506,7 @@ msgstr "Du bist jetzt bei Mozillians.org verbürgt"
 
 #: mozillians/users/models.py:815
 msgid "Reason for Vouching"
-msgstr ""
+msgstr "Grund für das Verbürgen"
 
 #: mozillians/users/models.py:961
 msgid "Account Username"
