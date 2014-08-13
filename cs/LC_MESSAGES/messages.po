@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Mozillians 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-28 04:38-0700\n"
-"PO-Revision-Date: 2014-08-12 12:50+0000\n"
-"Last-Translator: kelisovka <matej.hudec@seznam.cz>\n"
+"PO-Revision-Date: 2014-08-13 08:52+0000\n"
+"Last-Translator: Pavel <jasnapaka@jasnapaka.com>\n"
 "Language-Team: cs <info@mozilla.cz>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1407847834.0\n"
+"X-POOTLE-MTIME: 1407919977.0\n"
 
 #: mozillians/common/authbackend.py:82
 msgid "Authentication failed."
@@ -370,7 +370,7 @@ msgstr "Uživatel byl úspěšně schválen."
 
 #: mozillians/phonebook/views.py:59
 msgid "User not vouched. Maybe there are {0} vouches already?"
-msgstr ""
+msgstr "Uživatel není schválen. Možná je jíž {0} hlasů?"
 
 #: mozillians/phonebook/views.py:78
 msgid "Successfully unvouched user."
@@ -1169,6 +1169,9 @@ msgstr "Pozvat uživatele"
 msgid ""
 "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr ""
+"Pokud chcete pozvat nového člena Mozillians, vyplňte následující formulář. "
+"<strong>Poznámka</strong>:  Pozvání nového uživatele je jako schvalování. <a "
+"href=\"%(vouching_url)s\">Přečtěte si více o schvalování</a>."
 
 #: mozillians/templates/phonebook/invite.html:18
 msgid ""
@@ -1176,6 +1179,11 @@ msgid ""
 "profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
 "vouching.</a>"
 msgstr ""
+"Nedávno jsme změnili kritéria pro pozvánky a schvalování členů Mozillians.  "
+"Pokud chcete tuto stránku používat, potřebujete obdržet %(vouch_threshold)s "
+"hlasů. Požádejte někoho, aby navštívil váš profil a hlasoval pro vás. "
+"Jakmile získáte %(vouch_threshold)s  hlasů, budete moci pozvat další lidi do "
+"adresáře. <a href=\"%(vouching_url)s\">Přečtěte si více o schvalování</a>."
 
 #: mozillians/templates/phonebook/invite.html:51
 msgid "Your Invites"
@@ -1226,21 +1234,27 @@ msgid "Pending Profile"
 msgstr "Čekající profil"
 
 #: mozillians/templates/phonebook/profile.html:24
-#, fuzzy
 msgid ""
 "<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
 "href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
 "title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
-"<p>Váš profil čeká na schválení. Pošlete odkaz někomu, kdo zná váš příspěvek projektu Mozilla a požádejte jej, aby vás potvrdil.</p><p>Pokud jste nový přispěvatel projektu Mozilla, <a href="
-"\"%(contribute_url)s\">zapojte se</a>. Šance na vaše schválení se zvýší, když dokončíte konkrétní úkoly v rámci vaší komunity.</p> <em class=\"underline\" title=\"URL vašeho profilu\"> "
-"%(profile_url)s </em>"
+"<p>Váš profil čeká na schválení. Jakmile budete schválen, budete moci "
+"zobrazovat profily jiných členů Mozillians, připojovat se do skupin a mít "
+"jako člen Mozillians přístup k dalšími obsahu na jiných webech. <a href=\"%"
+"(vouching_url)s\">Přečtěte si více o schvalování</a>.</p> <p>Pošlete odkaz "
+"níže někomu, kdo zná míru vašeho zapojení do projektu a poproste jej, aby "
+"pro vás hlasoval: <br/> <em class=\"underline\" title=\"URL vašeho profilu\">%"
+"(profile_url)s</em> </p> <p>Pokud jste nový člen komunity Mozilla, <a "
+"class=\"button\" href=\"%(contribute_url)s\">zapojte se</a>. </p> <p>Šance na "
+"schválení se zvyšují jakmile v rámci naší komunity něco dokončíte.</p>"
 
 #: mozillians/templates/phonebook/profile.html:50
-#, fuzzy
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
-msgstr "Tento profil čeká na schválení. Pokud můžete potvrdit příspěvek této osoby, učiňte tak prosím."
+msgstr ""
+"Tento profil čeká na schválení. Pokud můžete potvrdit příspěvek této osoby, "
+"učiňte tak prosím níže na stránce."
 
 #: mozillians/templates/phonebook/profile.html:61
 msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
@@ -1286,13 +1300,12 @@ msgid "Vouched By"
 msgstr "Potvrdil(a)"
 
 #: mozillians/templates/phonebook/profile.html:279
-#, fuzzy
 msgid "Unknown Voucher"
-msgstr "Nepotvrzen"
+msgstr "Neznámý schvalovatel"
 
 #: mozillians/templates/phonebook/profile.html:282
 msgid "Legacy vouch."
-msgstr ""
+msgstr "Historické schválení."
 
 #: mozillians/templates/phonebook/profile.html:293
 msgid "Vouchees"
