@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-14 02:50-0700\n"
+"POT-Creation-Date: 2015-01-06 06:39-0700\n"
 "PO-Revision-Date: 2014-10-16 03:43+0000\n"
 "Last-Translator: Peter <petercpg@mail.moztw.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Pootle 2.5.0\n"
 "X-POOTLE-MTIME: 1413430996.0\n"
 
-#: mozillians/common/authbackend.py:85
+#: mozillians/common/authbackend.py:86
 msgid "Authentication failed."
 msgstr "驗證失敗。"
 
@@ -62,67 +62,77 @@ msgstr "成員"
 msgid "Pending Members"
 msgstr "等待加入中的成員"
 
-#: mozillians/groups/models.py:41
+#: mozillians/groups/models.py:19
+#, fuzzy
+msgid "Name"
+msgstr "名稱 A-Z 順序"
+
+#: mozillians/groups/models.py:42
 msgid "This name already exists."
 msgstr "此名稱已存在。"
 
-#: mozillians/groups/models.py:137
+#: mozillians/groups/models.py:138
 msgid "Member"
 msgstr "成員"
 
-#: mozillians/groups/models.py:138
+#: mozillians/groups/models.py:139
 msgid "Pending"
 msgstr "等待中"
 
-#: mozillians/groups/models.py:158
+#: mozillians/groups/models.py:159
 msgid "Description"
 msgstr "描述"
 
-#: mozillians/groups/models.py:166 mozillians/templates/groups/group.html:53
+#: mozillians/groups/models.py:167 mozillians/templates/groups/group.html:53
 msgid "IRC Channel"
 msgstr "IRC 頻道"
 
-#: mozillians/groups/models.py:167
+#: mozillians/groups/models.py:168
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "此群組的討論 IRC 頻道（非必要）。"
 
-#: mozillians/groups/models.py:170 mozillians/templates/groups/group.html:60
+#: mozillians/groups/models.py:171 mozillians/templates/groups/group.html:60
 msgid "Website"
 msgstr "網站"
 
-#: mozillians/groups/models.py:171
+#: mozillians/groups/models.py:172
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "此群組的相關資訊網站（非必要）。"
 
-#: mozillians/groups/models.py:174 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:175 mozillians/templates/groups/group.html:64
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:175
+#: mozillians/groups/models.py:176
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "此群組的相關資訊 wiki 網址（非必要）。"
 
-#: mozillians/groups/models.py:180 mozillians/users/models.py:198
+#: mozillians/groups/models.py:180
+#, fuzzy
+msgid "Accepting new members"
+msgstr "等待加入中的成員"
+
+#: mozillians/groups/models.py:182 mozillians/users/models.py:174
 msgid "Yes"
 msgstr "是"
 
-#: mozillians/groups/models.py:181
+#: mozillians/groups/models.py:183
 msgid "By request"
 msgstr "依請求"
 
-#: mozillians/groups/models.py:182 mozillians/users/models.py:198
+#: mozillians/groups/models.py:184 mozillians/users/models.py:174
 msgid "No"
 msgstr "否"
 
-#: mozillians/groups/models.py:191 mozillians/templates/groups/group.html:46
+#: mozillians/groups/models.py:193 mozillians/templates/groups/group.html:46
 msgid "New Member Criteria"
 msgstr "新成員條件"
 
-#: mozillians/groups/models.py:192
+#: mozillians/groups/models.py:194
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "請指定您如何接受新成員加入請求的標準。"
 
-#: mozillians/groups/models.py:197
+#: mozillians/groups/models.py:199
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "此群組是否要在介面中（群組清單、搜尋等）。用來避免像是「staff」等系統群組造成介面凌亂。"
 
@@ -138,6 +148,11 @@ msgstr "摩茲人群組「%s」已接受加入"
 #: mozillians/groups/tasks.py:98
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "摩茲人群組「%s」未接受加入"
+
+#: mozillians/groups/tasks.py:127
+#, fuzzy
+msgid "Removed from Mozillians group \"%s\""
+msgstr "摩茲人群組「%s」已接受加入"
 
 #: mozillians/groups/views.py:209
 msgid "This group does not allow members to remove themselves."
@@ -356,7 +371,8 @@ msgid "This field requires an identifier, not a URL."
 msgstr "此欄位必需輸入 ID，而非網址。"
 
 #: mozillians/phonebook/validators.py:75
-msgid "Enter a valid address."
+#, fuzzy
+msgid "Enter a valid email address."
 msgstr "請輸入有效地址。"
 
 #: mozillians/phonebook/validators.py:87
@@ -379,31 +395,31 @@ msgstr "已成功取消使用者的背書。"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感謝您為這位摩茲人背書！"
 
-#: mozillians/phonebook/views.py:205
+#: mozillians/phonebook/views.py:208
 msgid "Your account has been created."
 msgstr "已建立您的帳號。"
 
-#: mozillians/phonebook/views.py:209
+#: mozillians/phonebook/views.py:212
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "您已修改了帳號名稱，請注意您的個人資料網址也有更動。"
 
-#: mozillians/phonebook/views.py:248
+#: mozillians/phonebook/views.py:251
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "您的帳號已被刪除，感謝您貢獻至 Mozillia！"
 
-#: mozillians/phonebook/views.py:370
+#: mozillians/phonebook/views.py:375
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s 已被邀請成為摩茲人。他們將會收到一封如何加入的電子郵件。若您想要的話，還可以邀請其他人。"
 
-#: mozillians/phonebook/views.py:391
+#: mozillians/phonebook/views.py:396
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s 的 Mozillians 邀請函已被註銷，若需要的話您可以再次邀請 %s。"
 
-#: mozillians/phonebook/views.py:450
+#: mozillians/phonebook/views.py:455
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "您已獲邀加入 Mozillians.org！請先登入，以建立設定檔。"
 
-#: mozillians/settings/base.py:311 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:89
+#: mozillians/settings/base.py:315 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:89
 #: mozillians/templates/phonebook/edit_profile.html:63 mozillians/templates/phonebook/search.html:88 mozillians/users/managers.py:11
 msgid "Mozillians"
 msgstr "Mozillians"
@@ -487,7 +503,7 @@ msgid "Edit Your Profile"
 msgstr "編輯您的個人資料"
 
 #: mozillians/templates/base.html:115 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/betasearch.html:65
-#: mozillians/templates/phonebook/edit_profile.html:328 mozillians/templates/phonebook/home.html:127 mozillians/templates/phonebook/home.html:218 mozillians/templates/phonebook/profile.html:186
+#: mozillians/templates/phonebook/edit_profile.html:328 mozillians/templates/phonebook/home.html:127 mozillians/templates/phonebook/home.html:224 mozillians/templates/phonebook/profile.html:186
 #: mozillians/templates/phonebook/search.html:64
 msgid "Groups"
 msgstr "群組"
@@ -557,6 +573,11 @@ msgid ""
 "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
 "requests to join."
 msgstr "建立群組後您就將成員群組的策展人，讓您可以管理群組設定並決定誰可以加入。若您將群組設為需要先審核才能加入，有人想要加入時您將會收到每日郵件通知。"
+
+#: mozillians/templates/groups/add_edit.html:76
+#, fuzzy
+msgid "Admin Settings"
+msgstr "設定"
 
 #: mozillians/templates/groups/add_edit.html:93 mozillians/templates/groups/index_groups.html:18
 msgid "Create Group"
@@ -1137,14 +1158,31 @@ msgid "Functional areas"
 msgstr "專案領域"
 
 #: mozillians/templates/phonebook/home.html:205
-msgid ""
-"<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
-"arrow-right\"></i></a>"
-msgstr "<p>檢視摩茲人、專案導師與所有專案領域的資訊。您可以看到誰參與那些專案，您又可以幫忙什麼。</p><a href=\"%(areas_url)s\">瀏覽專案領域<i class=\"icon-arrow-right\"></i></a>"
+#, fuzzy
+msgid "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p>"
+msgstr "檢視摩茲人、專案導師與所有專案領域的資訊。您可以看到誰參與那些專案，您又可以幫忙什麼。"
 
-#: mozillians/templates/phonebook/home.html:219
-msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p> <a href=\"%(group_url)s\">Browse groups <i class=\"icon-arrow-right\"></i></a>"
+#: mozillians/templates/phonebook/home.html:213
+#, fuzzy
+msgid "Browse functional areas"
+msgstr "專案領域"
+
+#: mozillians/templates/phonebook/home.html:215
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse functional areas!</p>"
+msgstr ""
+
+#: mozillians/templates/phonebook/home.html:225
+#, fuzzy
+msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p>"
 msgstr "<p>尋找並加入由不同興趣、技術、地理位置等等項目所組成的群組。</p><a href=\"%(group_url)s\">瀏覽群組<i class=\"icon-arrow-right\"></i></a>"
+
+#: mozillians/templates/phonebook/home.html:232
+msgid "Browse groups"
+msgstr ""
+
+#: mozillians/templates/phonebook/home.html:234
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse groups!</p>"
+msgstr ""
 
 #: mozillians/templates/phonebook/invite.html:3 mozillians/templates/phonebook/invite.html:8
 msgid "Invite a Mozillian"
@@ -1252,7 +1290,7 @@ msgstr "我自己"
 msgid "Mozillian"
 msgstr "Mozillian"
 
-#: mozillians/templates/phonebook/profile.html:171 mozillians/users/models.py:175
+#: mozillians/templates/phonebook/profile.html:171 mozillians/users/models.py:151
 msgid "Bio"
 msgstr "小傳"
 
@@ -1360,129 +1398,134 @@ msgstr "以已背書身份使用其他 Mozilla 應用程式。"
 msgid "Vouches cannot be edited or retracted."
 msgstr "無法編輯或撤回背書。"
 
-#: mozillians/users/models.py:104
+#: mozillians/users/models.py:79
 msgid "Privileged"
 msgstr "授權者"
 
-#: mozillians/users/models.py:164
+#: mozillians/users/models.py:140
 msgid "Full Name"
 msgstr "全名"
 
-#: mozillians/users/models.py:179
+#: mozillians/users/models.py:155
 msgid "IRC Nickname"
 msgstr "IRC 暱稱"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:163
 msgid "Latitude"
 msgstr "緯度"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:164
 msgid "Longitude"
 msgstr "經度"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:168
 msgid "Sites that can determine my vouched status"
 msgstr "可判斷我的背書狀態的網站"
 
-#: mozillians/users/models.py:193
+#: mozillians/users/models.py:169
 msgid "All Community Sites"
 msgstr "所有社群網站"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:170
 msgid "Only Mozilla Properties"
 msgstr "僅 Mozilla 網站（不含社群）"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:173
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "允許 Mozilla 網站存取我的個人資料？"
 
-#: mozillians/users/models.py:205
+#: mozillians/users/models.py:181
 msgid "T-Shirt"
 msgstr "T 恤"
 
-#: mozillians/users/models.py:207
+#: mozillians/users/models.py:183
 msgid "Fitted Small"
 msgstr "貼身 - S"
 
-#: mozillians/users/models.py:207
+#: mozillians/users/models.py:183
 msgid "Fitted Medium"
 msgstr "貼身 - M"
 
-#: mozillians/users/models.py:208
+#: mozillians/users/models.py:184
 msgid "Fitted Large"
 msgstr "貼身 - L"
 
-#: mozillians/users/models.py:208
+#: mozillians/users/models.py:184
 msgid "Fitted X-Large"
 msgstr "貼身 - XL"
 
-#: mozillians/users/models.py:209
+#: mozillians/users/models.py:185
 msgid "Fitted XX-Large"
 msgstr "貼身 - XXL"
 
-#: mozillians/users/models.py:209
+#: mozillians/users/models.py:185
 msgid "Fitted XXX-Large"
 msgstr "貼身 - XXXL"
 
-#: mozillians/users/models.py:210
+#: mozillians/users/models.py:186
 msgid "Straight-cut Small"
 msgstr "縱切 - S"
 
-#: mozillians/users/models.py:210
+#: mozillians/users/models.py:186
 msgid "Straight-cut Medium"
 msgstr "縱切 - M"
 
-#: mozillians/users/models.py:211
+#: mozillians/users/models.py:187
 msgid "Straight-cut Large"
 msgstr "縱切 - L"
 
-#: mozillians/users/models.py:211
+#: mozillians/users/models.py:187
 msgid "Straight-cut X-Large"
 msgstr "縱切 - XL"
 
-#: mozillians/users/models.py:212
+#: mozillians/users/models.py:188
 msgid "Straight-cut XX-Large"
 msgstr "縱切 - XXL"
 
-#: mozillians/users/models.py:212
+#: mozillians/users/models.py:188
 msgid "Straight-cut XXX-Large"
 msgstr "縱切 - XXXL"
 
-#: mozillians/users/models.py:214
+#: mozillians/users/models.py:190
 msgid "What do you do for Mozilla?"
 msgstr "您在 Mozilla 都做什麼？"
 
-#: mozillians/users/models.py:218
+#: mozillians/users/models.py:194
 msgid "Link to your contribution story"
 msgstr "您的貢獻故事的鏈結"
 
-#: mozillians/users/models.py:219
+#: mozillians/users/models.py:195
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "若您在其他地方撰寫了關於您如何成為摩茲人的故事，您可以在此放上鏈結。"
 
-#: mozillians/users/models.py:641
+#: mozillians/users/models.py:531
 msgid "You have been vouched on Mozillians.org"
 msgstr "您已在 Mozillians.org 被背書了！"
 
-#: mozillians/users/models.py:823
+#: mozillians/users/models.py:679
 msgid "Reason for Vouching"
 msgstr "背書理由"
 
-#: mozillians/users/models.py:980
+#: mozillians/users/models.py:844
 msgid "Account Username"
 msgstr "使用者名稱"
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:849
 msgid "Account Type"
 msgstr "帳號類型"
 
-#: mozillians/users/models.py:999
+#: mozillians/users/models.py:862
 msgid "You already have an account with this name and type."
 msgstr "您已有此名稱與類型的帳號。"
 
-#: mozillians/users/models.py:1017
+#: mozillians/users/models.py:880
 msgid "This language has already been selected."
 msgstr "已經選擇此語言。"
+
+#~ msgid ""
+#~ "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
+#~ "arrow-right\"></i></a>"
+#~ msgstr "<p>檢視摩茲人、專案導師與所有專案領域的資訊。您可以看到誰參與那些專案，您又可以幫忙什麼。</p><a href=\"%(areas_url)s\">瀏覽專案領域<i class=\"icon-arrow-right\"></i></a>"
 
 #~ msgid "Province/State"
 #~ msgstr "省/州"
@@ -1683,9 +1726,6 @@ msgstr "已經選擇此語言。"
 
 #~ msgid "Only users with photos"
 #~ msgstr "僅含有相片的使用者"
-
-#~ msgid "Settings"
-#~ msgstr "設定"
 
 #~ msgid "Last Name"
 #~ msgstr "姓氏"
