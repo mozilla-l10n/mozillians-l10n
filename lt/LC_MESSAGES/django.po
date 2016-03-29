@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-09 08:07-0700\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-03-29 08:01-0700\n"
 "PO-Revision-Date: 2015-11-15 18:05+0000\n"
 "Last-Translator: Petras <petras@mozilla.lt>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,63 +22,90 @@ msgstr ""
 msgid "Authentication failed."
 msgstr ""
 
-#: mozillians/common/helpers.py:99
-msgid "Visible to:"
-msgstr "Matomas:"
-
-#: mozillians/common/middleware.py:20
+#: mozillians/common/middleware.py:19
 #, fuzzy
 msgid "You must be logged in to continue."
 msgstr "Kad galėtum tai atlikti, už Tave turi būti laiduota."
 
-#: mozillians/common/middleware.py:21
+#: mozillians/common/middleware.py:20
 #, fuzzy
 msgid "You must be vouched to continue."
 msgstr "Kad galėtum tai atlikti, už Tave turi būti laiduota."
 
-#: mozillians/groups/forms.py:15
+#: mozillians/common/templatetags/helpers.py:99
+msgid "Visible to:"
+msgstr "Matomas:"
+
+#: mozillians/groups/forms.py:20
 #, fuzzy
 msgid "Name A-Z"
 msgstr "Grupė: {name}"
 
-#: mozillians/groups/forms.py:16
+#: mozillians/groups/forms.py:21
 #, fuzzy
 msgid "Most Members"
 msgstr "Nariai"
 
-#: mozillians/groups/forms.py:17
+#: mozillians/groups/forms.py:22
 #, fuzzy
 msgid "Fewest Members"
 msgstr "Nariai"
 
-#: mozillians/groups/forms.py:37 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
 msgid "The group must have at least one curator."
 msgstr ""
 
-#: mozillians/groups/forms.py:53
+#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#, fuzzy
+msgid "Start typing the name/email/username of a vouched Mozillian."
+msgstr "Tai – mozilietis, už kurį laiduota."
+
+#: mozillians/groups/forms.py:102
+msgid "The maximum expiration date for a group cannot exceed two years."
+msgstr ""
+
+#: mozillians/groups/forms.py:131
+msgid "You need to be the curator of this group before inviting someone to join."
+msgstr ""
+
+#: mozillians/groups/forms.py:169
+msgid "You need to be the administrator of this group in order to edit this section."
+msgstr ""
+
+#: mozillians/groups/forms.py:199
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr ""
 
-#: mozillians/groups/forms.py:97 mozillians/phonebook/forms.py:107
+#: mozillians/groups/forms.py:213
+#, fuzzy
+msgid "Select Group Type"
+msgstr "Grupė: {name}"
+
+#: mozillians/groups/forms.py:220 mozillians/phonebook/forms.py:107
 msgid "All"
 msgstr ""
 
-#: mozillians/groups/forms.py:98 mozillians/templates/groups/group.html:67
+#: mozillians/groups/forms.py:221 mozillians/jinja2/groups/group.html:89
 msgid "Members"
 msgstr "Nariai"
 
-#: mozillians/groups/forms.py:99
+#: mozillians/groups/forms.py:222
 #, fuzzy
 msgid "Pending Members"
 msgstr "Nepatvirtintas profilis"
 
-#: mozillians/groups/forms.py:110
+#: mozillians/groups/forms.py:233
 msgid "I accept these terms."
 msgstr ""
 
-#: mozillians/groups/forms.py:111
+#: mozillians/groups/forms.py:234
 msgid "I don't accept these terms."
 msgstr ""
+
+#: mozillians/groups/forms.py:246
+#, fuzzy
+msgid "Group type"
+msgstr "Grupės"
 
 #: mozillians/groups/models.py:19
 #, fuzzy
@@ -103,11 +130,11 @@ msgstr "Nepatvirtintas profilis"
 msgid "Pending"
 msgstr "Nepatvirtintas profilis"
 
-#: mozillians/groups/models.py:153
+#: mozillians/groups/models.py:153 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Aprašas"
 
-#: mozillians/groups/models.py:159 mozillians/templates/groups/group.html:53
+#: mozillians/groups/models.py:159 mozillians/jinja2/groups/group.html:67
 msgid "IRC Channel"
 msgstr "IRC kambarys"
 
@@ -115,7 +142,7 @@ msgstr "IRC kambarys"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:163 mozillians/templates/groups/group.html:60
+#: mozillians/groups/models.py:163 mozillians/jinja2/groups/group.html:77
 msgid "Website"
 msgstr "Svetainė"
 
@@ -123,7 +150,7 @@ msgstr "Svetainė"
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr ""
 
-#: mozillians/groups/models.py:167 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:167 mozillians/jinja2/groups/group.html:84
 msgid "Wiki"
 msgstr "Vikis"
 
@@ -136,19 +163,19 @@ msgstr ""
 msgid "Accepting new members"
 msgstr "Nepatvirtintas profilis"
 
-#: mozillians/groups/models.py:173 mozillians/users/models.py:175
-msgid "Yes"
-msgstr "Taip"
-
-#: mozillians/groups/models.py:174
-msgid "By request"
+#: mozillians/groups/models.py:173
+msgid "Open"
 msgstr ""
 
-#: mozillians/groups/models.py:175 mozillians/users/models.py:175
-msgid "No"
-msgstr "Ne"
+#: mozillians/groups/models.py:174
+msgid "Reviewed"
+msgstr ""
 
-#: mozillians/groups/models.py:183 mozillians/templates/groups/group.html:46
+#: mozillians/groups/models.py:175
+msgid "Closed"
+msgstr ""
+
+#: mozillians/groups/models.py:183 mozillians/jinja2/groups/group.html:60
 msgid "New Member Criteria"
 msgstr ""
 
@@ -169,94 +196,1326 @@ msgstr ""
 msgid "Invalidation days"
 msgstr "Kvietimas išsiųstas"
 
-#: mozillians/groups/tasks.py:54
+#: mozillians/groups/models.py:205
+msgid "Please enter any additional text for the invitation email"
+msgstr ""
+
+#: mozillians/groups/models.py:345 mozillians/phonebook/models.py:18
 #, fuzzy
+msgid "Inviter"
+msgstr "Pakviesti"
+
+#: mozillians/groups/models.py:347 mozillians/phonebook/models.py:21
+msgid "Redeemer"
+msgstr ""
+
+#: mozillians/groups/tasks.py:51
+#, fuzzy, python-format
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
 msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
 msgstr[0] "Moziliečio profilis"
 msgstr[1] "Moziliečio profilis"
 msgstr[2] "Moziliečio profilis"
 
-#: mozillians/groups/tasks.py:98
-#, fuzzy
+#: mozillians/groups/tasks.py:95
+#, fuzzy, python-format
 msgid "Accepted to Mozillians group \"%s\""
 msgstr "Moziliečio profilis"
 
-#: mozillians/groups/tasks.py:101
-#, fuzzy
+#: mozillians/groups/tasks.py:98
+#, fuzzy, python-format
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "Moziliečio profilis"
 
-#: mozillians/groups/tasks.py:130
-#, fuzzy
+#: mozillians/groups/tasks.py:129
+#, fuzzy, python-format
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Moziliečio profilis"
 
-#: mozillians/groups/views.py:222
+#: mozillians/groups/tasks.py:168
+#, fuzzy
+msgid "[Mozillians] You have been invited to join group \"{0}\""
+msgstr "Jūs pridėtas prie šios grupės."
+
+#: mozillians/groups/views.py:244
 msgid "This group does not allow members to remove themselves."
 msgstr "Šis naudotojas jau yra šios grupės narys."
 
-#: mozillians/groups/views.py:231
+#: mozillians/groups/views.py:253
 msgid "The group needs at least one curator."
 msgstr ""
 
-#: mozillians/groups/views.py:240
+#: mozillians/groups/views.py:262
 msgid "You have been removed from this group."
 msgstr "Šis naudotojas pridėtas kaip grupės narys."
 
-#: mozillians/groups/views.py:242
+#: mozillians/groups/views.py:264
 msgid "The group member has been removed."
 msgstr "Grupės narys pašalintas."
 
-#: mozillians/groups/views.py:271
+#: mozillians/groups/views.py:293
 #, fuzzy
 msgid "This user has not requested membership in this group."
 msgstr "Už šį naudotoją dar nelaiduota."
 
-#: mozillians/groups/views.py:274
+#: mozillians/groups/views.py:296
 msgid "This user is already a member of this group."
 msgstr ""
 
-#: mozillians/groups/views.py:280
+#: mozillians/groups/views.py:302
 msgid "This user has been added as a member of this group."
 msgstr ""
 
-#: mozillians/groups/views.py:325
+#: mozillians/groups/views.py:347
 msgid "You are already in this group."
 msgstr "Jūs jau esate šioje grupės narys."
 
-#: mozillians/groups/views.py:327
+#: mozillians/groups/views.py:349
 msgid "Your request to join this group is still pending."
 msgstr "Jūsų prašymas prisijungti prie šios grupės dar svarstomas."
 
-#: mozillians/groups/views.py:329
+#: mozillians/groups/views.py:351
 msgid "This group is not accepting requests to join."
 msgstr "Ši grupė nepriima prisijungimo prašymų."
 
-#: mozillians/groups/views.py:333
+#: mozillians/groups/views.py:355
 msgid "You have been added to this group."
 msgstr "Jūs pridėtas prie šios grupės."
 
-#: mozillians/groups/views.py:338
+#: mozillians/groups/views.py:360
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr ""
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:390
 msgid "You must be a curator to delete a group"
 msgstr "Kad galėtumėte pašalinti grupę, turite būti jos kuratoriumi"
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:394
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "Jūs negalite pašalinti grupės, kol joje yra kitų narių."
 
-#: mozillians/groups/views.py:376
-#, fuzzy
+#: mozillians/groups/views.py:398
+#, fuzzy, python-format
 msgid "Group %s has been deleted"
 msgstr "Tavo paskyra sukurta."
 
-#: mozillians/groups/views.py:395
+#: mozillians/groups/views.py:423
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Kad galėtumėte redaguoti grupę, turite būti jos kuratoriumi arba administratoriumi"
+
+#: mozillians/groups/views.py:530
+msgid "The invitation to {0} has been successfully revoked."
+msgstr ""
+
+#: mozillians/groups/views.py:571
+msgid "Invitation to {0} has been sent successfully."
+msgstr ""
+
+#: mozillians/jinja2/404.html:3
+msgid "Page Not Found"
+msgstr "Tinklalapis nerastas"
+
+#: mozillians/jinja2/404.html:7
+msgid "Oh No! That Page Doesn't Exist!"
+msgstr "O, ne! Tokio tinklalapio nėra!"
+
+#: mozillians/jinja2/404.html:11 mozillians/jinja2/404.html:12
+msgid "Tumbeasts by Matthew Inman of The Oatmeal"
+msgstr ""
+
+#: mozillians/jinja2/404.html:15
+#, python-format
+msgid ""
+"<p> The page you requested couldn't be found. You can head to the <a href=\"%(home_url)s\">Mozillians home page</a> to learn more about our community phonebook, or you can try searching for the "
+"person you were looking for using the search box at the top of this page. </p>"
+msgstr ""
+"<p>Tinklalapis, kurio ieškojai, nerastas. Gali grįžti į <a href=\"%(home_url)s\">moziliečių katalogo pradžios tinklalapį</a> ir sužinoti apie jį daugiau arba gali pabandyti rasti ieškomą žmogų, "
+"pasinaudodama(s) viršuje esančiu paieškos laukeliu.</p>"
+
+#: mozillians/jinja2/404.html:25
+#, fuzzy, python-format
+msgid ""
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
+msgstr ""
+"<p>Kadangi nesi prisijungęs, Tu neturi prieigos prie privačių katalogo profilių. Jeigu bandai pasiekti privatų profilį, turėsi prisijungti. Jeigu neturi paskyros, <a href=\"%(join_url)s"
+"\">užsiregistruok</a>.</p>"
+
+#: mozillians/jinja2/500.html:3
+msgid "Application Error"
+msgstr "Programos klaida"
+
+#: mozillians/jinja2/500.html:7
+msgid "We're Sorry, but Something Went Wrong!"
+msgstr "Apgailestaujame, kažkas nutiko ne taip!"
+
+#: mozillians/jinja2/500.html:11 mozillians/jinja2/500.html:12
+msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
+msgstr ""
+
+#: mozillians/jinja2/500.html:15
+#, python-format
+msgid ""
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
+msgstr ""
+"<p>Apgailestaujame, tačiau apdorojant šią užklausą, įvyko netikėta klaida. Gali pabandyti įkelti tinklapį iš naujo arba <a href=\"%(bugzilla_url)s\">užregistruoti klaidą</a> – pranešime paaiškink, "
+"kas nutiko, ir mes imsimės šios problemos sprendimo.</p><p>Jeigu tinklapio iš naujo įkelti nepavyko, gali <a href=\"%(home_url)s\">grįžti į moziliečių katalogo pradžios tinklapį</a> ir sužinoti "
+"apie mus daugiau. Dar kartą atsiprašome!</p>"
+
+#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/jinja2/phonebook/betasearch.html:89 mozillians/jinja2/phonebook/search.html:88 mozillians/settings/base.py:520
+#: mozillians/users/managers.py:11
+msgid "Mozillians"
+msgstr "Moziliečiai"
+
+#: mozillians/jinja2/base.html:7
+msgid "Welcome"
+msgstr "Labas!"
+
+#: mozillians/jinja2/base.html:8
+msgid "Mozilla's contributor phonebook"
+msgstr "„Mozillos“ talkininkų katalogas"
+
+#: mozillians/jinja2/base.html:69 mozillians/jinja2/includes/lang_switcher.html:3
+#, fuzzy
+msgid "Select language"
+msgstr "Kitos kalbos:"
+
+#: mozillians/jinja2/base.html:70
+#, fuzzy
+msgid "Skip to main content"
+msgstr "Šokti į turinį"
+
+#: mozillians/jinja2/base.html:81 mozillians/jinja2/phonebook/betasearch.html:32 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:123
+#: mozillians/jinja2/phonebook/home.html:198 mozillians/jinja2/phonebook/search.html:32
+msgid "Search for people, groups and more"
+msgstr ""
+
+#: mozillians/jinja2/base.html:105
+msgid "View Profile"
+msgstr "Rodyti profilį"
+
+#: mozillians/jinja2/base.html:111 mozillians/jinja2/phonebook/edit_profile.html:4 mozillians/jinja2/phonebook/edit_profile.html:34
+#, fuzzy
+msgid "Settings"
+msgstr "Nuostatos"
+
+#: mozillians/jinja2/base.html:118 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/betasearch.html:65
+#: mozillians/jinja2/phonebook/edit_profile.html:39 mozillians/jinja2/phonebook/home.html:151 mozillians/jinja2/phonebook/home.html:253 mozillians/jinja2/phonebook/profile.html:186
+#: mozillians/jinja2/phonebook/search.html:64 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5
+msgid "Groups"
+msgstr "Grupės"
+
+#: mozillians/jinja2/base.html:124 mozillians/jinja2/groups/includes/group_edit_invitation.html:88
+msgid "Invite"
+msgstr "Pakviesti"
+
+#: mozillians/jinja2/base.html:131 mozillians/jinja2/base.html:139
+msgid "Log Out"
+msgstr "Atsijungti"
+
+#: mozillians/jinja2/base.html:144 mozillians/jinja2/base.html:147
+msgid "Sign in"
+msgstr ""
+
+#: mozillians/jinja2/base.html:187
+#, python-format
+msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
+msgstr ""
+
+#: mozillians/jinja2/base.html:207
+#, python-format
+msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
+msgstr ""
+
+#: mozillians/jinja2/base.html:216 mozillians/jinja2/phonebook/about-dinomcvouch.html:3 mozillians/jinja2/phonebook/about.html:3 mozillians/jinja2/phonebook/about.html:10
+msgid "About Mozillians"
+msgstr "Apie moziliečius"
+
+#: mozillians/jinja2/base.html:217
+msgid "Contact Us"
+msgstr ""
+
+#: mozillians/jinja2/base.html:218
+msgid "Privacy Policy"
+msgstr "Privatumo nuostatai"
+
+#: mozillians/jinja2/base.html:219
+msgid "Legal Notices"
+msgstr "Teisinė informacija"
+
+#: mozillians/jinja2/base.html:220
+msgid "Report Trademark Abuse"
+msgstr "Pranešti apie neleistiną prekės ženklo naudojimą"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:3 mozillians/jinja2/groups/confirm_remove_member.html:14
+msgid "Confirm removing member"
+msgstr ""
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:18
+#, python-format
+msgid "Really leave group %(group)s?"
+msgstr ""
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:20
+#, python-format
+msgid "Really remove user %(profile)s from group %(group)s?"
+msgstr ""
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:9 mozillians/jinja2/phonebook/invite.html:77
+msgid "Remove"
+msgstr ""
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:30
+msgid "Return to group"
+msgstr ""
+
+#: mozillians/jinja2/groups/edit_group.html:4
+#, fuzzy
+msgid "Group settings"
+msgstr "Grupės sąrašas"
+
+#: mozillians/jinja2/groups/edit_group.html:11 mozillians/jinja2/phonebook/edit_profile.html:17 mozillians/jinja2/phonebook/invite.html:34
+msgid "Please correct the errors below."
+msgstr ""
+
+#: mozillians/jinja2/groups/edit_group.html:19 mozillians/jinja2/groups/group.html:33
+#, fuzzy
+msgid "Group"
+msgstr "Grupės"
+
+#: mozillians/jinja2/groups/edit_group.html:24
+msgid "Access"
+msgstr ""
+
+#: mozillians/jinja2/groups/edit_group.html:26
+#, fuzzy
+msgid "Invitations"
+msgstr "Kvietimas išsiųstas"
+
+#: mozillians/jinja2/groups/edit_group.html:29 mozillians/jinja2/groups/includes/group_edit_admin.html:5
+#, fuzzy
+msgid "Administration"
+msgstr "Nuostatos"
+
+#: mozillians/jinja2/groups/group.html:3
+msgid "Group: {name}"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/group.html:31
+msgid "Functional Area"
+msgstr ""
+
+#: mozillians/jinja2/groups/group.html:44 mozillians/jinja2/groups/includes/group_edit_description.html:78 mozillians/jinja2/groups/includes/group_edit_description.html:95
+#, fuzzy
+msgid "Delete Group"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/group.html:51
+#, fuzzy
+msgid "Edit Group"
+msgstr "Prisijungti prie grupės"
+
+#: mozillians/jinja2/groups/group.html:93
+msgid "Skills members have in common"
+msgstr "Narių bendri įgūdžiai"
+
+#: mozillians/jinja2/groups/group.html:108
+msgid "Community Steward"
+msgstr "Bendruomenės kuratorius"
+
+#: mozillians/jinja2/groups/group.html:110 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#, fuzzy
+msgid "Curators"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/group.html:112
+#, fuzzy
+msgid "Curator"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/group.html:122 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:31
+#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:161
+msgid "Profile Photo"
+msgstr "Profilio nuotrauka"
+
+#: mozillians/jinja2/groups/group.html:159
+#, fuzzy
+msgid "Request to Join Group"
+msgstr "Prisijungti prie grupės"
+
+#: mozillians/jinja2/groups/group.html:161
+msgid "Join Group"
+msgstr "Prisijungti prie grupės"
+
+#: mozillians/jinja2/groups/group.html:172
+msgid "Leave Group"
+msgstr "Pasitraukti iš grupės"
+
+#: mozillians/jinja2/groups/group.html:181
+msgid "Filter"
+msgstr ""
+
+#: mozillians/jinja2/groups/group.html:189
+#, python-format
+msgid "There are no open membership requests for %(group_name)s."
+msgstr ""
+
+#: mozillians/jinja2/groups/group.html:193
+#, python-format
+msgid "Sorry, we can not find any mozillians in %(group_name)s."
+msgstr ""
+
+#: mozillians/jinja2/groups/group.html:205
+msgid "Functional Area Members"
+msgstr ""
+
+#: mozillians/jinja2/groups/group.html:207
+msgid "Group Members"
+msgstr "Grupės nariai"
+
+#: mozillians/jinja2/groups/group.html:213
+msgid "Your membership request is pending approval by the group curator."
+msgstr ""
+
+#: mozillians/jinja2/groups/index_areas.html:3 mozillians/jinja2/groups/index_areas.html:8
+msgid "Functional Areas"
+msgstr ""
+
+#: mozillians/jinja2/groups/index_areas.html:12 mozillians/jinja2/groups/index_skills.html:12
+msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
+msgstr ""
+
+#: mozillians/jinja2/groups/index_common.html:2 mozillians/jinja2/groups/index_groups.html:3
+msgid "Group Listing"
+msgstr "Grupės sąrašas"
+
+#: mozillians/jinja2/groups/index_common.html:16
+msgid "Sort"
+msgstr ""
+
+#: mozillians/jinja2/groups/index_common.html:22 mozillians/jinja2/groups/index_groups.html:10
+msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
+msgstr ""
+"Moziliečiai užsiima pačiomis įvairiausiomis veiklomis! Pasinaudok pačių naudotojų susikurtomis grupėmis ir susirask Tave dominančius moziliečius – pradedant priedų kūrėjais, baigiant "
+"lokalizuotojais."
+
+#: mozillians/jinja2/groups/index_common.html:46
+#, python-format
+msgid "%(num)s member"
+msgid_plural "%(num)s members"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/jinja2/groups/index_groups.html:19 mozillians/jinja2/groups/index_groups.html:31
+#, fuzzy
+msgid "Create Group"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/index_groups.html:48
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: mozillians/jinja2/groups/index_groups.html:49 mozillians/phonebook/forms.py:271 mozillians/phonebook/forms.py:272
+msgid "Save"
+msgstr ""
+
+#: mozillians/jinja2/groups/index_skills.html:3 mozillians/jinja2/groups/index_skills.html:8 mozillians/jinja2/phonebook/home.html:175 mozillians/jinja2/phonebook/profile.html:209
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:151
+msgid "Skills"
+msgstr "Įgūdžiai"
+
+#: mozillians/jinja2/groups/skill.html:3
+#, fuzzy
+msgid "Skill: {name}"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/skill.html:14
+#, fuzzy
+msgid "Skill"
+msgstr "Įgūdžiai"
+
+#: mozillians/jinja2/groups/skill.html:21
+#, fuzzy
+msgid "Add Skill"
+msgstr "Įgūdžiai"
+
+#: mozillians/jinja2/groups/skill.html:23
+msgid "Remove Skill"
+msgstr ""
+
+#: mozillians/jinja2/groups/skill.html:31
+#, python-format
+msgid "Sorry, we cannot find any mozillians with skill %(name)s"
+msgstr ""
+
+#: mozillians/jinja2/groups/terms.html:3 mozillians/jinja2/groups/terms.html:8
+msgid "Review terms"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:5
+#, fuzzy
+msgid "Group Type"
+msgstr "Grupės"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#, fuzzy
+msgid "Update Type"
+msgstr "Atnaujinti"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#, fuzzy
+msgid "Update Curators"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:104
+msgid "Terms & Expiration"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+msgid "New members should accept terms"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:124 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:70 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#, python-format
+msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:136
+msgid "Membership can expire"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:158
+#, fuzzy
+msgid "Update Terms & Expiration"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/groups/includes/group_edit_admin.html:36
+#, fuzzy
+msgid "Update Administration Settings"
+msgstr "Privatumo nuostatos"
+
+#: mozillians/jinja2/groups/includes/group_edit_description.html:69
+#, fuzzy
+msgid "Update Description"
+msgstr "Aprašas"
+
+#: mozillians/jinja2/groups/includes/group_edit_description.html:84
+msgid "I acknowledge that deleting this group is an action that can not be undone. All the information related to this group will be lost foreover."
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:5
+#, fuzzy
+msgid "Pending Invitations"
+msgstr "Nepatvirtintas profilis"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:82 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:207
+#, fuzzy
+msgid "Delete"
+msgstr "Pašalinti paskyrą"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:38
+msgid "Resend"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:55
+#, fuzzy
+msgid "Invite new member"
+msgstr "Nepatvirtintas profilis"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:66
+msgid "Additional Email Text"
+msgstr ""
+
+#: mozillians/jinja2/includes/field.html:3 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:45 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:31
+msgid "Choose visibility group for this field"
+msgstr ""
+
+#: mozillians/jinja2/includes/pagination.html:21
+msgid "Previous"
+msgstr "Grįžti"
+
+#: mozillians/jinja2/includes/pagination.html:26
+msgid "Page"
+msgstr ""
+
+#: mozillians/jinja2/includes/pagination.html:70
+msgid "Next"
+msgstr "Toliau"
+
+#: mozillians/jinja2/includes/search_result.html:17
+#, fuzzy
+msgid "Confirm Request"
+msgstr "Patvirtinimo laiškas išsiųstas"
+
+#: mozillians/jinja2/includes/search_result.html:21
+msgid "Requested"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:9
+msgid "Dino McVouch"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:10
+msgid "About Dino McVouch"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:13
+msgid "Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and takes care of Mozillians.org."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/about.html:9
+msgid "Photo collage of Mozillians"
+msgstr "Moziliečių fotokoliažas"
+
+#: mozillians/jinja2/phonebook/about.html:11
+#, fuzzy, python-format
+msgid ""
+"<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
+"community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. It also allows you to receive email "
+"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href="
+"\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
+"involved</a>. </p>"
+msgstr ""
+"<p>Moziliečiai – tai žmonės, savanoriškai aukojantys savo laiką, prisidėdami prie „Mozillos“ misijos įgyvendinimo. Jie yra pasišventę atvirumo, inovacijų ir lygių galimybių sklaidai saityne ir "
+"sudaro tvirtą mūsų bendruomenės pamatą.<p><p>Šis katalogas – priemonė, padedanti moziliečiams sužinoti, kas ką šioje bendruomenėje veikia ir kaip vieniems su kitais susisiekti.</p><p>Nori rasti "
+"moziliečius Vilniuje ir susitikti? O gal ieškai XPCOM eksperto, kuris galėtų peržiūrėti Tavo pataisą? Būtent tam ir skirta ši svetainė.</p><p><a href=\"%(wiki_roadmap_url)s\">Šios ir kitos "
+"galimybės</a> šiuo metu kuriamos, Jeigu nori padėti jas realizuoti, žemiau gali sužinoti, <a href=\"%(wiki_get_involved_url)s\">kaip prisidėti</a> prie šio projekto.</p>"
+
+#: mozillians/jinja2/phonebook/about.html:35
+msgid "Privacy First"
+msgstr "Privatumas – pirmiausia"
+
+#: mozillians/jinja2/phonebook/about.html:37
+#, python-format
+msgid ""
+"Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
+"we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
+msgstr ""
+"Privatumo užtikrinimas nuo pat pradžių buvo svarbus šio katalogo tikslas. Mes siekiame užtikrinti, kad moziliečių patirtis šioje svetainėje būtų nepriekaištinga, todėl ne tik kuriame ją saugią, bet "
+"ir reikalaujame, kad už kiekvieną naują jos naudotoją pirmiausia laiduotų kitas mozilietis, o tik tada naujokui suteikiame prieigą prie tik bendruomenės nariams skirtos informacijos, Daugiau "
+"informacijos gali rasti „Mozillos“ <a href=\"%(privacy_policy_url)s\">privatumo nuostatuose</a>."
+
+#: mozillians/jinja2/phonebook/about.html:51
+msgid "Get Involved"
+msgstr "Prisidėk"
+
+#: mozillians/jinja2/phonebook/about.html:53
+#, python-format
+msgid ""
+"The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
+"href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
+msgstr ""
+"Šis bendruomenės katalogas taip pat yra ir bendruomeninis projektas, kuriame gali dalyvauti ir Tu. Jeigu nori padėti mums dar patobulinti šį įrankį ar integruoti jį su kitais bendruomenės "
+"įrankiais, parašyk mums į <a href=\"%(google_groups_url)s\">forumą</a> (anglų kalba)."
+
+#: mozillians/jinja2/phonebook/apikeys.html:4
+msgid "API"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:11
+#, fuzzy
+msgid "Mozillians API"
+msgstr "Moziliečiai"
+
+#: mozillians/jinja2/phonebook/apikeys.html:15
+msgid "API Version 1"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:19
+#, python-format
+msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:28
+msgid "Your approved apps:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:39 mozillians/jinja2/phonebook/apikeys.html:75
+msgid "Key"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:44 mozillians/jinja2/phonebook/apikeys.html:86
+#, fuzzy
+msgid "You have no active apps."
+msgstr "Tu neturi aktyvių registruotų programų."
+
+#: mozillians/jinja2/phonebook/apikeys.html:48
+msgid "API Version 2"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:52
+#, python-format
+msgid ""
+"Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
+"need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:64
+msgid "Your apps:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:78
+msgid "Level"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/apikeys.html:109
+msgid "Register App"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:3 mozillians/jinja2/phonebook/search.html:3
+msgid "Search Results"
+msgstr "Paieškos rezultatai"
+
+#: mozillians/jinja2/phonebook/betasearch.html:17 mozillians/jinja2/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
+#, python-format
+msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
+msgid "Sign In"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:25 mozillians/jinja2/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:29
+#, fuzzy
+msgid "Beta Search"
+msgstr "Paieška"
+
+#: mozillians/jinja2/phonebook/betasearch.html:37 mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:37
+msgid "Search"
+msgstr "Paieška"
+
+#: mozillians/jinja2/phonebook/betasearch.html:41 mozillians/jinja2/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr "Papildomos parinktys"
+
+#: mozillians/jinja2/phonebook/betasearch.html:53 mozillians/jinja2/phonebook/search.html:52
+msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
+msgstr "<h2>Moziliečių paieška</h2> <p>Moziliečių gali ieškoti pagal vardą, el. pašto adresą arba pseudonimą.</p>"
+
+#: mozillians/jinja2/phonebook/betasearch.html:67 mozillians/jinja2/phonebook/search.html:66
+#, python-format
+msgid "%(count)s group matching"
+msgid_plural "%(count)s groups matching"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:91 mozillians/jinja2/phonebook/search.html:90
+#, python-format
+msgid "%(count)s Mozillian matching"
+msgid_plural "%(count)s Mozillians matching"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:116 mozillians/jinja2/phonebook/search.html:115
+#, python-format
+msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/betasearch.html:122 mozillians/jinja2/phonebook/search.html:121
+#, fuzzy, python-format
+msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
+msgstr ""
+"<p id=\"not-found\">Deja, grupės arba asmens, susijusio su Tavo vykdyta paieška („%(query)s“), rasti nepavyko.</p><p>Jeigu tai asmuo, galbūt jis dar netapo moziliečiu? Gali <a href=\"%(invite)s"
+"\">pakviesti šį žmogų</a> susikurti profilį.</p>"
+
+#: mozillians/jinja2/phonebook/betasearch.html:128 mozillians/jinja2/phonebook/search.html:127
+msgid "Need help? Contact a steward in a functional area!"
+msgstr "Reikia pagalbos? Susisiek su šios funkcinės srities kuratoriumi!"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:3 mozillians/jinja2/phonebook/confirm_delete.html:7
+msgid "Confirm Profile Deletion"
+msgstr "Profilio šalinimo patvirtinimas"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:12
+msgid "Are You Sure You Want to Leave Mozillians?"
+msgstr "Ar tikrai nori panaikinti savo registraciją moziliečių kataloge?"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:14
+msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
+msgstr ""
+"Profilio šalinimas yra momentinis ir negrįžtamas. Bet kokia Tavo profilyje esanti informacija bus prarasta. Jeigu vėliau norėsi vėl čia užsiregistruoti, teks vėl prašyti, kad kitas mozilietis už "
+"Tave laiduotų."
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:23
+msgid "No: don't delete my profile"
+msgstr "Ne, profilio šalinti nenoriu"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:26
+msgid "I'm sure: delete my profile"
+msgstr "Taip, tikrai noriu pašalinti profilį"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:23
+msgid "You are just one step away from creating your profile."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/edit_profile.html:36
+msgid "Profile"
+msgstr "Profilis"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:37 mozillians/jinja2/phonebook/includes/profile_edit_location.html:5 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:56
+#, fuzzy
+msgid "Location"
+msgstr "Gyvenamoji vieta"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:38
+#, fuzzy
+msgid "You &amp; Mozilla"
+msgstr "Tapk moziliečiu!"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:40 mozillians/jinja2/phonebook/profile.html:249 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:5
+#, fuzzy
+msgid "External Accounts"
+msgstr "Paskyra"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:41 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:46
+#, fuzzy
+msgid "Developer"
+msgstr "Programuotojams"
+
+#: mozillians/jinja2/phonebook/home.html:3
+msgid "Mozilla Community Directory"
+msgstr "„Mozillos“ bendruomenės katalogas"
+
+#: mozillians/jinja2/phonebook/home.html:23
+msgid "Create your account now to connect with fellow Mozillians."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:25
+msgid "Get started"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:48
+msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:61
+#, fuzzy
+msgid "Welcome to the Mozilla community directory"
+msgstr "<h1>Sveikiname<br> <small>„Mozillos“ bendruomenės kataloge</small></h1>"
+
+#: mozillians/jinja2/phonebook/home.html:63
+msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:84
+msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:99
+msgid "How do I get involved?"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:101
+msgid ""
+"Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
+"make a difference in the lives of people everywhere."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:109
+#, python-format
+msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:120 mozillians/jinja2/phonebook/home.html:195
+msgid "Hello!"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:124 mozillians/jinja2/phonebook/home.html:199
+msgid "Examples:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:125 mozillians/jinja2/phonebook/home.html:200
+#, python-format
+msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:158 mozillians/jinja2/phonebook/profile.html:195
+msgid "(membership requested)"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:166 mozillians/jinja2/phonebook/profile.html:224 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:187
+msgid "Languages"
+msgstr "Kalbos"
+
+#: mozillians/jinja2/phonebook/home.html:231
+msgid "Functional areas"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:232
+msgid "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:240
+msgid "Browse functional areas"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:242
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse functional areas!</p>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:254
+msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:261
+msgid "Browse groups"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/home.html:263
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse groups!</p>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invite.html:3 mozillians/jinja2/phonebook/invite.html:8
+msgid "Invite a Mozillian"
+msgstr "Pakviesk mozilietį"
+
+#: mozillians/jinja2/phonebook/invite.html:12
+#, python-format
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invite.html:18
+#, python-format
+msgid ""
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invite.html:51
+#, fuzzy
+msgid "Your Invites"
+msgstr "Laidavimai ir kvietimai"
+
+#: mozillians/jinja2/phonebook/invite.html:62
+msgid "Sent:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invite.html:66
+msgid "Redeemed:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invite.html:69
+msgid "Redeemer:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/invited.html:3
+msgid "Invitation Sent"
+msgstr "Kvietimas išsiųstas"
+
+#: mozillians/jinja2/phonebook/invited.html:8
+msgid "Invitation Sent!"
+msgstr "Kvietimas išsiųstas!"
+
+#: mozillians/jinja2/phonebook/invited.html:10
+#, fuzzy, python-format
+msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
+msgstr ""
+"Adresu %(email)s išsiųstas kvietimas prisijungti prie šio moziliečių katalogo. Adreso savininkas gaus laišką su instrukcija, kaip prisijungti. Jeigu nori, gali <a href=\"%(invite_url)s\">pakviesti "
+"kitą mozilietį</a>."
+
+#: mozillians/jinja2/phonebook/location_list.html:16
+#, fuzzy
+msgid "Mozillians in"
+msgstr "Moziliečiai"
+
+#: mozillians/jinja2/phonebook/location_list.html:39
+msgid "Sorry we cannot find any mozillians in"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:14
+msgid "Your Profile"
+msgstr "Tavo profilis"
+
+#: mozillians/jinja2/phonebook/profile.html:16
+msgid "Mozillian Profile"
+msgstr "Moziliečio profilis"
+
+#: mozillians/jinja2/phonebook/profile.html:18
+msgid "Pending Profile"
+msgstr "Nepatvirtintas profilis"
+
+#: mozillians/jinja2/phonebook/profile.html:24
+#, fuzzy, python-format
+msgid ""
+"<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
+"href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
+"title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
+"vouched increase as you finish tasks in our community.</p>"
+msgstr ""
+"<p>Už tave dar nėra laiduota. Išsiųsk šį saitą kam nors iš čia užsiregistravusių moziliečių, žinančių apie Tavo indėlį, ir paprašyk, kad už tave laiduotų.</p><p>Jeigu „Mozillos“ bendruomenėje esi "
+"naujokas, <a href=\"%(contribute_url)s\">sužinok, kaip gali įsitraukti į mūsų veiklą</a>. Jeigu būsi aktyvus(-i) šioje bendruomenėje, tikimybė, kad už tave bus laiduota, padidės.</p> <em class="
+"\"underline\" title=\"Tavo profilio adresas\">%(profile_url)s</em>"
+
+#: mozillians/jinja2/phonebook/profile.html:50
+#, fuzzy
+msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
+msgstr "Šis profilis laukia patvirtinimo. Jeigu žinai šį žmogų ir jo indėlį, kviečiame už jį laiduoti."
+
+#: mozillians/jinja2/phonebook/profile.html:61
+#, python-format
+msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:83
+#, python-format
+msgid "Mozillian for %(mozillian_years)s year"
+msgid_plural "Mozillian for %(mozillian_years)s years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: mozillians/jinja2/phonebook/profile.html:127
+msgid "T-Shirt Size:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:141
+msgid "View as:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:145
+msgid "Myself"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:149
+msgid "Mozillian"
+msgstr "Mozilietis"
+
+#: mozillians/jinja2/phonebook/profile.html:153 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:47 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:33
+#: mozillians/users/managers.py:12
+msgid "Public"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:171 mozillians/users/models.py:153
+msgid "Bio"
+msgstr "Biografija"
+
+#: mozillians/jinja2/phonebook/profile.html:179
+msgid "My contribution story"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:234
+#, fuzzy
+msgid "Websites"
+msgstr "Svetainė"
+
+#: mozillians/jinja2/phonebook/profile.html:267
+msgid "Alternate email addresses"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:284
+msgid "Vouched By"
+msgstr "Laiduotojas"
+
+#: mozillians/jinja2/phonebook/profile.html:297
+#, fuzzy
+msgid "Unknown Voucher"
+msgstr "Nepatvirtintas"
+
+#: mozillians/jinja2/phonebook/profile.html:300
+msgid "Legacy vouch."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:311
+msgid "Vouchees"
+msgstr "Laidavo už"
+
+#: mozillians/jinja2/phonebook/profile.html:337
+#, python-format
+msgid "%(hours)s hours ahead of your timezone."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:340
+#, python-format
+msgid "%(hours)s hours behind your timezone."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/profile.html:343
+msgid "Same time zone as yours."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/photo_form.html:6
+msgid "Profile photo"
+msgstr "Profilio nuotrauka"
+
+#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:162
+msgid "Remove Profile Photo"
+msgstr "Pašalinti profilio nuotrauką"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:44
+#, fuzzy
+msgid "Add account"
+msgstr "Paskyra"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:48
+#, fuzzy
+msgid "Update External Accounts"
+msgstr "Paskyra"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:53
+msgid "IRC"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:67
+msgid "Update IRC information"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:5 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:16
+msgid "Basic Information"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:83
+msgid "Update Information"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:91
+#, fuzzy
+msgid "Emails"
+msgstr "El. pašto adresas"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:94
+#, fuzzy
+msgid "Primary e-mail address"
+msgstr "„Personos“ el. paštas"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:106
+msgid "Secondary e-mail addresses"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:136
+msgid "Add e-mail using Persona"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:142
+#, fuzzy
+msgid "Update Emails"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:158
+msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
+msgstr "Įgūdis – tai įgytos žinios, padedančios pasiekti norimų rezultatų, be perteklinių laiko, energijos, ar jų abiejų sąnaudų."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:179
+#, fuzzy
+msgid "Update Skills"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:193
+msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
+msgstr "„Mozillos“ projektas aprėpia daugybę šalių, kalbančių įvairiausiomis kalbomis. Išvardink kalbas, kurias moki, kad kiti moziliečiai galėtų Tave lengviau rasti."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:217
+#, fuzzy
+msgid "Add language"
+msgstr "Kitos kalbos:"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:226
+#, fuzzy
+msgid "Update Languages"
+msgstr "Kalbos"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:233
+#, fuzzy
+msgid "Delete account"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:239
+msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
+msgstr "Aš suprantu, kad pašalinus mano paskyrą, man bus sudėtingiau parodyti savo indėlį į „Mozillos“ bendruomenę, o kitiems jos nariams bus sunkiau mane surasti."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:250
+msgid "Delete Profile"
+msgstr "Pašalinti profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
+#, fuzzy
+msgid "API privacy"
+msgstr "Privatumas – pirmiausia"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
+#, fuzzy, python-format
+msgid ""
+"The Phonebook offers an API (currently v1) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
+"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
+msgstr ""
+"Šis katalogas suteikia API sąsają, kurios pagalba galima autorizuoti „Mozillos“ talkininkus ir dalintis savo profilio duomenimis su kitais įrankiais ir svetainėmis, pavyzdžiui, <a href="
+"\"%(bugzilla_url)s\">„Bugzilla“</a> ir <a href=\"%(reps_url)s\">„Mozilla Reps“ portalu</a>."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:22
+#, fuzzy
+msgid "Privacy"
+msgstr "Privatumas – pirmiausia"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:40
+#, fuzzy
+msgid "Update Privacy Settings"
+msgstr "Privatumo nuostatos"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:16
+msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
+msgstr "Grupės – tai atskiros moziliečių bendruomenės, turinčios kažką bendro. Bendras gali būti interesas. narystė toje pačioje komandoje, dalyvavimas projekte ar vietinėje bendruomenėje."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:24
+#, python-format
+msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:28
+msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:35
+msgid "After you are vouched, you will be able to join groups."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:51
+#, fuzzy
+msgid "Update Groups"
+msgstr "Grupė: {name}"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:28 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:74
+#, fuzzy
+msgid "You have denied Location services."
+msgstr "Tu neturi aktyvių registruotų programų."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:52 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:98
+msgid "Country"
+msgstr "Valstybė"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:75 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:121
+msgid "Region"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:98 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:144
+msgid "City"
+msgstr "Miestas"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:121
+#, fuzzy
+msgid "Update Location"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:176
+msgid "This field is required."
+msgstr "Šis laukas privalomas."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:183
+#, fuzzy, python-format
+msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
+msgstr "Aš sutinku patikėti šią informaciją „Mozillos“ privatumo nuostatuose apibrėžtomis sąlygomis."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:195
+msgid "Create Profile"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:5
+#, fuzzy
+msgid "Your Mozilla Contributions"
+msgstr "„Mozillos“ talkininkų katalogas"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:42
+msgid "Update Contributions"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:50
+msgid "T-Shirt Size"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:56
+msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:69
+msgid "Fitted"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:70
+msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as women's."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:83
+msgid "Straight-cut"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:84
+msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as men's or unisex."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:103
+#, fuzzy
+msgid "Update T-shirt size"
+msgstr "Susikurk profilį"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:7
+#, python-format
+msgid "Does this profile belong to a Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:14
+#, python-format
+msgid "Do you know this Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:26
+msgid "Characters remaining:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:31
+msgid "Send invite"
+msgstr "Išsiųsti pakvietimą"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:33
+#, python-format
+msgid "Vouch for %(name)s"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:40
+msgid "Only vouch for users who have made significant contributions and are at least 13 years old."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:42
+msgid "Once vouched, they will be able to:"
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:44
+msgid "View all profiles and join groups."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:45
+msgid "Access special video content on Air Mozilla."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:46
+msgid "Join the Mozilla Exchange Yammer network."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:47
+msgid "Use other Mozilla apps as a vouched user."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:50
+msgid "Vouches cannot be edited or retracted."
+msgstr ""
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:52
+#, python-format
+msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
 
 #: mozillians/phonebook/forms.py:84
 #, fuzzy
@@ -297,14 +1556,6 @@ msgstr "Prašom naudoti tik raides, skaitmenis, brūkšnelius ir tarpus"
 msgid "This username is not allowed, please choose another."
 msgstr "Šis naudotojo vardas negalimas, prašom pasirinkti kitą."
 
-#: mozillians/phonebook/forms.py:161 mozillians/templates/groups/group.html:100 mozillians/templates/includes/search_result.html:31 mozillians/templates/phonebook/includes/photo_form.html:4
-msgid "Profile Photo"
-msgstr "Profilio nuotrauka"
-
-#: mozillians/phonebook/forms.py:162 mozillians/templates/phonebook/includes/photo_form.html:19
-msgid "Remove Profile Photo"
-msgstr "Pašalinti profilio nuotrauką"
-
 #: mozillians/phonebook/forms.py:230
 #, fuzzy
 msgid "Skills can only contain latin characters and +.:-."
@@ -312,10 +1563,6 @@ msgstr "Įgūdžių pavadinimus gali sudaryti tik raidės, skaitmenys, brūkšne
 
 #: mozillians/phonebook/forms.py:268
 msgid "Required"
-msgstr ""
-
-#: mozillians/phonebook/forms.py:271 mozillians/phonebook/forms.py:272
-msgid "Save"
 msgstr ""
 
 #: mozillians/phonebook/forms.py:289
@@ -370,18 +1617,9 @@ msgstr "Asmens, už kurį jau buvo laiduota, pakviesti negalima."
 msgid "Please complete registration before proceeding."
 msgstr "Prieš tęsdami, turite užbaigti registraciją."
 
-#: mozillians/phonebook/models.py:18
-#, fuzzy
-msgid "Inviter"
-msgstr "Pakviesti"
-
 #: mozillians/phonebook/models.py:19
 msgid "Recipient"
 msgstr "Gavėjas"
-
-#: mozillians/phonebook/models.py:21
-msgid "Redeemer"
-msgstr ""
 
 #: mozillians/phonebook/models.py:42
 msgid "A fellow Mozillian"
@@ -392,7 +1630,7 @@ msgid "Please join me on mozillians.org"
 msgstr ""
 
 #: mozillians/phonebook/models.py:66
-#, fuzzy
+#, fuzzy, python-format
 msgid "%s created a Mozillians profile"
 msgstr "Moziliečio profilis"
 
@@ -451,13 +1689,14 @@ msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Tavo paskyra sukurta."
 
 #: mozillians/phonebook/views.py:454
-#, fuzzy
+#, fuzzy, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr ""
 "Adresu %(email)s išsiųstas kvietimas prisijungti prie šio moziliečių katalogo. Adreso savininkas gaus laišką su instrukcija, kaip prisijungti. Jeigu nori, gali <a href=\"%(invite_url)s\">pakviesti "
 "kitą mozilietį</a>."
 
 #: mozillians/phonebook/views.py:475
+#, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr ""
 
@@ -473,1110 +1712,8 @@ msgstr ""
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr ""
 
-#: mozillians/settings/base.py:516 mozillians/templates/base.html:7 mozillians/templates/base.html:21 mozillians/templates/phonebook/betasearch.html:89 mozillians/templates/phonebook/search.html:88
-#: mozillians/users/managers.py:11
-msgid "Mozillians"
-msgstr "Moziliečiai"
-
-#: mozillians/templates/404.html:3
-msgid "Page Not Found"
-msgstr "Tinklalapis nerastas"
-
-#: mozillians/templates/404.html:7
-msgid "Oh No! That Page Doesn't Exist!"
-msgstr "O, ne! Tokio tinklalapio nėra!"
-
-#: mozillians/templates/404.html:11 mozillians/templates/404.html:12
-msgid "Tumbeasts by Matthew Inman of The Oatmeal"
-msgstr ""
-
-#: mozillians/templates/404.html:15
-msgid ""
-"<p> The page you requested couldn't be found. You can head to the <a href=\"%(home_url)s\">Mozillians home page</a> to learn more about our community phonebook, or you can try searching for the "
-"person you were looking for using the search box at the top of this page. </p>"
-msgstr ""
-"<p>Tinklalapis, kurio ieškojai, nerastas. Gali grįžti į <a href=\"%(home_url)s\">moziliečių katalogo pradžios tinklalapį</a> ir sužinoti apie jį daugiau arba gali pabandyti rasti ieškomą žmogų, "
-"pasinaudodama(s) viršuje esančiu paieškos laukeliu.</p>"
-
-#: mozillians/templates/404.html:25
-#, fuzzy
-msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
-"account, <a href=\"%(join_url)s\">join us</a>. </p>"
-msgstr ""
-"<p>Kadangi nesi prisijungęs, Tu neturi prieigos prie privačių katalogo profilių. Jeigu bandai pasiekti privatų profilį, turėsi prisijungti. Jeigu neturi paskyros, <a href=\"%(join_url)s"
-"\">užsiregistruok</a>.</p>"
-
-#: mozillians/templates/500.html:3
-msgid "Application Error"
-msgstr "Programos klaida"
-
-#: mozillians/templates/500.html:7
-msgid "We're Sorry, but Something Went Wrong!"
-msgstr "Apgailestaujame, kažkas nutiko ne taip!"
-
-#: mozillians/templates/500.html:11 mozillians/templates/500.html:12
-msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
-msgstr ""
-
-#: mozillians/templates/500.html:15
-msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
-"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
-"about Mozillians. Sorry about this! </p>"
-msgstr ""
-"<p>Apgailestaujame, tačiau apdorojant šią užklausą, įvyko netikėta klaida. Gali pabandyti įkelti tinklapį iš naujo arba <a href=\"%(bugzilla_url)s\">užregistruoti klaidą</a> – pranešime paaiškink, "
-"kas nutiko, ir mes imsimės šios problemos sprendimo.</p><p>Jeigu tinklapio iš naujo įkelti nepavyko, gali <a href=\"%(home_url)s\">grįžti į moziliečių katalogo pradžios tinklapį</a> ir sužinoti "
-"apie mus daugiau. Dar kartą atsiprašome!</p>"
-
-#: mozillians/templates/base.html:7
-msgid "Welcome"
-msgstr "Labas!"
-
-#: mozillians/templates/base.html:8
-msgid "Mozilla's contributor phonebook"
-msgstr "„Mozillos“ talkininkų katalogas"
-
-#: mozillians/templates/base.html:69 mozillians/templates/includes/lang_switcher.html:3
-#, fuzzy
-msgid "Select language"
-msgstr "Kitos kalbos:"
-
-#: mozillians/templates/base.html:70
-#, fuzzy
-msgid "Skip to main content"
-msgstr "Šokti į turinį"
-
-#: mozillians/templates/base.html:81 mozillians/templates/phonebook/betasearch.html:32 mozillians/templates/phonebook/home.html:33 mozillians/templates/phonebook/home.html:123
-#: mozillians/templates/phonebook/home.html:198 mozillians/templates/phonebook/search.html:32
-msgid "Search for people, groups and more"
-msgstr ""
-
-#: mozillians/templates/base.html:105
-msgid "View Profile"
-msgstr "Rodyti profilį"
-
-#: mozillians/templates/base.html:111 mozillians/templates/phonebook/edit_profile.html:4 mozillians/templates/phonebook/edit_profile.html:34
-#, fuzzy
-msgid "Settings"
-msgstr "Nuostatos"
-
-#: mozillians/templates/base.html:118 mozillians/templates/groups/index_common.html:12 mozillians/templates/groups/index_groups.html:7 mozillians/templates/phonebook/betasearch.html:65
-#: mozillians/templates/phonebook/edit_profile.html:39 mozillians/templates/phonebook/home.html:151 mozillians/templates/phonebook/home.html:253 mozillians/templates/phonebook/profile.html:186
-#: mozillians/templates/phonebook/search.html:64 mozillians/templates/phonebook/includes/profile_edit_groups.html:5
-msgid "Groups"
-msgstr "Grupės"
-
-#: mozillians/templates/base.html:124
-msgid "Invite"
-msgstr "Pakviesti"
-
-#: mozillians/templates/base.html:131 mozillians/templates/base.html:139
-msgid "Log Out"
-msgstr "Atsijungti"
-
-#: mozillians/templates/base.html:144 mozillians/templates/base.html:147
-msgid "Sign in"
-msgstr ""
-
-#: mozillians/templates/base.html:187
-msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-
-#: mozillians/templates/base.html:207
-msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
-msgstr ""
-
-#: mozillians/templates/base.html:216 mozillians/templates/phonebook/about-dinomcvouch.html:3 mozillians/templates/phonebook/about.html:3 mozillians/templates/phonebook/about.html:10
-msgid "About Mozillians"
-msgstr "Apie moziliečius"
-
-#: mozillians/templates/base.html:217
-msgid "Contact Us"
-msgstr ""
-
-#: mozillians/templates/base.html:218
-msgid "Privacy Policy"
-msgstr "Privatumo nuostatai"
-
-#: mozillians/templates/base.html:219
-msgid "Legal Notices"
-msgstr "Teisinė informacija"
-
-#: mozillians/templates/base.html:220
-msgid "Report Trademark Abuse"
-msgstr "Pranešti apie neleistiną prekės ženklo naudojimą"
-
-#: mozillians/templates/groups/add_edit.html:4 mozillians/templates/groups/add_edit.html:22
-#, fuzzy
-msgid "Add a group"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/add_edit.html:6 mozillians/templates/groups/add_edit.html:37
-msgid "Edit functional area"
-msgstr ""
-
-#: mozillians/templates/groups/add_edit.html:8 mozillians/templates/groups/add_edit.html:39
-#, fuzzy
-msgid "Edit group"
-msgstr "Prisijungti prie grupės"
-
-#: mozillians/templates/groups/add_edit.html:16 mozillians/templates/phonebook/edit_profile.html:17 mozillians/templates/phonebook/invite.html:34
-msgid "Please correct the errors below."
-msgstr ""
-
-#: mozillians/templates/groups/add_edit.html:24
-msgid "Use this form to create a group on Mozillians.org. Before creating a group, try searching for it. Someone else might already have created it."
-msgstr ""
-
-#: mozillians/templates/groups/add_edit.html:30
-msgid ""
-"Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
-"requests to join."
-msgstr ""
-
-#: mozillians/templates/groups/add_edit.html:112
-#, fuzzy
-msgid "Admin Settings"
-msgstr "Nuostatos"
-
-#: mozillians/templates/groups/add_edit.html:129 mozillians/templates/groups/index_groups.html:18
-#, fuzzy
-msgid "Create Group"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/add_edit.html:131
-msgid "Submit changes"
-msgstr ""
-
-#: mozillians/templates/groups/confirm_remove_member.html:3 mozillians/templates/groups/confirm_remove_member.html:14
-msgid "Confirm removing member"
-msgstr ""
-
-#: mozillians/templates/groups/confirm_remove_member.html:18
-msgid "Really leave group %(group)s?"
-msgstr ""
-
-#: mozillians/templates/groups/confirm_remove_member.html:20
-msgid "Really remove user %(profile)s from group %(group)s?"
-msgstr ""
-
-#: mozillians/templates/groups/confirm_remove_member.html:27 mozillians/templates/includes/search_result.html:9 mozillians/templates/phonebook/invite.html:77
-msgid "Remove"
-msgstr ""
-
-#: mozillians/templates/groups/confirm_remove_member.html:30
-msgid "Return to group"
-msgstr ""
-
-#: mozillians/templates/groups/group.html:3
-msgid "Group: {name}"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/group.html:16
-msgid "Functional Area"
-msgstr ""
-
-#: mozillians/templates/groups/group.html:18
-#, fuzzy
-msgid "Group"
-msgstr "Grupės"
-
-#: mozillians/templates/groups/group.html:30
-#, fuzzy
-msgid "Delete Group"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/group.html:37
-#, fuzzy
-msgid "Edit Group"
-msgstr "Prisijungti prie grupės"
-
-#: mozillians/templates/groups/group.html:71
-msgid "Skills members have in common"
-msgstr "Narių bendri įgūdžiai"
-
-#: mozillians/templates/groups/group.html:86
-msgid "Community Steward"
-msgstr "Bendruomenės kuratorius"
-
-#: mozillians/templates/groups/group.html:88
-#, fuzzy
-msgid "Curators"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/group.html:90
-#, fuzzy
-msgid "Curator"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/group.html:138
-#, fuzzy
-msgid "Request to Join Group"
-msgstr "Prisijungti prie grupės"
-
-#: mozillians/templates/groups/group.html:140
-msgid "Join Group"
-msgstr "Prisijungti prie grupės"
-
-#: mozillians/templates/groups/group.html:151
-msgid "Leave Group"
-msgstr "Pasitraukti iš grupės"
-
-#: mozillians/templates/groups/group.html:160
-msgid "Filter"
-msgstr ""
-
-#: mozillians/templates/groups/group.html:168
-msgid "There are no open membership requests for %(group_name)s."
-msgstr ""
-
-#: mozillians/templates/groups/group.html:172
-msgid "Sorry, we can not find any mozillians in %(group_name)s."
-msgstr ""
-
-#: mozillians/templates/groups/group.html:184
-msgid "Functional Area Members"
-msgstr ""
-
-#: mozillians/templates/groups/group.html:186
-msgid "Group Members"
-msgstr "Grupės nariai"
-
-#: mozillians/templates/groups/group.html:192
-msgid "Your membership request is pending approval by the group curator."
-msgstr ""
-
-#: mozillians/templates/groups/index_areas.html:3 mozillians/templates/groups/index_areas.html:8
-msgid "Functional Areas"
-msgstr ""
-
-#: mozillians/templates/groups/index_areas.html:12 mozillians/templates/groups/index_skills.html:12
-msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
-msgstr ""
-
-#: mozillians/templates/groups/index_common.html:2 mozillians/templates/groups/index_groups.html:3
-msgid "Group Listing"
-msgstr "Grupės sąrašas"
-
-#: mozillians/templates/groups/index_common.html:16
-msgid "Sort"
-msgstr ""
-
-#: mozillians/templates/groups/index_common.html:22 mozillians/templates/groups/index_groups.html:10
-msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
-msgstr ""
-"Moziliečiai užsiima pačiomis įvairiausiomis veiklomis! Pasinaudok pačių naudotojų susikurtomis grupėmis ir susirask Tave dominančius moziliečius – pradedant priedų kūrėjais, baigiant "
-"lokalizuotojais."
-
-#: mozillians/templates/groups/index_common.html:46
-msgid "%(num)s member"
-msgid_plural "%(num)s members"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: mozillians/templates/groups/index_skills.html:3 mozillians/templates/groups/index_skills.html:8 mozillians/templates/phonebook/home.html:175 mozillians/templates/phonebook/profile.html:209
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:151
-msgid "Skills"
-msgstr "Įgūdžiai"
-
-#: mozillians/templates/groups/skill.html:3
-#, fuzzy
-msgid "Skill: {name}"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/groups/skill.html:14
-#, fuzzy
-msgid "Skill"
-msgstr "Įgūdžiai"
-
-#: mozillians/templates/groups/skill.html:21
-#, fuzzy
-msgid "Add Skill"
-msgstr "Įgūdžiai"
-
-#: mozillians/templates/groups/skill.html:23
-msgid "Remove Skill"
-msgstr ""
-
-#: mozillians/templates/groups/skill.html:31
-msgid "Sorry, we cannot find any mozillians with skill %(name)s"
-msgstr ""
-
-#: mozillians/templates/groups/terms.html:3 mozillians/templates/groups/terms.html:8
-msgid "Review terms"
-msgstr ""
-
-#: mozillians/templates/includes/field.html:3 mozillians/templates/phonebook/includes/profile_edit_basic.html:45 mozillians/templates/phonebook/includes/profile_edit_registration.html:31
-msgid "Choose visibility group for this field"
-msgstr ""
-
-#: mozillians/templates/includes/pagination.html:21
-msgid "Previous"
-msgstr "Grįžti"
-
-#: mozillians/templates/includes/pagination.html:26
-msgid "Page"
-msgstr ""
-
-#: mozillians/templates/includes/pagination.html:70
-msgid "Next"
-msgstr "Toliau"
-
-#: mozillians/templates/includes/search_result.html:17
-#, fuzzy
-msgid "Confirm Request"
-msgstr "Patvirtinimo laiškas išsiųstas"
-
-#: mozillians/templates/includes/search_result.html:21
-msgid "Requested"
-msgstr ""
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:9
-msgid "Dino McVouch"
-msgstr ""
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:10
-msgid "About Dino McVouch"
-msgstr ""
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:13
-msgid "Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and takes care of Mozillians.org."
-msgstr ""
-
-#: mozillians/templates/phonebook/about.html:9
-msgid "Photo collage of Mozillians"
-msgstr "Moziliečių fotokoliažas"
-
-#: mozillians/templates/phonebook/about.html:11
-#, fuzzy
-msgid ""
-"<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
-"community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. It also allows you to receive email "
-"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href="
-"\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
-"involved</a>. </p>"
-msgstr ""
-"<p>Moziliečiai – tai žmonės, savanoriškai aukojantys savo laiką, prisidėdami prie „Mozillos“ misijos įgyvendinimo. Jie yra pasišventę atvirumo, inovacijų ir lygių galimybių sklaidai saityne ir "
-"sudaro tvirtą mūsų bendruomenės pamatą.<p><p>Šis katalogas – priemonė, padedanti moziliečiams sužinoti, kas ką šioje bendruomenėje veikia ir kaip vieniems su kitais susisiekti.</p><p>Nori rasti "
-"moziliečius Vilniuje ir susitikti? O gal ieškai XPCOM eksperto, kuris galėtų peržiūrėti Tavo pataisą? Būtent tam ir skirta ši svetainė.</p><p><a href=\"%(wiki_roadmap_url)s\">Šios ir kitos "
-"galimybės</a> šiuo metu kuriamos, Jeigu nori padėti jas realizuoti, žemiau gali sužinoti, <a href=\"%(wiki_get_involved_url)s\">kaip prisidėti</a> prie šio projekto.</p>"
-
-#: mozillians/templates/phonebook/about.html:35
-msgid "Privacy First"
-msgstr "Privatumas – pirmiausia"
-
-#: mozillians/templates/phonebook/about.html:37
-msgid ""
-"Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
-"we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
-msgstr ""
-"Privatumo užtikrinimas nuo pat pradžių buvo svarbus šio katalogo tikslas. Mes siekiame užtikrinti, kad moziliečių patirtis šioje svetainėje būtų nepriekaištinga, todėl ne tik kuriame ją saugią, bet "
-"ir reikalaujame, kad už kiekvieną naują jos naudotoją pirmiausia laiduotų kitas mozilietis, o tik tada naujokui suteikiame prieigą prie tik bendruomenės nariams skirtos informacijos, Daugiau "
-"informacijos gali rasti „Mozillos“ <a href=\"%(privacy_policy_url)s\">privatumo nuostatuose</a>."
-
-#: mozillians/templates/phonebook/about.html:51
-msgid "Get Involved"
-msgstr "Prisidėk"
-
-#: mozillians/templates/phonebook/about.html:53
-msgid ""
-"The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
-"href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
-msgstr ""
-"Šis bendruomenės katalogas taip pat yra ir bendruomeninis projektas, kuriame gali dalyvauti ir Tu. Jeigu nori padėti mums dar patobulinti šį įrankį ar integruoti jį su kitais bendruomenės "
-"įrankiais, parašyk mums į <a href=\"%(google_groups_url)s\">forumą</a> (anglų kalba)."
-
-#: mozillians/templates/phonebook/apikeys.html:4
-msgid "API"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:11
-#, fuzzy
-msgid "Mozillians API"
-msgstr "Moziliečiai"
-
-#: mozillians/templates/phonebook/apikeys.html:15
-msgid "API Version 1"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:19
-msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:28
-msgid "Your approved apps:"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:39 mozillians/templates/phonebook/apikeys.html:75
-msgid "Key"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:44 mozillians/templates/phonebook/apikeys.html:86
-#, fuzzy
-msgid "You have no active apps."
-msgstr "Tu neturi aktyvių registruotų programų."
-
-#: mozillians/templates/phonebook/apikeys.html:48
-msgid "API Version 2"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:52
-msgid ""
-"Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
-"need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:64
-msgid "Your apps:"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:78
-msgid "Level"
-msgstr ""
-
-#: mozillians/templates/phonebook/apikeys.html:82 mozillians/templates/phonebook/includes/profile_edit_accounts.html:31 mozillians/templates/phonebook/includes/profile_edit_basic.html:207
-#, fuzzy
-msgid "Delete"
-msgstr "Pašalinti paskyrą"
-
-#: mozillians/templates/phonebook/apikeys.html:109
-msgid "Register App"
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:3 mozillians/templates/phonebook/search.html:3
-msgid "Search Results"
-msgstr "Paieškos rezultatai"
-
-#: mozillians/templates/phonebook/betasearch.html:17 mozillians/templates/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:19 mozillians/templates/phonebook/search.html:19
-msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:19 mozillians/templates/phonebook/search.html:19
-msgid "Sign In"
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:25 mozillians/templates/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:29
-#, fuzzy
-msgid "Beta Search"
-msgstr "Paieška"
-
-#: mozillians/templates/phonebook/betasearch.html:37 mozillians/templates/phonebook/search.html:29 mozillians/templates/phonebook/search.html:37
-msgid "Search"
-msgstr "Paieška"
-
-#: mozillians/templates/phonebook/betasearch.html:41 mozillians/templates/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr "Papildomos parinktys"
-
-#: mozillians/templates/phonebook/betasearch.html:53 mozillians/templates/phonebook/search.html:52
-msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
-msgstr "<h2>Moziliečių paieška</h2> <p>Moziliečių gali ieškoti pagal vardą, el. pašto adresą arba pseudonimą.</p>"
-
-#: mozillians/templates/phonebook/betasearch.html:67 mozillians/templates/phonebook/search.html:66
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: mozillians/templates/phonebook/betasearch.html:91 mozillians/templates/phonebook/search.html:90
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: mozillians/templates/phonebook/betasearch.html:116 mozillians/templates/phonebook/search.html:115
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr ""
-
-#: mozillians/templates/phonebook/betasearch.html:122 mozillians/templates/phonebook/search.html:121
-#, fuzzy
-msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
-msgstr ""
-"<p id=\"not-found\">Deja, grupės arba asmens, susijusio su Tavo vykdyta paieška („%(query)s“), rasti nepavyko.</p><p>Jeigu tai asmuo, galbūt jis dar netapo moziliečiu? Gali <a href=\"%(invite)s"
-"\">pakviesti šį žmogų</a> susikurti profilį.</p>"
-
-#: mozillians/templates/phonebook/betasearch.html:128 mozillians/templates/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
-msgstr "Reikia pagalbos? Susisiek su šios funkcinės srities kuratoriumi!"
-
-#: mozillians/templates/phonebook/confirm_delete.html:3 mozillians/templates/phonebook/confirm_delete.html:7
-msgid "Confirm Profile Deletion"
-msgstr "Profilio šalinimo patvirtinimas"
-
-#: mozillians/templates/phonebook/confirm_delete.html:12
-msgid "Are You Sure You Want to Leave Mozillians?"
-msgstr "Ar tikrai nori panaikinti savo registraciją moziliečių kataloge?"
-
-#: mozillians/templates/phonebook/confirm_delete.html:14
-msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
-msgstr ""
-"Profilio šalinimas yra momentinis ir negrįžtamas. Bet kokia Tavo profilyje esanti informacija bus prarasta. Jeigu vėliau norėsi vėl čia užsiregistruoti, teks vėl prašyti, kad kitas mozilietis už "
-"Tave laiduotų."
-
-#: mozillians/templates/phonebook/confirm_delete.html:23
-msgid "No: don't delete my profile"
-msgstr "Ne, profilio šalinti nenoriu"
-
-#: mozillians/templates/phonebook/confirm_delete.html:26
-msgid "I'm sure: delete my profile"
-msgstr "Taip, tikrai noriu pašalinti profilį"
-
-#: mozillians/templates/phonebook/edit_profile.html:23
-msgid "You are just one step away from creating your profile."
-msgstr ""
-
-#: mozillians/templates/phonebook/edit_profile.html:36
-msgid "Profile"
-msgstr "Profilis"
-
-#: mozillians/templates/phonebook/edit_profile.html:37 mozillians/templates/phonebook/includes/profile_edit_location.html:5 mozillians/templates/phonebook/includes/profile_edit_registration.html:56
-#, fuzzy
-msgid "Location"
-msgstr "Gyvenamoji vieta"
-
-#: mozillians/templates/phonebook/edit_profile.html:38
-#, fuzzy
-msgid "You &amp; Mozilla"
-msgstr "Tapk moziliečiu!"
-
-#: mozillians/templates/phonebook/edit_profile.html:40 mozillians/templates/phonebook/profile.html:249 mozillians/templates/phonebook/includes/profile_edit_accounts.html:5
-#, fuzzy
-msgid "External Accounts"
-msgstr "Paskyra"
-
-#: mozillians/templates/phonebook/edit_profile.html:41 mozillians/templates/phonebook/includes/profile_edit_developer.html:44
-#, fuzzy
-msgid "Developer"
-msgstr "Programuotojams"
-
-#: mozillians/templates/phonebook/home.html:3
-msgid "Mozilla Community Directory"
-msgstr "„Mozillos“ bendruomenės katalogas"
-
-#: mozillians/templates/phonebook/home.html:23
-msgid "Create your account now to connect with fellow Mozillians."
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:25
-msgid "Get started"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:48
-msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:61
-#, fuzzy
-msgid "Welcome to the Mozilla community directory"
-msgstr "<h1>Sveikiname<br> <small>„Mozillos“ bendruomenės kataloge</small></h1>"
-
-#: mozillians/templates/phonebook/home.html:63
-msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:84
-msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:99
-msgid "How do I get involved?"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:101
-msgid ""
-"Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
-"make a difference in the lives of people everywhere."
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:109
-msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:120 mozillians/templates/phonebook/home.html:195
-msgid "Hello!"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:124 mozillians/templates/phonebook/home.html:199
-msgid "Examples:"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:125 mozillians/templates/phonebook/home.html:200
-msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:158 mozillians/templates/phonebook/profile.html:195
-msgid "(membership requested)"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:166 mozillians/templates/phonebook/profile.html:224 mozillians/templates/phonebook/includes/profile_edit_basic.html:187
-msgid "Languages"
-msgstr "Kalbos"
-
-#: mozillians/templates/phonebook/home.html:231
-msgid "Functional areas"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:232
-msgid "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p>"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:240
-msgid "Browse functional areas"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:242
-msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse functional areas!</p>"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:254
-msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p>"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:261
-msgid "Browse groups"
-msgstr ""
-
-#: mozillians/templates/phonebook/home.html:263
-msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse groups!</p>"
-msgstr ""
-
-#: mozillians/templates/phonebook/invite.html:3 mozillians/templates/phonebook/invite.html:8
-msgid "Invite a Mozillian"
-msgstr "Pakviesk mozilietį"
-
-#: mozillians/templates/phonebook/invite.html:12
-msgid ""
-"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
-msgstr ""
-
-#: mozillians/templates/phonebook/invite.html:18
-msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
-"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
-"vouching.</a>"
-msgstr ""
-
-#: mozillians/templates/phonebook/invite.html:51
-#, fuzzy
-msgid "Your Invites"
-msgstr "Laidavimai ir kvietimai"
-
-#: mozillians/templates/phonebook/invite.html:62
-msgid "Sent:"
-msgstr ""
-
-#: mozillians/templates/phonebook/invite.html:66
-msgid "Redeemed:"
-msgstr ""
-
-#: mozillians/templates/phonebook/invite.html:69
-msgid "Redeemer:"
-msgstr ""
-
-#: mozillians/templates/phonebook/invited.html:3
-msgid "Invitation Sent"
-msgstr "Kvietimas išsiųstas"
-
-#: mozillians/templates/phonebook/invited.html:8
-msgid "Invitation Sent!"
-msgstr "Kvietimas išsiųstas!"
-
-#: mozillians/templates/phonebook/invited.html:10
-#, fuzzy
-msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
-msgstr ""
-"Adresu %(email)s išsiųstas kvietimas prisijungti prie šio moziliečių katalogo. Adreso savininkas gaus laišką su instrukcija, kaip prisijungti. Jeigu nori, gali <a href=\"%(invite_url)s\">pakviesti "
-"kitą mozilietį</a>."
-
-#: mozillians/templates/phonebook/location_list.html:16
-#, fuzzy
-msgid "Mozillians in"
-msgstr "Moziliečiai"
-
-#: mozillians/templates/phonebook/location_list.html:39
-msgid "Sorry we cannot find any mozillians in"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:14
-msgid "Your Profile"
-msgstr "Tavo profilis"
-
-#: mozillians/templates/phonebook/profile.html:16
-msgid "Mozillian Profile"
-msgstr "Moziliečio profilis"
-
-#: mozillians/templates/phonebook/profile.html:18
-msgid "Pending Profile"
-msgstr "Nepatvirtintas profilis"
-
-#: mozillians/templates/phonebook/profile.html:24
-#, fuzzy
-msgid ""
-"<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
-"href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
-"title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
-"vouched increase as you finish tasks in our community.</p>"
-msgstr ""
-"<p>Už tave dar nėra laiduota. Išsiųsk šį saitą kam nors iš čia užsiregistravusių moziliečių, žinančių apie Tavo indėlį, ir paprašyk, kad už tave laiduotų.</p><p>Jeigu „Mozillos“ bendruomenėje esi "
-"naujokas, <a href=\"%(contribute_url)s\">sužinok, kaip gali įsitraukti į mūsų veiklą</a>. Jeigu būsi aktyvus(-i) šioje bendruomenėje, tikimybė, kad už tave bus laiduota, padidės.</p> <em class="
-"\"underline\" title=\"Tavo profilio adresas\">%(profile_url)s</em>"
-
-#: mozillians/templates/phonebook/profile.html:50
-#, fuzzy
-msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
-msgstr "Šis profilis laukia patvirtinimo. Jeigu žinai šį žmogų ir jo indėlį, kviečiame už jį laiduoti."
-
-#: mozillians/templates/phonebook/profile.html:61
-msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:83
-msgid "Mozillian for %(mozillian_years)s year"
-msgid_plural "Mozillian for %(mozillian_years)s years"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: mozillians/templates/phonebook/profile.html:127
-msgid "T-Shirt Size:"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:141
-msgid "View as:"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:145
-msgid "Myself"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:149
-msgid "Mozillian"
-msgstr "Mozilietis"
-
-#: mozillians/templates/phonebook/profile.html:153 mozillians/templates/phonebook/includes/profile_edit_basic.html:47 mozillians/templates/phonebook/includes/profile_edit_registration.html:33
-#: mozillians/users/managers.py:12
-msgid "Public"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:171 mozillians/users/models.py:153
-msgid "Bio"
-msgstr "Biografija"
-
-#: mozillians/templates/phonebook/profile.html:179
-msgid "My contribution story"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:234
-#, fuzzy
-msgid "Websites"
-msgstr "Svetainė"
-
-#: mozillians/templates/phonebook/profile.html:267
-msgid "Alternate email addresses"
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:284
-msgid "Vouched By"
-msgstr "Laiduotojas"
-
-#: mozillians/templates/phonebook/profile.html:297
-#, fuzzy
-msgid "Unknown Voucher"
-msgstr "Nepatvirtintas"
-
-#: mozillians/templates/phonebook/profile.html:300
-msgid "Legacy vouch."
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:311
-msgid "Vouchees"
-msgstr "Laidavo už"
-
-#: mozillians/templates/phonebook/profile.html:337
-msgid "%(hours)s hours ahead of your timezone."
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:340
-msgid "%(hours)s hours behind your timezone."
-msgstr ""
-
-#: mozillians/templates/phonebook/profile.html:343
-msgid "Same time zone as yours."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/photo_form.html:6
-msgid "Profile photo"
-msgstr "Profilio nuotrauka"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:44
-#, fuzzy
-msgid "Add account"
-msgstr "Paskyra"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:48
-#, fuzzy
-msgid "Update External Accounts"
-msgstr "Paskyra"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:53
-msgid "IRC"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:67
-msgid "Update IRC information"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:5 mozillians/templates/phonebook/includes/profile_edit_registration.html:16
-msgid "Basic Information"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:70 mozillians/templates/phonebook/includes/profile_vouch.html:23
-msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:83
-msgid "Update Information"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:91
-#, fuzzy
-msgid "Emails"
-msgstr "El. pašto adresas"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:94
-#, fuzzy
-msgid "Primary e-mail address"
-msgstr "„Personos“ el. paštas"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:106
-msgid "Secondary e-mail addresses"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:136
-msgid "Add e-mail using Persona"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:142
-#, fuzzy
-msgid "Update Emails"
-msgstr "Susikurk profilį"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:158
-msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
-msgstr "Įgūdis – tai įgytos žinios, padedančios pasiekti norimų rezultatų, be perteklinių laiko, energijos, ar jų abiejų sąnaudų."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:179
-#, fuzzy
-msgid "Update Skills"
-msgstr "Susikurk profilį"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:193
-msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
-msgstr "„Mozillos“ projektas aprėpia daugybę šalių, kalbančių įvairiausiomis kalbomis. Išvardink kalbas, kurias moki, kad kiti moziliečiai galėtų Tave lengviau rasti."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:217
-#, fuzzy
-msgid "Add language"
-msgstr "Kitos kalbos:"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:226
-#, fuzzy
-msgid "Update Languages"
-msgstr "Kalbos"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:233
-#, fuzzy
-msgid "Delete account"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:238
-msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
-msgstr "Aš suprantu, kad pašalinus mano paskyrą, man bus sudėtingiau parodyti savo indėlį į „Mozillos“ bendruomenę, o kitiems jos nariams bus sunkiau mane surasti."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:248
-msgid "Delete Profile"
-msgstr "Pašalinti profilį"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:5
-#, fuzzy
-msgid "API privacy"
-msgstr "Privatumas – pirmiausia"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:16
-#, fuzzy
-msgid ""
-"The Phonebook offers an API (currently v1) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
-"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
-msgstr ""
-"Šis katalogas suteikia API sąsają, kurios pagalba galima autorizuoti „Mozillos“ talkininkus ir dalintis savo profilio duomenimis su kitais įrankiais ir svetainėmis, pavyzdžiui, <a href="
-"\"%(bugzilla_url)s\">„Bugzilla“</a> ir <a href=\"%(reps_url)s\">„Mozilla Reps“ portalu</a>."
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:22
-#, fuzzy
-msgid "Privacy"
-msgstr "Privatumas – pirmiausia"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:39
-#, fuzzy
-msgid "Update Privacy Settings"
-msgstr "Privatumo nuostatos"
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:16
-msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
-msgstr "Grupės – tai atskiros moziliečių bendruomenės, turinčios kažką bendro. Bendras gali būti interesas. narystė toje pačioje komandoje, dalyvavimas projekte ar vietinėje bendruomenėje."
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:24
-msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:28
-msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:35
-msgid "After you are vouched, you will be able to join groups."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:51
-#, fuzzy
-msgid "Update Groups"
-msgstr "Grupė: {name}"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:28 mozillians/templates/phonebook/includes/profile_edit_registration.html:74
-#, fuzzy
-msgid "You have denied Location services."
-msgstr "Tu neturi aktyvių registruotų programų."
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:52 mozillians/templates/phonebook/includes/profile_edit_registration.html:98
-msgid "Country"
-msgstr "Valstybė"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:75 mozillians/templates/phonebook/includes/profile_edit_registration.html:121
-msgid "Region"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:98 mozillians/templates/phonebook/includes/profile_edit_registration.html:144
-msgid "City"
-msgstr "Miestas"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:120
-#, fuzzy
-msgid "Update Location"
-msgstr "Susikurk profilį"
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:176
-msgid "This field is required."
-msgstr "Šis laukas privalomas."
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:183
-#, fuzzy
-msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
-msgstr "Aš sutinku patikėti šią informaciją „Mozillos“ privatumo nuostatuose apibrėžtomis sąlygomis."
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:194
-msgid "Create Profile"
-msgstr "Susikurk profilį"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:5
-#, fuzzy
-msgid "Your Mozilla Contributions"
-msgstr "„Mozillos“ talkininkų katalogas"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:41
-msgid "Update Contributions"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:48
-msgid "T-Shirt Size"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:54
-msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:67
-msgid "Fitted"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:68
-msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as women's."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:80
-msgid "Straight-cut"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:81
-msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as men's or unisex."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:98
-#, fuzzy
-msgid "Update T-shirt size"
-msgstr "Susikurk profilį"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:7
-msgid "Does this profile belong to a Mozillian? Let us know how %(full_name)s has contributed to the project."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:14
-msgid "Do you know this Mozillian? Let us know how %(full_name)s has contributed to the project."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:26
-msgid "Characters remaining:"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:31
-msgid "Send invite"
-msgstr "Išsiųsti pakvietimą"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:33
-msgid "Vouch for %(name)s"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:40
-msgid "Only vouch for users who have made significant contributions and are at least 13 years old."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:42
-msgid "Once vouched, they will be able to:"
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:44
-msgid "View all profiles and join groups."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:45
-msgid "Access special video content on Air Mozilla."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:46
-msgid "Join the Mozilla Exchange Yammer network."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:47
-msgid "Use other Mozilla apps as a vouched user."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:50
-msgid "Vouches cannot be edited or retracted."
-msgstr ""
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:52
-msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+#: mozillians/templates/admin/import_export/change_list_export.html:15
+msgid "Export"
 msgstr ""
 
 #: mozillians/users/models.py:142
@@ -1610,6 +1747,14 @@ msgstr "Tik „Mozillai“ priklausančios svetainės"
 #: mozillians/users/models.py:174
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Ar leisti „Mozillos“ svetainėms pasiekti tavo profilio duomenis?"
+
+#: mozillians/users/models.py:175
+msgid "Yes"
+msgstr "Taip"
+
+#: mozillians/users/models.py:175
+msgid "No"
+msgstr "Ne"
 
 #: mozillians/users/models.py:182
 msgid "T-Shirt"
@@ -1702,6 +1847,14 @@ msgstr ""
 msgid "This language has already been selected."
 msgstr ""
 
+#, fuzzy
+#~ msgid "Add a group"
+#~ msgstr "Grupė: {name}"
+
+#, fuzzy
+#~ msgid "Edit group"
+#~ msgstr "Prisijungti prie grupės"
+
 #~ msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
 #~ msgstr "Pradėkite rašyti įgūdį (pavyzdžiai: Python, javascript, Graphic Design, User Research)"
 
@@ -1728,9 +1881,6 @@ msgstr ""
 
 #~ msgid "Create Your Profile"
 #~ msgstr "Susikurk profilį"
-
-#~ msgid "Cancel"
-#~ msgstr "Atsisakyti"
 
 #~ msgid "Services"
 #~ msgstr "Paslaugos"
@@ -1847,9 +1997,6 @@ msgstr ""
 #~ msgid "Change your password at <a href=\"%(persona)s\">Persona</a>"
 #~ msgstr "Slaptažodį gali pasikeisti <a href=\"%(persona)s\">„Personoje“</a>"
 
-#~ msgid "Update"
-#~ msgstr "Atnaujinti"
-
 #~ msgid "Vouched by"
 #~ msgstr "Laiduotojas"
 
@@ -1869,9 +2016,6 @@ msgstr ""
 
 #~ msgid "Sign in with Persona"
 #~ msgstr "Prisijunk, naudodamasis „Personą“"
-
-#~ msgid "This user is a vouched Mozillian."
-#~ msgstr "Tai – mozilietis, už kurį laiduota."
 
 #~ msgid "You must specify a region to specify a city."
 #~ msgstr "Norėdami nurodyti miestą, pirma turite pasirinkti regioną."

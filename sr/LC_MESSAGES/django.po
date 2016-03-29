@@ -1,9 +1,9 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-09 08:07-0700\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-03-29 08:01-0700\n"
 "PO-Revision-Date: 2016-03-16 05:54+0000\n"
 "Last-Translator: Vanja Tumbas <tumbas93@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,58 +23,83 @@ msgstr "Привилегован"
 msgid "Authentication failed."
 msgstr "Аутентификација није успела."
 
-#: mozillians/common/helpers.py:99
-msgid "Visible to:"
-msgstr "Видљиво:"
-
-#: mozillians/common/middleware.py:20
+#: mozillians/common/middleware.py:19
 msgid "You must be logged in to continue."
 msgstr "Морате бити пријављени да бисте наставили."
 
-#: mozillians/common/middleware.py:21
+#: mozillians/common/middleware.py:20
 msgid "You must be vouched to continue."
 msgstr "Морате имате јамство да бисте наставили."
 
-#: mozillians/groups/forms.py:15
+#: mozillians/common/templatetags/helpers.py:99
+msgid "Visible to:"
+msgstr "Видљиво:"
+
+#: mozillians/groups/forms.py:20
 msgid "Name A-Z"
 msgstr "Име А-Ш"
 
-#: mozillians/groups/forms.py:16
+#: mozillians/groups/forms.py:21
 msgid "Most Members"
 msgstr "Већина чланова"
 
-#: mozillians/groups/forms.py:17
+#: mozillians/groups/forms.py:22
 msgid "Fewest Members"
 msgstr "Најмање чланова"
 
-#: mozillians/groups/forms.py:37 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
 msgid "The group must have at least one curator."
 msgstr "Група мора имати барем једног куратора."
 
-#: mozillians/groups/forms.py:53
-msgid ""
-"You must either specify the criteria or change the acceptance selection."
+#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+msgid "Start typing the name/email/username of a vouched Mozillian."
+msgstr ""
+
+#: mozillians/groups/forms.py:102
+msgid "The maximum expiration date for a group cannot exceed two years."
+msgstr ""
+
+#: mozillians/groups/forms.py:131
+msgid "You need to be the curator of this group before inviting someone to join."
+msgstr ""
+
+#: mozillians/groups/forms.py:169
+msgid "You need to be the administrator of this group in order to edit this section."
+msgstr ""
+
+#: mozillians/groups/forms.py:199
+msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "Морате навести критеријуме или променити избор прихватања."
 
-#: mozillians/groups/forms.py:97 mozillians/phonebook/forms.py:107
+#: mozillians/groups/forms.py:213
+#, fuzzy
+msgid "Select Group Type"
+msgstr "Обриши групу"
+
+#: mozillians/groups/forms.py:220 mozillians/phonebook/forms.py:107
 msgid "All"
 msgstr "Сви"
 
-#: mozillians/groups/forms.py:98 mozillians/templates/groups/group.html:67
+#: mozillians/groups/forms.py:221 mozillians/jinja2/groups/group.html:89
 msgid "Members"
 msgstr "Чланови"
 
-#: mozillians/groups/forms.py:99
+#: mozillians/groups/forms.py:222
 msgid "Pending Members"
 msgstr "Чланови на чекању"
 
-#: mozillians/groups/forms.py:110
+#: mozillians/groups/forms.py:233
 msgid "I accept these terms."
 msgstr "Прихватам услове."
 
-#: mozillians/groups/forms.py:111
+#: mozillians/groups/forms.py:234
 msgid "I don't accept these terms."
 msgstr "Не прихватам услове."
+
+#: mozillians/groups/forms.py:246
+#, fuzzy
+msgid "Group type"
+msgstr "Група"
 
 #: mozillians/groups/models.py:19
 msgid "Name"
@@ -96,11 +121,11 @@ msgstr "Услови на чекању"
 msgid "Pending"
 msgstr "У току"
 
-#: mozillians/groups/models.py:153
+#: mozillians/groups/models.py:153 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Опис"
 
-#: mozillians/groups/models.py:159 mozillians/templates/groups/group.html:53
+#: mozillians/groups/models.py:159 mozillians/jinja2/groups/group.html:67
 msgid "IRC Channel"
 msgstr "IRC канал"
 
@@ -108,61 +133,50 @@ msgstr "IRC канал"
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "IRC канал где се расправља о овој групи (опционо)."
 
-#: mozillians/groups/models.py:163 mozillians/templates/groups/group.html:60
+#: mozillians/groups/models.py:163 mozillians/jinja2/groups/group.html:77
 msgid "Website"
 msgstr "Веб сајт"
 
 #: mozillians/groups/models.py:164
 msgid "A URL of a web site with more information about this group (optional)."
-msgstr ""
-"URL адреса веб сајта са додатним информацијама о овој групи (опционо)."
+msgstr "URL адреса веб сајта са додатним информацијама о овој групи (опционо)."
 
-#: mozillians/groups/models.py:167 mozillians/templates/groups/group.html:64
+#: mozillians/groups/models.py:167 mozillians/jinja2/groups/group.html:84
 msgid "Wiki"
 msgstr "Wiki"
 
 #: mozillians/groups/models.py:168
 msgid "A URL of a wiki with more information about this group (optional)."
-msgstr ""
-"URL адреса wiki странице са додатним информацијама о овој групи (опционо)."
+msgstr "URL адреса wiki странице са додатним информацијама о овој групи (опционо)."
 
 #: mozillians/groups/models.py:172
 msgid "Accepting new members"
 msgstr "Прихвата нове чланове"
 
-#: mozillians/groups/models.py:173 mozillians/users/models.py:175
-msgid "Yes"
-msgstr "Да"
+#: mozillians/groups/models.py:173
+msgid "Open"
+msgstr ""
 
 #: mozillians/groups/models.py:174
-msgid "By request"
-msgstr "По захтеву"
+#, fuzzy
+msgid "Reviewed"
+msgstr "Прегледај услове"
 
-#: mozillians/groups/models.py:175 mozillians/users/models.py:175
-msgid "No"
-msgstr "Не"
+#: mozillians/groups/models.py:175
+msgid "Closed"
+msgstr ""
 
-#: mozillians/groups/models.py:183 mozillians/templates/groups/group.html:46
+#: mozillians/groups/models.py:183 mozillians/jinja2/groups/group.html:60
 msgid "New Member Criteria"
 msgstr "Нови критеријум члана"
 
 #: mozillians/groups/models.py:184
-msgid ""
-"Specify the criteria you will use to decide whether or not you will accept a"
-" membership request."
-msgstr ""
-"Одредите критеријуме које ћете користити да одлучите да ли ћете прихватити "
-"захтев за чланство."
+msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
+msgstr "Одредите критеријуме које ћете користити да одлучите да ли ћете прихватити захтев за чланство."
 
 #: mozillians/groups/models.py:189
-msgid ""
-"Whether group is shown on the UI (in group lists, search, etc). Mainly "
-"intended to keep system groups like \"staff\" from cluttering up the "
-"interface."
-msgstr ""
-"Да ли је група приказана на корисничком интерфејсу (у списковима групе, "
-"претрази, итд.). Углавном намењено за одржавање системских група попут "
-"\"особље\" од затрпавања интерфејса."
+msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
+msgstr "Да ли је група приказана на корисничком интерфејсу (у списковима групе, претрази, итд.). Углавном намењено за одржавање системских група попут \"особље\" од затрпавања интерфејса."
 
 #: mozillians/groups/models.py:199
 msgid "Terms"
@@ -172,89 +186,1279 @@ msgstr "Услови"
 msgid "Invalidation days"
 msgstr "Дани за поништење"
 
-#: mozillians/groups/tasks.py:54
+#: mozillians/groups/models.py:205
+msgid "Please enter any additional text for the invitation email"
+msgstr ""
+
+#: mozillians/groups/models.py:345 mozillians/phonebook/models.py:18
+msgid "Inviter"
+msgstr "Позиваоц"
+
+#: mozillians/groups/models.py:347 mozillians/phonebook/models.py:21
+msgid "Redeemer"
+msgstr "Откупитељ"
+
+#: mozillians/groups/tasks.py:51
+#, python-format
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
-msgid_plural ""
-"%(count)d outstanding requests to join Mozillians group \"%(name)s\""
+msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
 msgstr[0] "%(count)d преостао захтев за придруживање групи \"%(name)s\""
 msgstr[1] "%(count)d преостала захтева за придруживање групи \"%(name)s\""
 msgstr[2] "%(count)d преосталих захтева за придруживање групи \"%(name)s\""
 
-#: mozillians/groups/tasks.py:98
+#: mozillians/groups/tasks.py:95
+#, python-format
 msgid "Accepted to Mozillians group \"%s\""
 msgstr "Прихваћен у групу \"%s\""
 
-#: mozillians/groups/tasks.py:101
+#: mozillians/groups/tasks.py:98
+#, python-format
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "Није прихваћен у групу \"%s\""
 
-#: mozillians/groups/tasks.py:130
+#: mozillians/groups/tasks.py:129
+#, python-format
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Уклоњен из групе \"%s\""
 
-#: mozillians/groups/views.py:222
+#: mozillians/groups/tasks.py:168
+#, fuzzy
+msgid "[Mozillians] You have been invited to join group \"{0}\""
+msgstr "Додати сте у ову групу."
+
+#: mozillians/groups/views.py:244
 msgid "This group does not allow members to remove themselves."
 msgstr "Ова група не дозвољава члановима да се сами уклоне."
 
-#: mozillians/groups/views.py:231
+#: mozillians/groups/views.py:253
 msgid "The group needs at least one curator."
 msgstr "Група мора имати барем једног куратора."
 
-#: mozillians/groups/views.py:240
+#: mozillians/groups/views.py:262
 msgid "You have been removed from this group."
 msgstr "Уклоњени сте из ове групе."
 
-#: mozillians/groups/views.py:242
+#: mozillians/groups/views.py:264
 msgid "The group member has been removed."
 msgstr "Члан групе је уклоњен."
 
-#: mozillians/groups/views.py:271
+#: mozillians/groups/views.py:293
 msgid "This user has not requested membership in this group."
 msgstr "Овај корисник није захтевао чланство за ову групу."
 
-#: mozillians/groups/views.py:274
+#: mozillians/groups/views.py:296
 msgid "This user is already a member of this group."
 msgstr "Корисник је већ члан ове групе."
 
-#: mozillians/groups/views.py:280
+#: mozillians/groups/views.py:302
 msgid "This user has been added as a member of this group."
 msgstr "Корисник је додат као члан ове групе."
 
-#: mozillians/groups/views.py:325
+#: mozillians/groups/views.py:347
 msgid "You are already in this group."
 msgstr "Већ се налазите у овој групи."
 
-#: mozillians/groups/views.py:327
+#: mozillians/groups/views.py:349
 msgid "Your request to join this group is still pending."
 msgstr "Ваш захтев за улазак у ову групу је још увек на чекању."
 
-#: mozillians/groups/views.py:329
+#: mozillians/groups/views.py:351
 msgid "This group is not accepting requests to join."
 msgstr "Ова група не прихвата захтеве за улаз."
 
-#: mozillians/groups/views.py:333
+#: mozillians/groups/views.py:355
 msgid "You have been added to this group."
 msgstr "Додати сте у ову групу."
 
-#: mozillians/groups/views.py:338
+#: mozillians/groups/views.py:360
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "Ваш захтев за чланство је послато кураторима групе."
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:390
 msgid "You must be a curator to delete a group"
 msgstr "Морате бити куратор да бисте избрисали групу"
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:394
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "Не можете обрисати групу ако је неко други у њој."
 
-#: mozillians/groups/views.py:376
+#: mozillians/groups/views.py:398
+#, python-format
 msgid "Group %s has been deleted"
 msgstr "Група %s је обрисана"
 
-#: mozillians/groups/views.py:395
+#: mozillians/groups/views.py:423
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Морате бити куратор или администратор да бисте изменили групу"
+
+#: mozillians/groups/views.py:530
+msgid "The invitation to {0} has been successfully revoked."
+msgstr ""
+
+#: mozillians/groups/views.py:571
+msgid "Invitation to {0} has been sent successfully."
+msgstr ""
+
+#: mozillians/jinja2/404.html:3
+msgid "Page Not Found"
+msgstr "Страница није пронађена"
+
+#: mozillians/jinja2/404.html:7
+msgid "Oh No! That Page Doesn't Exist!"
+msgstr "Ох не! Та страница не постоји!"
+
+#: mozillians/jinja2/404.html:11 mozillians/jinja2/404.html:12
+msgid "Tumbeasts by Matthew Inman of The Oatmeal"
+msgstr "Tumbeasts, Matthew Inman са сајта The Oatmeal"
+
+#: mozillians/jinja2/404.html:15
+#, python-format
+msgid ""
+"<p> The page you requested couldn't be found. You can head to the <a href=\"%(home_url)s\">Mozillians home page</a> to learn more about our community phonebook, or you can try searching for the "
+"person you were looking for using the search box at the top of this page. </p>"
+msgstr ""
+"<p> Страница коју сте тражили није пронађена. Можете отићи на <a href=\"%(home_url)s\">почетну страницу Мозилијана</a> како бисте сазнали више о нашем именику заједнице, или можете покушати "
+"претражити особу коју желите наћи, користећи поље за претрагу на врху ове странице. </p>"
+
+#: mozillians/jinja2/404.html:25
+#, python-format
+msgid ""
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
+msgstr ""
+"<p> Из разлога што нисте аутентификани, не можете приступити приватним профилима у именику. Требало би да се пријавите у случају да покушавате приступити приватном профилу. Уколико немате налог, <a "
+"href=\"%(join_url)s\">придружите нам се</a>. </p>"
+
+#: mozillians/jinja2/500.html:3
+msgid "Application Error"
+msgstr "Грешка у апликацији"
+
+#: mozillians/jinja2/500.html:7
+msgid "We're Sorry, but Something Went Wrong!"
+msgstr "Жао нам је, али нешто је пошло наопако!"
+
+#: mozillians/jinja2/500.html:11 mozillians/jinja2/500.html:12
+msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
+msgstr "Jitterbeasts, Matthew Inman са сајта The Oatmeal"
+
+#: mozillians/jinja2/500.html:15
+#, python-format
+msgid ""
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
+msgstr ""
+"<p> Жао нам је, али смо наишли на неочекивану грешку и Ваш захтев не може да се обради. Можете покушати касније освежити Ваш прегледач или можете <a href=\"%(bugzilla_url)s\"> пријавити грешку</a> "
+"рећи нам шта се догодило и ми ћемо одмах покушати решити проблем. </p> <p> Ако освежавање странице није успело, можете <a href=\"%(home_url)s\">отићи на почетну страницу Мозилијана</a> како бисте "
+"нашли више информација о Мозилијанима. Извињавамо се на овоме! </p>"
+
+#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/jinja2/phonebook/betasearch.html:89 mozillians/jinja2/phonebook/search.html:88 mozillians/settings/base.py:520
+#: mozillians/users/managers.py:11
+msgid "Mozillians"
+msgstr "Мозилијани"
+
+#: mozillians/jinja2/base.html:7
+msgid "Welcome"
+msgstr "Добро дошли"
+
+#: mozillians/jinja2/base.html:8
+msgid "Mozilla's contributor phonebook"
+msgstr "Mozilla-ин именик сарадника"
+
+#: mozillians/jinja2/base.html:69 mozillians/jinja2/includes/lang_switcher.html:3
+msgid "Select language"
+msgstr "Изаберите језик"
+
+#: mozillians/jinja2/base.html:70
+msgid "Skip to main content"
+msgstr "Иди на главни садржај"
+
+#: mozillians/jinja2/base.html:81 mozillians/jinja2/phonebook/betasearch.html:32 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:123
+#: mozillians/jinja2/phonebook/home.html:198 mozillians/jinja2/phonebook/search.html:32
+msgid "Search for people, groups and more"
+msgstr "Претражите људе, групе и остало"
+
+#: mozillians/jinja2/base.html:105
+msgid "View Profile"
+msgstr "Погледај профил"
+
+#: mozillians/jinja2/base.html:111 mozillians/jinja2/phonebook/edit_profile.html:4 mozillians/jinja2/phonebook/edit_profile.html:34
+msgid "Settings"
+msgstr "Поставке"
+
+#: mozillians/jinja2/base.html:118 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/betasearch.html:65
+#: mozillians/jinja2/phonebook/edit_profile.html:39 mozillians/jinja2/phonebook/home.html:151 mozillians/jinja2/phonebook/home.html:253 mozillians/jinja2/phonebook/profile.html:186
+#: mozillians/jinja2/phonebook/search.html:64 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5
+msgid "Groups"
+msgstr "Групе"
+
+#: mozillians/jinja2/base.html:124 mozillians/jinja2/groups/includes/group_edit_invitation.html:88
+msgid "Invite"
+msgstr "Позови"
+
+#: mozillians/jinja2/base.html:131 mozillians/jinja2/base.html:139
+msgid "Log Out"
+msgstr "Одјави се"
+
+#: mozillians/jinja2/base.html:144 mozillians/jinja2/base.html:147
+msgid "Sign in"
+msgstr "Пријави се"
+
+#: mozillians/jinja2/base.html:187
+#, python-format
+msgid "Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a href=\"%(git_url)s\">make some changes</a>."
+msgstr "Помозите Мозилијанима да буду бољи. <a href=\"%(bug_url)s\">Пријавите грешку</a> или <a href=\"%(git_url)s\">направите неке измене</a>."
+
+#: mozillians/jinja2/base.html:207
+#, python-format
+msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
+msgstr "Делови овог садржаја су &copy;1998–%(current_year)s од појединачних mozilla.org сарадника. Садржај је доступан под <a href=\"%(license_link)s\">Creative Commons лиценцом</a>."
+
+#: mozillians/jinja2/base.html:216 mozillians/jinja2/phonebook/about-dinomcvouch.html:3 mozillians/jinja2/phonebook/about.html:3 mozillians/jinja2/phonebook/about.html:10
+msgid "About Mozillians"
+msgstr "О сајту Мозилијани"
+
+#: mozillians/jinja2/base.html:217
+msgid "Contact Us"
+msgstr "Контактирајте нас"
+
+#: mozillians/jinja2/base.html:218
+msgid "Privacy Policy"
+msgstr "Полиса о приватности"
+
+#: mozillians/jinja2/base.html:219
+msgid "Legal Notices"
+msgstr "Правна обавештења"
+
+#: mozillians/jinja2/base.html:220
+msgid "Report Trademark Abuse"
+msgstr "Додај групу"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:3 mozillians/jinja2/groups/confirm_remove_member.html:14
+msgid "Confirm removing member"
+msgstr "Потврдите уклањање члана"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:18
+#, python-format
+msgid "Really leave group %(group)s?"
+msgstr "Заиста да напусти групу %(group)s?"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:20
+#, python-format
+msgid "Really remove user %(profile)s from group %(group)s?"
+msgstr "Заиста уклонити корисника %(profile)s из групе %(group)s?"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:9 mozillians/jinja2/phonebook/invite.html:77
+msgid "Remove"
+msgstr "Уклони"
+
+#: mozillians/jinja2/groups/confirm_remove_member.html:30
+msgid "Return to group"
+msgstr "Повратак на групу"
+
+#: mozillians/jinja2/groups/edit_group.html:4
+#, fuzzy
+msgid "Group settings"
+msgstr "Листинг групе"
+
+#: mozillians/jinja2/groups/edit_group.html:11 mozillians/jinja2/phonebook/edit_profile.html:17 mozillians/jinja2/phonebook/invite.html:34
+msgid "Please correct the errors below."
+msgstr "Исправите грешке у наставку."
+
+#: mozillians/jinja2/groups/edit_group.html:19 mozillians/jinja2/groups/group.html:33
+msgid "Group"
+msgstr "Група"
+
+#: mozillians/jinja2/groups/edit_group.html:24
+msgid "Access"
+msgstr ""
+
+#: mozillians/jinja2/groups/edit_group.html:26
+#, fuzzy
+msgid "Invitations"
+msgstr "Позивница је послата"
+
+#: mozillians/jinja2/groups/edit_group.html:29 mozillians/jinja2/groups/includes/group_edit_admin.html:5
+#, fuzzy
+msgid "Administration"
+msgstr "Поставке админа"
+
+#: mozillians/jinja2/groups/group.html:3
+msgid "Group: {name}"
+msgstr "Група: {name}"
+
+#: mozillians/jinja2/groups/group.html:31
+msgid "Functional Area"
+msgstr "Функционална област"
+
+#: mozillians/jinja2/groups/group.html:44 mozillians/jinja2/groups/includes/group_edit_description.html:78 mozillians/jinja2/groups/includes/group_edit_description.html:95
+msgid "Delete Group"
+msgstr "Обриши групу"
+
+#: mozillians/jinja2/groups/group.html:51
+msgid "Edit Group"
+msgstr "Измени групу"
+
+#: mozillians/jinja2/groups/group.html:93
+msgid "Skills members have in common"
+msgstr "Заједничке вештине чланова"
+
+#: mozillians/jinja2/groups/group.html:108
+msgid "Community Steward"
+msgstr "Надзорник заједнице"
+
+#: mozillians/jinja2/groups/group.html:110 mozillians/jinja2/groups/includes/group_edit_access.html:78
+msgid "Curators"
+msgstr "Куратори"
+
+#: mozillians/jinja2/groups/group.html:112
+msgid "Curator"
+msgstr "Куратор"
+
+#: mozillians/jinja2/groups/group.html:122 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:31
+#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:161
+msgid "Profile Photo"
+msgstr "Профилна слика"
+
+#: mozillians/jinja2/groups/group.html:159
+msgid "Request to Join Group"
+msgstr "Тражи захтев за придруживање групи"
+
+#: mozillians/jinja2/groups/group.html:161
+msgid "Join Group"
+msgstr "Придружи се групи"
+
+#: mozillians/jinja2/groups/group.html:172
+msgid "Leave Group"
+msgstr "Напусти групу"
+
+#: mozillians/jinja2/groups/group.html:181
+msgid "Filter"
+msgstr "Филтрирај"
+
+#: mozillians/jinja2/groups/group.html:189
+#, python-format
+msgid "There are no open membership requests for %(group_name)s."
+msgstr "Нема захтева за чланство за %(group_name)s."
+
+#: mozillians/jinja2/groups/group.html:193
+#, python-format
+msgid "Sorry, we can not find any mozillians in %(group_name)s."
+msgstr "Жао нам је, не можемо пронаћи ни једог мозилијана у %(group_name)s."
+
+#: mozillians/jinja2/groups/group.html:205
+msgid "Functional Area Members"
+msgstr "Чланови функционалне области"
+
+#: mozillians/jinja2/groups/group.html:207
+msgid "Group Members"
+msgstr "Чланови групе"
+
+#: mozillians/jinja2/groups/group.html:213
+msgid "Your membership request is pending approval by the group curator."
+msgstr "Ваш захтев за чланство чека дозволу од куратора групе."
+
+#: mozillians/jinja2/groups/index_areas.html:3 mozillians/jinja2/groups/index_areas.html:8
+msgid "Functional Areas"
+msgstr "Функционалне области"
+
+#: mozillians/jinja2/groups/index_areas.html:12 mozillians/jinja2/groups/index_skills.html:12
+msgid "View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out."
+msgstr "Погледајте Мозилијане, надзорнике и информације за било коју функционалну област. Сазнајте ко на чему ради и како им можете помоћи."
+
+#: mozillians/jinja2/groups/index_common.html:2 mozillians/jinja2/groups/index_groups.html:3
+msgid "Group Listing"
+msgstr "Листинг групе"
+
+#: mozillians/jinja2/groups/index_common.html:16
+msgid "Sort"
+msgstr "Поређај"
+
+#: mozillians/jinja2/groups/index_common.html:22 mozillians/jinja2/groups/index_groups.html:10
+msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
+msgstr "Мозилијани раде на свим врстама различитих ствари! Од програмера додатака до локализатора, нађи Мозилијана који ради на сличним стварима користећи групу креирану од стране корисника."
+
+#: mozillians/jinja2/groups/index_common.html:46
+#, python-format
+msgid "%(num)s member"
+msgid_plural "%(num)s members"
+msgstr[0] "%(num)s члан"
+msgstr[1] "%(num)s члана"
+msgstr[2] "%(num)s чланова"
+
+#: mozillians/jinja2/groups/index_groups.html:19 mozillians/jinja2/groups/index_groups.html:31
+msgid "Create Group"
+msgstr "Направи групу"
+
+#: mozillians/jinja2/groups/index_groups.html:48
+msgid "Cancel"
+msgstr "Откажи"
+
+#: mozillians/jinja2/groups/index_groups.html:49 mozillians/phonebook/forms.py:271 mozillians/phonebook/forms.py:272
+msgid "Save"
+msgstr "Сними"
+
+#: mozillians/jinja2/groups/index_skills.html:3 mozillians/jinja2/groups/index_skills.html:8 mozillians/jinja2/phonebook/home.html:175 mozillians/jinja2/phonebook/profile.html:209
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:151
+msgid "Skills"
+msgstr "Вештине"
+
+#: mozillians/jinja2/groups/skill.html:3
+msgid "Skill: {name}"
+msgstr "Вештина: {name}"
+
+#: mozillians/jinja2/groups/skill.html:14
+msgid "Skill"
+msgstr "Вештинa"
+
+#: mozillians/jinja2/groups/skill.html:21
+msgid "Add Skill"
+msgstr "Додај вештину"
+
+#: mozillians/jinja2/groups/skill.html:23
+msgid "Remove Skill"
+msgstr "Уклони вештину"
+
+#: mozillians/jinja2/groups/skill.html:31
+#, python-format
+msgid "Sorry, we cannot find any mozillians with skill %(name)s"
+msgstr "Жао нам је, не можемо наћи ниједног Mозилијана са вештином %(name)s"
+
+#: mozillians/jinja2/groups/terms.html:3 mozillians/jinja2/groups/terms.html:8
+msgid "Review terms"
+msgstr "Прегледај услове"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:5
+#, fuzzy
+msgid "Group Type"
+msgstr "Група"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#, fuzzy
+msgid "Update Type"
+msgstr "Ажурирај групе"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#, fuzzy
+msgid "Update Curators"
+msgstr "Ажурирај групе"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:104
+msgid "Terms & Expiration"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+msgid "New members should accept terms"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:124 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:70 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#, python-format
+msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
+msgstr "Користите <a href=\"%(url)s\">Markdown</a> за задебљана и коса слова, листе и везе."
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:136
+msgid "Membership can expire"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:158
+#, fuzzy
+msgid "Update Terms & Expiration"
+msgstr "Ажурирај информације"
+
+#: mozillians/jinja2/groups/includes/group_edit_admin.html:36
+#, fuzzy
+msgid "Update Administration Settings"
+msgstr "Ажурирај поставке приватности"
+
+#: mozillians/jinja2/groups/includes/group_edit_description.html:69
+#, fuzzy
+msgid "Update Description"
+msgstr "Опис"
+
+#: mozillians/jinja2/groups/includes/group_edit_description.html:84
+msgid "I acknowledge that deleting this group is an action that can not be undone. All the information related to this group will be lost foreover."
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:5
+#, fuzzy
+msgid "Pending Invitations"
+msgstr "Услови на чекању"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:82 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:207
+msgid "Delete"
+msgstr "Обриши"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:38
+msgid "Resend"
+msgstr ""
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:55
+#, fuzzy
+msgid "Invite new member"
+msgstr "Прихвата нове чланове"
+
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:66
+msgid "Additional Email Text"
+msgstr ""
+
+#: mozillians/jinja2/includes/field.html:3 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:45 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:31
+msgid "Choose visibility group for this field"
+msgstr "Изаберите видљивост групе за ово поље"
+
+#: mozillians/jinja2/includes/pagination.html:21
+msgid "Previous"
+msgstr "Претходнo"
+
+#: mozillians/jinja2/includes/pagination.html:26
+msgid "Page"
+msgstr "Страница"
+
+#: mozillians/jinja2/includes/pagination.html:70
+msgid "Next"
+msgstr "Следећe"
+
+#: mozillians/jinja2/includes/search_result.html:17
+msgid "Confirm Request"
+msgstr "Потврди захтев"
+
+#: mozillians/jinja2/includes/search_result.html:21
+msgid "Requested"
+msgstr "Захтевано"
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:9
+msgid "Dino McVouch"
+msgstr "Dino McVouch"
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:10
+msgid "About Dino McVouch"
+msgstr "О Dino McVouch"
+
+#: mozillians/jinja2/phonebook/about-dinomcvouch.html:13
+msgid "Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and takes care of Mozillians.org."
+msgstr "Dino McVouch је Mozilians.org бот. Он аутоматски јамчи за препознате мозилијане и брине се о Mozillians.org."
+
+#: mozillians/jinja2/phonebook/about.html:9
+msgid "Photo collage of Mozillians"
+msgstr "Фото албум Мозилијана"
+
+#: mozillians/jinja2/phonebook/about.html:11
+#, python-format
+msgid ""
+"<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
+"community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. It also allows you to receive email "
+"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href="
+"\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
+"involved</a>. </p>"
+msgstr ""
+"<p> Мозилијани су људи који волонтирају да унапреде Mozilla мисију. Они су посвећени промовисању отворености, иновације и могућностима на интернету и долазе из језгра наше заједице. </p> <p> Овај "
+"директоријум је начин да Мозилијани лакше сазнају ко учествује, шта раде и како да се повежу са њима. Такође Вам дозвољава да примите е-пошту обавештења од Mozilla-е. </p> <p> Желите да нађете "
+"Мозилијане у Суботици ради састанка? Треба Вам XPCOM експертни хакер да испита закрпу? То је управо чему овај сајт служи. </p> <p> <a href=\"%(wiki_roadmap_url)s\">Ове функције</a>, и друге, су "
+"тренутно у развоју. Ако бисте желели да нам помогнете око њих, сазнајте како можете <a href=\"%(wiki_get_involved_url)s\"> да се прикључите</a>. </p>"
+
+#: mozillians/jinja2/phonebook/about.html:35
+msgid "Privacy First"
+msgstr "Приватност прва"
+
+#: mozillians/jinja2/phonebook/about.html:37
+#, python-format
+msgid ""
+"Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
+"we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
+msgstr ""
+"Приватност је од самог почетка била важан део овог директоријума. Желимо да будемо сигурни да пружамо Мозилијанима најбоље могуће искуство, од начина на који је веб сајт направљен до начина на који "
+"јамчимо нове кориснике пре неко што могу приступити подацима који би требали бити доступни само другим Мозилијанима. Прочитајте нашу <a href=\"%(privacy_policy_url)s\"> Полису приватности</a> за "
+"више информација."
+
+#: mozillians/jinja2/phonebook/about.html:51
+msgid "Get Involved"
+msgstr "Прикључите се"
+
+#: mozillians/jinja2/phonebook/about.html:53
+#, python-format
+msgid ""
+"The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
+"href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
+msgstr ""
+"Директоријум заједнице је такође пројекат заједнице и ви сте добродошли да се укључите и да нам помогнете да га направимо још бољим или да га спојимо у друге алатке заједнице. Ступите у контакт са "
+"нама на <a href=\"%(google_groups_url)s\"> Мозилијан форуму </a> да бисте сазнали како."
+
+#: mozillians/jinja2/phonebook/apikeys.html:4
+msgid "API"
+msgstr "API"
+
+#: mozillians/jinja2/phonebook/apikeys.html:11
+msgid "Mozillians API"
+msgstr "API Мозилијана"
+
+#: mozillians/jinja2/phonebook/apikeys.html:15
+msgid "API Version 1"
+msgstr "API верзија 1"
+
+#: mozillians/jinja2/phonebook/apikeys.html:19
+#, python-format
+msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
+msgstr "API в1 истиче, размислите о коришћењу API в2. За било какву подршку за API в1 пријавите фрешку <a href=\"%(bugzilla_request_url)s\">овде</a>."
+
+#: mozillians/jinja2/phonebook/apikeys.html:28
+msgid "Your approved apps:"
+msgstr "Ваше одобрене апликације:"
+
+#: mozillians/jinja2/phonebook/apikeys.html:39 mozillians/jinja2/phonebook/apikeys.html:75
+msgid "Key"
+msgstr "Кључ"
+
+#: mozillians/jinja2/phonebook/apikeys.html:44 mozillians/jinja2/phonebook/apikeys.html:86
+msgid "You have no active apps."
+msgstr "Немате активне апликације."
+
+#: mozillians/jinja2/phonebook/apikeys.html:48
+msgid "API Version 2"
+msgstr "API верзија 2"
+
+#: mozillians/jinja2/phonebook/apikeys.html:52
+#, python-format
+msgid ""
+"Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
+"need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
+msgstr ""
+"Погледајте листу API метода које смо омогућили у нашој <a href=\"%(api_schema_url)s\">документацији</a>. Можете одмах добити нови API кључ шаљећи захтев испод. Ако Вам треба кључ са већим дозволама "
+"мораћете да <a href=\"%(bugzilla_request_url)s\">пријавите грешку</a>."
+
+#: mozillians/jinja2/phonebook/apikeys.html:64
+msgid "Your apps:"
+msgstr "Ваше апликације:"
+
+#: mozillians/jinja2/phonebook/apikeys.html:78
+msgid "Level"
+msgstr "Ниво"
+
+#: mozillians/jinja2/phonebook/apikeys.html:109
+msgid "Register App"
+msgstr "Региструј апликацију"
+
+#: mozillians/jinja2/phonebook/betasearch.html:3 mozillians/jinja2/phonebook/search.html:3
+msgid "Search Results"
+msgstr "Резултати претраге"
+
+#: mozillians/jinja2/phonebook/betasearch.html:17 mozillians/jinja2/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr "Тренутно претражујете јавне профиле."
+
+#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
+#, python-format
+msgid "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+msgstr "Погледајте више резултата тако што ћете се <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> пријавити</a>."
+
+#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
+msgid "Sign In"
+msgstr "Пријави се"
+
+#: mozillians/jinja2/phonebook/betasearch.html:25 mozillians/jinja2/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr "Погледајте више резултата када будете јамчени."
+
+#: mozillians/jinja2/phonebook/betasearch.html:29
+msgid "Beta Search"
+msgstr "Претрага"
+
+#: mozillians/jinja2/phonebook/betasearch.html:37 mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:37
+msgid "Search"
+msgstr "Претрага"
+
+#: mozillians/jinja2/phonebook/betasearch.html:41 mozillians/jinja2/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr "Напредне опције"
+
+#: mozillians/jinja2/phonebook/betasearch.html:53 mozillians/jinja2/phonebook/search.html:52
+msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
+msgstr "<h2>Пронађите Мозилијана</h2> <p> Можете да потражите другог Мозилијана користећи његово име, е-пошту или надимак. </p>"
+
+#: mozillians/jinja2/phonebook/betasearch.html:67 mozillians/jinja2/phonebook/search.html:66
+#, python-format
+msgid "%(count)s group matching"
+msgid_plural "%(count)s groups matching"
+msgstr[0] "%(count)s одговарајућа група"
+msgstr[1] "%(count)s одговарајуће групе"
+msgstr[2] "%(count)s одговарајућих група"
+
+#: mozillians/jinja2/phonebook/betasearch.html:91 mozillians/jinja2/phonebook/search.html:90
+#, python-format
+msgid "%(count)s Mozillian matching"
+msgid_plural "%(count)s Mozillians matching"
+msgstr[0] "%(count)s одговарајући Мозилијан"
+msgstr[1] "%(count)s одговарајућа Мозилијана"
+msgstr[2] "%(count)s одговарајућих Мозилијана"
+
+#: mozillians/jinja2/phonebook/betasearch.html:116 mozillians/jinja2/phonebook/search.html:115
+#, python-format
+msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+msgstr "Жао нам је, не можемо пронаћи групу или особу повезану са \"%(query)s\"."
+
+#: mozillians/jinja2/phonebook/betasearch.html:122 mozillians/jinja2/phonebook/search.html:121
+#, python-format
+msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
+msgstr "Можда још увек нису Мозилијани? <a href=\"%(invite)s\">Позовите ову особу</a> да направи профил."
+
+#: mozillians/jinja2/phonebook/betasearch.html:128 mozillians/jinja2/phonebook/search.html:127
+msgid "Need help? Contact a steward in a functional area!"
+msgstr "Потребна вам је помоћ? Контактирајте управника у некој функционалној области!"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:3 mozillians/jinja2/phonebook/confirm_delete.html:7
+msgid "Confirm Profile Deletion"
+msgstr "Потврдите брисање профила"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:12
+msgid "Are You Sure You Want to Leave Mozillians?"
+msgstr "Да ли сте сигурни да желите да напустите Мозилијане?"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:14
+msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
+msgstr "Брисање вашег профила је тренутно и неповратно. Било која информација на профилу биће трајно обрисана. Ако желите поново да се придружите Мозилијанима, мораћете поново тражити јамство."
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:23
+msgid "No: don't delete my profile"
+msgstr "Не: немој обрисати мој профил"
+
+#: mozillians/jinja2/phonebook/confirm_delete.html:26
+msgid "I'm sure: delete my profile"
+msgstr "Сигуран сам: обриши мој профил"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:23
+msgid "You are just one step away from creating your profile."
+msgstr "Један корак вас дели од прављења профила."
+
+#: mozillians/jinja2/phonebook/edit_profile.html:36
+msgid "Profile"
+msgstr "Профил"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:37 mozillians/jinja2/phonebook/includes/profile_edit_location.html:5 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:56
+msgid "Location"
+msgstr "Локација"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:38
+msgid "You &amp; Mozilla"
+msgstr "Ви и Mozilla"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:40 mozillians/jinja2/phonebook/profile.html:249 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:5
+msgid "External Accounts"
+msgstr "Спољни налози"
+
+#: mozillians/jinja2/phonebook/edit_profile.html:41 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:46
+msgid "Developer"
+msgstr "Програмер"
+
+#: mozillians/jinja2/phonebook/home.html:3
+msgid "Mozilla Community Directory"
+msgstr "Адресар Mozilla заједнице"
+
+#: mozillians/jinja2/phonebook/home.html:23
+msgid "Create your account now to connect with fellow Mozillians."
+msgstr "Направите Ваш налог и повежите се са Мозилијанима."
+
+#: mozillians/jinja2/phonebook/home.html:25
+msgid "Get started"
+msgstr "Започните"
+
+#: mozillians/jinja2/phonebook/home.html:48
+msgid "It’s an exciting time for Mozilla and the Web. Another two billion people will join the Internet community in the coming years."
+msgstr "Узбудљиво је време за Mozilla-у и интернет. Још два билиона људи ће се придружити интернет заједници у наредним годинама."
+
+#: mozillians/jinja2/phonebook/home.html:61
+msgid "Welcome to the Mozilla community directory"
+msgstr "Добро дошли у адресар Mozilla заједнице"
+
+#: mozillians/jinja2/phonebook/home.html:63
+msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
+msgstr "Овај сајт наводи све битне особе и групе које учествују на Mozilla пројекту. Ми себе називамо Мозилијанима и овде се повезујемо и делимо једни са другима."
+
+#: mozillians/jinja2/phonebook/home.html:84
+msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
+msgstr "Страствене Мозилијане можете упознати ради посла, игре или отићи са њима на кафу."
+
+#: mozillians/jinja2/phonebook/home.html:99
+msgid "How do I get involved?"
+msgstr "Како да се прикључим?"
+
+#: mozillians/jinja2/phonebook/home.html:101
+msgid ""
+"Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
+"make a difference in the lives of people everywhere."
+msgstr ""
+"Mozilla постоји како би промовисала отвореност, иновације и прилике на интернету. Успех наше мисије зависи од учешћа људи као што сте Ви. Сазнајте како можете да се прикључите и да помогнете другим "
+"људима свуда око нас."
+
+#: mozillians/jinja2/phonebook/home.html:109
+#, python-format
+msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
+msgstr "<a href=\"%(contribute_url)s\">Прикључи се</a>"
+
+#: mozillians/jinja2/phonebook/home.html:120 mozillians/jinja2/phonebook/home.html:195
+msgid "Hello!"
+msgstr "Здраво!"
+
+#: mozillians/jinja2/phonebook/home.html:124 mozillians/jinja2/phonebook/home.html:199
+msgid "Examples:"
+msgstr "Примери:"
+
+#: mozillians/jinja2/phonebook/home.html:125 mozillians/jinja2/phonebook/home.html:200
+#, python-format
+msgid "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Berlin</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
+msgstr "<a href=\"%(search_url)s?q=python\">python</a>, <a href=\"%(search_url)s?q=berlin\">Берлин</a>, <a href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
+
+#: mozillians/jinja2/phonebook/home.html:158 mozillians/jinja2/phonebook/profile.html:195
+msgid "(membership requested)"
+msgstr "(чланство захтевано)"
+
+#: mozillians/jinja2/phonebook/home.html:166 mozillians/jinja2/phonebook/profile.html:224 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:187
+msgid "Languages"
+msgstr "Језици"
+
+#: mozillians/jinja2/phonebook/home.html:231
+msgid "Functional areas"
+msgstr "Функционалне области"
+
+#: mozillians/jinja2/phonebook/home.html:232
+msgid "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p>"
+msgstr "<p> Погледајте Мозилијане, надзорнике и информације за било коју функционалну област. Сазнајте ко на чему ради и како им можете помоћи. </p>"
+
+#: mozillians/jinja2/phonebook/home.html:240
+msgid "Browse functional areas"
+msgstr "Погледај функционалне области"
+
+#: mozillians/jinja2/phonebook/home.html:242
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse functional areas!</p>"
+msgstr "<p>Постаните <a href='https://wiki.mozilla.org/Mozillians/Vouching'>загарантовани</a> и можете прегледати функционалне области!</p>"
+
+#: mozillians/jinja2/phonebook/home.html:254
+msgid "<p> Find and join groups centered around interests, technologies, geographies and more. </p>"
+msgstr "<p> Пронађите и придружите се групама центрираним око интереса, технологија, географије и дригих ствари. </p>"
+
+#: mozillians/jinja2/phonebook/home.html:261
+msgid "Browse groups"
+msgstr "Прегледајте групе"
+
+#: mozillians/jinja2/phonebook/home.html:263
+msgid "<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a> and you can browse groups!</p>"
+msgstr "<p>Постаните <a href='https://wiki.mozilla.org/Mozillians/Vouching'>загарантовани</a> и можете прегледати групе!</p>"
+
+#: mozillians/jinja2/phonebook/invite.html:3 mozillians/jinja2/phonebook/invite.html:8
+msgid "Invite a Mozillian"
+msgstr "О сајту Мозилијани"
+
+#: mozillians/jinja2/phonebook/invite.html:12
+#, python-format
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
+"Ако желите да позовете новог мозилијана, молимо Вас попуните форму. <strong>Напомена</strong>: Позивање новог корисника је као јамчење. <a href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
+
+#: mozillians/jinja2/phonebook/invite.html:18
+#, python-format
+msgid ""
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
+msgstr ""
+"Недавно смо променили критеријуме за могућност позивања и јамчења других мозилијана. Ако желите да користите ову страницу, морате да добијете %(vouch_threshold)s јамчења. Питајте некога да посети "
+"профил и јамчи за вас. Онда се вратите овамо када имате %(vouch_threshold)s јамчења и онда ћете моћи да позивате друге људе у директоријум. <a href=\"%(vouching_url)s\">Сазнајте више о јамчењу.</a>"
+
+#: mozillians/jinja2/phonebook/invite.html:51
+msgid "Your Invites"
+msgstr "Ваши позиви"
+
+#: mozillians/jinja2/phonebook/invite.html:62
+msgid "Sent:"
+msgstr "Послато:"
+
+#: mozillians/jinja2/phonebook/invite.html:66
+msgid "Redeemed:"
+msgstr "Откупљени:"
+
+#: mozillians/jinja2/phonebook/invite.html:69
+msgid "Redeemer:"
+msgstr "Искупитељ:"
+
+#: mozillians/jinja2/phonebook/invited.html:3
+msgid "Invitation Sent"
+msgstr "Позивница је послата"
+
+#: mozillians/jinja2/phonebook/invited.html:8
+msgid "Invitation Sent!"
+msgstr "Позивница је послата!"
+
+#: mozillians/jinja2/phonebook/invited.html:10
+#, python-format
+msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
+msgstr "У Мозилијане сте позвали: %(recipient)s. Примиће е-пошту са упуствима како да се придруже. Можете <a href=\"%(invite_url)s\"> позвати још Мозилијана</a> ако желите."
+
+#: mozillians/jinja2/phonebook/location_list.html:16
+msgid "Mozillians in"
+msgstr "Mozillians у"
+
+#: mozillians/jinja2/phonebook/location_list.html:39
+msgid "Sorry we cannot find any mozillians in"
+msgstr "Жао нам је, не можемо наћи ниједног Мозилијана у"
+
+#: mozillians/jinja2/phonebook/profile.html:14
+msgid "Your Profile"
+msgstr "Ваш профил"
+
+#: mozillians/jinja2/phonebook/profile.html:16
+msgid "Mozillian Profile"
+msgstr "Профил Мозилијана"
+
+#: mozillians/jinja2/phonebook/profile.html:18
+msgid "Pending Profile"
+msgstr "Профил на чекању"
+
+#: mozillians/jinja2/phonebook/profile.html:24
+#, python-format
+msgid ""
+"<p> Your profile is waiting to be vouched. Once you are vouched, you will be able to view the profiles of all Mozillians, join groups and access additional content on other sites as a Mozillian. <a "
+"href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the link below to someone who is familiar with your contributions and ask them to vouch for you: <br/> <em class=\"underline\" "
+"title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
+"vouched increase as you finish tasks in our community.</p>"
+msgstr ""
+"<p> Ваш профил чека јамство. Када је неко јамчио за вас, моћи ћете да видите профиле свих мозилијана, да се придружите групи и приступите додатном садржају на другим сајтовима као мозилијан. <a "
+"href=\"%(vouching_url)s\">Сазнајте више о јамчењу</a>. </p> <p> Пошаљите везу испод некоме ко је упознат са вашим доприносима и затражите да јамче за  вас: <br/> <em class=\"underline\" title="
+"\"Your profile URL\">%(profile_url)s</em> </p> <p> Ако сте нови у Mozilla заједници, <a class=\"button\" href=\"%(contribute_url)s\">прикључите се</a> </p> <p>Шансе за јамство се повећавају када "
+"завршите задатке у вашој заједници.</p>"
+
+#: mozillians/jinja2/phonebook/profile.html:50
+msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
+msgstr "Профил чека на одобрење. Ако желите јамчити за њих, користите форму на дну странице."
+
+#: mozillians/jinja2/phonebook/profile.html:61
+#, python-format
+msgid "Your profile is not public. If you <a href=\"%(edit_url)s\">edit your profile</a> to have at least one public field, your public profile will be viewable."
+msgstr "Ваш профил није јаван. Ако <a href=\"%(edit_url)s\">измените Ваш профил</a> да има барем једно јавно поље, јавни профил ће бити видљив."
+
+#: mozillians/jinja2/phonebook/profile.html:83
+#, python-format
+msgid "Mozillian for %(mozillian_years)s year"
+msgid_plural "Mozillian for %(mozillian_years)s years"
+msgstr[0] "Мозилијан %(mozillian_years)s годину"
+msgstr[1] "Мозилијан %(mozillian_years)s године"
+msgstr[2] "Мозилијан %(mozillian_years)s година"
+
+#: mozillians/jinja2/phonebook/profile.html:127
+msgid "T-Shirt Size:"
+msgstr "Величина мајице:"
+
+#: mozillians/jinja2/phonebook/profile.html:141
+msgid "View as:"
+msgstr "Погледај као:"
+
+#: mozillians/jinja2/phonebook/profile.html:145
+msgid "Myself"
+msgstr "Ја"
+
+#: mozillians/jinja2/phonebook/profile.html:149
+msgid "Mozillian"
+msgstr "Мозилијан"
+
+#: mozillians/jinja2/phonebook/profile.html:153 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:47 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:33
+#: mozillians/users/managers.py:12
+msgid "Public"
+msgstr "Јавно"
+
+#: mozillians/jinja2/phonebook/profile.html:171 mozillians/users/models.py:153
+msgid "Bio"
+msgstr "Биографија"
+
+#: mozillians/jinja2/phonebook/profile.html:179
+msgid "My contribution story"
+msgstr "Моја прича о доприносу"
+
+#: mozillians/jinja2/phonebook/profile.html:234
+msgid "Websites"
+msgstr "Веб сајтови"
+
+#: mozillians/jinja2/phonebook/profile.html:267
+msgid "Alternate email addresses"
+msgstr "Алтернативне адресе е-поште"
+
+#: mozillians/jinja2/phonebook/profile.html:284
+msgid "Vouched By"
+msgstr "Јамчен од стране"
+
+#: mozillians/jinja2/phonebook/profile.html:297
+msgid "Unknown Voucher"
+msgstr "Непознат јемац"
+
+#: mozillians/jinja2/phonebook/profile.html:300
+msgid "Legacy vouch."
+msgstr "Наслеђено јамство."
+
+#: mozillians/jinja2/phonebook/profile.html:311
+msgid "Vouchees"
+msgstr "Јамчени"
+
+#: mozillians/jinja2/phonebook/profile.html:337
+#, python-format
+msgid "%(hours)s hours ahead of your timezone."
+msgstr "%(hours)s сати испред временске зоне."
+
+#: mozillians/jinja2/phonebook/profile.html:340
+#, python-format
+msgid "%(hours)s hours behind your timezone."
+msgstr "%(hours)s сати иза временске зоне."
+
+#: mozillians/jinja2/phonebook/profile.html:343
+msgid "Same time zone as yours."
+msgstr "У истој временској зони као и ви."
+
+#: mozillians/jinja2/phonebook/includes/photo_form.html:6
+msgid "Profile photo"
+msgstr "Слика профила"
+
+#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:162
+msgid "Remove Profile Photo"
+msgstr "Уклони профилну слику"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:44
+msgid "Add account"
+msgstr "Додај налог"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:48
+msgid "Update External Accounts"
+msgstr "Ажурирај спољне налоге"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:53
+msgid "IRC"
+msgstr "IRC"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:67
+msgid "Update IRC information"
+msgstr "Ажурирај IRC информације"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:5 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:16
+msgid "Basic Information"
+msgstr "Основне информације"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:83
+msgid "Update Information"
+msgstr "Ажурирај информације"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:91
+msgid "Emails"
+msgstr "Е-поште"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:94
+msgid "Primary e-mail address"
+msgstr "Примарна адреса е-поште"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:106
+msgid "Secondary e-mail addresses"
+msgstr "Алтернативне адресе е-поште"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:136
+msgid "Add e-mail using Persona"
+msgstr "Додајте е-пошту користећи Persona-у"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:142
+msgid "Update Emails"
+msgstr "Ажурирај е-поште"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:158
+msgid "A skill is the learned capacity to carry out pre-determined results often with the minimum outlay of time, energy, or both."
+msgstr "Вештина је научена способност да се изврше предодређени резултати, често са минималном потрошњом времена, енергије, или обоје."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:179
+msgid "Update Skills"
+msgstr "Ажурирај вештине"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:193
+msgid "The Mozilla Project spans over many countries and languages. Share the languages you speak to be found easily by other Mozillians."
+msgstr "Mozilla пројекат обухвата много земаља и језика. Поделите језик којим говорите како би Вас други Мозилијани лакше нашли."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:217
+msgid "Add language"
+msgstr "Додај језик"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:226
+msgid "Update Languages"
+msgstr "Ажурирај језике"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:233
+msgid "Delete account"
+msgstr "Обриши налог"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:239
+msgid "I acknowledge that deleting my account will make it tougher for me to show off my contributions and easily be found by other members of the Mozilla community."
+msgstr "Прихватам да ће брисање мог налога отежати показивање мојих доприноса као и лако проналажење од стране других чланова заједнице Mozilla."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:250
+msgid "Delete Profile"
+msgstr "Обриши профил"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
+msgid "API privacy"
+msgstr "API за приватност"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
+#, python-format
+msgid ""
+"The Phonebook offers an API (currently v1) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
+"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
+msgstr ""
+"Именик нуди API (тренутно в1) који помаже овлашћење сарадника и дељење података профила другим алатима и сајтовима попут <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> и <a "
+"id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:22
+msgid "Privacy"
+msgstr "Приватност"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:40
+msgid "Update Privacy Settings"
+msgstr "Ажурирај поставке приватности"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:16
+msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
+msgstr "Групе су заједница Мозилијана са неким међусобним односима. Ово може бити интерес, тим, пројекат, производ или под-заједница."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:24
+#, python-format
+msgid "To join a group, <a href=\"%(browse)s\">find the group's page</a>, then click the Join Group button."
+msgstr "Да бисте се придружили групи, <a href=\"%(browse)s\">нађите страницу групе</a>, и затим кликните на дугме Придружи се групи."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:28
+msgid "To leave a group, click its name below to go to its page, then click the Leave Group button there."
+msgstr "Да висте напустили групу, кликните испод на њен назив да бисте посетили њену страну, и затим кликните на дугме Напусти групу."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:35
+msgid "After you are vouched, you will be able to join groups."
+msgstr "Након што будете јамчени, моћићете се придружити групама."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:51
+msgid "Update Groups"
+msgstr "Ажурирај групе"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:28 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:74
+msgid "You have denied Location services."
+msgstr "Ви сте одбили сервисе за локацију."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:52 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:98
+msgid "Country"
+msgstr "Држава"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:75 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:121
+msgid "Region"
+msgstr "Регион"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:98 mozillians/jinja2/phonebook/includes/profile_edit_registration.html:144
+msgid "City"
+msgstr "Град"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_location.html:121
+msgid "Update Location"
+msgstr "Ажурирај локацију"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:176
+msgid "This field is required."
+msgstr "Потребно је попунити ово поље."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:183
+#, python-format
+msgid "I'm okay with you handling this info as you explain in <a href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
+msgstr "Не смета ми руковање ове информације као што сте објаснили у <a href=\"%(privacy_url)s\">Mozilla-иној полиси приватности</a>."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_registration.html:195
+msgid "Create Profile"
+msgstr "Направи профил"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:5
+msgid "Your Mozilla Contributions"
+msgstr "Ваши Mozilla доприноси"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:42
+msgid "Update Contributions"
+msgstr "Ажурирај доприносе"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:50
+msgid "T-Shirt Size"
+msgstr "Величина мајице"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:56
+msgid "Like t-shirts? Add your size so we can give you a shirt at events or for other special occasions."
+msgstr "Свиђајувам се мајице? Додајте величину како бисмо могли да је поклонимо током неког догађаја или других специјалних прилика."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:69
+msgid "Fitted"
+msgstr "Уз тело"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:70
+msgid "A fitted-cut tshirt has a curved side hem which comes in at the waist and goes out at the upper and lower ends. Also known as women's."
+msgstr "Мајица уз тело има заобљену страну до струка и проширује се према горњим и доњим крајевима. Познатa je још као \"женска\"."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:83
+msgid "Straight-cut"
+msgstr "Стандардни облик"
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:84
+msgid "A straight-cut shirt has wide shoulders and a body which is almost square. Often known as men's or unisex."
+msgstr "Мајицa стандардног облика има широка рамена и тело које је скоро квадратног облика. Познатa je још као \"мушкa\" или \"унисекс\"."
+
+#: mozillians/jinja2/phonebook/includes/profile_edit_you.html:103
+msgid "Update T-shirt size"
+msgstr "Ажурирај величину мајице"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:7
+#, python-format
+msgid "Does this profile belong to a Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr "Да ли овај профил припада мозилијану? Реците нам како је %(full_name)s допринео пројекту."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:14
+#, python-format
+msgid "Do you know this Mozillian? Let us know how %(full_name)s has contributed to the project."
+msgstr "Да ли знате овог мозилијана? Реците нам како је %(full_name)s допринео пројекту."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:26
+msgid "Characters remaining:"
+msgstr "Карактера преостало:"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:31
+msgid "Send invite"
+msgstr "Пошаљи позивницу"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:33
+#, python-format
+msgid "Vouch for %(name)s"
+msgstr "Јамчи за %(name)s"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:40
+msgid "Only vouch for users who have made significant contributions and are at least 13 years old."
+msgstr "Јамчите само за кориснике који су имали значајне доприносе и имају барем 13 година."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:42
+msgid "Once vouched, they will be able to:"
+msgstr "Након што буду јамчени, моћи ће:"
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:44
+msgid "View all profiles and join groups."
+msgstr "Погледа све профиле и придружи се групама."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:45
+msgid "Access special video content on Air Mozilla."
+msgstr "Приступити специјалном видео садржају на Air Mozilla."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:46
+msgid "Join the Mozilla Exchange Yammer network."
+msgstr "Придружити се Mozilla Exchange Yammer мрежи."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:47
+msgid "Use other Mozilla apps as a vouched user."
+msgstr "Користити друге Mozilla апликације као јамчен корисник."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:50
+msgid "Vouches cannot be edited or retracted."
+msgstr "Јамчења се не могу уредити или повући."
+
+#: mozillians/jinja2/phonebook/includes/profile_vouch.html:52
+#, python-format
+msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr "<a href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
 
 #: mozillians/phonebook/forms.py:84
 msgid "Include non-vouched"
@@ -292,18 +1496,6 @@ msgstr "Користите само алфанумеричке карактер�
 msgid "This username is not allowed, please choose another."
 msgstr "Унето корисничко име није дозвољено, изаберите друго."
 
-#: mozillians/phonebook/forms.py:161
-#: mozillians/templates/groups/group.html:100
-#: mozillians/templates/includes/search_result.html:31
-#: mozillians/templates/phonebook/includes/photo_form.html:4
-msgid "Profile Photo"
-msgstr "Профилна слика"
-
-#: mozillians/phonebook/forms.py:162
-#: mozillians/templates/phonebook/includes/photo_form.html:19
-msgid "Remove Profile Photo"
-msgstr "Уклони профилну слику"
-
 #: mozillians/phonebook/forms.py:230
 msgid "Skills can only contain latin characters and +.:-."
 msgstr "Вештине могу садржати само латиничне знакове и +.:-."
@@ -311,10 +1503,6 @@ msgstr "Вештине могу садржати само латиничне з�
 #: mozillians/phonebook/forms.py:268
 msgid "Required"
 msgstr "Захтевано"
-
-#: mozillians/phonebook/forms.py:271 mozillians/phonebook/forms.py:272
-msgid "Save"
-msgstr "Сними"
 
 #: mozillians/phonebook/forms.py:289
 msgid "Location must be inside a country."
@@ -368,17 +1556,9 @@ msgstr "Не можете позвати неког ко је већ зајем�
 msgid "Please complete registration before proceeding."
 msgstr "Попуните регистрацију пре него што наставите."
 
-#: mozillians/phonebook/models.py:18
-msgid "Inviter"
-msgstr "Позиваоц"
-
 #: mozillians/phonebook/models.py:19
 msgid "Recipient"
 msgstr "Прималац"
-
-#: mozillians/phonebook/models.py:21
-msgid "Redeemer"
-msgstr "Откупитељ"
 
 #: mozillians/phonebook/models.py:42
 msgid "A fellow Mozillian"
@@ -389,6 +1569,7 @@ msgid "Please join me on mozillians.org"
 msgstr "Придружи ми се на mozillians.org"
 
 #: mozillians/phonebook/models.py:66
+#, python-format
 msgid "%s created a Mozillians profile"
 msgstr "%s је креирао Мозилијан профил"
 
@@ -397,12 +1578,8 @@ msgid "Twitter usernames cannot be longer than 15 characters."
 msgstr "Twitter корисничка имена не смеју бити дужа од 15 карактера."
 
 #: mozillians/phonebook/validators.py:22
-msgid ""
-"Twitter usernames must contain only alphanumeric characters and the "
-"underscore."
-msgstr ""
-"Twitter корисничка имена морају садржати само алфанумеричке карактере и доњу"
-" црту."
+msgid "Twitter usernames must contain only alphanumeric characters and the underscore."
+msgstr "Twitter корисничка имена морају садржати само алфанумеричке карактере и доњу црту."
 
 #: mozillians/phonebook/validators.py:57
 msgid "Enter a valid URL."
@@ -417,12 +1594,8 @@ msgid "Enter a valid email address."
 msgstr "Унесите важећу адресу е-поште."
 
 #: mozillians/phonebook/validators.py:91
-msgid ""
-"Please enter a valid phone number in international format (e.g. +1 555 555 "
-"5555)"
-msgstr ""
-"Унесите исправан број телефона, у међународном формату (нпр. +381 64 555 "
-"5555)"
+msgid "Please enter a valid phone number in international format (e.g. +1 555 555 5555)"
+msgstr "Унесите исправан број телефона, у међународном формату (нпр. +381 64 555 5555)"
 
 #: mozillians/phonebook/views.py:63
 msgid "Successfully vouched user."
@@ -438,42 +1611,29 @@ msgstr "Успешно нејамчен корисник."
 
 #: mozillians/phonebook/views.py:139
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
-msgstr ""
-"Хвала вам на јамству за колегу Мозилијана! Овај корисник је сада јамчен!"
+msgstr "Хвала вам на јамству за колегу Мозилијана! Овај корисник је сада јамчен!"
 
 #: mozillians/phonebook/views.py:248
-msgid ""
-"Your registration is complete. Feel free to visit the {0} page to add "
-"additional information to your profile."
-msgstr ""
-"Ваша регистрација је завршена. Посетите страницу {0} да додате додатне "
-"информације на ваш профил."
+msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
+msgstr "Ваша регистрација је завршена. Посетите страницу {0} да додате додатне информације на ваш профил."
 
 #: mozillians/phonebook/views.py:253
-msgid ""
-"You changed your username; please note your profile URL has also changed."
-msgstr ""
-"Променили сте своје корисничко име; имајте у виду да је и URL профила такође"
-" промењен."
+msgid "You changed your username; please note your profile URL has also changed."
+msgstr "Променили сте своје корисничко име; имајте у виду да је и URL профила такође промењен."
 
 #: mozillians/phonebook/views.py:330
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Ваш налог је обрисан. Хвала вам што сте били Мозилијан!"
 
 #: mozillians/phonebook/views.py:454
-msgid ""
-"%s has been invited to Mozillians. They'll receive an email with "
-"instructions on how to join. You can invite another Mozillian if you like."
-msgstr ""
-"%s је позван у Мозилијане. Примиће е-пошту са упуствима како да се учлане. "
-"Можете позвати још Мозилијана ако желите."
+#, python-format
+msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
+msgstr "%s је позван у Мозилијане. Примиће е-пошту са упуствима како да се учлане. Можете позвати још Мозилијана ако желите."
 
 #: mozillians/phonebook/views.py:475
-msgid ""
-"%s's invitation to Mozillians has been revoked. You can invite %s again if "
-"you like."
-msgstr ""
-"%s позивница за Mozillians је одбијена. Моћете позвати %s поново ако желите."
+#, python-format
+msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
+msgstr "%s позивница за Mozillians је одбијена. Моћете позвати %s поново ако желите."
 
 #: mozillians/phonebook/views.py:491
 msgid "API Key generated successfully."
@@ -484,1378 +1644,12 @@ msgid "API key successfully deleted."
 msgstr "API кључ је успешно обрисан."
 
 #: mozillians/phonebook/views.py:562
-msgid ""
-"You've been invited to join Mozillians.org! Sign in and then you can create "
-"a profile."
+msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
+msgstr "Позвани сте да се придружите Mozillians.org! Пријавите се и онда можете креирати профил."
+
+#: mozillians/templates/admin/import_export/change_list_export.html:15
+msgid "Export"
 msgstr ""
-"Позвани сте да се придружите Mozillians.org! Пријавите се и онда можете "
-"креирати профил."
-
-#: mozillians/settings/base.py:516 mozillians/templates/base.html:7
-#: mozillians/templates/base.html:21
-#: mozillians/templates/phonebook/betasearch.html:89
-#: mozillians/templates/phonebook/search.html:88
-#: mozillians/users/managers.py:11
-msgid "Mozillians"
-msgstr "Мозилијани"
-
-#: mozillians/templates/404.html:3
-msgid "Page Not Found"
-msgstr "Страница није пронађена"
-
-#: mozillians/templates/404.html:7
-msgid "Oh No! That Page Doesn't Exist!"
-msgstr "Ох не! Та страница не постоји!"
-
-#: mozillians/templates/404.html:11 mozillians/templates/404.html:12
-msgid "Tumbeasts by Matthew Inman of The Oatmeal"
-msgstr "Tumbeasts, Matthew Inman са сајта The Oatmeal"
-
-#: mozillians/templates/404.html:15
-msgid ""
-"<p> The page you requested couldn't be found. You can head to the <a "
-"href=\"%(home_url)s\">Mozillians home page</a> to learn more about our "
-"community phonebook, or you can try searching for the person you were "
-"looking for using the search box at the top of this page. </p>"
-msgstr ""
-"<p> Страница коју сте тражили није пронађена. Можете отићи на <a "
-"href=\"%(home_url)s\">почетну страницу Мозилијана</a> како бисте сазнали "
-"више о нашем именику заједнице, или можете покушати претражити особу коју "
-"желите наћи, користећи поље за претрагу на врху ове странице. </p>"
-
-#: mozillians/templates/404.html:25
-msgid ""
-"<p> Because you aren't authenticated, you may not have access to private "
-"profiles in the phonebook. You should log in in case you're trying to access"
-" a private profile. If you don't have an account, <a "
-"href=\"%(join_url)s\">join us</a>. </p>"
-msgstr ""
-"<p> Из разлога што нисте аутентификани, не можете приступити приватним "
-"профилима у именику. Требало би да се пријавите у случају да покушавате "
-"приступити приватном профилу. Уколико немате налог, <a "
-"href=\"%(join_url)s\">придружите нам се</a>. </p>"
-
-#: mozillians/templates/500.html:3
-msgid "Application Error"
-msgstr "Грешка у апликацији"
-
-#: mozillians/templates/500.html:7
-msgid "We're Sorry, but Something Went Wrong!"
-msgstr "Жао нам је, али нешто је пошло наопако!"
-
-#: mozillians/templates/500.html:11 mozillians/templates/500.html:12
-msgid "Jitterbeasts by Matthew Inman of The Oatmeal"
-msgstr "Jitterbeasts, Matthew Inman са сајта The Oatmeal"
-
-#: mozillians/templates/500.html:15
-msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your "
-"request. You can try again by refreshing your browser or you can <a "
-"href=\"%(bugzilla_url)s\"> file a bug</a> letting us know what happened and "
-"we'll get right on fixing the problem. </p> <p> If refreshing the page "
-"didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home "
-"page</a> to find out more about Mozillians. Sorry about this! </p>"
-msgstr ""
-"<p> Жао нам је, али смо наишли на неочекивану грешку и Ваш захтев не може да"
-" се обради. Можете покушати касније освежити Ваш прегледач или можете <a "
-"href=\"%(bugzilla_url)s\"> пријавити грешку</a> рећи нам шта се догодило и "
-"ми ћемо одмах покушати решити проблем. </p> <p> Ако освежавање странице није"
-" успело, можете <a href=\"%(home_url)s\">отићи на почетну страницу "
-"Мозилијана</a> како бисте нашли више информација о Мозилијанима. Извињавамо "
-"се на овоме! </p>"
-
-#: mozillians/templates/base.html:7
-msgid "Welcome"
-msgstr "Добро дошли"
-
-#: mozillians/templates/base.html:8
-msgid "Mozilla's contributor phonebook"
-msgstr "Mozilla-ин именик сарадника"
-
-#: mozillians/templates/base.html:69
-#: mozillians/templates/includes/lang_switcher.html:3
-msgid "Select language"
-msgstr "Изаберите језик"
-
-#: mozillians/templates/base.html:70
-msgid "Skip to main content"
-msgstr "Иди на главни садржај"
-
-#: mozillians/templates/base.html:81
-#: mozillians/templates/phonebook/betasearch.html:32
-#: mozillians/templates/phonebook/home.html:33
-#: mozillians/templates/phonebook/home.html:123
-#: mozillians/templates/phonebook/home.html:198
-#: mozillians/templates/phonebook/search.html:32
-msgid "Search for people, groups and more"
-msgstr "Претражите људе, групе и остало"
-
-#: mozillians/templates/base.html:105
-msgid "View Profile"
-msgstr "Погледај профил"
-
-#: mozillians/templates/base.html:111
-#: mozillians/templates/phonebook/edit_profile.html:4
-#: mozillians/templates/phonebook/edit_profile.html:34
-msgid "Settings"
-msgstr "Поставке"
-
-#: mozillians/templates/base.html:118
-#: mozillians/templates/groups/index_common.html:12
-#: mozillians/templates/groups/index_groups.html:7
-#: mozillians/templates/phonebook/betasearch.html:65
-#: mozillians/templates/phonebook/edit_profile.html:39
-#: mozillians/templates/phonebook/home.html:151
-#: mozillians/templates/phonebook/home.html:253
-#: mozillians/templates/phonebook/profile.html:186
-#: mozillians/templates/phonebook/search.html:64
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:5
-msgid "Groups"
-msgstr "Групе"
-
-#: mozillians/templates/base.html:124
-msgid "Invite"
-msgstr "Позови"
-
-#: mozillians/templates/base.html:131 mozillians/templates/base.html:139
-msgid "Log Out"
-msgstr "Одјави се"
-
-#: mozillians/templates/base.html:144 mozillians/templates/base.html:147
-msgid "Sign in"
-msgstr "Пријави се"
-
-#: mozillians/templates/base.html:187
-msgid ""
-"Help make Mozillians better. <a href=\"%(bug_url)s\">File a bug</a> or <a "
-"href=\"%(git_url)s\">make some changes</a>."
-msgstr ""
-"Помозите Мозилијанима да буду бољи. <a href=\"%(bug_url)s\">Пријавите "
-"грешку</a> или <a href=\"%(git_url)s\">направите неке измене</a>."
-
-#: mozillians/templates/base.html:207
-msgid ""
-"Portions of this content are &copy;1998–%(current_year)s by individual "
-"mozilla.org contributors. Content available under a <a "
-"href=\"%(license_link)s\">Creative Commons license</a>."
-msgstr ""
-"Делови овог садржаја су &copy;1998–%(current_year)s од појединачних "
-"mozilla.org сарадника. Садржај је доступан под <a "
-"href=\"%(license_link)s\">Creative Commons лиценцом</a>."
-
-#: mozillians/templates/base.html:216
-#: mozillians/templates/phonebook/about-dinomcvouch.html:3
-#: mozillians/templates/phonebook/about.html:3
-#: mozillians/templates/phonebook/about.html:10
-msgid "About Mozillians"
-msgstr "О сајту Мозилијани"
-
-#: mozillians/templates/base.html:217
-msgid "Contact Us"
-msgstr "Контактирајте нас"
-
-#: mozillians/templates/base.html:218
-msgid "Privacy Policy"
-msgstr "Полиса о приватности"
-
-#: mozillians/templates/base.html:219
-msgid "Legal Notices"
-msgstr "Правна обавештења"
-
-#: mozillians/templates/base.html:220
-msgid "Report Trademark Abuse"
-msgstr "Додај групу"
-
-#: mozillians/templates/groups/add_edit.html:4
-#: mozillians/templates/groups/add_edit.html:22
-msgid "Add a group"
-msgstr "Додај групу"
-
-#: mozillians/templates/groups/add_edit.html:6
-#: mozillians/templates/groups/add_edit.html:37
-msgid "Edit functional area"
-msgstr "Измени функционалну област"
-
-#: mozillians/templates/groups/add_edit.html:8
-#: mozillians/templates/groups/add_edit.html:39
-msgid "Edit group"
-msgstr "Измени групу"
-
-#: mozillians/templates/groups/add_edit.html:16
-#: mozillians/templates/phonebook/edit_profile.html:17
-#: mozillians/templates/phonebook/invite.html:34
-msgid "Please correct the errors below."
-msgstr "Исправите грешке у наставку."
-
-#: mozillians/templates/groups/add_edit.html:24
-msgid ""
-"Use this form to create a group on Mozillians.org. Before creating a group, "
-"try searching for it. Someone else might already have created it."
-msgstr ""
-"Употребите ову форму да бисте направили групу на Mozillians.org. Пре него "
-"што направите групу, покушајте да је претражите. Можда ју је неко други већ "
-"креирао."
-
-#: mozillians/templates/groups/add_edit.html:30
-msgid ""
-"Creating a group will make you the group's curator, letting you manage the "
-"group settings and decide who can join. If you set the group to require "
-"membership approval, you'll get a daily email with requests to join."
-msgstr ""
-"Креирањем групе ћете постати њен куратор, имаћете приступ подешавањима групе"
-" и моћи ћете одлучити ко ће јој се придружи. Ако подесите групу тако да "
-"захтева одобрење чланства, добићете дневно е-пошту са захтевима за улаз."
-
-#: mozillians/templates/groups/add_edit.html:112
-msgid "Admin Settings"
-msgstr "Поставке админа"
-
-#: mozillians/templates/groups/add_edit.html:129
-#: mozillians/templates/groups/index_groups.html:18
-msgid "Create Group"
-msgstr "Направи групу"
-
-#: mozillians/templates/groups/add_edit.html:131
-msgid "Submit changes"
-msgstr "Достави измене"
-
-#: mozillians/templates/groups/confirm_remove_member.html:3
-#: mozillians/templates/groups/confirm_remove_member.html:14
-msgid "Confirm removing member"
-msgstr "Потврдите уклањање члана"
-
-#: mozillians/templates/groups/confirm_remove_member.html:18
-msgid "Really leave group %(group)s?"
-msgstr "Заиста да напусти групу %(group)s?"
-
-#: mozillians/templates/groups/confirm_remove_member.html:20
-msgid "Really remove user %(profile)s from group %(group)s?"
-msgstr "Заиста уклонити корисника %(profile)s из групе %(group)s?"
-
-#: mozillians/templates/groups/confirm_remove_member.html:27
-#: mozillians/templates/includes/search_result.html:9
-#: mozillians/templates/phonebook/invite.html:77
-msgid "Remove"
-msgstr "Уклони"
-
-#: mozillians/templates/groups/confirm_remove_member.html:30
-msgid "Return to group"
-msgstr "Повратак на групу"
-
-#: mozillians/templates/groups/group.html:3
-msgid "Group: {name}"
-msgstr "Група: {name}"
-
-#: mozillians/templates/groups/group.html:16
-msgid "Functional Area"
-msgstr "Функционална област"
-
-#: mozillians/templates/groups/group.html:18
-msgid "Group"
-msgstr "Група"
-
-#: mozillians/templates/groups/group.html:30
-msgid "Delete Group"
-msgstr "Обриши групу"
-
-#: mozillians/templates/groups/group.html:37
-msgid "Edit Group"
-msgstr "Измени групу"
-
-#: mozillians/templates/groups/group.html:71
-msgid "Skills members have in common"
-msgstr "Заједничке вештине чланова"
-
-#: mozillians/templates/groups/group.html:86
-msgid "Community Steward"
-msgstr "Надзорник заједнице"
-
-#: mozillians/templates/groups/group.html:88
-msgid "Curators"
-msgstr "Куратори"
-
-#: mozillians/templates/groups/group.html:90
-msgid "Curator"
-msgstr "Куратор"
-
-#: mozillians/templates/groups/group.html:138
-msgid "Request to Join Group"
-msgstr "Тражи захтев за придруживање групи"
-
-#: mozillians/templates/groups/group.html:140
-msgid "Join Group"
-msgstr "Придружи се групи"
-
-#: mozillians/templates/groups/group.html:151
-msgid "Leave Group"
-msgstr "Напусти групу"
-
-#: mozillians/templates/groups/group.html:160
-msgid "Filter"
-msgstr "Филтрирај"
-
-#: mozillians/templates/groups/group.html:168
-msgid "There are no open membership requests for %(group_name)s."
-msgstr "Нема захтева за чланство за %(group_name)s."
-
-#: mozillians/templates/groups/group.html:172
-msgid "Sorry, we can not find any mozillians in %(group_name)s."
-msgstr "Жао нам је, не можемо пронаћи ни једог мозилијана у %(group_name)s."
-
-#: mozillians/templates/groups/group.html:184
-msgid "Functional Area Members"
-msgstr "Чланови функционалне области"
-
-#: mozillians/templates/groups/group.html:186
-msgid "Group Members"
-msgstr "Чланови групе"
-
-#: mozillians/templates/groups/group.html:192
-msgid "Your membership request is pending approval by the group curator."
-msgstr "Ваш захтев за чланство чека дозволу од куратора групе."
-
-#: mozillians/templates/groups/index_areas.html:3
-#: mozillians/templates/groups/index_areas.html:8
-msgid "Functional Areas"
-msgstr "Функционалне области"
-
-#: mozillians/templates/groups/index_areas.html:12
-#: mozillians/templates/groups/index_skills.html:12
-msgid ""
-"View Mozillians, Stewards and information for any functional area. Find out "
-"who works on what and how you can help out."
-msgstr ""
-"Погледајте Мозилијане, надзорнике и информације за било коју функционалну "
-"област. Сазнајте ко на чему ради и како им можете помоћи."
-
-#: mozillians/templates/groups/index_common.html:2
-#: mozillians/templates/groups/index_groups.html:3
-msgid "Group Listing"
-msgstr "Листинг групе"
-
-#: mozillians/templates/groups/index_common.html:16
-msgid "Sort"
-msgstr "Поређај"
-
-#: mozillians/templates/groups/index_common.html:22
-#: mozillians/templates/groups/index_groups.html:10
-msgid ""
-"Mozillians work on all sorts of different things! From Add-on developers to "
-"localizers, find Mozillians who work on similar things using user-created "
-"groups."
-msgstr ""
-"Мозилијани раде на свим врстама различитих ствари! Од програмера додатака до"
-" локализатора, нађи Мозилијана који ради на сличним стварима користећи групу"
-" креирану од стране корисника."
-
-#: mozillians/templates/groups/index_common.html:46
-msgid "%(num)s member"
-msgid_plural "%(num)s members"
-msgstr[0] "%(num)s члан"
-msgstr[1] "%(num)s члана"
-msgstr[2] "%(num)s чланова"
-
-#: mozillians/templates/groups/index_skills.html:3
-#: mozillians/templates/groups/index_skills.html:8
-#: mozillians/templates/phonebook/home.html:175
-#: mozillians/templates/phonebook/profile.html:209
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:151
-msgid "Skills"
-msgstr "Вештине"
-
-#: mozillians/templates/groups/skill.html:3
-msgid "Skill: {name}"
-msgstr "Вештина: {name}"
-
-#: mozillians/templates/groups/skill.html:14
-msgid "Skill"
-msgstr "Вештинa"
-
-#: mozillians/templates/groups/skill.html:21
-msgid "Add Skill"
-msgstr "Додај вештину"
-
-#: mozillians/templates/groups/skill.html:23
-msgid "Remove Skill"
-msgstr "Уклони вештину"
-
-#: mozillians/templates/groups/skill.html:31
-msgid "Sorry, we cannot find any mozillians with skill %(name)s"
-msgstr "Жао нам је, не можемо наћи ниједног Mозилијана са вештином %(name)s"
-
-#: mozillians/templates/groups/terms.html:3
-#: mozillians/templates/groups/terms.html:8
-msgid "Review terms"
-msgstr "Прегледај услове"
-
-#: mozillians/templates/includes/field.html:3
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:45
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:31
-msgid "Choose visibility group for this field"
-msgstr "Изаберите видљивост групе за ово поље"
-
-#: mozillians/templates/includes/pagination.html:21
-msgid "Previous"
-msgstr "Претходнo"
-
-#: mozillians/templates/includes/pagination.html:26
-msgid "Page"
-msgstr "Страница"
-
-#: mozillians/templates/includes/pagination.html:70
-msgid "Next"
-msgstr "Следећe"
-
-#: mozillians/templates/includes/search_result.html:17
-msgid "Confirm Request"
-msgstr "Потврди захтев"
-
-#: mozillians/templates/includes/search_result.html:21
-msgid "Requested"
-msgstr "Захтевано"
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:9
-msgid "Dino McVouch"
-msgstr "Dino McVouch"
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:10
-msgid "About Dino McVouch"
-msgstr "О Dino McVouch"
-
-#: mozillians/templates/phonebook/about-dinomcvouch.html:13
-msgid ""
-"Dino McVouch is Mozilians.org bot. Auto-vouches recognized Mozillians and "
-"takes care of Mozillians.org."
-msgstr ""
-"Dino McVouch је Mozilians.org бот. Он аутоматски јамчи за препознате "
-"мозилијане и брине се о Mozillians.org."
-
-#: mozillians/templates/phonebook/about.html:9
-msgid "Photo collage of Mozillians"
-msgstr "Фото албум Мозилијана"
-
-#: mozillians/templates/phonebook/about.html:11
-msgid ""
-"<p> Mozillians are people who volunteer their time to advance the Mozilla "
-"mission. They're dedicated to promoting openness, innovation and opportunity"
-" on the Web and they form the core of our community. </p> <p> This directory"
-" is a resource to make it easy for Mozillians to learn who is involved, what"
-" they do and how to connect with them. It also allows you to receive email "
-"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland "
-"for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly "
-"what this site is for. </p> <p> <a href=\"%(wiki_roadmap_url)s\">These "
-"features</a>, and others, are currently in development. If you'd like to "
-"help us out with these, find out how you can <a "
-"href=\"%(wiki_get_involved_url)s\"> get involved</a>. </p>"
-msgstr ""
-"<p> Мозилијани су људи који волонтирају да унапреде Mozilla мисију. Они су "
-"посвећени промовисању отворености, иновације и могућностима на интернету и "
-"долазе из језгра наше заједице. </p> <p> Овај директоријум је начин да "
-"Мозилијани лакше сазнају ко учествује, шта раде и како да се повежу са њима."
-" Такође Вам дозвољава да примите е-пошту обавештења од Mozilla-е. </p> <p> "
-"Желите да нађете Мозилијане у Суботици ради састанка? Треба Вам XPCOM "
-"експертни хакер да испита закрпу? То је управо чему овај сајт служи. </p> "
-"<p> <a href=\"%(wiki_roadmap_url)s\">Ове функције</a>, и друге, су тренутно "
-"у развоју. Ако бисте желели да нам помогнете око њих, сазнајте како можете "
-"<a href=\"%(wiki_get_involved_url)s\"> да се прикључите</a>. </p>"
-
-#: mozillians/templates/phonebook/about.html:35
-msgid "Privacy First"
-msgstr "Приватност прва"
-
-#: mozillians/templates/phonebook/about.html:37
-msgid ""
-"Privacy has been an important part of this directory from the very "
-"beginning. We want to make sure we provide Mozillians with the best "
-"experience possible, from the way the site is built to the way we vouch for "
-"new users before they can access data that should only be available to other"
-" Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy "
-"</a> for more information."
-msgstr ""
-"Приватност је од самог почетка била важан део овог директоријума. Желимо да "
-"будемо сигурни да пружамо Мозилијанима најбоље могуће искуство, од начина на"
-" који је веб сајт направљен до начина на који јамчимо нове кориснике пре "
-"неко што могу приступити подацима који би требали бити доступни само другим "
-"Мозилијанима. Прочитајте нашу <a href=\"%(privacy_policy_url)s\"> Полису "
-"приватности</a> за више информација."
-
-#: mozillians/templates/phonebook/about.html:51
-msgid "Get Involved"
-msgstr "Прикључите се"
-
-#: mozillians/templates/phonebook/about.html:53
-msgid ""
-"The community directory is also a community project and you are welcome to "
-"get involved to help us make it even better or to integrate it into other "
-"community tools. Get in touch with us on the <a "
-"href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
-msgstr ""
-"Директоријум заједнице је такође пројекат заједнице и ви сте добродошли да "
-"се укључите и да нам помогнете да га направимо још бољим или да га спојимо у"
-" друге алатке заједнице. Ступите у контакт са нама на <a "
-"href=\"%(google_groups_url)s\"> Мозилијан форуму </a> да бисте сазнали како."
-
-#: mozillians/templates/phonebook/apikeys.html:4
-msgid "API"
-msgstr "API"
-
-#: mozillians/templates/phonebook/apikeys.html:11
-msgid "Mozillians API"
-msgstr "API Мозилијана"
-
-#: mozillians/templates/phonebook/apikeys.html:15
-msgid "API Version 1"
-msgstr "API верзија 1"
-
-#: mozillians/templates/phonebook/apikeys.html:19
-msgid ""
-"API v1 is phasing out, please consider using API v2. For any support "
-"requests for API v1 file a bug <a "
-"href=\"%(bugzilla_request_url)s\">here</a>."
-msgstr ""
-"API в1 истиче, размислите о коришћењу API в2. За било какву подршку за API "
-"в1 пријавите фрешку <a href=\"%(bugzilla_request_url)s\">овде</a>."
-
-#: mozillians/templates/phonebook/apikeys.html:28
-msgid "Your approved apps:"
-msgstr "Ваше одобрене апликације:"
-
-#: mozillians/templates/phonebook/apikeys.html:39
-#: mozillians/templates/phonebook/apikeys.html:75
-msgid "Key"
-msgstr "Кључ"
-
-#: mozillians/templates/phonebook/apikeys.html:44
-#: mozillians/templates/phonebook/apikeys.html:86
-msgid "You have no active apps."
-msgstr "Немате активне апликације."
-
-#: mozillians/templates/phonebook/apikeys.html:48
-msgid "API Version 2"
-msgstr "API верзија 2"
-
-#: mozillians/templates/phonebook/apikeys.html:52
-msgid ""
-"Take a look at the list of the API methods we've made available in our <a "
-"href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new "
-"API key by submitting a request below. If you need a key with elevated "
-"permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a "
-"bug</a>."
-msgstr ""
-"Погледајте листу API метода које смо омогућили у нашој <a "
-"href=\"%(api_schema_url)s\">документацији</a>. Можете одмах добити нови API "
-"кључ шаљећи захтев испод. Ако Вам треба кључ са већим дозволама мораћете да "
-"<a href=\"%(bugzilla_request_url)s\">пријавите грешку</a>."
-
-#: mozillians/templates/phonebook/apikeys.html:64
-msgid "Your apps:"
-msgstr "Ваше апликације:"
-
-#: mozillians/templates/phonebook/apikeys.html:78
-msgid "Level"
-msgstr "Ниво"
-
-#: mozillians/templates/phonebook/apikeys.html:82
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:31
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:207
-msgid "Delete"
-msgstr "Обриши"
-
-#: mozillians/templates/phonebook/apikeys.html:109
-msgid "Register App"
-msgstr "Региструј апликацију"
-
-#: mozillians/templates/phonebook/betasearch.html:3
-#: mozillians/templates/phonebook/search.html:3
-msgid "Search Results"
-msgstr "Резултати претраге"
-
-#: mozillians/templates/phonebook/betasearch.html:17
-#: mozillians/templates/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr "Тренутно претражујете јавне профиле."
-
-#: mozillians/templates/phonebook/betasearch.html:19
-#: mozillians/templates/phonebook/search.html:19
-msgid ""
-"View more results by <a href=\"#\" class=\"browserid-login\" "
-"title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
-msgstr ""
-"Погледајте више резултата тако што ћете се <a href=\"#\" class=\"browserid-"
-"login\" title=\"%(title)s\" data-next=\"%(next)s\"> пријавити</a>."
-
-#: mozillians/templates/phonebook/betasearch.html:19
-#: mozillians/templates/phonebook/search.html:19
-msgid "Sign In"
-msgstr "Пријави се"
-
-#: mozillians/templates/phonebook/betasearch.html:25
-#: mozillians/templates/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr "Погледајте више резултата када будете јамчени."
-
-#: mozillians/templates/phonebook/betasearch.html:29
-msgid "Beta Search"
-msgstr "Претрага"
-
-#: mozillians/templates/phonebook/betasearch.html:37
-#: mozillians/templates/phonebook/search.html:29
-#: mozillians/templates/phonebook/search.html:37
-msgid "Search"
-msgstr "Претрага"
-
-#: mozillians/templates/phonebook/betasearch.html:41
-#: mozillians/templates/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr "Напредне опције"
-
-#: mozillians/templates/phonebook/betasearch.html:53
-#: mozillians/templates/phonebook/search.html:52
-msgid ""
-"<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian "
-"using their name, email, or nickname. </p>"
-msgstr ""
-"<h2>Пронађите Мозилијана</h2> <p> Можете да потражите другог Мозилијана "
-"користећи његово име, е-пошту или надимак. </p>"
-
-#: mozillians/templates/phonebook/betasearch.html:67
-#: mozillians/templates/phonebook/search.html:66
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] "%(count)s одговарајућа група"
-msgstr[1] "%(count)s одговарајуће групе"
-msgstr[2] "%(count)s одговарајућих група"
-
-#: mozillians/templates/phonebook/betasearch.html:91
-#: mozillians/templates/phonebook/search.html:90
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] "%(count)s одговарајући Мозилијан"
-msgstr[1] "%(count)s одговарајућа Мозилијана"
-msgstr[2] "%(count)s одговарајућих Мозилијана"
-
-#: mozillians/templates/phonebook/betasearch.html:116
-#: mozillians/templates/phonebook/search.html:115
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr "Жао нам је, не можемо пронаћи групу или особу повезану са \"%(query)s\"."
-
-#: mozillians/templates/phonebook/betasearch.html:122
-#: mozillians/templates/phonebook/search.html:121
-msgid ""
-"Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this "
-"person</a> to create a profile."
-msgstr ""
-"Можда још увек нису Мозилијани? <a href=\"%(invite)s\">Позовите ову "
-"особу</a> да направи профил."
-
-#: mozillians/templates/phonebook/betasearch.html:128
-#: mozillians/templates/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
-msgstr ""
-"Потребна вам је помоћ? Контактирајте управника у некој функционалној "
-"области!"
-
-#: mozillians/templates/phonebook/confirm_delete.html:3
-#: mozillians/templates/phonebook/confirm_delete.html:7
-msgid "Confirm Profile Deletion"
-msgstr "Потврдите брисање профила"
-
-#: mozillians/templates/phonebook/confirm_delete.html:12
-msgid "Are You Sure You Want to Leave Mozillians?"
-msgstr "Да ли сте сигурни да желите да напустите Мозилијане?"
-
-#: mozillians/templates/phonebook/confirm_delete.html:14
-msgid ""
-"Deleting your profile is immediate and irreversible. Any information in your"
-" profile will be permanently lost. If you want to join Mozillians again, you"
-" will need to get vouched again."
-msgstr ""
-"Брисање вашег профила је тренутно и неповратно. Било која информација на "
-"профилу биће трајно обрисана. Ако желите поново да се придружите "
-"Мозилијанима, мораћете поново тражити јамство."
-
-#: mozillians/templates/phonebook/confirm_delete.html:23
-msgid "No: don't delete my profile"
-msgstr "Не: немој обрисати мој профил"
-
-#: mozillians/templates/phonebook/confirm_delete.html:26
-msgid "I'm sure: delete my profile"
-msgstr "Сигуран сам: обриши мој профил"
-
-#: mozillians/templates/phonebook/edit_profile.html:23
-msgid "You are just one step away from creating your profile."
-msgstr "Један корак вас дели од прављења профила."
-
-#: mozillians/templates/phonebook/edit_profile.html:36
-msgid "Profile"
-msgstr "Профил"
-
-#: mozillians/templates/phonebook/edit_profile.html:37
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:5
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:56
-msgid "Location"
-msgstr "Локација"
-
-#: mozillians/templates/phonebook/edit_profile.html:38
-msgid "You &amp; Mozilla"
-msgstr "Ви и Mozilla"
-
-#: mozillians/templates/phonebook/edit_profile.html:40
-#: mozillians/templates/phonebook/profile.html:249
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:5
-msgid "External Accounts"
-msgstr "Спољни налози"
-
-#: mozillians/templates/phonebook/edit_profile.html:41
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:44
-msgid "Developer"
-msgstr "Програмер"
-
-#: mozillians/templates/phonebook/home.html:3
-msgid "Mozilla Community Directory"
-msgstr "Адресар Mozilla заједнице"
-
-#: mozillians/templates/phonebook/home.html:23
-msgid "Create your account now to connect with fellow Mozillians."
-msgstr "Направите Ваш налог и повежите се са Мозилијанима."
-
-#: mozillians/templates/phonebook/home.html:25
-msgid "Get started"
-msgstr "Започните"
-
-#: mozillians/templates/phonebook/home.html:48
-msgid ""
-"It’s an exciting time for Mozilla and the Web. Another two billion people "
-"will join the Internet community in the coming years."
-msgstr ""
-"Узбудљиво је време за Mozilla-у и интернет. Још два билиона људи ће се "
-"придружити интернет заједници у наредним годинама."
-
-#: mozillians/templates/phonebook/home.html:61
-msgid "Welcome to the Mozilla community directory"
-msgstr "Добро дошли у адресар Mozilla заједнице"
-
-#: mozillians/templates/phonebook/home.html:63
-msgid ""
-"This site lists all core individuals and groups that participate in the "
-"Mozilla Project. We call ourselves Mozillians and this is where we connect "
-"and share with one another."
-msgstr ""
-"Овај сајт наводи све битне особе и групе које учествују на Mozilla пројекту."
-" Ми себе називамо Мозилијанима и овде се повезујемо и делимо једни са "
-"другима."
-
-#: mozillians/templates/phonebook/home.html:84
-msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
-msgstr ""
-"Страствене Мозилијане можете упознати ради посла, игре или отићи са њима на "
-"кафу."
-
-#: mozillians/templates/phonebook/home.html:99
-msgid "How do I get involved?"
-msgstr "Како да се прикључим?"
-
-#: mozillians/templates/phonebook/home.html:101
-msgid ""
-"Mozilla exists to promote openness, innovation and opportunity on the "
-"Internet. The success of our mission depends on participation from people "
-"like you. Find out how you can get involved to help make a difference in the"
-" lives of people everywhere."
-msgstr ""
-"Mozilla постоји како би промовисала отвореност, иновације и прилике на "
-"интернету. Успех наше мисије зависи од учешћа људи као што сте Ви. Сазнајте "
-"како можете да се прикључите и да помогнете другим људима свуда око нас."
-
-#: mozillians/templates/phonebook/home.html:109
-msgid "<a href=\"%(contribute_url)s\">Get involved</a>"
-msgstr "<a href=\"%(contribute_url)s\">Прикључи се</a>"
-
-#: mozillians/templates/phonebook/home.html:120
-#: mozillians/templates/phonebook/home.html:195
-msgid "Hello!"
-msgstr "Здраво!"
-
-#: mozillians/templates/phonebook/home.html:124
-#: mozillians/templates/phonebook/home.html:199
-msgid "Examples:"
-msgstr "Примери:"
-
-#: mozillians/templates/phonebook/home.html:125
-#: mozillians/templates/phonebook/home.html:200
-msgid ""
-"<a href=\"%(search_url)s?q=python\">python</a>, <a "
-"href=\"%(search_url)s?q=berlin\">Berlin</a>, <a "
-"href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
-msgstr ""
-"<a href=\"%(search_url)s?q=python\">python</a>, <a "
-"href=\"%(search_url)s?q=berlin\">Берлин</a>, <a "
-"href=\"%(search_url)s?q=mbrandt\">mbrandt</a>"
-
-#: mozillians/templates/phonebook/home.html:158
-#: mozillians/templates/phonebook/profile.html:195
-msgid "(membership requested)"
-msgstr "(чланство захтевано)"
-
-#: mozillians/templates/phonebook/home.html:166
-#: mozillians/templates/phonebook/profile.html:224
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:187
-msgid "Languages"
-msgstr "Језици"
-
-#: mozillians/templates/phonebook/home.html:231
-msgid "Functional areas"
-msgstr "Функционалне области"
-
-#: mozillians/templates/phonebook/home.html:232
-msgid ""
-"<p> View Mozillians, Stewards and information for any functional area. Find "
-"out who works on what and how you can help out. </p>"
-msgstr ""
-"<p> Погледајте Мозилијане, надзорнике и информације за било коју "
-"функционалну област. Сазнајте ко на чему ради и како им можете помоћи. </p>"
-
-#: mozillians/templates/phonebook/home.html:240
-msgid "Browse functional areas"
-msgstr "Погледај функционалне области"
-
-#: mozillians/templates/phonebook/home.html:242
-msgid ""
-"<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a>"
-" and you can browse functional areas!</p>"
-msgstr ""
-"<p>Постаните <a "
-"href='https://wiki.mozilla.org/Mozillians/Vouching'>загарантовани</a> и "
-"можете прегледати функционалне области!</p>"
-
-#: mozillians/templates/phonebook/home.html:254
-msgid ""
-"<p> Find and join groups centered around interests, technologies, "
-"geographies and more. </p>"
-msgstr ""
-"<p> Пронађите и придружите се групама центрираним око интереса, технологија,"
-" географије и дригих ствари. </p>"
-
-#: mozillians/templates/phonebook/home.html:261
-msgid "Browse groups"
-msgstr "Прегледајте групе"
-
-#: mozillians/templates/phonebook/home.html:263
-msgid ""
-"<p>Become <a href='https://wiki.mozilla.org/Mozillians/Vouching'>vouched</a>"
-" and you can browse groups!</p>"
-msgstr ""
-"<p>Постаните <a "
-"href='https://wiki.mozilla.org/Mozillians/Vouching'>загарантовани</a> и "
-"можете прегледати групе!</p>"
-
-#: mozillians/templates/phonebook/invite.html:3
-#: mozillians/templates/phonebook/invite.html:8
-msgid "Invite a Mozillian"
-msgstr "О сајту Мозилијани"
-
-#: mozillians/templates/phonebook/invite.html:12
-msgid ""
-"If you want to invite a new Mozillian please fill out the following form. "
-"<strong>Note</strong>: Inviting a new user is like vouching. <a "
-"href=\"%(vouching_url)s\">Read more about vouching.</a>"
-msgstr ""
-"Ако желите да позовете новог мозилијана, молимо Вас попуните форму. "
-"<strong>Напомена</strong>: Позивање новог корисника је као јамчење. <a "
-"href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
-
-#: mozillians/templates/phonebook/invite.html:18
-msgid ""
-"We recently changed the criteria for being able to invite and vouch other "
-"Mozillians. If you want to use this page, you need to receive "
-"%(vouch_threshold)s vouches. Ask someone to visit your profile and vouch for"
-" you. Then come back here once you have %(vouch_threshold)s vouches and you "
-"will be able to invite people to the directory. <a "
-"href=\"%(vouching_url)s\">Learn more about vouching.</a>"
-msgstr ""
-"Недавно смо променили критеријуме за могућност позивања и јамчења других "
-"мозилијана. Ако желите да користите ову страницу, морате да добијете "
-"%(vouch_threshold)s јамчења. Питајте некога да посети профил и јамчи за вас."
-" Онда се вратите овамо када имате %(vouch_threshold)s јамчења и онда ћете "
-"моћи да позивате друге људе у директоријум. <a "
-"href=\"%(vouching_url)s\">Сазнајте више о јамчењу.</a>"
-
-#: mozillians/templates/phonebook/invite.html:51
-msgid "Your Invites"
-msgstr "Ваши позиви"
-
-#: mozillians/templates/phonebook/invite.html:62
-msgid "Sent:"
-msgstr "Послато:"
-
-#: mozillians/templates/phonebook/invite.html:66
-msgid "Redeemed:"
-msgstr "Откупљени:"
-
-#: mozillians/templates/phonebook/invite.html:69
-msgid "Redeemer:"
-msgstr "Искупитељ:"
-
-#: mozillians/templates/phonebook/invited.html:3
-msgid "Invitation Sent"
-msgstr "Позивница је послата"
-
-#: mozillians/templates/phonebook/invited.html:8
-msgid "Invitation Sent!"
-msgstr "Позивница је послата!"
-
-#: mozillians/templates/phonebook/invited.html:10
-msgid ""
-"%(recipient)s has been invited to Mozillians. They'll receive an email with "
-"instructions on how to join. You can <a href=\"%(invite_url)s\"> invite "
-"another Mozillian</a> if you like."
-msgstr ""
-"У Мозилијане сте позвали: %(recipient)s. Примиће е-пошту са упуствима како "
-"да се придруже. Можете <a href=\"%(invite_url)s\"> позвати још "
-"Мозилијана</a> ако желите."
-
-#: mozillians/templates/phonebook/location_list.html:16
-msgid "Mozillians in"
-msgstr "Mozillians у"
-
-#: mozillians/templates/phonebook/location_list.html:39
-msgid "Sorry we cannot find any mozillians in"
-msgstr "Жао нам је, не можемо наћи ниједног Мозилијана у"
-
-#: mozillians/templates/phonebook/profile.html:14
-msgid "Your Profile"
-msgstr "Ваш профил"
-
-#: mozillians/templates/phonebook/profile.html:16
-msgid "Mozillian Profile"
-msgstr "Профил Мозилијана"
-
-#: mozillians/templates/phonebook/profile.html:18
-msgid "Pending Profile"
-msgstr "Профил на чекању"
-
-#: mozillians/templates/phonebook/profile.html:24
-msgid ""
-"<p> Your profile is waiting to be vouched. Once you are vouched, you will be"
-" able to view the profiles of all Mozillians, join groups and access "
-"additional content on other sites as a Mozillian. <a "
-"href=\"%(vouching_url)s\">Learn more about vouching</a>. </p> <p> Send the "
-"link below to someone who is familiar with your contributions and ask them "
-"to vouch for you: <br/> <em class=\"underline\" title=\"Your profile "
-"URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community,"
-" <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> "
-"<p>The chances of being vouched increase as you finish tasks in our "
-"community.</p>"
-msgstr ""
-"<p> Ваш профил чека јамство. Када је неко јамчио за вас, моћи ћете да видите"
-" профиле свих мозилијана, да се придружите групи и приступите додатном "
-"садржају на другим сајтовима као мозилијан. <a "
-"href=\"%(vouching_url)s\">Сазнајте више о јамчењу</a>. </p> <p> Пошаљите "
-"везу испод некоме ко је упознат са вашим доприносима и затражите да јамче за"
-"  вас: <br/> <em class=\"underline\" title=\"Your profile "
-"URL\">%(profile_url)s</em> </p> <p> Ако сте нови у Mozilla заједници, <a "
-"class=\"button\" href=\"%(contribute_url)s\">прикључите се</a> </p> <p>Шансе"
-" за јамство се повећавају када завршите задатке у вашој заједници.</p>"
-
-#: mozillians/templates/phonebook/profile.html:50
-msgid ""
-"This profile is waiting for approval. If you would like to vouch for them, "
-"use the form at the bottom of the page."
-msgstr ""
-"Профил чека на одобрење. Ако желите јамчити за њих, користите форму на дну "
-"странице."
-
-#: mozillians/templates/phonebook/profile.html:61
-msgid ""
-"Your profile is not public. If you <a href=\"%(edit_url)s\">edit your "
-"profile</a> to have at least one public field, your public profile will be "
-"viewable."
-msgstr ""
-"Ваш профил није јаван. Ако <a href=\"%(edit_url)s\">измените Ваш профил</a> "
-"да има барем једно јавно поље, јавни профил ће бити видљив."
-
-#: mozillians/templates/phonebook/profile.html:83
-msgid "Mozillian for %(mozillian_years)s year"
-msgid_plural "Mozillian for %(mozillian_years)s years"
-msgstr[0] "Мозилијан %(mozillian_years)s годину"
-msgstr[1] "Мозилијан %(mozillian_years)s године"
-msgstr[2] "Мозилијан %(mozillian_years)s година"
-
-#: mozillians/templates/phonebook/profile.html:127
-msgid "T-Shirt Size:"
-msgstr "Величина мајице:"
-
-#: mozillians/templates/phonebook/profile.html:141
-msgid "View as:"
-msgstr "Погледај као:"
-
-#: mozillians/templates/phonebook/profile.html:145
-msgid "Myself"
-msgstr "Ја"
-
-#: mozillians/templates/phonebook/profile.html:149
-msgid "Mozillian"
-msgstr "Мозилијан"
-
-#: mozillians/templates/phonebook/profile.html:153
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:47
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:33
-#: mozillians/users/managers.py:12
-msgid "Public"
-msgstr "Јавно"
-
-#: mozillians/templates/phonebook/profile.html:171
-#: mozillians/users/models.py:153
-msgid "Bio"
-msgstr "Биографија"
-
-#: mozillians/templates/phonebook/profile.html:179
-msgid "My contribution story"
-msgstr "Моја прича о доприносу"
-
-#: mozillians/templates/phonebook/profile.html:234
-msgid "Websites"
-msgstr "Веб сајтови"
-
-#: mozillians/templates/phonebook/profile.html:267
-msgid "Alternate email addresses"
-msgstr "Алтернативне адресе е-поште"
-
-#: mozillians/templates/phonebook/profile.html:284
-msgid "Vouched By"
-msgstr "Јамчен од стране"
-
-#: mozillians/templates/phonebook/profile.html:297
-msgid "Unknown Voucher"
-msgstr "Непознат јемац"
-
-#: mozillians/templates/phonebook/profile.html:300
-msgid "Legacy vouch."
-msgstr "Наслеђено јамство."
-
-#: mozillians/templates/phonebook/profile.html:311
-msgid "Vouchees"
-msgstr "Јамчени"
-
-#: mozillians/templates/phonebook/profile.html:337
-msgid "%(hours)s hours ahead of your timezone."
-msgstr "%(hours)s сати испред временске зоне."
-
-#: mozillians/templates/phonebook/profile.html:340
-msgid "%(hours)s hours behind your timezone."
-msgstr "%(hours)s сати иза временске зоне."
-
-#: mozillians/templates/phonebook/profile.html:343
-msgid "Same time zone as yours."
-msgstr "У истој временској зони као и ви."
-
-#: mozillians/templates/phonebook/includes/photo_form.html:6
-msgid "Profile photo"
-msgstr "Слика профила"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:44
-msgid "Add account"
-msgstr "Додај налог"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:48
-msgid "Update External Accounts"
-msgstr "Ажурирај спољне налоге"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:53
-msgid "IRC"
-msgstr "IRC"
-
-#: mozillians/templates/phonebook/includes/profile_edit_accounts.html:67
-msgid "Update IRC information"
-msgstr "Ажурирај IRC информације"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:5
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:16
-msgid "Basic Information"
-msgstr "Основне информације"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:70
-#: mozillians/templates/phonebook/includes/profile_vouch.html:23
-msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
-msgstr ""
-"Користите <a href=\"%(url)s\">Markdown</a> за задебљана и коса слова, листе "
-"и везе."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:83
-msgid "Update Information"
-msgstr "Ажурирај информације"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:91
-msgid "Emails"
-msgstr "Е-поште"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:94
-msgid "Primary e-mail address"
-msgstr "Примарна адреса е-поште"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:106
-msgid "Secondary e-mail addresses"
-msgstr "Алтернативне адресе е-поште"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:136
-msgid "Add e-mail using Persona"
-msgstr "Додајте е-пошту користећи Persona-у"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:142
-msgid "Update Emails"
-msgstr "Ажурирај е-поште"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:158
-msgid ""
-"A skill is the learned capacity to carry out pre-determined results often "
-"with the minimum outlay of time, energy, or both."
-msgstr ""
-"Вештина је научена способност да се изврше предодређени резултати, често са "
-"минималном потрошњом времена, енергије, или обоје."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:179
-msgid "Update Skills"
-msgstr "Ажурирај вештине"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:193
-msgid ""
-"The Mozilla Project spans over many countries and languages. Share the "
-"languages you speak to be found easily by other Mozillians."
-msgstr ""
-"Mozilla пројекат обухвата много земаља и језика. Поделите језик којим "
-"говорите како би Вас други Мозилијани лакше нашли."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:217
-msgid "Add language"
-msgstr "Додај језик"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:226
-msgid "Update Languages"
-msgstr "Ажурирај језике"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:233
-msgid "Delete account"
-msgstr "Обриши налог"
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:238
-msgid ""
-"I acknowledge that deleting my account will make it tougher for me to show "
-"off my contributions and easily be found by other members of the Mozilla "
-"community."
-msgstr ""
-"Прихватам да ће брисање мог налога отежати показивање мојих доприноса као и "
-"лако проналажење од стране других чланова заједнице Mozilla."
-
-#: mozillians/templates/phonebook/includes/profile_edit_basic.html:248
-msgid "Delete Profile"
-msgstr "Обриши профил"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:5
-msgid "API privacy"
-msgstr "API за приватност"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:16
-msgid ""
-"The Phonebook offers an API (currently v1) to help authorize contributors "
-"and share profile data to other tools and sites like <a id=\"services-"
-"bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a id"
-"=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
-msgstr ""
-"Именик нуди API (тренутно в1) који помаже овлашћење сарадника и дељење "
-"података профила другим алатима и сајтовима попут <a id=\"services-bugzilla-"
-"url\" href=\"%(bugzilla_url)s\">Bugzilla</a> и <a id=\"services-mozilla-"
-"reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:22
-msgid "Privacy"
-msgstr "Приватност"
-
-#: mozillians/templates/phonebook/includes/profile_edit_developer.html:39
-msgid "Update Privacy Settings"
-msgstr "Ажурирај поставке приватности"
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:16
-msgid ""
-"Groups are a community of Mozillians with some relation to each other. This "
-"can be an interest, team, project, product or sub-community."
-msgstr ""
-"Групе су заједница Мозилијана са неким међусобним односима. Ово може бити "
-"интерес, тим, пројекат, производ или под-заједница."
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:24
-msgid ""
-"To join a group, <a href=\"%(browse)s\">find the group's page</a>, then "
-"click the Join Group button."
-msgstr ""
-"Да бисте се придружили групи, <a href=\"%(browse)s\">нађите страницу "
-"групе</a>, и затим кликните на дугме Придружи се групи."
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:28
-msgid ""
-"To leave a group, click its name below to go to its page, then click the "
-"Leave Group button there."
-msgstr ""
-"Да висте напустили групу, кликните испод на њен назив да бисте посетили њену"
-" страну, и затим кликните на дугме Напусти групу."
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:35
-msgid "After you are vouched, you will be able to join groups."
-msgstr "Након што будете јамчени, моћићете се придружити групама."
-
-#: mozillians/templates/phonebook/includes/profile_edit_groups.html:51
-msgid "Update Groups"
-msgstr "Ажурирај групе"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:28
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:74
-msgid "You have denied Location services."
-msgstr "Ви сте одбили сервисе за локацију."
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:52
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:98
-msgid "Country"
-msgstr "Држава"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:75
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:121
-msgid "Region"
-msgstr "Регион"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:98
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:144
-msgid "City"
-msgstr "Град"
-
-#: mozillians/templates/phonebook/includes/profile_edit_location.html:120
-msgid "Update Location"
-msgstr "Ажурирај локацију"
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:176
-msgid "This field is required."
-msgstr "Потребно је попунити ово поље."
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:183
-msgid ""
-"I'm okay with you handling this info as you explain in <a "
-"href=\"%(privacy_url)s\">Mozilla's privacy policy</a>."
-msgstr ""
-"Не смета ми руковање ове информације као што сте објаснили у <a "
-"href=\"%(privacy_url)s\">Mozilla-иној полиси приватности</a>."
-
-#: mozillians/templates/phonebook/includes/profile_edit_registration.html:194
-msgid "Create Profile"
-msgstr "Направи профил"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:5
-msgid "Your Mozilla Contributions"
-msgstr "Ваши Mozilla доприноси"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:41
-msgid "Update Contributions"
-msgstr "Ажурирај доприносе"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:48
-msgid "T-Shirt Size"
-msgstr "Величина мајице"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:54
-msgid ""
-"Like t-shirts? Add your size so we can give you a shirt at events or for "
-"other special occasions."
-msgstr ""
-"Свиђајувам се мајице? Додајте величину како бисмо могли да је поклонимо "
-"током неког догађаја или других специјалних прилика."
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:67
-msgid "Fitted"
-msgstr "Уз тело"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:68
-msgid ""
-"A fitted-cut tshirt has a curved side hem which comes in at the waist and "
-"goes out at the upper and lower ends. Also known as women's."
-msgstr ""
-"Мајица уз тело има заобљену страну до струка и проширује се према горњим и "
-"доњим крајевима. Познатa je још као \"женска\"."
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:80
-msgid "Straight-cut"
-msgstr "Стандардни облик"
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:81
-msgid ""
-"A straight-cut shirt has wide shoulders and a body which is almost square. "
-"Often known as men's or unisex."
-msgstr ""
-"Мајицa стандардног облика има широка рамена и тело које је скоро квадратног "
-"облика. Познатa je још као \"мушкa\" или \"унисекс\"."
-
-#: mozillians/templates/phonebook/includes/profile_edit_you.html:98
-msgid "Update T-shirt size"
-msgstr "Ажурирај величину мајице"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:7
-msgid ""
-"Does this profile belong to a Mozillian? Let us know how %(full_name)s has "
-"contributed to the project."
-msgstr ""
-"Да ли овај профил припада мозилијану? Реците нам како је %(full_name)s "
-"допринео пројекту."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:14
-msgid ""
-"Do you know this Mozillian? Let us know how %(full_name)s has contributed to"
-" the project."
-msgstr ""
-"Да ли знате овог мозилијана? Реците нам како је %(full_name)s допринео "
-"пројекту."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:26
-msgid "Characters remaining:"
-msgstr "Карактера преостало:"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:31
-msgid "Send invite"
-msgstr "Пошаљи позивницу"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:33
-msgid "Vouch for %(name)s"
-msgstr "Јамчи за %(name)s"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:40
-msgid ""
-"Only vouch for users who have made significant contributions and are at "
-"least 13 years old."
-msgstr ""
-"Јамчите само за кориснике који су имали значајне доприносе и имају барем 13 "
-"година."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:42
-msgid "Once vouched, they will be able to:"
-msgstr "Након што буду јамчени, моћи ће:"
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:44
-msgid "View all profiles and join groups."
-msgstr "Погледа све профиле и придружи се групама."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:45
-msgid "Access special video content on Air Mozilla."
-msgstr "Приступити специјалном видео садржају на Air Mozilla."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:46
-msgid "Join the Mozilla Exchange Yammer network."
-msgstr "Придружити се Mozilla Exchange Yammer мрежи."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:47
-msgid "Use other Mozilla apps as a vouched user."
-msgstr "Користити друге Mozilla апликације као јамчен корисник."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:50
-msgid "Vouches cannot be edited or retracted."
-msgstr "Јамчења се не могу уредити или повући."
-
-#: mozillians/templates/phonebook/includes/profile_vouch.html:52
-msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
-msgstr "<a href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
 
 #: mozillians/users/models.py:142
 msgid "Full Name"
@@ -1888,6 +1682,14 @@ msgstr "Само Mozilla-ина власништва"
 #: mozillians/users/models.py:174
 msgid "Allow Mozilla sites to access my profile data?"
 msgstr "Дозволити Mozilla сајтовима да приступе Вашим профилним подацима?"
+
+#: mozillians/users/models.py:175
+msgid "Yes"
+msgstr "Да"
+
+#: mozillians/users/models.py:175
+msgid "No"
+msgstr "Не"
 
 #: mozillians/users/models.py:182
 msgid "T-Shirt"
@@ -1950,12 +1752,8 @@ msgid "Link to your contribution story"
 msgstr "Веза ка вашој причи о доприносу"
 
 #: mozillians/users/models.py:196
-msgid ""
-"If you have created something public that tells the story of how you came to"
-" be a Mozillian, specify that link here."
-msgstr ""
-"Ако сте направили нешто јавно што говори о томе како сте постали Мозилијан, "
-"наведите ту везу овде."
+msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
+msgstr "Ако сте направили нешто јавно што говори о томе како сте постали Мозилијан, наведите ту везу овде."
 
 #: mozillians/users/models.py:521
 msgid "You have been vouched on Mozillians.org"
@@ -1981,15 +1779,36 @@ msgstr "Већ имате налог са овим именом и типом."
 msgid "This language has already been selected."
 msgstr "Овај језик је већ одабран."
 
+#~ msgid "By request"
+#~ msgstr "По захтеву"
+
+#~ msgid "Add a group"
+#~ msgstr "Додај групу"
+
+#~ msgid "Edit functional area"
+#~ msgstr "Измени функционалну област"
+
+#~ msgid "Edit group"
+#~ msgstr "Измени групу"
+
+#~ msgid "Use this form to create a group on Mozillians.org. Before creating a group, try searching for it. Someone else might already have created it."
+#~ msgstr "Употребите ову форму да бисте направили групу на Mozillians.org. Пре него што направите групу, покушајте да је претражите. Можда ју је неко други већ креирао."
+
+#~ msgid ""
+#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email "
+#~ "with requests to join."
+#~ msgstr ""
+#~ "Креирањем групе ћете постати њен куратор, имаћете приступ подешавањима групе и моћи ћете одлучити ко ће јој се придружи. Ако подесите групу тако да захтева одобрење чланства, добићете дневно е-"
+#~ "пошту са захтевима за улаз."
+
+#~ msgid "Submit changes"
+#~ msgstr "Достави измене"
+
 #~ msgid "A curator cannot be removed from a group."
 #~ msgstr "Куратор не може бити уклоњен из групе."
 
-#~ msgid ""
-#~ "Start typing to add a skill (example: Python, javascript, Graphic Design, "
-#~ "User Research)"
-#~ msgstr ""
-#~ "Почните куцати како бисте додали вештину (на пример: Python, javascript, "
-#~ "Graphic Design, User Research)"
+#~ msgid "Start typing to add a skill (example: Python, javascript, Graphic Design, User Research)"
+#~ msgstr "Почните куцати како бисте додали вештину (на пример: Python, javascript, Graphic Design, User Research)"
 
 #~ msgid "Mozilla"
 #~ msgstr "Mozilla"
@@ -2010,45 +1829,27 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Поставке е-поште"
 
 #~ msgid ""
-#~ "You can connect more than one Persona e-mail to your Mozillians profile. "
-#~ "Visibility to other Mozillians is optional, but you will be able to sign in "
-#~ "with any of them. Notifications from mozillians.org will only be sent to "
-#~ "your primary address."
+#~ "You can connect more than one Persona e-mail to your Mozillians profile. Visibility to other Mozillians is optional, but you will be able to sign in with any of them. Notifications from "
+#~ "mozillians.org will only be sent to your primary address."
 #~ msgstr ""
-#~ "Можете повезати више од једне Persona е-поште на Мозилијан профил. Видљивост"
-#~ " другим Мозилијанима је опционо, али ћете бити у могућности да се пријавите "
-#~ "са било које од њих. Обавештења од mozillians.org ће бити послата само на "
-#~ "примарну адресу е-поште."
+#~ "Можете повезати више од једне Persona е-поште на Мозилијан профил. Видљивост другим Мозилијанима је опционо, али ћете бити у могућности да се пријавите са било које од њих. Обавештења од "
+#~ "mozillians.org ће бити послата само на примарну адресу е-поште."
 
 #~ msgid "Create Your Profile"
 #~ msgstr "Направите свој профил"
 
-#~ msgid ""
-#~ "Modify your profile here and choose who can see your profile fields. You can"
-#~ " make parts of your profile publicly visible, but please be careful about "
-#~ "sharing your contact information."
-#~ msgstr ""
-#~ "Измените овде профил и изаберите ко може да види његове појединости. Можете "
-#~ "изабрати делове профила да буду јавни, али будите опрезни у дељењу контакт "
-#~ "информација."
+#~ msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
+#~ msgstr "Измените овде профил и изаберите ко може да види његове појединости. Можете изабрати делове профила да буду јавни, али будите опрезни у дељењу контакт информација."
 
-#~ msgid ""
-#~ "Our community directory is for Mozillians who are 13 and older. We take "
-#~ "safety issues very seriously, especially with minors. If you are under 13, "
-#~ "please don't create an account."
+#~ msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
 #~ msgstr ""
-#~ "Наш директоријум заједнице је намењен Мозилијанима који имају 13 или више "
-#~ "година. Питања безбедности схватамо веома озбиљно, поготово са младима. Ако "
-#~ "сте млађи од 13 година, не правите налог."
+#~ "Наш директоријум заједнице је намењен Мозилијанима који имају 13 или више година. Питања безбедности схватамо веома озбиљно, поготово са младима. Ако сте млађи од 13 година, не правите налог."
 
 #~ msgid "Make all of my profile fields visible to:"
 #~ msgstr "Омогући да сва поља мог профила да буду видљива:"
 
 #~ msgid "-- No Change --"
 #~ msgstr "-- Нема промена --"
-
-#~ msgid "Cancel"
-#~ msgstr "Откажи"
 
 #~ msgid "Edit E-mail Addresses"
 #~ msgstr "Измените адресу е-поште"
@@ -2059,12 +1860,8 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "Account status"
 #~ msgstr "Статус налога"
 
-#~ msgid ""
-#~ "Yes, you can view all profiles and access other Mozilla sites as a vouched "
-#~ "Mozillian."
-#~ msgstr ""
-#~ "Да, можете прегледати све профиле и приступити свим осталим Mozilla "
-#~ "сајтовима као јамчен мозилијан."
+#~ msgid "Yes, you can view all profiles and access other Mozilla sites as a vouched Mozillian."
+#~ msgstr "Да, можете прегледати све профиле и приступити свим осталим Mozilla сајтовима као јамчен мозилијан."
 
 #~ msgid "No, you can only access public Mozillian profiles."
 #~ msgstr "Не, можете само приступити јавним мозилијан профилима."
@@ -2073,18 +1870,10 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Да, можете јамчити за остале."
 
 #~ msgid "No, you need at least %(vouch_threshold)s vouches to vouch for others."
-#~ msgstr ""
-#~ "Не, потребно је барем %(vouch_threshold)s јамчења да бисте могли јамчити за "
-#~ "друге."
+#~ msgstr "Не, потребно је барем %(vouch_threshold)s јамчења да бисте могли јамчити за друге."
 
-#~ msgid ""
-#~ "You will begin to receive email communications from Mozilla once you are a "
-#~ "vouched Mozillian. You may unsubscribe at anytime by clicking the link at "
-#~ "the bottom of these emails."
-#~ msgstr ""
-#~ "Почећете да примате е-поште од Mozilla-е чим постанете јамчен Мозилијан. "
-#~ "Можете се било када одјавити од претплате тако што ћете кликнути на везу "
-#~ "која се налази на дну ових е-пошти."
+#~ msgid "You will begin to receive email communications from Mozilla once you are a vouched Mozillian. You may unsubscribe at anytime by clicking the link at the bottom of these emails."
+#~ msgstr "Почећете да примате е-поште од Mozilla-е чим постанете јамчен Мозилијан. Можете се било када одјавити од претплате тако што ћете кликнути на везу која се налази на дну ових е-пошти."
 
 #~ msgid "This is your Gravatar, change it at gravatar.com"
 #~ msgstr "Ово је Gravatar, промените га на gravatar.com"
@@ -2093,21 +1882,13 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Остали сајтови"
 
 #~ msgid ""
-#~ "Take a look at the list of the <a id=\"services-api-methods\" "
-#~ "href=\"%(api_schema_url)s\">API methods we've made available</a>. To use "
-#~ "this API, you'll need to get approval from the Privacy team. To get started,"
-#~ " <a id=\"services-bugzilla-request-url\" "
-#~ "href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions,"
-#~ " talk to us in our <a id=\"services-development-forum\" "
+#~ "Take a look at the list of the <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy "
+#~ "team. To get started, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a id=\"services-development-forum\" "
 #~ "href=\"%(dev_form_url)s\"> development forum</a>."
 #~ msgstr ""
-#~ "Погледајте листу <a id=\"services-api-methods\" "
-#~ "href=\"%(api_schema_url)s\">API метода које смо направили доступним</a>. Да "
-#~ "бисте користили овај API, потребно је да добијете одобрење од нашег тима за "
-#~ "приватност. Да бисте почели, <a id=\"services-bugzilla-request-url\" "
-#~ "href=\"%(bugzilla_request_url)s\">направите bug</a>. Ако имате било каква "
-#~ "питања, пишите нам на нашем <a id=\"services-development-forum\" "
-#~ "href=\"%(dev_form_url)s\"> форуму за програмере</a>."
+#~ "Погледајте листу <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API метода које смо направили доступним</a>. Да бисте користили овај API, потребно је да добијете одобрење од нашег "
+#~ "тима за приватност. Да бисте почели, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">направите bug</a>. Ако имате било каква питања, пишите нам на нашем <a id="
+#~ "\"services-development-forum\" href=\"%(dev_form_url)s\"> форуму за програмере</a>."
 
 #~ msgid "Change Your Email"
 #~ msgstr "Промените Вашу е-пошту"
@@ -2115,23 +1896,15 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "Verify Your Email"
 #~ msgstr "Потврдите Вашу е-пошту"
 
-#~ msgid ""
-#~ "To complete the email change, please use Persona to login with your "
-#~ "<em>%(email)s</em> email address."
-#~ msgstr ""
-#~ "Да завршите са променом е-поште, молимо Вас користите Persona да се "
-#~ "пријавите са Вашом <em>%(email)s</em> адресом е-поште."
+#~ msgid "To complete the email change, please use Persona to login with your <em>%(email)s</em> email address."
+#~ msgstr "Да завршите са променом е-поште, молимо Вас користите Persona да се пријавите са Вашом <em>%(email)s</em> адресом е-поште."
 
 #~ msgid ""
-#~ "<p> View Mozillians, Stewards and information for any functional area. Find "
-#~ "out who works on what and how you can help out. </p> <a "
-#~ "href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-arrow-"
-#~ "right\"></i></a>"
-#~ msgstr ""
-#~ "<p> Погледајте Мозилијане, управнике и информације за било коју функционалну"
-#~ " област. Сазнајте ко на чему ради и како можете помоћи. </p> <a "
-#~ "href=\"%(areas_url)s\">Прегледајте функционалне области <i class=\"icon-"
+#~ "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 #~ "arrow-right\"></i></a>"
+#~ msgstr ""
+#~ "<p> Погледајте Мозилијане, управнике и информације за било коју функционалну област. Сазнајте ко на чему ради и како можете помоћи. </p> <a href=\"%(areas_url)s\">Прегледајте функционалне "
+#~ "области <i class=\"icon-arrow-right\"></i></a>"
 
 #~ msgid "Province/State"
 #~ msgstr "Покрајина/Држава"
@@ -2145,40 +1918,21 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "You are automatically vouched!"
 #~ msgstr "Ви сте аутоматски зајамчени!"
 
-#~ msgid ""
-#~ "You aren't vouched! Send this link to a mozillian who can vouch for your "
-#~ "contributions: <em class=\"underline\" title=\"Your profile URL\"> "
-#~ "%(profile_url)s </em>"
-#~ msgstr ""
-#~ "Нисте јамчени! Пошаљите ову везу Мозилијану који може да гарантује за Ваше "
-#~ "доприносе: <em class=\"underline\" title=\"Интернет адреса Вашег профила\"> "
-#~ "%(profile_url)s </em>"
+#~ msgid "You aren't vouched! Send this link to a mozillian who can vouch for your contributions: <em class=\"underline\" title=\"Your profile URL\"> %(profile_url)s </em>"
+#~ msgstr "Нисте јамчени! Пошаљите ову везу Мозилијану који може да гарантује за Ваше доприносе: <em class=\"underline\" title=\"Интернет адреса Вашег профила\"> %(profile_url)s </em>"
 
-#~ msgid ""
-#~ "If you'd like to invite a Mozillian to create a profile, please enter their "
-#~ "email address here:"
-#~ msgstr ""
-#~ "Ако желите да позовете Мозилијана да направи профил, молимо Вас укуцајте "
-#~ "овде његову адресу е-поште:"
+#~ msgid "If you'd like to invite a Mozillian to create a profile, please enter their email address here:"
+#~ msgstr "Ако желите да позовете Мозилијана да направи профил, молимо Вас укуцајте овде његову адресу е-поште:"
 
-#~ msgid ""
-#~ "<strong>Note:</strong> Your name and email will be sent to whomever you "
-#~ "invite."
-#~ msgstr ""
-#~ "<strong>Напомена:></strong> Ваше име и е-пошта ће бити послати свакоме кога "
-#~ "позовете."
+#~ msgid "<strong>Note:</strong> Your name and email will be sent to whomever you invite."
+#~ msgstr "<strong>Напомена:></strong> Ваше име и е-пошта ће бити послати свакоме кога позовете."
 
 #~ msgid "<button type=\"submit\"> Vouch for %(name)s </button>"
 #~ msgstr "<button type=\"submit\"> Јамчим за %(name)s </button>"
 
-#~ msgid ""
-#~ "<p>This profile is waiting for approval.</p> <p>Because our community "
-#~ "directory is for Mozillians who are 13 and older, please don't vouch for "
-#~ "anyone under 13.</p>"
+#~ msgid "<p>This profile is waiting for approval.</p> <p>Because our community directory is for Mozillians who are 13 and older, please don't vouch for anyone under 13.</p>"
 #~ msgstr ""
-#~ "<p>Овај профил чека одобрење.</p> <p>Због тога што је адресар наше заједнице"
-#~ " намењен Мозилијанима који имају 13 или више година, молимо Вас немојте "
-#~ "јамчити за некога ко има мање од 13 година.</p>"
+#~ "<p>Овај профил чека одобрење.</p> <p>Због тога што је адресар наше заједнице намењен Мозилијанима који имају 13 или више година, молимо Вас немојте јамчити за некога ко има мање од 13 година.</p>"
 
 #~ msgid "Email already exists in the database."
 #~ msgstr "Е-пошта већ постоји у бази података."
@@ -2186,21 +1940,14 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "IRC Channels"
 #~ msgstr "IRC канали"
 
-#~ msgid ""
-#~ "You've now been vouched on Mozillians.org. You'll now be able to search, "
-#~ "vouch and invite other Mozillians onto the site."
-#~ msgstr ""
-#~ "Сада сте јамчени на Mozillians.org. Сада ћете моћи да претражите, јамчите и "
-#~ "позовете друге Мозилијане на сајт."
+#~ msgid "You've now been vouched on Mozillians.org. You'll now be able to search, vouch and invite other Mozillians onto the site."
+#~ msgstr "Сада сте јамчени на Mozillians.org. Сада ћете моћи да претражите, јамчите и позовете друге Мозилијане на сајт."
 
 #~ msgid "members"
 #~ msgstr "чланови"
 
-#~ msgid ""
-#~ "Start typing to add a language you speak (example: English, French, German)"
-#~ msgstr ""
-#~ "Почните куцати како бисте додали језик који говорите (нпр.: енглески, "
-#~ "француски, немачки)"
+#~ msgid "Start typing to add a language you speak (example: English, French, German)"
+#~ msgstr "Почните куцати како бисте додали језик који говорите (нпр.: енглески, француски, немачки)"
 
 #~ msgid "Languages can only contain alphanumeric characters, dashes, spaces."
 #~ msgstr "Језици могу садржати само алфанумеричке знакове, цртице, размаке."
@@ -2211,28 +1958,17 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "Curated Group"
 #~ msgstr "Уређена група"
 
-#~ msgid ""
-#~ "The max PK of pending membership requests the last time we sent the curator "
-#~ "a reminder"
-#~ msgstr ""
-#~ "Максималани PK захтеви чланства који су у току од последњег пута када смо "
-#~ "послали куратору подсетник"
+#~ msgid "The max PK of pending membership requests the last time we sent the curator a reminder"
+#~ msgstr "Максималани PK захтеви чланства који су у току од последњег пута када смо послали куратору подсетник"
+
+#~ msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
+#~ msgstr "Почните куцати како бисте додали групу (нпр.: Маркетинг, Подршка, WebDev, Thunderbird)"
 
 #~ msgid ""
-#~ "Start typing to add a group (example: Marketing, Support, WebDev, "
-#~ "Thunderbird)"
+#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
 #~ msgstr ""
-#~ "Почните куцати како бисте додали групу (нпр.: Маркетинг, Подршка, WebDev, "
-#~ "Thunderbird)"
-
-#~ msgid ""
-#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain "
-#~ "in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" "
-#~ "target=\"_blank\">privacy policy</a>.</label>"
-#~ msgstr ""
-#~ "<label for=\"id_optin\">Не смета ми Ваше руковање ове информације као што "
-#~ "сте објаснили у Вашој <a href=\"http://www.mozilla.org/%(locale)s/privacy-"
-#~ "policy.html\" target=\"_blank\">Полиси о приватности</a>.</label>"
+#~ "<label for=\"id_optin\">Не смета ми Ваше руковање ове информације као што сте објаснили у Вашој <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">Полиси о "
+#~ "приватности</a>.</label>"
 
 #~ msgid "Name, IRC Nick, Email or Location"
 #~ msgstr "Име, IRC надимак, е-пошта или локација"
