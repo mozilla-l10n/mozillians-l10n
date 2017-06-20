@@ -1,9 +1,9 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-22 08:41-0700\n"
+"POT-Creation-Date: 2017-06-20 13:23-0700\n"
 "PO-Revision-Date: 2017-03-22 18:06+0000\n"
 "Last-Translator: Kohei Yoshino <kohei.yoshino@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Pontoon\n"
 "X-POOTLE-MTIME: 1404493926.0\n"
 
-#: mozillians/api/models.py:49 mozillians/users/models.py:80
+#: mozillians/api/models.py:14 mozillians/users/models.py:75
 msgid "Privileged"
 msgstr "特権付き"
 
@@ -27,7 +27,7 @@ msgstr "続けるにはログインする必要があります。"
 msgid "You must be vouched to continue."
 msgstr "続けるには承認されている必要があります。"
 
-#: mozillians/common/templatetags/helpers.py:100
+#: mozillians/common/templatetags/helpers.py:101
 msgid "Visible to:"
 msgstr "表示対象:"
 
@@ -74,7 +74,7 @@ msgstr "メンバー受け入れ基準を指定もしくは変更してくださ
 msgid "Select Group Type"
 msgstr "グループの種類を選択"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:112
+#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:103
 msgid "All"
 msgstr "すべて"
 
@@ -195,36 +195,36 @@ msgstr "無効化日数"
 msgid "Please enter any additional text for the invitation email"
 msgstr "招待メールに記載する追加の内容があれば入力してください"
 
-#: mozillians/groups/models.py:411 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:410 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "招待者"
 
-#: mozillians/groups/models.py:413 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:412 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "身請人"
 
-#: mozillians/groups/tasks.py:58
+#: mozillians/groups/tasks.py:60
 #, python-format
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
 msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
 msgstr[0] "Mozillians の %(name)s グループに %(count)d 件の参加申請があります。"
 
-#: mozillians/groups/tasks.py:102
+#: mozillians/groups/tasks.py:104
 #, python-format
 msgid "Accepted to Mozillians group \"%s\""
 msgstr "Mozillians の %s グループに参加しました。"
 
-#: mozillians/groups/tasks.py:105
+#: mozillians/groups/tasks.py:107
 #, python-format
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "Mozillians の %s グループへの参加が拒否されました。"
 
-#: mozillians/groups/tasks.py:112
+#: mozillians/groups/tasks.py:114
 #, python-format
 msgid "Status changed for Mozillians group \"%s\""
 msgstr "Mozillians グループ「%s」のステータスが変更されました。"
 
-#: mozillians/groups/tasks.py:116
+#: mozillians/groups/tasks.py:118
 #, python-format
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Mozillians の %s グループから削除されました。"
@@ -298,11 +298,11 @@ msgstr "%s グループが削除されました。"
 msgid "You must be a curator or an admin to edit a group"
 msgstr "グループを編集できるのは責任者もしくは管理者のみです"
 
-#: mozillians/groups/views.py:561
+#: mozillians/groups/views.py:562
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "{0} さんへの招待は取り消されました。"
 
-#: mozillians/groups/views.py:602
+#: mozillians/groups/views.py:603
 msgid "Invitation to {0} has been sent successfully."
 msgstr "{0} さんへの招待が送信されました。"
 
@@ -323,14 +323,18 @@ msgstr "Tumbeasts by Matthew Inman of The Oatmeal"
 msgid ""
 "<p> The page you requested couldn't be found. You can head to the <a href=\"%(home_url)s\">Mozillians home page</a> to learn more about our community phonebook, or you can try searching for the "
 "person you were looking for using the search box at the top of this page. </p>"
-msgstr "<p>お探しのページは見つかりませんでした。<a href=\"%(home_url)s\">Mozillians のトップページ</a> でこのコミュニティ住所録の使い方を読むか、このページの上にある検索ボックスからユーザーを検索することができます。</p>"
+msgstr ""
+"<p>お探しのページは見つかりませんでした。<a href=\"%(home_url)s\">Mozillians のトップページ</a> でこのコミュニティ住所録の使い方を読むか、このページの上にある検索ボックスからユーザーを検索することが"
+"できます。</p>"
 
 #: mozillians/jinja2/404.html:25
 #, python-format
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
-" <a href=\"%(join_url)s\">join us</a>. </p>"
-msgstr "<p>あなたは認証されていないため、住所録の個人プロフィールにはアクセスできません。プロフィールにアクセスするにはログインしてください。アカウントをお持ちでない場合は <a href=\"%(join_url)s\">ユーザー登録</a> してください。 </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
+msgstr ""
+"<p>あなたは認証されていないため、住所録の個人プロフィールにはアクセスできません。プロフィールにアクセスするにはログインしてください。アカウントをお持ちでない場合は <a href=\"%(join_url)s\">ユーザー"
+"登録</a> してください。 </p>"
 
 #: mozillians/jinja2/500.html:3
 msgid "Application Error"
@@ -347,14 +351,15 @@ msgstr "Jitterbeasts by Matthew Inman of The Oatmeal"
 #: mozillians/jinja2/500.html:15
 #, python-format
 msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us know"
-" what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more about "
-"Mozillians. Sorry about this! </p>"
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
 msgstr ""
-"<p>申し訳ありません。予期せぬ問題が発生したため、処理を続行できません。ページを再度読み込んでもう一度試すか、<a href=\"%(bugzilla_url)s\">バグを報告</a> して何が起きたか知らせてください。開発チームがすぐに修正に取り掛かります。</p> <p>ページを再読み込みしても解決しない場合は、<a href=\"%(home_url)s\">Mozillians "
-"のトップページへ移動</a> して、Mozillians について詳しく知ることができます。ご不便をおかけして申し訳ありません。</p>"
+"<p>申し訳ありません。予期せぬ問題が発生したため、処理を続行できません。ページを再度読み込んでもう一度試すか、<a href=\"%(bugzilla_url)s\">バグを報告</a> して何が起きたか知らせてください。開発チーム"
+"がすぐに修正に取り掛かります。</p> <p>ページを再読み込みしても解決しない場合は、<a href=\"%(home_url)s\">Mozillians のトップページへ移動</a> して、Mozillians について詳しく知ることができます。ご不便"
+"をおかけして申し訳ありません。</p>"
 
-#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/jinja2/phonebook/betasearch.html:89 mozillians/jinja2/phonebook/search.html:88 mozillians/users/managers.py:12
+#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/users/managers.py:12
 msgid "Mozillians"
 msgstr "Mozillians"
 
@@ -374,8 +379,8 @@ msgstr "言語を選択"
 msgid "Skip to main content"
 msgstr "メインコンテンツへスキップ"
 
-#: mozillians/jinja2/base.html:79 mozillians/jinja2/phonebook/betasearch.html:32 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:103
-#: mozillians/jinja2/phonebook/home.html:178 mozillians/jinja2/phonebook/search.html:32
+#: mozillians/jinja2/base.html:79 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:103 mozillians/jinja2/phonebook/home.html:178
+#: mozillians/jinja2/phonebook/search.html:31
 msgid "Search for people, groups and more"
 msgstr "人々、グループなどを検索"
 
@@ -387,9 +392,8 @@ msgstr "プロフィールを表示"
 msgid "Settings"
 msgstr "設定"
 
-#: mozillians/jinja2/base.html:112 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/betasearch.html:65
-#: mozillians/jinja2/phonebook/edit_profile.html:46 mozillians/jinja2/phonebook/home.html:131 mozillians/jinja2/phonebook/home.html:233 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5
-#: mozillians/jinja2/phonebook/profile.html:224 mozillians/jinja2/phonebook/search.html:64
+#: mozillians/jinja2/base.html:112 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/edit_profile.html:46
+#: mozillians/jinja2/phonebook/home.html:131 mozillians/jinja2/phonebook/home.html:233 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5 mozillians/jinja2/phonebook/profile.html:224
 msgid "Groups"
 msgstr "グループ"
 
@@ -402,8 +406,8 @@ msgid "Log Out"
 msgstr "ログアウト"
 
 #: mozillians/jinja2/base.html:138 mozillians/jinja2/base.html:140
-msgid "Sign in"
-msgstr "ログイン"
+msgid "Log In / Sign Up"
+msgstr ""
 
 #: mozillians/jinja2/base.html:182
 #, python-format
@@ -413,7 +417,8 @@ msgstr "Mozillians サイトを改善するため、<a href=\"%(bug_url)s\">バ�
 #: mozillians/jinja2/base.html:202
 #, python-format
 msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
-msgstr "&copy;1998–%(current_year)s このコンテンツの一部は mozilla.org の個別貢献者によって提供されたものです。コンテンツは <a href=\"%(license_link)s\">Creative Commons ライセンス</a> で公開されています。"
+msgstr ""
+"&copy;1998–%(current_year)s このコンテンツの一部は mozilla.org の個別貢献者によって提供されたものです。コンテンツは <a href=\"%(license_link)s\">Creative Commons ライセンス</a> で公開されています。"
 
 #: mozillians/jinja2/base.html:211 mozillians/jinja2/phonebook/about-dinomcvouch.html:3 mozillians/jinja2/phonebook/about.html:3 mozillians/jinja2/phonebook/about.html:10
 msgid "About Mozillians"
@@ -449,7 +454,7 @@ msgstr "本当に %(group)s グループから脱退しますか？"
 msgid "Really remove user %(profile)s from group %(group)s?"
 msgstr "本当に %(group)s グループから %(profile)s さんを削除しますか？"
 
-#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:9 mozillians/jinja2/phonebook/invite.html:77
+#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:11 mozillians/jinja2/phonebook/invite.html:77
 msgid "Remove"
 msgstr "削除"
 
@@ -513,8 +518,8 @@ msgstr "責任者"
 msgid "Curator"
 msgstr "責任者"
 
-#: mozillians/jinja2/groups/group.html:128 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:31
-#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:166
+#: mozillians/jinja2/groups/group.html:128 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:42
+#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:157
 msgid "Profile Photo"
 msgstr "プロフィール写真"
 
@@ -587,7 +592,7 @@ msgstr "並べ替え"
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 msgstr "アドオン開発から翻訳まで、Mozillian の活動は多岐に渡ります。ユーザーが作成したグループを使って、あなたと同じようなことに取り組む Mozillian を見つけましょう！"
 
-#: mozillians/jinja2/groups/index_common.html:46
+#: mozillians/jinja2/groups/index_common.html:46 mozillians/jinja2/includes/search_result.html:100
 #, python-format
 msgid "%(num)s member"
 msgid_plural "%(num)s members"
@@ -684,7 +689,7 @@ msgstr "このグループの削除は取り消しできない操作であるこ
 msgid "Pending Invitations"
 msgstr "参加保留中の招待"
 
-#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:82 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:49 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
 #: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:219
 msgid "Delete"
 msgstr "削除"
@@ -713,23 +718,23 @@ msgstr "新規メンバーを招待"
 msgid "Choose visibility group for this field"
 msgstr "この項目の表示対象グループを選択"
 
-#: mozillians/jinja2/includes/pagination.html:21
+#: mozillians/jinja2/includes/pagination.html:15
 msgid "Previous"
 msgstr "前へ"
 
-#: mozillians/jinja2/includes/pagination.html:26
+#: mozillians/jinja2/includes/pagination.html:20
 msgid "Page"
 msgstr "ページ"
 
-#: mozillians/jinja2/includes/pagination.html:70
+#: mozillians/jinja2/includes/pagination.html:51
 msgid "Next"
 msgstr "次へ"
 
-#: mozillians/jinja2/includes/search_result.html:17
+#: mozillians/jinja2/includes/search_result.html:19
 msgid "Confirm Request"
 msgstr "申請を確認"
 
-#: mozillians/jinja2/includes/search_result.html:21
+#: mozillians/jinja2/includes/search_result.html:23
 msgid "Requested"
 msgstr "申請済み"
 
@@ -754,13 +759,15 @@ msgstr "Mozillians の写真コラージュ"
 msgid ""
 "<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
 "community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. It also allows you to receive email "
-"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a "
-"href=\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
+"communications from Mozilla. </p> <p> Want to find Mozillians in Auckland for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p> <p> <a href="
+"\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a href=\"%(wiki_get_involved_url)s\"> get "
 "involved</a>. </p>"
 msgstr ""
-"<p>Mozillian とは、Mozilla のミッション推進のために自ら行動するボランティアの集まりのことです。ウェブのオープンな性質を維持し、技術革新を進め、機会を創り出すことに注力していて、私たちのコミュニティの中核を成す存在でもあります。</p> <p>このディレクトリは、Mozillian "
-"の誰がどのような活動をしているか、彼らへの連絡方法について、容易に知るための情報源です。また、Mozilla からメールによるお知らせを受けることもできます。</p> <p>あなたが「東京で会える Mozillian を見つけたい」「パッチをレビューしてもらうために優れた XPCOM ハッカーが必要」といったニーズをお持ちなら、このサイトはまさにそういった目的に応えるものです。</p> "
-"<p><a href=\"%(wiki_roadmap_url)s\">これらの機能</a> が現在開発中で、他にも検討中の機能があります。開発に貢献したければ、<a href=\"%(wiki_get_involved_url)s\">参加しよう</a> のページでその方法を確認してください。</p>"
+"<p>Mozillian とは、Mozilla のミッション推進のために自ら行動するボランティアの集まりのことです。ウェブのオープンな性質を維持し、技術革新を進め、機会を創り出すことに注力していて、私たちのコミュニティ"
+"の中核を成す存在でもあります。</p> <p>このディレクトリは、Mozillian の誰がどのような活動をしているか、彼らへの連絡方法について、容易に知るための情報源です。また、Mozilla からメールによるお知らせを受"
+"けることもできます。</p> <p>あなたが「東京で会える Mozillian を見つけたい」「パッチをレビューしてもらうために優れた XPCOM ハッカーが必要」といったニーズをお持ちなら、このサイトはまさにそういった目的"
+"に応えるものです。</p> <p><a href=\"%(wiki_roadmap_url)s\">これらの機能</a> が現在開発中で、他にも検討中の機能があります。開発に貢献したければ、<a href=\"%(wiki_get_involved_url)s\">参加しよう</a> "
+"のページでその方法を確認してください。</p>"
 
 #: mozillians/jinja2/phonebook/about.html:35
 msgid "Privacy First"
@@ -772,8 +779,8 @@ msgid ""
 "Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
 msgstr ""
-"プライバシーの取り扱いは、このディレクトリーの最初期からの重要事項です。サイトの開発手法そのものから、新規ユーザーが Mozillian のみに公開されるデータにアクセスできるようになるまでの承認方法に至るまで、私たちは、Mozillian に可能な限り最高の経験を提供しようと努力しています。詳しくは <a "
-"href=\"%(privacy_policy_url)s\">プライバシーポリシー</a> をご確認ください。"
+"プライバシーの取り扱いは、このディレクトリーの最初期からの重要事項です。サイトの開発手法そのものから、新規ユーザーが Mozillian のみに公開されるデータにアクセスできるようになるまでの承認方法に至るま"
+"で、私たちは、Mozillian に可能な限り最高の経験を提供しようと努力しています。詳しくは <a href=\"%(privacy_policy_url)s\">プライバシーポリシー</a> をご確認ください。"
 
 #: mozillians/jinja2/phonebook/about.html:51
 msgid "Get Involved"
@@ -784,7 +791,9 @@ msgstr "参加しよう"
 msgid ""
 "The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
 "href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
-msgstr "このコミュニティディレクトリーはコミュニティプロジェクトでもあります。さらなる改善の協力や、他のコミュニティツールとの統合を歓迎します。これらの方法について学ぶには、<a href=\"%(google_groups_url)s\">Mozillians フォーラム</a> に参加してください。"
+msgstr ""
+"このコミュニティディレクトリーはコミュニティプロジェクトでもあります。さらなる改善の協力や、他のコミュニティツールとの統合を歓迎します。これらの方法について学ぶには、<a href=\"%(google_groups_url)s"
+"\">Mozillians フォーラム</a> に参加してください。"
 
 #: mozillians/jinja2/phonebook/apikeys.html:4
 msgid "API"
@@ -795,111 +804,37 @@ msgid "Mozillians API"
 msgstr "Mozillians API"
 
 #: mozillians/jinja2/phonebook/apikeys.html:15
-msgid "API Version 1"
-msgstr "API バージョン 1"
-
-#: mozillians/jinja2/phonebook/apikeys.html:19
-#, python-format
-msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
-msgstr "API v1 は廃止予定ですので、API v2 の仕様を検討してください。API v1 について何かサポートが必要な場合は <a href=\"%(bugzilla_request_url)s\">ここ</a> からバグを登録してください。"
-
-#: mozillians/jinja2/phonebook/apikeys.html:28
-msgid "Your approved apps:"
-msgstr "あなたの承認済みアプリ:"
-
-#: mozillians/jinja2/phonebook/apikeys.html:39 mozillians/jinja2/phonebook/apikeys.html:75
-msgid "Key"
-msgstr "キー"
-
-#: mozillians/jinja2/phonebook/apikeys.html:44 mozillians/jinja2/phonebook/apikeys.html:86
-msgid "You have no active apps."
-msgstr "アクティブなアプリはありません。"
-
-#: mozillians/jinja2/phonebook/apikeys.html:48
 msgid "API Version 2"
 msgstr "API バージョン 2"
 
-#: mozillians/jinja2/phonebook/apikeys.html:52
+#: mozillians/jinja2/phonebook/apikeys.html:19
 #, python-format
 msgid ""
 "Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
 "need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
-msgstr "利用可能な API メソッドの一覧はこちらの <a href=\"%(api_schema_url)s\">ドキュメント</a> を参照してください。以下からリクエストを送信することで今すぐに新しい API キーを入手できます。より高度な権限を持ったキーが必要な場合は <a href=\"%(bugzilla_request_url)s\">バグを登録</a> してください。"
+msgstr ""
+"利用可能な API メソッドの一覧はこちらの <a href=\"%(api_schema_url)s\">ドキュメント</a> を参照してください。以下からリクエストを送信することで今すぐに新しい API キーを入手できます。より高度な権限を"
+"持ったキーが必要な場合は <a href=\"%(bugzilla_request_url)s\">バグを登録</a> してください。"
 
-#: mozillians/jinja2/phonebook/apikeys.html:64
+#: mozillians/jinja2/phonebook/apikeys.html:31
 msgid "Your apps:"
 msgstr "あなたのアプリ:"
 
-#: mozillians/jinja2/phonebook/apikeys.html:78
+#: mozillians/jinja2/phonebook/apikeys.html:42
+msgid "Key"
+msgstr "キー"
+
+#: mozillians/jinja2/phonebook/apikeys.html:45
 msgid "Level"
 msgstr "レベル"
 
-#: mozillians/jinja2/phonebook/apikeys.html:109
+#: mozillians/jinja2/phonebook/apikeys.html:53
+msgid "You have no active apps."
+msgstr "アクティブなアプリはありません。"
+
+#: mozillians/jinja2/phonebook/apikeys.html:76
 msgid "Register App"
 msgstr "アプリを登録"
-
-#: mozillians/jinja2/phonebook/betasearch.html:3 mozillians/jinja2/phonebook/search.html:3
-msgid "Search Results"
-msgstr "検索結果"
-
-#: mozillians/jinja2/phonebook/betasearch.html:17 mozillians/jinja2/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr "あなたは公開プロフィールを検索しています。"
-
-#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
-#, python-format
-msgid "View more results by <a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\"> logging in</a>."
-msgstr "<a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\">ログイン</a> すれば、より多くの結果を表示できます。"
-
-#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
-msgid "Sign In"
-msgstr "ログイン"
-
-#: mozillians/jinja2/phonebook/betasearch.html:25 mozillians/jinja2/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr "承認されれば、より多くの結果を表示できます。"
-
-#: mozillians/jinja2/phonebook/betasearch.html:29
-msgid "Beta Search"
-msgstr "ベータ検索"
-
-#: mozillians/jinja2/phonebook/betasearch.html:37 mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:37
-msgid "Search"
-msgstr "検索"
-
-#: mozillians/jinja2/phonebook/betasearch.html:41 mozillians/jinja2/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr "追加オプション"
-
-#: mozillians/jinja2/phonebook/betasearch.html:53 mozillians/jinja2/phonebook/search.html:52
-msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
-msgstr "<h2>Mozillian を探す</h2> <p>名前、メールアドレスまたはニックネームで他の Mozillian を検索することができます。 </p>"
-
-#: mozillians/jinja2/phonebook/betasearch.html:67 mozillians/jinja2/phonebook/search.html:66
-#, python-format
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] "%(count)s 件のグループが見つかりました"
-
-#: mozillians/jinja2/phonebook/betasearch.html:91 mozillians/jinja2/phonebook/search.html:90
-#, python-format
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] "%(count)s 人の Mozillian が見つかりました"
-
-#: mozillians/jinja2/phonebook/betasearch.html:116 mozillians/jinja2/phonebook/search.html:115
-#, python-format
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr "「%(query)s」に関連するグループや人物は見つかりませんでした。"
-
-#: mozillians/jinja2/phonebook/betasearch.html:122 mozillians/jinja2/phonebook/search.html:121
-#, python-format
-msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
-msgstr "お探しの人がまだ Mozillian ではないのかもしれません。<a href=\"%(invite)s\">その人を招待</a> し、プロフィールを作成してもらいましょう。"
-
-#: mozillians/jinja2/phonebook/betasearch.html:128 mozillians/jinja2/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
-msgstr "何か助けが必要な場合は、各活動分野の担当者にお問い合わせください。"
 
 #: mozillians/jinja2/phonebook/confirm_delete.html:3 mozillians/jinja2/phonebook/confirm_delete.html:7
 msgid "Confirm Profile Deletion"
@@ -911,7 +846,8 @@ msgstr "本当に Mozillians から脱退しますか？"
 
 #: mozillians/jinja2/phonebook/confirm_delete.html:14
 msgid "Deleting your profile is immediate and irreversible. Any information in your profile will be permanently lost. If you want to join Mozillians again, you will need to get vouched again."
-msgstr "プロフィール削除は即座に実行され、取り消すことはできません。プロフィール内のすべての情報が完全に消去されます。プロフィールを削除した後に Mozillians に再度登録する場合は、新たに承認が必要になります。"
+msgstr ""
+"プロフィール削除は即座に実行され、取り消すことはできません。プロフィール内のすべての情報が完全に消去されます。プロフィールを削除した後に Mozillians に再度登録する場合は、新たに承認が必要になります。"
 
 #: mozillians/jinja2/phonebook/confirm_delete.html:23
 msgid "No: don't delete my profile"
@@ -942,7 +878,7 @@ msgstr "あなたと Mozilla"
 msgid "External Accounts"
 msgstr "外部アカウント"
 
-#: mozillians/jinja2/phonebook/edit_profile.html:52 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:48
+#: mozillians/jinja2/phonebook/edit_profile.html:52 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
 msgid "Developer"
 msgstr "開発者"
 
@@ -1031,7 +967,9 @@ msgstr "参加するには？"
 msgid ""
 "Mozilla exists to promote openness, innovation and opportunity on the Internet. The success of our mission depends on participation from people like you. Find out how you can get involved to help "
 "make a difference in the lives of people everywhere."
-msgstr "Mozilla は、インターネット上のオープン性と革新、機会を促進するために存在しています。私たちのミッションの成功は、あなたのような人々の参加にかかっています。どのような方法で参加できるかを知って、世界中の人々の暮らしを変えるために協力してください。"
+msgstr ""
+"Mozilla は、インターネット上のオープン性と革新、機会を促進するために存在しています。私たちのミッションの成功は、あなたのような人々の参加にかかっています。どのような方法で参加できるかを知って、世界中"
+"の人々の暮らしを変えるために協力してください。"
 
 #: mozillians/jinja2/phonebook/home.html:272
 #, python-format
@@ -1044,17 +982,19 @@ msgstr "Mozillian を招待する"
 
 #: mozillians/jinja2/phonebook/invite.html:12
 #, python-format
-msgid "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr "Mozillian を新たに招待したいときは、以下のフォームに入力してください。<strong>注</strong>: 新しいユーザーの招待は承認のようなものです。<a href=\"%(vouching_url)s\">承認システムの詳細</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:18
 #, python-format
 msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your profile"
-" and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about vouching.</a>"
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
 msgstr ""
-"Mozilla では最近、Mozillian が他の人を招待、承認できるようになるための基準を変更しました。このページを使いたい場合、%(vouch_threshold)s 件の承認をもらう必要があります。あなたのプロフィールを見て承認してもらえるよう、誰かに頼んでみてください。%(vouch_threshold)s 件の承認をもらってからこのページへ戻れば、他の人を "
-"Mozillian.org へ招待できます。<a href=\"%(vouching_url)s\">承認システムの詳細</a>"
+"Mozilla では最近、Mozillian が他の人を招待、承認できるようになるための基準を変更しました。このページを使いたい場合、%(vouch_threshold)s 件の承認をもらう必要があります。あなたのプロフィールを見て承認"
+"してもらえるよう、誰かに頼んでみてください。%(vouch_threshold)s 件の承認をもらってからこのページへ戻れば、他の人を Mozillian.org へ招待できます。<a href=\"%(vouching_url)s\">承認システムの詳細</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:51
 msgid "Your Invites"
@@ -1085,7 +1025,7 @@ msgstr "招待状が送信されました。"
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr "%(recipient)s さんを Mozillians へ招待しました。招待された人には、参加方法について書かれたメールが送られます。よろしければ、<a href=\"%(invite_url)s\">別の Mozillian も招待</a> してください。"
 
-#: mozillians/jinja2/phonebook/location_list.html:16
+#: mozillians/jinja2/phonebook/location_list.html:16 mozillians/jinja2/phonebook/search.html:70
 msgid "Mozillians in"
 msgstr "この地域の Mozillian:"
 
@@ -1113,9 +1053,10 @@ msgid ""
 "title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
-"<p>あなたのプロフィールは承認待ちの状態にあります。承認されると、すべての Mozillian のプロフィールを表示したり、グループに参加したり、承認済み Mozillian として他サイトの特別コンテンツにアクセスしたりできます。<a href=\"%(vouching_url)s\">承認システムの詳細はこちら</a>。</p> "
-"<p>このリンクをあなたの貢献をよく知る人に送信して、承認してもらいましょう: <br/> <em class=\"underline\" title=\"あなたのプロフィール URL\">%(profile_url)s</em> </p> <p>Mozilla コミュニティが初めての人も、ぜひ <a class=\"button\" "
-"href=\"%(contribute_url)s\">参加してください</a>。</p> <p>コミュニティの中で活躍すればするほど、承認される機会が増すでしょう。</p>"
+"<p>あなたのプロフィールは承認待ちの状態にあります。承認されると、すべての Mozillian のプロフィールを表示したり、グループに参加したり、承認済み Mozillian として他サイトの特別コンテンツにアクセスした"
+"りできます。<a href=\"%(vouching_url)s\">承認システムの詳細はこちら</a>。</p> <p>このリンクをあなたの貢献をよく知る人に送信して、承認してもらいましょう: <br/> <em class=\"underline\" title=\"あなた"
+"のプロフィール URL\">%(profile_url)s</em> </p> <p>Mozilla コミュニティが初めての人も、ぜひ <a class=\"button\" href=\"%(contribute_url)s\">参加してください</a>。</p> <p>コミュニティの中で活躍すれば"
+"するほど、承認される機会が増すでしょう。</p>"
 
 #: mozillians/jinja2/phonebook/profile.html:50
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
@@ -1153,7 +1094,7 @@ msgstr "Mozillian"
 msgid "Public"
 msgstr "公開"
 
-#: mozillians/jinja2/phonebook/profile.html:209 mozillians/users/models.py:158
+#: mozillians/jinja2/phonebook/profile.html:209 mozillians/users/models.py:153
 msgid "Bio"
 msgstr "自己紹介"
 
@@ -1203,11 +1144,88 @@ msgstr "あなたのタイムゾーンから %(hours)s 時間遅れています�
 msgid "Same time zone as yours."
 msgstr "あなたと同じタイムゾーンです。"
 
+#: mozillians/jinja2/phonebook/search.html:3
+msgid "Search Results"
+msgstr "検索結果"
+
+#: mozillians/jinja2/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr "あなたは公開プロフィールを検索しています。"
+
+#: mozillians/jinja2/phonebook/search.html:19
+#, python-format
+msgid "View more results by <a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\"> logging in</a>."
+msgstr "<a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\">ログイン</a> すれば、より多くの結果を表示できます。"
+
+#: mozillians/jinja2/phonebook/search.html:19
+msgid "Sign In"
+msgstr "ログイン"
+
+#: mozillians/jinja2/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr "承認されれば、より多くの結果を表示できます。"
+
+#: mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:36
+msgid "Search"
+msgstr "検索"
+
+#: mozillians/jinja2/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr "追加オプション"
+
+#: mozillians/jinja2/phonebook/search.html:59
+#, fuzzy
+msgid ""
+"<h2>Search for a Mozillian or a group</h2> <p> You can search for another Mozillian using their name, email, username and bio keywords or you can search for groups by name and group membership "
+"status. </p>"
+msgstr "<h2>Mozillian を探す</h2> <p>名前、メールアドレスまたはニックネームで他の Mozillian を検索することができます。 </p>"
+
+#: mozillians/jinja2/phonebook/search.html:77
+#, fuzzy
+msgid "Results"
+msgstr "検索結果"
+
+#: mozillians/jinja2/phonebook/search.html:80
+#, fuzzy, python-format
+msgid "%(count)s entry matching"
+msgid_plural "%(count)s entries matching"
+msgstr[0] "%(count)s 件のグループが見つかりました"
+
+#: mozillians/jinja2/phonebook/search.html:103
+#, fuzzy
+msgid "Sorry we cannot find a"
+msgstr "申し訳ありません。この地域に Mozillian は見つかりませんでした:"
+
+#: mozillians/jinja2/phonebook/search.html:105
+#, fuzzy
+msgid "group"
+msgstr "グループ"
+
+# ソートボタン
+#: mozillians/jinja2/phonebook/search.html:108
+#, fuzzy
+msgid "or"
+msgstr "並べ替え"
+
+#: mozillians/jinja2/phonebook/search.html:111
+#, fuzzy
+msgid "profile"
+msgstr "プロフィール"
+
+#: mozillians/jinja2/phonebook/search.html:117
+#, python-format
+msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
+msgstr "お探しの人がまだ Mozillian ではないのかもしれません。<a href=\"%(invite)s\">その人を招待</a> し、プロフィールを作成してもらいましょう。"
+
+#: mozillians/jinja2/phonebook/search.html:124
+msgid "Need help? Contact a steward in a functional area!"
+msgstr "何か助けが必要な場合は、各活動分野の担当者にお問い合わせください。"
+
 #: mozillians/jinja2/phonebook/includes/photo_form.html:6
 msgid "Profile photo"
 msgstr "プロフィール写真"
 
-#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:167
+#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:158
 msgid "Remove Profile Photo"
 msgstr "プロフィール写真を削除"
 
@@ -1291,37 +1309,26 @@ msgstr "私が自分のアカウントを削除することにより、自分の
 msgid "Delete Profile"
 msgstr "プロフィールを削除"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:3
 msgid "API privacy"
 msgstr "API プライバシー"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
-#, python-format
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
+#, fuzzy, python-format
 msgid ""
-"The Phonebook offers an API (currently v1) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
-"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
+"The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
+"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
-"このサイトでは、貢献者の承認に役立つ API (現在は v1) を提供し、<a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a>、<a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps ポータル</a> "
-"といった他のツールやサイトとプロフィールデータを共有します。"
+"このサイトでは、貢献者の承認に役立つ API (現在は v1) を提供し、<a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a>、<a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla "
+"Reps ポータル</a> といった他のツールやサイトとプロフィールデータを共有します。"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:22
-msgid "Privacy"
-msgstr "プライバシー"
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:32
-msgid "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
-msgstr "現在テスト中の API バージョン 2 は、項目ごとに指定されたプライバシーレベルを反映します。これらの項目は廃止予定となり、最終的に API バージョン 1 とともに廃止されます。"
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:42
-msgid "Update Privacy Settings"
-msgstr "プライバシー設定を更新"
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:51
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
 msgstr "開発者は、専用の API ページで、API キーをリクエストしたり、既存のキーを管理したりできます。"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:52
-msgid "Manage API keys."
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:19
+#, fuzzy
+msgid "Manage API keys"
 msgstr "API キーを管理"
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:16
@@ -1454,79 +1461,75 @@ msgstr "承認の編集や取り消しはできません。"
 msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr "<a href=\"%(vouching_url)s\">承認システムの詳細</a>"
 
-#: mozillians/phonebook/forms.py:89
-msgid "Include non-vouched"
-msgstr "未承認を含む"
-
-#: mozillians/phonebook/forms.py:110
+#: mozillians/phonebook/forms.py:101
 msgid "Vouched"
 msgstr "承認済み"
 
-#: mozillians/phonebook/forms.py:111
+#: mozillians/phonebook/forms.py:102
 msgid "Unvouched"
 msgstr "未承認"
 
-#: mozillians/phonebook/forms.py:116
+#: mozillians/phonebook/forms.py:107
 msgid "Display only"
 msgstr "表示のみ"
 
-#: mozillians/phonebook/forms.py:125
+#: mozillians/phonebook/forms.py:116
 msgid "All timezones"
 msgstr "すべてのタイムゾーン"
 
-#: mozillians/phonebook/forms.py:135
+#: mozillians/phonebook/forms.py:126
 msgid "Username"
 msgstr "ユーザー名"
 
-#: mozillians/phonebook/forms.py:151
+#: mozillians/phonebook/forms.py:142
 msgid "This username is in use. Please try another."
 msgstr "このユーザー名はすでに使用されています。他のユーザー名をお試しください。"
 
-#: mozillians/phonebook/forms.py:156
+#: mozillians/phonebook/forms.py:147
 msgid "Please use only alphanumeric characters"
 msgstr "半角英数字のみ使用してください"
 
-#: mozillians/phonebook/forms.py:160
+#: mozillians/phonebook/forms.py:151
 msgid "This username is not allowed, please choose another."
 msgstr "このユーザー名は使用できません。他のユーザー名を選んでください。"
 
-#: mozillians/phonebook/forms.py:263
+#: mozillians/phonebook/forms.py:257
 msgid "Please supply your location data."
 msgstr "あなたの位置情報データを提供してください。"
 
-#: mozillians/phonebook/forms.py:310
+#: mozillians/phonebook/forms.py:303
 msgid "When did you get involved with Mozilla?"
 msgstr "Mozilla の活動に参加したのはいつですか？"
 
-#: mozillians/phonebook/forms.py:367
+#: mozillians/phonebook/forms.py:354
 msgid "Email"
 msgstr "メールアドレス"
 
-#: mozillians/phonebook/forms.py:372
+#: mozillians/phonebook/forms.py:359
 msgid "Email is currently associated with another user."
 msgstr "このメールアドレスは現在別のユーザーに関連付けられています。"
 
-#: mozillians/phonebook/forms.py:395
+#: mozillians/phonebook/forms.py:407
 msgid "Provide a reason for vouching with relevant links"
 msgstr "承認理由を関連リンクとともに入力してください"
 
-#: mozillians/phonebook/forms.py:398
+#: mozillians/phonebook/forms.py:410
 msgid "You must enter a reason for vouching for this person."
 msgstr "この人を承認する理由を入力してください。"
 
-#: mozillians/phonebook/forms.py:404
+#: mozillians/phonebook/forms.py:416
 msgid "Personal message to be included in the invite email"
 msgstr "招待メールに含める個人的なメッセージ"
 
-#: mozillians/phonebook/forms.py:407
+#: mozillians/phonebook/forms.py:419
 msgid "Recipient's email"
 msgstr "受取人のメールアドレス"
 
-#: mozillians/phonebook/forms.py:414
+#: mozillians/phonebook/forms.py:426
 msgid "You cannot invite someone who has already been vouched."
 msgstr "承認済みの人を招待することはできません。"
 
-#: mozillians/phonebook/forms.py:438
+#: mozillians/phonebook/forms.py:450
 msgid "What would you like to report?"
 msgstr "報告したい内容"
 
@@ -1595,37 +1598,37 @@ msgstr "mozillians.org の改善にご協力いただき、ありがとうござ
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "仲間の Mozillian を承認していただきありがとうございます。このユーザーは承認されました！"
 
-#: mozillians/phonebook/views.py:279
+#: mozillians/phonebook/views.py:278
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "あなたのユーザー登録が完了しました。ぜひ {0} のページを開いて、プロフィールに情報を追加してください。"
 
-#: mozillians/phonebook/views.py:284
+#: mozillians/phonebook/views.py:283
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "ユーザー名を変更しました。プロフィールの URL も変更されているので注意してください。"
 
-#: mozillians/phonebook/views.py:362
+#: mozillians/phonebook/views.py:360
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "アカウントが削除されました。Mozillian でいてくださりありがとうございました！"
 
-#: mozillians/phonebook/views.py:485
+#: mozillians/phonebook/views.py:385
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s さんを Mozillians へ招待しました。招待された人には、参加方法について書かれたメールが送られます。よろしければ、別の Mozillian も招待してください。"
 
-#: mozillians/phonebook/views.py:506
+#: mozillians/phonebook/views.py:406
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s さんの Mozillians への招待が取り消されました。後でまた %s さんを招待することもできます。"
 
-#: mozillians/phonebook/views.py:522
+#: mozillians/phonebook/views.py:422
 msgid "API Key generated successfully."
 msgstr "API キーの生成が完了しました。"
 
-#: mozillians/phonebook/views.py:537
+#: mozillians/phonebook/views.py:436
 msgid "API key successfully deleted."
 msgstr "API キーの削除が完了しました。"
 
-#: mozillians/phonebook/views.py:593
+#: mozillians/phonebook/views.py:461
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "あなたは Mozillians.org へ招待されました！ ログインしてプロフィールを作成してください。"
 
@@ -1633,137 +1636,165 @@ msgstr "あなたは Mozillians.org へ招待されました！ ログインし�
 msgid "Export"
 msgstr "エクスポート"
 
-#: mozillians/users/models.py:145
+#: mozillians/users/models.py:140
 msgid "Full Name"
 msgstr "フルネーム"
 
-#: mozillians/users/models.py:147
+#: mozillians/users/models.py:142
 msgid "Name in local language"
 msgstr "母国語での名前"
 
-#: mozillians/users/models.py:160
+#: mozillians/users/models.py:155
 msgid "IRC Nickname"
 msgstr "IRC ニックネーム"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:164
 msgid "Latitude"
 msgstr "緯度"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:165
 msgid "Longitude"
 msgstr "経度"
 
-#: mozillians/users/models.py:182
-msgid "Sites that can determine my vouched status"
-msgstr "承認状態の確認を許可するサイト"
-
-#: mozillians/users/models.py:183
-msgid "All Community Sites"
-msgstr "すべてのコミュニティサイト"
-
-#: mozillians/users/models.py:184
-msgid "Only Mozilla Properties"
-msgstr "Mozilla のサイトのみ"
-
-#: mozillians/users/models.py:187
-msgid "Allow Mozilla sites to access my profile data?"
-msgstr "Mozilla のサイトがあなたのプロフィールデータにアクセスすることを許可しますか？"
-
-#: mozillians/users/models.py:188
-msgid "Yes"
-msgstr "はい"
-
-#: mozillians/users/models.py:188
-msgid "No"
-msgstr "いいえ"
-
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:181
 msgid "T-Shirt"
 msgstr "T シャツ"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:183
 msgid "Fitted Small"
 msgstr "フィット型 S サイズ"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:183
 msgid "Fitted Medium"
 msgstr "フィット型 M サイズ"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:184
 msgid "Fitted Large"
 msgstr "フィット型 L サイズ"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:184
 msgid "Fitted X-Large"
 msgstr "フィット型 XL サイズ"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:185
 msgid "Fitted XX-Large"
 msgstr "フィット型 XXL サイズ"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:185
 msgid "Fitted XXX-Large"
 msgstr "フィット型 XXXL サイズ"
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:186
 msgid "Straight-cut Small"
 msgstr "ストレートカット型 S サイズ"
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:186
 msgid "Straight-cut Medium"
 msgstr "ストレートカット型 M サイズ"
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:187
 msgid "Straight-cut Large"
 msgstr "ストレートカット型 L サイズ"
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:187
 msgid "Straight-cut X-Large"
 msgstr "ストレートカット型 XL サイズ"
 
-#: mozillians/users/models.py:202
+#: mozillians/users/models.py:188
 msgid "Straight-cut XX-Large"
 msgstr "ストレートカット型 XXL サイズ"
 
-#: mozillians/users/models.py:202
+#: mozillians/users/models.py:188
 msgid "Straight-cut XXX-Large"
 msgstr "ストレートカット型 XXXL サイズ"
 
-#: mozillians/users/models.py:204
+#: mozillians/users/models.py:190
 msgid "What do you do for Mozilla?"
 msgstr "Mozilla のために何をしていますか？"
 
-#: mozillians/users/models.py:208
+#: mozillians/users/models.py:194
 msgid "Link to your contribution story"
 msgstr "貢献ストーリーへのリンク"
 
-#: mozillians/users/models.py:209
+#: mozillians/users/models.py:195
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "あなたがどのようにして Mozillian になったかが分かる公開のブログ記事などがある場合は、そのリンクを入力してください。"
 
-#: mozillians/users/models.py:534
+#: mozillians/users/models.py:520
 msgid "You have been vouched on Mozillians.org"
 msgstr "あなたは Mozillians.org で承認されました"
 
-#: mozillians/users/models.py:636
+#: mozillians/users/models.py:574
 msgid "Reason for Vouching"
 msgstr "承認理由"
 
-#: mozillians/users/models.py:824
+#: mozillians/users/models.py:745
 msgid "Account Username"
 msgstr "アカウントのユーザー名"
 
-#: mozillians/users/models.py:828
+#: mozillians/users/models.py:749
 msgid "Account Type"
 msgstr "アカウントの種類"
 
-#: mozillians/users/models.py:844
+#: mozillians/users/models.py:765
 msgid "You already have an account with this name and type."
 msgstr "この名前と種類のアカウントをすでにお持ちです。"
 
-#: mozillians/users/models.py:886
+#: mozillians/users/models.py:798
 msgid "This language has already been selected."
 msgstr "この言語はすでに選択されています。"
+
+#~ msgid "Sign in"
+#~ msgstr "ログイン"
+
+#~ msgid "API Version 1"
+#~ msgstr "API バージョン 1"
+
+#~ msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
+#~ msgstr "API v1 は廃止予定ですので、API v2 の仕様を検討してください。API v1 について何かサポートが必要な場合は <a href=\"%(bugzilla_request_url)s\">ここ</a> からバグを登録してください。"
+
+#~ msgid "Your approved apps:"
+#~ msgstr "あなたの承認済みアプリ:"
+
+#~ msgid "Beta Search"
+#~ msgstr "ベータ検索"
+
+#~ msgid "%(count)s Mozillian matching"
+#~ msgid_plural "%(count)s Mozillians matching"
+#~ msgstr[0] "%(count)s 人の Mozillian が見つかりました"
+
+#~ msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+#~ msgstr "「%(query)s」に関連するグループや人物は見つかりませんでした。"
+
+#~ msgid "Privacy"
+#~ msgstr "プライバシー"
+
+#~ msgid "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
+#~ msgstr "現在テスト中の API バージョン 2 は、項目ごとに指定されたプライバシーレベルを反映します。これらの項目は廃止予定となり、最終的に API バージョン 1 とともに廃止されます。"
+
+#~ msgid "Update Privacy Settings"
+#~ msgstr "プライバシー設定を更新"
+
+#~ msgid "Include non-vouched"
+#~ msgstr "未承認を含む"
+
+#~ msgid "Sites that can determine my vouched status"
+#~ msgstr "承認状態の確認を許可するサイト"
+
+#~ msgid "All Community Sites"
+#~ msgstr "すべてのコミュニティサイト"
+
+#~ msgid "Only Mozilla Properties"
+#~ msgstr "Mozilla のサイトのみ"
+
+#~ msgid "Allow Mozilla sites to access my profile data?"
+#~ msgstr "Mozilla のサイトがあなたのプロフィールデータにアクセスすることを許可しますか？"
+
+#~ msgid "Yes"
+#~ msgstr "はい"
+
+#~ msgid "No"
+#~ msgstr "いいえ"
 
 #~ msgid "Search location"
 #~ msgstr "場所を検索"
@@ -1832,9 +1863,11 @@ msgstr "この言語はすでに選択されています。"
 #~ msgstr "Mozillians.org にグループを作成するにはこのフォームを使ってください。グループを作成する前に、誰か他の人が似たようなグループを作成していないか、検索で確認してください。"
 
 #~ msgid ""
-#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
-#~ "requests to join."
-#~ msgstr "グループを作成するとあなた自身がグループの管理者となり、そのグループの設定やメンバー基準などを管理できます。グループへの参加に承認を必要する場合は、参加申請の状況について毎日メールでお知らせします。"
+#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email "
+#~ "with requests to join."
+#~ msgstr ""
+#~ "グループを作成するとあなた自身がグループの管理者となり、そのグループの設定やメンバー基準などを管理できます。グループへの参加に承認を必要する場合は、参加申請の状況について毎日メールでお知らせしま"
+#~ "す。"
 
 #~ msgid "Submit changes"
 #~ msgstr "変更を保存"
@@ -1866,13 +1899,16 @@ msgstr "この言語はすでに選択されています。"
 #~ msgid ""
 #~ "You can connect more than one Persona e-mail to your Mozillians profile. Visibility to other Mozillians is optional, but you will be able to sign in with any of them. Notifications from "
 #~ "mozillians.org will only be sent to your primary address."
-#~ msgstr "ひとつ以上の Persona メールアドレスをあなたの Mozillian プロファイルと関連付けることができます。他の Mozillian に表示するかどうかは任意ですが、登録アドレスのいずれでもログイン可能となります。mozillians.org からの通知は主要アドレスのみに送られます。"
+#~ msgstr ""
+#~ "ひとつ以上の Persona メールアドレスをあなたの Mozillian プロファイルと関連付けることができます。他の Mozillian に表示するかどうかは任意ですが、登録アドレスのいずれでもログイン可能となります。"
+#~ "mozillians.org からの通知は主要アドレスのみに送られます。"
 
 #~ msgid "Create Your Profile"
 #~ msgstr "プロフィールを作成"
 
 #~ msgid "Modify your profile here and choose who can see your profile fields. You can make parts of your profile publicly visible, but please be careful about sharing your contact information."
-#~ msgstr "ここであなたのプロフィールを編集し、プロフィールの各項目を誰が参照できるかを選択できます。これにより、あなたのプロフィールの一部を公開することができますが、連絡先情報の公開には注意してください。"
+#~ msgstr ""
+#~ "ここであなたのプロフィールを編集し、プロフィールの各項目を誰が参照できるかを選択できます。これにより、あなたのプロフィールの一部を公開することができますが、連絡先情報の公開には注意してください。"
 
 #~ msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
 #~ msgstr "このコミュニティディレクトリは、13 歳以上の Mozillian のためのものです。私たちは特に年少者の安全について真剣に考えています。あなたが 13 歳未満である場合、アカウントを作成してはいけません。"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-22 08:41-0700\n"
+"POT-Creation-Date: 2017-06-20 13:23-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: \n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: mozillians/api/models.py:49 mozillians/users/models.py:80
+#: mozillians/api/models.py:14 mozillians/users/models.py:75
 msgid "Privileged"
 msgstr "Privileged"
 
@@ -25,7 +25,7 @@ msgstr "You must be vouched to do this."
 msgid "You must be vouched to continue."
 msgstr "You must be vouched to do this."
 
-#: mozillians/common/templatetags/helpers.py:100
+#: mozillians/common/templatetags/helpers.py:101
 msgid "Visible to:"
 msgstr "Visible to:"
 
@@ -74,7 +74,7 @@ msgstr "You must either specify the criteria or change the acceptance selection.
 msgid "Select Group Type"
 msgstr "Group: {name}"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:112
+#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:103
 msgid "All"
 msgstr "All"
 
@@ -204,38 +204,38 @@ msgstr "Invitation Sent"
 msgid "Please enter any additional text for the invitation email"
 msgstr "Please enter any additional text for the invitation email"
 
-#: mozillians/groups/models.py:411 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:410 mozillians/phonebook/models.py:18
 #, fuzzy
 msgid "Inviter"
 msgstr "Invite"
 
-#: mozillians/groups/models.py:413 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:412 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "Redeemer"
 
-#: mozillians/groups/tasks.py:58
+#: mozillians/groups/tasks.py:60
 #, fuzzy, python-format
 msgid "%(count)d outstanding request to join Mozillians group \"%(name)s\""
 msgid_plural "%(count)d outstanding requests to join Mozillians group \"%(name)s\""
 msgstr[0] "%d outstanding requests to join Mozillians group \"%s\""
 msgstr[1] "%d outstanding requests to join Mozillians group \"%s\""
 
-#: mozillians/groups/tasks.py:102
+#: mozillians/groups/tasks.py:104
 #, fuzzy, python-format
 msgid "Accepted to Mozillians group \"%s\""
 msgstr "Mozillians"
 
-#: mozillians/groups/tasks.py:105
+#: mozillians/groups/tasks.py:107
 #, fuzzy, python-format
 msgid "Not accepted to Mozillians group \"%s\""
 msgstr "Mozillians"
 
-#: mozillians/groups/tasks.py:112
+#: mozillians/groups/tasks.py:114
 #, fuzzy, python-format
 msgid "Status changed for Mozillians group \"%s\""
 msgstr "Mozillians"
 
-#: mozillians/groups/tasks.py:116
+#: mozillians/groups/tasks.py:118
 #, fuzzy, python-format
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Mozillians"
@@ -313,11 +313,11 @@ msgstr "Your account has been created."
 msgid "You must be a curator or an admin to edit a group"
 msgstr "You must be a curator or an admin to edit a group"
 
-#: mozillians/groups/views.py:561
+#: mozillians/groups/views.py:562
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "The invitation to {0} has been successfully revoked."
 
-#: mozillians/groups/views.py:602
+#: mozillians/groups/views.py:603
 msgid "Invitation to {0} has been sent successfully."
 msgstr "Invitation to {0} has been sent successfully."
 
@@ -375,7 +375,7 @@ msgstr ""
 "product=Websites&component=mozillians.org\"> file a bug</a> letting us know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href="
 "\"%(home_url)s\">head to the Mozillians home page</a> to find out more about Mozillians. Sorry about this! </p>"
 
-#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/jinja2/phonebook/betasearch.html:89 mozillians/jinja2/phonebook/search.html:88 mozillians/users/managers.py:12
+#: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/users/managers.py:12
 msgid "Mozillians"
 msgstr "Mozillians"
 
@@ -397,8 +397,8 @@ msgstr "Other languages:"
 msgid "Skip to main content"
 msgstr "Skip to Content"
 
-#: mozillians/jinja2/base.html:79 mozillians/jinja2/phonebook/betasearch.html:32 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:103
-#: mozillians/jinja2/phonebook/home.html:178 mozillians/jinja2/phonebook/search.html:32
+#: mozillians/jinja2/base.html:79 mozillians/jinja2/phonebook/home.html:33 mozillians/jinja2/phonebook/home.html:103 mozillians/jinja2/phonebook/home.html:178
+#: mozillians/jinja2/phonebook/search.html:31
 msgid "Search for people, groups and more"
 msgstr "Search for people, groups and more"
 
@@ -412,9 +412,8 @@ msgstr "Profile"
 msgid "Settings"
 msgstr "Settings"
 
-#: mozillians/jinja2/base.html:112 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/betasearch.html:65
-#: mozillians/jinja2/phonebook/edit_profile.html:46 mozillians/jinja2/phonebook/home.html:131 mozillians/jinja2/phonebook/home.html:233 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5
-#: mozillians/jinja2/phonebook/profile.html:224 mozillians/jinja2/phonebook/search.html:64
+#: mozillians/jinja2/base.html:112 mozillians/jinja2/groups/index_common.html:12 mozillians/jinja2/groups/index_groups.html:7 mozillians/jinja2/phonebook/edit_profile.html:46
+#: mozillians/jinja2/phonebook/home.html:131 mozillians/jinja2/phonebook/home.html:233 mozillians/jinja2/phonebook/includes/profile_edit_groups.html:5 mozillians/jinja2/phonebook/profile.html:224
 msgid "Groups"
 msgstr "Groups"
 
@@ -427,8 +426,8 @@ msgid "Log Out"
 msgstr "Log Out"
 
 #: mozillians/jinja2/base.html:138 mozillians/jinja2/base.html:140
-msgid "Sign in"
-msgstr "Sign in"
+msgid "Log In / Sign Up"
+msgstr "Log In / Sign Up"
 
 #: mozillians/jinja2/base.html:182
 #, python-format
@@ -477,7 +476,7 @@ msgstr "Really leave group %(group)s?"
 msgid "Really remove user %(profile)s from group %(group)s?"
 msgstr "Really remove user %(profile)s from group %(group)s?"
 
-#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:9 mozillians/jinja2/phonebook/invite.html:77
+#: mozillians/jinja2/groups/confirm_remove_member.html:27 mozillians/jinja2/includes/search_result.html:11 mozillians/jinja2/phonebook/invite.html:77
 #, fuzzy
 msgid "Remove"
 msgstr "Remove Skill"
@@ -551,8 +550,8 @@ msgstr "Curaçao"
 msgid "Curator"
 msgstr "Curaçao"
 
-#: mozillians/jinja2/groups/group.html:128 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:31
-#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:166
+#: mozillians/jinja2/groups/group.html:128 mozillians/jinja2/groups/includes/group_edit_invitation.html:25 mozillians/jinja2/includes/search_result.html:42
+#: mozillians/jinja2/phonebook/includes/photo_form.html:4 mozillians/phonebook/forms.py:157
 msgid "Profile Photo"
 msgstr "Profile Photo"
 
@@ -628,7 +627,7 @@ msgstr "Sort"
 msgid "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 msgstr "Mozillians work on all sorts of different things! From Add-on developers to localizers, find Mozillians who work on similar things using user-created groups."
 
-#: mozillians/jinja2/groups/index_common.html:46
+#: mozillians/jinja2/groups/index_common.html:46 mozillians/jinja2/includes/search_result.html:100
 #, python-format
 msgid "%(num)s member"
 msgid_plural "%(num)s members"
@@ -737,7 +736,7 @@ msgstr "I acknowledge that deleting this group is an action that can not be undo
 msgid "Pending Invitations"
 msgstr "Pending..."
 
-#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:82 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
+#: mozillians/jinja2/groups/includes/group_edit_invitation.html:36 mozillians/jinja2/phonebook/apikeys.html:49 mozillians/jinja2/phonebook/includes/profile_edit_accounts.html:31
 #: mozillians/jinja2/phonebook/includes/profile_edit_basic.html:219
 #, fuzzy
 msgid "Delete"
@@ -770,24 +769,24 @@ msgstr "Pending..."
 msgid "Choose visibility group for this field"
 msgstr "Choose visibility group for this field"
 
-#: mozillians/jinja2/includes/pagination.html:21
+#: mozillians/jinja2/includes/pagination.html:15
 msgid "Previous"
 msgstr "Previous"
 
-#: mozillians/jinja2/includes/pagination.html:26
+#: mozillians/jinja2/includes/pagination.html:20
 msgid "Page"
 msgstr "Page"
 
-#: mozillians/jinja2/includes/pagination.html:70
+#: mozillians/jinja2/includes/pagination.html:51
 msgid "Next"
 msgstr "Next"
 
-#: mozillians/jinja2/includes/search_result.html:17
+#: mozillians/jinja2/includes/search_result.html:19
 #, fuzzy
 msgid "Confirm Request"
 msgstr "Invitation Sent"
 
-#: mozillians/jinja2/includes/search_result.html:21
+#: mozillians/jinja2/includes/search_result.html:23
 msgid "Requested"
 msgstr "Requested"
 
@@ -866,33 +865,10 @@ msgid "Mozillians API"
 msgstr "Mozillians"
 
 #: mozillians/jinja2/phonebook/apikeys.html:15
-msgid "API Version 1"
-msgstr "API Version 1"
-
-#: mozillians/jinja2/phonebook/apikeys.html:19
-#, python-format
-msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
-msgstr "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
-
-#: mozillians/jinja2/phonebook/apikeys.html:28
-msgid "Your approved apps:"
-msgstr "Your approved apps:"
-
-#: mozillians/jinja2/phonebook/apikeys.html:39 mozillians/jinja2/phonebook/apikeys.html:75
-#, fuzzy
-msgid "Key"
-msgstr "Kenya"
-
-#: mozillians/jinja2/phonebook/apikeys.html:44 mozillians/jinja2/phonebook/apikeys.html:86
-#, fuzzy
-msgid "You have no active apps."
-msgstr "You have no registered, active apps."
-
-#: mozillians/jinja2/phonebook/apikeys.html:48
 msgid "API Version 2"
 msgstr "API Version 2"
 
-#: mozillians/jinja2/phonebook/apikeys.html:52
+#: mozillians/jinja2/phonebook/apikeys.html:19
 #, fuzzy, python-format
 msgid ""
 "Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
@@ -901,86 +877,28 @@ msgstr ""
 "Take a look at the list of the API methods we've made available using our <a href=\"%(api_schema_url)s\">browsable API</a> (API key required). You can instantly get a new API key by submitting a "
 "request below. If you need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
 
-#: mozillians/jinja2/phonebook/apikeys.html:64
+#: mozillians/jinja2/phonebook/apikeys.html:31
 #, fuzzy
 msgid "Your apps:"
 msgstr "Your approved apps:"
 
-#: mozillians/jinja2/phonebook/apikeys.html:78
+#: mozillians/jinja2/phonebook/apikeys.html:42
+#, fuzzy
+msgid "Key"
+msgstr "Kenya"
+
+#: mozillians/jinja2/phonebook/apikeys.html:45
 msgid "Level"
 msgstr "Level"
 
-#: mozillians/jinja2/phonebook/apikeys.html:109
+#: mozillians/jinja2/phonebook/apikeys.html:53
+#, fuzzy
+msgid "You have no active apps."
+msgstr "You have no registered, active apps."
+
+#: mozillians/jinja2/phonebook/apikeys.html:76
 msgid "Register App"
 msgstr "Register App"
-
-#: mozillians/jinja2/phonebook/betasearch.html:3 mozillians/jinja2/phonebook/search.html:3
-#, fuzzy
-msgid "Search Results"
-msgstr "Search"
-
-#: mozillians/jinja2/phonebook/betasearch.html:17 mozillians/jinja2/phonebook/search.html:17
-msgid "You are currently searching public profiles."
-msgstr "You are currently searching public profiles."
-
-#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
-#, fuzzy, python-format
-msgid "View more results by <a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\"> logging in</a>."
-msgstr "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
-
-#: mozillians/jinja2/phonebook/betasearch.html:19 mozillians/jinja2/phonebook/search.html:19
-#, fuzzy
-msgid "Sign In"
-msgstr "Sign in"
-
-#: mozillians/jinja2/phonebook/betasearch.html:25 mozillians/jinja2/phonebook/search.html:25
-msgid "View more results when vouched."
-msgstr "View more results when vouched."
-
-#: mozillians/jinja2/phonebook/betasearch.html:29
-#, fuzzy
-msgid "Beta Search"
-msgstr "Search"
-
-#: mozillians/jinja2/phonebook/betasearch.html:37 mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:37
-msgid "Search"
-msgstr "Search"
-
-#: mozillians/jinja2/phonebook/betasearch.html:41 mozillians/jinja2/phonebook/search.html:41
-msgid "Advanced Options"
-msgstr "Advanced Options"
-
-#: mozillians/jinja2/phonebook/betasearch.html:53 mozillians/jinja2/phonebook/search.html:52
-msgid "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
-msgstr "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
-
-#: mozillians/jinja2/phonebook/betasearch.html:67 mozillians/jinja2/phonebook/search.html:66
-#, python-format
-msgid "%(count)s group matching"
-msgid_plural "%(count)s groups matching"
-msgstr[0] "%(count)s group matching"
-msgstr[1] "%(count)s groups matching"
-
-#: mozillians/jinja2/phonebook/betasearch.html:91 mozillians/jinja2/phonebook/search.html:90
-#, python-format
-msgid "%(count)s Mozillian matching"
-msgid_plural "%(count)s Mozillians matching"
-msgstr[0] "%(count)s Mozillian matching"
-msgstr[1] "%(count)s Mozillians matching"
-
-#: mozillians/jinja2/phonebook/betasearch.html:116 mozillians/jinja2/phonebook/search.html:115
-#, python-format
-msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
-msgstr "Sorry, we cannot find a group or person related to \"%(query)s\"."
-
-#: mozillians/jinja2/phonebook/betasearch.html:122 mozillians/jinja2/phonebook/search.html:121
-#, fuzzy, python-format
-msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
-msgstr "The Mozillian you are looking for is not in the directory. Please check your spelling or <a href=\"%(invite)s\">invite this person</a> to create a profile."
-
-#: mozillians/jinja2/phonebook/betasearch.html:128 mozillians/jinja2/phonebook/search.html:127
-msgid "Need help? Contact a steward in a functional area!"
-msgstr "Need help? Contact a steward in a functional area!"
 
 #: mozillians/jinja2/phonebook/confirm_delete.html:3 mozillians/jinja2/phonebook/confirm_delete.html:7
 #, fuzzy
@@ -1027,7 +945,7 @@ msgstr "Become a Mozillian"
 msgid "External Accounts"
 msgstr "Create Account"
 
-#: mozillians/jinja2/phonebook/edit_profile.html:52 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:48
+#: mozillians/jinja2/phonebook/edit_profile.html:52 mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
 #, fuzzy
 msgid "Developer"
 msgstr "Developers"
@@ -1186,7 +1104,7 @@ msgstr "Invitation Sent!"
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr "%(email)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 
-#: mozillians/jinja2/phonebook/location_list.html:16
+#: mozillians/jinja2/phonebook/location_list.html:16 mozillians/jinja2/phonebook/search.html:70
 #, fuzzy
 msgid "Mozillians in"
 msgstr "Mozillians"
@@ -1258,7 +1176,7 @@ msgstr "Mozillians"
 msgid "Public"
 msgstr "Public"
 
-#: mozillians/jinja2/phonebook/profile.html:209 mozillians/users/models.py:158
+#: mozillians/jinja2/phonebook/profile.html:209 mozillians/users/models.py:153
 msgid "Bio"
 msgstr "Bio"
 
@@ -1314,12 +1232,91 @@ msgstr "%(hours)s hours behind your timezone."
 msgid "Same time zone as yours."
 msgstr "Same time zone as yours."
 
+#: mozillians/jinja2/phonebook/search.html:3
+#, fuzzy
+msgid "Search Results"
+msgstr "Search"
+
+#: mozillians/jinja2/phonebook/search.html:17
+msgid "You are currently searching public profiles."
+msgstr "You are currently searching public profiles."
+
+#: mozillians/jinja2/phonebook/search.html:19
+#, fuzzy, python-format
+msgid "View more results by <a href=\"%(login_url)s?next=%(next_url)s\" title=\"%(title)s\"> logging in</a>."
+msgstr "View more results by <a href=\"#\" class=\"browserid-login\" title=\"%(title)s\" data-next=\"%(next)s\"> logging in</a>."
+
+#: mozillians/jinja2/phonebook/search.html:19
+#, fuzzy
+msgid "Sign In"
+msgstr "Sign in"
+
+#: mozillians/jinja2/phonebook/search.html:25
+msgid "View more results when vouched."
+msgstr "View more results when vouched."
+
+#: mozillians/jinja2/phonebook/search.html:29 mozillians/jinja2/phonebook/search.html:36
+msgid "Search"
+msgstr "Search"
+
+#: mozillians/jinja2/phonebook/search.html:41
+msgid "Advanced Options"
+msgstr "Advanced Options"
+
+#: mozillians/jinja2/phonebook/search.html:59
+#, fuzzy
+msgid ""
+"<h2>Search for a Mozillian or a group</h2> <p> You can search for another Mozillian using their name, email, username and bio keywords or you can search for groups by name and group membership "
+"status. </p>"
+msgstr "<h2>Search For a Mozillian</h2> <p> You can search for another Mozillian using their name, email, or nickname. </p>"
+
+#: mozillians/jinja2/phonebook/search.html:77
+#, fuzzy
+msgid "Results"
+msgstr "Search"
+
+#: mozillians/jinja2/phonebook/search.html:80
+#, fuzzy, python-format
+msgid "%(count)s entry matching"
+msgid_plural "%(count)s entries matching"
+msgstr[0] "%(count)s group matching"
+msgstr[1] "%(count)s groups matching"
+
+#: mozillians/jinja2/phonebook/search.html:103
+#, fuzzy
+msgid "Sorry we cannot find a"
+msgstr "Sorry we cannot find any mozillians in"
+
+#: mozillians/jinja2/phonebook/search.html:105
+#, fuzzy
+msgid "group"
+msgstr "Groups"
+
+#: mozillians/jinja2/phonebook/search.html:108
+#, fuzzy
+msgid "or"
+msgstr "Sort"
+
+#: mozillians/jinja2/phonebook/search.html:111
+#, fuzzy
+msgid "profile"
+msgstr "Profile"
+
+#: mozillians/jinja2/phonebook/search.html:117
+#, fuzzy, python-format
+msgid "Maybe they're not a Mozillian yet? <a href=\"%(invite)s\">Invite this person</a> to create a profile."
+msgstr "The Mozillian you are looking for is not in the directory. Please check your spelling or <a href=\"%(invite)s\">invite this person</a> to create a profile."
+
+#: mozillians/jinja2/phonebook/search.html:124
+msgid "Need help? Contact a steward in a functional area!"
+msgstr "Need help? Contact a steward in a functional area!"
+
 #: mozillians/jinja2/phonebook/includes/photo_form.html:6
 #, fuzzy
 msgid "Profile photo"
 msgstr "Profile Photo"
 
-#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:167
+#: mozillians/jinja2/phonebook/includes/photo_form.html:19 mozillians/phonebook/forms.py:158
 #, fuzzy
 msgid "Remove Profile Photo"
 msgstr "Profile Photo"
@@ -1417,40 +1414,27 @@ msgstr "I acknowledge that deleting my account will make it tougher for me to sh
 msgid "Delete Profile"
 msgstr "Delete Profile"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:3
 #, fuzzy
 msgid "API privacy"
 msgstr "Privacy Policy"
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:16
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
 #, fuzzy, python-format
 msgid ""
-"The Phonebook offers an API (currently v1) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
-"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>."
+"The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
+"and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
 "The Phonebook offers an API to help authorize contributors and share profile data to other tools and sites like <a href=\"%(bugzilla_url)s\">Bugzilla</a> and the <a href=\"%(reps_url)s\">Mozilla "
 "Reps Portal</a>."
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:22
-#, fuzzy
-msgid "Privacy"
-msgstr "Privacy Policy"
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:32
-msgid "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
-msgstr "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:42
-#, fuzzy
-msgid "Update Privacy Settings"
-msgstr "Privacy Policy"
-
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:51
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
 msgstr "Developers can request API keys and manage existing ones using our dedicated API page."
 
-#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:52
-msgid "Manage API keys."
+#: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:19
+#, fuzzy
+msgid "Manage API keys"
 msgstr "Manage API keys."
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:16
@@ -1592,86 +1576,81 @@ msgstr "Vouches cannot be edited or retracted."
 msgid "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr "<a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 
-#: mozillians/phonebook/forms.py:89
-#, fuzzy
-msgid "Include non-vouched"
-msgstr "Vouched by"
-
-#: mozillians/phonebook/forms.py:110
+#: mozillians/phonebook/forms.py:101
 #, fuzzy
 msgid "Vouched"
 msgstr "Vouched by"
 
-#: mozillians/phonebook/forms.py:111
+#: mozillians/phonebook/forms.py:102
 #, fuzzy
 msgid "Unvouched"
 msgstr "Vouched by"
 
-#: mozillians/phonebook/forms.py:116
+#: mozillians/phonebook/forms.py:107
 msgid "Display only"
 msgstr "Display only"
 
-#: mozillians/phonebook/forms.py:125
+#: mozillians/phonebook/forms.py:116
 msgid "All timezones"
 msgstr "All timezones"
 
-#: mozillians/phonebook/forms.py:135
+#: mozillians/phonebook/forms.py:126
 #, fuzzy
 msgid "Username"
 msgstr "Suriname"
 
-#: mozillians/phonebook/forms.py:151
+#: mozillians/phonebook/forms.py:142
 msgid "This username is in use. Please try another."
 msgstr "This username is in use. Please try another."
 
-#: mozillians/phonebook/forms.py:156
+#: mozillians/phonebook/forms.py:147
 #, fuzzy
 msgid "Please use only alphanumeric characters"
 msgstr "Tags can only contain alphanumeric characters, dashes, spaces."
 
-#: mozillians/phonebook/forms.py:160
+#: mozillians/phonebook/forms.py:151
 #, fuzzy
 msgid "This username is not allowed, please choose another."
 msgstr "This username is reserved, please choose another."
 
-#: mozillians/phonebook/forms.py:263
+#: mozillians/phonebook/forms.py:257
 msgid "Please supply your location data."
 msgstr "Please supply your location data."
 
-#: mozillians/phonebook/forms.py:310
+#: mozillians/phonebook/forms.py:303
 msgid "When did you get involved with Mozilla?"
 msgstr "When did you get involved with Mozilla?"
 
-#: mozillians/phonebook/forms.py:367
+#: mozillians/phonebook/forms.py:354
 msgid "Email"
 msgstr "Email"
 
-#: mozillians/phonebook/forms.py:372
+#: mozillians/phonebook/forms.py:359
 msgid "Email is currently associated with another user."
 msgstr "Email is currently associated with another user."
 
-#: mozillians/phonebook/forms.py:395
+#: mozillians/phonebook/forms.py:407
 msgid "Provide a reason for vouching with relevant links"
 msgstr "Provide a reason for vouching with relevant links"
 
-#: mozillians/phonebook/forms.py:398
+#: mozillians/phonebook/forms.py:410
 msgid "You must enter a reason for vouching for this person."
 msgstr "You must enter a reason for vouching for this person."
 
-#: mozillians/phonebook/forms.py:404
+#: mozillians/phonebook/forms.py:416
 msgid "Personal message to be included in the invite email"
 msgstr "Personal message to be included in the invite email"
 
-#: mozillians/phonebook/forms.py:407
+#: mozillians/phonebook/forms.py:419
 #, fuzzy
 msgid "Recipient's email"
 msgstr "Recipient"
 
-#: mozillians/phonebook/forms.py:414
+#: mozillians/phonebook/forms.py:426
 msgid "You cannot invite someone who has already been vouched."
 msgstr "You cannot invite someone who has already been vouched."
 
-#: mozillians/phonebook/forms.py:438
+#: mozillians/phonebook/forms.py:450
 msgid "What would you like to report?"
 msgstr "What would you like to report?"
 
@@ -1746,38 +1725,38 @@ msgstr "Please confirm your Mozillian's account: %s"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 
-#: mozillians/phonebook/views.py:279
+#: mozillians/phonebook/views.py:278
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 
-#: mozillians/phonebook/views.py:284
+#: mozillians/phonebook/views.py:283
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "You changed your username; please note your profile URL has also changed."
 
-#: mozillians/phonebook/views.py:362
+#: mozillians/phonebook/views.py:360
 #, fuzzy
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Your account has been created."
 
-#: mozillians/phonebook/views.py:485
+#: mozillians/phonebook/views.py:385
 #, fuzzy, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%(email)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 
-#: mozillians/phonebook/views.py:506
+#: mozillians/phonebook/views.py:406
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 
-#: mozillians/phonebook/views.py:522
+#: mozillians/phonebook/views.py:422
 msgid "API Key generated successfully."
 msgstr "API Key generated successfully."
 
-#: mozillians/phonebook/views.py:537
+#: mozillians/phonebook/views.py:436
 msgid "API key successfully deleted."
 msgstr "API key successfully deleted."
 
-#: mozillians/phonebook/views.py:593
+#: mozillians/phonebook/views.py:461
 #, fuzzy
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "You've been invited to join Mozillians.org!Sign in and then you can create a profile."
@@ -1786,154 +1765,187 @@ msgstr "You've been invited to join Mozillians.org!Sign in and then you can crea
 msgid "Export"
 msgstr "Export"
 
-#: mozillians/users/models.py:145
+#: mozillians/users/models.py:140
 #, fuzzy
 msgid "Full Name"
 msgstr "First Name"
 
-#: mozillians/users/models.py:147
+#: mozillians/users/models.py:142
 #, fuzzy
 msgid "Name in local language"
 msgstr "Other languages:"
 
-#: mozillians/users/models.py:160
+#: mozillians/users/models.py:155
 msgid "IRC Nickname"
 msgstr "IRC Nickname"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:164
 msgid "Latitude"
 msgstr "Latitude"
 
-#: mozillians/users/models.py:170
+#: mozillians/users/models.py:165
 msgid "Longitude"
 msgstr "Longitude"
 
-#: mozillians/users/models.py:182
-msgid "Sites that can determine my vouched status"
-msgstr "Sites that can determine my vouched status"
-
-#: mozillians/users/models.py:183
-#, fuzzy
-msgid "All Community Sites"
-msgstr "Community Steward"
-
-#: mozillians/users/models.py:184
-#, fuzzy
-msgid "Only Mozilla Properties"
-msgstr "Mozillians"
-
-#: mozillians/users/models.py:187
-msgid "Allow Mozilla sites to access my profile data?"
-msgstr "Allow Mozilla sites to access my profile data?"
-
-#: mozillians/users/models.py:188
-msgid "Yes"
-msgstr "Yes"
-
-#: mozillians/users/models.py:188
-msgid "No"
-msgstr "No"
-
-#: mozillians/users/models.py:195
+#: mozillians/users/models.py:181
 msgid "T-Shirt"
 msgstr "T-Shirt"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:183
 #, fuzzy
 msgid "Fitted Small"
 msgstr "Fitted"
 
-#: mozillians/users/models.py:197
+#: mozillians/users/models.py:183
 #, fuzzy
 msgid "Fitted Medium"
 msgstr "Fitted"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:184
 #, fuzzy
 msgid "Fitted Large"
 msgstr "Fitted"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:184
 #, fuzzy
 msgid "Fitted X-Large"
 msgstr "Fitted"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:185
 msgid "Fitted XX-Large"
 msgstr "Fitted XX-Large"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:185
 msgid "Fitted XXX-Large"
 msgstr "Fitted XXX-Large"
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:186
 #, fuzzy
 msgid "Straight-cut Small"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:200
+#: mozillians/users/models.py:186
 #, fuzzy
 msgid "Straight-cut Medium"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:187
 #, fuzzy
 msgid "Straight-cut Large"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:201
+#: mozillians/users/models.py:187
 #, fuzzy
 msgid "Straight-cut X-Large"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:202
+#: mozillians/users/models.py:188
 #, fuzzy
 msgid "Straight-cut XX-Large"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:202
+#: mozillians/users/models.py:188
 #, fuzzy
 msgid "Straight-cut XXX-Large"
 msgstr "Straight-cut"
 
-#: mozillians/users/models.py:204
+#: mozillians/users/models.py:190
 msgid "What do you do for Mozilla?"
 msgstr "What do you do for Mozilla?"
 
-#: mozillians/users/models.py:208
+#: mozillians/users/models.py:194
 msgid "Link to your contribution story"
 msgstr "Link to your contribution story"
 
-#: mozillians/users/models.py:209
+#: mozillians/users/models.py:195
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 
-#: mozillians/users/models.py:534
+#: mozillians/users/models.py:520
 #, fuzzy
 msgid "You have been vouched on Mozillians.org"
 msgstr "This user is a vouched Mozillian."
 
-#: mozillians/users/models.py:636
+#: mozillians/users/models.py:574
 msgid "Reason for Vouching"
 msgstr "Reason for Vouching"
 
-#: mozillians/users/models.py:824
+#: mozillians/users/models.py:745
 #, fuzzy
 msgid "Account Username"
 msgstr "Suriname"
 
-#: mozillians/users/models.py:828
+#: mozillians/users/models.py:749
 #, fuzzy
 msgid "Account Type"
 msgstr "Create Account"
 
-#: mozillians/users/models.py:844
+#: mozillians/users/models.py:765
 msgid "You already have an account with this name and type."
 msgstr "You already have an account with this name and type."
 
-#: mozillians/users/models.py:886
+#: mozillians/users/models.py:798
 msgid "This language has already been selected."
 msgstr "This language has already been selected."
+
+#~ msgid "Sign in"
+#~ msgstr "Sign in"
+
+#~ msgid "API Version 1"
+#~ msgstr "API Version 1"
+
+#~ msgid "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
+#~ msgstr "API v1 is phasing out, please consider using API v2. For any support requests for API v1 file a bug <a href=\"%(bugzilla_request_url)s\">here</a>."
+
+#~ msgid "Your approved apps:"
+#~ msgstr "Your approved apps:"
+
+#, fuzzy
+#~ msgid "Beta Search"
+#~ msgstr "Search"
+
+#~ msgid "%(count)s Mozillian matching"
+#~ msgid_plural "%(count)s Mozillians matching"
+#~ msgstr[0] "%(count)s Mozillian matching"
+#~ msgstr[1] "%(count)s Mozillians matching"
+
+#~ msgid "Sorry, we cannot find a group or person related to \"%(query)s\"."
+#~ msgstr "Sorry, we cannot find a group or person related to \"%(query)s\"."
+
+#, fuzzy
+#~ msgid "Privacy"
+#~ msgstr "Privacy Policy"
+
+#~ msgid "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
+#~ msgstr "API Version 2, currently under testing, respects the defined per field privacy levels. These fields will become obsolete and eventually dropped along with the API Version 1."
+
+#, fuzzy
+#~ msgid "Update Privacy Settings"
+#~ msgstr "Privacy Policy"
+
+#, fuzzy
+#~ msgid "Include non-vouched"
+#~ msgstr "Vouched by"
+
+#~ msgid "Sites that can determine my vouched status"
+#~ msgstr "Sites that can determine my vouched status"
+
+#, fuzzy
+#~ msgid "All Community Sites"
+#~ msgstr "Community Steward"
+
+#, fuzzy
+#~ msgid "Only Mozilla Properties"
+#~ msgstr "Mozillians"
+
+#~ msgid "Allow Mozilla sites to access my profile data?"
+#~ msgstr "Allow Mozilla sites to access my profile data?"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
 
 #, fuzzy
 #~ msgid "Search location"
