@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-06-20 13:23-0700\n"
-"PO-Revision-Date: 2017-06-21 18:30+0000\n"
+"PO-Revision-Date: 2017-06-21 18:39+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Leszek Życzkowski <leszekz@gmail.com>\n"
 "Language: pl\n"
@@ -333,7 +333,7 @@ msgid ""
 "<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
 " <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
-"<p>Ponieważ nie masz autoryzacji, możesz nie mieć dostępu do prywatnych profili w katalogu. Jeśli chcesz uzyskać dostęp do prywatnego profilu, musisz się zalogować. Jeśli nie masz konta, <a "
+"<p>Ponieważ nie masz upoważnienia, możesz nie mieć dostępu do prywatnych profili w katalogu. Jeśli chcesz uzyskać dostęp do prywatnego profilu, musisz się zalogować. Jeśli nie masz konta, <a "
 "href=\"%(join_url)s\">przyłącz się</a> do nas. </p>"
 
 #: mozillians/jinja2/500.html:3
@@ -1181,43 +1181,40 @@ msgid "Advanced Options"
 msgstr "Opcje zaawansowane"
 
 #: mozillians/jinja2/phonebook/search.html:59
-#, fuzzy
 msgid ""
 "<h2>Search for a Mozillian or a group</h2> <p> You can search for another Mozillian using their name, email, username and bio keywords or you can search for groups by name and group membership "
 "status. </p>"
-msgstr "<h2>Szukaj Mozillian</h2> <p> Możesz wyszukać innych Mozillian, używając ich nazwy, adresu e-mail lub nicka. </p>"
+msgstr ""
+"<h2>Szukaj Mozillian lub grup</h2> <p> Możesz wyszukać innych Mozillian, używając ich nazwiska, adresu e-mail, nazwy użytkownika lub słów kluczowych w notce biograficznej, albo wyszukiwać grupy "
+"według ich nazw lub stanu członkostwa. </p>"
 
 #: mozillians/jinja2/phonebook/search.html:77
 msgid "Results"
 msgstr "Wyniki"
 
 #: mozillians/jinja2/phonebook/search.html:80
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)s entry matching"
 msgid_plural "%(count)s entries matching"
-msgstr[0] "Pasuje %(count)s grupa"
-msgstr[1] "Pasują %(count)s grupy"
-msgstr[2] "Pasuje %(count)s grup"
+msgstr[0] "Pasuje %(count)s wpis"
+msgstr[1] "Pasują %(count)s wpisy"
+msgstr[2] "Pasuje %(count)s wpisów"
 
 #: mozillians/jinja2/phonebook/search.html:103
-#, fuzzy
 msgid "Sorry we cannot find a"
-msgstr "Niestety, nie możemy znaleźć żadnego Mozillianina w"
+msgstr "Nie można odnaleźć"
 
 #: mozillians/jinja2/phonebook/search.html:105
-#, fuzzy
 msgid "group"
-msgstr "Grupa"
+msgstr "grupy"
 
 #: mozillians/jinja2/phonebook/search.html:108
-#, fuzzy
 msgid "or"
-msgstr "Sortuj"
+msgstr "lub"
 
 #: mozillians/jinja2/phonebook/search.html:111
-#, fuzzy
 msgid "profile"
-msgstr "Profil"
+msgstr "profilu"
 
 #: mozillians/jinja2/phonebook/search.html:117
 #, python-format
@@ -1321,22 +1318,22 @@ msgid "API privacy"
 msgstr "API prywatności"
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:5
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
 "and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
-"Katalog społeczności dostarcza API (interfejs programowania aplikacji) – obecnie w wersji 1 – umożliwiający łatwe autoryzowanie użytkowników i współdzielenie danych profilu z innymi narzędziami i "
-"witrynami, takimi jak<a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> i portal <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps</a>."
+"Katalog społeczności dostarcza API (interfejs programowania aplikacji) — obecnie w wersji 2 — umożliwiający łatwe upoważnianie użytkowników i udostępnianie danych profilów innym narzędziom i "
+"stronom, takim jak <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> i portal <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps</a>. API korzysta z poziomów "
+"prywatności określonych dla każdego pola."
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
 msgstr "Programiści mogą tworzyć nowe klucze API i zarządzać istniejącymi za pomocą specjalnej strony."
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:19
-#, fuzzy
 msgid "Manage API keys"
-msgstr "Zarządzaj kluczami API."
+msgstr "Zarządzaj kluczami API"
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_groups.html:16
 msgid "Groups are a community of Mozillians with some relation to each other. This can be an interest, team, project, product or sub-community."
@@ -1653,7 +1650,7 @@ msgstr "Nazwa w języku lokalnym"
 
 #: mozillians/users/models.py:155
 msgid "IRC Nickname"
-msgstr "Nick IRC"
+msgstr "Pseudonim IRC"
 
 #: mozillians/users/models.py:164
 msgid "Latitude"
