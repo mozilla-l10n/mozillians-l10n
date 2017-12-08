@@ -1,9 +1,9 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 06:23-0800\n"
+"POT-Creation-Date: 2017-12-08 06:45-0800\n"
 "PO-Revision-Date: 2017-11-06 21:08+0000\n"
 "Last-Translator: Marko Andrejić <marko.andrejic93@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Pontoon\n"
 "X-POOTLE-MTIME: 1432743931.0\n"
 
-#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:79
+#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:78
 msgid "Private"
 msgstr "Приватност"
 
@@ -31,75 +31,99 @@ msgstr "Морате имате јамство да бисте наставил�
 msgid "Visible to:"
 msgstr "Видљиво:"
 
-#: mozillians/groups/forms.py:20
+#: mozillians/groups/forms.py:21
 msgid "Name A-Z"
 msgstr "Име А-Ш"
 
-#: mozillians/groups/forms.py:21
+#: mozillians/groups/forms.py:22
 msgid "Most Members"
 msgstr "Већина чланова"
 
-#: mozillians/groups/forms.py:22
+#: mozillians/groups/forms.py:23
 msgid "Fewest Members"
 msgstr "Најмање чланова"
 
-#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:50 mozillians/groups/forms.py:77
 msgid "The group must have at least one curator."
 msgstr "Група мора имати барем једног куратора."
 
-#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#: mozillians/groups/forms.py:53 mozillians/groups/forms.py:139
 msgid "Start typing the name/email/username of a vouched Mozillian."
 msgstr "Крените куцати име /email/username гарантованог Мозилијана."
 
-#: mozillians/groups/forms.py:102
+#: mozillians/groups/forms.py:83
+msgid "Only staff members can become access group curators"
+msgstr ""
+
+#: mozillians/groups/forms.py:122
 msgid "The maximum expiration date for a group cannot exceed two years."
 msgstr "Максимални датум истека групе не може бити дужи од две године."
 
-#: mozillians/groups/forms.py:131
+#: mozillians/groups/forms.py:164
 msgid "You need to be the curator of this group before inviting someone to join."
 msgstr "Морате бити куратор ове групе пре него што позовете некога да се придружи."
 
-#: mozillians/groups/forms.py:179
+#: mozillians/groups/forms.py:168
+msgid "Only staff and NDA members are allowed to be invited"
+msgstr ""
+
+#: mozillians/groups/forms.py:219
 msgid "You need to be the administrator of this group in order to edit this section."
 msgstr "Морате бити администратор ове групе како бисте изменили ову секцију."
 
-#: mozillians/groups/forms.py:209
+#: mozillians/groups/forms.py:254
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "Морате навести критеријуме или променити избор прихватања."
 
-#: mozillians/groups/forms.py:223
+#: mozillians/groups/forms.py:261
+msgid "An access group cannot be of type Open."
+msgstr ""
+
+#: mozillians/groups/forms.py:272
 msgid "Select Group Type"
 msgstr "Одабери тип групе"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:105
+#: mozillians/groups/forms.py:289
+msgid "You do not have the permissions to provision an access group."
+msgstr ""
+
+#: mozillians/groups/forms.py:294
+msgid "An access group must be of type Reviewed or Closed."
+msgstr ""
+
+#: mozillians/groups/forms.py:310 mozillians/phonebook/forms.py:105
 msgid "All"
 msgstr "Сви"
 
-#: mozillians/groups/forms.py:231 mozillians/jinja2/groups/group.html:95
+#: mozillians/groups/forms.py:311 mozillians/jinja2/groups/group.html:95
 msgid "Members"
 msgstr "Чланови"
 
-#: mozillians/groups/forms.py:232
+#: mozillians/groups/forms.py:312
 msgid "Pending Members"
 msgstr "Чланови на чекању"
 
-#: mozillians/groups/forms.py:233
+#: mozillians/groups/forms.py:313
 msgid "Pending Terms"
 msgstr "Услови на чекању"
 
-#: mozillians/groups/forms.py:234
+#: mozillians/groups/forms.py:314
 msgid "Renewals"
 msgstr "Обнављања"
 
-#: mozillians/groups/forms.py:245
+#: mozillians/groups/forms.py:325
 msgid "I accept these terms."
 msgstr "Прихватам услове."
 
-#: mozillians/groups/forms.py:246
+#: mozillians/groups/forms.py:326
 msgid "I don't accept these terms."
 msgstr "Не прихватам услове."
 
-#: mozillians/groups/forms.py:258
+#: mozillians/groups/forms.py:345
+msgid "Group must be of type Reviewed or Closed for Access Groups."
+msgstr ""
+
+#: mozillians/groups/forms.py:357
 msgid "Group type"
 msgstr "Тип групе"
 
@@ -135,67 +159,76 @@ msgstr "Прегледано"
 msgid "Closed"
 msgstr "Затворено"
 
-#: mozillians/groups/models.py:189 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
+#: mozillians/groups/models.py:187 mozillians/jinja2/groups/includes/group_edit_access.html:84
+#, fuzzy
+msgid "Access Group"
+msgstr "Приступ"
+
+#: mozillians/groups/models.py:188
+msgid "Tag"
+msgstr ""
+
+#: mozillians/groups/models.py:196 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Опис"
 
-#: mozillians/groups/models.py:194 mozillians/jinja2/groups/group.html:73
+#: mozillians/groups/models.py:201 mozillians/jinja2/groups/group.html:73
 msgid "IRC Channel"
 msgstr "IRC канал"
 
-#: mozillians/groups/models.py:195
+#: mozillians/groups/models.py:202
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "IRC канал где се расправља о овој групи (опционо)."
 
-#: mozillians/groups/models.py:199 mozillians/jinja2/groups/group.html:83
+#: mozillians/groups/models.py:206 mozillians/jinja2/groups/group.html:83
 msgid "Website"
 msgstr "Веб сајт"
 
-#: mozillians/groups/models.py:200
+#: mozillians/groups/models.py:207
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "URL адреса веб сајта са додатним информацијама о овој групи (опционо)."
 
-#: mozillians/groups/models.py:204 mozillians/jinja2/groups/group.html:90
+#: mozillians/groups/models.py:211 mozillians/jinja2/groups/group.html:90
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:205
+#: mozillians/groups/models.py:212
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "URL адреса wiki странице са додатним информацијама о овој групи (опционо)."
 
-#: mozillians/groups/models.py:208
+#: mozillians/groups/models.py:215
 msgid "Accepting new members"
 msgstr "Прихвата нове чланове"
 
-#: mozillians/groups/models.py:216 mozillians/jinja2/groups/group.html:66
+#: mozillians/groups/models.py:223 mozillians/jinja2/groups/group.html:66
 msgid "New Member Criteria"
 msgstr "Нови критеријум члана"
 
-#: mozillians/groups/models.py:217
+#: mozillians/groups/models.py:224
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "Одредите критеријуме које ћете користити да одлучите да ли ћете прихватити захтев за чланство."
 
-#: mozillians/groups/models.py:222
+#: mozillians/groups/models.py:229
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "Да ли је група приказана на корисничком интерфејсу (у списковима групе, претрази, итд.). Углавном намењено за одржавање системских група попут \"особље\" од затрпавања интерфејса."
 
-#: mozillians/groups/models.py:232
+#: mozillians/groups/models.py:239
 msgid "Terms"
 msgstr "Услови"
 
-#: mozillians/groups/models.py:236
+#: mozillians/groups/models.py:243
 msgid "Invalidation days"
 msgstr "Дани за поништење"
 
-#: mozillians/groups/models.py:244
+#: mozillians/groups/models.py:251
 msgid "Please enter any additional text for the invitation email"
 msgstr "Молимо унесите било који додатни текст за позивницу преко е-поште"
 
-#: mozillians/groups/models.py:415 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:426 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "Позиваоц"
 
-#: mozillians/groups/models.py:417 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:428 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "Откупитељ"
 
@@ -227,80 +260,80 @@ msgstr "Статус групе Мозилијана \"%s\" је промење�
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Уклоњен из групе \"%s\""
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:260
 msgid "This group does not allow members to remove themselves."
 msgstr "Ова група не дозвољава члановима да се сами уклоне."
 
-#: mozillians/groups/views.py:267
+#: mozillians/groups/views.py:269
 msgid "The group needs at least one curator."
 msgstr "Група мора имати барем једног куратора."
 
-#: mozillians/groups/views.py:276
+#: mozillians/groups/views.py:278
 msgid "You have been removed from this group."
 msgstr "Уклоњени сте из ове групе."
 
-#: mozillians/groups/views.py:278
+#: mozillians/groups/views.py:280
 msgid "The group member has been removed."
 msgstr "Члан групе је уклоњен."
 
-#: mozillians/groups/views.py:307
+#: mozillians/groups/views.py:309
 msgid "This user has not requested membership in this group."
 msgstr "Овај корисник није захтевао чланство за ову групу."
 
-#: mozillians/groups/views.py:310
+#: mozillians/groups/views.py:312
 msgid "This user is already a member of this group."
 msgstr "Корисник је већ члан ове групе."
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:319
 msgid "The membership of the user has been renewed."
 msgstr "Чланство корисника је обновљено."
 
-#: mozillians/groups/views.py:319
+#: mozillians/groups/views.py:321
 msgid "This user has been added as a member of this group."
 msgstr "Корисник је додат као члан ове групе."
 
-#: mozillians/groups/views.py:364
+#: mozillians/groups/views.py:366
 msgid "You are already in this group."
 msgstr "Већ се налазите у овој групи."
 
-#: mozillians/groups/views.py:366
+#: mozillians/groups/views.py:368
 msgid "Your request to join this group is still pending."
 msgstr "Ваш захтев за улазак у ову групу је још увек на чекању."
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:370
 msgid "This group is not accepting requests to join."
 msgstr "Ова група не прихвата захтеве за улаз."
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:374
 msgid "You have been added to this group."
 msgstr "Додати сте у ову групу."
 
-#: mozillians/groups/views.py:377
+#: mozillians/groups/views.py:379
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "Ваш захтев за чланство је послато кураторима групе."
 
-#: mozillians/groups/views.py:407
+#: mozillians/groups/views.py:409
 msgid "You must be a curator to delete a group"
 msgstr "Морате бити куратор да бисте избрисали групу"
 
-#: mozillians/groups/views.py:411
+#: mozillians/groups/views.py:413
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "Не можете обрисати групу ако је неко други у њој."
 
-#: mozillians/groups/views.py:415
+#: mozillians/groups/views.py:417
 #, python-format
 msgid "Group %s has been deleted"
 msgstr "Група %s је обрисана"
 
-#: mozillians/groups/views.py:440
+#: mozillians/groups/views.py:442
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Морате бити куратор или администратор да бисте изменили групу"
 
-#: mozillians/groups/views.py:562
+#: mozillians/groups/views.py:566
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "Позивница за {0} је успешно опозвана."
 
-#: mozillians/groups/views.py:603
+#: mozillians/groups/views.py:607
 msgid "Invitation to {0} has been sent successfully."
 msgstr "Позивница за {0} је успешно послата."
 
@@ -328,8 +361,8 @@ msgstr ""
 #: mozillians/jinja2/404.html:25
 #, python-format
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
-" <a href=\"%(join_url)s\">join us</a>. </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
 "<p> Из разлога што нисте аутентификани, не можете приступити приватним профилима у именику. Требало би да се пријавите у случају да покушавате приступити приватном профилу. Уколико немате налог, <a "
 "href=\"%(join_url)s\">придружите нам се</a>. </p>"
@@ -349,9 +382,9 @@ msgstr "Jitterbeasts, Matthew Inman са сајта The Oatmeal"
 #: mozillians/jinja2/500.html:15
 #, python-format
 msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us know"
-" what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more about "
-"Mozillians. Sorry about this! </p>"
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
 msgstr ""
 "<p> Жао нам је, али смо наишли на неочекивану грешку и Ваш захтев не може да се обради. Можете покушати касније освежити Ваш прегледач или можете <a href=\"%(bugzilla_url)s\"> пријавити грешку</a> "
 "рећи нам шта се догодило и ми ћемо одмах покушати решити проблем. </p> <p> Ако освежавање странице није успело, можете <a href=\"%(home_url)s\">отићи на почетну страницу Мозилијана</a> како бисте "
@@ -507,7 +540,7 @@ msgstr "Заједничке вештине чланова"
 msgid "Community Steward"
 msgstr "Надзорник заједнице"
 
-#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:121
 msgid "Curators"
 msgstr "Куратори"
 
@@ -600,11 +633,11 @@ msgstr[2] "%(num)s чланова"
 msgid "Create Group"
 msgstr "Направи групу"
 
-#: mozillians/jinja2/groups/index_groups.html:48
+#: mozillians/jinja2/groups/index_groups.html:57
 msgid "Cancel"
 msgstr "Откажи"
 
-#: mozillians/jinja2/groups/index_groups.html:49
+#: mozillians/jinja2/groups/index_groups.html:58
 msgid "Save"
 msgstr "Сними"
 
@@ -642,32 +675,37 @@ msgstr "Прегледај услове"
 msgid "Group Type"
 msgstr "Тип групе"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#: mozillians/jinja2/groups/includes/group_edit_access.html:73
 msgid "Update Type"
 msgstr "Ажурирај тип"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#: mozillians/jinja2/groups/includes/group_edit_access.html:111
+#, fuzzy
+msgid "Update Access"
+msgstr "Ажурирај тип"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:137
 msgid "Update Curators"
 msgstr "Ажурирај кураторе"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:103
+#: mozillians/jinja2/groups/includes/group_edit_access.html:146
 msgid "Terms & Expiration"
 msgstr "Услови и трајање"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+#: mozillians/jinja2/groups/includes/group_edit_access.html:153
 msgid "New members should accept terms"
 msgstr "Нови чланови требају прихватити услове"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:121 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#: mozillians/jinja2/groups/includes/group_edit_access.html:164 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
 #, python-format
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "Користите <a href=\"%(url)s\">Markdown</a> за задебљана и коса слова, листе и везе."
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:134
+#: mozillians/jinja2/groups/includes/group_edit_access.html:177
 msgid "Membership can expire"
 msgstr "Чланство може да истекне"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:153
+#: mozillians/jinja2/groups/includes/group_edit_access.html:196
 msgid "Update Terms & Expiration"
 msgstr "Ажурирај услове"
 
@@ -761,9 +799,8 @@ msgid ""
 "href=\"%(wiki_get_involved_url)s\"> get involved</a>. </p>"
 msgstr ""
 "<p> Мозилијани су људи који волонтирају да унапреде Mozilla мисију. Они су посвећени промовисању отворености, иновације и могућностима на интернету и долазе из језгра наше заједице. </p> <p> Овај "
-"директоријум је начин да Мозилијани лакше сазнају ко учествује, шта раде и како да се повежу са њима. Такође вам дозвољава да примате обавештења од Mozilla-е. </p> <p> <a "
-"href=\"%(wiki_roadmap_url)s\">Ове могућности</a> као и друге су тренутно у развоју. Ако бисте желели да нам помогнете око њих, сазнајте како можете <a href=\"%(wiki_get_involved_url)s\"> да се "
-"прикључите</a>. </p>"
+"директоријум је начин да Мозилијани лакше сазнају ко учествује, шта раде и како да се повежу са њима. Такође вам дозвољава да примате обавештења од Mozilla-е. </p> <p> <a href=\"%(wiki_roadmap_url)s"
+"\">Ове могућности</a> као и друге су тренутно у развоју. Ако бисте желели да нам помогнете око њих, сазнајте како можете <a href=\"%(wiki_get_involved_url)s\"> да се прикључите</a>. </p>"
 
 #: mozillians/jinja2/phonebook/about.html:31
 msgid "Privacy First"
@@ -977,14 +1014,17 @@ msgstr "О сајту Мозилијани"
 
 #: mozillians/jinja2/phonebook/invite.html:12
 #, python-format
-msgid "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
-msgstr "Ако желите да позовете новог мозилијана, молимо Вас попуните форму. <strong>Напомена</strong>: Позивање новог корисника је као јамчење. <a href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgstr ""
+"Ако желите да позовете новог мозилијана, молимо Вас попуните форму. <strong>Напомена</strong>: Позивање новог корисника је као јамчење. <a href=\"%(vouching_url)s\">Прочитајте више о јамчењу.</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:18
 #, python-format
 msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your profile"
-" and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about vouching.</a>"
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
 msgstr ""
 "Недавно смо променили критеријуме за могућност позивања и јамчења других мозилијана. Ако желите да користите ову страницу, морате да добијете %(vouch_threshold)s јамчења. Питајте некога да посети "
 "профил и јамчи за вас. Онда се вратите овамо када имате %(vouch_threshold)s јамчења и онда ћете моћи да позивате друге људе у директоријум. <a href=\"%(vouching_url)s\">Сазнајте више о јамчењу.</a>"
@@ -1047,9 +1087,9 @@ msgid ""
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
 "<p> Ваш профил чека јамство. Када је неко јамчио за вас, моћи ћете да видите профиле свих мозилијана, да се придружите групи и приступите додатном садржају на другим сајтовима као мозилијан. <a "
-"href=\"%(vouching_url)s\">Сазнајте више о јамчењу</a>. </p> <p> Пошаљите везу испод некоме ко је упознат са вашим доприносима и затражите да јамче за  вас: <br/> <em class=\"underline\" title=\"Your"
-" profile URL\">%(profile_url)s</em> </p> <p> Ако сте нови у Mozilla заједници, <a class=\"button\" href=\"%(contribute_url)s\">прикључите се</a> </p> <p>Шансе за јамство се повећавају када завршите "
-"задатке у вашој заједници.</p>"
+"href=\"%(vouching_url)s\">Сазнајте више о јамчењу</a>. </p> <p> Пошаљите везу испод некоме ко је упознат са вашим доприносима и затражите да јамче за  вас: <br/> <em class=\"underline\" title="
+"\"Your profile URL\">%(profile_url)s</em> </p> <p> Ако сте нови у Mozilla заједници, <a class=\"button\" href=\"%(contribute_url)s\">прикључите се</a> </p> <p>Шансе за јамство се повећавају када "
+"завршите задатке у вашој заједници.</p>"
 
 #: mozillians/jinja2/phonebook/profile.html:50
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
@@ -1089,7 +1129,7 @@ msgstr "Мозилијан"
 msgid "Public"
 msgstr "Јавно"
 
-#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:157
+#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:156
 msgid "Bio"
 msgstr "Биографија"
 
@@ -1105,37 +1145,37 @@ msgstr "(рецензија услова на чекању)"
 msgid "Websites"
 msgstr "Веб сајтови"
 
-#: mozillians/jinja2/phonebook/profile.html:309
+#: mozillians/jinja2/phonebook/profile.html:308
 msgid "Alternate Contact Identities"
 msgstr "Алтернативни идентитети контакта"
 
-#: mozillians/jinja2/phonebook/profile.html:327
+#: mozillians/jinja2/phonebook/profile.html:326
 msgid "Vouched By"
 msgstr "Јамчен од стране"
 
-#: mozillians/jinja2/phonebook/profile.html:340
+#: mozillians/jinja2/phonebook/profile.html:339
 msgid "Unknown Voucher"
 msgstr "Непознат јемац"
 
-#: mozillians/jinja2/phonebook/profile.html:343
+#: mozillians/jinja2/phonebook/profile.html:342
 msgid "Legacy vouch."
 msgstr "Наслеђено јамство."
 
-#: mozillians/jinja2/phonebook/profile.html:354
+#: mozillians/jinja2/phonebook/profile.html:353
 msgid "Vouchees"
 msgstr "Јамчени"
 
-#: mozillians/jinja2/phonebook/profile.html:380
+#: mozillians/jinja2/phonebook/profile.html:379
 #, python-format
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s сати испред временске зоне."
 
-#: mozillians/jinja2/phonebook/profile.html:383
+#: mozillians/jinja2/phonebook/profile.html:382
 #, python-format
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s сати иза временске зоне."
 
-#: mozillians/jinja2/phonebook/profile.html:386
+#: mozillians/jinja2/phonebook/profile.html:385
 msgid "Same time zone as yours."
 msgstr "У истој временској зони као и ви."
 
@@ -1590,49 +1630,49 @@ msgstr "Хвала вам што нам помажете да унапредим
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Хвала вам на јамству за колегу Мозилијана! Овај корисник је сада јамчен!"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:291
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "Ваша регистрација је завршена. Посетите страницу {0} да додате додатне информације на ваш профил."
 
-#: mozillians/phonebook/views.py:295
+#: mozillians/phonebook/views.py:296
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Променили сте своје корисничко име; имајте у виду да је и URL профила такође промењен."
 
-#: mozillians/phonebook/views.py:328
+#: mozillians/phonebook/views.py:329
 msgid "Identity {0} successfully deleted."
 msgstr "Идентитет {0} је успешно обрисан."
 
-#: mozillians/phonebook/views.py:333
+#: mozillians/phonebook/views.py:334
 msgid "Sorry the requested Identity cannot be deleted."
 msgstr "Жао нам је, захтевани идентитет не може бити обрисан."
 
-#: mozillians/phonebook/views.py:354
+#: mozillians/phonebook/views.py:355
 msgid "Primary Contact Identity successfully updated."
 msgstr "Примарни идентитет контакта је успешно ажуриран."
 
-#: mozillians/phonebook/views.py:375
+#: mozillians/phonebook/views.py:376
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Ваш налог је обрисан. Хвала вам што сте били Мозилијан!"
 
-#: mozillians/phonebook/views.py:400
+#: mozillians/phonebook/views.py:401
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s је позван у Мозилијане. Примиће е-пошту са упуствима како да се учлане. Можете позвати још Мозилијана ако желите."
 
-#: mozillians/phonebook/views.py:421
+#: mozillians/phonebook/views.py:422
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s позивница за Mozillians је одбијена. Моћете позвати %s поново ако желите."
 
-#: mozillians/phonebook/views.py:437
+#: mozillians/phonebook/views.py:438
 msgid "API Key generated successfully."
 msgstr "API кључ је успешно генерисан."
 
-#: mozillians/phonebook/views.py:451
+#: mozillians/phonebook/views.py:452
 msgid "API key successfully deleted."
 msgstr "API кључ је успешно обрисан."
 
-#: mozillians/phonebook/views.py:476
+#: mozillians/phonebook/views.py:477
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Позвани сте да се придружите Mozillians.org! Пријавите се и онда можете креирати профил."
 
@@ -1640,111 +1680,111 @@ msgstr "Позвани сте да се придружите Mozillians.org! П�
 msgid "Export"
 msgstr "Извези"
 
-#: mozillians/users/models.py:144
+#: mozillians/users/models.py:143
 msgid "Full Name"
 msgstr "Пуно име"
 
-#: mozillians/users/models.py:146
+#: mozillians/users/models.py:145
 msgid "Name in local language"
 msgstr "Назив на локалном језику"
 
-#: mozillians/users/models.py:159
+#: mozillians/users/models.py:158
 msgid "IRC Nickname"
 msgstr "IRC надимак"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:167
 msgid "Latitude"
 msgstr "Ширина"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:168
 msgid "Longitude"
 msgstr "Дужина"
 
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:184
 msgid "T-Shirt"
 msgstr "Мајица"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Small"
 msgstr "Уз тело, мала (S)"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Medium"
 msgstr "Уз тело, средња (M)"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted Large"
 msgstr "Уз тело, велика (L)"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted X-Large"
 msgstr "Уз тело, велика (XL)"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XX-Large"
 msgstr "Уз тело, велика (XXL)"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XXX-Large"
 msgstr "Уз тело, велика (XXXL)"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Small"
 msgstr "Обична, мала (S)"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Medium"
 msgstr "Обична, средња (М)"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut Large"
 msgstr "Обична, велика (L)"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut X-Large"
 msgstr "Обична, велика (XL)"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XX-Large"
 msgstr "Обична, велика (XXL)"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XXX-Large"
 msgstr "Обична, велика (XXXL)"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:193
 msgid "What do you do for Mozilla?"
 msgstr "Шта радите у Mozilla-и?"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:197
 msgid "Link to your contribution story"
 msgstr "Веза ка вашој причи о доприносу"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:198
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "Ако сте направили нешто јавно што говори о томе како сте постали Мозилијан, наведите ту везу овде."
 
-#: mozillians/users/models.py:571
+#: mozillians/users/models.py:595
 msgid "You have been vouched on Mozillians.org"
 msgstr "Сада сте јамчени на Mozillians.org"
 
-#: mozillians/users/models.py:777
+#: mozillians/users/models.py:801
 msgid "Reason for Vouching"
 msgstr "Разлог за јамчење"
 
-#: mozillians/users/models.py:932
+#: mozillians/users/models.py:956
 msgid "Account Username"
 msgstr "Корисничко име налога"
 
-#: mozillians/users/models.py:936
+#: mozillians/users/models.py:960
 msgid "Account Type"
 msgstr "Тип налога"
 
-#: mozillians/users/models.py:952
+#: mozillians/users/models.py:976
 msgid "You already have an account with this name and type."
 msgstr "Већ имате налог са овим именом и типом."
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:1009
 msgid "This language has already been selected."
 msgstr "Овај језик је већ одабран."
 
@@ -1890,11 +1930,11 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Употребите ову форму да бисте направили групу на Mozillians.org. Пре него што направите групу, покушајте да је претражите. Можда ју је неко други већ креирао."
 
 #~ msgid ""
-#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
-#~ "requests to join."
+#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email "
+#~ "with requests to join."
 #~ msgstr ""
-#~ "Креирањем групе ћете постати њен куратор, имаћете приступ подешавањима групе и моћи ћете одлучити ко ће јој се придружи. Ако подесите групу тако да захтева одобрење чланства, добићете дневно е-пошту"
-#~ " са захтевима за улаз."
+#~ "Креирањем групе ћете постати њен куратор, имаћете приступ подешавањима групе и моћи ћете одлучити ко ће јој се придружи. Ако подесите групу тако да захтева одобрење чланства, добићете дневно е-"
+#~ "пошту са захтевима за улаз."
 
 #~ msgid "Submit changes"
 #~ msgstr "Достави измене"
@@ -1937,7 +1977,8 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Измените овде профил и изаберите ко може да види његове појединости. Можете изабрати делове профила да буду јавни, али будите опрезни у дељењу контакт информација."
 
 #~ msgid "Our community directory is for Mozillians who are 13 and older. We take safety issues very seriously, especially with minors. If you are under 13, please don't create an account."
-#~ msgstr "Наш директоријум заједнице је намењен Мозилијанима који имају 13 или више година. Питања безбедности схватамо веома озбиљно, поготово са младима. Ако сте млађи од 13 година, не правите налог."
+#~ msgstr ""
+#~ "Наш директоријум заједнице је намењен Мозилијанима који имају 13 или више година. Питања безбедности схватамо веома озбиљно, поготово са младима. Ако сте млађи од 13 година, не правите налог."
 
 #~ msgid "Make all of my profile fields visible to:"
 #~ msgstr "Омогући да сва поља мог профила да буду видљива:"
@@ -1976,13 +2017,13 @@ msgstr "Овај језик је већ одабран."
 #~ msgstr "Остали сајтови"
 
 #~ msgid ""
-#~ "Take a look at the list of the <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To"
-#~ " get started, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a id=\"services-development-forum\" "
+#~ "Take a look at the list of the <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy "
+#~ "team. To get started, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a id=\"services-development-forum\" "
 #~ "href=\"%(dev_form_url)s\"> development forum</a>."
 #~ msgstr ""
-#~ "Погледајте листу <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API метода које смо направили доступним</a>. Да бисте користили овај API, потребно је да добијете одобрење од нашег тима "
-#~ "за приватност. Да бисте почели, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">направите bug</a>. Ако имате било каква питања, пишите нам на нашем <a id=\"services-"
-#~ "development-forum\" href=\"%(dev_form_url)s\"> форуму за програмере</a>."
+#~ "Погледајте листу <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API метода које смо направили доступним</a>. Да бисте користили овај API, потребно је да добијете одобрење од нашег "
+#~ "тима за приватност. Да бисте почели, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">направите bug</a>. Ако имате било каква питања, пишите нам на нашем <a id="
+#~ "\"services-development-forum\" href=\"%(dev_form_url)s\"> форуму за програмере</a>."
 
 #~ msgid "Change Your Email"
 #~ msgstr "Промените Вашу е-пошту"
@@ -1997,8 +2038,8 @@ msgstr "Овај језик је већ одабран."
 #~ "<p> View Mozillians, Stewards and information for any functional area. Find out who works on what and how you can help out. </p> <a href=\"%(areas_url)s\">Browse functional areas <i class=\"icon-"
 #~ "arrow-right\"></i></a>"
 #~ msgstr ""
-#~ "<p> Погледајте Мозилијане, управнике и информације за било коју функционалну област. Сазнајте ко на чему ради и како можете помоћи. </p> <a href=\"%(areas_url)s\">Прегледајте функционалне области <i"
-#~ " class=\"icon-arrow-right\"></i></a>"
+#~ "<p> Погледајте Мозилијане, управнике и информације за било коју функционалну област. Сазнајте ко на чему ради и како можете помоћи. </p> <a href=\"%(areas_url)s\">Прегледајте функционалне "
+#~ "области <i class=\"icon-arrow-right\"></i></a>"
 
 #~ msgid "Province/State"
 #~ msgstr "Покрајина/Држава"
@@ -2058,7 +2099,8 @@ msgstr "Овај језик је већ одабран."
 #~ msgid "Start typing to add a group (example: Marketing, Support, WebDev, Thunderbird)"
 #~ msgstr "Почните куцати како бисте додали групу (нпр.: Маркетинг, Подршка, WebDev, Thunderbird)"
 
-#~ msgid "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
+#~ msgid ""
+#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
 #~ msgstr ""
 #~ "<label for=\"id_optin\">Не смета ми Ваше руковање ове информације као што сте објаснили у Вашој <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">Полиси о "
 #~ "приватности</a>.</label>"

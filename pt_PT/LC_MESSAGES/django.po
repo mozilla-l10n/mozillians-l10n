@@ -1,10 +1,10 @@
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 06:23-0800\n"
+"POT-Creation-Date: 2017-12-08 06:45-0800\n"
 "PO-Revision-Date: 2017-11-27 18:51+0000\n"
 "Last-Translator: Alberto Castro <albertdcastro@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pontoon\n"
 
-#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:79
+#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:78
 msgid "Private"
 msgstr "Privado"
 
@@ -31,75 +31,99 @@ msgstr "Tem de ser certificado para continuar."
 msgid "Visible to:"
 msgstr "Visível para:"
 
-#: mozillians/groups/forms.py:20
+#: mozillians/groups/forms.py:21
 msgid "Name A-Z"
 msgstr "Nome A-Z"
 
-#: mozillians/groups/forms.py:21
+#: mozillians/groups/forms.py:22
 msgid "Most Members"
 msgstr "Mais membros"
 
-#: mozillians/groups/forms.py:22
+#: mozillians/groups/forms.py:23
 msgid "Fewest Members"
 msgstr "Menos membros"
 
-#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:50 mozillians/groups/forms.py:77
 msgid "The group must have at least one curator."
 msgstr "O grupo tem de ter, pelo menos, um curador."
 
-#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#: mozillians/groups/forms.py:53 mozillians/groups/forms.py:139
 msgid "Start typing the name/email/username of a vouched Mozillian."
 msgstr "Comece a escrever o nome/email/nome de utilizador de um Mozillian certificado."
 
-#: mozillians/groups/forms.py:102
+#: mozillians/groups/forms.py:83
+msgid "Only staff members can become access group curators"
+msgstr ""
+
+#: mozillians/groups/forms.py:122
 msgid "The maximum expiration date for a group cannot exceed two years."
 msgstr "A data máxima de expiração para um grupo não pode exceder dois anos."
 
-#: mozillians/groups/forms.py:131
+#: mozillians/groups/forms.py:164
 msgid "You need to be the curator of this group before inviting someone to join."
 msgstr "Precisa de ser um curador deste grupo antes de convidar alguém para se juntar."
 
-#: mozillians/groups/forms.py:179
+#: mozillians/groups/forms.py:168
+msgid "Only staff and NDA members are allowed to be invited"
+msgstr ""
+
+#: mozillians/groups/forms.py:219
 msgid "You need to be the administrator of this group in order to edit this section."
 msgstr "Precisa de ser o administrador deste grupo para poder editar esta secção."
 
-#: mozillians/groups/forms.py:209
+#: mozillians/groups/forms.py:254
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "Deve especificar os critérios ou alterar a seleção de aceitação."
 
-#: mozillians/groups/forms.py:223
+#: mozillians/groups/forms.py:261
+msgid "An access group cannot be of type Open."
+msgstr ""
+
+#: mozillians/groups/forms.py:272
 msgid "Select Group Type"
 msgstr "Selecionar tipo do grupo"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:105
+#: mozillians/groups/forms.py:289
+msgid "You do not have the permissions to provision an access group."
+msgstr ""
+
+#: mozillians/groups/forms.py:294
+msgid "An access group must be of type Reviewed or Closed."
+msgstr ""
+
+#: mozillians/groups/forms.py:310 mozillians/phonebook/forms.py:105
 msgid "All"
 msgstr "Todos"
 
-#: mozillians/groups/forms.py:231 mozillians/jinja2/groups/group.html:95
+#: mozillians/groups/forms.py:311 mozillians/jinja2/groups/group.html:95
 msgid "Members"
 msgstr "Membros"
 
-#: mozillians/groups/forms.py:232
+#: mozillians/groups/forms.py:312
 msgid "Pending Members"
 msgstr "Membros pendentes"
 
-#: mozillians/groups/forms.py:233
+#: mozillians/groups/forms.py:313
 msgid "Pending Terms"
 msgstr "Termos pendentes"
 
-#: mozillians/groups/forms.py:234
+#: mozillians/groups/forms.py:314
 msgid "Renewals"
 msgstr "Renovações"
 
-#: mozillians/groups/forms.py:245
+#: mozillians/groups/forms.py:325
 msgid "I accept these terms."
 msgstr "Eu aceito estes termos."
 
-#: mozillians/groups/forms.py:246
+#: mozillians/groups/forms.py:326
 msgid "I don't accept these terms."
 msgstr "Eu não aceito estes termos."
 
-#: mozillians/groups/forms.py:258
+#: mozillians/groups/forms.py:345
+msgid "Group must be of type Reviewed or Closed for Access Groups."
+msgstr ""
+
+#: mozillians/groups/forms.py:357
 msgid "Group type"
 msgstr "Tipo do grupo"
 
@@ -135,67 +159,76 @@ msgstr "Revisto"
 msgid "Closed"
 msgstr "Fechado"
 
-#: mozillians/groups/models.py:189 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
+#: mozillians/groups/models.py:187 mozillians/jinja2/groups/includes/group_edit_access.html:84
+#, fuzzy
+msgid "Access Group"
+msgstr "Acesso"
+
+#: mozillians/groups/models.py:188
+msgid "Tag"
+msgstr ""
+
+#: mozillians/groups/models.py:196 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Descrição"
 
-#: mozillians/groups/models.py:194 mozillians/jinja2/groups/group.html:73
+#: mozillians/groups/models.py:201 mozillians/jinja2/groups/group.html:73
 msgid "IRC Channel"
 msgstr "Canal de IRC"
 
-#: mozillians/groups/models.py:195
+#: mozillians/groups/models.py:202
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "Um canal de IRC onde este grupo é discutido (opcional)."
 
-#: mozillians/groups/models.py:199 mozillians/jinja2/groups/group.html:83
+#: mozillians/groups/models.py:206 mozillians/jinja2/groups/group.html:83
 msgid "Website"
 msgstr "Website"
 
-#: mozillians/groups/models.py:200
+#: mozillians/groups/models.py:207
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "Um URL de um web site com mais informação acerca deste grupo (opcional)."
 
-#: mozillians/groups/models.py:204 mozillians/jinja2/groups/group.html:90
+#: mozillians/groups/models.py:211 mozillians/jinja2/groups/group.html:90
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:205
+#: mozillians/groups/models.py:212
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "Um URL de uma wiki com mais informação acerca deste grupo (opcional)."
 
-#: mozillians/groups/models.py:208
+#: mozillians/groups/models.py:215
 msgid "Accepting new members"
 msgstr "A aceitar novos membros"
 
-#: mozillians/groups/models.py:216 mozillians/jinja2/groups/group.html:66
+#: mozillians/groups/models.py:223 mozillians/jinja2/groups/group.html:66
 msgid "New Member Criteria"
 msgstr "Critério para novos membros"
 
-#: mozillians/groups/models.py:217
+#: mozillians/groups/models.py:224
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "Especifique os critérios que irá utilizar para decidir se vai ou não aceitar um pedido de adesão."
 
-#: mozillians/groups/models.py:222
+#: mozillians/groups/models.py:229
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "Se o grupo é apresentado na interface (em listas de grupos, pesquisa, etc). Principalmente com o objetivo de impedir que grupos do sistema, como \"funcionários\", de atravancar a interface."
 
-#: mozillians/groups/models.py:232
+#: mozillians/groups/models.py:239
 msgid "Terms"
 msgstr "Termos"
 
-#: mozillians/groups/models.py:236
+#: mozillians/groups/models.py:243
 msgid "Invalidation days"
 msgstr "Dias de invalidação"
 
-#: mozillians/groups/models.py:244
+#: mozillians/groups/models.py:251
 msgid "Please enter any additional text for the invitation email"
 msgstr "Por favor, introduza qualquer texto adicional para o email de convite"
 
-#: mozillians/groups/models.py:415 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:426 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "Convidante"
 
-#: mozillians/groups/models.py:417 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:428 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "Redentor"
 
@@ -226,80 +259,80 @@ msgstr "O estado foi alterado para o grupo Mozillians \"%s\""
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Removido do grupo de Mozillians \"%s\""
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:260
 msgid "This group does not allow members to remove themselves."
 msgstr "Este grupo não permite aos membros se removerem a eles próprios."
 
-#: mozillians/groups/views.py:267
+#: mozillians/groups/views.py:269
 msgid "The group needs at least one curator."
 msgstr "O grupo precisa de, pelo menos, um curador."
 
-#: mozillians/groups/views.py:276
+#: mozillians/groups/views.py:278
 msgid "You have been removed from this group."
 msgstr "Foi removido deste grupo."
 
-#: mozillians/groups/views.py:278
+#: mozillians/groups/views.py:280
 msgid "The group member has been removed."
 msgstr "O membro do grupo foi removido."
 
-#: mozillians/groups/views.py:307
+#: mozillians/groups/views.py:309
 msgid "This user has not requested membership in this group."
 msgstr "Este utilizador ainda não solicitou a adesão a este grupo."
 
-#: mozillians/groups/views.py:310
+#: mozillians/groups/views.py:312
 msgid "This user is already a member of this group."
 msgstr "Este utilizador já é membro deste grupo."
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:319
 msgid "The membership of the user has been renewed."
 msgstr "A adesão do utilizador foi renovada."
 
-#: mozillians/groups/views.py:319
+#: mozillians/groups/views.py:321
 msgid "This user has been added as a member of this group."
 msgstr "Este utilizador foi adicionado como membro deste grupo."
 
-#: mozillians/groups/views.py:364
+#: mozillians/groups/views.py:366
 msgid "You are already in this group."
 msgstr "Já pertence a este grupo."
 
-#: mozillians/groups/views.py:366
+#: mozillians/groups/views.py:368
 msgid "Your request to join this group is still pending."
 msgstr "O seu pedido para se juntar a este grupo ainda está pendente."
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:370
 msgid "This group is not accepting requests to join."
 msgstr "Este grupo não está a aceitar pedidos para se juntar."
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:374
 msgid "You have been added to this group."
 msgstr "Foi adicionado a este grupo."
 
-#: mozillians/groups/views.py:377
+#: mozillians/groups/views.py:379
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "O seu pedido de adesão foi enviado para o(s) curador(es) do grupo."
 
-#: mozillians/groups/views.py:407
+#: mozillians/groups/views.py:409
 msgid "You must be a curator to delete a group"
 msgstr "Tem de ser um curador para eliminar um grupo"
 
-#: mozillians/groups/views.py:411
+#: mozillians/groups/views.py:413
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "Não pode eliminar um grupo se este tiver membros."
 
-#: mozillians/groups/views.py:415
+#: mozillians/groups/views.py:417
 #, python-format
 msgid "Group %s has been deleted"
 msgstr "O grupo %s foi eliminado"
 
-#: mozillians/groups/views.py:440
+#: mozillians/groups/views.py:442
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Tem de ser um curador ou um administrador para editar um grupo"
 
-#: mozillians/groups/views.py:562
+#: mozillians/groups/views.py:566
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "O convite para {0} foi recusado com sucesso."
 
-#: mozillians/groups/views.py:603
+#: mozillians/groups/views.py:607
 msgid "Invitation to {0} has been sent successfully."
 msgstr "O convite para {0} foi enviado com sucesso."
 
@@ -327,8 +360,8 @@ msgstr ""
 #: mozillians/jinja2/404.html:25
 #, python-format
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
-" <a href=\"%(join_url)s\">join us</a>. </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
 "<p> Porque não estava autenticado, pode não ter acesso aos perfis privados na lista telefónica. Deve iniciar sessão no caso de estar a tentar aceder a um perfil privado. Se não tiver uma conta, <a "
 "href=\"%(join_url)s\">junte-se a nós</a>. </p>"
@@ -348,9 +381,9 @@ msgstr "Jitterbeasts por Matthew Inman do The Oatmeal"
 #: mozillians/jinja2/500.html:15
 #, python-format
 msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us know"
-" what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more about "
-"Mozillians. Sorry about this! </p>"
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
 msgstr ""
 "<p> Desculpe, mas encontramos um erro inesperado e não podemos processar o seu pedido. Pode tentar novamente recarregando o seu navegador ou pode <a href=\"%(bugzilla_url)s\"> registar um erro</a>, "
 "indicando o que aconteceu e iremos começar a resolver o problema. </p> <p> Se recarregar a página não funcionar, pode <a href=\"%(home_url)s\"> dirigir-se à pagina inicial do Mozillians</a> para "
@@ -414,7 +447,8 @@ msgstr "Ajude a tornar o Mozillians melhor. <a href=\"%(bug_url)s\">Denuncie um 
 #: mozillians/jinja2/base.html:202
 #, python-format
 msgid "Portions of this content are &copy;1998–%(current_year)s by individual mozilla.org contributors. Content available under a <a href=\"%(license_link)s\">Creative Commons license</a>."
-msgstr "Porções deste conteúdo são &copy;1998–%(current_year)s por contribuidores individuais da mozilla.org. Conteúdo disponível através de uma <a href=\"%(license_link)s\">licença Creative Commons</a>."
+msgstr ""
+"Porções deste conteúdo são &copy;1998–%(current_year)s por contribuidores individuais da mozilla.org. Conteúdo disponível através de uma <a href=\"%(license_link)s\">licença Creative Commons</a>."
 
 #: mozillians/jinja2/base.html:211 mozillians/jinja2/phonebook/about-dinomcvouch.html:3 mozillians/jinja2/phonebook/about.html:3 mozillians/jinja2/phonebook/about.html:10
 msgid "About Mozillians"
@@ -506,7 +540,7 @@ msgstr "Competências que os membros têm em comum"
 msgid "Community Steward"
 msgstr "Guardião da Comunidade"
 
-#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:121
 msgid "Curators"
 msgstr "Curador"
 
@@ -600,11 +634,11 @@ msgstr[1] "%(num)s membros"
 msgid "Create Group"
 msgstr "Criar grupo"
 
-#: mozillians/jinja2/groups/index_groups.html:48
+#: mozillians/jinja2/groups/index_groups.html:57
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: mozillians/jinja2/groups/index_groups.html:49
+#: mozillians/jinja2/groups/index_groups.html:58
 msgid "Save"
 msgstr "Guardar"
 
@@ -642,32 +676,37 @@ msgstr "Rever termos"
 msgid "Group Type"
 msgstr "Tipo do grupo"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#: mozillians/jinja2/groups/includes/group_edit_access.html:73
 msgid "Update Type"
 msgstr "Atualizar tipo"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#: mozillians/jinja2/groups/includes/group_edit_access.html:111
+#, fuzzy
+msgid "Update Access"
+msgstr "Atualizar tipo"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:137
 msgid "Update Curators"
 msgstr "Atualizar curadores"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:103
+#: mozillians/jinja2/groups/includes/group_edit_access.html:146
 msgid "Terms & Expiration"
 msgstr "Termos e expiração"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+#: mozillians/jinja2/groups/includes/group_edit_access.html:153
 msgid "New members should accept terms"
 msgstr "Novos membros devem aceitar os termos"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:121 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#: mozillians/jinja2/groups/includes/group_edit_access.html:164 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
 #, python-format
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "Utilize <a href=\"%(url)s\">Markdown</a> para negrito, itálico, listas e ligações."
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:134
+#: mozillians/jinja2/groups/includes/group_edit_access.html:177
 msgid "Membership can expire"
 msgstr "A adesão pode expirar"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:153
+#: mozillians/jinja2/groups/includes/group_edit_access.html:196
 msgid "Update Terms & Expiration"
 msgstr "Atualizar termos e expiração"
 
@@ -776,8 +815,8 @@ msgid ""
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
 msgstr ""
 "A privacidade tem sido uma parte importante deste diretório desde o início. Queremos ter a certeza de que fornecemos aos Mozillians a melhor experiência possível, desde a forma como o site está "
-"construído, à nossa forma de validação de novos utilizadores antes que estes possam aceder aos dados que devem estar disponíveis apenas para outros Mozillians. Leia a nossa <a "
-"href=\"%(privacy_policy_url)s\"> Política de Privacidade </a> para mais informações."
+"construído, à nossa forma de validação de novos utilizadores antes que estes possam aceder aos dados que devem estar disponíveis apenas para outros Mozillians. Leia a nossa <a href="
+"\"%(privacy_policy_url)s\"> Política de Privacidade </a> para mais informações."
 
 #: mozillians/jinja2/phonebook/about.html:47
 msgid "Get Involved"
@@ -977,7 +1016,8 @@ msgstr "Convidar um Mozillian"
 
 #: mozillians/jinja2/phonebook/invite.html:12
 #, python-format
-msgid "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr ""
 "Se quiser convidar um novo Mozillian por favor preencha o seguinte formulário. <strong>Nota</strong>: Convidar um novo utilizador é o mesmo que certificar. <a href=\"%(vouching_url)s\">Ler mais "
 "sobre certificação.</a>"
@@ -985,8 +1025,9 @@ msgstr ""
 #: mozillians/jinja2/phonebook/invite.html:18
 #, python-format
 msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your profile"
-" and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about vouching.</a>"
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
 msgstr ""
 "Nós alterámos recentemente os critérios para convidar e certificar outros Mozillians. Se quiser utilizar esta página precisa de receber %(vouch_threshold)s certificações. Peça a alguém para visitar "
 "o seu perfil e o certificar. Depois volte aqui quando tiver %(vouch_threshold)s certificações e poderá convidar pessoas para o diretório. <a href=\"%(vouching_url)s\">Saber mais sobre as "
@@ -1050,9 +1091,9 @@ msgid ""
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
 "<p> O seu perfil está à espera de ser certificado. Assim que estiver certificado, poderá ver os perfis de todos os outros Mozillians, juntar-se a grupos e aceder a conteúdos adicionais em outros "
-"sites como um Mozillian. <a href=\"%(vouching_url)s\">Saber mais sobre as certificações</a>. </p> <p> Envie a ligação abaixo para alguém que esteja familiarizado com as suas contribuições e peça-lhe"
-" para o certificar: <br/> <em class=\"underline\" title=\"URL do seu perfil\">%(profile_url)s</em> </p> <p> Se for um novo membro da comunidade da Mozilla, <a class=\"button\" "
-"href=\"%(contribute_url)s\">participe</a> </p> <p>As hipóteses de ser certificado aumentam à medida que termina tarefas na nossa comunidade.</p>"
+"sites como um Mozillian. <a href=\"%(vouching_url)s\">Saber mais sobre as certificações</a>. </p> <p> Envie a ligação abaixo para alguém que esteja familiarizado com as suas contribuições e peça-"
+"lhe para o certificar: <br/> <em class=\"underline\" title=\"URL do seu perfil\">%(profile_url)s</em> </p> <p> Se for um novo membro da comunidade da Mozilla, <a class=\"button\" href="
+"\"%(contribute_url)s\">participe</a> </p> <p>As hipóteses de ser certificado aumentam à medida que termina tarefas na nossa comunidade.</p>"
 
 #: mozillians/jinja2/phonebook/profile.html:50
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
@@ -1091,7 +1132,7 @@ msgstr "Mozillian"
 msgid "Public"
 msgstr "Público"
 
-#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:157
+#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:156
 msgid "Bio"
 msgstr "Biografia"
 
@@ -1107,37 +1148,37 @@ msgstr "(termos pendentes de revisão)"
 msgid "Websites"
 msgstr "Websites"
 
-#: mozillians/jinja2/phonebook/profile.html:309
+#: mozillians/jinja2/phonebook/profile.html:308
 msgid "Alternate Contact Identities"
 msgstr "Identidades de contacto alternativas"
 
-#: mozillians/jinja2/phonebook/profile.html:327
+#: mozillians/jinja2/phonebook/profile.html:326
 msgid "Vouched By"
 msgstr "Certificado por"
 
-#: mozillians/jinja2/phonebook/profile.html:340
+#: mozillians/jinja2/phonebook/profile.html:339
 msgid "Unknown Voucher"
 msgstr "Certificador desconhecido"
 
-#: mozillians/jinja2/phonebook/profile.html:343
+#: mozillians/jinja2/phonebook/profile.html:342
 msgid "Legacy vouch."
 msgstr "Certificado legado."
 
-#: mozillians/jinja2/phonebook/profile.html:354
+#: mozillians/jinja2/phonebook/profile.html:353
 msgid "Vouchees"
 msgstr "Certificadores"
 
-#: mozillians/jinja2/phonebook/profile.html:380
+#: mozillians/jinja2/phonebook/profile.html:379
 #, python-format
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s hora(s) à frente do seu fuso horário."
 
-#: mozillians/jinja2/phonebook/profile.html:383
+#: mozillians/jinja2/phonebook/profile.html:382
 #, python-format
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s hora(s) atrás do seu fuso horário."
 
-#: mozillians/jinja2/phonebook/profile.html:386
+#: mozillians/jinja2/phonebook/profile.html:385
 msgid "Same time zone as yours."
 msgstr "Mesmo fuso horário que o seu."
 
@@ -1317,8 +1358,8 @@ msgid ""
 "The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
 "and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
-"A lista telefónica oferece uma API (atualmente na v2) para ajudar a autorizar contribuidores e partilhar dados de perfil para outras ferramentas e sites como o <a id=\"services-bugzilla-url\" "
-"href=\"%(bugzilla_url)s\">Bugzilla</a> e o <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">portal dos Mozilla Reps</a>. A API respeita os níveis de privacidade definidos por campo."
+"A lista telefónica oferece uma API (atualmente na v2) para ajudar a autorizar contribuidores e partilhar dados de perfil para outras ferramentas e sites como o <a id=\"services-bugzilla-url\" href="
+"\"%(bugzilla_url)s\">Bugzilla</a> e o <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">portal dos Mozilla Reps</a>. A API respeita os níveis de privacidade definidos por campo."
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
@@ -1591,49 +1632,49 @@ msgstr "Obrigado por nos ajudar a melhorar o mozillians.org!"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Obrigado por certificar outro Mozillian! Este utilizador está agora certificado!"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:291
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "O seu registo está completo. Sinta-se à vontade para visitar a página {0} para adicionar informações adicionais ao seu perfil."
 
-#: mozillians/phonebook/views.py:295
+#: mozillians/phonebook/views.py:296
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Alterou o seu nome de utilizador; por favor note que o seu URL de perfil também foi alterado."
 
-#: mozillians/phonebook/views.py:328
+#: mozillians/phonebook/views.py:329
 msgid "Identity {0} successfully deleted."
 msgstr "Identidade {0} eliminada com sucesso."
 
-#: mozillians/phonebook/views.py:333
+#: mozillians/phonebook/views.py:334
 msgid "Sorry the requested Identity cannot be deleted."
 msgstr "Lamentamos, mas a identidade solicitada não pode ser eliminada."
 
-#: mozillians/phonebook/views.py:354
+#: mozillians/phonebook/views.py:355
 msgid "Primary Contact Identity successfully updated."
 msgstr "A identidade de contacto primária foi atualizada com sucesso."
 
-#: mozillians/phonebook/views.py:375
+#: mozillians/phonebook/views.py:376
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "A sua conta foi eliminada. Obrigado por ter sido um Mozillian!"
 
-#: mozillians/phonebook/views.py:400
+#: mozillians/phonebook/views.py:401
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s foi convidado para o Mozillians. Este irá receber um email com instruções sobre como participar. Pode convidar outro Mozillian se quiser."
 
-#: mozillians/phonebook/views.py:421
+#: mozillians/phonebook/views.py:422
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "O convite para %s se juntar ao Mozillians foi recusado. Pode convidar %s de novo se quiser."
 
-#: mozillians/phonebook/views.py:437
+#: mozillians/phonebook/views.py:438
 msgid "API Key generated successfully."
 msgstr "Chave de API gerada com sucesso."
 
-#: mozillians/phonebook/views.py:451
+#: mozillians/phonebook/views.py:452
 msgid "API key successfully deleted."
 msgstr "Chave de API eliminada com sucesso."
 
-#: mozillians/phonebook/views.py:476
+#: mozillians/phonebook/views.py:477
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Foi convidado para se juntar a Mozillians.org! Inicie sessão e depois pode criar um perfil."
 
@@ -1641,111 +1682,111 @@ msgstr "Foi convidado para se juntar a Mozillians.org! Inicie sessão e depois p
 msgid "Export"
 msgstr "Exportar"
 
-#: mozillians/users/models.py:144
+#: mozillians/users/models.py:143
 msgid "Full Name"
 msgstr "Nome completo"
 
-#: mozillians/users/models.py:146
+#: mozillians/users/models.py:145
 msgid "Name in local language"
 msgstr "Nome no idioma local"
 
-#: mozillians/users/models.py:159
+#: mozillians/users/models.py:158
 msgid "IRC Nickname"
 msgstr "Nickname de IRC"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:167
 msgid "Latitude"
 msgstr "Latitude"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:168
 msgid "Longitude"
 msgstr "Longitude"
 
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:184
 msgid "T-Shirt"
 msgstr "T-shirt"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Small"
 msgstr "Ajustada pequena"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Medium"
 msgstr "Ajustada média"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted Large"
 msgstr "Ajustada larga"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted X-Large"
 msgstr "Ajustada larga X"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XX-Large"
 msgstr "Ajustada larga XX"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XXX-Large"
 msgstr "Ajustada larga XXX"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Small"
 msgstr "Corte reto pequena"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Medium"
 msgstr "Corte reto média"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut Large"
 msgstr "Corte reto larga"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut X-Large"
 msgstr "Corte reto larga X"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XX-Large"
 msgstr "Corte reto larga XX"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XXX-Large"
 msgstr "Corte reto larga XXX"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:193
 msgid "What do you do for Mozilla?"
 msgstr "O que faz para a Mozilla?"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:197
 msgid "Link to your contribution story"
 msgstr "Ligação para a sua história de contributos"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:198
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "Se criou alguma coisa pública que conte a história de como se tornou um Mozillian, especifique a respetiva ligação aqui."
 
-#: mozillians/users/models.py:571
+#: mozillians/users/models.py:595
 msgid "You have been vouched on Mozillians.org"
 msgstr "Foi certificado no Mozillians.org"
 
-#: mozillians/users/models.py:777
+#: mozillians/users/models.py:801
 msgid "Reason for Vouching"
 msgstr "Razão para a certificação"
 
-#: mozillians/users/models.py:932
+#: mozillians/users/models.py:956
 msgid "Account Username"
 msgstr "Nome de utilizador"
 
-#: mozillians/users/models.py:936
+#: mozillians/users/models.py:960
 msgid "Account Type"
 msgstr "Tipo de conta"
 
-#: mozillians/users/models.py:952
+#: mozillians/users/models.py:976
 msgid "You already have an account with this name and type."
 msgstr "Já tem uma conta com este nome e tipo."
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:1009
 msgid "This language has already been selected."
 msgstr "Este idioma já foi selecionado."
 
@@ -1891,8 +1932,8 @@ msgstr "Este idioma já foi selecionado."
 #~ msgstr "Utilize este formulário para criar um grupo no Mozillians.org. Antes de criar um grupo, tente procurá-lo. Alguém poderá já tê-lo criado."
 
 #~ msgid ""
-#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
-#~ "requests to join."
+#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email "
+#~ "with requests to join."
 #~ msgstr ""
 #~ "Criar um grupo vai fazer com se torne o curador do mesmo, permitindo-lhe gerir as definições do grupo e decidir quem pode aderir. Se definir que o grupo carece de aprovação para adesão, você irá "
 #~ "receber diariamente um e-mail com pedidos de adesão."
@@ -1928,8 +1969,8 @@ msgstr "Este idioma já foi selecionado."
 #~ "You can connect more than one Persona e-mail to your Mozillians profile. Visibility to other Mozillians is optional, but you will be able to sign in with any of them. Notifications from "
 #~ "mozillians.org will only be sent to your primary address."
 #~ msgstr ""
-#~ "Pode ligar mais de um e-mail Persona ao seu perfil Mozillians. A visibilidade a outros Mozillians é opcional, mas poderá iniciar sessão com qualquer um deles. Notificações de mozillians.org serão "
-#~ "apenas enviadas para o seu endereço primário."
+#~ "Pode ligar mais de um e-mail Persona ao seu perfil Mozillians. A visibilidade a outros Mozillians é opcional, mas poderá iniciar sessão com qualquer um deles. Notificações de mozillians.org "
+#~ "serão apenas enviadas para o seu endereço primário."
 
 #~ msgid "Create Your Profile"
 #~ msgstr "Criar o seu perfil"

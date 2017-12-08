@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 06:23-0800\n"
+"POT-Creation-Date: 2017-12-08 06:45-0800\n"
 "PO-Revision-Date: 2017-03-18 21:01+0000\n"
 "Last-Translator: Ian Neal <iann_bugzilla@blueyonder.co.uk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pontoon\n"
 
-#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:79
+#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:78
 #, fuzzy
 msgid "Private"
 msgstr "Privacy"
@@ -31,75 +31,99 @@ msgstr "You must be vouched to continue."
 msgid "Visible to:"
 msgstr "Visible to:"
 
-#: mozillians/groups/forms.py:20
+#: mozillians/groups/forms.py:21
 msgid "Name A-Z"
 msgstr "Name A-Z"
 
-#: mozillians/groups/forms.py:21
+#: mozillians/groups/forms.py:22
 msgid "Most Members"
 msgstr "Most Members"
 
-#: mozillians/groups/forms.py:22
+#: mozillians/groups/forms.py:23
 msgid "Fewest Members"
 msgstr "Fewest Members"
 
-#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:50 mozillians/groups/forms.py:77
 msgid "The group must have at least one curator."
 msgstr "The group must have at least one curator."
 
-#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#: mozillians/groups/forms.py:53 mozillians/groups/forms.py:139
 msgid "Start typing the name/email/username of a vouched Mozillian."
 msgstr "Start typing the name/email/username of a vouched Mozillian."
 
-#: mozillians/groups/forms.py:102
+#: mozillians/groups/forms.py:83
+msgid "Only staff members can become access group curators"
+msgstr ""
+
+#: mozillians/groups/forms.py:122
 msgid "The maximum expiration date for a group cannot exceed two years."
 msgstr "The maximum expiration date for a group cannot exceed two years."
 
-#: mozillians/groups/forms.py:131
+#: mozillians/groups/forms.py:164
 msgid "You need to be the curator of this group before inviting someone to join."
 msgstr "You need to be the curator of this group before inviting someone to join."
 
-#: mozillians/groups/forms.py:179
+#: mozillians/groups/forms.py:168
+msgid "Only staff and NDA members are allowed to be invited"
+msgstr ""
+
+#: mozillians/groups/forms.py:219
 msgid "You need to be the administrator of this group in order to edit this section."
 msgstr "You need to be the administrator of this group in order to edit this section."
 
-#: mozillians/groups/forms.py:209
+#: mozillians/groups/forms.py:254
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "You must either specify the criteria or change the acceptance selection."
 
-#: mozillians/groups/forms.py:223
+#: mozillians/groups/forms.py:261
+msgid "An access group cannot be of type Open."
+msgstr ""
+
+#: mozillians/groups/forms.py:272
 msgid "Select Group Type"
 msgstr "Select Group Type"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:105
+#: mozillians/groups/forms.py:289
+msgid "You do not have the permissions to provision an access group."
+msgstr ""
+
+#: mozillians/groups/forms.py:294
+msgid "An access group must be of type Reviewed or Closed."
+msgstr ""
+
+#: mozillians/groups/forms.py:310 mozillians/phonebook/forms.py:105
 msgid "All"
 msgstr "All"
 
-#: mozillians/groups/forms.py:231 mozillians/jinja2/groups/group.html:95
+#: mozillians/groups/forms.py:311 mozillians/jinja2/groups/group.html:95
 msgid "Members"
 msgstr "Members"
 
-#: mozillians/groups/forms.py:232
+#: mozillians/groups/forms.py:312
 msgid "Pending Members"
 msgstr "Pending Members"
 
-#: mozillians/groups/forms.py:233
+#: mozillians/groups/forms.py:313
 msgid "Pending Terms"
 msgstr "Pending Terms"
 
-#: mozillians/groups/forms.py:234
+#: mozillians/groups/forms.py:314
 msgid "Renewals"
 msgstr "Renewals"
 
-#: mozillians/groups/forms.py:245
+#: mozillians/groups/forms.py:325
 msgid "I accept these terms."
 msgstr "I accept these terms."
 
-#: mozillians/groups/forms.py:246
+#: mozillians/groups/forms.py:326
 msgid "I don't accept these terms."
 msgstr "I don't accept these terms."
 
-#: mozillians/groups/forms.py:258
+#: mozillians/groups/forms.py:345
+msgid "Group must be of type Reviewed or Closed for Access Groups."
+msgstr ""
+
+#: mozillians/groups/forms.py:357
 msgid "Group type"
 msgstr "Group type"
 
@@ -135,67 +159,76 @@ msgstr "Reviewed"
 msgid "Closed"
 msgstr "Closed"
 
-#: mozillians/groups/models.py:189 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
+#: mozillians/groups/models.py:187 mozillians/jinja2/groups/includes/group_edit_access.html:84
+#, fuzzy
+msgid "Access Group"
+msgstr "Access"
+
+#: mozillians/groups/models.py:188
+msgid "Tag"
+msgstr ""
+
+#: mozillians/groups/models.py:196 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Description"
 
-#: mozillians/groups/models.py:194 mozillians/jinja2/groups/group.html:73
+#: mozillians/groups/models.py:201 mozillians/jinja2/groups/group.html:73
 msgid "IRC Channel"
 msgstr "IRC Channel"
 
-#: mozillians/groups/models.py:195
+#: mozillians/groups/models.py:202
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "An IRC channel where this group is discussed (optional)."
 
-#: mozillians/groups/models.py:199 mozillians/jinja2/groups/group.html:83
+#: mozillians/groups/models.py:206 mozillians/jinja2/groups/group.html:83
 msgid "Website"
 msgstr "Web Site"
 
-#: mozillians/groups/models.py:200
+#: mozillians/groups/models.py:207
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "A URL of a web site with more information about this group (optional)."
 
-#: mozillians/groups/models.py:204 mozillians/jinja2/groups/group.html:90
+#: mozillians/groups/models.py:211 mozillians/jinja2/groups/group.html:90
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:205
+#: mozillians/groups/models.py:212
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "A URL of a wiki with more information about this group (optional)."
 
-#: mozillians/groups/models.py:208
+#: mozillians/groups/models.py:215
 msgid "Accepting new members"
 msgstr "Accepting new members"
 
-#: mozillians/groups/models.py:216 mozillians/jinja2/groups/group.html:66
+#: mozillians/groups/models.py:223 mozillians/jinja2/groups/group.html:66
 msgid "New Member Criteria"
 msgstr "New Member Criteria"
 
-#: mozillians/groups/models.py:217
+#: mozillians/groups/models.py:224
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "Specify the criteria you will use to decide whether or not you will accept a membership request."
 
-#: mozillians/groups/models.py:222
+#: mozillians/groups/models.py:229
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 
-#: mozillians/groups/models.py:232
+#: mozillians/groups/models.py:239
 msgid "Terms"
 msgstr "Terms"
 
-#: mozillians/groups/models.py:236
+#: mozillians/groups/models.py:243
 msgid "Invalidation days"
 msgstr "Invalidation days"
 
-#: mozillians/groups/models.py:244
+#: mozillians/groups/models.py:251
 msgid "Please enter any additional text for the invitation email"
 msgstr "Please enter any additional text for the invitation email"
 
-#: mozillians/groups/models.py:415 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:426 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "Inviter"
 
-#: mozillians/groups/models.py:417 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:428 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "Redeemer"
 
@@ -226,80 +259,80 @@ msgstr "Status changed for Mozillians group \"%s\""
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Removed from Mozillians group \"%s\""
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:260
 msgid "This group does not allow members to remove themselves."
 msgstr "This group does not allow members to remove themselves."
 
-#: mozillians/groups/views.py:267
+#: mozillians/groups/views.py:269
 msgid "The group needs at least one curator."
 msgstr "The group needs at least one curator."
 
-#: mozillians/groups/views.py:276
+#: mozillians/groups/views.py:278
 msgid "You have been removed from this group."
 msgstr "You have been removed from this group."
 
-#: mozillians/groups/views.py:278
+#: mozillians/groups/views.py:280
 msgid "The group member has been removed."
 msgstr "The group member has been removed."
 
-#: mozillians/groups/views.py:307
+#: mozillians/groups/views.py:309
 msgid "This user has not requested membership in this group."
 msgstr "This user has not requested membership in this group."
 
-#: mozillians/groups/views.py:310
+#: mozillians/groups/views.py:312
 msgid "This user is already a member of this group."
 msgstr "This user is already a member of this group."
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:319
 msgid "The membership of the user has been renewed."
 msgstr "The membership of the user has been renewed."
 
-#: mozillians/groups/views.py:319
+#: mozillians/groups/views.py:321
 msgid "This user has been added as a member of this group."
 msgstr "This user has been added as a member of this group."
 
-#: mozillians/groups/views.py:364
+#: mozillians/groups/views.py:366
 msgid "You are already in this group."
 msgstr "You are already in this group."
 
-#: mozillians/groups/views.py:366
+#: mozillians/groups/views.py:368
 msgid "Your request to join this group is still pending."
 msgstr "Your request to join this group is still pending."
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:370
 msgid "This group is not accepting requests to join."
 msgstr "This group is not accepting requests to join."
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:374
 msgid "You have been added to this group."
 msgstr "You have been added to this group."
 
-#: mozillians/groups/views.py:377
+#: mozillians/groups/views.py:379
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "Your membership request has been sent to the group curator(s)."
 
-#: mozillians/groups/views.py:407
+#: mozillians/groups/views.py:409
 msgid "You must be a curator to delete a group"
 msgstr "You must be a curator to delete a group"
 
-#: mozillians/groups/views.py:411
+#: mozillians/groups/views.py:413
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "You cannot delete a group if anyone else is in it."
 
-#: mozillians/groups/views.py:415
+#: mozillians/groups/views.py:417
 #, python-format
 msgid "Group %s has been deleted"
 msgstr "Group %s has been deleted"
 
-#: mozillians/groups/views.py:440
+#: mozillians/groups/views.py:442
 msgid "You must be a curator or an admin to edit a group"
 msgstr "You must be a curator or an admin to edit a group"
 
-#: mozillians/groups/views.py:562
+#: mozillians/groups/views.py:566
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "The invitation to {0} has been successfully revoked."
 
-#: mozillians/groups/views.py:603
+#: mozillians/groups/views.py:607
 msgid "Invitation to {0} has been sent successfully."
 msgstr "Invitation to {0} has been sent successfully."
 
@@ -506,7 +539,7 @@ msgstr "Skills members have in common"
 msgid "Community Steward"
 msgstr "Community Steward"
 
-#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:121
 msgid "Curators"
 msgstr "Curators"
 
@@ -598,11 +631,11 @@ msgstr[1] "%(num)s members"
 msgid "Create Group"
 msgstr "Create Group"
 
-#: mozillians/jinja2/groups/index_groups.html:48
+#: mozillians/jinja2/groups/index_groups.html:57
 msgid "Cancel"
 msgstr "Cancel"
 
-#: mozillians/jinja2/groups/index_groups.html:49
+#: mozillians/jinja2/groups/index_groups.html:58
 msgid "Save"
 msgstr "Save"
 
@@ -640,32 +673,37 @@ msgstr "Review terms"
 msgid "Group Type"
 msgstr "Group Type"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#: mozillians/jinja2/groups/includes/group_edit_access.html:73
 msgid "Update Type"
 msgstr "Update Type"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#: mozillians/jinja2/groups/includes/group_edit_access.html:111
+#, fuzzy
+msgid "Update Access"
+msgstr "Update Type"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:137
 msgid "Update Curators"
 msgstr "Update Curators"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:103
+#: mozillians/jinja2/groups/includes/group_edit_access.html:146
 msgid "Terms & Expiration"
 msgstr "Terms & Expiration"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+#: mozillians/jinja2/groups/includes/group_edit_access.html:153
 msgid "New members should accept terms"
 msgstr "New members should accept terms"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:121 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#: mozillians/jinja2/groups/includes/group_edit_access.html:164 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
 #, python-format
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:134
+#: mozillians/jinja2/groups/includes/group_edit_access.html:177
 msgid "Membership can expire"
 msgstr "Membership can expire"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:153
+#: mozillians/jinja2/groups/includes/group_edit_access.html:196
 msgid "Update Terms & Expiration"
 msgstr "Update Terms & Expiration"
 
@@ -1091,7 +1129,7 @@ msgstr "Mozillian"
 msgid "Public"
 msgstr "Public"
 
-#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:157
+#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:156
 msgid "Bio"
 msgstr "Bio"
 
@@ -1108,38 +1146,38 @@ msgstr "Pending terms"
 msgid "Websites"
 msgstr "Web sites"
 
-#: mozillians/jinja2/phonebook/profile.html:309
+#: mozillians/jinja2/phonebook/profile.html:308
 #, fuzzy
 msgid "Alternate Contact Identities"
 msgstr "Alternate email addresses"
 
-#: mozillians/jinja2/phonebook/profile.html:327
+#: mozillians/jinja2/phonebook/profile.html:326
 msgid "Vouched By"
 msgstr "Vouched By"
 
-#: mozillians/jinja2/phonebook/profile.html:340
+#: mozillians/jinja2/phonebook/profile.html:339
 msgid "Unknown Voucher"
 msgstr "Unknown Voucher"
 
-#: mozillians/jinja2/phonebook/profile.html:343
+#: mozillians/jinja2/phonebook/profile.html:342
 msgid "Legacy vouch."
 msgstr "Legacy vouch."
 
-#: mozillians/jinja2/phonebook/profile.html:354
+#: mozillians/jinja2/phonebook/profile.html:353
 msgid "Vouchees"
 msgstr "Vouchees"
 
-#: mozillians/jinja2/phonebook/profile.html:380
+#: mozillians/jinja2/phonebook/profile.html:379
 #, python-format
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s hours ahead of your timezone."
 
-#: mozillians/jinja2/phonebook/profile.html:383
+#: mozillians/jinja2/phonebook/profile.html:382
 #, python-format
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s hours behind your timezone."
 
-#: mozillians/jinja2/phonebook/profile.html:386
+#: mozillians/jinja2/phonebook/profile.html:385
 msgid "Same time zone as yours."
 msgstr "Same time zone as yours."
 
@@ -1601,51 +1639,51 @@ msgstr "Thanks for helping us improve mozillians.org!"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:291
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 
-#: mozillians/phonebook/views.py:295
+#: mozillians/phonebook/views.py:296
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "You changed your username; please note your profile URL has also changed."
 
-#: mozillians/phonebook/views.py:328
+#: mozillians/phonebook/views.py:329
 #, fuzzy
 msgid "Identity {0} successfully deleted."
 msgstr "API key successfully deleted."
 
-#: mozillians/phonebook/views.py:333
+#: mozillians/phonebook/views.py:334
 msgid "Sorry the requested Identity cannot be deleted."
 msgstr ""
 
-#: mozillians/phonebook/views.py:354
+#: mozillians/phonebook/views.py:355
 #, fuzzy
 msgid "Primary Contact Identity successfully updated."
 msgstr "API key successfully deleted."
 
-#: mozillians/phonebook/views.py:375
+#: mozillians/phonebook/views.py:376
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Your account has been deleted. Thanks for being a Mozillian!"
 
-#: mozillians/phonebook/views.py:400
+#: mozillians/phonebook/views.py:401
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 
-#: mozillians/phonebook/views.py:421
+#: mozillians/phonebook/views.py:422
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 
-#: mozillians/phonebook/views.py:437
+#: mozillians/phonebook/views.py:438
 msgid "API Key generated successfully."
 msgstr "API Key generated successfully."
 
-#: mozillians/phonebook/views.py:451
+#: mozillians/phonebook/views.py:452
 msgid "API key successfully deleted."
 msgstr "API key successfully deleted."
 
-#: mozillians/phonebook/views.py:476
+#: mozillians/phonebook/views.py:477
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 
@@ -1653,111 +1691,111 @@ msgstr "You've been invited to join Mozillians.org! Sign in and then you can cre
 msgid "Export"
 msgstr "Export"
 
-#: mozillians/users/models.py:144
+#: mozillians/users/models.py:143
 msgid "Full Name"
 msgstr "Full Name"
 
-#: mozillians/users/models.py:146
+#: mozillians/users/models.py:145
 msgid "Name in local language"
 msgstr "Name in local language"
 
-#: mozillians/users/models.py:159
+#: mozillians/users/models.py:158
 msgid "IRC Nickname"
 msgstr "IRC Nickname"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:167
 msgid "Latitude"
 msgstr "Latitude"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:168
 msgid "Longitude"
 msgstr "Longitude"
 
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:184
 msgid "T-Shirt"
 msgstr "T-Shirt"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Small"
 msgstr "Fitted Small"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Medium"
 msgstr "Fitted Medium"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted Large"
 msgstr "Fitted Large"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted X-Large"
 msgstr "Fitted X-Large"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XX-Large"
 msgstr "Fitted XX-Large"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XXX-Large"
 msgstr "Fitted XXX-Large"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Small"
 msgstr "Straight-cut Small"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Medium"
 msgstr "Straight-cut Medium"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut Large"
 msgstr "Straight-cut Large"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut X-Large"
 msgstr "Straight-cut X-Large"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XX-Large"
 msgstr "Straight-cut XX-Large"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XXX-Large"
 msgstr "Straight-cut XXX-Large"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:193
 msgid "What do you do for Mozilla?"
 msgstr "What do you do for Mozilla?"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:197
 msgid "Link to your contribution story"
 msgstr "Link to your contribution story"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:198
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 
-#: mozillians/users/models.py:571
+#: mozillians/users/models.py:595
 msgid "You have been vouched on Mozillians.org"
 msgstr "You have been vouched on Mozillians.org"
 
-#: mozillians/users/models.py:777
+#: mozillians/users/models.py:801
 msgid "Reason for Vouching"
 msgstr "Reason for Vouching"
 
-#: mozillians/users/models.py:932
+#: mozillians/users/models.py:956
 msgid "Account Username"
 msgstr "Account Username"
 
-#: mozillians/users/models.py:936
+#: mozillians/users/models.py:960
 msgid "Account Type"
 msgstr "Account Type"
 
-#: mozillians/users/models.py:952
+#: mozillians/users/models.py:976
 msgid "You already have an account with this name and type."
 msgstr "You already have an account with this name and type."
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:1009
 msgid "This language has already been selected."
 msgstr "This language has already been selected."
 

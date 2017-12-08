@@ -1,9 +1,9 @@
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 06:23-0800\n"
+"POT-Creation-Date: 2017-12-08 06:45-0800\n"
 "PO-Revision-Date: 2017-11-06 16:26+0000\n"
 "Last-Translator: Pin-guang Chen <petercpg@mail.moztw.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Pontoon\n"
 "X-POOTLE-MTIME: 1441633992.0\n"
 
-#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:79
+#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:78
 msgid "Private"
 msgstr "私人"
 
@@ -31,75 +31,99 @@ msgstr "您必須經背書後才能繼續。"
 msgid "Visible to:"
 msgstr "可見:"
 
-#: mozillians/groups/forms.py:20
+#: mozillians/groups/forms.py:21
 msgid "Name A-Z"
 msgstr "名稱 A-Z 順序"
 
-#: mozillians/groups/forms.py:21
+#: mozillians/groups/forms.py:22
 msgid "Most Members"
 msgstr "最多成員"
 
-#: mozillians/groups/forms.py:22
+#: mozillians/groups/forms.py:23
 msgid "Fewest Members"
 msgstr "最少成員"
 
-#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:50 mozillians/groups/forms.py:77
 msgid "The group must have at least one curator."
 msgstr "群組內至少要有一位負責人。"
 
-#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#: mozillians/groups/forms.py:53 mozillians/groups/forms.py:139
 msgid "Start typing the name/email/username of a vouched Mozillian."
 msgstr "輸入已被背書的摩茲人姓名、電子郵件地址或帳號名稱。"
 
-#: mozillians/groups/forms.py:102
+#: mozillians/groups/forms.py:83
+msgid "Only staff members can become access group curators"
+msgstr ""
+
+#: mozillians/groups/forms.py:122
 msgid "The maximum expiration date for a group cannot exceed two years."
 msgstr "群組的到期日不能設在超過兩年後。"
 
-#: mozillians/groups/forms.py:131
+#: mozillians/groups/forms.py:164
 msgid "You need to be the curator of this group before inviting someone to join."
 msgstr "您必須要是此群組的負責人才能邀請別人加入。"
 
-#: mozillians/groups/forms.py:179
+#: mozillians/groups/forms.py:168
+msgid "Only staff and NDA members are allowed to be invited"
+msgstr ""
+
+#: mozillians/groups/forms.py:219
 msgid "You need to be the administrator of this group in order to edit this section."
 msgstr "您需要成為此群組的管理員才能編輯此段落。"
 
-#: mozillians/groups/forms.py:209
+#: mozillians/groups/forms.py:254
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "您必須指定條件，或變更要接受的選項。"
 
-#: mozillians/groups/forms.py:223
+#: mozillians/groups/forms.py:261
+msgid "An access group cannot be of type Open."
+msgstr ""
+
+#: mozillians/groups/forms.py:272
 msgid "Select Group Type"
 msgstr "選擇群組類型"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:105
+#: mozillians/groups/forms.py:289
+msgid "You do not have the permissions to provision an access group."
+msgstr ""
+
+#: mozillians/groups/forms.py:294
+msgid "An access group must be of type Reviewed or Closed."
+msgstr ""
+
+#: mozillians/groups/forms.py:310 mozillians/phonebook/forms.py:105
 msgid "All"
 msgstr "全部"
 
-#: mozillians/groups/forms.py:231 mozillians/jinja2/groups/group.html:95
+#: mozillians/groups/forms.py:311 mozillians/jinja2/groups/group.html:95
 msgid "Members"
 msgstr "成員"
 
-#: mozillians/groups/forms.py:232
+#: mozillians/groups/forms.py:312
 msgid "Pending Members"
 msgstr "等待加入中的成員"
 
-#: mozillians/groups/forms.py:233
+#: mozillians/groups/forms.py:313
 msgid "Pending Terms"
 msgstr "新版使用條款"
 
-#: mozillians/groups/forms.py:234
+#: mozillians/groups/forms.py:314
 msgid "Renewals"
 msgstr "更新"
 
-#: mozillians/groups/forms.py:245
+#: mozillians/groups/forms.py:325
 msgid "I accept these terms."
 msgstr "我接受這些使用條款。"
 
-#: mozillians/groups/forms.py:246
+#: mozillians/groups/forms.py:326
 msgid "I don't accept these terms."
 msgstr "我不接受這些使用條款。"
 
-#: mozillians/groups/forms.py:258
+#: mozillians/groups/forms.py:345
+msgid "Group must be of type Reviewed or Closed for Access Groups."
+msgstr ""
+
+#: mozillians/groups/forms.py:357
 msgid "Group type"
 msgstr "群組類型"
 
@@ -135,67 +159,76 @@ msgstr "已審核"
 msgid "Closed"
 msgstr "已關閉"
 
-#: mozillians/groups/models.py:189 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
+#: mozillians/groups/models.py:187 mozillians/jinja2/groups/includes/group_edit_access.html:84
+#, fuzzy
+msgid "Access Group"
+msgstr "存取"
+
+#: mozillians/groups/models.py:188
+msgid "Tag"
+msgstr ""
+
+#: mozillians/groups/models.py:196 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "描述"
 
-#: mozillians/groups/models.py:194 mozillians/jinja2/groups/group.html:73
+#: mozillians/groups/models.py:201 mozillians/jinja2/groups/group.html:73
 msgid "IRC Channel"
 msgstr "IRC 頻道"
 
-#: mozillians/groups/models.py:195
+#: mozillians/groups/models.py:202
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "此群組的討論 IRC 頻道（非必要）。"
 
-#: mozillians/groups/models.py:199 mozillians/jinja2/groups/group.html:83
+#: mozillians/groups/models.py:206 mozillians/jinja2/groups/group.html:83
 msgid "Website"
 msgstr "網站"
 
-#: mozillians/groups/models.py:200
+#: mozillians/groups/models.py:207
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "此群組的相關資訊網站（非必要）。"
 
-#: mozillians/groups/models.py:204 mozillians/jinja2/groups/group.html:90
+#: mozillians/groups/models.py:211 mozillians/jinja2/groups/group.html:90
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:205
+#: mozillians/groups/models.py:212
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "此群組的相關資訊 wiki 網址（非必要）。"
 
-#: mozillians/groups/models.py:208
+#: mozillians/groups/models.py:215
 msgid "Accepting new members"
 msgstr "接受新成員"
 
-#: mozillians/groups/models.py:216 mozillians/jinja2/groups/group.html:66
+#: mozillians/groups/models.py:223 mozillians/jinja2/groups/group.html:66
 msgid "New Member Criteria"
 msgstr "新成員條件"
 
-#: mozillians/groups/models.py:217
+#: mozillians/groups/models.py:224
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "請指定您如何接受新成員加入請求的標準。"
 
-#: mozillians/groups/models.py:222
+#: mozillians/groups/models.py:229
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "此群組是否要在介面中（群組清單、搜尋等）。用來避免像是「staff」等系統群組造成介面凌亂。"
 
-#: mozillians/groups/models.py:232
+#: mozillians/groups/models.py:239
 msgid "Terms"
 msgstr "使用條款"
 
-#: mozillians/groups/models.py:236
+#: mozillians/groups/models.py:243
 msgid "Invalidation days"
 msgstr "無效化日期"
 
-#: mozillians/groups/models.py:244
+#: mozillians/groups/models.py:251
 msgid "Please enter any additional text for the invitation email"
 msgstr "請輸入其他要附加於邀請郵件中的文字"
 
-#: mozillians/groups/models.py:415 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:426 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "邀請者"
 
-#: mozillians/groups/models.py:417 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:428 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "建立者"
 
@@ -225,80 +258,80 @@ msgstr "摩茲人群組「%s」的狀態已變更"
 msgid "Removed from Mozillians group \"%s\""
 msgstr "已自摩茲人群組「%s」移除"
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:260
 msgid "This group does not allow members to remove themselves."
 msgstr "此群組不接受成員移除自己。"
 
-#: mozillians/groups/views.py:267
+#: mozillians/groups/views.py:269
 msgid "The group needs at least one curator."
 msgstr "群組內至少要有一位負責人。"
 
-#: mozillians/groups/views.py:276
+#: mozillians/groups/views.py:278
 msgid "You have been removed from this group."
 msgstr "您已離開此群組。"
 
-#: mozillians/groups/views.py:278
+#: mozillians/groups/views.py:280
 msgid "The group member has been removed."
 msgstr "已移除此群組成員。"
 
-#: mozillians/groups/views.py:307
+#: mozillians/groups/views.py:309
 msgid "This user has not requested membership in this group."
 msgstr "此使用者還沒有請求加入此群組。"
 
-#: mozillians/groups/views.py:310
+#: mozillians/groups/views.py:312
 msgid "This user is already a member of this group."
 msgstr "此使用者已經是此群組的成員。"
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:319
 msgid "The membership of the user has been renewed."
 msgstr "已更新此使用者的群組成員狀態。"
 
-#: mozillians/groups/views.py:319
+#: mozillians/groups/views.py:321
 msgid "This user has been added as a member of this group."
 msgstr "此使用者已被加入為此群組成員。"
 
-#: mozillians/groups/views.py:364
+#: mozillians/groups/views.py:366
 msgid "You are already in this group."
 msgstr "您已在此群組中。"
 
-#: mozillians/groups/views.py:366
+#: mozillians/groups/views.py:368
 msgid "Your request to join this group is still pending."
 msgstr "您要加入此群組的請求仍在處理中。"
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:370
 msgid "This group is not accepting requests to join."
 msgstr "此群組不接受加入的新請求。"
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:374
 msgid "You have been added to this group."
 msgstr "您已被新增至此群組。"
 
-#: mozillians/groups/views.py:377
+#: mozillians/groups/views.py:379
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "已將您的加入請求傳送給群組負責人。"
 
-#: mozillians/groups/views.py:407
+#: mozillians/groups/views.py:409
 msgid "You must be a curator to delete a group"
 msgstr "您必須是群組負責人才能刪除群組"
 
-#: mozillians/groups/views.py:411
+#: mozillians/groups/views.py:413
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "若群組中還有成員則無法刪除。"
 
-#: mozillians/groups/views.py:415
+#: mozillians/groups/views.py:417
 #, python-format
 msgid "Group %s has been deleted"
 msgstr "已刪除 %s 群組"
 
-#: mozillians/groups/views.py:440
+#: mozillians/groups/views.py:442
 msgid "You must be a curator or an admin to edit a group"
 msgstr "您必須是群組負責人或管理員才能編輯群組"
 
-#: mozillians/groups/views.py:562
+#: mozillians/groups/views.py:566
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "已成功註銷 {0} 的邀請函。"
 
-#: mozillians/groups/views.py:603
+#: mozillians/groups/views.py:607
 msgid "Invitation to {0} has been sent successfully."
 msgstr "已成功寄出邀請函給 {0}。"
 
@@ -324,8 +357,8 @@ msgstr "<p>找不到您所請求的頁面。您可以直接前往 <a href=\"%(ho
 #: mozillians/jinja2/404.html:25
 #, python-format
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
-" <a href=\"%(join_url)s\">join us</a>. </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr "<p>因為您尚未通過驗證，您可能沒有辦法存取電話簿當中的私人資料。在您嘗試存取私人資料時您應該登入。若您還沒有帳號，請 <a href=\"%(join_url)s\">加入我們</a>。</p>"
 
 #: mozillians/jinja2/500.html:3
@@ -343,10 +376,12 @@ msgstr "由 The Oatmeal 的 Matthew Inman 所繪製的 Jitterbeasts"
 #: mozillians/jinja2/500.html:15
 #, python-format
 msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us know"
-" what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more about "
-"Mozillians. Sorry about this! </p>"
-msgstr "<p>抱歉，我們遇到了一個未預期的錯誤，無法處理您的請求。您可以重新整理頁面並再試一次，或是 <a href=\"%(bugzilla_url)s\">回報一個 Bug</a> 讓我們知道發生了什麼事，我們會儘速修復問題。</p><p>若重新整理頁面無效，您也可以 <a href=\"%(home_url)s\">直接前往摩茲人首頁</a> 以了解摩茲人的資訊。真抱歉！</p>"
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
+msgstr ""
+"<p>抱歉，我們遇到了一個未預期的錯誤，無法處理您的請求。您可以重新整理頁面並再試一次，或是 <a href=\"%(bugzilla_url)s\">回報一個 Bug</a> 讓我們知道發生了什麼事，我們會儘速修復問題。</p><p>若重新整理"
+"頁面無效，您也可以 <a href=\"%(home_url)s\">直接前往摩茲人首頁</a> 以了解摩茲人的資訊。真抱歉！</p>"
 
 #: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/users/managers.py:12 mozillians/users/managers.py:14
 msgid "Mozillians"
@@ -498,7 +533,7 @@ msgstr "成員共同有的技能"
 msgid "Community Steward"
 msgstr "社群代表"
 
-#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:121
 msgid "Curators"
 msgstr "群組負責人"
 
@@ -589,11 +624,11 @@ msgstr[0] "%(num)s 位成員"
 msgid "Create Group"
 msgstr "建立群組"
 
-#: mozillians/jinja2/groups/index_groups.html:48
+#: mozillians/jinja2/groups/index_groups.html:57
 msgid "Cancel"
 msgstr "取消"
 
-#: mozillians/jinja2/groups/index_groups.html:49
+#: mozillians/jinja2/groups/index_groups.html:58
 msgid "Save"
 msgstr "儲存"
 
@@ -631,32 +666,37 @@ msgstr "檢視使用條款"
 msgid "Group Type"
 msgstr "群組類型"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#: mozillians/jinja2/groups/includes/group_edit_access.html:73
 msgid "Update Type"
 msgstr "更新類型"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#: mozillians/jinja2/groups/includes/group_edit_access.html:111
+#, fuzzy
+msgid "Update Access"
+msgstr "更新類型"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:137
 msgid "Update Curators"
 msgstr "更新負責人"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:103
+#: mozillians/jinja2/groups/includes/group_edit_access.html:146
 msgid "Terms & Expiration"
 msgstr "條款與期限"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+#: mozillians/jinja2/groups/includes/group_edit_access.html:153
 msgid "New members should accept terms"
 msgstr "新成員應接受條款"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:121 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#: mozillians/jinja2/groups/includes/group_edit_access.html:164 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
 #, python-format
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "可以使用 <a href=\"%(url)s\">Markdown</a> 套用粗體、斜體、清單與鏈結樣式。"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:134
+#: mozillians/jinja2/groups/includes/group_edit_access.html:177
 msgid "Membership can expire"
 msgstr "可設定成員身分時限"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:153
+#: mozillians/jinja2/groups/includes/group_edit_access.html:196
 msgid "Update Terms & Expiration"
 msgstr "更新條款與期限"
 
@@ -749,8 +789,9 @@ msgid ""
 "communications from Mozilla. </p> <p> <a href=\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a "
 "href=\"%(wiki_get_involved_url)s\"> get involved</a>. </p>"
 msgstr ""
-"<p>摩茲人是一群自願投入時間讓 Mozilla 使命更進一步的義工。他們致力於推廣網路上開放、創新與機會，並形成社群的核心力量。</p> <p>這個通訊錄就是可以讓摩茲人可以簡單了解誰有參與其中、誰做了什麼，以及如何聯絡彼此，也讓您可以接收來自 Mozilla 的郵件訊息。</p> <p><a "
-"href=\"%(wiki_roadmap_url)s\">這些功能</a>，以及其他的一些東西目前還在開發中。若您想要加入幫忙，請參考下列<a href=\"%(wiki_get_involved_url)s\">參與其中</a>的方式。</p>"
+"<p>摩茲人是一群自願投入時間讓 Mozilla 使命更進一步的義工。他們致力於推廣網路上開放、創新與機會，並形成社群的核心力量。</p> <p>這個通訊錄就是可以讓摩茲人可以簡單了解誰有參與其中、誰做了什麼，以及如何"
+"聯絡彼此，也讓您可以接收來自 Mozilla 的郵件訊息。</p> <p><a href=\"%(wiki_roadmap_url)s\">這些功能</a>，以及其他的一些東西目前還在開發中。若您想要加入幫忙，請參考下列<a href="
+"\"%(wiki_get_involved_url)s\">參與其中</a>的方式。</p>"
 
 #: mozillians/jinja2/phonebook/about.html:31
 msgid "Privacy First"
@@ -761,7 +802,9 @@ msgstr "隱私第一"
 msgid ""
 "Privacy has been an important part of this directory from the very beginning. We want to make sure we provide Mozillians with the best experience possible, from the way the site is built to the way "
 "we vouch for new users before they can access data that should only be available to other Mozillians. Read our <a href=\"%(privacy_policy_url)s\"> Privacy Policy </a> for more information."
-msgstr "這個網站從一開始就很注重隱私權。不論是從這個網站的打造方式，或是我們讓新使用者可以存取資料前必須先被其他的摩茲人背書，我們要確定能讓摩茲人有最好的體驗。請閱讀我們的 <a href=\"%(privacy_policy_url)s\">隱私權保護政策</a> 以取得更多資訊。"
+msgstr ""
+"這個網站從一開始就很注重隱私權。不論是從這個網站的打造方式，或是我們讓新使用者可以存取資料前必須先被其他的摩茲人背書，我們要確定能讓摩茲人有最好的體驗。請閱讀我們的 <a href=\"%(privacy_policy_url)s"
+"\">隱私權保護政策</a> 以取得更多資訊。"
 
 #: mozillians/jinja2/phonebook/about.html:47
 msgid "Get Involved"
@@ -791,7 +834,9 @@ msgstr "API 版本 2"
 msgid ""
 "Take a look at the list of the API methods we've made available in our <a href=\"%(api_schema_url)s\">documentation</a>. You can instantly get a new API key by submitting a request below. If you "
 "need a key with elevated permissions you'll have to <a href=\"%(bugzilla_request_url)s\">file a bug</a>."
-msgstr "看看在我們的 <a href=\"%(api_schema_url)s\">文件</a> 當中所列出的 API 方法清單。您可以在下方送出請求，立刻取得全新的 API 金鑰。若您需要較多權限的金鑰，請 <a href=\"%(bugzilla_request_url)s\">開 Bug</a>。"
+msgstr ""
+"看看在我們的 <a href=\"%(api_schema_url)s\">文件</a> 當中所列出的 API 方法清單。您可以在下方送出請求，立刻取得全新的 API 金鑰。若您需要較多權限的金鑰，請 <a href=\"%(bugzilla_request_url)s\">開 "
+"Bug</a>。"
 
 #: mozillians/jinja2/phonebook/apikeys.html:31
 msgid "Your apps:"
@@ -955,15 +1000,19 @@ msgstr "邀請摩茲人"
 
 #: mozillians/jinja2/phonebook/invite.html:12
 #, python-format
-msgid "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr "若您想要邀請新的摩茲人，請填寫下列表單。<strong>註</strong>: 邀請新使用者就跟背書一樣。<a href=\"%(vouching_url)s\">了解背書機制的更多資訊。</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:18
 #, python-format
 msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your profile"
-" and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about vouching.</a>"
-msgstr "我們最近調整了能夠邀請與為其他摩茲人的門檻。若您想要此頁面，您必須先收到 %(vouch_threshold)s 個背書。請其他人前往您的個人資料頁面為您背書，等到您得到 %(vouch_threshold)s 個背書後再回來此頁面，您就可以邀請其他人加入此通訊錄。<a href=\"%(vouching_url)s\">了解背書機制的更多資訊。</a>"
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
+msgstr ""
+"我們最近調整了能夠邀請與為其他摩茲人的門檻。若您想要此頁面，您必須先收到 %(vouch_threshold)s 個背書。請其他人前往您的個人資料頁面為您背書，等到您得到 %(vouch_threshold)s 個背書後再回來此頁面，您就可"
+"以邀請其他人加入此通訊錄。<a href=\"%(vouching_url)s\">了解背書機制的更多資訊。</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:51
 msgid "Your Invites"
@@ -1022,8 +1071,9 @@ msgid ""
 "title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
-"<p>您的個人資料正在等候背書。等您被背書之後，您就可以看到所有摩茲人的資料、加入群組，並以摩茲人得身份存取其他網站上的內容。<a href=\"%(vouching_url)s\">了解背書機制的更多資訊</a>。</p><p>請把這個連結傳送給某個了解您作出了什麼貢獻的人，並請他們為您背書: <br/><em class=\"underline\" "
-"title=\"您的個人資料網址\">%(profile_url)s</em> </p> <p>若您剛加入 Mozilla 社群，請看看 <a class=\"button\" href=\"%(contribute_url)s\">參與其中</a> 這一頁裡面有什麼您有興趣的工作。</p> <p>您在社群中完成一些任務後更容易被人背書。</p>"
+"<p>您的個人資料正在等候背書。等您被背書之後，您就可以看到所有摩茲人的資料、加入群組，並以摩茲人得身份存取其他網站上的內容。<a href=\"%(vouching_url)s\">了解背書機制的更多資訊</a>。</p><p>請把這個連"
+"結傳送給某個了解您作出了什麼貢獻的人，並請他們為您背書: <br/><em class=\"underline\" title=\"您的個人資料網址\">%(profile_url)s</em> </p> <p>若您剛加入 Mozilla 社群，請看看 <a class=\"button\" href="
+"\"%(contribute_url)s\">參與其中</a> 這一頁裡面有什麼您有興趣的工作。</p> <p>您在社群中完成一些任務後更容易被人背書。</p>"
 
 #: mozillians/jinja2/phonebook/profile.html:50
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
@@ -1061,7 +1111,7 @@ msgstr "Mozillian"
 msgid "Public"
 msgstr "任何人"
 
-#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:157
+#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:156
 msgid "Bio"
 msgstr "小傳"
 
@@ -1077,37 +1127,37 @@ msgstr "（條款內容確認中）"
 msgid "Websites"
 msgstr "網站"
 
-#: mozillians/jinja2/phonebook/profile.html:309
+#: mozillians/jinja2/phonebook/profile.html:308
 msgid "Alternate Contact Identities"
 msgstr "其他聯絡身分"
 
-#: mozillians/jinja2/phonebook/profile.html:327
+#: mozillians/jinja2/phonebook/profile.html:326
 msgid "Vouched By"
 msgstr "背書人"
 
-#: mozillians/jinja2/phonebook/profile.html:340
+#: mozillians/jinja2/phonebook/profile.html:339
 msgid "Unknown Voucher"
 msgstr "未知的背書人"
 
-#: mozillians/jinja2/phonebook/profile.html:343
+#: mozillians/jinja2/phonebook/profile.html:342
 msgid "Legacy vouch."
 msgstr "傳統背書"
 
-#: mozillians/jinja2/phonebook/profile.html:354
+#: mozillians/jinja2/phonebook/profile.html:353
 msgid "Vouchees"
 msgstr "為下列成員背書"
 
-#: mozillians/jinja2/phonebook/profile.html:380
+#: mozillians/jinja2/phonebook/profile.html:379
 #, python-format
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "比您的時區還早 %(hours)s 小時。"
 
-#: mozillians/jinja2/phonebook/profile.html:383
+#: mozillians/jinja2/phonebook/profile.html:382
 #, python-format
 msgid "%(hours)s hours behind your timezone."
 msgstr "比您的時區還晚 %(hours)s 小時。"
 
-#: mozillians/jinja2/phonebook/profile.html:386
+#: mozillians/jinja2/phonebook/profile.html:385
 msgid "Same time zone as yours."
 msgstr "與您的時區相同。"
 
@@ -1284,8 +1334,8 @@ msgid ""
 "The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
 "and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
-"這個通訊錄提供了一組 API（目前是第 2 版），幫助授權貢獻者，並為諸如 <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> 或 <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a> "
-"等不同工具或網站分享個人資料。API 會依照各欄位設定的隱私顯示程度來提供資料。"
+"這個通訊錄提供了一組 API（目前是第 2 版），幫助授權貢獻者，並為諸如 <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> 或 <a id=\"services-mozilla-reps\" href=\"%(reps_url)s"
+"\">Mozilla Reps Portal</a> 等不同工具或網站分享個人資料。API 會依照各欄位設定的隱私顯示程度來提供資料。"
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
@@ -1558,49 +1608,49 @@ msgstr "感謝您幫助我們改善 mozillians.org！"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "感謝您為這位摩茲人背書！"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:291
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "您已完成註冊。接下來請到 {0} 頁面新增資訊到個人資料。"
 
-#: mozillians/phonebook/views.py:295
+#: mozillians/phonebook/views.py:296
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "您已修改了帳號名稱，請注意您的個人資料網址也有更動。"
 
-#: mozillians/phonebook/views.py:328
+#: mozillians/phonebook/views.py:329
 msgid "Identity {0} successfully deleted."
 msgstr "成功身分 {0}。"
 
-#: mozillians/phonebook/views.py:333
+#: mozillians/phonebook/views.py:334
 msgid "Sorry the requested Identity cannot be deleted."
 msgstr "很抱歉，無法刪除您指定的身分。"
 
-#: mozillians/phonebook/views.py:354
+#: mozillians/phonebook/views.py:355
 msgid "Primary Contact Identity successfully updated."
 msgstr "成功更新主要聯絡人身分。"
 
-#: mozillians/phonebook/views.py:375
+#: mozillians/phonebook/views.py:376
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "您的帳號已被刪除，感謝您貢獻至 Mozillia！"
 
-#: mozillians/phonebook/views.py:400
+#: mozillians/phonebook/views.py:401
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s 已被邀請成為摩茲人。他們將會收到一封如何加入的電子郵件。若您想要的話，還可以邀請其他人。"
 
-#: mozillians/phonebook/views.py:421
+#: mozillians/phonebook/views.py:422
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "%s 的 Mozillians 邀請函已被註銷，若需要的話您可以再次邀請 %s。"
 
-#: mozillians/phonebook/views.py:437
+#: mozillians/phonebook/views.py:438
 msgid "API Key generated successfully."
 msgstr "成功產生 API 金鑰。"
 
-#: mozillians/phonebook/views.py:451
+#: mozillians/phonebook/views.py:452
 msgid "API key successfully deleted."
 msgstr "成功刪除 API 金鑰。"
 
-#: mozillians/phonebook/views.py:476
+#: mozillians/phonebook/views.py:477
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "您已獲邀加入 Mozillians.org！請先登入，以建立設定檔。"
 
@@ -1608,111 +1658,111 @@ msgstr "您已獲邀加入 Mozillians.org！請先登入，以建立設定檔。
 msgid "Export"
 msgstr "匯出"
 
-#: mozillians/users/models.py:144
+#: mozillians/users/models.py:143
 msgid "Full Name"
 msgstr "全名"
 
-#: mozillians/users/models.py:146
+#: mozillians/users/models.py:145
 msgid "Name in local language"
 msgstr "本地語言姓名"
 
-#: mozillians/users/models.py:159
+#: mozillians/users/models.py:158
 msgid "IRC Nickname"
 msgstr "IRC 暱稱"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:167
 msgid "Latitude"
 msgstr "緯度"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:168
 msgid "Longitude"
 msgstr "經度"
 
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:184
 msgid "T-Shirt"
 msgstr "T 恤"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Small"
 msgstr "貼身 - S"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Medium"
 msgstr "貼身 - M"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted Large"
 msgstr "貼身 - L"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted X-Large"
 msgstr "貼身 - XL"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XX-Large"
 msgstr "貼身 - XXL"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XXX-Large"
 msgstr "貼身 - XXXL"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Small"
 msgstr "縱切 - S"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Medium"
 msgstr "縱切 - M"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut Large"
 msgstr "縱切 - L"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut X-Large"
 msgstr "縱切 - XL"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XX-Large"
 msgstr "縱切 - XXL"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XXX-Large"
 msgstr "縱切 - XXXL"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:193
 msgid "What do you do for Mozilla?"
 msgstr "您在 Mozilla 都做什麼？"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:197
 msgid "Link to your contribution story"
 msgstr "您的貢獻故事的鏈結"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:198
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "若您在其他地方撰寫了關於您如何成為摩茲人的故事，您可以在此放上鏈結。"
 
-#: mozillians/users/models.py:571
+#: mozillians/users/models.py:595
 msgid "You have been vouched on Mozillians.org"
 msgstr "您已在 Mozillians.org 被背書了！"
 
-#: mozillians/users/models.py:777
+#: mozillians/users/models.py:801
 msgid "Reason for Vouching"
 msgstr "背書理由"
 
-#: mozillians/users/models.py:932
+#: mozillians/users/models.py:956
 msgid "Account Username"
 msgstr "使用者名稱"
 
-#: mozillians/users/models.py:936
+#: mozillians/users/models.py:960
 msgid "Account Type"
 msgstr "帳號類型"
 
-#: mozillians/users/models.py:952
+#: mozillians/users/models.py:976
 msgid "You already have an account with this name and type."
 msgstr "您已有此名稱與類型的帳號。"
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:1009
 msgid "This language has already been selected."
 msgstr "已經選擇此語言。"
 
@@ -1856,8 +1906,8 @@ msgstr "已經選擇此語言。"
 #~ msgstr "使用此表單以在 Mozillians.org 中建立群組。在建立群組前，請先試著搜尋看看，也許有人已經建立過了。"
 
 #~ msgid ""
-#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email with "
-#~ "requests to join."
+#~ "Creating a group will make you the group's curator, letting you manage the group settings and decide who can join. If you set the group to require membership approval, you'll get a daily email "
+#~ "with requests to join."
 #~ msgstr "建立群組後您就將成為群組的負責人，讓您可以管理群組設定並決定誰可以加入。若您將群組設為需要先審核才能加入，有人想要加入時您將會收到每日郵件通知。"
 
 #~ msgid "Submit changes"
@@ -1938,12 +1988,12 @@ msgstr "已經選擇此語言。"
 #~ msgstr "其他網站"
 
 #~ msgid ""
-#~ "Take a look at the list of the <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy team. To"
-#~ " get started, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a id=\"services-development-forum\" "
+#~ "Take a look at the list of the <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">API methods we've made available</a>. To use this API, you'll need to get approval from the Privacy "
+#~ "team. To get started, <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">file a bug</a>. If you have any questions, talk to us in our <a id=\"services-development-forum\" "
 #~ "href=\"%(dev_form_url)s\"> development forum</a>."
 #~ msgstr ""
-#~ "看看 <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">我們所提供的 API 方法</a> 清單。您必須經過隱私權團隊允許才能使用此 API，如果您想使用，請 <a id=\"services-bugzilla-request-url\" href=\"%(bugzilla_request_url)s\">發一份 "
-#~ "bug</a>。若您有任何問題，歡迎在 <a id=\"services-development-forum\" href=\"%(dev_form_url)s\">開發討論區</a> 發問。"
+#~ "看看 <a id=\"services-api-methods\" href=\"%(api_schema_url)s\">我們所提供的 API 方法</a> 清單。您必須經過隱私權團隊允許才能使用此 API，如果您想使用，請 <a id=\"services-bugzilla-request-url\" "
+#~ "href=\"%(bugzilla_request_url)s\">發一份 bug</a>。若您有任何問題，歡迎在 <a id=\"services-development-forum\" href=\"%(dev_form_url)s\">開發討論區</a> 發問。"
 
 #~ msgid "Change Your Email"
 #~ msgstr "修改您的電子郵件信箱"
@@ -2022,7 +2072,8 @@ msgstr "已經選擇此語言。"
 #~ msgid "Name, IRC Nick, Email or Location"
 #~ msgstr "姓名、IRC 暱稱、Email、位置"
 
-#~ msgid "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
+#~ msgid ""
+#~ "<label for=\"id_optin\">I'm okay with you handling this info as you explain in your <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">privacy policy</a>.</label>"
 #~ msgstr "<label for=\"id_optin\">我同意你依照 <a href=\"http://www.mozilla.org/%(locale)s/privacy-policy.html\" target=\"_blank\">隱私權保護政策</a>上面的方式處理這些資訊。</label>"
 
 #~ msgid "Member of:"
@@ -2077,7 +2128,8 @@ msgstr "已經選擇此語言。"
 #~ msgid "The following fields are required (optin is the checkbox in the last panel)"
 #~ msgstr "下列欄位皆為必填 (最後一欄的選取盒則為選填)"
 
-#~ msgid "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
+#~ msgid ""
+#~ "Let us know where in the world you are. Other vouched Mozillians will be able to contact you and vice-versa. We may also send you emails about important Mozilla news relevant to your location."
 #~ msgstr "讓我們知道你您在世界的哪個角落，讓您可以與其他已被背書的摩茲人互相聯絡。我們可能也會傳送一些關於您所在之處的 Mozilla 相關消息給您。"
 
 #~ msgid "Sign in with Persona"
@@ -2123,8 +2175,8 @@ msgstr "已經選擇此語言。"
 #~ msgstr "來自 The Oatmeal (http://theoatmeal.com) 的 Tumblebeast"
 
 #~ msgid ""
-#~ "Except where otherwise <a href=\"%(legal_url)s\">noted</a>, content on this site is licensed under the <a href=\"%(cc_url)s\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later"
-#~ " version."
+#~ "Except where otherwise <a href=\"%(legal_url)s\">noted</a>, content on this site is licensed under the <a href=\"%(cc_url)s\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any "
+#~ "later version."
 #~ msgstr "除另有 <a href=\"%(legal_url)s\">註明</a> 外，本站內容皆採用 <a href=\"%(cc_url)s\"> 創用 CC 姓名標示—相同方式分享條款 3.0 版</a> 或更新版本授權大眾使用。"
 
 #~ msgid "Go"
@@ -2158,8 +2210,8 @@ msgstr "已經選擇此語言。"
 #~ msgstr "郵遞區號"
 
 #~ msgid ""
-#~ "Hi there. %s has invited you to join mozillians.org, the community directory for Mozilla contributors. You can create a community profile for yourself and search for other contributors to learn more"
-#~ " about them or get in touch."
+#~ "Hi there. %s has invited you to join mozillians.org, the community directory for Mozilla contributors. You can create a community profile for yourself and search for other contributors to learn "
+#~ "more about them or get in touch."
 #~ msgstr "嗨。%s 邀請您加入 mozillians.org，這是一個提供給您這樣的 Mozilla 貢獻者的社群目錄。您可以建立您的個人資料，並提到您在社群裡面做了什麼，並讓其他的貢獻者可以跟您建立聯繫。來看看吧！"
 
 #~ msgid "Join Mozillians: %s"
@@ -2271,9 +2323,11 @@ msgstr "已經選擇此語言。"
 #~ msgstr "感謝您<br><small>建立個人資料。</small>"
 
 #~ msgid ""
-#~ "To get full access to search for and invite other Mozillians you'll need to have <a href=\"%(profile)s\">your profile</a> vouched for by someone who already has an account. Please send <a "
-#~ "href=\"%(profile)s\">your profile</a> to a Mozillian who is familiar with your contributions and ask them to vouch for you."
-#~ msgstr "若要取得完整的存取權限以搜尋或邀請其他的摩茲人，您需要其他已有帳號的人替您的 <a href=\"%(profile)s\">個人資料</a> 背書。請將您的 <a href=\"%(profile)s\">個人資料</a> 傳送給某個了解您所作出貢獻的摩茲人，然後請他們替您背書。"
+#~ "To get full access to search for and invite other Mozillians you'll need to have <a href=\"%(profile)s\">your profile</a> vouched for by someone who already has an account. Please send <a href="
+#~ "\"%(profile)s\">your profile</a> to a Mozillian who is familiar with your contributions and ask them to vouch for you."
+#~ msgstr ""
+#~ "若要取得完整的存取權限以搜尋或邀請其他的摩茲人，您需要其他已有帳號的人替您的 <a href=\"%(profile)s\">個人資料</a> 背書。請將您的 <a href=\"%(profile)s\">個人資料</a> 傳送給某個了解您所作出貢獻的"
+#~ "摩茲人，然後請他們替您背書。"
 
 #~ msgid "Already have a profile?"
 #~ msgstr "已經有個人資料了？"
@@ -3134,11 +3188,11 @@ msgstr "已經選擇此語言。"
 
 #~ msgid ""
 #~ "<p> Mozillians are people who volunteer their time to advance the Mozilla mission. They're dedicated to promoting openness, innovation and opportunity on the Web and they form the core of our "
-#~ "community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. </p> <p> Want to find Mozillians in Auckland for "
-#~ "a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p>"
+#~ "community. </p> <p> This directory is a resource to make it easy for Mozillians to learn who is involved, what they do and how to connect with them. </p> <p> Want to find Mozillians in Auckland "
+#~ "for a meetup? Need an expert XPCOM hacker to review a patch? That's exactly what this site is for. </p>"
 #~ msgstr ""
-#~ "<p>摩茲人是自願付出他們的時間來達成 Mozilla 任務的一群志工。他們致力於推廣開放、創新，以及網路上的機會，並且成為了我們的社群當中的核心。</p> <p>這個聯絡人目錄就是一個讓摩茲人更簡單能得知誰參與其中、做了什麼，以及如何聯絡他們的資源。</p> <p>想要尋找在奧克蘭的 Mozillian 開個聚會嗎？需要專業的 XPCOM 駭客幫忙看一下 patch "
-#~ "嗎？這就是這個網站的用途。</p>"
+#~ "<p>摩茲人是自願付出他們的時間來達成 Mozilla 任務的一群志工。他們致力於推廣開放、創新，以及網路上的機會，並且成為了我們的社群當中的核心。</p> <p>這個聯絡人目錄就是一個讓摩茲人更簡單能得知誰參與其"
+#~ "中、做了什麼，以及如何聯絡他們的資源。</p> <p>想要尋找在奧克蘭的 Mozillian 開個聚會嗎？需要專業的 XPCOM 駭客幫忙看一下 patch 嗎？這就是這個網站的用途。</p>"
 
 #~ msgid "<label for=\"id_%(name)s\"> I'm okay with you handling this info as you explain in your <a href=\"%(url)s\">privacy policy</a>. </label>"
 #~ msgstr "<label for=\"id_%(name)s\">我同意你依照 <a href=\"%(url)s\">隱私權保護政策</a> 上面的方式處理這些資訊。</label>"

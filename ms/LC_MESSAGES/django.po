@@ -1,10 +1,10 @@
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT 1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 06:23-0800\n"
+"POT-Creation-Date: 2017-12-08 06:45-0800\n"
 "PO-Revision-Date: 2017-11-07 01:55+0000\n"
 "Last-Translator: manxmensch <manxmensch@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 "X-Generator: Pontoon\n"
 
-#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:79
+#: mozillians/api/models.py:14 mozillians/users/managers.py:16 mozillians/users/models.py:78
 msgid "Private"
 msgstr "Peribadi"
 
@@ -32,75 +32,99 @@ msgstr "Anda mesti diperakui untuk teruskan."
 msgid "Visible to:"
 msgstr "Tampak oleh:"
 
-#: mozillians/groups/forms.py:20
+#: mozillians/groups/forms.py:21
 msgid "Name A-Z"
 msgstr "Nama A-Z"
 
-#: mozillians/groups/forms.py:21
+#: mozillians/groups/forms.py:22
 msgid "Most Members"
 msgstr "Anggota Teramai"
 
-#: mozillians/groups/forms.py:22
+#: mozillians/groups/forms.py:23
 msgid "Fewest Members"
 msgstr "Kurang Anggota"
 
-#: mozillians/groups/forms.py:49 mozillians/groups/forms.py:63
+#: mozillians/groups/forms.py:50 mozillians/groups/forms.py:77
 msgid "The group must have at least one curator."
 msgstr "Kumpulan mesti ada sekurang-kurangnya seorang kurator."
 
-#: mozillians/groups/forms.py:52 mozillians/groups/forms.py:119
+#: mozillians/groups/forms.py:53 mozillians/groups/forms.py:139
 msgid "Start typing the name/email/username of a vouched Mozillian."
 msgstr "Mulakan menaip nama/email/username anggota Mozilla yang diperakui."
 
-#: mozillians/groups/forms.py:102
+#: mozillians/groups/forms.py:83
+msgid "Only staff members can become access group curators"
+msgstr ""
+
+#: mozillians/groups/forms.py:122
 msgid "The maximum expiration date for a group cannot exceed two years."
 msgstr "Tarikh tamat tempoh maksimum untuk kumpulan tidak boleh melebihi dua tahun."
 
-#: mozillians/groups/forms.py:131
+#: mozillians/groups/forms.py:164
 msgid "You need to be the curator of this group before inviting someone to join."
 msgstr "Anda perlu menjadi kurator kumpulan ini sebelum menjemput seseorang untuk turut serta."
 
-#: mozillians/groups/forms.py:179
+#: mozillians/groups/forms.py:168
+msgid "Only staff and NDA members are allowed to be invited"
+msgstr ""
+
+#: mozillians/groups/forms.py:219
 msgid "You need to be the administrator of this group in order to edit this section."
 msgstr "Anda perlu menjadi pentadbir kumpulan ini untuk boleh mengedit bahagian ini."
 
-#: mozillians/groups/forms.py:209
+#: mozillians/groups/forms.py:254
 msgid "You must either specify the criteria or change the acceptance selection."
 msgstr "Anda mesti tentukan samada kriteria atau mengubah pemilihan penerimaan."
 
-#: mozillians/groups/forms.py:223
+#: mozillians/groups/forms.py:261
+msgid "An access group cannot be of type Open."
+msgstr ""
+
+#: mozillians/groups/forms.py:272
 msgid "Select Group Type"
 msgstr "Pilih Jenis Kumpulan"
 
-#: mozillians/groups/forms.py:230 mozillians/phonebook/forms.py:105
+#: mozillians/groups/forms.py:289
+msgid "You do not have the permissions to provision an access group."
+msgstr ""
+
+#: mozillians/groups/forms.py:294
+msgid "An access group must be of type Reviewed or Closed."
+msgstr ""
+
+#: mozillians/groups/forms.py:310 mozillians/phonebook/forms.py:105
 msgid "All"
 msgstr "Semua"
 
-#: mozillians/groups/forms.py:231 mozillians/jinja2/groups/group.html:95
+#: mozillians/groups/forms.py:311 mozillians/jinja2/groups/group.html:95
 msgid "Members"
 msgstr "Anggota"
 
-#: mozillians/groups/forms.py:232
+#: mozillians/groups/forms.py:312
 msgid "Pending Members"
 msgstr "Anggota Tertangguh"
 
-#: mozillians/groups/forms.py:233
+#: mozillians/groups/forms.py:313
 msgid "Pending Terms"
 msgstr "Terma Tertangguh"
 
-#: mozillians/groups/forms.py:234
+#: mozillians/groups/forms.py:314
 msgid "Renewals"
 msgstr "Pembaharuan"
 
-#: mozillians/groups/forms.py:245
+#: mozillians/groups/forms.py:325
 msgid "I accept these terms."
 msgstr "Saya terima terma ini."
 
-#: mozillians/groups/forms.py:246
+#: mozillians/groups/forms.py:326
 msgid "I don't accept these terms."
 msgstr "Saya tidak terima terma ini."
 
-#: mozillians/groups/forms.py:258
+#: mozillians/groups/forms.py:345
+msgid "Group must be of type Reviewed or Closed for Access Groups."
+msgstr ""
+
+#: mozillians/groups/forms.py:357
 msgid "Group type"
 msgstr "Jenis kumpulan"
 
@@ -136,67 +160,76 @@ msgstr "Disemak"
 msgid "Closed"
 msgstr "Ditutup"
 
-#: mozillians/groups/models.py:189 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
+#: mozillians/groups/models.py:187 mozillians/jinja2/groups/includes/group_edit_access.html:84
+#, fuzzy
+msgid "Access Group"
+msgstr "Akses"
+
+#: mozillians/groups/models.py:188
+msgid "Tag"
+msgstr ""
+
+#: mozillians/groups/models.py:196 mozillians/jinja2/groups/edit_group.html:23 mozillians/jinja2/groups/includes/group_edit_description.html:5
 msgid "Description"
 msgstr "Keterangan"
 
-#: mozillians/groups/models.py:194 mozillians/jinja2/groups/group.html:73
+#: mozillians/groups/models.py:201 mozillians/jinja2/groups/group.html:73
 msgid "IRC Channel"
 msgstr "Saluran IRC"
 
-#: mozillians/groups/models.py:195
+#: mozillians/groups/models.py:202
 msgid "An IRC channel where this group is discussed (optional)."
 msgstr "Saluran IRC tempat perbincangan kumpulan ini dibuat (pilihan)."
 
-#: mozillians/groups/models.py:199 mozillians/jinja2/groups/group.html:83
+#: mozillians/groups/models.py:206 mozillians/jinja2/groups/group.html:83
 msgid "Website"
 msgstr "Laman web"
 
-#: mozillians/groups/models.py:200
+#: mozillians/groups/models.py:207
 msgid "A URL of a web site with more information about this group (optional)."
 msgstr "URL laman web dengan lanjutan maklumat kumpulan in (pilihan)."
 
-#: mozillians/groups/models.py:204 mozillians/jinja2/groups/group.html:90
+#: mozillians/groups/models.py:211 mozillians/jinja2/groups/group.html:90
 msgid "Wiki"
 msgstr "Wiki"
 
-#: mozillians/groups/models.py:205
+#: mozillians/groups/models.py:212
 msgid "A URL of a wiki with more information about this group (optional)."
 msgstr "URL wiki dengan lanjutan maklumat kumpulan in (pilihan)."
 
-#: mozillians/groups/models.py:208
+#: mozillians/groups/models.py:215
 msgid "Accepting new members"
 msgstr "Menerima anggota baru"
 
-#: mozillians/groups/models.py:216 mozillians/jinja2/groups/group.html:66
+#: mozillians/groups/models.py:223 mozillians/jinja2/groups/group.html:66
 msgid "New Member Criteria"
 msgstr "Kriteria Anggota Baru"
 
-#: mozillians/groups/models.py:217
+#: mozillians/groups/models.py:224
 msgid "Specify the criteria you will use to decide whether or not you will accept a membership request."
 msgstr "Nyatakan kriteria yang anda akan gunakan untuk memutuskan sama ada anda akan terima atau tolak permohonan keanggotaan."
 
-#: mozillians/groups/models.py:222
+#: mozillians/groups/models.py:229
 msgid "Whether group is shown on the UI (in group lists, search, etc). Mainly intended to keep system groups like \"staff\" from cluttering up the interface."
 msgstr "Samada mahu kumpulan dipamer pada UI (dalam senarai kumpulan, carian, dsb). Tujuan utamanya adalah untuk mengekalkan sistem kumpulan seperti \"staf\" daripada berselerakan pada antaramuka."
 
-#: mozillians/groups/models.py:232
+#: mozillians/groups/models.py:239
 msgid "Terms"
 msgstr "Terma"
 
-#: mozillians/groups/models.py:236
+#: mozillians/groups/models.py:243
 msgid "Invalidation days"
 msgstr "Hari pentaksahan"
 
-#: mozillians/groups/models.py:244
+#: mozillians/groups/models.py:251
 msgid "Please enter any additional text for the invitation email"
 msgstr "Sila masukkan teks tambahan untuk e-mel jemputan"
 
-#: mozillians/groups/models.py:415 mozillians/phonebook/models.py:18
+#: mozillians/groups/models.py:426 mozillians/phonebook/models.py:18
 msgid "Inviter"
 msgstr "Penjemput"
 
-#: mozillians/groups/models.py:417 mozillians/phonebook/models.py:21
+#: mozillians/groups/models.py:428 mozillians/phonebook/models.py:21
 msgid "Redeemer"
 msgstr "Penebus"
 
@@ -226,80 +259,80 @@ msgstr "Status ditukar untuk kumpulan Mozillian \"%s\""
 msgid "Removed from Mozillians group \"%s\""
 msgstr "Disingkir daripada kumpulan Mozillian \"%s\""
 
-#: mozillians/groups/views.py:258
+#: mozillians/groups/views.py:260
 msgid "This group does not allow members to remove themselves."
 msgstr "Kumpulan ini tidak membenarkan anggota menyingkirkan diri mereka sendiri."
 
-#: mozillians/groups/views.py:267
+#: mozillians/groups/views.py:269
 msgid "The group needs at least one curator."
 msgstr "Kumpulan mesti ada sekurang-kurangnya seorang kurator."
 
-#: mozillians/groups/views.py:276
+#: mozillians/groups/views.py:278
 msgid "You have been removed from this group."
 msgstr "Anda telah disingkir daripada kumpulan ini."
 
-#: mozillians/groups/views.py:278
+#: mozillians/groups/views.py:280
 msgid "The group member has been removed."
 msgstr "Anggota kumpulan telah disingkirkan."
 
-#: mozillians/groups/views.py:307
+#: mozillians/groups/views.py:309
 msgid "This user has not requested membership in this group."
 msgstr "Pengguna ini tidak memohon keanggotaan untuk kumpulan ini."
 
-#: mozillians/groups/views.py:310
+#: mozillians/groups/views.py:312
 msgid "This user is already a member of this group."
 msgstr "Pengguna ini sudah menjadi anggota kumpulan ini."
 
-#: mozillians/groups/views.py:317
+#: mozillians/groups/views.py:319
 msgid "The membership of the user has been renewed."
 msgstr "Keanggotaan pengguna telah diperbaharui."
 
-#: mozillians/groups/views.py:319
+#: mozillians/groups/views.py:321
 msgid "This user has been added as a member of this group."
 msgstr "Pengguna ini sudah dimasukkan sebagai anggota kumpulan ini."
 
-#: mozillians/groups/views.py:364
+#: mozillians/groups/views.py:366
 msgid "You are already in this group."
 msgstr "Anda sudah masuk kumpulan ini."
 
-#: mozillians/groups/views.py:366
+#: mozillians/groups/views.py:368
 msgid "Your request to join this group is still pending."
 msgstr "Permohonan anda untuk menyertai kumpulan ini masih tertangguh."
 
-#: mozillians/groups/views.py:368
+#: mozillians/groups/views.py:370
 msgid "This group is not accepting requests to join."
 msgstr "Kumpulan ini tidak menerima permohonan untuk menyertai kumpulan."
 
-#: mozillians/groups/views.py:372
+#: mozillians/groups/views.py:374
 msgid "You have been added to this group."
 msgstr "Anda sudah dimasukkan dalam kumpulan ini."
 
-#: mozillians/groups/views.py:377
+#: mozillians/groups/views.py:379
 msgid "Your membership request has been sent to the group curator(s)."
 msgstr "Permohonan keanggotaan anda telah dihantar kepada kurator kumpulan."
 
-#: mozillians/groups/views.py:407
+#: mozillians/groups/views.py:409
 msgid "You must be a curator to delete a group"
 msgstr "Anda mesti seorang kurator untuk menghapuskan kumpulan"
 
-#: mozillians/groups/views.py:411
+#: mozillians/groups/views.py:413
 msgid "You cannot delete a group if anyone else is in it."
 msgstr "Anda tidak boleh menghapuskan kumpulan jika semua orang lain ada di dalamnya."
 
-#: mozillians/groups/views.py:415
+#: mozillians/groups/views.py:417
 #, python-format
 msgid "Group %s has been deleted"
 msgstr "Kumpulan %s telah dihapuskan"
 
-#: mozillians/groups/views.py:440
+#: mozillians/groups/views.py:442
 msgid "You must be a curator or an admin to edit a group"
 msgstr "Anda mesti seorang kurator atau pentadbir untuk mengedit kumpulan"
 
-#: mozillians/groups/views.py:562
+#: mozillians/groups/views.py:566
 msgid "The invitation to {0} has been successfully revoked."
 msgstr "Jemputan kepada {0} telah berjaya ditarik balik."
 
-#: mozillians/groups/views.py:603
+#: mozillians/groups/views.py:607
 msgid "Invitation to {0} has been sent successfully."
 msgstr "Jemputan untuk {0} telah berjaya dihantar."
 
@@ -327,8 +360,8 @@ msgstr ""
 #: mozillians/jinja2/404.html:25
 #, python-format
 msgid ""
-"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an account,"
-" <a href=\"%(join_url)s\">join us</a>. </p>"
+"<p> Because you aren't authenticated, you may not have access to private profiles in the phonebook. You should log in in case you're trying to access a private profile. If you don't have an "
+"account, <a href=\"%(join_url)s\">join us</a>. </p>"
 msgstr ""
 "<p> Oleh kerana tidak disahkan, anda mungkin tidak ada akses kepada profil peribadi dalam buku telefon. Anda perlu log masuk jika anda mahu mengakses profil peribadi. Jika anda tidak ada akaun, <a "
 "href=\"%(join_url)s\">sertai kami</a>. </p>"
@@ -348,13 +381,13 @@ msgstr "Jitterbeasts oleh Matthew Inman of The Oatmeal"
 #: mozillians/jinja2/500.html:15
 #, python-format
 msgid ""
-"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us know"
-" what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more about "
-"Mozillians. Sorry about this! </p>"
+"<p> Sorry, but we encountered an unexpected error and can't process your request. You can try again by refreshing your browser or you can <a href=\"%(bugzilla_url)s\"> file a bug</a> letting us "
+"know what happened and we'll get right on fixing the problem. </p> <p> If refreshing the page didn't work, you can <a href=\"%(home_url)s\">head to the Mozillians home page</a> to find out more "
+"about Mozillians. Sorry about this! </p>"
 msgstr ""
 "<p> Maaf, kami menghadapi ralat tidak dijangka dan tidak dapat memproses permintaan anda. Anda boleh cuba lagi dengan memulakan semula pelayar anda atau anda boleh <a href=\"%(bugzilla_url)s\"> "
-"failkan pepijat</a> memaklumkan kami apa yang terjadi dan kami akan memperbaiki masalah tersebut. </p> <p> Jika memulakan semula halaman juga tidak selesaikan masalah ini, anda boleh <a "
-"href=\"%(home_url)s\">pergi ke halaman utama Mozillian</a> untuk ketahui lanjut perihal Mozillian. Maafkan kami atas masalah ini! </p>"
+"failkan pepijat</a> memaklumkan kami apa yang terjadi dan kami akan memperbaiki masalah tersebut. </p> <p> Jika memulakan semula halaman juga tidak selesaikan masalah ini, anda boleh <a href="
+"\"%(home_url)s\">pergi ke halaman utama Mozillian</a> untuk ketahui lanjut perihal Mozillian. Maafkan kami atas masalah ini! </p>"
 
 #: mozillians/jinja2/base.html:7 mozillians/jinja2/base.html:21 mozillians/users/managers.py:12 mozillians/users/managers.py:14
 msgid "Mozillians"
@@ -506,7 +539,7 @@ msgstr "Persamaan kemahiran dimiliki anggota"
 msgid "Community Steward"
 msgstr "Pengelola Komuniti"
 
-#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:78
+#: mozillians/jinja2/groups/group.html:116 mozillians/jinja2/groups/includes/group_edit_access.html:121
 msgid "Curators"
 msgstr "Kurator"
 
@@ -598,11 +631,11 @@ msgstr[0] "%(num)s anggota"
 msgid "Create Group"
 msgstr "Buka Kumpulan"
 
-#: mozillians/jinja2/groups/index_groups.html:48
+#: mozillians/jinja2/groups/index_groups.html:57
 msgid "Cancel"
 msgstr "Batal"
 
-#: mozillians/jinja2/groups/index_groups.html:49
+#: mozillians/jinja2/groups/index_groups.html:58
 msgid "Save"
 msgstr "Simpan"
 
@@ -640,32 +673,37 @@ msgstr "Teliti terma"
 msgid "Group Type"
 msgstr "Jenis kumpulan"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:69
+#: mozillians/jinja2/groups/includes/group_edit_access.html:73
 msgid "Update Type"
 msgstr "Kemaskini Jenis"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:94
+#: mozillians/jinja2/groups/includes/group_edit_access.html:111
+#, fuzzy
+msgid "Update Access"
+msgstr "Kemaskini Jenis"
+
+#: mozillians/jinja2/groups/includes/group_edit_access.html:137
 msgid "Update Curators"
 msgstr "Kemaskini Kurator"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:103
+#: mozillians/jinja2/groups/includes/group_edit_access.html:146
 msgid "Terms & Expiration"
 msgstr "Terma & Luput"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:110
+#: mozillians/jinja2/groups/includes/group_edit_access.html:153
 msgid "New members should accept terms"
 msgstr "Anggota baru mesti terima terma"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:121 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
+#: mozillians/jinja2/groups/includes/group_edit_access.html:164 mozillians/jinja2/phonebook/includes/profile_edit_basic.html:77 mozillians/jinja2/phonebook/includes/profile_vouch.html:23
 #, python-format
 msgid "Use <a href=\"%(url)s\">Markdown</a> for bold, italic, lists and links."
 msgstr "Gunakan<a href=\"%(url)s\">Susutan</a> untuk ketebalan, italik, senarai dan pautan."
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:134
+#: mozillians/jinja2/groups/includes/group_edit_access.html:177
 msgid "Membership can expire"
 msgstr "Keanggotaan boleh luput"
 
-#: mozillians/jinja2/groups/includes/group_edit_access.html:153
+#: mozillians/jinja2/groups/includes/group_edit_access.html:196
 msgid "Update Terms & Expiration"
 msgstr "Kemaskini Terma & Luput"
 
@@ -758,8 +796,8 @@ msgid ""
 "communications from Mozilla. </p> <p> <a href=\"%(wiki_roadmap_url)s\">These features</a>, and others, are currently in development. If you'd like to help us out with these, find out how you can <a "
 "href=\"%(wiki_get_involved_url)s\"> get involved</a>. </p>"
 msgstr ""
-"<p> Mozillian adalah individu sukarelawan yang meluangkan masa memajukan misi Mozilla. Mereka berdedikasi mempromosi keterbukaan, inovasi dan peluang dalam Web dan membentuk asas komuniti kami. </p>"
-" <p> Direktori ini adalah sumber untuk memudahkan Mozillian mengetahui siapa yang terlibat, apa yang mereka lakukan dan bagaimana untuk berhubungan dengan mereka. Juga untuk membolehkan anda "
+"<p> Mozillian adalah individu sukarelawan yang meluangkan masa memajukan misi Mozilla. Mereka berdedikasi mempromosi keterbukaan, inovasi dan peluang dalam Web dan membentuk asas komuniti kami. </"
+"p> <p> Direktori ini adalah sumber untuk memudahkan Mozillian mengetahui siapa yang terlibat, apa yang mereka lakukan dan bagaimana untuk berhubungan dengan mereka. Juga untuk membolehkan anda "
 "menerima komunikasi e-mel daripada Mozilla. </p> <p><a href=\"%(wiki_roadmap_url)s\">Ciri ini</a>, dan lainnya sedang dalam pembangunan. Jika anda berminat membantu kami dalam hal ini, ketahui cara "
 "untuk anda <a href=\"%(wiki_get_involved_url)s\">menyertainya</a>.</p>"
 
@@ -787,8 +825,8 @@ msgid ""
 "The community directory is also a community project and you are welcome to get involved to help us make it even better or to integrate it into other community tools. Get in touch with us on the <a "
 "href=\"%(google_groups_url)s\"> Mozillians forums </a> to learn how."
 msgstr ""
-"Direktori komuniti ini juga adalah satu projek komuniti dan anda dialu-alukan untuk menyertainya bagi membantu kami membuatnya bertambah bagus atau untuk mengintegrasikannya ke dalam alatan komuniti"
-" lain. Sentiasalah berhubungan dengan kami dalam <a href=\"%(google_groups_url)s\"> forum Mozillian </a> untuk mengetahui caranya."
+"Direktori komuniti ini juga adalah satu projek komuniti dan anda dialu-alukan untuk menyertainya bagi membantu kami membuatnya bertambah bagus atau untuk mengintegrasikannya ke dalam alatan "
+"komuniti lain. Sentiasalah berhubungan dengan kami dalam <a href=\"%(google_groups_url)s\"> forum Mozillian </a> untuk mengetahui caranya."
 
 #: mozillians/jinja2/phonebook/apikeys.html:4
 msgid "API"
@@ -900,8 +938,8 @@ msgstr "Selamat datang ke direktori komuniti Mozilla"
 #: mozillians/jinja2/phonebook/home.html:63
 msgid "This site lists all core individuals and groups that participate in the Mozilla Project. We call ourselves Mozillians and this is where we connect and share with one another."
 msgstr ""
-"Laman ini mengandungi senarai semua individu dan kumpulan teras yang mengambil bahagian dalam projek Mozilla. Kami memanggil diri kami sebagai Mozillian dan di sinilah kami berhubungan dan berkongsi"
-" sesama kami."
+"Laman ini mengandungi senarai semua individu dan kumpulan teras yang mengambil bahagian dalam projek Mozilla. Kami memanggil diri kami sebagai Mozillian dan di sinilah kami berhubungan dan "
+"berkongsi sesama kami."
 
 #: mozillians/jinja2/phonebook/home.html:84
 msgid "Passionate Mozillians you can meet for work, play or a cup of coffee."
@@ -979,7 +1017,8 @@ msgstr "Jemput Mozillian"
 
 #: mozillians/jinja2/phonebook/invite.html:12
 #, python-format
-msgid "If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
+msgid ""
+"If you want to invite a new Mozillian please fill out the following form. <strong>Note</strong>: Inviting a new user is like vouching. <a href=\"%(vouching_url)s\">Read more about vouching.</a>"
 msgstr ""
 "Jika anda mahu menjemput anggota Mozilla yang baru, sila isi borang berikut. <strong>Nota</strong>: Menjemput pengguna baru sama seperti memperakui. <a href=\"%(vouching_url)s\">Baca selanjutnya "
 "perihal memperakui.</a>"
@@ -987,12 +1026,13 @@ msgstr ""
 #: mozillians/jinja2/phonebook/invite.html:18
 #, python-format
 msgid ""
-"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your profile"
-" and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about vouching.</a>"
+"We recently changed the criteria for being able to invite and vouch other Mozillians. If you want to use this page, you need to receive %(vouch_threshold)s vouches. Ask someone to visit your "
+"profile and vouch for you. Then come back here once you have %(vouch_threshold)s vouches and you will be able to invite people to the directory. <a href=\"%(vouching_url)s\">Learn more about "
+"vouching.</a>"
 msgstr ""
 "Kami baru sahaja menukar kriteria supaya boleh menjemput dan memperakui Mozillian lain. Jika anda mahu menggunakan halaman ini, anda perlu menerima perakuan %(vouch_threshold)s. Minta seseorang "
-"melawat profil anda dan memperakui anda. Kemudian kembali ke sini apabila anda ada perakuan %(vouch_threshold)s dan anda akan dibolehkan menjemput pengguna ke dalam direktori. <a "
-"href=\"%(vouching_url)s\">Ketahui selanjutnya perihal memperakui.</a>"
+"melawat profil anda dan memperakui anda. Kemudian kembali ke sini apabila anda ada perakuan %(vouch_threshold)s dan anda akan dibolehkan menjemput pengguna ke dalam direktori. <a href="
+"\"%(vouching_url)s\">Ketahui selanjutnya perihal memperakui.</a>"
 
 #: mozillians/jinja2/phonebook/invite.html:51
 msgid "Your Invites"
@@ -1022,8 +1062,8 @@ msgstr "Jemputan Dihantar!"
 #, python-format
 msgid "%(recipient)s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can <a href=\"%(invite_url)s\"> invite another Mozillian</a> if you like."
 msgstr ""
-"%(recipient)s telah menerima jemputan menyertai Mozillians. Mereka akan terima e-mel bersama arahan cara untuk menyertainya. Anda boleh <a href=\"%(invite_url)s\"> menjemput anggota Mozillian "
-"lain</a> jika anda mahu."
+"%(recipient)s telah menerima jemputan menyertai Mozillians. Mereka akan terima e-mel bersama arahan cara untuk menyertainya. Anda boleh <a href=\"%(invite_url)s\"> menjemput anggota Mozillian lain</"
+"a> jika anda mahu."
 
 #: mozillians/jinja2/phonebook/location_list.html:16 mozillians/jinja2/phonebook/search.html:70
 msgid "Mozillians in"
@@ -1053,10 +1093,10 @@ msgid ""
 "title=\"Your profile URL\">%(profile_url)s</em> </p> <p> If you are new to the Mozilla community, <a class=\"button\" href=\"%(contribute_url)s\">get involved</a> </p> <p>The chances of being "
 "vouched increase as you finish tasks in our community.</p>"
 msgstr ""
-"<p> Profil anda sedang dalam proses untuk diperakukan. Apabila sudah diperakui, anda akan dapat meninjau profil semua anggota Mozilla, menyertai kumpulan dan mengakses kandungan tambahan dalam laman"
-" lain sebagai seorang anggota Mozilla. <a href=\"%(vouching_url)s\">Ketahui selanjutnya perihal perakuan.</a>. </p> <p> Hantar pautan di bawah kepada seseorang yang tahu sumbangan anda dan minta "
-"mereka memperakui anda: <br/> <em class=\"underline\" title=\"Your profile URL\">%(profile_url)s</em> </p> <p> Jika anda masih baru dalam komuniti Mozilla, <a class=\"button\" "
-"href=\"%(contribute_url)s\">libatkan diri</a> </p> <p> Peluang untuk diperakukan lebih tinggi apabila anda telah menyiapkan tugasan dalam komuniti kami.</p>"
+"<p> Profil anda sedang dalam proses untuk diperakukan. Apabila sudah diperakui, anda akan dapat meninjau profil semua anggota Mozilla, menyertai kumpulan dan mengakses kandungan tambahan dalam "
+"laman lain sebagai seorang anggota Mozilla. <a href=\"%(vouching_url)s\">Ketahui selanjutnya perihal perakuan.</a>. </p> <p> Hantar pautan di bawah kepada seseorang yang tahu sumbangan anda dan "
+"minta mereka memperakui anda: <br/> <em class=\"underline\" title=\"Your profile URL\">%(profile_url)s</em> </p> <p> Jika anda masih baru dalam komuniti Mozilla, <a class=\"button\" href="
+"\"%(contribute_url)s\">libatkan diri</a> </p> <p> Peluang untuk diperakukan lebih tinggi apabila anda telah menyiapkan tugasan dalam komuniti kami.</p>"
 
 #: mozillians/jinja2/phonebook/profile.html:50
 msgid "This profile is waiting for approval. If you would like to vouch for them, use the form at the bottom of the page."
@@ -1094,7 +1134,7 @@ msgstr "Mozillian"
 msgid "Public"
 msgstr "Awam"
 
-#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:157
+#: mozillians/jinja2/phonebook/profile.html:210 mozillians/users/models.py:156
 msgid "Bio"
 msgstr "Bio"
 
@@ -1110,37 +1150,37 @@ msgstr "(semakan terma tertangguh)"
 msgid "Websites"
 msgstr "Laman web"
 
-#: mozillians/jinja2/phonebook/profile.html:309
+#: mozillians/jinja2/phonebook/profile.html:308
 msgid "Alternate Contact Identities"
 msgstr "Identiti Hubungan Alternatif"
 
-#: mozillians/jinja2/phonebook/profile.html:327
+#: mozillians/jinja2/phonebook/profile.html:326
 msgid "Vouched By"
 msgstr "Diperakui Oleh"
 
-#: mozillians/jinja2/phonebook/profile.html:340
+#: mozillians/jinja2/phonebook/profile.html:339
 msgid "Unknown Voucher"
 msgstr "Perakuan Tidak Diketahui"
 
-#: mozillians/jinja2/phonebook/profile.html:343
+#: mozillians/jinja2/phonebook/profile.html:342
 msgid "Legacy vouch."
 msgstr "Legasi akuan."
 
-#: mozillians/jinja2/phonebook/profile.html:354
+#: mozillians/jinja2/phonebook/profile.html:353
 msgid "Vouchees"
 msgstr "Diperakui"
 
-#: mozillians/jinja2/phonebook/profile.html:380
+#: mozillians/jinja2/phonebook/profile.html:379
 #, python-format
 msgid "%(hours)s hours ahead of your timezone."
 msgstr "%(hours)s jam cepat dari zon masa anda."
 
-#: mozillians/jinja2/phonebook/profile.html:383
+#: mozillians/jinja2/phonebook/profile.html:382
 #, python-format
 msgid "%(hours)s hours behind your timezone."
 msgstr "%(hours)s jam lambat dari zon masa anda."
 
-#: mozillians/jinja2/phonebook/profile.html:386
+#: mozillians/jinja2/phonebook/profile.html:385
 msgid "Same time zone as yours."
 msgstr "Zon masa sama dengan anda."
 
@@ -1319,8 +1359,8 @@ msgid ""
 "The Phonebook offers an API (currently v2) to help authorize contributors and share profile data to other tools and sites like <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s\">Bugzilla</a> "
 "and the <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">Mozilla Reps Portal</a>. The API respects the defined per field privacy levels."
 msgstr ""
-"Buku telefon mengandungi API (kini v2) untuk membantu penyumbang yang sah, dan berkongsi data profil kepada alatan dan laman lain seperti <a id=\"services-bugzilla-url\" "
-"href=\"%(bugzilla_url)s\">Bugzilla</a> dan <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">portal Mozilla Reps</a>. API mematuhi tahap privasi setiap medan yang ditakrif."
+"Buku telefon mengandungi API (kini v2) untuk membantu penyumbang yang sah, dan berkongsi data profil kepada alatan dan laman lain seperti <a id=\"services-bugzilla-url\" href=\"%(bugzilla_url)s"
+"\">Bugzilla</a> dan <a id=\"services-mozilla-reps\" href=\"%(reps_url)s\">portal Mozilla Reps</a>. API mematuhi tahap privasi setiap medan yang ditakrif."
 
 #: mozillians/jinja2/phonebook/includes/profile_edit_developer.html:18
 msgid "Developers can request API keys and manage existing ones using our dedicated API page."
@@ -1593,49 +1633,49 @@ msgstr "Terima kasih kerana membantu kami memperbaiki mozillians.org!"
 msgid "Thanks for vouching for a fellow Mozillian! This user is now vouched!"
 msgstr "Terima kasih kerana memperakui rakan Mozillian! Pengguna ini telah diperakui!"
 
-#: mozillians/phonebook/views.py:290
+#: mozillians/phonebook/views.py:291
 msgid "Your registration is complete. Feel free to visit the {0} page to add additional information to your profile."
 msgstr "Pendaftaran anda telah siap. Luangkan masa anda dengan melawati halaman {0} untuk menambah serba sedikit maklumat di profil anda."
 
-#: mozillians/phonebook/views.py:295
+#: mozillians/phonebook/views.py:296
 msgid "You changed your username; please note your profile URL has also changed."
 msgstr "Anda telah tukar nama pengguna anda; sila ambil perhatian, URL profil anda pun telah ditukar."
 
-#: mozillians/phonebook/views.py:328
+#: mozillians/phonebook/views.py:329
 msgid "Identity {0} successfully deleted."
 msgstr "Identiti {0} berjaya dihapuskan."
 
-#: mozillians/phonebook/views.py:333
+#: mozillians/phonebook/views.py:334
 msgid "Sorry the requested Identity cannot be deleted."
 msgstr "Maaf, identiti yang diminta tidak boleh dihapuskan."
 
-#: mozillians/phonebook/views.py:354
+#: mozillians/phonebook/views.py:355
 msgid "Primary Contact Identity successfully updated."
 msgstr "Identiti Hubungan Utama berjaya dikemaskini."
 
-#: mozillians/phonebook/views.py:375
+#: mozillians/phonebook/views.py:376
 msgid "Your account has been deleted. Thanks for being a Mozillian!"
 msgstr "Akaun anda telah dihapuskan. Terima kasih kerana menjadi seorang Mozillia!"
 
-#: mozillians/phonebook/views.py:400
+#: mozillians/phonebook/views.py:401
 #, python-format
 msgid "%s has been invited to Mozillians. They'll receive an email with instructions on how to join. You can invite another Mozillian if you like."
 msgstr "%s telah dijemput menyertai Mozillian. Mereka akan terima e-mel bersama arahan cara untuk menyertainya. Anda boleh menjemput anggota Mozillian lain jika anda mahu."
 
-#: mozillians/phonebook/views.py:421
+#: mozillians/phonebook/views.py:422
 #, python-format
 msgid "%s's invitation to Mozillians has been revoked. You can invite %s again if you like."
 msgstr "Jemputan %s ke Mozillian telah ditarik semula. Anda boleh jemput %s lagi jika anda mahu."
 
-#: mozillians/phonebook/views.py:437
+#: mozillians/phonebook/views.py:438
 msgid "API Key generated successfully."
 msgstr "Kekunci API berjaya dijanakan."
 
-#: mozillians/phonebook/views.py:451
+#: mozillians/phonebook/views.py:452
 msgid "API key successfully deleted."
 msgstr "Kekunci API berjaya dihapuskan."
 
-#: mozillians/phonebook/views.py:476
+#: mozillians/phonebook/views.py:477
 msgid "You've been invited to join Mozillians.org! Sign in and then you can create a profile."
 msgstr "Anda telah dijemput menyertai Mozillians.org! Daftar masuk dan anda boleh mencipta profil."
 
@@ -1643,111 +1683,111 @@ msgstr "Anda telah dijemput menyertai Mozillians.org! Daftar masuk dan anda bole
 msgid "Export"
 msgstr "Eksport"
 
-#: mozillians/users/models.py:144
+#: mozillians/users/models.py:143
 msgid "Full Name"
 msgstr "Nama Penuh"
 
-#: mozillians/users/models.py:146
+#: mozillians/users/models.py:145
 msgid "Name in local language"
 msgstr "Nama dalam bahasa ibunda"
 
-#: mozillians/users/models.py:159
+#: mozillians/users/models.py:158
 msgid "IRC Nickname"
 msgstr "Nama samaran IRC"
 
-#: mozillians/users/models.py:168
+#: mozillians/users/models.py:167
 msgid "Latitude"
 msgstr "Latitud"
 
-#: mozillians/users/models.py:169
+#: mozillians/users/models.py:168
 msgid "Longitude"
 msgstr "Longitud"
 
-#: mozillians/users/models.py:185
+#: mozillians/users/models.py:184
 msgid "T-Shirt"
 msgstr "T-Shirt"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Small"
 msgstr "Muat Kecil"
 
-#: mozillians/users/models.py:187
+#: mozillians/users/models.py:186
 msgid "Fitted Medium"
 msgstr "Muat Medium"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted Large"
 msgstr "Muat Besar"
 
-#: mozillians/users/models.py:188
+#: mozillians/users/models.py:187
 msgid "Fitted X-Large"
 msgstr "Muat X-Besar"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XX-Large"
 msgstr "Muat XX-Besar"
 
-#: mozillians/users/models.py:189
+#: mozillians/users/models.py:188
 msgid "Fitted XXX-Large"
 msgstr "Muat XXX-Besar"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Small"
 msgstr "Potongan-lurus Kecil"
 
-#: mozillians/users/models.py:190
+#: mozillians/users/models.py:189
 msgid "Straight-cut Medium"
 msgstr "Potongan-lurus Medium"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut Large"
 msgstr "Potongan-lurus Besar"
 
-#: mozillians/users/models.py:191
+#: mozillians/users/models.py:190
 msgid "Straight-cut X-Large"
 msgstr "Potongan-lurus X-Besar"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XX-Large"
 msgstr "Potongan-lurus XX-Besar"
 
-#: mozillians/users/models.py:192
+#: mozillians/users/models.py:191
 msgid "Straight-cut XXX-Large"
 msgstr "Potongan-lurus XXX-Besar"
 
-#: mozillians/users/models.py:194
+#: mozillians/users/models.py:193
 msgid "What do you do for Mozilla?"
 msgstr "Apa sumbangan anda untuk Mozilla?"
 
-#: mozillians/users/models.py:198
+#: mozillians/users/models.py:197
 msgid "Link to your contribution story"
 msgstr "Pautan ke kisah sumbangan anda"
 
-#: mozillians/users/models.py:199
+#: mozillians/users/models.py:198
 msgid "If you have created something public that tells the story of how you came to be a Mozillian, specify that link here."
 msgstr "Jika anda mencipta sesuatu yang umum perihal kisah anda menjadi anggota Mozilla, nyatakan pautan tersebut di sini."
 
-#: mozillians/users/models.py:571
+#: mozillians/users/models.py:595
 msgid "You have been vouched on Mozillians.org"
 msgstr "Anda telah diperakui oleh Mozillians.org"
 
-#: mozillians/users/models.py:777
+#: mozillians/users/models.py:801
 msgid "Reason for Vouching"
 msgstr "Sebab untuk Perakuan"
 
-#: mozillians/users/models.py:932
+#: mozillians/users/models.py:956
 msgid "Account Username"
 msgstr "Nama pengguna Akaun"
 
-#: mozillians/users/models.py:936
+#: mozillians/users/models.py:960
 msgid "Account Type"
 msgstr "Jenis Akaun"
 
-#: mozillians/users/models.py:952
+#: mozillians/users/models.py:976
 msgid "You already have an account with this name and type."
 msgstr "Anda sudah ada akaun dengan nama dan jenis ini."
 
-#: mozillians/users/models.py:985
+#: mozillians/users/models.py:1009
 msgid "This language has already been selected."
 msgstr "Bahasa ini telah pun dipilih."
 
